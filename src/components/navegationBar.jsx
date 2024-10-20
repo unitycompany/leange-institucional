@@ -225,7 +225,7 @@ const Sidebar = styled.div`
     border-radius: 0 20px 20px 0;
     padding: 20px;
     width: 250px;
-    height: 95vh;
+    height: 95dvh;
     margin-top: 2.5vh;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
