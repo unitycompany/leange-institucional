@@ -1,0 +1,13 @@
+
+:root {
+    --color--green: #CAD766;
+    --color--green--f: #979957;
+    --color--black: #4D4D4D;
+    --color--blue: #7AC4F3;
+    --color--white: #FBFBFB;
+
+    --border--radius--btn: 10px;
+    
+    --font--comfortaa: "Comfortaa", sans-serif;
+    --font--avenir: 'Avenir', sans-serif;
+}
