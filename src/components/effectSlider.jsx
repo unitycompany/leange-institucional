@@ -34,7 +34,6 @@ const SwiperStyles = createGlobalStyle`
     }
 `;
 
-
 const SlideContainer = styled.div`
     display: flex;
     align-items: center;
@@ -47,6 +46,11 @@ const SlideContainer = styled.div`
     background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
     background-size: cover;
     background-position: center;
+
+    @media (max-width: 768px){
+        width: 90%;
+        margin-left: 5%;
+        }
 `;
 
 const BorderOverlay = styled.div`
@@ -116,6 +120,11 @@ const CoverflowSliderComponent = ({
                 autoplay={{
                     delay: autoplayDelay,
                     disableOnInteraction: false,
+                }}
+                breakpoints={{
+                    1024: { slidesPerView: 3 }, // Desktop
+                    768: { slidesPerView: 2 },  // Tablet
+                    0: { slidesPerView: 1 }     // Telefone
                 }}
                 style={{ width: width, height: height }}
             >

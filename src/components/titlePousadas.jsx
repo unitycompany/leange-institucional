@@ -32,9 +32,10 @@ const StyledDiv = styled(motion.div)`
     padding: 50px;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         width: 100%; 
         position: absolute;
+        align-items: center;
+        gap: 20px;
         z-index: 2;
     }
 

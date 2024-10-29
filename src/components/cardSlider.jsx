@@ -113,11 +113,15 @@ const EventCardCarousel = ({ events = [] }) => {
         <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             autoplay={true}
-            slidesPerView={3}
             spaceBetween={20}
             navigation
             pagination={false}
             loop={true}
+            breakpoints={{
+                1024: { slidesPerView: 3 }, // Desktop
+                768: { slidesPerView: 2 },  // Tablet
+                0: { slidesPerView: 1 }     // Telefone
+            }}
         >
             {events.map((event, index) => (
                 <SwiperSlide key={index}>
@@ -153,7 +157,7 @@ const InViewCardContainer = ({ event, delay }) => {
                 <PriceSection>
                     <Price>A partir de: <span>10x</span>R${event.price}</Price>
                 </PriceSection>
-                <ButtonAcomoda text="Quero fechar minha reserva nesse pacote" backDefine="var(--color--black)" colorDefine="var(--color--white)"/>
+                <ButtonAcomoda text="Quero fechar minha reserva agora" backDefine="var(--color--black)" colorDefine="var(--color--white)"/>
             </CardContent>
         </CardContainer>
     );

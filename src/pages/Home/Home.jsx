@@ -66,13 +66,11 @@ const StyledContainerPousadas = styled.section`
     padding: 0 5%;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         flex-direction: column;
         position: relative;
         z-index: -1;
 
         .slider{
-            border: 5px solid red;
             width: 100%;    
         }
     }
@@ -425,6 +423,10 @@ const StyledCarrosselSection = styled.section`
     height: 80vh;
     margin-bottom: 10vh;
     margin-top: 2.5vh;
+
+    @media (max-width: 768px){
+        height: auto;
+    }
     
 `
 

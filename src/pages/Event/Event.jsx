@@ -19,7 +19,7 @@ const InicioContainer = styled.section`
     gap: 20px;
 
     & > div:nth-child(1){
-        width: 50%;
+        width: 45%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -66,7 +66,7 @@ const InicioContainer = styled.section`
     }
 
     & > div:nth-child(2){
-        width: 50%;
+        width: 55%;
         height: 90%;
 
         & > img {
@@ -82,6 +82,9 @@ const InicioContainer = styled.section`
 const CarrosselContainer = styled.section`
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 const SobreContainer = styled.section`
@@ -152,7 +155,7 @@ const SobreContainer = styled.section`
 
         & > div:nth-child(1){
             border-radius: 0px 50px 0px 40px;
-            background-image: url('/public/mar/7.JPG');
+            background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar1_lhebdi.webp');
             background-size: cover;
             background-position: center;
             
@@ -160,7 +163,7 @@ const SobreContainer = styled.section`
 
         & > div:nth-child(2){
             border-radius: 40px 0px 50px 0px;
-            background-image: url('/public/mar/7.JPG');
+            background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1729513693/9_hyv1zq.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -168,15 +171,12 @@ const SobreContainer = styled.section`
 `
 
 const images1 = [
-    { src: '../../../public/serra/9.jpeg', alt: 'Imagem 1' },
-    { src: '../../../public/serra/1.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/2.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/3.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/4.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/5.jpg', alt: 'Imagem 1' },
-    { src: '../../../public/serra/6.jpeg', alt: 'Imagem 1' },
-    { src: '../../../public/serra/7.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/8.JPG', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219568/5_ixs7te.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219564/1_ocvsg5.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219563/8_bo21xo.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219563/3_mytnsf.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219562/6_ju1e1x.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219563/2_ydykif.jpg', alt: 'Imagem 1' },
 
 ];
 
@@ -238,7 +238,7 @@ const CasamentoContainer = styled.section`
 
         & > ol{
             margin-left: 30px;
-            list-style-image: url('/public/icon/correto.png');
+            list-style-image: url('/leange/public/icon/correto.png');
 
             & > li{
                 font-family: var(--font--avenir);
@@ -308,7 +308,7 @@ const NiverContainer = styled.section`
 
         & > ol{
             margin-left: 30px;
-            list-style-image: url('/public/icon/correto.png');
+            list-style-image: url('/leange/public/icon/correto.png');
 
             & > li{
                 font-family: var(--font--avenir);
@@ -338,7 +338,7 @@ const Eventos = () => {
                     />
                 </div>
                 <div>
-                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto da home da página de eventos' />
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730219093/home_df8ub0.jpg" alt='foto da home da página de eventos' />
                 </div>
 
             </InicioContainer>
@@ -348,8 +348,8 @@ const Eventos = () => {
                         content={images1} 
                         spaceBetween={20} 
                         slidesPerView={1} 
-                        width="90%"
-                        height="100vh" 
+                        width="100%"
+                        height="80vh" 
                         contentType="image"
                         showPagination={true}
                 />
@@ -385,7 +385,7 @@ const Eventos = () => {
 
             <CasamentoContainer>
                 <div>
-                    <img src={FotoHome} alt='foto do casamento' />
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730219562/11_gzr6ei.jpg" alt='foto do casamento' />
                 </div>
                 <div>
                     <h1>Pré-Wedding</h1>
@@ -404,9 +404,9 @@ const Eventos = () => {
                     text="Fazer reserva"
                     />
                     <div>
-                        <img src={FotoHome} alt='foto do casamento' />
-                        <img src={FotoHome} alt='foto do casamento' />
-                        <img src={FotoHome} alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730219562/7_sgewp5.jpg" alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730219562/10_deybdj.jpg" alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730219562/9_eavaty.jpg" alt='foto do casamento' />
                     </div>
                 </div>
             </CasamentoContainer>
@@ -427,13 +427,13 @@ const Eventos = () => {
                     text="Fazer reserva"
                     />
                     <div>
-                        <img src={FotoHome} alt='foto do casamento' />
-                        <img src={FotoHome} alt='foto do casamento' />
-                        <img src={FotoHome} alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto do casamento' />
                     </div>
                 </div>
                 <div>
-                    <img src={FotoHome} alt='foto do casamento' />
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto do casamento' />
                 </div>
             </NiverContainer>
             

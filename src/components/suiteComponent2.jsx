@@ -29,6 +29,12 @@ const SuiteContainer = styled.section`
     align-items: center;
     gap: 20px;
     justify-content: space-between;
+
+    @media (max-width: 768px){
+        height: 125vh;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
 `;
 
 const ImageCarousel = styled.div`
@@ -40,6 +46,11 @@ const ImageCarousel = styled.div`
     gap: 5px;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 768px){
+        width: 100%;
+        height: 50vh;
+    }
 `;
 
 const MainImage = styled.img`
@@ -48,6 +59,10 @@ const MainImage = styled.img`
     border-radius: 0px 10px 0 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     object-fit: cover;
+
+    @media (max-width: 768px){
+        height: 70%;        
+    }
 `;
 
 const Thumbnails = styled.div`
@@ -56,6 +71,10 @@ const Thumbnails = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 20%;
+
+    @media (max-width: 768px){
+        height: 30%;
+    }
 `;
 
 const ThumbnailImage = styled.img`
@@ -69,6 +88,10 @@ const ThumbnailImage = styled.img`
 
     &.active {
         border: 3px solid var(--color--black);
+
+        @media (max-width: 768px){
+            border: 1.5px solid var(--color--black);
+        }
     }
 
     &:hover {
@@ -88,12 +111,23 @@ const SuiteContent = styled.main`
     border: 2px solid var(--color--black);
     border-radius: 0px 30px 0px 30px;
 
+    @media (max-width: 768px){
+        width: 100%;
+        border: 1px solid var(--color--black);
+        padding: 30px 20px;
+        height: 70vh;
+    }
+
     & > section {
         display: flex;
         flex-direction: column;
         width: 100%;
         align-items: center;
         justify-content: center;
+
+        @media (max-width: 768px){
+            height: 10%;
+        }
     }
 
     & > section > div:nth-child(1){
@@ -106,6 +140,13 @@ const SuiteContent = styled.main`
             font-family: var(--font--avenir);
             font-size: 1.2em;
             color: var(--color--black);
+
+            @media (max-width: 768px){
+                font-size: 1rem;
+
+                width: 100%;
+                text-align: center;
+            }
         }
     }
 
@@ -116,6 +157,10 @@ const SuiteContent = styled.main`
             height: 2px;
             background-color: var(--color--black);
             border-color: var(--color--black);
+
+            @media (max-width: 768px){
+                margin-top: 5px;
+            }
         }
     }
 `;
@@ -124,11 +169,19 @@ const SuiteTitle = styled.h2`
     font-size: 2rem;
     color: var(--color--black);
     font-family: var(--font--comfortaa);
+
+    @media (max-width: 768px){
+        display: none;
+    }
 `;
 
 const SuiteDescription = styled.p`
     font-size: 1rem;
     color: var(--color--black); 
+
+    @media (max-width: 768px){
+        font-size: 0.8rem;
+    }
 `;
 
 const InfoContainer = styled.div`
@@ -137,6 +190,10 @@ const InfoContainer = styled.div`
     gap: 15px; 
     width: 50%;
 
+    @media (max-width: 768px){
+        display: none;
+    }
+
     & > div:nth-child(1), & > div:nth-child(2) {
         display: flex;
         flex-direction: column;
@@ -144,6 +201,10 @@ const InfoContainer = styled.div`
         justify-content: center;
         gap: 10px;
         padding: 10px;
+
+        @media (max-width: 768px){
+            display: none;
+        }
     }
 `;
 
@@ -164,6 +225,12 @@ const Features = styled.div`
         border-radius: 12px;
         font-size: 12px;
         transition: all .2s ease;
+
+        @media (max-width: 768px){
+            font-size: 10px;
+            font-weight: 300;
+            padding: 6px 10px;
+        }
         
         &:hover {
             color: var(--color--white);
@@ -174,6 +241,10 @@ const Features = styled.div`
 
     svg {
         font-size: 16px;
+
+        @media (max-width: 768px){
+            font-size: 12px;
+        }
     }
 `;
 
@@ -184,6 +255,12 @@ const ButtonContainer = styled.div`
     display: flex;
     width: 10%;
     gap: 5px; /* Espaçamento entre os botões */
+
+    @media (max-width: 768px){
+        right: 15px;
+        width: 25%;
+        bottom: 40px;
+    }
 `;
 
 const SwiperButton = styled.div`
@@ -199,6 +276,12 @@ const SwiperButton = styled.div`
     width: 50px; /* Largura do botão */
     height: 50px; /* Altura do botão */
 
+    @media (max-width: 768px){
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+    }
+
     &:after {
         font-size: 0px;
     }
@@ -212,6 +295,10 @@ const SwiperButton = styled.div`
 
 const Espace = styled.div`
     height: 5vh;
+
+    @media (max-width: 768px){
+        height: 4vh;
+    }
 `;
 
 const SuiteComponent2 = ({ suites }) => {
