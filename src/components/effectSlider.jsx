@@ -122,7 +122,7 @@ const CoverflowSliderComponent = ({
                     disableOnInteraction: false,
                 }}
                 breakpoints={{
-                    1024: { slidesPerView: 3 }, // Desktop
+                    1024: { slidesPerView: 2 }, // Desktop
                     768: { slidesPerView: 2 },  // Tablet
                     0: { slidesPerView: 1 }     // Telefone
                 }}
