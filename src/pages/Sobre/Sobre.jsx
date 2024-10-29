@@ -1,9 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
-import FotoCachorro from '../../../public/sobre/cachorro.png';
-import FotoSerra from '../../../public/serra/6.jpeg';
-import FotoMar from '../../../public/mar/3.jpg';
 import CustomButton from '../../components/button3';
 
 const SobreContainer = styled.section`

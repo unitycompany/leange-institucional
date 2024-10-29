@@ -5,8 +5,6 @@ import Button from '../../components/Button';
 import SliderComponent from '../../components/sliderComponent';
 import Footer from '../../components/footer';
 
-import FotoHome from '../../../public/mar/3.jpg';
-
 const Espace = styled.div`
     height: 15vh;
 `
