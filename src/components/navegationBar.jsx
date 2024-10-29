@@ -7,39 +7,6 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 
-const rotateColors = keyframes`
-  0% {
-    border-bottom: 1px solid var(--color--green);
-    border-top: 1px solid var(--color--blue);
-    border-left: 1px solid var(--color--green);
-    border-right: 1px solid var(--color--blue);
-  }
-  25% {
-    border-left: 1px solid var(--color--green);
-    border-right: 1px solid var(--color--blue);
-    border-top: 1px solid var(--color--green);
-    border-bottom: 1px solid var(--color--blue);
-  }
-  50% {
-    border-top: 1px solid var(--color--green);
-    border-bottom: 1px solid var(--color--blue);
-    border-right: 1px solid var(--color--green);
-    border-left: 1px solid var(--color--blue);
-  }
-  75% {
-    border-right: 1px solid var(--color--green);
-    border-left: 1px solid var(--color--blue);
-    border-bottom: 1px solid var(--color--green);
-    border-top: 1px solid var(--color--blue);
-  }
-  100% {
-    border-bottom: 1px solid var(--color--green);
-    border-top: 1px solid var(--color--blue);
-    border-left: 1px solid var(--color--green);
-    border-right: 1px solid var(--color--blue);
-  }
-`;
-
 const StyledDiv = styled.div`
     display: none;
 
@@ -51,15 +18,16 @@ const StyledDiv = styled.div`
         align-items: center;
         justify-content: space-between;
         width: 85%;
-        margin-left: 7.5%;
+        max-width: 1440px;
+        left: 50%;
+        transform: translateX(-50%);
         margin-top: 10px;
         padding: 0 2.5%;
         height: 10vh;
         box-shadow: 0 0 5px #4d4d4d80;
-        border-radius: 25px;
-        animation: ${rotateColors} 1s linear infinite;
+        border-radius: 15px;
         z-index: 999;
-        transition: background-color 0.3s ease, backdrop-filter 0.3s ease; 
+        transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     }
 `;
 
@@ -175,12 +143,12 @@ const MobileBar = styled.div`
         margin-left: 7.5%;
         margin-top: 10px;
         padding: 0 5%;
-        height: 10vh;
+        height: 8vh;
         box-shadow: 0 0 5px #4d4d4d80;
-        border-radius: 15px;
+        border-radius: 10px;
 
         & > img {
-            width: 30%;
+            width: 25%;
             height: 100%;
             object-fit: contain;
         }
@@ -347,7 +315,9 @@ const NavegationBar = () => {
                     <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton>
                     <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"}><IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações</StyledLink>
                 </StyledHeader>
-                <Button text="Fazer minha reserva" />
+                <Button
+                text="Fazer minha reserva"
+                />
             </StyledDiv>
 
             <MobileBar isScrolled={isScrolled}>

@@ -390,7 +390,11 @@ const Footer = () => {
 
                 <StyledLinks as={motion.div}>
                     <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.2 }}>
-                        <img src={LogoWhite} alt='Logo da le ange na cor branca' />
+                    <img 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1729513421/white_sevdgn.png" 
+                    alt="Descrição da imagem" 
+                    loading="lazy" 
+                    />
                         <p>A pousada mais Pet Friendly, venha conhecer!</p>
                     </motion.div>
                     <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.3 }}>

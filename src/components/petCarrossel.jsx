@@ -8,16 +8,16 @@ import 'swiper/css/pagination';
 import CustomButton from './button3';
 
 const images = [
-    '/serra/1.JPG',
-    '/serra/2.JPG',
-    '/serra/1.JPG',
-    '/serra/2.JPG',
-    '/serra/1.JPG',
-    '/serra/2.JPG',
-    '/serra/1.JPG',
-    '/serra/2.JPG',
-    '/serra/1.JPG',
-    '/serra/2.JPG',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142186/pet10_yvsbk7.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142192/pet9_vighbx.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142194/pet7_q7qi0y.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142193/pet8_vdoyh2.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142195/pet6_tuwm6x.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142204/pet5_lrhzej.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142204/pet4_zw9sc2.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142218/pet3_g6dhdo.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142219/pet2_aztjoa.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg',
 ];
 
 // Styled component for the carousel container

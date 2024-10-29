@@ -5,8 +5,8 @@ import ImageSwiper from "./imageSwiper";
 const Images5 = [
     { src: '../../public/serra/1.JPG', text: 'Passeio de bugre' },
     { src: '../../public/serra/2.JPG', text: 'Atração Atração 1: Descrição da Atração 12: Descrição da Atração 2' },
-    { src: '../../public/serra/3.JPG', text: 'Atração 3: Descrição da Atração 3' },
-    { src: '../../public/serra/4.JPG', text: 'Atração 4: Descrição da Atração 4' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142544/atracao2_knquxz.jpg', text: 'Hot Tube' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142186/pet10_yvsbk7.jpg', text: 'Piscina' },
     { src: '../../public/serra/5.JPG', text: 'Atração 5: Descrição da Atração 5' },
 ];
 

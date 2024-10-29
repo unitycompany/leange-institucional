@@ -31,6 +31,13 @@ const StyledDiv = styled(motion.div)`
     height: 60vh;
     padding: 50px;
 
+    @media (max-width: 768px){
+        border: 1px solid red;
+        width: 100%; 
+        position: absolute;
+        z-index: 2;
+    }
+
     &::before{
         content: '';
         width: 100%;
@@ -54,11 +61,23 @@ const StyledTitlePag = styled(motion.h1)`
     font-family: var(--font--comfortaa);
     font-weight: 400;
     font-size: 1.8rem;
+
+    @media (max-width: 768px){
+        text-align: center;
+        color: var(--color--white);
+    }
 `;
 
 const StyledParagPag = styled(motion.p)`
     width: 80%;
     font-family: var(--font--avenir);
+
+    @media (max-width: 768px){
+        text-align: center;
+        color: var(--color--white);
+        width: 100%;
+        margin-top: 15px;
+    }
 `;
 
 const TitlePousadas = ({

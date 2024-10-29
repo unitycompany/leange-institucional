@@ -42,7 +42,7 @@ const CardContainer = styled(motion.div)`
 
 const CardImage = styled.img`
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
     border-radius: 10px;
 `;

@@ -28,8 +28,11 @@ const BackgroundVideo = () => {
             animate={{ clipPath: "circle(100% at 50% 50%)" }}
             transition={{ duration: 1, ease: "easeInOut" }}
         >
-            <source src="/home_play.mp4" type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
+        <source 
+        src="https://res.cloudinary.com/dupg7clzc/video/upload/f_auto,q_auto/v1729513957/home_play_gfetmo.mp4"
+        type="video/mp4" 
+        />
+        Seu navegador não suporta o elemento de vídeo.
         </StyledVideo>
     );
 };

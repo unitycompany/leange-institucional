@@ -53,7 +53,7 @@ const InicioContainer = styled.section`
                 color: var(--color--green);
             }
 
-            & > b:nth-child(2) > a{
+            & > b:nth-child(n + 2) > a{
                 color: var(--color--blue);
             }
         }
@@ -340,7 +340,7 @@ const Eventos = () => {
                     />
                 </div>
                 <div>
-                    <img src={FotoHome} alt='foto da home da página de eventos' />
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto da home da página de eventos' />
                 </div>
 
             </InicioContainer>

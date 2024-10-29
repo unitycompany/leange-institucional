@@ -27,7 +27,7 @@ const SobreContainer = styled.section`
         align-items: flex-start;
         justify-content: center;
         gap: 20px;
-        padding: 0 0 0 5%;
+        padding: 0 0 0 10%;
 
         @media (max-width: 768px){
             width: 100%;
@@ -126,8 +126,8 @@ const Espaco = styled.div`
 const UnidadeContainer = styled.section`
     width: 100%;
     height: 80vh;
-    margin-top: 5vh;
-    padding: 0% 5%;
+    margin-top: 10vh;
+    padding: 0% 10%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -137,6 +137,7 @@ const UnidadeContainer = styled.section`
         flex-direction: column;
         height: auto;
         gap: 30px;
+        padding: 0 5%;
     }
 
     & > div:nth-child(1){
@@ -149,8 +150,7 @@ const UnidadeContainer = styled.section`
 
         @media (max-width: 768px){
             max-width: 100%;
-            height: 50%;
-
+            height: 30vh;
             gap: 10px;
         }
 
@@ -163,7 +163,7 @@ const UnidadeContainer = styled.section`
             @media (max-width: 768px){
                 width: 48%;
                 height: 100%;
-    
+                border-radius: 10px;
             }
         }
 
@@ -175,7 +175,9 @@ const UnidadeContainer = styled.section`
 
             @media (max-width: 768px){
                 width: 48%;
-                height: 100%;
+                height: 100%!important;
+                object-fit: cover;
+                border-radius: 10px;
     
             }
         }
@@ -241,13 +243,15 @@ const DiferenciaisContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 5%;
+    padding: 0 10%;
 
     @media (max-width: 768px){
         height: auto;
         flex-direction: column-reverse;
         gap: 25px;
-        margin-top: 50px;
+        margin-top: 35px;
+        padding: 10% 5%;
+        border-top: 2px dashed;
     }
 
     & > div:nth-child(1){
@@ -269,7 +273,7 @@ const DiferenciaisContainer = styled.section`
 
             @media (max-width: 768px){
     
-                font-size: 20px;
+                font-size: 28px;
                 width: 100%;
                 text-align: center;
                 margin-bottom: 10px;
@@ -310,6 +314,7 @@ const DiferenciaisContainer = styled.section`
 
         @media (max-width: 768px){
             width: 48%;
+            height: 20vh;
         }
 
        }
@@ -328,13 +333,15 @@ const ContainerDuplo = styled.section`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 10%;
 
     @media (max-width: 768px){
         height: auto;
         flex-direction: column;
         gap: 25px;
         margin-top: 50px;
+        padding: 10% 5%;
+        border-top: 2px dashed;
     }
 
     & > div:nth-child(1){
@@ -345,7 +352,6 @@ const ContainerDuplo = styled.section`
         height: 40%;
         
         @media (max-width: 768px){
-
             width: 100%;
             flex-direction: column;
             height: auto;
@@ -371,7 +377,7 @@ const ContainerDuplo = styled.section`
                 
                 @media (max-width: 768px){
         
-                    font-size: 20px;
+                    font-size: 28px;
                     margin-bottom: 10px;
                     width: 100%;
                     text-align: center;
@@ -397,7 +403,7 @@ const ContainerDuplo = styled.section`
 
             @media (max-width: 768px){
                 width: 100%;
-                height: auto;
+                height: 35vh;
                 margin-top: 25px;
             }
 
@@ -407,7 +413,6 @@ const ContainerDuplo = styled.section`
                 object-fit: cover;
 
                 @media (max-width: 768px){
-        
                     height: 100%;
                     width: 50%;
                 }
@@ -436,7 +441,6 @@ const ContainerDuplo = styled.section`
         height: 40%;
 
         @media (max-width: 768px){
-
             flex-direction: column-reverse;
             height: auto;
         }
@@ -447,8 +451,8 @@ const ContainerDuplo = styled.section`
 
             @media (max-width: 768px){
                 width: 100%;
-    
                 margin-top: 40px;
+                height: 35vh;
             }
 
             & > img {
@@ -457,7 +461,6 @@ const ContainerDuplo = styled.section`
                 object-fit: cover;
 
                 @media (max-width: 768px){
-        
                     height: 100%;
                     width: 50%;
                 }
@@ -498,7 +501,7 @@ const ContainerDuplo = styled.section`
                 @media (max-width: 768px){
         
                     margin-top: 50px;
-                    font-size: 20px;
+                    font-size: 28px;
                     margin-bottom: 10px;
                     width: 100%;
                     text-align: center;
@@ -527,7 +530,7 @@ const PublicoContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 5%;
+    padding: 0 10%;
 
         @media (max-width: 768px){
 
@@ -638,7 +641,7 @@ const Compromisso = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('/public/mar/3.jpg');
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/1_fhinom.png');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -664,7 +667,7 @@ const Compromisso = styled.section`
         & > h1{
             font-size: 2.5em;
             font-family: var(--font--comfortaa);
-            color: var(--color--black);
+            color: var(--color--white);
 
             @media (max-width: 768px){
                 font-size: 24px;
@@ -680,6 +683,7 @@ const Compromisso = styled.section`
         & > p {
             width: 80%;
             font-family: var(--font--avenir);
+            color: var(--color--white);
             text-align: justify;
 
             @media (max-width: 768px){
@@ -697,11 +701,15 @@ const CTA = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730130105/fotoSerra3_zqwbav.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     gap: 25px;
 
     & h1 {
         font-family: var(--font--comfortaa);
-        color: var(--color--black);
+        color: var(--color--white);
         width: 35%;
         text-align: center;
         line-height: 100%;
@@ -730,15 +738,27 @@ const Sobre = () => {
                     <p>Um empreendimento familiar fundado em 2018, a Pousada LeAnge Serra surgiu da paixão dos fundadores pelo amor por quatro patas, bem-estar e hospitalidade, situando-se em Miguel Pereira, Rio de Janeiro. Com o sucesso da primeira unidade, expandimos para Búzios em 2023, criando a Pousada LeAnge Mar. A filosofia por trás das nossas pousadas é oferecer um refúgio acolhedor e luxuoso, em que cada detalhe é cuidadosamente pensado para proporcionar conforto e satisfação.</p>
                 </div>
                 <div>
-                    <img src={FotoCachorro} alt='foto do cachorro'/>
+                    <img 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729516968/cachorro_rlsw5a.png" 
+                    alt='foto do cachorro'
+                    loading='lazy'
+                    />
                 </div>
             </SobreContainer>
 
             <UnidadeContainer>
 
                 <div>
-                    <img src={FotoSerra} alt='foto da le ande da serra' />
-                    <img src={FotoMar} alt='foto da le ande da serra' />
+                    <img 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729529831/7_w7mvfk.jpg" 
+                    alt='foto da le ande da serra' 
+                    loading='lazy'
+                    />
+                    <img 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729529820/7_s8lgut.jpg" 
+                    alt='foto da le ande da serra'
+                    loading='lazy' 
+                    />
                 </div>
 
 
@@ -758,10 +778,26 @@ const Sobre = () => {
                 </div>
 
                 <div>
-                    <img src={FotoMar} alt='foto do diferencial' />
-                    <img src={FotoMar} alt='foto do diferencial' />
-                    <img src={FotoMar} alt='foto do diferencial' />
-                    <img src={FotoMar} alt='foto do diferencial' />
+                    <img 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530455/6_ezddyi.jpg" 
+                    loading='lazy'
+                    alt='foto do diferencial' 
+                    />
+                    <img 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530449/8_n7asdv.jpg" 
+                    loading='lazy'
+                    alt='foto do diferencial' 
+                    />
+                    <img 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530446/5_lx3fxd.jpg"
+                    loading='lazy' 
+                    alt='foto do diferencial'
+                    />
+                    <img 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530444/1_nhk8wd.jpg" 
+                    loading='lazy'
+                    alt='foto do diferencial' 
+                    />
                 </div>
 
             </DiferenciaisContainer>
@@ -774,15 +810,31 @@ const Sobre = () => {
                         <p>Oferecemos um serviço all inclusive que abrange todas as refeições, atendendo todas as restrições alimentares de nossos hóspedes. Nosso compromisso é proporcionar uma experiência gastronômica diversificada e de alta qualidade, utilizando produtos frescos e locais.</p>
                     </div>
                     <div>
-                        <img src={FotoMar} alt='foto de gastronomia' />
-                        <img src={FotoMar} alt='foto de gastronomia' />
+                        <img 
+                        src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530841/pizza_apuref.jpg" 
+                        loading='lazy'
+                        alt='foto de gastronomia' 
+                        />
+                        <img 
+                        src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530957/sushi_g7sbq9.jpg" 
+                        loading='lazy'
+                        alt='foto de gastronomia' 
+                        />
                     </div>
                 </div>
 
                 <div>
                     <div>
-                        <img src={FotoMar} alt='foto de gastronomia' />
-                        <img src={FotoMar} alt='foto de gastronomia' />
+                        <img 
+                        src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729531441/espaco_bvmt8g.jpg"
+                        loading='lazy'
+                        alt='foto de gastronomia' 
+                         />
+                        <img 
+                        src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729531444/espaco2_i3ieau.png" 
+                        loading='lazy'
+                        alt='foto de gastronomia' 
+                        />
                     </div>
                     <div>
                         <h1>Espaços compartilhados</h1>
@@ -806,7 +858,7 @@ const Sobre = () => {
                 </div>
                 
                 <div>
-                    <img src={FotoSerra} alt='foto da pousada'/>
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730130112/fotoMar3_ywfvig.jpg" alt='foto da pousada'/>
                 </div>
 
             </PublicoContainer>
@@ -824,12 +876,12 @@ const Sobre = () => {
                 <h1>Venha viver essa experiência com a gente!</h1>
                 <CustomButton 
                 text="Reservar agora!"
-                textColor="var(--color--black)"
+                textColor="var(--color--white)"
                 backgroundColor="transparent"
-                borderColor="var(--color--black)"
-                iconColor="var(--color--black)"
-                hoverBackgroundColor="var(--color--black)"
-                hoverBorderColor="var(--color--black)"
+                borderColor="var(--color--white)"
+                iconColor="var(--color--white)"
+                hoverBackgroundColor="var(--color--white)"
+                hoverBorderColor="var(--color--white)"
                 hoverColor="var(--color--white)"
                 hoverIconColor="var(--color--white)"
                 onClick={() => alert("Reservado!")}

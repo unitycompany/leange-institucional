@@ -102,12 +102,12 @@ const Pensao = ({ colorDefinedBold }) => {
             <StyledPensaoImages>
                 <StyledTable>
                     <div>
-                        <img src="/public/serra/1.JPG" alt="Imagem 1" />
-                        <img src="/public/serra/1.JPG" alt="Imagem 2" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530957/sushi_g7sbq9.jpg" alt="Imagem 1" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730131254/buteco_ck7tmg.jpg" alt="Imagem 2" />
                     </div>
                     <div>
-                        <img src="/public/serra/1.JPG" alt="Imagem 3" />
-                        <img src="/public/serra/1.JPG" alt="Imagem 4" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730131262/frutosdomar_xqfm5b.jpg" alt="Imagem 3" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/adega_n0cszf.jpg" alt="Imagem 4" />
                     </div>
                 </StyledTable>
             </StyledPensaoImages>

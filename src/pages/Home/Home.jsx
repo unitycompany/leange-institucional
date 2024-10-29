@@ -14,50 +14,45 @@ import { MdBedroomParent } from "react-icons/md";
 import { BiSolidHomeHeart } from "react-icons/bi";
 import { MdFoodBank } from "react-icons/md";
 import { BsCalendar2HeartFill } from "react-icons/bs";
+import SliderAcomodaHome from '../../components/sliderAcomodaHome';
+
 
 
 const images1 = [
-    { src: '../../../public/serra/9.jpeg', alt: 'Imagem 1' },
-    { src: '../../../public/serra/1.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/2.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/3.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/4.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/5.jpg', alt: 'Imagem 1' },
-    { src: '../../../public/serra/6.jpeg', alt: 'Imagem 1' },
-    { src: '../../../public/serra/7.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/serra/8.JPG', alt: 'Imagem 1' },
-
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1729513693/9_hyv1zq.jpg", alt: 'Imagem 1', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/3_d2soci.png", alt: 'Imagem 1', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/5_duax05.png", alt: 'Imagem 1', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/4_ouknmz.png", alt: 'Imagem 1', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png", alt: 'Imagem 1', loading: "lazy" }
 ];
 
 const images2 = [
-    { src: '../../../public/mar/1.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/mar/3.jpg', alt: 'Imagem 3' },
-    { src: '../../../public/mar/6.JPG', alt: 'Imagem 1' },
-    { src: '../../../public/mar/7.JPG', alt: 'Imagem 2' },
-    { src: '../../../public/mar/8.JPG', alt: 'Imagem 3' },
-    { src: '../../../public/mar/9.JPG', alt: 'Imagem 2' },
-    { src: '../../../public/mar/10.JPG', alt: 'Imagem 3' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar1_lhebdi.webp', alt: 'Imagem 1', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar4_hexj9u.webp', alt: 'Imagem 3', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar5_k8fzcv.webp', alt: 'Imagem 1', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar3_sxa0i2.webp', alt: 'Imagem 2', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar2_d3y4tv.webp', alt: 'Imagem 3', loading: "lazy" }
 ];
 
 const images3 = [
-    { src: '../../../public/carrossel/1.PNG', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/2.jpg', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/3.PNG', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/4.PNG', label: 'Pacotes' },
-    { src: '../../../public/carrossel/5.PNG', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/6.PNG', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/7.PNG', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/9.JPG', label: 'Pacotes' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png', label: 'Le Ange Serra' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/3_d2soci.png', label: 'Le Ange Serra' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg', label: 'Le Ange Serra' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png', label: 'Le Ange Serra' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130097/IMG_0885_pou52r.jpg', label: 'Le Ange Mar' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130097/IMG_0478_eymtmg.jpg', label: 'Le Ange Mar' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130098/IMG_0041_zv7w3d.jpg', label: 'Le Ange Mar' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130886/IMG_6320_jovvjl.webp', label: 'Le Ange Serra' },
 ];
 
 const images4 = [
-    { src: '../../../public/carrossel/13.jpg', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/14.JPG', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/15.JPG', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/16.png', label: 'Pacotes' },
-    { src: '../../../public/carrossel/17.png', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/19.jpg', label: 'Le Ange Mar' },
-    { src: '../../../public/carrossel/20.JPG', label: 'Le Ange Mar' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130887/IMG_7854_zetqsr.webp', label: 'Le Ange Mar' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130887/fotoMar1_wotf3h.webp', label: 'Le Ange Mar' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130105/fotoSerra3_zqwbav.jpg', label: 'Le Ange Serra' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130104/fotoSerra4_zgia0i.jpg', label: 'Le Ange Serra' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130106/fotoMar6_lfgi4u.jpg', label: 'Le Ange Mar' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130111/fotoSerra1_pa28ry.jpg', label: 'Le Ange Serra' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130112/fotoMar3_ywfvig.jpg', label: 'Le Ange Serra' },
 ];
 
 
@@ -69,6 +64,20 @@ const StyledContainerPousadas = styled.section`
     justify-content: center;
     gap: 10px;
     padding: 0 5%;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        flex-direction: column;
+        position: relative;
+        z-index: -1;
+
+        .slider{
+            border: 5px solid red;
+            width: 100%;    
+        }
+    }
+
+
 `
 
 const StyledPousadas = styled.div`
@@ -90,10 +99,9 @@ const StyledPousadasTitle = styled.aside `
         color: var(--color--black);
 
         @media (max-width: 768px){
-            border: 1px solid red;
-            margin-left: 10%;
-            font-size: 20px;
-            width: 80%;
+            font-size: 22px;
+            width: 100%;
+            margin-top: -10vh;
         }
     }
 
@@ -110,100 +118,111 @@ const StyledPousadasTitle = styled.aside `
     }
 `
 
-const slideData = [
+const acomodaHome = [
     {
-        backgroundImage: '../../../public/suites/master-6.webp',
-        title: 'Pousada Le Ange Serra',
-        subtitle: 'Miguel Pereira - RJ',
-        features: [
-            { icon: <FaSnowflake />, text: 'Ar condicionado' },
-            { icon: <FaBed />, text: 'Cama king size' },
-            { icon: <FaBath />, text: 'Banheira' },
-            { icon: <FaTv />, text: 'Smart TV' },
-            { icon: <FaSnowflake />, text: 'Ar condicionado' },
-            { icon: <FaBed />, text: 'Cama king size' },
-            { icon: <FaBath />, text: 'Banheira' },
-            { icon: <FaTv />, text: 'Smart TV' }
-        ],
-        buttonText: 'Conhecer todas as acomodações',
+      title: "Suíte Superior 1",
+      subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
+      backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra1_u0olej.jpg",
+      features: [
+        { icon: <FaSnowflake />, text: "52m²" },
+        { icon: <FaSnowflake />, text: "Ar condicionado" },
+        { icon: <FaBed />, text: "Cama king size" },
+        { icon: <FaBath />, text: "Banheira" },
+        { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+        { icon: <FaTv />, text: "Lareira" },
+        { icon: <FaTv />, text: "Frigobar" },
+        { icon: <FaTv />, text: "Chaleira elétrica" },
+        { icon: <FaTv />, text: "Chuveiro" },
+        { icon: <FaTv />, text: "Aquecedor de Toalhas" },
+        { icon: <FaTv />, text: "Cuba única" },
+        { icon: <FaTv />, text: "Varanda privada" }
+      ]
     },
     {
-        backgroundImage: '../../../public/suites/standart4.webp',
-        title: 'Pousada Le Ange Serra',
-        subtitle: 'Miguel Pereira - RJ',
-        features: [
-            { icon: <FaSnowflake />, text: 'Ar condicionado' },
-            { icon: <FaBed />, text: 'Cama king size' },
-            { icon: <FaBath />, text: 'Banheira' },
-            { icon: <FaTv />, text: 'Smart TV' }
-        ],
-        buttonText: 'Conhecer todas as acomodações',
+      title: "Suíte Master 6",
+      subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
+      backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra2_lhgcj2.jpg",
+      features: [
+        { icon: <FaSnowflake />, text: "77m²" },
+        { icon: <FaSnowflake />, text: "Ar condicionado" },
+        { icon: <FaSnowflake />, text: "Chaise lounge" },
+        { icon: <FaSnowflake />, text: "Bay Window" },
+        { icon: <FaBed />, text: "Cama king size" },
+        { icon: <FaBath />, text: "Banheira" },
+        { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+        { icon: <FaTv />, text: "Lareira" },
+        { icon: <FaTv />, text: "Frigobar" },
+        { icon: <FaTv />, text: "Chaleira elétrica" },
+        { icon: <FaTv />, text: "Chuveiro" },
+        { icon: <FaTv />, text: "Aquecedor de Toalhas" },
+        { icon: <FaTv />, text: "Cuba para casal (dupla)" },
+        { icon: <FaTv />, text: "Ampla varanda privativa" }
+      ]
     },
     {
-        backgroundImage: '../../../public/suites/standart7.webp',
-        title: 'Pousada Le Ange Serra',
-        subtitle: 'Miguel Pereira - RJ',
+        title: "Nome da suite",
+        subtitle: "Pousada Le Ange Mar | Búzios - RJ",
+        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125876/suiteMar2_yb1nqi.jpg",
         features: [
-            { icon: <FaSnowflake />, text: 'Ar condicionado' },
-            { icon: <FaBed />, text: 'Cama king size' },
-            { icon: <FaBath />, text: 'Banheira' },
-            { icon: <FaTv />, text: 'Smart TV' }
-        ],
-        buttonText: 'Conhecer todas as acomodações',
+          { icon: <FaSnowflake />, text: "77m²" },
+          { icon: <FaSnowflake />, text: "Ar condicionado" },
+          { icon: <FaSnowflake />, text: "Chaise lounge" },
+          { icon: <FaSnowflake />, text: "Recamier e poltrona de leitura" },
+          { icon: <FaBed />, text: "Cama king size" },
+          { icon: <FaBath />, text: "Banheira" },
+          { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+          { icon: <FaTv />, text: "Lareira" },
+          { icon: <FaTv />, text: "Frigobar" },
+          { icon: <FaTv />, text: "Chaleira elétrica" },
+          { icon: <FaTv />, text: "Chuveiro" },
+          { icon: <FaTv />, text: "Aquecedor de Toalhas" },
+          { icon: <FaTv />, text: "Cuba para casal (dupla)" },
+          { icon: <FaTv />, text: "Ampla varanda privativa" }
+      ]
     },
     {
-        backgroundImage: '../../../public/suites/standart8.webp',
-        title: 'Pousada Le Ange Serra',
-        subtitle: 'Miguel Pereira - RJ',
+        title: "Nome da suite",
+        subtitle: "Pousada Le Ange Mar | Búzios - RJ",
+        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125876/suiteMar1_pmcoje.jpg",
         features: [
-            { icon: <FaSnowflake />, text: 'Ar condicionado' },
-            { icon: <FaBed />, text: 'Cama king size' },
-            { icon: <FaBath />, text: 'Banheira' },
-            { icon: <FaTv />, text: 'Smart TV' },
-            { icon: <FaSnowflake />, text: 'Ar condicionado' },
-            { icon: <FaBed />, text: 'Cama king size' },
-            { icon: <FaBath />, text: 'Banheira' },
-            { icon: <FaTv />, text: 'Smart TV' }
-        ],
-        buttonText: 'Conhecer todas as acomodações',
+          { icon: <FaSnowflake />, text: "77m²" },
+          { icon: <FaSnowflake />, text: "Ar condicionado" },
+          { icon: <FaSnowflake />, text: "Chaise lounge" },
+          { icon: <FaSnowflake />, text: "Recamier e poltrona de leitura" },
+          { icon: <FaBed />, text: "Cama king size" },
+          { icon: <FaBath />, text: "Banheira" },
+          { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+          { icon: <FaTv />, text: "Lareira" },
+          { icon: <FaTv />, text: "Frigobar" },
+          { icon: <FaTv />, text: "Chaleira elétrica" },
+          { icon: <FaTv />, text: "Chuveiro" },
+          { icon: <FaTv />, text: "Aquecedor de Toalhas" },
+          { icon: <FaTv />, text: "Cuba para casal (dupla)" },
+          { icon: <FaTv />, text: "Ampla varanda privativa" }
+      ]
     },
     {
-        backgroundImage: '../../../public/suites/stardart-5.webp',
-        title: 'Pousada Le Ange Serra',
-        subtitle: 'Miguel Pereira - RJ',
+        title: "Suíte Master 10",
+        subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
+        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125194/suiteSerra3_ayqtcj.jpg",
         features: [
-            { icon: <FaSnowflake />, text: 'Ar condicionado' },
-            { icon: <FaBed />, text: 'Cama king size' },
-            { icon: <FaBath />, text: 'Banheira' },
-            { icon: <FaTv />, text: 'Smart TV' }
-        ],
-        buttonText: 'Conhecer todas as acomodações',
+          { icon: <FaSnowflake />, text: "77m²" },
+          { icon: <FaSnowflake />, text: "Ar condicionado" },
+          { icon: <FaSnowflake />, text: "Chaise lounge" },
+          { icon: <FaSnowflake />, text: "Recamier e poltrona de leitura" },
+          { icon: <FaBed />, text: "Cama king size" },
+          { icon: <FaBath />, text: "Banheira" },
+          { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+          { icon: <FaTv />, text: "Lareira" },
+          { icon: <FaTv />, text: "Frigobar" },
+          { icon: <FaTv />, text: "Chaleira elétrica" },
+          { icon: <FaTv />, text: "Chuveiro" },
+          { icon: <FaTv />, text: "Aquecedor de Toalhas" },
+          { icon: <FaTv />, text: "Cuba para casal (dupla)" },
+          { icon: <FaTv />, text: "Ampla varanda privativa" }
+      ]
     },
-    {
-        backgroundImage: '../../../public/suites/sup2.webp',
-        title: 'Pousada Le Ange Serra',
-        subtitle: 'Miguel Pereira - RJ',
-        features: [
-            { icon: <FaSnowflake />, text: 'Ar condicionado' },
-            { icon: <FaBed />, text: 'Cama king size' },
-            { icon: <FaBath />, text: 'Banheira' },
-            { icon: <FaTv />, text: 'Smart TV' }
-        ],
-        buttonText: 'Conhecer todas as acomodações',
-    },
-    {
-        backgroundImage: '../../../public/suites/sup3.webp',
-        title: 'Pousada Le Ange Serra',
-        subtitle: 'Miguel Pereira - RJ',
-        features: [
-            { icon: <FaSnowflake />, text: 'Ar condicionado' },
-            { icon: <FaBed />, text: 'Cama king size' },
-            { icon: <FaBath />, text: 'Banheira' },
-            { icon: <FaTv />, text: 'Smart TV' }
-        ],
-        buttonText: 'Conhecer todas as acomodações',
-    },
-];
+  ];
 
 const StyledAcomoda = styled.section`
     height: 100vh;
@@ -217,51 +236,66 @@ const StyledAcomoda = styled.section`
 
 const slideDataCoverflow = [
     {
-        backgroundImage: '../../../public/estrutura/aconchego.JPG',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg',
         title: 'Aconchego',
-        description: 'Na propriedade, temos trilhas dentro da natureza, beirando o rio! Em diversos pontos você pode escolher dar uma paradinha para tomar um banho e renovar as energias!',
+        description: 'Nossas áreas internas, contam com três salas superequipadas e aconchegantes, sendo elas: sala de TV, sala de estar, sala de jogos com mesa de bilhar, carteado, jogos de tabuleiro e biblioteca.',
         buttonText: 'Viver minha experiência agora',
     },
     {
-        backgroundImage: '../../../public/estrutura/cozinha.webp',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
         title: 'Cozinha',
         description: 'Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.',
         buttonText: 'Viver minha experiência agora',
     },
     {
-        backgroundImage: '../../../public/estrutura/suites.jpeg',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/suites_gmhdsf.jpg',
         title: 'Suites',
-        description: 'Nossa maravilhosa piscina de borda infinita possui aquecimento solar...',
+        description: 'Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira com vista para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.',
         buttonText: 'Viver minha experiência agora',
     },
     {
-        backgroundImage: '../../../public/estrutura/relaxar.JPG',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/conforto_oebwyu.webp',
         title: 'Relaxar',
-        description: 'Desfrute de nossas acomodações com todo o conforto e comodidade...',
+        description: 'Relaxe em nosso SPA com uma vista de frente para mata! Você pode escolher contratar nossos serviços de massoterapia, manicure, pedicure.',
         buttonText: 'Viver minha experiência agora',
     },
     {
-        backgroundImage: '../../../public/pousada/mar_pousada2.JPG',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126869/refrescar_id0f4o.png',
         title: 'Refrescar',
-        description: 'Nossa maravilhosa piscina de borda infinita possui aquecimento solar...',
+        description: 'Nossa maravilhosa piscina de borda infinita possui aquecimento solar e tratamento especial por ozônio, com níveis baixíssimos de cloro, além de contar com o ofurô aquecido, perfeito para aproveitar no final de tarde em que temos um pôr do sol incrível para acompanhar. Ah! E claro que seu Dog pode nadar junto com você!',
         buttonText: 'Viver minha experiência agora',
     },
     {
-        backgroundImage: '../../../public/pousada/mar_pousada2.JPG',
-        title: 'Conforto',
-        description: 'Desfrute de nossas acomodações com todo o conforto e comodidade...',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126869/aventura_waih8i.png',
+        title: 'Aventura',
+        description: 'Na propriedade, temos trilhas dentro da natureza, beirando o rio! Em diversos pontos você pode escolher dar uma paradinha para tomar um banho e renovar as energias!',
         buttonText: 'Viver minha experiência agora',
     },
     {
-        backgroundImage: '../../../public/pousada/mar_pousada2.JPG',
-        title: 'Refrescar',
-        description: 'Nossa maravilhosa piscina de borda infinita possui aquecimento solar...',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/diversao_jpykdy.jpg',
+        title: 'Divercão',
+        description: 'Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet, correr, pular e nadar!',
         buttonText: 'Viver minha experiência agora',
     },
+
     {
-        backgroundImage: '../../../public/pousada/mar_pousada2.JPG',
-        title: 'Conforto',
-        description: 'Desfrute de nossas acomodações com todo o conforto e comodidade...',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/adega_n0cszf.jpg',
+        title: 'Adega',
+        description: 'Para completar ainda mais sua experiência, contamos com uma adega subterrânea para climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.',
+        buttonText: 'Viver minha experiência agora',
+    },
+
+    {
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png',
+        title: 'Sossego',
+        description: 'A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.',
+        buttonText: 'Viver minha experiência agora',
+    },
+
+    {
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126872/petfriendly_xxpntj.png',
+        title: 'Pet Friendly',
+        description: 'Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!',
         buttonText: 'Viver minha experiência agora',
     },
     // Adicione mais slides conforme necessário
@@ -313,7 +347,7 @@ const StyledEstruturaSubTitle = styled.p`
 
 const events = [
     {
-        image: '../../../public/pacotes/frutosdomar.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131262/frutosdomar_xqfm5b.jpg',
         title: 'Frutos do mar',
         dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
         features: [
@@ -325,7 +359,7 @@ const events = [
         discount: 25,
     },
     {
-        image: '../../../public/pacotes/buteco.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131254/buteco_ck7tmg.jpg',
         title: 'Noite do Boteco',
         dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
         features: [
@@ -337,7 +371,7 @@ const events = [
         discount: 25,
     },
     {
-        image: '../../../public/pacotes/pizzas.jpeg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
         title: 'Noite das pizzas',
         dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
         features: [
@@ -349,8 +383,32 @@ const events = [
         discount: 25,
     },
     {
-        image: '../../../public/pousada/serra_pousada4.JPG',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131253/arabe_orkglt.png',
         title: 'Noite Árabe',
+        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '354,20',
+        discount: 25,
+    },
+    {
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131254/massas_geg7x7.jpg',
+        title: 'Noite de Massas',
+        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '354,20',
+        discount: 25,
+    },
+    {
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131256/hamburguer_jbi1rv.jpg',
+        title: 'Noite de Hámburguer',
         dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
@@ -413,10 +471,9 @@ const Home = () => {
                     content={images1} 
                     spaceBetween={20} 
                     slidesPerView={1} 
-                    width="60%"
                     height="60vh" 
-                    contentType="image"
-                    showPagination={false}
+                    contentType="image" 
+                    showPagination={false} 
                     />
                     <TitlePousadas 
                     title="Pousada Le Ange Serra" 
@@ -451,15 +508,8 @@ const Home = () => {
                     <StyledEstruturaSubTitle>Já consegue se imaginar dormindo?</StyledEstruturaSubTitle>
                 </div>
 
-                <SliderComponent 
-                content={slideData} 
-                contentType="div" 
-                spaceBetween={20} 
-                slidesPerView={2} 
-                width="100%" 
-                height="90vh"
-                showPagination={false} 
-                showNavigation={true} 
+                <SliderAcomodaHome 
+                content={acomodaHome} 
                 />
 
             </StyledAcomoda>

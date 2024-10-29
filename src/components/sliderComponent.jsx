@@ -22,7 +22,11 @@ const SwiperStyles = createGlobalStyle`
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         transition: all .2s;
 
-        &:hover{
+        @media (max-width: 768px){
+            display: none;
+        }
+
+        &:hover {
             background-color: var(--color--white);
             color: var(--color--black);
             transform: scale(1.05);
@@ -152,6 +156,17 @@ const Features = styled(motion.div)`
     }
 `;
 
+// Container for Slider
+const SliderWrapper = styled.div`
+    width: 100%; // Largura total em dispositivos móveis
+    max-width: 60%; // Limite de 60% em telas maiores
+    margin: 0 auto; // Centraliza o slider
+
+    @media (max-width: 640px) {
+        max-width: 100%; // 100% em dispositivos móveis
+    }
+`;
+
 // Main Slider Component
 const SliderComponent = ({
     content = [],
@@ -159,7 +174,6 @@ const SliderComponent = ({
     spaceBetween = 10,
     slidesPerView = 1,
     height = '300px',
-    width = '100%',
     autoplayDelay = 3000,
     showPagination = true,
     showNavigation = true,
@@ -173,7 +187,7 @@ const SliderComponent = ({
     const buttonY = useTransform(scrollY, [0, 300], [0, -5]);
 
     return (
-        <>
+        <SliderWrapper>
             <SwiperStyles />
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
@@ -186,23 +200,23 @@ const SliderComponent = ({
                     delay: autoplayDelay,
                     disableOnInteraction: false,
                 }}
-                style={{ width: width, height: height }}
+                style={{ height: height }}
                 breakpoints={{
                     // Define breakpoints for responsive behavior
                     640: {
                         slidesPerView: 1, // 1 slide per view on mobile
                         spaceBetween: 10,
-                        height: '200px', // Adjust height for mobile
+                        height: '200px', // Ajusta altura para dispositivos móveis
                     },
                     768: {
-                        slidesPerView: 2, // 2 slides per view on tablet
+                        slidesPerView: 1, // 1 slide por visualização em tablet
                         spaceBetween: 20,
-                        height: '250px', // Adjust height for tablet
+                        height: '250px', // Ajusta altura para tablets
                     },
                     1024: {
-                        slidesPerView: 3, // 3 slides per view on desktop
+                        slidesPerView: 1, // 1 slide por visualização em desktop
                         spaceBetween: 30,
-                        height: '300px', // Adjust height for desktop
+                        height: '300px', // Ajusta altura para desktop
                     },
                 }}
             >
@@ -252,7 +266,7 @@ const SliderComponent = ({
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </>
+        </SliderWrapper>
     );
 };
 

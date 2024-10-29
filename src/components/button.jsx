@@ -28,6 +28,13 @@ const StyledButton = styled.button`
         scale: 0.95;
         box-shadow: 0 0 0 4px var(--color--black);
     }
+
+    // Muda a cor do botão em telas menores
+    @media (max-width: 640px) {
+        color: var(--color--white); // Cor do texto
+        background-color: var(--color--black); // Cor de fundo
+        border: 4px solid var(--color--white); // Borda
+    }
 `;
 
 const ArrowIcon = styled.svg`
@@ -54,7 +61,7 @@ const ArrowIcon = styled.svg`
     }
 
     ${StyledButton}:hover & {
-        fill:var(--color--white);
+        fill: var(--color--white);
     }
 `;
 
