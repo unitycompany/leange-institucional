@@ -1,121 +1,121 @@
 {
-  "hash": "1feea486",
-  "configHash": "f1382fa3",
+  "hash": "3c5ee162",
+  "configHash": "fbd3adcc",
   "lockfileHash": "bcdedb89",
-  "browserHash": "1a3770a3",
+  "browserHash": "0e9ad9fc",
   "optimized": {
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "51493771",
+      "fileHash": "74f4f10e",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "5d2aa409",
+      "fileHash": "952eb425",
       "needsInterop": true
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.js",
       "file": "react-router-dom.js",
-      "fileHash": "824184fd",
+      "fileHash": "1a952c67",
       "needsInterop": false
     },
     "framer-motion": {
       "src": "../../node_modules/framer-motion/dist/es/index.mjs",
       "file": "framer-motion.js",
-      "fileHash": "93cd7429",
+      "fileHash": "7e323691",
       "needsInterop": false
     },
     "react-icons/fa": {
       "src": "../../node_modules/react-icons/fa/index.mjs",
       "file": "react-icons_fa.js",
-      "fileHash": "e88c8269",
+      "fileHash": "e16c3860",
       "needsInterop": false
     },
     "react-helmet": {
       "src": "../../node_modules/react-helmet/es/Helmet.js",
       "file": "react-helmet.js",
-      "fileHash": "3e0aaad5",
+      "fileHash": "f99f9a10",
       "needsInterop": false
     },
     "styled-components": {
       "src": "../../node_modules/styled-components/dist/styled-components.browser.esm.js",
       "file": "styled-components.js",
-      "fileHash": "e0315e9c",
+      "fileHash": "3a4c1e21",
       "needsInterop": false
     },
     "react-icons/md": {
       "src": "../../node_modules/react-icons/md/index.mjs",
       "file": "react-icons_md.js",
-      "fileHash": "d9330ec1",
+      "fileHash": "e5356284",
       "needsInterop": false
     },
     "react-icons/bi": {
       "src": "../../node_modules/react-icons/bi/index.mjs",
       "file": "react-icons_bi.js",
-      "fileHash": "5a5e8101",
+      "fileHash": "d083c5d5",
       "needsInterop": false
     },
     "react-icons/bs": {
       "src": "../../node_modules/react-icons/bs/index.mjs",
       "file": "react-icons_bs.js",
-      "fileHash": "65e1ef19",
+      "fileHash": "3162e623",
       "needsInterop": false
     },
     "react-icons/hi2": {
       "src": "../../node_modules/react-icons/hi2/index.mjs",
       "file": "react-icons_hi2.js",
-      "fileHash": "abda66fc",
+      "fileHash": "ced12243",
       "needsInterop": false
     },
     "react-confetti": {
       "src": "../../node_modules/react-confetti/dist/react-confetti.min.js",
       "file": "react-confetti.js",
-      "fileHash": "abf9b09a",
+      "fileHash": "c780c56e",
       "needsInterop": true
     },
     "swiper/react": {
       "src": "../../node_modules/swiper/swiper-react.mjs",
       "file": "swiper_react.js",
-      "fileHash": "87048122",
+      "fileHash": "8de1c1bc",
       "needsInterop": false
     },
     "swiper/modules": {
       "src": "../../node_modules/swiper/modules/index.mjs",
       "file": "swiper_modules.js",
-      "fileHash": "88d79cdf",
+      "fileHash": "273494be",
       "needsInterop": false
     },
     "react-icons/lu": {
       "src": "../../node_modules/react-icons/lu/index.mjs",
       "file": "react-icons_lu.js",
-      "fileHash": "addb1670",
+      "fileHash": "f1570776",
       "needsInterop": false
     },
     "react-icons/ai": {
       "src": "../../node_modules/react-icons/ai/index.mjs",
       "file": "react-icons_ai.js",
-      "fileHash": "33da2e82",
+      "fileHash": "b758107d",
       "needsInterop": false
     },
     "react-icons/fa6": {
       "src": "../../node_modules/react-icons/fa6/index.mjs",
       "file": "react-icons_fa6.js",
-      "fileHash": "1af61632",
+      "fileHash": "50dad552",
       "needsInterop": false
     },
     "react-icons/rx": {
       "src": "../../node_modules/react-icons/rx/index.mjs",
       "file": "react-icons_rx.js",
-      "fileHash": "9c4e3006",
+      "fileHash": "db30c0e4",
       "needsInterop": false
     },
     "react-icons/gr": {
       "src": "../../node_modules/react-icons/gr/index.mjs",
       "file": "react-icons_gr.js",
-      "fileHash": "76961a9f",
+      "fileHash": "6c260fec",
       "needsInterop": false
     }
   },
