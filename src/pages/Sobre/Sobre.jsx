@@ -14,6 +14,7 @@ const SobreContainer = styled.section`
     @media (max-width: 768px){
         height: auto;
         flex-direction: column;
+        border: 1px solid red;
     }
 
     & > div:nth-child(1){
@@ -30,6 +31,7 @@ const SobreContainer = styled.section`
             width: 100%;
             gap: 50px;
             padding: 0 5%;
+            border: 1px solid red;
         }
 
         & > h1{
@@ -41,6 +43,8 @@ const SobreContainer = styled.section`
                 font-size: 30px;
                 text-align: center;
                 width: 100%;
+                font-size: 1.6rem;
+                margin-top: 12vh;
             }
         }
 
@@ -84,6 +88,8 @@ const SobreContainer = styled.section`
         @media (max-width: 768px){
             width: 100%;
             height: auto;
+            border: 1px solid red;
+            display: none;
         }
 
         &::before {
@@ -118,6 +124,10 @@ const SobreContainer = styled.section`
 
 const Espaco = styled.div`
     height: 15vh;
+
+    @media (max-width: 768px){
+        height: 0;
+    }
 `
 
 const UnidadeContainer = styled.section`
@@ -135,6 +145,8 @@ const UnidadeContainer = styled.section`
         height: auto;
         gap: 30px;
         padding: 0 5%;
+        border: 1px solid red;
+        margin-top: 5vh;
     }
 
     & > div:nth-child(1){
@@ -248,7 +260,7 @@ const DiferenciaisContainer = styled.section`
         gap: 25px;
         margin-top: 35px;
         padding: 10% 5%;
-        border-top: 2px dashed;
+        border: 1px solid red;
     }
 
     & > div:nth-child(1){
@@ -312,6 +324,7 @@ const DiferenciaisContainer = styled.section`
         @media (max-width: 768px){
             width: 48%;
             height: 20vh;
+            border: 1px solid red;
         }
 
        }
@@ -337,8 +350,8 @@ const ContainerDuplo = styled.section`
         flex-direction: column;
         gap: 25px;
         margin-top: 50px;
-        padding: 10% 5%;
-        border-top: 2px dashed;
+        padding: 5% 5%;
+        border: 1px solid red;
     }
 
     & > div:nth-child(1){
@@ -632,64 +645,66 @@ const PublicoContainer = styled.section`
     }
 `
 
-const Compromisso = styled.section`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/1_fhinom.png');
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+// const Compromisso = styled.section`
+//     width: 100%;
+//     height: 100vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/1_fhinom.png');
+//     background-position: center;
+//     background-size: cover;
+//     background-attachment: fixed;
 
-    @media (max-width: 768px){
-        flex-direction: column;
-    }
+//     @media (max-width: 768px){
+//         flex-direction: column;
+//         background-image: none;
+//         background-color: var(--color--black);
+//     }
 
-    & > div {
-        height: 100%;
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 25px;
+//     & > div {
+//         height: 100%;
+//         width: 50%;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         flex-direction: column;
+//         gap: 25px;
 
-        @media (max-width: 768px){
-            width: 100%;
-            height: auto;
-        }
+//         @media (max-width: 768px){
+//             width: 100%;
+//             height: auto;
+//         }
 
-        & > h1{
-            font-size: 2.5em;
-            font-family: var(--font--comfortaa);
-            color: var(--color--white);
+//         & > h1{
+//             font-size: 2.5em;
+//             font-family: var(--font--comfortaa);
+//             color: var(--color--white);
 
-            @media (max-width: 768px){
-                font-size: 24px;
-                width: 100%;
-                text-align: center;
-            }
-        }
+//             @media (max-width: 768px){
+//                 font-size: 24px;
+//                 width: 100%;
+//                 text-align: center;
+//             }
+//         }
 
-        & > h1 b{
-            color: var(--color--green);
-        }
+//         & > h1 b{
+//             color: var(--color--green);
+//         }
 
-        & > p {
-            width: 80%;
-            font-family: var(--font--avenir);
-            color: var(--color--white);
-            text-align: justify;
+//         & > p {
+//             width: 80%;
+//             font-family: var(--font--avenir);
+//             color: var(--color--white);
+//             text-align: justify;
 
-            @media (max-width: 768px){
-                font-size: 14px;
-                text-align: justify;
-            }
-        }
-    }
-`
+//             @media (max-width: 768px){
+//                 font-size: 14px;
+//                 text-align: justify;
+//             }
+//         }
+//     }
+// `
 
 const CTA = styled.div`
     width: 100%;
@@ -860,14 +875,14 @@ const Sobre = () => {
 
             </PublicoContainer>
 
-            <Compromisso>
+            {/* <Compromisso>
 
                 <div>
                     <h1>Compromisso com o <b>Meio Ambiente</b></h1>
                     <p>Estamos, profundamente, comprometidos com a sustentabilidade. Utilizamos produtos de produtores rurais locais, promovendo a economia regional e minimizando nosso impacto ambiental. Implementamos práticas ecológicas em todas as nossas operações, desde o uso de energia solar até a gestão eficiente de recursos.</p>
                 </div>
 
-            </Compromisso>
+            </Compromisso> */}
 
             <CTA>
                 <h1>Venha viver essa experiência com a gente!</h1>

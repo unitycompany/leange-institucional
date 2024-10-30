@@ -50,7 +50,7 @@ const StyledHomeDiv = styled(motion.div)`
         border-radius: 0px;
         border-image: fill 0 linear-gradient(#0001, #ffffff);
         position: absolute;
-        height: 50%;
+        height: 70%;
         top: 0;
         z-index: -1;
     }
@@ -69,7 +69,7 @@ const StyledHomeTexts = styled(motion.div)`
         border: 1px solid red;
         width: 100%;
         align-items: center;
-        height: 70%;
+        height: 50%;
     }
 
     & > h4 {
@@ -121,7 +121,7 @@ const StyledHomeTexts = styled(motion.div)`
             width: 80%;
             font-size: 1rem;
             text-align: center;
-            padding-bottom: 100px;
+            padding-bottom: 50px;
         }
     }
 `;

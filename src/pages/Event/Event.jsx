@@ -7,6 +7,10 @@ import Footer from '../../components/footer';
 
 const Espace = styled.div`
     height: 15vh;
+
+    @media (max-width: 768px){
+        height: 0;
+    }
 `
 
 const InicioContainer = styled.section`
@@ -18,6 +22,12 @@ const InicioContainer = styled.section`
     justify-content: center;
     gap: 20px;
 
+    @media (max-width: 768px){
+        border: 1px solid red;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
     & > div:nth-child(1){
         width: 45%;
         height: 100%;
@@ -27,12 +37,27 @@ const InicioContainer = styled.section`
         gap: 50px;
         align-items: flex-start;
 
+        @media (max-width: 768px){
+            width: 100%;
+            gap: 30px;
+            align-items: center;
+            border: 1px solid red;
+            height: auto;
+            position: relative;
+        }
+
         & > h1{
             font-size: 3.5rem;
             width: 100%;
             line-height: 120%;
             font-family: var(--font--comfortaa);
             font-weight: 200;
+
+            @media (max-width: 768px){
+                font-size: 1.8rem;
+                text-align: center;
+                margin-top: 55vh;
+            }
 
             & > b{
                 font-weight: 400;
@@ -62,6 +87,12 @@ const InicioContainer = styled.section`
             color: var(--color--black);
             width: 70%;
             line-height: 100%;
+
+            @media (max-width: 768px){
+                font-size: 1rem;
+                text-align: center;
+                width: 90%;
+            }
         }
     }
 
@@ -69,12 +100,25 @@ const InicioContainer = styled.section`
         width: 55%;
         height: 90%;
 
+        @media (max-width: 768px){
+            width: 100%;
+            position: absolute;
+            top: 0;
+            height: 50vh;
+            z-index: -1;
+        }
+
         & > img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
             border-radius: 100px 20px 50px 20px;
+
+            @media (max-width: 768px){
+                border-radius: 0 0 50px 50px;
+                border-image: fill 0 linear-gradient(#0001, #ffffff);
+            }
         }
     }
 `
@@ -85,6 +129,12 @@ const CarrosselContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        height: auto;
+        padding: 10% 2.5%;
+    }
 `
 
 const SobreContainer = styled.section`
@@ -97,17 +147,31 @@ const SobreContainer = styled.section`
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 768px){
+        border: 1px solid red;
+        height: auto;
+        padding: 5% 5%;
+    }
+
     & > div:nth-child(1){
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
 
+        @media (max-width: 768px){
+            border: 1px solid red;
+        }
+
         & > h1 {
             font-family: var(--font--comfortaa);
             font-size: 2rem;
             color: var(--color--black);
             font-weight: 400;
+
+            @media (max-width: 768px){
+                font-size: 1.6rem;
+            }
         }
         
     }
@@ -120,6 +184,12 @@ const SobreContainer = styled.section`
         height: 80vh;
         gap: 50px;
 
+        @media (max-width: 768px){
+            border: 1px solid red;
+            flex-direction: column;
+            height: auto;
+        }
+
         & > div{
             width: 50%;
             height: 100%;
@@ -129,12 +199,28 @@ const SobreContainer = styled.section`
             justify-content: space-between;
             flex-direction: column;
 
+            @media (max-width: 768px){
+                width: 100%;
+                align-items: center;
+                padding: 40px;
+                gap: 20px;
+                border-radius: 25px 0 25px 0!important;
+                border-image: fill 0 linear-gradient(#0001, #ffffff80);
+            }
+
             & > span{
                 width: 100%;
                 font-family: var(--font--comfortaa);
                 font-size: 1.5em;
                 font-weight: 600;
                 color: var(--color--white);
+
+                @media (max-width: 768px){
+                    border: 1px solid red;
+                    font-size: 1.3rem;
+                    text-align: center;
+                    width: 100%;
+                }
             }
 
             & > div{
@@ -144,10 +230,19 @@ const SobreContainer = styled.section`
                 flex-direction: column;
                 gap: 30px;
 
+                @media (max-width: 768px){
+                    align-items: center;
+                }
+
                 & > p{
                     color: var(--color--white);
                     font-family: var(--font--avenir);
                     line-height: 100%;
+
+                    @media (max-width: 768px){
+                        text-align: justify;
+                        font-size: .9rem;
+                    }
                 }
             }
 
@@ -189,15 +284,35 @@ const CasamentoContainer = styled.section`
     justify-content: center;
     gap: 50px;
 
+    @media (max-width: 768px){
+        border: 3px solid red;
+        height: auto;
+        flex-direction: column;
+        padding: 10% 5%;
+    }
+
     & > div{
         width: 50%;
         height: 80%;
+
+        @media (max-width: 768px){
+            width: 100%;
+            height: 40vh;
+        }
 
         & > img{
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 40px 0 40px 0;
+
+            @media (max-width: 768px){
+                border-radius: 25px 0 25px 0; 
+                position: absolute;
+                height: 50vh;
+                width: 90%;
+                z-index: -1;
+            }
         }
 
         & > div {
@@ -207,12 +322,22 @@ const CasamentoContainer = styled.section`
             align-items: center;
             justify-content: space-between;
 
+            @media (max-width: 768px){
+                border: 1px solid red;
+            }
+
 
             & > img {
                 width: 32%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 30px 0 30px 0;
+
+                @media (max-width: 768px){
+                    border: 1px solid red;
+                    height: 15vh;
+                    border-radius: 10px 0 10px 0;
+                }
             }
         }
     }
@@ -224,9 +349,24 @@ const CasamentoContainer = styled.section`
         justify-content: space-between;
         align-items: flex-start;
 
+        @media (max-width: 768px){
+            border: 1px solid red;
+            align-items: center;
+            width: 100%;
+            margin-top: -35px;
+            height: auto;
+            gap: 25px;
+        }
+
         & > h1{
             font-size: 2.2rem;
             font-family: var(--font--comfortaa);
+
+            @media (max-width: 768px){
+                border: 1px solid red;
+                font-size: 1.6rem;
+                color: var(--color--white);
+            }
         }
 
         & > p{
@@ -234,16 +374,45 @@ const CasamentoContainer = styled.section`
             font-family: var(--font--avenir);
             width: 70%;
             line-height: 100%;
+
+            @media (max-width: 768px){
+                border: 1px solid red;
+                width: 100%;
+                font-size: 1rem;
+                margin-top: 25px;
+                color: var(--color--black);
+                text-align: center;
+            }
         }
 
         & > ol{
             margin-left: 30px;
             list-style-image: url('/leange/public/icon/correto.png');
 
+            @media (max-width: 768px){
+                border: 1px solid red;
+                height: auto;
+                margin-top: 0px;
+                list-style-image: none;
+                margin-left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
             & > li{
                 font-family: var(--font--avenir);
                 color: var(--color--black);
                 font-size: 1rem;
+
+                @media (max-width: 768px){
+                    font-size: 0.9rem;
+                    border: 1px solid red;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
             }
         }
         
@@ -259,15 +428,35 @@ const NiverContainer = styled.section`
     justify-content: center;
     gap: 50px;
 
+    @media (max-width: 768px){
+        border: 3px solid red;
+        height: auto;
+        flex-direction: column-reverse;
+        padding: 10% 5%;
+    }
+
     & > div{
         width: 50%;
         height: 80%;
+
+        @media (max-width: 768px){
+            width: 100%;
+            height: 40vh;
+        }
 
         & > img{
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 40px 0 40px 0;
+
+            @media (max-width: 768px){
+                border-radius: 25px 0 25px 0; 
+                position: absolute;
+                height: 50vh;
+                width: 90%;
+                z-index: -1;
+            }
         }
 
         & > div {
@@ -283,6 +472,12 @@ const NiverContainer = styled.section`
                 height: 100%;
                 object-fit: cover;
                 border-radius: 30px 0 30px 0;
+
+                @media (max-width: 768px){
+                    border: 1px solid red;
+                    height: 15vh;
+                    border-radius: 10px 0 10px 0;
+                }
             }
         }
     }
@@ -294,9 +489,24 @@ const NiverContainer = styled.section`
         justify-content: space-between;
         align-items: flex-start;
 
+        @media (max-width: 768px){
+            border: 1px solid red;
+            align-items: center;
+            width: 100%;
+            margin-top: -35px;
+            height: auto;
+            gap: 25px;
+        }
+
         & > h1{
             font-size: 2.2rem;
             font-family: var(--font--comfortaa);
+
+            @media (max-width: 768px){
+                border: 1px solid red;
+                font-size: 1.6rem;
+                color: var(--color--white);
+            }
         }
 
         & > p{
@@ -304,16 +514,45 @@ const NiverContainer = styled.section`
             font-family: var(--font--avenir);
             width: 70%;
             line-height: 100%;
+
+            @media (max-width: 768px){
+                border: 1px solid red;
+                width: 100%;
+                font-size: 1rem;
+                margin-top: 25px;
+                color: var(--color--black);
+                text-align: center;
+            }
         }
 
         & > ol{
             margin-left: 30px;
             list-style-image: url('/leange/public/icon/correto.png');
 
+            @media (max-width: 768px){
+                border: 1px solid red;
+                height: auto;
+                margin-top: 0px;
+                list-style-image: none;
+                margin-left: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
             & > li{
                 font-family: var(--font--avenir);
                 color: var(--color--black);
                 font-size: 1rem;
+
+                @media (max-width: 768px){
+                    font-size: 0.9rem;
+                    border: 1px solid red;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
             }
         }
         
@@ -349,7 +588,7 @@ const Eventos = () => {
                         spaceBetween={20} 
                         slidesPerView={1} 
                         width="100%"
-                        height="80vh" 
+                        height="100vh" 
                         contentType="image"
                         showPagination={true}
                 />
