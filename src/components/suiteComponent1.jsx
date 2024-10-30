@@ -32,7 +32,7 @@ const SuiteContainer = styled.section`
     @media (max-width: 768px){
         height: 125vh;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 `;
 

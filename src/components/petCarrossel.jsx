@@ -20,34 +20,49 @@ const images = [
     'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg',
 ];
 
-// Styled component for the carousel container
 const CarouselContainer = styled.div`
     height: 80vh;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        height: auto;
+    }
 `;
 
-// Styled component for the slide pairs
 const SlideContainer = styled.div`
     display: flex;
     flex-direction: column;
     overflow: hidden;
     height: 100%;
     gap: 10px;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+    }
 `;
 
-// Styled component for slides
 const StyledSwiperSlide = styled(SwiperSlide)`
-    width: 100%; // Ajusta a largura para 100% para evitar espaço vazio
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+    }
 `;
 
-// Styled component for images
 const StyledImage = styled.img`
     width: 100%;
-    height: ${(props) => (props.index % 2 === 0 ? '40vh' : '30vh')}; /* Alternating height */
+    height: ${(props) => (props.index % 2 === 0 ? '40vh' : '30vh')};
     object-fit: cover;
     border-radius: 15px;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        width: 95%;
+        margin-left: 2.5%;
+    }
 `;
 
 const StyledTextPet = styled.section`
@@ -58,14 +73,35 @@ const StyledTextPet = styled.section`
     height: 15vh;
     align-items: center;
 
+    @media (max-width: 768px){
+        border: 3px solid red;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 10px;
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        margin-top: 25vh;
+        height: 15vh;
+    }
+
     & > h1 {
         font-size: 2rem;
         font-family: var(--font--comfortaa);
+
+        @media (max-width: 768px){
+            font-size: 1rem;
+            color: var(--color--black);
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 10px 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
     }
 `;
 
 const PetFriendlyCarousel = () => {
-    const autoplayDelay = 1000; // Define o delay do autoplay em milissegundos
+    const autoplayDelay = 1000;
 
     return (
         <>
@@ -94,7 +130,11 @@ const PetFriendlyCarousel = () => {
                         disableOnInteraction: false,
                     }}
                     spaceBetween={10}
-                    slidesPerView={5} // Ajuste o número conforme necessário
+                    breakpoints={{
+                        1024: { slidesPerView: 5 }, // 5 slides para telas grandes
+                        768: { slidesPerView: 4 },  // 4 slides para tablets
+                        480: { slidesPerView: 3 },  // 3 slides para celulares
+                    }}
                 >
                     {images.map((image, index) => (
                         <StyledSwiperSlide key={index}>

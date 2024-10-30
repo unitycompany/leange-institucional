@@ -15,13 +15,24 @@ const StyledTextDepoimentos = styled.section`
     padding: 0 5%;
     justify-content: center;
     height: 15vh;
-    align-items: center;
+    
+    @media (max-width: 768px){
+        border: 1px solid red;
+        height: 10vh;
+        align-items: center;
+        margin-top: 2.5vh;
+    }
 
     & > h1 {
         font-size: 2rem;
         font-family: var(--font--comfortaa);
         text-align: center;
         width: 100%;
+        
+        @media (max-width: 768px){
+            border: 1px solid red;
+            font-size: 1.6rem;
+        }
     }
 `;
 
@@ -32,6 +43,11 @@ const CarouselContainer = styled.div`
     align-items: center;
     height: 70vh;
     padding: 0 5%;
+
+    @media (max-width: 768px){
+        border: 2px solid red;
+        height: auto;
+    }
 `;
 
 const Container = styled.div`
@@ -45,6 +61,11 @@ const Container = styled.div`
     border-radius: 10px; /* Bordas arredondadas */
     position: relative; /* Para posicionar o texto em cima da imagem */
     overflow: hidden; /* Para esconder qualquer conteúdo que extrapole o container */
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        height: 65vh;
+    }
 `;
 
 const Name = styled.h2`
@@ -59,6 +80,16 @@ const Name = styled.h2`
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     z-index: 1; /* Para garantir que o texto fique acima da imagem */
+    font-family: var(--font--comfortaa);
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        padding: 6px 20px;
+        border-radius: 5px;
+        top: 5px;
+        left: 10px;
+        font-size: .9rem;
+    }
 `;
 
 const DepoimentoText = styled.p`
@@ -73,6 +104,13 @@ const DepoimentoText = styled.p`
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     z-index: 1; /* Para garantir que o texto fique acima da imagem */
+    font-family: var(--font--comfortaa);
+
+    @media (max-width: 768px){
+        font-size: .9rem;
+        border: 1px solid red;
+        width: 90%;
+    }
 `;
 
 // Exemplo de dados dos depoimentos
@@ -81,37 +119,37 @@ const depoimentosData = [
         id: 1,
         name: "João Silva",
         text: "Ótima experiência!",
-        bgImages: ["/public/serra/1.JPG", "/public/serra/2.JPG", "/public/serra/3.JPG"],
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/2.JPG", "/public/serra/3.JPG"],
     },
     {
         id: 2,
         name: "Maria Oliveira",
         text: "Atendimento excepcional.",
-        bgImages: ["/public/serra/4.JPG", "/public/serra/5.JPG", "/public/serra/6.JPG"],
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/5.JPG", "/public/serra/6.JPG"],
     },
     {
         id: 3,
         name: "Carlos Pereira",
         text: "Recomendo a todos!",
-        bgImages: ["/public/serra/7.JPG", "/public/serra/8.JPG", "/public/serra/9.JPG"],
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/8.JPG", "/public/serra/9.JPG"],
     },
     {
         id: 4,
         name: "Ana Santos",
         text: "Fiquei encantado!",
-        bgImages: ["/public/serra/10.JPG", "/public/serra/11.JPG", "/public/serra/12.JPG"],
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/11.JPG", "/public/serra/12.JPG"],
     },
     {
         id: 5,
         name: "Pedro Lima",
         text: "Voltarei com certeza.",
-        bgImages: ["/public/serra/13.JPG", "/public/serra/14.JPG", "/public/serra/15.JPG"],
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/14.JPG", "/public/serra/15.JPG"],
     },
     {
         id: 6,
         name: "Fernanda Costa",
         text: "Uma experiência inesquecível!",
-        bgImages: ["/public/serra/16.JPG", "/public/serra/17.JPG", "/public/serra/18.JPG"],
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/17.JPG", "/public/serra/18.JPG"],
     },
 ];
 
@@ -124,12 +162,22 @@ const Depoimentos = () => {
 
             <CarouselContainer>
                 <Swiper
-                    slidesPerView={3}
+                    slidesPerView={1} // Valor padrão para desktop
                     spaceBetween={10}
                     modules={[ Autoplay ]}
-                
-                    grabCursor={true} // Habilita o cursor de arrasto
-                    autoplay={{ delay: 5000, disableOnInteraction: false }} // Ativa a rolagem automática
+                    grabCursor={true}
+                    autoplay={{ delay: 5000, disableOnInteraction: false }}
+                    breakpoints={{
+                        1024: {
+                            slidesPerView: 3, // Desktop
+                        },
+                        768: {
+                            slidesPerView: 2, // Tablet
+                        },
+                        480: {
+                            slidesPerView: 1, // Telefone
+                        },
+                    }}
                 >
                     {depoimentosData.map((depoimento) => (
                         <SwiperSlide key={depoimento.id}>
@@ -137,13 +185,13 @@ const Depoimentos = () => {
                                 <Swiper
                                     slidesPerView={1}
                                     spaceBetween={10}
-                                    loop={true} // Permite loop das imagens
-                                    style={{ width: '100%', height: '100%' }} // Ajuste a largura conforme necessário
+                                    loop={true}
+                                    style={{ width: '100%', height: '100%' }}
                                     onTouchStart={(e) => {
-                                        e.stopPropagation(); // Impede que o evento de toque do Swiper interno afete o Swiper externo
+                                        e.stopPropagation();
                                     }}
                                     onMouseEnter={(e) => {
-                                        e.stopPropagation(); // Impede que o evento de mouse entre no Swiper interno afete o Swiper externo
+                                        e.stopPropagation();
                                     }}
                                 >
                                     {depoimento.bgImages.map((bgImage, index) => (
@@ -155,7 +203,7 @@ const Depoimentos = () => {
                                                     backgroundPosition: 'center',
                                                     width: '100%',
                                                     height: '100%',
-                                                    borderRadius: '10px', // Para as bordas arredondadas
+                                                    borderRadius: '10px',
                                                 }}
                                             />
                                         </SwiperSlide>
@@ -171,16 +219,16 @@ const Depoimentos = () => {
 
             <StyledTextDepoimentos>
                 <CustomButton 
-                text="Reservar agora!"
-                textColor="var(--color--black)"
-                backgroundColor="transparent"
-                borderColor="var(--color--black)"
-                iconColor="var(--color--black)"
-                hoverBackgroundColor="var(--color--black)"
-                hoverBorderColor="var(--color--black)"
-                hoverColor="var(--color--white)"
-                hoverIconColor="var(--color--white)"
-                onClick={() => alert("Reservado!")}
+                    text="Reservar agora!"
+                    textColor="var(--color--black)"
+                    backgroundColor="transparent"
+                    borderColor="var(--color--black)"
+                    iconColor="var(--color--black)"
+                    hoverBackgroundColor="var(--color--black)"
+                    hoverBorderColor="var(--color--black)"
+                    hoverColor="var(--color--white)"
+                    hoverIconColor="var(--color--white)"
+                    onClick={() => alert("Reservado!")}
                 />
             </StyledTextDepoimentos>
         </>

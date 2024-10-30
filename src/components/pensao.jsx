@@ -9,6 +9,13 @@ const StyledSectionPensao = styled.section`
     justify-content: space-between;
     padding: 0 5%;
     gap: 50px;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        flex-direction: column;
+        height: auto;
+        padding: 5% 2.5%;
+    }
 `;
 
 const StyledPensaoImages = styled.div`
@@ -17,6 +24,12 @@ const StyledPensaoImages = styled.div`
     display: flex;
     justify-content: center;
     overflow: hidden;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        width: 100%;
+        height: 50vh;
+    }
 `;
 
 const StyledTable = styled.div`
@@ -24,6 +37,10 @@ const StyledTable = styled.div`
     height: 100%;
     display: flex;
     gap: 15px;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+    }
 
     & > div {
         width: 50%;
@@ -33,6 +50,12 @@ const StyledTable = styled.div`
         justify-content: center;
         flex-direction: column;
         gap: 15px;
+
+        @media (max-width: 768px){
+            width: 100%!important;
+            border: 1px solid red;
+            text-align: center;
+        }
 
         & > img:nth-child(1) {
             width: 100%;
@@ -72,12 +95,22 @@ const StyledPensaoTexts = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 25px;
+
+    @media (max-width: 768px){
+        width: 100%;
+        align-items: center;
+        margin-top: -10px;
+    }
 `;
 
 const StyledTitle = styled.h1`
     font-size: 2.5rem;
     color: var(--color--black);
     font-family: var(--font--comfortaa);
+
+    @media (max-width: 768px){
+        font-size: 1.6rem;
+    }
 
     & > b {
         color: ${({ colorDefinedBold }) => colorDefinedBold ? colorDefinedBold : 'var(--color--green)'};
@@ -90,6 +123,13 @@ const StyledParagraph = styled.p`
     line-height: 100%;
     width: 80%;
     font-family: var(--font--avenir);
+
+    @media (max-width: 768px){
+        width: 100%;
+        font-size: 1rem;
+        text-align: justify;
+        padding: 0 2.5%;
+    }
 `;
 
 const StyledButton = styled(CustomButton)`

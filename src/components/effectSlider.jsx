@@ -50,6 +50,8 @@ const SlideContainer = styled.div`
     @media (max-width: 768px){
         width: 90%;
         margin-left: 5%;
+        border: 1px solid red;
+        border-image: fill 0 linear-gradient(#0001, #00000080)
         }
 `;
 
@@ -74,6 +76,11 @@ const SlideContent = styled.div`
     border-radius: 8px;
     gap: 20px;
     z-index: 2;
+
+    @media (max-width: 768px){
+        gap: 30px;
+        border: 1px solid red;
+    }
 `;
 
 const Title = styled.h2`
@@ -81,6 +88,12 @@ const Title = styled.h2`
     font-weight: bold;
     font-family: var(--font--comfortaa);
     margin: 0;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        font-weight: 100;
+        font-size: 28px;
+    }
 `;
 
 const Description = styled.p`
@@ -88,6 +101,12 @@ const Description = styled.p`
     width: 80%;
     margin: 2px 0 10px;
     font-family: var(--font--avenir);
+
+    @media (max-width: 768px){
+        width: 100%;
+        text-align: left!important;
+        font-size: 13px!important;
+    }
 `;
 
 const CoverflowSliderComponent = ({

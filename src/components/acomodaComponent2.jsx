@@ -33,6 +33,12 @@ const StyledAcomodaContainer = styled.section`
     padding: 0 5%;
     position: relative;
 
+    @media (max-width: 768px){
+        border: 1px solid red;
+        height: auto;
+        padding: 5% 2.5%;
+    }
+
     &::before{
         background-image: url('../../public/background/background_black.webp');
         position: absolute;
@@ -50,6 +56,11 @@ const StyledAcomodaContainer = styled.section`
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+
+        @media (max-width: 768px){
+            border: 1px solid red;
+            height: auto;
+        }
     }
 
     & > main div {
@@ -57,6 +68,13 @@ const StyledAcomodaContainer = styled.section`
         width: 23%;
         height: 45%;
         margin: 10px 0;
+
+        @media (max-width: 768px){
+            border: 1px solid red;
+            width: 48%;
+            height: 20vh;
+            margin: 5px 0;
+        }
     }
 
     & > main img {
@@ -96,6 +114,13 @@ const StyledAcomodaContainer = styled.section`
         transition: all 0.5s ease-in-out;
         font-family: var(--font--comfortaa);
         cursor: pointer;
+
+        @media (max-width: 768px){
+            border: 1px solid red;
+            font-size: .8rem;
+            top: 5px;
+            right: 10px;
+        }
     }
 
     & > main div:hover span {
@@ -114,6 +139,11 @@ const StyledAcomodaContainer = styled.section`
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         font-size: 0.7em;
         border-radius: 8px;
+
+        @media (max-width: 768px){
+            font-size: .6rem;
+            padding: 5px 7px;
+        }
     }
 `;
 
@@ -124,8 +154,17 @@ const StyledAcomodaTexts = styled.div`
     align-items: center;
     height: 25%;
 
+    @media (max-width: 768px){
+        border: 1px solid red;
+        flex-direction: column;
+    }
+
     & > div:nth-child(1) {
         width: 60%;
+
+        @media (max-width: 768px){
+            width: 100%;
+        }
     }
 
     & > div:nth-child(2) {
@@ -133,12 +172,25 @@ const StyledAcomodaTexts = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
+        @media (max-width: 768px){
+            width: 100%;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
     }
 
     & > div h1 {
         font-size: 3rem;
         color: var(--color--black);
         font-family: var(--font--comfortaa);
+
+        @media (max-width: 768px){
+            font-size: 1.6rem;
+            text-align: center;
+            border: 1px solid red;
+            margin-bottom: 10px;
+        }
     }
 
     & > div p {
@@ -147,6 +199,13 @@ const StyledAcomodaTexts = styled.div`
         color: var(--color--black);
         line-height: 100%;
         font-size: 1rem;
+
+        @media (max-width: 768px){
+            width: 100%;
+            border: 1px solid red;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
     }
 `;
 

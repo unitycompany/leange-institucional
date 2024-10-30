@@ -14,6 +14,11 @@ import Depoimentos from '../../components/depoimentos';
 
 const StyledEspace = styled.div`
     height: 5vh;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        height: 0vh;
+    }
 `;
 
 const StyledSectionHome = styled(motion.section)`
@@ -23,6 +28,12 @@ const StyledSectionHome = styled(motion.section)`
     align-items: center;
     justify-content: space-between;
     height: 95vh;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        padding: 10% 2.5%;
+        flex-direction: column-reverse;
+    }
 `;
 
 const StyledHomeDiv = styled(motion.div)`
@@ -33,6 +44,16 @@ const StyledHomeDiv = styled(motion.div)`
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 100px 0px 100px 0px;
+
+    @media (max-width: 768px){
+        width: 100%;
+        border-radius: 0px;
+        border-image: fill 0 linear-gradient(#0001, #ffffff);
+        position: absolute;
+        height: 50%;
+        top: 0;
+        z-index: -1;
+    }
 `;
 
 const StyledHomeTexts = styled(motion.div)`
@@ -44,11 +65,26 @@ const StyledHomeTexts = styled(motion.div)`
     gap: 20px;
     flex-direction: column;
 
+    @media (max-width: 768px){
+        border: 1px solid red;
+        width: 100%;
+        align-items: center;
+        height: 70%;
+    }
+
     & > h4 {
         font-family: var(--font--comfortaa);
         font-size: 22px;
         font-weight: 200;
         color: var(--color--black);
+
+        @media (max-width: 768px){
+            border: 1px solid red;
+            color: var(--color--black);
+            font-size: 14px;
+            text-align: center;
+            font-weight: 800;
+        }
     }
 
     & > h1 {
@@ -59,6 +95,15 @@ const StyledHomeTexts = styled(motion.div)`
         line-height: 100%;
         color: var(--color--black);
         margin-top: -15px;
+
+        @media (max-width: 768px){
+            border: 1px solid red; 
+            display: inline-block;
+            width: 100%;
+            font-size: 35px;
+            text-align: center;
+            margin-top: -5px;
+        }
     }
 
     & > h1 b {
@@ -72,6 +117,14 @@ const StyledHomeTexts = styled(motion.div)`
         font-size: 18px;
         line-height: 100%;
         width: 50%;
+
+        @media (max-width: 768px){
+            border: 1px solid red;
+            width: 80%;
+            font-size: 1rem;
+            text-align: center;
+            padding-bottom: 100px;
+        }
     }
 `;
 
@@ -150,17 +203,37 @@ const StyledSectionEstrutura = styled.section`
     justify-content: center;
     gap: 50px;
     flex-direction: column;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        height: auto;
+        padding: 5% 0;
+        gap: 30px;
+    }
     
 
     & > div h1{
         font-size: 2rem;
         font-family: var(--font--comfortaa);
         text-align: center;
+
+        @media (max-width: 768px){
+            border: 1px solid red;
+            font-size: 1.3rem;
+            width: 95%;
+            margin-left: 2.5%;
+        }
     }
 
     & > div p{
         text-align: center;
         font-family: var(--font--avenir);
+
+        @media (max-width: 768px){
+            font-size: .9rem;
+            margin-top: 10px;
+            border: 1px solid red;  
+        }
     }
     
 
@@ -196,6 +269,12 @@ const StyledSectionEspaco = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        height: auto;
+        padding: 10% 0;
+    }
 `
 
 const ImagesAcomoda = [

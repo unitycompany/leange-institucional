@@ -16,11 +16,26 @@ const SlideContent = styled.div`
   gap: 50px;
   padding: 0 5%;
   flex-direction: ${({ imagePosition }) => (imagePosition === 'right' ? 'row-reverse' : 'row')};
+
+  @media (max-width: 768px){
+    border: 1px solid var(--color--black);
+    border-radius: 10px;
+    height: auto;
+    flex-direction: column;
+    width: 95%;
+    margin-left: 2.5%;
+    padding: 20px;
+  }
 `;
 
 const SlideText = styled.div`
   flex: 1;
   height: 100%;
+
+  @media (max-width: 768px){
+    border: 1px solid red;
+    width: 100%;
+  }
 `;
 
 const Title = styled.h2`
@@ -29,6 +44,12 @@ const Title = styled.h2`
   margin-bottom: 0.5em;
   font-family: var(--font--comfortaa);
   color: ${({ $colorDefined }) => $colorDefined || 'var(--color--green)'}; // Prefixo $ adicionado
+
+  @media (max-width: 768px){
+    border: 1px solid red;
+    display: inline-block;
+    font-size: 1.7rem;
+  }
 `;
 
 const Description = styled.p`
@@ -36,11 +57,23 @@ const Description = styled.p`
   font-size: 1.2rem;
   width: 80%;
   color: var(--color--black);
+  font-family: var(--font--comfortaa);
+
+  @media (max-width: 768px){
+    width: 100%;
+    font-size: 1rem;
+    border: 1px solid red;
+    height: 10vh;
+  }
 `;
 
 const ImageContainer = styled.div`
   flex: 2;
   height: 100%;
+
+  @media (max-width: 768px){
+    border: 1px solid red;
+  }
 `;
 
 const SlideImage = styled.img`
@@ -69,15 +102,28 @@ const StyledSwiper = styled(Swiper)`
     position: absolute;
     bottom: 10px !important;
     top: 90% !important;
+
+    @media (max-width: 768px){
+      border: 1px solid red;
+      left: 50%!important;
+    }
   }
 
   .swiper-button-prev {
     left: 100px;
     margin-right: 5px; /* Espaço entre os botões */
+
+    @media (max-width: 768px){
+      left: 40px!important;
+    }
   }
 
   .swiper-button-next {
     left: 150px; /* Coloca o botão "next" próximo ao botão "prev" */
+
+    @media (max-width: 768px){
+      left: 90px!important;
+    }
   }
 `;
 

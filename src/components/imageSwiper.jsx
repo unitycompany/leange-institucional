@@ -12,6 +12,10 @@ const StyledImage = styled.img`
     height: 70vh;
     border-radius: 30px;
     object-fit: cover; // Para garantir que a imagem cubra o espaço do slide
+
+    @media (max-width: 768px){
+        border-radius: 15px;
+    }
 `;
 
 const StyledTextOverlay = styled.div`
@@ -26,6 +30,15 @@ const StyledTextOverlay = styled.div`
     border-radius: 5px;
     font-family: var(--font--comfortaa);
     font-size: 0.7rem;
+
+    @media (max-width: 768px){
+        left: 40px;
+        top: 20px;
+        background-color: var(--color--white);
+        color: var(--color--black);
+        border-radius: 10px;
+        box-shadow: none;
+    }
 `;
 
 const ImageSwiper = ({ images }) => {
