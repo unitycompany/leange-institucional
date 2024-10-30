@@ -74,6 +74,11 @@ const StyledImage = styled(motion.img)`
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+        filter: brightness(70%);
+    }
 `;
 
 const SlideContainer = styled(motion.div)`
@@ -88,6 +93,10 @@ const SlideContainer = styled(motion.div)`
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
   background-size: cover;
   background-position: center;
+
+  @media (max-width: 768px){
+    border: 1px solid red;
+  }
 
   &:hover {
     transform: rotate(45deg) scale(1.2);
@@ -114,12 +123,20 @@ const SlideContent = styled(motion.div)`
     left: 20px;
     color: var(--color--white);
     font-family: Arial, sans-serif;
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+    }
 `;
 
 const Title = styled(motion.h2)`
     font-size: 24px;
     font-weight: bold;
     font-family: var(--font--comfortaa);
+
+    @media (max-width: 768px){
+        border: 1px solid red;
+    }
 `;
 
 const Subtitle = styled(motion.p)`

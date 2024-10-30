@@ -35,8 +35,9 @@ const StyledDiv = styled(motion.div)`
         width: 100%; 
         position: absolute;
         align-items: center;
-        gap: 20px;
+        gap: 15px;
         z-index: 2;
+        border: 1px solid red;
     }
 
     &::before{
@@ -66,6 +67,8 @@ const StyledTitlePag = styled(motion.h1)`
     @media (max-width: 768px){
         text-align: center;
         color: var(--color--white);
+        border: 1px solid red;
+        font-size: 1.5rem;
     }
 `;
 
@@ -74,10 +77,13 @@ const StyledParagPag = styled(motion.p)`
     font-family: var(--font--avenir);
 
     @media (max-width: 768px){
-        text-align: center;
+        text-align: justify;
         color: var(--color--white);
         width: 100%;
-        margin-top: 15px;
+        margin-top: 5px;
+        border: 1px solid red;
+        font-size: 1rem;
+        line-height: 140%;
     }
 `;
 

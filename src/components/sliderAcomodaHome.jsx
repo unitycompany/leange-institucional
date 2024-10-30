@@ -17,6 +17,7 @@ const SwiperStyles = createGlobalStyle`
       width: 40px;
       height: 40px;
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      
       &:hover {
           background-color: white;
           color: black;
@@ -51,6 +52,13 @@ const SlideContainer = styled(motion.div)`
   background-size: cover;
   background-position: center;
   animation: ${waterWave} 5s ease-in-out infinite;
+
+  @media (max-width: 768px){
+    animation: none;
+    border: 1px solid red;
+    border-radius: 0;
+    border-image: fill 0 linear-gradient(#0001, #00000080);
+  }
 `;
 
 const SlideContent = styled(motion.div)`
@@ -58,16 +66,33 @@ const SlideContent = styled(motion.div)`
   bottom: 20px;
   left: 20px;
   color: white;
+
+  @media (max-width: 768px){
+    border: 1px solid red;
+  }
 `;
 
 const Title = styled(motion.h2)`
   font-size: 24px;
   font-weight: bold;
+
+  @media (max-width: 768px){
+    border: 1px solid red;
+    font-family: var(--font--comfortaa);
+  }
 `;
 
 const Subtitle = styled(motion.p)`
   font-size: 16px;
   margin: 5px 0;
+
+  @media (max-width: 768px){
+    border: 1px solid red;
+    font-size: 12px;
+    width: 80%;
+    line-height: 100%;
+    font-family: var(--font--comfortaa);
+  }
 `;
 
 const Features = styled(motion.div)`
@@ -75,6 +100,11 @@ const Features = styled(motion.div)`
   gap: 8px;
   margin-top: 10px;
   flex-wrap: wrap;
+
+  @media (max-width: 768px){
+    border: 1px solid red;
+    gap: 6px;
+  }
 
   span {
       display: flex;
@@ -85,6 +115,12 @@ const Features = styled(motion.div)`
       border-radius: 12px;
       font-size: 12px;
 
+      @media (max-width: 768px){
+        font-size: 10px;
+        padding: 5px 8px;
+        border-radius: 6px;
+      }
+
       &:hover {
           color: black;
           background-color: white;
@@ -93,6 +129,10 @@ const Features = styled(motion.div)`
 
   svg {
       font-size: 16px;
+
+      @media (max-width: 768px){
+        font-size: 12px;
+      }
   }
 `;
 

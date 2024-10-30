@@ -67,7 +67,7 @@ const StyledFooterContainer = styled(motion.footer)`
     gap: 60px;
 
     @media (max-width: 768px){
-        margin-top: 10vh;
+        margin-top: 5vh;
         border-radius: 25px 25px 0 0;
         padding: 10% 5%;
     }
