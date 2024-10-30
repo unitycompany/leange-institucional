@@ -216,7 +216,6 @@ const SobreContainer = styled.section`
                 color: var(--color--white);
 
                 @media (max-width: 768px){
-                    border: 1px solid red;
                     font-size: 1.3rem;
                     text-align: center;
                     width: 100%;
@@ -334,7 +333,6 @@ const CasamentoContainer = styled.section`
                 border-radius: 30px 0 30px 0;
 
                 @media (max-width: 768px){
-                    border: 1px solid red;
                     height: 15vh;
                     border-radius: 10px 0 10px 0;
                 }
@@ -408,7 +406,6 @@ const CasamentoContainer = styled.section`
 
                 @media (max-width: 768px){
                     font-size: 0.9rem;
-                    border: 1px solid red;
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
@@ -474,7 +471,6 @@ const NiverContainer = styled.section`
                 border-radius: 30px 0 30px 0;
 
                 @media (max-width: 768px){
-                    border: 1px solid red;
                     height: 15vh;
                     border-radius: 10px 0 10px 0;
                 }
@@ -548,7 +544,6 @@ const NiverContainer = styled.section`
 
                 @media (max-width: 768px){
                     font-size: 0.9rem;
-                    border: 1px solid red;
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;

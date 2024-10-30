@@ -55,7 +55,6 @@ const SlideContainer = styled(motion.div)`
 
   @media (max-width: 768px){
     animation: none;
-    border: 1px solid red;
     border-radius: 0;
     border-image: fill 0 linear-gradient(#0001, #00000080);
   }
@@ -68,7 +67,6 @@ const SlideContent = styled(motion.div)`
   color: white;
 
   @media (max-width: 768px){
-    border: 1px solid red;
   }
 `;
 
@@ -77,7 +75,6 @@ const Title = styled(motion.h2)`
   font-weight: bold;
 
   @media (max-width: 768px){
-    border: 1px solid red;
     font-family: var(--font--comfortaa);
   }
 `;
@@ -87,7 +84,6 @@ const Subtitle = styled(motion.p)`
   margin: 5px 0;
 
   @media (max-width: 768px){
-    border: 1px solid red;
     font-size: 12px;
     width: 80%;
     line-height: 100%;
@@ -102,7 +98,6 @@ const Features = styled(motion.div)`
   flex-wrap: wrap;
 
   @media (max-width: 768px){
-    border: 1px solid red;
     gap: 6px;
   }
 

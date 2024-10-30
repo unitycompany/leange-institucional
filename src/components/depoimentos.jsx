@@ -17,7 +17,6 @@ const StyledTextDepoimentos = styled.section`
     height: 15vh;
     
     @media (max-width: 768px){
-        border: 1px solid red;
         height: 10vh;
         align-items: center;
         margin-top: 2.5vh;
@@ -30,7 +29,6 @@ const StyledTextDepoimentos = styled.section`
         width: 100%;
         
         @media (max-width: 768px){
-            border: 1px solid red;
             font-size: 1.6rem;
         }
     }

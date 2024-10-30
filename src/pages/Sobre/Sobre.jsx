@@ -14,7 +14,6 @@ const SobreContainer = styled.section`
     @media (max-width: 768px){
         height: auto;
         flex-direction: column;
-        border: 1px solid red;
     }
 
     & > div:nth-child(1){
@@ -31,7 +30,7 @@ const SobreContainer = styled.section`
             width: 100%;
             gap: 50px;
             padding: 0 5%;
-            border: 1px solid red;
+
         }
 
         & > h1{
@@ -88,7 +87,7 @@ const SobreContainer = styled.section`
         @media (max-width: 768px){
             width: 100%;
             height: auto;
-            border: 1px solid red;
+
             display: none;
         }
 
@@ -145,7 +144,6 @@ const UnidadeContainer = styled.section`
         height: auto;
         gap: 30px;
         padding: 0 5%;
-        border: 1px solid red;
         margin-top: 5vh;
     }
 
@@ -260,7 +258,6 @@ const DiferenciaisContainer = styled.section`
         gap: 25px;
         margin-top: 35px;
         padding: 10% 5%;
-        border: 1px solid red;
     }
 
     & > div:nth-child(1){
@@ -324,7 +321,7 @@ const DiferenciaisContainer = styled.section`
         @media (max-width: 768px){
             width: 48%;
             height: 20vh;
-            border: 1px solid red;
+
         }
 
        }
@@ -351,7 +348,6 @@ const ContainerDuplo = styled.section`
         gap: 25px;
         margin-top: 50px;
         padding: 5% 5%;
-        border: 1px solid red;
     }
 
     & > div:nth-child(1){

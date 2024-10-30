@@ -10,6 +10,21 @@ import ButtonAcomoda from './button2';
 
 // Global styles for Swiper
 const SwiperStyles = createGlobalStyle`
+
+    .swiper-button-next{
+
+        @media (max-width: 768px){
+            right: 10px;
+        }
+    }
+
+    .swiper-button-prev{
+
+        @media (max-width: 768px){
+            left: 10px;
+        }
+    }
+
     .swiper-button-next, .swiper-button-prev {
         color: var(--color--white); 
         background-color: var(--color--black);
@@ -23,7 +38,8 @@ const SwiperStyles = createGlobalStyle`
         transition: all .2s;
 
         @media (max-width: 768px){
-            display: none;
+            top: 50px;
+            z-index: 10;
         }
 
         &:hover {
@@ -76,7 +92,6 @@ const StyledImage = styled(motion.img)`
     border-radius: 20px;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         filter: brightness(70%);
     }
 `;
@@ -125,7 +140,6 @@ const SlideContent = styled(motion.div)`
     font-family: Arial, sans-serif;
 
     @media (max-width: 768px){
-        border: 1px solid red;
     }
 `;
 
@@ -135,7 +149,6 @@ const Title = styled(motion.h2)`
     font-family: var(--font--comfortaa);
 
     @media (max-width: 768px){
-        border: 1px solid red;
     }
 `;
 

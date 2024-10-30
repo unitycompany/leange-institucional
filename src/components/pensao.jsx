@@ -11,7 +11,6 @@ const StyledSectionPensao = styled.section`
     gap: 50px;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         flex-direction: column;
         height: auto;
         padding: 5% 2.5%;
@@ -26,7 +25,6 @@ const StyledPensaoImages = styled.div`
     overflow: hidden;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         width: 100%;
         height: 50vh;
     }
@@ -39,7 +37,6 @@ const StyledTable = styled.div`
     gap: 15px;
 
     @media (max-width: 768px){
-        border: 1px solid red;
     }
 
     & > div {
@@ -53,7 +50,7 @@ const StyledTable = styled.div`
 
         @media (max-width: 768px){
             width: 100%!important;
-            border: 1px solid red;
+
             text-align: center;
         }
 

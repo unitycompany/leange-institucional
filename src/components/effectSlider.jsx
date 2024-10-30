@@ -50,7 +50,6 @@ const SlideContainer = styled.div`
     @media (max-width: 768px){
         width: 90%;
         margin-left: 5%;
-        border: 1px solid red;
         border-image: fill 0 linear-gradient(#0001, #00000080)
         }
 `;
@@ -79,7 +78,6 @@ const SlideContent = styled.div`
 
     @media (max-width: 768px){
         gap: 30px;
-        border: 1px solid red;
     }
 `;
 
@@ -90,7 +88,6 @@ const Title = styled.h2`
     margin: 0;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         font-weight: 100;
         font-size: 28px;
     }

@@ -37,7 +37,6 @@ const StyledDiv = styled(motion.div)`
         align-items: center;
         gap: 15px;
         z-index: 2;
-        border: 1px solid red;
     }
 
     &::before{
@@ -67,7 +66,6 @@ const StyledTitlePag = styled(motion.h1)`
     @media (max-width: 768px){
         text-align: center;
         color: var(--color--white);
-        border: 1px solid red;
         font-size: 1.5rem;
     }
 `;
@@ -81,7 +79,6 @@ const StyledParagPag = styled(motion.p)`
         color: var(--color--white);
         width: 100%;
         margin-top: 5px;
-        border: 1px solid red;
         font-size: 1rem;
         line-height: 140%;
     }

@@ -34,7 +34,6 @@ const StyledAcomodaContainer = styled.section`
     position: relative;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
         padding: 5% 2.5%;
     }
@@ -58,7 +57,7 @@ const StyledAcomodaContainer = styled.section`
         align-items: center;
 
         @media (max-width: 768px){
-            border: 1px solid red;
+
             height: auto;
         }
     }
@@ -70,7 +69,7 @@ const StyledAcomodaContainer = styled.section`
         margin: 10px 0;
 
         @media (max-width: 768px){
-            border: 1px solid red;
+
             width: 48%;
             height: 20vh;
             margin: 5px 0;
@@ -116,7 +115,7 @@ const StyledAcomodaContainer = styled.section`
         cursor: pointer;
 
         @media (max-width: 768px){
-            border: 1px solid red;
+
             font-size: .8rem;
             top: 5px;
             right: 10px;
@@ -155,7 +154,6 @@ const StyledAcomodaTexts = styled.div`
     height: 25%;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         flex-direction: column;
     }
 
@@ -188,7 +186,7 @@ const StyledAcomodaTexts = styled.div`
         @media (max-width: 768px){
             font-size: 1.6rem;
             text-align: center;
-            border: 1px solid red;
+
             margin-bottom: 10px;
         }
     }
@@ -202,7 +200,7 @@ const StyledAcomodaTexts = styled.div`
 
         @media (max-width: 768px){
             width: 100%;
-            border: 1px solid red;
+
             text-align: justify;
             margin-bottom: 15px;
         }

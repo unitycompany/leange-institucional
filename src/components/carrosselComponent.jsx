@@ -33,7 +33,6 @@ const SlideText = styled.div`
   height: 100%;
 
   @media (max-width: 768px){
-    border: 1px solid red;
     width: 100%;
   }
 `;
@@ -46,7 +45,6 @@ const Title = styled.h2`
   color: ${({ $colorDefined }) => $colorDefined || 'var(--color--green)'}; // Prefixo $ adicionado
 
   @media (max-width: 768px){
-    border: 1px solid red;
     display: inline-block;
     font-size: 1.7rem;
   }
@@ -62,7 +60,6 @@ const Description = styled.p`
   @media (max-width: 768px){
     width: 100%;
     font-size: 1rem;
-    border: 1px solid red;
     height: 10vh;
   }
 `;
@@ -72,7 +69,6 @@ const ImageContainer = styled.div`
   height: 100%;
 
   @media (max-width: 768px){
-    border: 1px solid red;
   }
 `;
 
@@ -104,7 +100,7 @@ const StyledSwiper = styled(Swiper)`
     top: 90% !important;
 
     @media (max-width: 768px){
-      border: 1px solid red;
+
       left: 50%!important;
     }
   }

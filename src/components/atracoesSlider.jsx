@@ -20,7 +20,6 @@ const StyledTextAtracoes = styled.section`
     align-items: center;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         flex-direction: column;
         justify-content: center;
         gap: 15px;  
@@ -33,7 +32,6 @@ const StyledTextAtracoes = styled.section`
     & > h1 {
         font-size: 1.6rem;
         font-family: var(--font--comfortaa);
-        border: 1px solid red;
         color: var(--color--white);
     }
 `;
@@ -44,7 +42,6 @@ const StyledContainerCarousel = styled.div`
     position: relative; // Para garantir que o texto fique sobre as imagens
 
     @media (max-width: 768px){
-        border: 1px solid red;
         padding: 10% 0;
         margin-bottom: 10vh;
     }

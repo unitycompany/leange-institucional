@@ -16,7 +16,6 @@ const StyledEspace = styled.div`
     height: 5vh;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: 0vh;
     }
 `;
@@ -30,7 +29,6 @@ const StyledSectionHome = styled(motion.section)`
     height: 95vh;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         padding: 10% 2.5%;
         flex-direction: column-reverse;
     }
@@ -66,7 +64,6 @@ const StyledHomeTexts = styled(motion.div)`
     flex-direction: column;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         width: 100%;
         align-items: center;
         height: 50%;
@@ -79,7 +76,7 @@ const StyledHomeTexts = styled(motion.div)`
         color: var(--color--black);
 
         @media (max-width: 768px){
-            border: 1px solid red;
+
             color: var(--color--black);
             font-size: 14px;
             text-align: center;
@@ -96,7 +93,7 @@ const StyledHomeTexts = styled(motion.div)`
         margin-top: -15px;
 
         @media (max-width: 768px){
-            border: 1px solid red; 
+ 
             display: inline-block;
             width: 100%;
             font-size: 35px;
@@ -117,7 +114,7 @@ const StyledHomeTexts = styled(motion.div)`
         width: 50%;
 
         @media (max-width: 768px){
-            border: 1px solid red;
+
             width: 80%;
             font-size: 1rem;
             text-align: center;
@@ -203,7 +200,6 @@ const StyledSectionEstrutura = styled.section`
     flex-direction: column;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
         padding: 5% 0;
         gap: 30px;
@@ -216,7 +212,7 @@ const StyledSectionEstrutura = styled.section`
         text-align: center;
 
         @media (max-width: 768px){
-            border: 1px solid red;
+
             font-size: 1.3rem;
             width: 95%;
             margin-left: 2.5%;
@@ -230,7 +226,7 @@ const StyledSectionEstrutura = styled.section`
         @media (max-width: 768px){
             font-size: .9rem;
             margin-top: 10px;
-            border: 1px solid red;  
+  
         }
     }
     
@@ -271,7 +267,6 @@ const StyledSectionEspaco = styled.section`
     justify-content: center;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
         padding: 10% 0;
     }

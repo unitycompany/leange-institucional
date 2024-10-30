@@ -24,7 +24,6 @@ const CarouselContainer = styled.div`
     height: 80vh;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
     }
 `;
@@ -37,7 +36,6 @@ const SlideContainer = styled.div`
     gap: 10px;
 
     @media (max-width: 768px){
-        border: 1px solid red;
     }
 `;
 
@@ -48,7 +46,6 @@ const StyledSwiperSlide = styled(SwiperSlide)`
     flex-direction: column;
 
     @media (max-width: 768px){
-        border: 1px solid red;
     }
 `;
 
@@ -59,7 +56,6 @@ const StyledImage = styled.img`
     border-radius: 15px;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         width: 95%;
         margin-left: 2.5%;
     }

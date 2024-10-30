@@ -69,7 +69,6 @@ const StyledContainerPousadas = styled.section`
         flex-direction: column;
         position: relative;
         z-index: -1;
-        border: 1px solid red;
         height: auto;
 
         .slider{
@@ -91,7 +90,6 @@ const StyledPousadas = styled.div`
     padding: 0;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
         padding: 10% 0;
     }
@@ -109,7 +107,7 @@ const StyledPousadasTitle = styled.aside `
             width: 100%;
             margin-top: 0vh;
             height: auto;
-            border: 1px solid red;
+
         }
     }
 
@@ -122,7 +120,7 @@ const StyledPousadasTitle = styled.aside `
         @media (max-width: 768px){
             font-size: 12px;
             margin-top: 10px;
-            border: 1px solid red;
+
         }
     }
 `
@@ -243,7 +241,6 @@ const StyledAcomoda = styled.section`
     padding: 0 5%;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
         gap: 25px;
     }
@@ -326,7 +323,6 @@ const StyledEstrutura = styled.div`
     position: relative;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
         padding: 10% 0;
     }
@@ -358,7 +354,6 @@ const StyledEstruturaTitle = styled.h1`
     font-family: var(--font--comfortaa);
 
     @media (max-width: 768px){
-        border: 1px solid red;
         display: inline-block;
         font-size: 1.3rem;
         line-height: 110%;
@@ -375,7 +370,6 @@ const StyledEstruturaSubTitle = styled.p`
     opacity: 0.7;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         font-size: 0.9rem;
         margin-top: 5px;
     }
@@ -464,7 +458,6 @@ const StyledCarrosselSection = styled.section`
 
     @media (max-width: 768px){
         height: auto;
-        border: 1px solid red;
         margin-bottom: 5vh;
         margin-top: 5vh;
     }
@@ -480,7 +473,6 @@ const StyledContainerEvents = styled.section`
     justify-content: center;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
         padding: 5% 2.5%;
     }
