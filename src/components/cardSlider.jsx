@@ -43,6 +43,8 @@ const CardContainer = styled(motion.div)`
         border: none;
         padding: 5px;
         background-color: rgba(0, 0, 0, 0.1);
+        animation: none;
+        border-radius: 15px 15px 5px 5px;
     }
 
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Button from "./Button";
-import styled,{keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const DivAnimated = keyframes`
     0% {
@@ -31,7 +31,7 @@ const StyledDiv = styled(motion.div)`
     height: 60vh;
     padding: 50px;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         width: 100%; 
         align-items: center;
         top: 25%;
@@ -44,7 +44,7 @@ const StyledDiv = styled(motion.div)`
         margin-bottom: -80px;
     }
 
-    &::before{
+    &::before {
         content: '';
         width: 100%;
         height: 100%;
@@ -57,9 +57,15 @@ const StyledDiv = styled(motion.div)`
         background-position: center;
         background-size: contain;
         animation: ${DivAnimated} 8s ease-in-out infinite;
+        pointer-events: none; /* Impede que o ::before bloqueie cliques */
+
+        @media (max-width: 768px) {
+            animation: none;
+            border-top: none;
+            border-radius: 0 0 35px 0;
+        }
     }
 `;
-
 
 const StyledTitlePag = styled(motion.h1)`
     width: 100%;
@@ -68,17 +74,17 @@ const StyledTitlePag = styled(motion.h1)`
     font-weight: 400;
     font-size: 1.8rem;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         text-align: center;
-        color: var(--color--white);
+        color: var(--color--black);
         width: auto;
         padding: 6px 15px;
         border-radius: 0px 10px 0px 10px;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-weight: 800;
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: var(--color--white);
         backdrop-filter: blur(10px);
-        box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 1);
     }
 `;
 
@@ -86,7 +92,7 @@ const StyledParagPag = styled(motion.p)`
     width: 80%;
     font-family: var(--font--avenir);
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         text-align: justify;
         color: var(--color--black);
         width: 100%;
@@ -136,6 +142,7 @@ const TitlePousadas = ({
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: animationDuration, delay: 0.6 }}
+                style={{ zIndex: 3 }} /* Garante que o botão fique acima */
             >
                 <Button 
                     text="Saber mais" 

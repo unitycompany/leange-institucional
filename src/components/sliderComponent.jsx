@@ -24,7 +24,7 @@ const SwiperStyles = createGlobalStyle`
         transition: all .2s;
 
         @media (max-width: 768px){
-            z-index: 100;
+            z-index: 1000;
         }
 
         &:hover {
@@ -91,13 +91,6 @@ const SlideContainer = styled(motion.div)`
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
   background-size: cover;
   background-position: center;
-
-  @media (max-width: 768px){
-  }
-
-  &:hover {
-    transform: rotate(45deg) scale(1.2);
-  }
 `;
 
 const BorderOverlay = styled(motion.div)`
@@ -106,12 +99,12 @@ const BorderOverlay = styled(motion.div)`
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 4px; /* Define a espessura da borda */
+    padding: 4px;
     border-radius: inherit;
     background: linear-gradient(45deg, #00000080, #0001);
-    -webkit-mask-image: linear-gradient(#fff, #fff); /* Cria a borda */
+    -webkit-mask-image: linear-gradient(#fff, #fff);
     mask-image: linear-gradient(#fff, #fff);
-    pointer-events: none; /* Faz com que a borda seja apenas decorativa */
+    pointer-events: none;
 `;
 
 const SlideContent = styled(motion.div)`
@@ -120,18 +113,12 @@ const SlideContent = styled(motion.div)`
     left: 20px;
     color: var(--color--white);
     font-family: Arial, sans-serif;
-
-    @media (max-width: 768px){
-    }
 `;
 
 const Title = styled(motion.h2)`
     font-size: 24px;
     font-weight: bold;
     font-family: var(--font--comfortaa);
-
-    @media (max-width: 768px){
-    }
 `;
 
 const Subtitle = styled(motion.p)`
@@ -170,12 +157,12 @@ const Features = styled(motion.div)`
 
 // Container for Slider
 const SliderWrapper = styled.div`
-    width: 100%; // Largura total em dispositivos móveis
-    max-width: 60%; // Limite de 60% em telas maiores
-    margin: 0 auto; // Centraliza o slider
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
 
     @media (max-width: 640px) {
-        max-width: 100%; // 100% em dispositivos móveis
+        max-width: 100%;
     }
 `;
 
@@ -190,9 +177,7 @@ const SliderComponent = ({
     showPagination = true,
     showNavigation = true,
 }) => {
-    const { scrollY } = useScroll(); // Use useScroll para obter scrollY
-
-    // Parallax effect for title, subtitle, and features
+    const { scrollY } = useScroll();
     const titleY = useTransform(scrollY, [0, 300], [0, -30]);
     const subtitleY = useTransform(scrollY, [0, 300], [0, -20]);
     const featuresY = useTransform(scrollY, [0, 300], [0, -10]);
@@ -210,25 +195,24 @@ const SliderComponent = ({
                 slidesPerView={slidesPerView}
                 autoplay={{
                     delay: autoplayDelay,
-                    disableOnInteraction: false,
+                    disableOnInteraction: true,
                 }}
                 style={{ height: height }}
                 breakpoints={{
-                    // Define breakpoints for responsive behavior
                     640: {
-                        slidesPerView: 1, // 1 slide per view on mobile
+                        slidesPerView: 1,
                         spaceBetween: 10,
-                        height: '200px', // Ajusta altura para dispositivos móveis
+                        height: '200px',
                     },
                     768: {
-                        slidesPerView: 1, // 1 slide por visualização em tablet
+                        slidesPerView: 1,
                         spaceBetween: 20,
-                        height: '250px', // Ajusta altura para tablets
+                        height: '250px',
                     },
                     1024: {
-                        slidesPerView: 1, // 1 slide por visualização em desktop
+                        slidesPerView: 1,
                         spaceBetween: 30,
-                        height: '300px', // Ajusta altura para desktop
+                        height: '300px',
                     },
                 }}
             >
@@ -238,16 +222,16 @@ const SliderComponent = ({
                             <StyledImage 
                                 src={item.src} 
                                 alt={item.alt || `Slide ${index + 1}`} 
-                                initial={{ scale: 0.8, rotate: 10, opacity: 0 }}
-                                whileInView={{ scale: 1, rotate: 0, opacity: 1 }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.7, ease: 'easeOut' }}
                             />
                         ) : (
                             <SlideContainer 
                                 backgroundImage={item.backgroundImage}
-                                initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
-                                whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, ease: 'easeOut' }}
                             >

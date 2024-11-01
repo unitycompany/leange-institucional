@@ -56,6 +56,7 @@ const SlideContainer = styled(motion.div)`
   @media (max-width: 768px){
     animation: none;
     border-radius: 25px 0 25px 0;
+    height: 80vh;
   }
 `;
 
