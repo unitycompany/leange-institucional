@@ -70,14 +70,11 @@ const StyledTextPet = styled.section`
     align-items: center;
 
     @media (max-width: 768px){
-        border: 3px solid red;
         flex-direction: column-reverse;
         justify-content: center;
         gap: 10px;
-        position: absolute;
-        z-index: 2;
-        top: 50%;
-        margin-top: 25vh;
+        margin-top: -5vh;
+        margin-bottom: 20px;
         height: 15vh;
     }
 
@@ -128,8 +125,8 @@ const PetFriendlyCarousel = () => {
                     spaceBetween={10}
                     breakpoints={{
                         1024: { slidesPerView: 5 }, // 5 slides para telas grandes
-                        768: { slidesPerView: 4 },  // 4 slides para tablets
-                        480: { slidesPerView: 3 },  // 3 slides para celulares
+                        768: { slidesPerView: 2 },  // 4 slides para tablets
+                        480: { slidesPerView: 1 },  // 3 slides para celulares
                     }}
                 >
                     {images.map((image, index) => (

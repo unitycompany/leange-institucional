@@ -47,6 +47,7 @@ const StyledHomeDiv = styled(motion.div)`
         width: 100%;
         border-radius: 0px;
         border-image: fill 0 linear-gradient(#0001, #ffffff);
+        filter: contrast(130%);
         position: absolute;
         height: 70%;
         top: 0;
@@ -283,6 +284,34 @@ const ImagesAcomoda = [
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730144226/suiteMar06_jywv1q.jpg", text: "Suíte Master 8" },
 ];
 
+const StyledLocal = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 15vh;
+    background-color: var(--color--blue);
+    font-family: var(--font--comfortaa);
+
+    @media (max-width: 768px){
+        height: 10vh;
+        margin-bottom: 25px;
+    }
+
+    & > h1{
+        font-weight: 200;
+        width: 80%;
+        text-align: center;
+        font-size: 1.6rem;
+        color: var(--color--white);
+
+        @media (max-width: 768px){
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+`
+
 const Mar = () => {
     return (
         <>
@@ -355,6 +384,10 @@ const Mar = () => {
 
                 
             </StyledSectionHome>
+
+            <StyledLocal>
+                <h1>LeAnge Mar | Armação dos Búzios RJ</h1>
+            </StyledLocal>
 
             <StyledSectionEstrutura>
 

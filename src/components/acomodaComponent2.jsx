@@ -174,7 +174,7 @@ const StyledAcomodaTexts = styled.div`
         @media (max-width: 768px){
             width: 100%;
             justify-content: center;
-            margin-bottom: 15px;
+            margin-bottom: 35px;
         }
     }
 
@@ -199,8 +199,8 @@ const StyledAcomodaTexts = styled.div`
         font-size: 1rem;
 
         @media (max-width: 768px){
-            width: 100%;
-
+            width: 95%;
+            margin-left: 2.5%;
             text-align: justify;
             margin-bottom: 15px;
         }
@@ -240,8 +240,8 @@ const AcomodaComponent2 = ({ images }) => {
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <img src={image.src} alt={`Imagem ${index + 1}`} />
-                        <span onClick={() => alert("Conhecendo suíte completa!")}>
-                            {hoveredIndex === index ? "Conhecer Suíte Completa" : image.text}
+                        <span onClick={() => alert("Conhecendo suíte")}>
+                            {hoveredIndex === index ? "Conhecer Suíte" : image.text}
                             {hoveredIndex === index && <FaArrowRight />}
                         </span>
                     </div>

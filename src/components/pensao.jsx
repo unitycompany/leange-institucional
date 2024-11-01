@@ -7,13 +7,15 @@ const StyledSectionPensao = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5%;
+    padding: 0% 5%;
     gap: 50px;
+    background-color: rgba(0, 0, 0, 0.1);
 
     @media (max-width: 768px){
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
-        padding: 5% 2.5%;
+        padding: 10% 2.5%;
+        margin-bottom: 50px;
     }
 `;
 
@@ -58,14 +60,14 @@ const StyledTable = styled.div`
             width: 100%;
             height: 60%;
             object-fit: cover;
-            border-radius: 20px;
+            border-radius: 20px 0 20px 0;
         }
 
         & > img:nth-child(2) {
             width: 100%;
             height: 40%;
             object-fit: cover;
-            border-radius: 20px;
+            border-radius: 0px 20px 0 20px;
         }
     }
 
@@ -73,14 +75,14 @@ const StyledTable = styled.div`
         width: 100%;
         height: 40%;
         object-fit: cover;
-        border-radius: 20px;
+        border-radius: 20px 0 20px 0;
     }
 
     & > div:nth-child(2) > img:nth-child(2) {
         width: 100%;
         height: 60%;
         object-fit: cover;
-        border-radius: 20px;
+        border-radius: 20px 0 0 20px;
     }
 `;
 
