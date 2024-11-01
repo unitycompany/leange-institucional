@@ -24,15 +24,13 @@ const StyledTextAtracoes = styled.section`
         justify-content: center;
         gap: 15px;  
         height: 20vh;
-        position: absolute;
         z-index: 4;
-        margin-top: 300px;
     }
 
     & > h1 {
-        font-size: 1.6rem;
+        font-size: 1.1rem;
         font-family: var(--font--comfortaa);
-        color: var(--color--white);
+        color: var(--color--black);
     }
 `;
 
@@ -42,8 +40,7 @@ const StyledContainerCarousel = styled.div`
     position: relative; // Para garantir que o texto fique sobre as imagens
 
     @media (max-width: 768px){
-        padding: 10% 0;
-        margin-bottom: 10vh;
+        padding: 0% 0;
     }
 `;
 

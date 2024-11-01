@@ -285,6 +285,34 @@ const ImagesAcomoda = [
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133110/suiteMaster10_gqoxfm.jpg", text: "Suíte Superior 10" },
 ];
 
+const StyledLocall = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 10vh;
+    background-color: var(--color--green);
+    font-family: var(--font--comfortaa);
+
+    @media (max-width: 768px){
+        height: 8vh;
+        margin-bottom: 25px;
+    }
+
+    & > h1{
+        font-weight: 200;
+        width: 80%;
+        text-align: center;
+        font-size: 1.3rem;
+        color: var(--color--white);
+
+        @media (max-width: 768px){
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+`
+
 const Serra = () => {
     return (
         <>
@@ -293,6 +321,8 @@ const Serra = () => {
             </Helmet>
 
             <StyledEspace />
+
+            
 
             <StyledSectionHome
                 initial={{ opacity: 0 }}
@@ -354,6 +384,10 @@ const Serra = () => {
                     </motion.div>
                 </StyledHomeTexts>
             </StyledSectionHome>
+
+            <StyledLocall>
+                <h1>LeAnge Serra | Miguel Pereira RJ</h1>
+            </StyledLocall>
 
             <StyledSectionEstrutura>
 

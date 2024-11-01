@@ -240,8 +240,8 @@ const AcomodaComponent = ({ images }) => {
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <img src={image.src} alt={`Imagem ${index + 1}`} />
-                        <span onClick={() => alert("Conhecendo suíte completa!")}>
-                            {hoveredIndex === index ? "Conhecer Suíte Completa" : image.text}
+                        <span onClick={() => alert("Conhecendo Suíte")}>
+                            {hoveredIndex === index ? "Conhecer Suíte" : image.text}
                             {hoveredIndex === index && <FaArrowRight />}
                         </span>
                     </div>

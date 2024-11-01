@@ -23,7 +23,6 @@ const InicioContainer = styled.section`
     gap: 20px;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         flex-direction: column-reverse;
         height: auto;
     }
@@ -41,7 +40,7 @@ const InicioContainer = styled.section`
             width: 100%;
             gap: 30px;
             align-items: center;
-            border: 1px solid red;
+
             height: auto;
             position: relative;
         }
@@ -131,7 +130,6 @@ const CarrosselContainer = styled.section`
     justify-content: center;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
         padding: 10% 2.5%;
     }
@@ -146,11 +144,12 @@ const SobreContainer = styled.section`
     padding: 0 5%;
     align-items: center;
     justify-content: center;
+    display: none;
 
     @media (max-width: 768px){
-        border: 1px solid red;
         height: auto;
         padding: 5% 5%;
+        border: 1px solid red;
     }
 
     & > div:nth-child(1){
@@ -187,7 +186,7 @@ const SobreContainer = styled.section`
         @media (max-width: 768px){
             border: 1px solid red;
             flex-direction: column;
-            height: auto;
+            height: auto;   
         }
 
         & > div{
@@ -219,6 +218,7 @@ const SobreContainer = styled.section`
                     font-size: 1.3rem;
                     text-align: center;
                     width: 100%;
+    
                 }
             }
 
@@ -231,6 +231,7 @@ const SobreContainer = styled.section`
 
                 @media (max-width: 768px){
                     align-items: center;
+    
                 }
 
                 & > p{
@@ -284,7 +285,6 @@ const CasamentoContainer = styled.section`
     gap: 50px;
 
     @media (max-width: 768px){
-        border: 3px solid red;
         height: auto;
         flex-direction: column;
         padding: 10% 5%;
@@ -321,11 +321,6 @@ const CasamentoContainer = styled.section`
             align-items: center;
             justify-content: space-between;
 
-            @media (max-width: 768px){
-                border: 1px solid red;
-            }
-
-
             & > img {
                 width: 32%;
                 height: 100%;
@@ -334,6 +329,7 @@ const CasamentoContainer = styled.section`
 
                 @media (max-width: 768px){
                     height: 15vh;
+                    margin-top: 15px;
                     border-radius: 10px 0 10px 0;
                 }
             }
@@ -348,12 +344,11 @@ const CasamentoContainer = styled.section`
         align-items: flex-start;
 
         @media (max-width: 768px){
-            border: 1px solid red;
             align-items: center;
             width: 100%;
-            margin-top: -35px;
+            margin-top: -25px;
             height: auto;
-            gap: 25px;
+            gap: 15px;
         }
 
         & > h1{
@@ -361,9 +356,12 @@ const CasamentoContainer = styled.section`
             font-family: var(--font--comfortaa);
 
             @media (max-width: 768px){
-                border: 1px solid red;
+
+                background-color: #fff;
+                padding: 5px 15px;
+                color: var(--color--black);
+                border-radius: 5px 15px 0 0;
                 font-size: 1.6rem;
-                color: var(--color--white);
             }
         }
 
@@ -374,12 +372,13 @@ const CasamentoContainer = styled.section`
             line-height: 100%;
 
             @media (max-width: 768px){
-                border: 1px solid red;
+    
                 width: 100%;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 margin-top: 25px;
                 color: var(--color--black);
-                text-align: center;
+                text-align: left;
+                font-weight: 800;
             }
         }
 
@@ -388,10 +387,10 @@ const CasamentoContainer = styled.section`
             list-style-image: url('/leange/public/icon/correto.png');
 
             @media (max-width: 768px){
-                border: 1px solid red;
                 height: auto;
                 margin-top: 0px;
                 list-style-image: none;
+                margin-bottom: 15px;
                 margin-left: 0;
                 display: flex;
                 flex-direction: column;
@@ -426,7 +425,6 @@ const NiverContainer = styled.section`
     gap: 50px;
 
     @media (max-width: 768px){
-        border: 3px solid red;
         height: auto;
         flex-direction: column-reverse;
         padding: 10% 5%;
@@ -472,6 +470,7 @@ const NiverContainer = styled.section`
 
                 @media (max-width: 768px){
                     height: 15vh;
+                    margin-top: 15px;
                     border-radius: 10px 0 10px 0;
                 }
             }
@@ -486,12 +485,11 @@ const NiverContainer = styled.section`
         align-items: flex-start;
 
         @media (max-width: 768px){
-            border: 1px solid red;
             align-items: center;
             width: 100%;
-            margin-top: -35px;
+            margin-top: -25px;
             height: auto;
-            gap: 25px;
+            gap: 15px;
         }
 
         & > h1{
@@ -499,9 +497,12 @@ const NiverContainer = styled.section`
             font-family: var(--font--comfortaa);
 
             @media (max-width: 768px){
-                border: 1px solid red;
+    
+                background-color: #fff;
+                padding: 5px 15px;
+                color: var(--color--black);
+                border-radius: 5px 15px 0 0;
                 font-size: 1.6rem;
-                color: var(--color--white);
             }
         }
 
@@ -512,12 +513,13 @@ const NiverContainer = styled.section`
             line-height: 100%;
 
             @media (max-width: 768px){
-                border: 1px solid red;
+    
                 width: 100%;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 margin-top: 25px;
                 color: var(--color--black);
-                text-align: center;
+                text-align: left;
+                font-weight: 800;
             }
         }
 
@@ -526,10 +528,10 @@ const NiverContainer = styled.section`
             list-style-image: url('/leange/public/icon/correto.png');
 
             @media (max-width: 768px){
-                border: 1px solid red;
                 height: auto;
                 margin-top: 0px;
                 list-style-image: none;
+                margin-bottom: 15px;
                 margin-left: 0;
                 display: flex;
                 flex-direction: column;
@@ -583,7 +585,7 @@ const Eventos = () => {
                         spaceBetween={20} 
                         slidesPerView={1} 
                         width="100%"
-                        height="100vh" 
+                        height="80vh" 
                         contentType="image"
                         showPagination={true}
                 />
@@ -676,8 +678,8 @@ const Eventos = () => {
                         content={images1} 
                         spaceBetween={20} 
                         slidesPerView={1} 
-                        width="90%"
-                        height="100vh" 
+                        width="100%"
+                        height="80vh" 
                         contentType="image"
                         showPagination={true}
                 />

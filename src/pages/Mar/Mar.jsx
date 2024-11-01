@@ -289,12 +289,12 @@ const StyledLocal = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 15vh;
+    height: 10vh;
     background-color: var(--color--blue);
     font-family: var(--font--comfortaa);
 
     @media (max-width: 768px){
-        height: 10vh;
+        height: 8vh;
         margin-bottom: 25px;
     }
 
@@ -302,7 +302,7 @@ const StyledLocal = styled.div`
         font-weight: 200;
         width: 80%;
         text-align: center;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         color: var(--color--white);
 
         @media (max-width: 768px){
