@@ -8,9 +8,9 @@ const StyledButton = styled.button`
     padding: 8px 36px;
     font-size: 12px;
     font-weight: 600;
-    color: var(--color--black);
-    background-color: inherit;
-    border: 4px solid transparent;
+    color: ${({ color }) => color || 'var(--color--black)'};
+    background-color: ${({ background }) => background || 'inherit'};
+    border: 4px solid ${({ borderColor }) => borderColor || 'transparent'};
     border-radius: 100px;
     box-shadow: 0 0 0 2px var(--color--black);
     cursor: pointer;
@@ -20,7 +20,7 @@ const StyledButton = styled.button`
 
     &:hover {
         box-shadow: 0 0 0 12px transparent;
-        color: var(--color--black);
+        color: ${({ hoverColor }) => hoverColor || 'var(--color--black)'};
         border-radius: 40px;
     }
 
@@ -29,12 +29,11 @@ const StyledButton = styled.button`
         box-shadow: 0 0 0 4px var(--color--black);
     }
 
-    // Muda a cor do botão em telas menores
-    @media (max-width: 640px) {
-        color: var(--color--white); // Cor do texto
-        background-color: var(--color--black); // Cor de fundo
-        border: 4px solid var(--color--white); // Borda
-    }
+    /* @media (max-width: 640px) {
+        color: var(--color--white); // Cor do texto em tela menor
+        background-color: var(--color--black); // Cor de fundo em tela menor
+        border: 4px solid var(--color--white); // Borda em tela menor
+    } */
 `;
 
 const ArrowIcon = styled.svg`
@@ -97,8 +96,14 @@ const ButtonText = styled.span`
     }
 `;
 
-const Button = ({ text, onClick }) => (
-    <StyledButton onClick={onClick}>
+const Button = ({ text, onClick, color, backgroundColor, borderColor, hoverColor }) => (
+    <StyledButton
+        onClick={onClick}
+        color={color}
+        background={backgroundColor} // Use backgroundColor aqui
+        borderColor={borderColor}
+        hoverColor={hoverColor}
+    >
         <ArrowIcon className="arr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z" />
         </ArrowIcon>

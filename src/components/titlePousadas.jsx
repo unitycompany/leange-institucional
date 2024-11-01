@@ -111,7 +111,10 @@ const TitlePousadas = ({
     titleAnimation = { opacity: 0, y: -20 },
     textAnimation = { opacity: 0, x: -20 },
     buttonAnimation = { opacity: 0, scale: 0.8 },
-    animationDuration = 0.5
+    animationDuration = 0.5,
+    buttonColor, // Nova prop para a cor do botão
+    buttonHover,
+    buttonBorder
 }) => {
     return (
         <StyledDiv
@@ -142,11 +145,13 @@ const TitlePousadas = ({
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: animationDuration, delay: 0.6 }}
-                style={{ zIndex: 3 }} /* Garante que o botão fique acima */
+                style={{ zIndex: 3 }}
             >
                 <Button 
                     text="Saber mais" 
-                    backgroundColor="transparent" 
+                    backgroundColor={buttonColor}
+                    borderColor={buttonBorder}
+                    hoverColor={buttonHover}
                     border="1px solid var(--color--black)" 
                     color="var(--color--black)"
                 />

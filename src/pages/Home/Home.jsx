@@ -68,6 +68,8 @@ const StyledContainerPousadas = styled.section`
     &:nth-child(2){
         @media (max-width: 768px){
             flex-direction: column;
+            position: relative;
+            z-index: -1;
         }
     }
 
@@ -98,6 +100,8 @@ const StyledPousadas = styled.div`
     @media (max-width: 768px){
         height: auto;
         padding: 10% 0;
+        position: relative;
+        z-index: -1;
     }
 `
 
@@ -524,6 +528,8 @@ const Home = () => {
                     text="Aqui na LeAnge, costumamos dizer que a hospedagem é muito mais do que um final de semana para relaxar. É uma EXPERIÊNCIA ÚNICA ao lado do seu PET, para que você colecione os melhores momentos ao lado dele!" 
                     borderColor="var(--color--green)"
                     borderRadius="30px" 
+                    buttonColor="var(--color--green)"
+                    buttonBorder="none"
                     />
                 </StyledContainerPousadas>
 
@@ -533,6 +539,8 @@ const Home = () => {
                     text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da propriedade e o seu pet é calorosamente recebido para momentos especiais." 
                     borderColor="var(--color--blue)"
                     borderRadius="30px" 
+                    buttonColor="var(--color--blue)"
+                    buttonBorder="none"
                     />
                     <SliderComponent 
                     content={images2} 
