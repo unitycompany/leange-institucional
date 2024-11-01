@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Button from '../../components/Button';
-import SliderComponent from '../../components/sliderComponent';
+import SliderComponent3 from '../../components/sliderComponent3';
 import Footer from '../../components/footer';
 
 const Espace = styled.div`
@@ -25,6 +25,7 @@ const InicioContainer = styled.section`
     @media (max-width: 768px){
         flex-direction: column-reverse;
         height: auto;
+        border: 1px solid red;
     }
 
     & > div:nth-child(1){
@@ -40,7 +41,6 @@ const InicioContainer = styled.section`
             width: 100%;
             gap: 30px;
             align-items: center;
-
             height: auto;
             position: relative;
         }
@@ -123,7 +123,8 @@ const InicioContainer = styled.section`
 `
 
 const CarrosselContainer = styled.section`
-    width: 100%;
+    width: 90%;
+    margin-left: 5%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -131,7 +132,8 @@ const CarrosselContainer = styled.section`
 
     @media (max-width: 768px){
         height: auto;
-        padding: 10% 2.5%;
+        padding: 5% 2.5%;
+        margin-left: 0;
     }
 `
 
@@ -287,7 +289,7 @@ const CasamentoContainer = styled.section`
     @media (max-width: 768px){
         height: auto;
         flex-direction: column;
-        padding: 10% 5%;
+        padding: 5% 2.5%;
     }
 
     & > div{
@@ -309,7 +311,7 @@ const CasamentoContainer = styled.section`
                 border-radius: 25px 0 25px 0; 
                 position: absolute;
                 height: 50vh;
-                width: 90%;
+                width: 95%;
                 z-index: -1;
             }
         }
@@ -408,6 +410,7 @@ const CasamentoContainer = styled.section`
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
+                    
                 }
             }
         }
@@ -427,7 +430,7 @@ const NiverContainer = styled.section`
     @media (max-width: 768px){
         height: auto;
         flex-direction: column-reverse;
-        padding: 10% 5%;
+        padding: 5% 2.5%;
     }
 
     & > div{
@@ -449,7 +452,7 @@ const NiverContainer = styled.section`
                 border-radius: 25px 0 25px 0; 
                 position: absolute;
                 height: 50vh;
-                width: 90%;
+                width: 95%;
                 z-index: -1;
             }
         }
@@ -580,7 +583,7 @@ const Eventos = () => {
             </InicioContainer>
 
             <CarrosselContainer>
-                <SliderComponent 
+                <SliderComponent3 
                         content={images1} 
                         spaceBetween={20} 
                         slidesPerView={1} 
@@ -674,7 +677,7 @@ const Eventos = () => {
             </NiverContainer>
             
             <CarrosselContainer>
-                <SliderComponent 
+                <SliderComponent3
                         content={images1} 
                         spaceBetween={20} 
                         slidesPerView={1} 
