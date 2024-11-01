@@ -50,20 +50,24 @@ const SlideContainer = styled.div`
     @media (max-width: 768px){
         width: 90%;
         margin-left: 5%;
-        border-image: fill 0 linear-gradient(#0001, #00000080)
+        border-radius: 20px 0px 20px 0px;
         }
 `;
 
 const BorderOverlay = styled.div`
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 60%;
     border-radius: 15px; /* Mantém o mesmo border-radius */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)); /* Gradiente */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradiente */
     pointer-events: none; /* Apenas decorativa */
     z-index: 1;
+
+    @media (max-width: 768px){
+        border-radius: 20px 0 20px 0;
+    }
 `;
 
 const SlideContent = styled.div`
@@ -77,7 +81,41 @@ const SlideContent = styled.div`
     z-index: 2;
 
     @media (max-width: 768px){
-        gap: 30px;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+`;
+
+const TopLeftText = styled.div`
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 15px;
+    color: white;
+    z-index: 3;
+    font-family: var(--font--comfortaa);
+    font-weight: 800;
+    background-color: var(--color--white);
+    border-radius: 10px 0 10px 0;
+    backdrop-filter: blur(10px);
+    color: var(--color--black);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+
+    @media (max-width: 768px){
+        left: 15px;
+        top: 10px;
+        padding: 7px 15px;
+        font-size: .7rem;
+        background-color: var(--color--white);
+        border-radius: 10px 0 10px 0;
+        backdrop-filter: blur(10px);
+        color: var(--color--black);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+        text-align: center;
     }
 `;
 
@@ -89,7 +127,7 @@ const Title = styled.h2`
 
     @media (max-width: 768px){
         font-weight: 100;
-        font-size: 28px;
+        font-size: 26px;
     }
 `;
 
@@ -147,6 +185,7 @@ const CoverflowSliderComponent = ({
                 {content.map((item, index) => (
                     <SwiperSlide key={index} style={{ width: '60%' }}>
                         <SlideContainer backgroundImage={item.backgroundImage}>
+                        <TopLeftText>{item.topLeftText}</TopLeftText>
                             <BorderOverlay />
                             <SlideContent>
                                 <Title>{item.title}</Title>

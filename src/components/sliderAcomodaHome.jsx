@@ -46,7 +46,7 @@ const waterWave = keyframes`
 const SlideContainer = styled(motion.div)`
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 95vh;
   display: flex;
   align-items: flex-end;
   background-size: cover;
@@ -55,14 +55,13 @@ const SlideContainer = styled(motion.div)`
 
   @media (max-width: 768px){
     animation: none;
-    border-radius: 0;
-    border-image: fill 0 linear-gradient(#0001, #00000080);
+    border-radius: 25px 0 25px 0;
   }
 `;
 
 const SlideContent = styled(motion.div)`
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
   left: 20px;
   color: white;
 
@@ -71,23 +70,27 @@ const SlideContent = styled(motion.div)`
 `;
 
 const Title = styled(motion.h2)`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
 
   @media (max-width: 768px){
     font-family: var(--font--comfortaa);
+    font-size: 1.4rem;
+    font-weight: 800;
   }
 `;
 
 const Subtitle = styled(motion.p)`
   font-size: 16px;
-  margin: 5px 0;
+  margin: 0px 0;
 
   @media (max-width: 768px){
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 200;
     width: 80%;
     line-height: 100%;
     font-family: var(--font--comfortaa);
+    margin: 0;
   }
 `;
 
@@ -109,6 +112,7 @@ const Features = styled(motion.div)`
       padding: 5px 10px;
       border-radius: 12px;
       font-size: 12px;
+      font-family: var(--font--comfortaa);
 
       @media (max-width: 768px){
         font-size: 10px;
@@ -183,7 +187,7 @@ const SliderAcomodaHome = ({
                   ))}
                 </Features>
                 <ButtonAcomoda 
-                text="Conferir todas as acomodações"
+                text="Conhecer acomodação completa"
                 />
               </SlideContent>
             </SlideContainer>

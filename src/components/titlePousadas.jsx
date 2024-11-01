@@ -33,10 +33,15 @@ const StyledDiv = styled(motion.div)`
 
     @media (max-width: 768px){
         width: 100%; 
-        position: absolute;
         align-items: center;
-        gap: 15px;
+        top: 25%;
+        height: auto;
+        padding: 5% 5%;
+        gap: 30px;
+        position: relative;
         z-index: 2;
+        top: -80px;
+        margin-bottom: -80px;
     }
 
     &::before{
@@ -66,7 +71,14 @@ const StyledTitlePag = styled(motion.h1)`
     @media (max-width: 768px){
         text-align: center;
         color: var(--color--white);
-        font-size: 1.5rem;
+        width: auto;
+        padding: 6px 15px;
+        border-radius: 0px 10px 0px 10px;
+        font-size: 1.2rem;
+        font-weight: 800;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 50px rgba(255, 255, 255, 1);
     }
 `;
 
@@ -76,11 +88,12 @@ const StyledParagPag = styled(motion.p)`
 
     @media (max-width: 768px){
         text-align: justify;
-        color: var(--color--white);
+        color: var(--color--black);
         width: 100%;
         margin-top: 5px;
+        font-weight: 200;
         font-size: 1rem;
-        line-height: 140%;
+        line-height: 130%;
     }
 `;
 
@@ -125,7 +138,7 @@ const TitlePousadas = ({
                 transition={{ duration: animationDuration, delay: 0.6 }}
             >
                 <Button 
-                    text="Fazer minha reserva" 
+                    text="Saber mais" 
                     backgroundColor="transparent" 
                     border="1px solid var(--color--black)" 
                     color="var(--color--black)"

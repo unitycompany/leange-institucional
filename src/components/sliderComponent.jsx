@@ -11,21 +11,7 @@ import ButtonAcomoda from './button2';
 // Global styles for Swiper
 const SwiperStyles = createGlobalStyle`
 
-    .swiper-button-next{
-
-        @media (max-width: 768px){
-            right: 10px;
-        }
-    }
-
-    .swiper-button-prev{
-
-        @media (max-width: 768px){
-            left: 10px;
-        }
-    }
-
-    .swiper-button-next, .swiper-button-prev {
+.swiper-button-next, .swiper-button-prev {
         color: var(--color--white); 
         background-color: var(--color--black);
         border-radius: 50%;
@@ -38,8 +24,7 @@ const SwiperStyles = createGlobalStyle`
         transition: all .2s;
 
         @media (max-width: 768px){
-            top: 50px;
-            z-index: 10;
+            z-index: 100;
         }
 
         &:hover {
@@ -65,7 +50,6 @@ const SwiperStyles = createGlobalStyle`
     }
 `;
 
-// Keyframes for animation
 const waterWave = keyframes`
   0% {
     border-radius: 0 60px 20px 0;
@@ -84,7 +68,6 @@ const waterWave = keyframes`
   }
 `;
 
-// Styled components
 const StyledImage = styled(motion.img)`
     width: 100%;
     height: 100%;
@@ -92,7 +75,7 @@ const StyledImage = styled(motion.img)`
     border-radius: 20px;
 
     @media (max-width: 768px){
-        filter: brightness(70%);
+        border-radius: 0 15px 0 20px;
     }
 `;
 
@@ -110,7 +93,6 @@ const SlideContainer = styled(motion.div)`
   background-position: center;
 
   @media (max-width: 768px){
-    border: 1px solid red;
   }
 
   &:hover {

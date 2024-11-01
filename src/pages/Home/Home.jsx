@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaSnowflake, FaBed, FaBath, FaTv } from 'react-icons/fa';
+import { FaRulerCombined, FaSnowflake, FaBed, FaBath, FaTv, FaFire } from 'react-icons/fa';
 import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
@@ -65,8 +65,14 @@ const StyledContainerPousadas = styled.section`
     gap: 10px;
     padding: 0 5%;
 
+    &:nth-child(2){
+        @media (max-width: 768px){
+            flex-direction: column;
+        }
+    }
+
     @media (max-width: 768px){
-        flex-direction: column;
+        flex-direction: column-reverse;
         position: relative;
         z-index: -1;
         height: auto;
@@ -131,18 +137,12 @@ const acomodaHome = [
       subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
       backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra1_u0olej.jpg",
       features: [
-        { icon: <FaSnowflake />, text: "52m²" },
+        { icon: <FaRulerCombined />, text: "52m²" },
         { icon: <FaSnowflake />, text: "Ar condicionado" },
         { icon: <FaBed />, text: "Cama king size" },
         { icon: <FaBath />, text: "Banheira" },
         { icon: <FaTv />, text: "Smart TV com canais a cabo" },
-        { icon: <FaTv />, text: "Lareira" },
-        { icon: <FaTv />, text: "Frigobar" },
-        { icon: <FaTv />, text: "Chaleira elétrica" },
-        { icon: <FaTv />, text: "Chuveiro" },
-        { icon: <FaTv />, text: "Aquecedor de Toalhas" },
-        { icon: <FaTv />, text: "Cuba única" },
-        { icon: <FaTv />, text: "Varanda privada" }
+        { icon: <FaFire />, text: "Lareira" }
       ]
     },
     {
@@ -150,20 +150,12 @@ const acomodaHome = [
       subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
       backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra2_lhgcj2.jpg",
       features: [
-        { icon: <FaSnowflake />, text: "77m²" },
+        { icon: <FaRulerCombined />, text: "52m²" },
         { icon: <FaSnowflake />, text: "Ar condicionado" },
-        { icon: <FaSnowflake />, text: "Chaise lounge" },
-        { icon: <FaSnowflake />, text: "Bay Window" },
         { icon: <FaBed />, text: "Cama king size" },
         { icon: <FaBath />, text: "Banheira" },
         { icon: <FaTv />, text: "Smart TV com canais a cabo" },
-        { icon: <FaTv />, text: "Lareira" },
-        { icon: <FaTv />, text: "Frigobar" },
-        { icon: <FaTv />, text: "Chaleira elétrica" },
-        { icon: <FaTv />, text: "Chuveiro" },
-        { icon: <FaTv />, text: "Aquecedor de Toalhas" },
-        { icon: <FaTv />, text: "Cuba para casal (dupla)" },
-        { icon: <FaTv />, text: "Ampla varanda privativa" }
+        { icon: <FaFire />, text: "Lareira" }
       ]
     },
     {
@@ -171,20 +163,12 @@ const acomodaHome = [
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125876/suiteMar2_yb1nqi.jpg",
         features: [
-          { icon: <FaSnowflake />, text: "77m²" },
-          { icon: <FaSnowflake />, text: "Ar condicionado" },
-          { icon: <FaSnowflake />, text: "Chaise lounge" },
-          { icon: <FaSnowflake />, text: "Recamier e poltrona de leitura" },
-          { icon: <FaBed />, text: "Cama king size" },
-          { icon: <FaBath />, text: "Banheira" },
-          { icon: <FaTv />, text: "Smart TV com canais a cabo" },
-          { icon: <FaTv />, text: "Lareira" },
-          { icon: <FaTv />, text: "Frigobar" },
-          { icon: <FaTv />, text: "Chaleira elétrica" },
-          { icon: <FaTv />, text: "Chuveiro" },
-          { icon: <FaTv />, text: "Aquecedor de Toalhas" },
-          { icon: <FaTv />, text: "Cuba para casal (dupla)" },
-          { icon: <FaTv />, text: "Ampla varanda privativa" }
+            { icon: <FaRulerCombined />, text: "52m²" },
+            { icon: <FaSnowflake />, text: "Ar condicionado" },
+            { icon: <FaBed />, text: "Cama king size" },
+            { icon: <FaBath />, text: "Banheira" },
+            { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+            { icon: <FaFire />, text: "Lareira" }
       ]
     },
     {
@@ -192,20 +176,12 @@ const acomodaHome = [
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125876/suiteMar1_pmcoje.jpg",
         features: [
-          { icon: <FaSnowflake />, text: "77m²" },
-          { icon: <FaSnowflake />, text: "Ar condicionado" },
-          { icon: <FaSnowflake />, text: "Chaise lounge" },
-          { icon: <FaSnowflake />, text: "Recamier e poltrona de leitura" },
-          { icon: <FaBed />, text: "Cama king size" },
-          { icon: <FaBath />, text: "Banheira" },
-          { icon: <FaTv />, text: "Smart TV com canais a cabo" },
-          { icon: <FaTv />, text: "Lareira" },
-          { icon: <FaTv />, text: "Frigobar" },
-          { icon: <FaTv />, text: "Chaleira elétrica" },
-          { icon: <FaTv />, text: "Chuveiro" },
-          { icon: <FaTv />, text: "Aquecedor de Toalhas" },
-          { icon: <FaTv />, text: "Cuba para casal (dupla)" },
-          { icon: <FaTv />, text: "Ampla varanda privativa" }
+            { icon: <FaRulerCombined />, text: "52m²" },
+            { icon: <FaSnowflake />, text: "Ar condicionado" },
+            { icon: <FaBed />, text: "Cama king size" },
+            { icon: <FaBath />, text: "Banheira" },
+            { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+            { icon: <FaFire />, text: "Lareira" }
       ]
     },
     {
@@ -213,36 +189,32 @@ const acomodaHome = [
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125194/suiteSerra3_ayqtcj.jpg",
         features: [
-          { icon: <FaSnowflake />, text: "77m²" },
-          { icon: <FaSnowflake />, text: "Ar condicionado" },
-          { icon: <FaSnowflake />, text: "Chaise lounge" },
-          { icon: <FaSnowflake />, text: "Recamier e poltrona de leitura" },
-          { icon: <FaBed />, text: "Cama king size" },
-          { icon: <FaBath />, text: "Banheira" },
-          { icon: <FaTv />, text: "Smart TV com canais a cabo" },
-          { icon: <FaTv />, text: "Lareira" },
-          { icon: <FaTv />, text: "Frigobar" },
-          { icon: <FaTv />, text: "Chaleira elétrica" },
-          { icon: <FaTv />, text: "Chuveiro" },
-          { icon: <FaTv />, text: "Aquecedor de Toalhas" },
-          { icon: <FaTv />, text: "Cuba para casal (dupla)" },
-          { icon: <FaTv />, text: "Ampla varanda privativa" }
+            { icon: <FaRulerCombined />, text: "52m²" },
+            { icon: <FaSnowflake />, text: "Ar condicionado" },
+            { icon: <FaBed />, text: "Cama king size" },
+            { icon: <FaBath />, text: "Banheira" },
+            { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+            { icon: <FaFire />, text: "Lareira" }
       ]
     },
   ];
 
 const StyledAcomoda = styled.section`
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    padding: 0 5%;
+    padding: 2.5% 5%;
+    background-color: var(--color--black);
+    clip-path: polygon(1% 1%, 99% 1%, 99% 99%, 1% 99%);
 
     @media (max-width: 768px){
         height: auto;
+        padding: 10% 5%;
         gap: 25px;
+        clip-path: polygon(2% 2%, 98% 2%, 98% 98%, 2% 98%);
     }
 `
 
@@ -252,42 +224,48 @@ const slideDataCoverflow = [
         title: 'Aconchego',
         description: 'Nossas áreas internas, contam com três salas superequipadas e aconchegantes, sendo elas: sala de TV, sala de estar, sala de jogos com mesa de bilhar, carteado, jogos de tabuleiro e biblioteca.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
         title: 'Cozinha',
         description: 'Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange | ',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/suites_gmhdsf.jpg',
         title: 'Suites',
         description: 'Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira com vista para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange | ',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/conforto_oebwyu.webp',
         title: 'Relaxar',
         description: 'Relaxe em nosso SPA com uma vista de frente para mata! Você pode escolher contratar nossos serviços de massoterapia, manicure, pedicure.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange | ',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126869/refrescar_id0f4o.png',
         title: 'Refrescar',
-        description: 'Nossa maravilhosa piscina de borda infinita possui aquecimento solar e tratamento especial por ozônio, com níveis baixíssimos de cloro, além de contar com o ofurô aquecido, perfeito para aproveitar no final de tarde em que temos um pôr do sol incrível para acompanhar. Ah! E claro que seu Dog pode nadar junto com você!',
-        buttonText: 'Viver minha experiência agora',
+        description: 'Nossa maravilhosa piscina de borda infinita possui aquecimento solar e tratamento especial por ozônio, com níveis baixíssimos de cloro, além de contar com o ofurô aquecido, perfeito para aproveitar no final de tarde.',
+        topLeftText: 'Le Ange | ',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126869/aventura_waih8i.png',
         title: 'Aventura',
         description: 'Na propriedade, temos trilhas dentro da natureza, beirando o rio! Em diversos pontos você pode escolher dar uma paradinha para tomar um banho e renovar as energias!',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange | ',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/diversao_jpykdy.jpg',
         title: 'Divercão',
         description: 'Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet, correr, pular e nadar!',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange | ',
     },
 
     {
@@ -295,6 +273,7 @@ const slideDataCoverflow = [
         title: 'Adega',
         description: 'Para completar ainda mais sua experiência, contamos com uma adega subterrânea para climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange | ',
     },
 
     {
@@ -302,6 +281,7 @@ const slideDataCoverflow = [
         title: 'Sossego',
         description: 'A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange | ',
     },
 
     {
@@ -309,6 +289,7 @@ const slideDataCoverflow = [
         title: 'Pet Friendly',
         description: 'Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange | ',
     },
     // Adicione mais slides conforme necessário
 ];
@@ -344,6 +325,25 @@ const StyledEstrutura = styled.div`
 
 `
 
+const StyledEstruturaTitle2 = styled.h1`
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--font--comfortaa);
+    color: var(--color--white);
+
+    @media (max-width: 768px){
+        display: inline-block;
+        font-size: 1.3rem;
+        line-height: 110%;
+        width: 95%;
+        margin-left: 2.5%;
+    }
+`
+
 const StyledEstruturaTitle = styled.h1`
     width: 100%;
     text-align: center;
@@ -352,6 +352,8 @@ const StyledEstruturaTitle = styled.h1`
     justify-content: center;
     gap: 10px;
     font-family: var(--font--comfortaa);
+    color: var(--color--black);
+
 
     @media (max-width: 768px){
         display: inline-block;
@@ -367,6 +369,7 @@ const StyledEstruturaSubTitle = styled.p`
     width: 100%;
     text-align: center;
     font-family: var(--font--avenir);
+    color: var(--color--white);
     opacity: 0.7;
 
     @media (max-width: 768px){
@@ -466,7 +469,7 @@ const StyledCarrosselSection = styled.section`
 
 const StyledContainerEvents = styled.section`
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     padding: 0 5%;
     display: flex;
     align-items: center;
@@ -545,8 +548,8 @@ const Home = () => {
 
             <StyledAcomoda>
                 <div>
-                    <StyledEstruturaTitle>Nossos quartos <StyledColorBGreen>mais buscados</StyledColorBGreen> <MdBedroomParent /> </StyledEstruturaTitle>
-                    <StyledEstruturaSubTitle>Já consegue se imaginar dormindo?</StyledEstruturaSubTitle>
+                    <StyledEstruturaTitle2>Nossos quartos <StyledColorBGreen>mais procurados</StyledColorBGreen> <MdBedroomParent /> </StyledEstruturaTitle2>
+                    <StyledEstruturaSubTitle>Já consegue se imaginar dormindo aqui?</StyledEstruturaSubTitle>
                 </div>
 
                 <SliderAcomodaHome 
@@ -557,7 +560,7 @@ const Home = () => {
             
             <StyledEstrutura>
                 <div>
-                    <StyledEstruturaTitle>Estrutura que te <StyledColorBBlue>convida</StyledColorBBlue> <BiSolidHomeHeart /> </StyledEstruturaTitle>
+                    <StyledEstruturaTitle>Carinho em cada <StyledColorBBlue>detalhe</StyledColorBBlue> <BiSolidHomeHeart /> </StyledEstruturaTitle>
                     <StyledEstruturaSubTitle>Venha ter essa experiência</StyledEstruturaSubTitle>
                 </div>
                 <CoverflowSliderComponent
@@ -571,7 +574,7 @@ const Home = () => {
             </StyledEstrutura>
 
             <div>
-                <StyledEstruturaTitle> <StyledColorBGreen>Sinta-se</StyledColorBGreen> mais próximo da gente <BsCalendar2HeartFill /> </StyledEstruturaTitle>
+                <StyledEstruturaTitle> <StyledColorBGreen>Viva</StyledColorBGreen> essa experiência <BsCalendar2HeartFill /> </StyledEstruturaTitle>
                 <StyledEstruturaSubTitle>Alguns dos nossos momentos</StyledEstruturaSubTitle>
             </div>
             
@@ -581,7 +584,7 @@ const Home = () => {
             </StyledCarrosselSection>
 
             <div>
-                <StyledEstruturaTitle>Qual deles você <StyledColorBBlue>mais gostou?</StyledColorBBlue> <MdFoodBank /> </StyledEstruturaTitle>
+                <StyledEstruturaTitle>Conheça nossos pacotes e <StyledColorBBlue>noites especiais</StyledColorBBlue> <MdFoodBank /> </StyledEstruturaTitle>
                 <StyledEstruturaSubTitle>Estamos te esperando!</StyledEstruturaSubTitle>
             </div>
             <StyledContainerEvents>

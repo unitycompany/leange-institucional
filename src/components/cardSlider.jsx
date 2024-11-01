@@ -38,6 +38,13 @@ const CardContainer = styled(motion.div)`
     border: 1px solid var(--color--black);
     animation: ${waterWave2} 5s ease-in-out infinite;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 768px){
+        border: none;
+        padding: 5px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
 `;
 
 const CardImage = styled.img`
@@ -45,6 +52,11 @@ const CardImage = styled.img`
     height: 220px;
     object-fit: cover;
     border-radius: 10px;
+
+    @media (max-width: 768px){
+        border: 2px solid var(--color--black);
+        height: 320px;
+    }
 `;
 
 const CardContent = styled.div`
@@ -85,6 +97,10 @@ const Features = styled.div`
         padding: 5px 8px;
         border-radius: 8px;
         font-size: 10px;
+
+        @media (max-width: 768px){
+            background-color: var(--color--white);
+        }
     }
 `;
 
