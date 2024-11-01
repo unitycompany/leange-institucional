@@ -25,7 +25,6 @@ const InicioContainer = styled.section`
     @media (max-width: 768px){
         flex-direction: column-reverse;
         height: auto;
-        border: 1px solid red;
     }
 
     & > div:nth-child(1){
@@ -132,8 +131,9 @@ const CarrosselContainer = styled.section`
 
     @media (max-width: 768px){
         height: auto;
-        padding: 5% 2.5%;
+        padding: 7% 2.5%;
         margin-left: 0;
+        width: 100%;
     }
 `
 
@@ -151,7 +151,6 @@ const SobreContainer = styled.section`
     @media (max-width: 768px){
         height: auto;
         padding: 5% 5%;
-        border: 1px solid red;
     }
 
     & > div:nth-child(1){
@@ -161,7 +160,7 @@ const SobreContainer = styled.section`
         justify-content: center;
 
         @media (max-width: 768px){
-            border: 1px solid red;
+
         }
 
         & > h1 {
@@ -186,7 +185,7 @@ const SobreContainer = styled.section`
         gap: 50px;
 
         @media (max-width: 768px){
-            border: 1px solid red;
+
             flex-direction: column;
             height: auto;   
         }
