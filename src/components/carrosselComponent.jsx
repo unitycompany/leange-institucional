@@ -38,7 +38,7 @@ const SlideText = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 3.5em;
+  font-size: 2.5em;
   line-height: 100%;
   margin-bottom: 0.5em;
   font-family: var(--font--comfortaa);
@@ -52,7 +52,7 @@ const Title = styled.h2`
 
 const Description = styled.p`
   margin-bottom: 1.5em;
-  font-size: 1.2rem;
+  font-size: 1rem;
   width: 80%;
   color: var(--color--black);
   font-family: var(--font--comfortaa);
@@ -74,7 +74,7 @@ const ImageContainer = styled.div`
 
 const SlideImage = styled.img`
   width: 100%;
-  border-radius: 15px;
+  border-radius: 25px 0 25px 0;
   height: 100%;
   object-fit: cover;
 `;

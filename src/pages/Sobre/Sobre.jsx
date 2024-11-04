@@ -24,7 +24,7 @@ const SobreContainer = styled.section`
         align-items: flex-start;
         justify-content: center;
         gap: 20px;
-        padding: 0 0 0 10%;
+        padding: 0 0 0 5%;
 
         @media (max-width: 768px){
             width: 100%;
@@ -133,7 +133,7 @@ const UnidadeContainer = styled.section`
     width: 100%;
     height: 80vh;
     margin-top: 10vh;
-    padding: 0% 10%;
+    padding: 0% 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -250,7 +250,7 @@ const DiferenciaisContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
+    padding: 0 5%;
 
     @media (max-width: 768px){
         height: auto;
@@ -340,7 +340,7 @@ const ContainerDuplo = styled.section`
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 5%;
 
     @media (max-width: 768px){
         height: auto;
@@ -377,7 +377,7 @@ const ContainerDuplo = styled.section`
             }
 
             & > h1{
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-family: var(--font--comfortaa);
             color: var(--color--green);
                 
@@ -466,6 +466,7 @@ const ContainerDuplo = styled.section`
                 height: 80%;
                 object-fit: cover;
 
+
                 @media (max-width: 768px){
                     height: 100%;
                     width: 50%;
@@ -495,14 +496,15 @@ const ContainerDuplo = styled.section`
             flex-direction: column;
 
             @media (max-width: 768px){
-    
                 width: 100%;
             }
 
             & > h1{
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-family: var(--font--comfortaa);
             color: var(--color--blue);
+            line-height: 100%;
+            text-align: right;
                 
                 @media (max-width: 768px){
         
@@ -515,11 +517,12 @@ const ContainerDuplo = styled.section`
             }
 
             & > p {
-            width: 80%;
+            width: 90%;
             font-family: var(--font--avenir);
+            text-align: right;
 
                 @media (max-width: 768px){
-        
+
                     width: 100%;
                     text-align: justify;
                 }
@@ -536,7 +539,7 @@ const PublicoContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
+    padding: 0 5%;
 
         @media (max-width: 768px){
 

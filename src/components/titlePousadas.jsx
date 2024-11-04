@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Button from "./Button";
+import Button from "./button";
 import styled, { keyframes } from "styled-components";
 
 const DivAnimated = keyframes`
@@ -119,7 +119,7 @@ const TitlePousadas = ({
     return (
         <StyledDiv
             borderColor={borderColor}
-            initial={containerAnimation}
+            initial={containerAnimation}    
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: animationDuration }}

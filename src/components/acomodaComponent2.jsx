@@ -30,8 +30,9 @@ const StyledAcomodaContainer = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 5%;
+    padding: 2.5% 5%;
     position: relative;
+    background-color: var(--color--blue);
 
     @media (max-width: 768px){
         height: auto;
@@ -50,7 +51,7 @@ const StyledAcomodaContainer = styled.section`
 
     & > main {
         width: 100%;
-        height: 65%;
+        height: 80%;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -179,22 +180,22 @@ const StyledAcomodaTexts = styled.div`
     }
 
     & > div h1 {
-        font-size: 3rem;
-        color: var(--color--black);
+        font-size: 2.5rem;
+        color: var(--color--white);
         font-family: var(--font--comfortaa);
 
         @media (max-width: 768px){
-            font-size: 1.6rem;
+            font-size: 2rem;
             text-align: center;
-
-            margin-bottom: 10px;
+            margin-bottom: 30px;
+            margin-top: 15px;
         }
     }
 
     & > div p {
         width: 80%;
         font-family: var(--font--avenir);
-        color: var(--color--black);
+        color: var(--color--white);
         line-height: 100%;
         font-size: 1rem;
 
@@ -215,19 +216,19 @@ const AcomodaComponent2 = ({ images }) => {
             <StyledAcomodaTexts>
                 <div>
                     <h1>Suítes</h1>
-                    <p>Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira excepcional com vista deliciosa para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.</p>
+                    {/* <p>Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira excepcional com vista deliciosa para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.</p> */}
                 </div>
                 <div>
                     <CustomButton 
                         text="Reservar agora!"
-                        textColor="var(--color--black)"
+                        textColor="var(--color--white)"
                         backgroundColor="transparent"
-                        borderColor="var(--color--black)"
-                        iconColor="var(--color--black)"
+                        borderColor="var(--color--white)"
+                        iconColor="var(--color--white)"
                         hoverBackgroundColor="var(--color--black)"
-                        hoverBorderColor="var(--color--white)"
-                        hoverColor="var(--color--white)"
-                        hoverIconColor="var(--color--white)"
+                        hoverBorderColor="var(--color--black)"
+                        hoverColor="var(--color--black)"
+                        hoverIconColor="var(--color--black)"
                         onClick={() => alert("Reservado!")}
                     />
                 </div>

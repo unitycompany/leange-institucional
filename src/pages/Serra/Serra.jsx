@@ -28,6 +28,24 @@ const StyledSectionHome = styled(motion.section)`
     justify-content: space-between;
     height: 95vh;
 
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: -5vh;
+        position: absolute;
+        z-index: -1;
+        opacity: .1;
+        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730130104/fotoSerra4_zgia0i.jpg');
+        background-position: center;
+        background-size: cover;
+
+        @media (max-width:768px){
+            display: none;
+        }
+    }
+
     @media (max-width: 768px){
         padding: 10% 2.5%;
         flex-direction: column-reverse;
@@ -87,7 +105,7 @@ const StyledHomeTexts = styled(motion.div)`
     & > h1 {
         font-family: var(--font--comfortaa);
         font-size: 65px;
-        width: 80%;
+        width: 100%;
         line-height: 100%;
         color: var(--color--black);
         margin-top: -15px;
@@ -129,42 +147,49 @@ const slideDataCoverflow = [
         title: 'Aconchego',
         description: 'Nossas áreas internas, contam com três salas superequipadas e aconchegantes, sendo elas: sala de TV, sala de estar, sala de jogos com mesa de bilhar, carteado, jogos de tabuleiro e biblioteca.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra'
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
         title: 'Cozinha',
         description: 'Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/suites_gmhdsf.jpg',
         title: 'Suites',
         description: 'Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira com vista para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/conforto_oebwyu.webp',
         title: 'Relaxar',
         description: 'Relaxe em nosso SPA com uma vista de frente para mata! Você pode escolher contratar nossos serviços de massoterapia, manicure, pedicure.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126869/refrescar_id0f4o.png',
         title: 'Refrescar',
         description: 'Nossa maravilhosa piscina de borda infinita possui aquecimento solar e tratamento especial por ozônio, com níveis baixíssimos de cloro, além de contar com o ofurô aquecido, perfeito para aproveitar no final de tarde em que temos um pôr do sol incrível para acompanhar. Ah! E claro que seu Dog pode nadar junto com você!',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126869/aventura_waih8i.png',
         title: 'Aventura',
         description: 'Na propriedade, temos trilhas dentro da natureza, beirando o rio! Em diversos pontos você pode escolher dar uma paradinha para tomar um banho e renovar as energias!',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/diversao_jpykdy.jpg',
         title: 'Divercão',
         description: 'Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet, correr, pular e nadar!',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
 
     {
@@ -172,6 +197,7 @@ const slideDataCoverflow = [
         title: 'Adega',
         description: 'Para completar ainda mais sua experiência, contamos com uma adega subterrânea para climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
 
     {
@@ -179,6 +205,7 @@ const slideDataCoverflow = [
         title: 'Sossego',
         description: 'A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
 
     {
@@ -186,13 +213,14 @@ const slideDataCoverflow = [
         title: 'Pet Friendly',
         description: 'Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!',
         buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra',
     },
     // Adicione mais slides conforme necessário
 ];
 
 const StyledSectionEstrutura = styled.section`
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -290,7 +318,7 @@ const StyledLocall = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 10vh;
+    height: 7vh;
     background-color: var(--color--green);
     font-family: var(--font--comfortaa);
 
@@ -303,7 +331,7 @@ const StyledLocall = styled.div`
         font-weight: 200;
         width: 80%;
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         color: var(--color--white);
 
         @media (max-width: 768px){
@@ -353,7 +381,7 @@ const Serra = () => {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.6 }}
                     >
-                        PET FRIENDLY DO <b>BRASIL</b>
+                        PET FRIENDLY<br /> DO <b>BRASIL</b>
                     </motion.h1>
 
                     <motion.p
@@ -421,7 +449,7 @@ const Serra = () => {
 
             <PetFriendly />
 
-            <Atracoes />
+            {/* <Atracoes /> */}
 
             <Depoimentos />
 

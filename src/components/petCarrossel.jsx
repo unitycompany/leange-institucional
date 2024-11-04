@@ -21,7 +21,10 @@ const images = [
 ];
 
 const CarouselContainer = styled.div`
-    height: 80vh;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 
     @media (max-width: 768px){
         height: auto;
@@ -51,7 +54,7 @@ const StyledSwiperSlide = styled(SwiperSlide)`
 
 const StyledImage = styled.img`
     width: 100%;
-    height: ${(props) => (props.index % 2 === 0 ? '40vh' : '30vh')};
+    height: ${(props) => (props.index % 2 === 0 ? '50vh' : '30vh')};
     object-fit: cover;
     border-radius: 15px;
 
@@ -68,6 +71,7 @@ const StyledTextPet = styled.section`
     justify-content: space-between;
     height: 15vh;
     align-items: center;
+    margin-top: 5vh;
 
     @media (max-width: 768px){
         flex-direction: column-reverse;
@@ -99,6 +103,7 @@ const PetFriendlyCarousel = () => {
     return (
         <>
             <StyledTextPet>
+                <h1>Pet Friendly</h1>
                 <CustomButton 
                     text="Reservar agora!"
                     textColor="var(--color--black)"
@@ -111,7 +116,6 @@ const PetFriendlyCarousel = () => {
                     hoverIconColor="var(--color--white)"
                     onClick={() => alert("Reservado!")}
                 />
-                <h1>Pet Friendly</h1>
             </StyledTextPet>
 
             <CarouselContainer>

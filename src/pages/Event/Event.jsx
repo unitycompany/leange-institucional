@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Button from '../../components/Button';
+import { BiSolidDrink, BiSolidStar, BiCamera, BiHeart, BiBus, BiBug, BiSpa, BiBasket } from 'react-icons/bi';
+import { FaClock } from "react-icons/fa";
 import SliderComponent3 from '../../components/sliderComponent3';
 import Footer from '../../components/footer';
 
@@ -278,12 +280,13 @@ const images1 = [
 
 const CasamentoContainer = styled.section`
     width: 100%;
-    height: 100vh;
+    height: 120vh;
     padding: 0 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
+    background-color: #F7E7CE;
 
     @media (max-width: 768px){
         height: auto;
@@ -338,7 +341,7 @@ const CasamentoContainer = styled.section`
     }
 
     & > div:nth-child(2){
-        padding: 15px;
+        padding: 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -353,12 +356,12 @@ const CasamentoContainer = styled.section`
         }
 
         & > h1{
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-family: var(--font--comfortaa);
 
             @media (max-width: 768px){
 
-                background-color: #fff;
+                background-color: #F7E7CE;
                 padding: 5px 15px;
                 color: var(--color--black);
                 border-radius: 5px 15px 0 0;
@@ -367,7 +370,7 @@ const CasamentoContainer = styled.section`
         }
 
         & > p{
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-family: var(--font--avenir);
             width: 70%;
             line-height: 100%;
@@ -375,45 +378,50 @@ const CasamentoContainer = styled.section`
             @media (max-width: 768px){
     
                 width: 100%;
-                font-size: 1.2rem;
-                margin-top: 25px;
+                font-size: 1rem;
+                margin-top: 5px;
+                margin-bottom: 10px;
                 color: var(--color--black);
-                text-align: left;
+                text-align: center;
                 font-weight: 800;
             }
         }
 
         & > ol{
-            margin-left: 30px;
-            list-style-image: url('/leange/public/icon/correto.png');
-
-            @media (max-width: 768px){
-                height: auto;
-                margin-top: 0px;
-                list-style-image: none;
-                margin-bottom: 15px;
-                margin-left: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-
-            & > li{
-                font-family: var(--font--avenir);
-                color: var(--color--black);
-                font-size: 1rem;
-
-                @media (max-width: 768px){
-                    font-size: 0.9rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                    
-                }
-            }
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 5px;
         }
         
+    }
+`
+
+const StyledItemEvent = styled.div`
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    padding: 3px 8px;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    gap: 10px;
+    border-radius: 0 10px 0 10px;
+    font-size: 1rem;
+    transition: all .2s ease;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+
+    @media (max-width: 768px){
+        font-size: .8rem;
+        padding: 5px 10px;
+        gap: 10px;
+    }
+
+    &:hover{
+        padding: 3px 10px;
+        background-color: var(--color--black);
+        color: var(--color--white);
+        cursor: default;
     }
 `
 
@@ -425,6 +433,7 @@ const NiverContainer = styled.section`
     align-items: center;
     justify-content: center;
     gap: 50px;
+    background-color: #D3D3D3;
 
     @media (max-width: 768px){
         height: auto;
@@ -500,7 +509,7 @@ const NiverContainer = styled.section`
 
             @media (max-width: 768px){
     
-                background-color: #fff;
+                background-color: #D3D3D3;
                 padding: 5px 15px;
                 color: var(--color--black);
                 border-radius: 5px 15px 0 0;
@@ -517,43 +526,22 @@ const NiverContainer = styled.section`
             @media (max-width: 768px){
     
                 width: 100%;
-                font-size: 1.2rem;
-                margin-top: 25px;
+                font-size: 1rem;
+                margin-top: 5px;
+                margin-bottom: 10px;
                 color: var(--color--black);
-                text-align: left;
+                text-align: center;
                 font-weight: 800;
             }
         }
 
         & > ol{
-            margin-left: 30px;
-            list-style-image: url('/leange/public/icon/correto.png');
-
-            @media (max-width: 768px){
-                height: auto;
-                margin-top: 0px;
-                list-style-image: none;
-                margin-bottom: 15px;
-                margin-left: 0;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-
-            & > li{
-                font-family: var(--font--avenir);
-                color: var(--color--black);
-                font-size: 1rem;
-
-                @media (max-width: 768px){
-                    font-size: 0.9rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: flex-start;
-                }
-            }
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 5px;
         }
+
         
     }
 `
@@ -587,7 +575,7 @@ const Eventos = () => {
                         spaceBetween={20} 
                         slidesPerView={1} 
                         width="100%"
-                        height="80vh" 
+                        height="90vh" 
                         contentType="image"
                         showPagination={true}
                 />
@@ -629,14 +617,46 @@ const Eventos = () => {
                     <h1>Pré-Wedding</h1>
                     <p>Coração palpitando, emoções à flor da pele e a certeza de dias inesquecíveis.</p>
                     <ol>
-                        <li>Coquetel na Chegada (Sexta-feira)</li>
-                        <li>Noite Especial no Sábado</li>
-                        <li>Ensaio Fotográfico dos Noivos</li>
-                        <li>Decoração Romântica na Suíte dos Noivos</li>
-                        <li>Massagem Relaxante para os noivos na LeAnge Serra</li>
-                        <li>Passeio de Bugre para os noivos na LeAnge Mar</li>
-                        <li>Piquenique para os Noivos</li>
-                        <li>Late Checkout no Domingo</li>
+                    <StyledItemEvent>
+                        <BiSolidDrink />
+                            Coquetel na Chegada (Sexta-feira)
+                        </StyledItemEvent>
+
+                        <StyledItemEvent>
+                            <BiSolidStar />
+                            Noite Especial no Sábado
+                        </StyledItemEvent>
+
+                        <StyledItemEvent>
+                            <BiCamera />
+                            Ensaio Fotográfico dos Noivos
+                        </StyledItemEvent>
+
+                        <StyledItemEvent>
+                            <BiHeart />
+                            Decoração Romântica na Suíte
+                        </StyledItemEvent>
+
+                        <StyledItemEvent>
+                            <BiBus />
+                            Massagem Relaxante
+                        </StyledItemEvent>
+
+                        <StyledItemEvent>
+                            <BiBug />
+                            Passeio de Bugre
+                        </StyledItemEvent>
+
+                        <StyledItemEvent>
+                            <BiBasket />
+                            Piquenique para os Noivos
+                        </StyledItemEvent>
+
+                        <StyledItemEvent>
+                            <FaClock />
+                            Late Checkout no Domingo
+                        </StyledItemEvent>
+
                     </ol>
                     <Button 
                     text="Fazer reserva"
@@ -654,12 +674,31 @@ const Eventos = () => {
                     <h1>Aniversário</h1>
                     <p>Comemore os momentos doces da vida.</p>
                     <ol>
-                        <li>Coquetel na Chegada (Sexta-feira)</li>
-                        <li>Noite Especial no Sábado</li>
-                        <li>Massagem Relaxante para o aniversariante na LeAnge Serra</li>
-                        <li>Passeio de Bugre para o aniversariante na LeAnge Mar</li>
-                        <li>Piquenique</li>
-                        <li>Late Checkout no Domingo</li>
+                    <StyledItemEvent>
+                        <BiSolidDrink />
+                            Coquetel na Chegada (Sexta-feira)
+                        </StyledItemEvent>
+                        <StyledItemEvent>
+                            <BiSolidStar />
+                            Noite Especial no Sábado
+                        </StyledItemEvent>
+                        <StyledItemEvent>
+                            <BiSpa />
+                            Massagem Relaxante
+                        </StyledItemEvent>
+                        <StyledItemEvent>
+                            <BiBus />
+                            Passeio de Bugre
+                        </StyledItemEvent>
+                        <StyledItemEvent>
+                            <BiBasket />
+                            Piquenique
+                        </StyledItemEvent>
+                        <StyledItemEvent>
+                            <FaClock />
+                            Late Checkout no Domingo
+                        </StyledItemEvent>
+
                     </ol>
                     <Button 
                     text="Fazer reserva"
@@ -681,7 +720,7 @@ const Eventos = () => {
                         spaceBetween={20} 
                         slidesPerView={1} 
                         width="100%"
-                        height="80vh" 
+                        height="90vh" 
                         contentType="image"
                         showPagination={true}
                 />

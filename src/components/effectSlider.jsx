@@ -136,6 +136,7 @@ const Description = styled.p`
     width: 80%;
     margin: 2px 0 10px;
     font-family: var(--font--avenir);
+    text-align: left!important;
 
     @media (max-width: 768px){
         width: 100%;

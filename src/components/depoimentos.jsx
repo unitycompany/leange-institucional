@@ -3,18 +3,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import styled from "styled-components";
 import CustomButton from "./button3";
 
 // Styled components
 const StyledTextDepoimentos = styled.section`
     width: 100%;
-    margin-top: 10vh;
+    margin-top: 5vh;
     display: flex;
     padding: 0 5%;
     justify-content: center;
-    height: 15vh;
+    align-items: center;
+    height: 12vh;
+    border: 1px solid red;
     
     @media (max-width: 768px){
         height: 10vh;
@@ -39,8 +41,9 @@ const CarouselContainer = styled.div`
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    height: 70vh;
+    height: 80vh;
     padding: 0 5%;
+    border: 1px solid red;
 
     @media (max-width: 768px){
         border: 2px solid red;
@@ -56,9 +59,10 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 10px;
-    border-radius: 10px; /* Bordas arredondadas */
+    border-radius: 15px 0 15px 0; /* Bordas arredondadas */
     position: relative; /* Para posicionar o texto em cima da imagem */
     overflow: hidden; /* Para esconder qualquer conteúdo que extrapole o container */
+    border: 1px solid red;
 
     @media (max-width: 768px){
         border: 1px solid red;
@@ -67,11 +71,12 @@ const Container = styled.div`
 `;
 
 const Name = styled.h2`
-    font-size: 1rem;
-    border-radius: 10px;
+    font-size: .8rem;
+    border-radius: 10px 0 10px 0;
+    border: 1px solid red;
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 10px;
+    left: 15px;
     padding: 5px 20px;
     margin: 10px 0; /* Espaço entre o nome e o depoimento */
     color: var(--color--white);
@@ -91,8 +96,9 @@ const Name = styled.h2`
 `;
 
 const DepoimentoText = styled.p`
-    font-size: 1rem;
-    border-radius: 10px;
+    font-size: .8rem;
+    border-radius: 0 10px 0 10px;
+    border: 1px solid red;
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -160,9 +166,11 @@ const Depoimentos = () => {
 
             <CarouselContainer>
                 <Swiper
-                    slidesPerView={1} // Valor padrão para desktop
+                    slidesPerView={1}
                     spaceBetween={10}
-                    modules={[ Autoplay ]}
+                    modules={[ Navigation, Pagination, Autoplay ]}
+                    pagination={false ? { clickable: true } : false}
+                    navigation={true}
                     grabCursor={true}
                     autoplay={{ delay: 5000, disableOnInteraction: false }}
                     breakpoints={{

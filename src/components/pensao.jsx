@@ -3,11 +3,11 @@ import CustomButton from "./button3";
 
 const StyledSectionPensao = styled.section`
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0% 5%;
+    padding: 2.5% 5%;
     gap: 50px;
     background-color: rgba(0, 0, 0, 0.1);
 
@@ -118,7 +118,7 @@ const StyledTitle = styled.h1`
 
 const StyledParagraph = styled.p`
     color: var(--color--black);
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 100%;
     width: 80%;
     font-family: var(--font--avenir);
