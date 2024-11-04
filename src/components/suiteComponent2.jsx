@@ -10,7 +10,6 @@ import IconButton from "./button4";
 import { RxRulerSquare } from "react-icons/rx";
 import { GrGroup } from "react-icons/gr";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
-import Footer from "./footer";
 
 
 // Estilos para o container principal
@@ -20,25 +19,35 @@ const AcomodaContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    background-color: var(--color--blue);
+
+    @media(max-width: 768px){
+        height: auto;
+        padding: 5% 2.5%;
+    }
 `;
 
 const SuiteContainer = styled.section`
     width: 100%;
-    height: 85vh;
+    height: 80vh;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     gap: 20px;
     justify-content: space-between;
 
     @media (max-width: 768px){
-        height: 125vh;
+        height: auto;
         justify-content: center;
         flex-direction: column-reverse;
+        margin-top: 0vh;
+        gap: 10px;
     }
 `;
 
 const ImageCarousel = styled.div`
-    width: 50%;
+    width: 55%;
     height: 100%;
     position: relative;
     display: flex;
@@ -49,14 +58,14 @@ const ImageCarousel = styled.div`
 
     @media (max-width: 768px){
         width: 100%;
-        height: 50vh;
+        height: 45vh;
     }
 `;
 
 const MainImage = styled.img`
     width: 100%;
     height: 80%;
-    border-radius: 0px 10px 0 10px;
+    border-radius: 0px 30px 0 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 
@@ -100,22 +109,22 @@ const ThumbnailImage = styled.img`
 `;
 
 const SuiteContent = styled.main`
-    width: 50%;
+    width: 45%;
     height: 100%;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
-    gap: 50px;
-    padding: 20px;
-    border: 2px solid var(--color--black);
-    border-radius: 0px 30px 0px 30px;
-
+    gap: 20px;
+    padding: 25px;
+    background-color: var(--color--white);
+    border-radius: 0px 30px 0px 10px;
+    
     @media (max-width: 768px){
         width: 100%;
-        border: 1px solid var(--color--black);
+        justify-content: space-around;
         padding: 30px 20px;
-        height: 70vh;
+        height: 60vh;
     }
 
     & > section {
@@ -138,20 +147,23 @@ const SuiteContent = styled.main`
 
         & > p {
             font-family: var(--font--avenir);
-            font-size: 1.2em;
+            font-size: 1.4em;
             color: var(--color--black);
 
             @media (max-width: 768px){
-                font-size: 1rem;
+                font-size: 1.4rem;
+                font-weight: 800;
 
                 width: 100%;
-                text-align: center;
+                text-align: left;
             }
         }
     }
 
     & > section > div:nth-child(2){
         width: 100%;
+        display: none;
+
         & > hr {
             width: 100%;
             height: 2px;
@@ -169,6 +181,7 @@ const SuiteTitle = styled.h2`
     font-size: 2rem;
     color: var(--color--black);
     font-family: var(--font--comfortaa);
+    display: none;
 
     @media (max-width: 768px){
         display: none;
@@ -176,11 +189,12 @@ const SuiteTitle = styled.h2`
 `;
 
 const SuiteDescription = styled.p`
-    font-size: 1rem;
+    font-size: .9rem;
+    line-height: 120%;
     color: var(--color--black); 
-
+    
     @media (max-width: 768px){
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 `;
 
@@ -189,6 +203,7 @@ const InfoContainer = styled.div`
     align-items: center;
     gap: 15px; 
     width: 50%;
+    display: none;
 
     @media (max-width: 768px){
         display: none;
@@ -229,7 +244,7 @@ const Features = styled.div`
         @media (max-width: 768px){
             font-size: 10px;
             font-weight: 300;
-            padding: 6px 10px;
+            padding: 5px 10px;
         }
         
         &:hover {
@@ -251,13 +266,14 @@ const Features = styled.div`
 const ButtonContainer = styled.div`
     position: absolute;
     bottom: 50px; /* Distância do fundo */
-    right: 25px; /* Distância da direita */
+    left: 25px; /* Distância da direita */
     display: flex;
     width: 10%;
     gap: 5px; /* Espaçamento entre os botões */
 
     @media (max-width: 768px){
-        right: 15px;
+        left: 70%;
+        border: 1px solid red;
         width: 25%;
         bottom: 40px;
     }
@@ -273,8 +289,8 @@ const SwiperButton = styled.div`
     display: flex; /* Flexbox para centralizar o ícone */
     align-items: center; /* Centraliza verticalmente */
     justify-content: center; /* Centraliza horizontalmente */
-    width: 50px; /* Largura do botão */
-    height: 50px; /* Altura do botão */
+    width: 45px; /* Largura do botão */
+    height: 45px; /* Altura do botão */
 
     @media (max-width: 768px){
         width: 30px;
@@ -294,10 +310,10 @@ const SwiperButton = styled.div`
 `;
 
 const Espace = styled.div`
-    height: 5vh;
+    height: 0vh;
 
     @media (max-width: 768px){
-        height: 4vh;
+        height: 0vh;
     }
 `;
 
@@ -334,7 +350,7 @@ const SuiteComponent2 = ({ suites }) => {
                         return (
                             <SwiperSlide key={index}>
                                 <SuiteContainer>
-                                
+                                    
                                     <SuiteContent>
                                         <section>
                                             <div>
@@ -392,9 +408,6 @@ const SuiteComponent2 = ({ suites }) => {
                     </ButtonContainer>
                 </Swiper>
             </AcomodaContainer>
-        
-
-            <Footer />
         </>
     );
 };

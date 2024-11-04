@@ -34,6 +34,11 @@ const DefaultButton = styled.div`
   font-size: 15px;
   font-weight: 500;
   transition: transform 0.3s ease; /* Adicionei a transição para o transform */
+
+  @media (max-width:768px){
+    padding: 7px 30px;
+    font-size: 12px;
+  }
 `;
 
 const HoverButton = styled(DefaultButton)`

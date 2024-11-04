@@ -308,14 +308,15 @@ const NavegationBar = () => {
                 </Link>
                 <StyledHeader>
                     <StyledLink to="/" isActive={location.pathname === "/"}><IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início</StyledLink>
-                    <StyledLink to="/sobre" isActive={location.pathname === "/sobre"}><IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós</StyledLink>
+                    {/* <StyledLink to="/sobre" isActive={location.pathname === "/sobre"}><IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós</StyledLink> */}
                     <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountain /></IconContainer>Le Ange Serra</StyledLink>
                     <StyledLink to="/leange#pacotes" isActive={location.pathname === "/home" && location.hash === "#pacotes"}><IconContainer isVisible={location.pathname === "/home" && location.hash === "#pacotes"}><FaBed /></IconContainer>Pacotes</StyledLink>
-                    <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton>
+                    {/* <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton> */}
                     <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"}><IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações</StyledLink>
                 </StyledHeader>
                 <Button
+                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 text="Fazer minha reserva"
                 />
             </StyledDiv>
@@ -354,7 +355,10 @@ const NavegationBar = () => {
                         <IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações
                     </StyledLink>
                 </div>
-                <Button text="Fazer minha reserva" />
+                <Button
+                text="Fazer minha reserva"
+                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                 />
             </Sidebar>
         </>
     );
