@@ -10,7 +10,7 @@ const StyledButton = styled.button`
     font-weight: 600;
     color: ${({ color }) => color || 'var(--color--black)'};
     background-color: ${({ background }) => background || 'inherit'};
-    border: 4px solid ${({ borderColor }) => borderColor || 'transparent'};
+    border: 2px solid ${({ borderColor }) => borderColor || 'transparent'};
     border-radius: 100px;
     box-shadow: 0 0 0 2px var(--color--black);
     cursor: pointer;

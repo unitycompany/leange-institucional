@@ -493,7 +493,6 @@ const StyledColorBBlue = styled.b`
     color: var(--color--blue);
 `
 
-
 const Home = () => {
     return (
         <>
@@ -529,7 +528,8 @@ const Home = () => {
                     borderColor="var(--color--green)"
                     borderRadius="30px" 
                     buttonColor="var(--color--green)"
-                    buttonBorder="none"
+                    buttonBorder="1px solid var(--color--black)"
+                    targetPage="/serra"
                     />
                 </StyledContainerPousadas>
 
@@ -540,7 +540,8 @@ const Home = () => {
                     borderColor="var(--color--blue)"
                     borderRadius="30px" 
                     buttonColor="var(--color--blue)"
-                    buttonBorder="none"
+                    buttonBorder="1px solid var(--color--black)"
+                    targetPage="/mar"
                     />
                     <SliderComponent 
                     content={images2} 

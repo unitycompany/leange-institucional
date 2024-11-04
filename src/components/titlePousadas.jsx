@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Button from "./button";
 import styled, { keyframes } from "styled-components";
+import { useNavigate } from "react-router-dom"; // Importa o useNavigate
 
 const DivAnimated = keyframes`
     0% {
@@ -112,10 +113,17 @@ const TitlePousadas = ({
     textAnimation = { opacity: 0, x: -20 },
     buttonAnimation = { opacity: 0, scale: 0.8 },
     animationDuration = 0.5,
-    buttonColor, // Nova prop para a cor do botão
+    buttonColor,
     buttonHover,
-    buttonBorder
+    buttonBorder,
+    targetPage // Nova prop para a página de destino
 }) => {
+    const navigate = useNavigate(); // Usa o hook useNavigate
+
+    const handleButtonClick = () => {
+        navigate(targetPage); // Navega para a página especificada
+    };
+
     return (
         <StyledDiv
             borderColor={borderColor}
@@ -148,11 +156,12 @@ const TitlePousadas = ({
                 style={{ zIndex: 3 }}
             >
                 <Button 
+                    onClick={handleButtonClick} // Usa a função handleButtonClick
                     text="Saber mais" 
                     backgroundColor={buttonColor}
                     borderColor={buttonBorder}
                     hoverColor={buttonHover}
-                    border="1px solid var(--color--black)" 
+                    border="1px solid" 
                     color="var(--color--black)"
                 />
             </motion.div>
