@@ -32,7 +32,6 @@ const StyledAcomodaContainer = styled.section`
     flex-direction: column;
     padding: 2.5% 5%;
     position: relative;
-    background-color: var(--color--blue);
 
     @media (max-width: 768px){
         height: auto;
@@ -181,7 +180,7 @@ const StyledAcomodaTexts = styled.div`
 
     & > div h1 {
         font-size: 2.5rem;
-        color: var(--color--white);
+        color: var(--color--black);
         font-family: var(--font--comfortaa);
 
         @media (max-width: 768px){
@@ -195,7 +194,7 @@ const StyledAcomodaTexts = styled.div`
     & > div p {
         width: 80%;
         font-family: var(--font--avenir);
-        color: var(--color--white);
+        color: var(--color--black);
         line-height: 100%;
         font-size: 1rem;
 
@@ -221,14 +220,14 @@ const AcomodaComponent2 = ({ images }) => {
                 <div>
                     <CustomButton 
                         text="Reservar agora!"
-                        textColor="var(--color--white)"
+                        textColor="var(--color--black)"
                         backgroundColor="transparent"
-                        borderColor="var(--color--white)"
-                        iconColor="var(--color--white)"
+                        borderColor="var(--color--black)"
+                        iconColor="var(--color--black)"
                         hoverBackgroundColor="var(--color--black)"
-                        hoverBorderColor="var(--color--black)"
-                        hoverColor="var(--color--black)"
-                        hoverIconColor="var(--color--black)"
+                        hoverBorderColor="var(--color--white)"
+                        hoverColor="var(--color--white)"
+                        hoverIconColor="var(--color--white)"
                         onClick={() => alert("Reservado!")}
                     />
                 </div>

@@ -445,9 +445,9 @@ const Serra = () => {
 
             <AcomodaComponent images={ImagesAcomoda}/>
 
-            <PetFriendly />
-
             <Pensao />
+
+            <PetFriendly />
 
             {/* <Atracoes /> */}
 

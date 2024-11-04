@@ -9,7 +9,7 @@ const StyledSectionPensao = styled.section`
     justify-content: space-between;
     padding: 2.5% 5%;
     gap: 50px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--color--white);
 
     @media (max-width: 768px){
         flex-direction: column-reverse;

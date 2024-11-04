@@ -448,9 +448,11 @@ const Mar = () => {
 
             <AcomodaComponent2 images={ImagesAcomoda}/>
 
+            <Pensao colorDefinedBold="var(--color--blue)" />
+
             <PetFriendly />
 
-            <Pensao colorDefinedBold="var(--color--blue)" />
+            
 
             {/* <Atracoes /> */}
 

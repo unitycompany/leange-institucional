@@ -11,11 +11,11 @@ const SlideContent = styled.div`
   display: flex;
   padding: 20px;
   align-items: center;
-  border-radius: 20px;
-  height: 80vh;
-  gap: 50px;
-  padding: 0 5%;
+  height: 90vh;
+  gap: 20px;
+  padding: 5vh 5%;
   flex-direction: ${({ imagePosition }) => (imagePosition === 'right' ? 'row-reverse' : 'row')};
+  background-color: var(--color--black);
 
   @media (max-width: 768px){
     border: 1px solid var(--color--black);
@@ -25,15 +25,22 @@ const SlideContent = styled.div`
     width: 95%;
     margin-left: 2.5%;
     padding: 20px;
+    background: none;
   }
 `;
 
 const SlideText = styled.div`
   flex: 1;
   height: 100%;
+  padding: 20px;
+  border-radius: 0px 40px 0px 40px;
+  background-color: var(--color--white);
 
   @media (max-width: 768px){
     width: 100%;
+    border: none;
+    padding: 0;
+    background: none;
   }
 `;
 
@@ -52,7 +59,7 @@ const Title = styled.h2`
 
 const Description = styled.p`
   margin-bottom: 1.5em;
-  font-size: 1rem;
+  font-size: .9rem;
   width: 80%;
   color: var(--color--black);
   font-family: var(--font--comfortaa);
@@ -96,7 +103,7 @@ const StyledSwiper = styled(Swiper)`
     justify-content: center;
     z-index: 10;
     position: absolute;
-    bottom: 10px !important;
+    bottom: 20px!important;
     top: 90% !important;
 
     @media (max-width: 768px){
@@ -107,18 +114,22 @@ const StyledSwiper = styled(Swiper)`
 
   .swiper-button-prev {
     left: 100px;
+    margin-top: -40px!important;
     margin-right: 5px; /* Espaço entre os botões */
 
     @media (max-width: 768px){
       left: 40px!important;
+      margin-top: 0;
     }
   }
 
   .swiper-button-next {
     left: 150px; /* Coloca o botão "next" próximo ao botão "prev" */
+    margin-top: -40px!important;
 
     @media (max-width: 768px){
       left: 90px!important;
+      margin-top: 0;
     }
   }
 `;
