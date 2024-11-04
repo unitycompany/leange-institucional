@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
-import Button from '../../components/Button';
+import Button from '../../components/button';
 import { BiSolidDrink, BiSolidStar, BiCamera, BiHeart, BiBus, BiBug, BiSpa, BiBasket } from 'react-icons/bi';
 import { FaClock } from "react-icons/fa";
 import SliderComponent3 from '../../components/sliderComponent3';
@@ -314,7 +314,7 @@ const CasamentoContainer = styled.section`
                 position: absolute;
                 height: 50vh;
                 width: 95%;
-                z-index: -1;
+                z-index: 1;
             }
         }
 
@@ -366,6 +366,8 @@ const CasamentoContainer = styled.section`
                 color: var(--color--black);
                 border-radius: 5px 15px 0 0;
                 font-size: 1.6rem;
+                position: relative;
+                z-index: 2;
             }
         }
 
@@ -410,10 +412,11 @@ const StyledItemEvent = styled.div`
     transition: all .2s ease;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(20px);
+    font-family: var(--font--comfortaa);
 
     @media (max-width: 768px){
         font-size: .8rem;
-        padding: 5px 10px;
+        padding: 7px 10px;
         gap: 10px;
     }
 
@@ -461,7 +464,7 @@ const NiverContainer = styled.section`
                 position: absolute;
                 height: 50vh;
                 width: 95%;
-                z-index: -1;
+                z-index: 1;
             }
         }
 
@@ -514,6 +517,8 @@ const NiverContainer = styled.section`
                 color: var(--color--black);
                 border-radius: 5px 15px 0 0;
                 font-size: 1.6rem;
+                position: relative;
+                z-index: 2;
             }
         }
 

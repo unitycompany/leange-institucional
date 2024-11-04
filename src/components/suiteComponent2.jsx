@@ -146,8 +146,8 @@ const SuiteContent = styled.main`
         align-items: center;
 
         & > p {
-            font-family: var(--font--avenir);
-            font-size: 1.4em;
+            font-family: var(--font--comfortaa);
+            font-size: 1.6em;
             color: var(--color--black);
 
             @media (max-width: 768px){
@@ -192,9 +192,10 @@ const SuiteDescription = styled.p`
     font-size: .9rem;
     line-height: 120%;
     color: var(--color--black); 
+    font-family: var(--font--comfortaa);
     
     @media (max-width: 768px){
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 `;
 
@@ -238,8 +239,9 @@ const Features = styled.div`
         gap: 10px;
         padding: 5px 10px;
         border-radius: 12px;
-        font-size: 12px;
+        font-size: 10px;
         transition: all .2s ease;
+        font-family: var(--font--comfortaa);
 
         @media (max-width: 768px){
             font-size: 10px;
@@ -255,7 +257,7 @@ const Features = styled.div`
     }
 
     svg {
-        font-size: 16px;
+        font-size: 14px;
 
         @media (max-width: 768px){
             font-size: 12px;
@@ -274,7 +276,7 @@ const ButtonContainer = styled.div`
     @media (max-width: 768px){
         left: 70%;
         border: 1px solid red;
-        width: 25%;
+        width: 27%;
         bottom: 40px;
     }
 `;
@@ -293,8 +295,8 @@ const SwiperButton = styled.div`
     height: 45px; /* Altura do botão */
 
     @media (max-width: 768px){
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         padding: 10px;
     }
 

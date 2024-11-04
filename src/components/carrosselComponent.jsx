@@ -59,7 +59,7 @@ const Description = styled.p`
 
   @media (max-width: 768px){
     width: 100%;
-    font-size: 1rem;
+    font-size: .9rem;
     height: 10vh;
   }
 `;

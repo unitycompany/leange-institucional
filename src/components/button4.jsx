@@ -9,7 +9,7 @@ const ButtonContainer = styled.button`
   cursor: pointer;
   border-radius: 50px;
   background-color: transparent;
-  border: solid 4px var(--color--black);
+  border: solid 2px var(--color--black);
   color: var(--color--black);
   font-family: inherit;
 
@@ -28,10 +28,11 @@ const DefaultButton = styled.div`
   align-items: center;
   justify-content: center;
   white-space: nowrap;
+  font-family: var(--font--comfortaa);
   gap: 10px;
-  padding: 10px 40px;
+  padding: 10px 30px;
   border-radius: 50px;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
   transition: transform 0.3s ease; /* Adicionei a transição para o transform */
 
