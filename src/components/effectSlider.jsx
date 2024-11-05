@@ -108,9 +108,12 @@ const TopLeftText = styled.div`
     box-shadow: 0 0 5px rgba(255, 255, 255, 1);
 
     @media (max-width: 768px){
-        left: 15px;
+        left: 0;
         top: 10px;
-        padding: 7px 15px;
+        padding: 7px 10px;
+        width: 50%;
+        transform: translateX(50%);
+        font-weight: 200;
         font-size: .7rem;
         background-color: var(--color--white);
         border-radius: 10px 0 10px 0;

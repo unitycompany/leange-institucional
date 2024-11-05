@@ -163,7 +163,7 @@ const SliderAcomodaHome = ({
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation={showNavigation}
-        pagination={showPagination}
+        pagination={false}
         spaceBetween={spaceBetween}
         loop={true}
         slidesPerView={1}

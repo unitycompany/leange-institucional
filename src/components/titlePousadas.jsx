@@ -79,12 +79,11 @@ const StyledTitlePag = styled(motion.h1)`
         text-align: center;
         color: var(--color--black);
         width: auto;
-        padding: 6px 15px;
+        padding: 7px 15px;
         border-radius: 0px 10px 0px 10px;
         font-size: .9rem;
         font-weight: 800;
-        background-color: rgba(255, 255, 255, 0.6);
-        border: 1px solid white;
+        background-color: rgba(255, 255, 255, 1);
         backdrop-filter: blur(40px);
         box-shadow: 0 0 5px rgba(255, 255, 255, 1);
     }
@@ -101,7 +100,7 @@ const StyledParagPag = styled(motion.p)`
         width: 100%;
         margin-top: 5px;
         font-weight: 200;
-        font-size: 1rem;
+        font-size: .8rem;
         line-height: 130%;
     }
 `;
