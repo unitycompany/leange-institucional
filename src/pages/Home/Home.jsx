@@ -363,7 +363,7 @@ const StyledEstruturaTitle = styled.h1`
     gap: 10px;
     font-family: var(--font--comfortaa);
     color: var(--color--black);
-
+    font-size: 1.5rem;
 
     @media (max-width: 768px){
         display: inline-block;
@@ -507,8 +507,8 @@ const Home = () => {
             </Helmet>
 
             <PromotionModal />
-
             <BackgroundVideo />
+
             <StyledPousadas 
             containerAnimation={{ opacity: 0, scale: 0.8 }}
             titleAnimation={{ opacity: 0, y: -50 }}

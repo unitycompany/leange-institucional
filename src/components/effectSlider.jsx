@@ -79,7 +79,6 @@ const SlideContent = styled.div`
     color: white;
     padding: 10px;
     border-radius: 8px;
-    gap: 20px;
     z-index: 2;
 
     @media (max-width: 768px){
@@ -129,24 +128,28 @@ const Title = styled.h2`
     font-weight: bold;
     font-family: var(--font--comfortaa);
     margin: 0;
+    margin-bottom: 15px;
+    font-weight: 100;
 
     @media (max-width: 768px){
         font-weight: 100;
         font-size: 26px;
+        margin-bottom: 0px;
     }
 `;
 
 const Description = styled.p`
-    font-size: 14px;
+    font-size: 13px;
     width: 80%;
-    margin: 2px 0 10px;
-    font-family: var(--font--avenir);
+    margin-bottom: 15px;
+    font-family: var(--font--comfortaa)!important;
     text-align: left!important;
 
     @media (max-width: 768px){
         width: 100%;
         text-align: left!important;
         font-size: 13px!important;
+        margin-bottom: 0px;
     }
 `;
 

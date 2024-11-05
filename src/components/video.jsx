@@ -43,7 +43,7 @@ const BackgroundVideo = () => {
             transition={{ duration: 1, ease: "easeInOut" }}
         >
             <source 
-                src="https://res.cloudinary.com/dupg7clzc/video/upload/f_auto,q_auto/v1729513957/home_play_gfetmo.mp4"
+                src="https://res.cloudinary.com/dupg7clzc/video/upload/v1730836205/V%C3%8DDEO_SITE_xvpltm.mp4"
                 type="video/mp4" 
             />
             Seu navegador não suporta o elemento de vídeo.

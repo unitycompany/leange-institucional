@@ -70,6 +70,7 @@ const SlideContent = styled(motion.div)`
 const Title = styled(motion.h2)`
   font-size: 20px;
   font-weight: bold;
+  font-family: var(--font--comfortaa);
 
   @media (max-width: 768px){
     font-family: var(--font--comfortaa);
@@ -81,6 +82,7 @@ const Title = styled(motion.h2)`
 const Subtitle = styled(motion.p)`
   font-size: 16px;
   margin: 0px 0;
+  font-family: var(--font--comfortaa);
 
   @media (max-width: 768px){
     font-size: 13px;

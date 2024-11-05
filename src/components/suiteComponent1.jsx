@@ -189,7 +189,7 @@ const SuiteDescription = styled.p`
     font-size: .9rem;
     line-height: 120%;
     color: var(--color--black); 
-    font-family: var(--font--comfortaa);
+    font-family: var(--font--comfortaa)!important;
     
     @media (max-width: 768px){
         font-size: 0.8rem;
