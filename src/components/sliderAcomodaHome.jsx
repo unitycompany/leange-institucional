@@ -188,7 +188,8 @@ const SliderAcomodaHome = ({
                   ))}
                 </Features>
                 <ButtonAcomoda 
-                text="Conhecer acomodação completa"
+                  text="Conhecer acomodação completa"
+                  suiteId={item.id} // Passando o ID da suíte para o botão
                 />
               </SlideContent>
             </SlideContainer>

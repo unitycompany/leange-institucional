@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FaArrowRight } from "react-icons/fa"; // Importando o ícone de seta
+import { useNavigate } from 'react-router-dom';
 
 const StyledButtonAcomodo = styled.button`
   width: auto;
@@ -45,9 +46,16 @@ const StyledButtonAcomodo = styled.button`
   }
 `;
 
-const ButtonAcomoda = ({text, backDefine, colorDefine}) => {
+const ButtonAcomoda = ({ text, suiteId, backDefine, colorDefine }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    console.log("Navegando para:", `/acomoda#${suiteId}`); 
+    navigate(`/acomoda#${suiteId}`); 
+  };
+  
   return (
-    <StyledButtonAcomodo backDefine={backDefine} colorDefine={colorDefine}>
+    <StyledButtonAcomodo backDefine={backDefine} colorDefine={colorDefine} onClick={handleClick}>
       {text}
       <FaArrowRight className="icon" />
     </StyledButtonAcomodo>

@@ -8,6 +8,7 @@ import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/module
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import ButtonAcomoda from './button2';
+import Button from './button';
 
 const SwiperStyles = createGlobalStyle`
     .swiper-button-next, .swiper-button-prev {
@@ -191,7 +192,13 @@ const CoverflowSliderComponent = ({
                             <SlideContent>
                                 <Title>{item.title}</Title>
                                 <Description>{item.description}</Description>
-                                <ButtonAcomoda text="Fazer minha reserva agora"/>
+                                <Button
+                                onClick=""
+                                color="var(--color--white)"
+                                background="var(--color--white)" // Use backgroundColor aqui
+                                borderColor="var(--color--white)"
+                                hoverColor="var(--color--white)"
+                                text="Reservar agora"/>
                             </SlideContent>
                         </SlideContainer>
                     </SwiperSlide>

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -10,7 +10,6 @@ import IconButton from "./button4";
 import { RxRulerSquare } from "react-icons/rx";
 import { GrGroup } from "react-icons/gr";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
-
 
 // Estilos para o container principal
 const AcomodaContainer = styled.section`
@@ -316,25 +315,15 @@ const Espace = styled.div`
     }
 `;
 
-const SuiteComponent = ({ suites }) => {
-    // const { id } = useParams(); // Captura o ID da URL
-    // const suite = suites.find(suite => suite.id === id); // Encontra a suíte correspondente
-
-    // if (!suite) {
-    //     return <p>Suíte não encontrada.</p>; // Mensagem de erro se a suíte não for encontrada
-    // }
-
-    // const [currentImage, setCurrentImage] = useState(suite.images[0]);
+const SuiteComponent = React.forwardRef(({ suites }, ref) => {
     return (
         <>
             <Helmet>
                 <title>Acomodações - Pousada Le Ange</title>
             </Helmet>
 
-            <Espace />
-
             <AcomodaContainer>
-                <Swiper
+                <Swiper ref={ref}
                     navigation={{
                         nextEl: '.swiper-button-next.custom',
                         prevEl: '.swiper-button-prev.custom',
@@ -348,7 +337,8 @@ const SuiteComponent = ({ suites }) => {
 
                         return (
                             <SwiperSlide key={index}>
-                                <SuiteContainer>
+                                <SuiteContainer id={`suíte-${suite.NomedaSuite.replace(/\s+/g, '-').toLowerCase()}`}
+                                >
                                     <ImageCarousel>
                                         <MainImage src={currentImage} alt={suite.NomedaSuite} />
                                         <Thumbnails>
@@ -408,6 +398,7 @@ const SuiteComponent = ({ suites }) => {
             </AcomodaContainer>
         </>
     );
-};
+})
 
 export default SuiteComponent;
+

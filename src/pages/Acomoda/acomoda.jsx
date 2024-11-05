@@ -1,7 +1,13 @@
-import Footer from "../../components/footer";
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import SuiteComponent from "../../components/suiteComponent1";
 import SuiteComponent2 from "../../components/suiteComponent2";
+import Footer from '../../components/footer';
+import { Swiper } from 'swiper/react';
+import 'swiper/swiper-bundle.css'; // Certifique-se de importar o CSS do Swiper
 import { FaUtensils, FaMusic, FaPaw, FaShower, FaBath, FaBed, FaTv, FaFire, FaCloudSunRain } from 'react-icons/fa';
+
+
 
 const suites = [
     {
@@ -148,6 +154,7 @@ const suites = [
 
     {
         // id: "master-2",
+        id: "suite-master-6",
         NomedaSuite: "Suíte Master 6",
         NomedaPousada: "Le Ange Serra",
         medida: "77m²",
@@ -528,10 +535,30 @@ const suites2 = [
 ];
 
 const Acomodacoes = () => {
+    const location = useLocation();
+    const swiperRef = useRef(null); // Criar uma referência para o swiper
+
+    useEffect(() => {
+        const hash = location.hash; // Pega o hash da URL
+
+        if (hash) {
+            const suiteId = hash.replace('#', ''); // Remove o hash
+            const index = suites.findIndex(suite => suite.id === suiteId); // Busca o índice da suíte
+
+            if (index !== -1 && swiperRef.current) {
+                setTimeout(() => {
+                    swiperRef.current.swiper.slideTo(index); // Desloca para o slide correspondente
+                }, 100); // 100 ms de atraso
+            }
+        }
+    }, [location]);
+
     return (
         <>
-            <SuiteComponent suites={suites} />
-            <SuiteComponent2 suites={suites2} />
+            <Swiper ref={swiperRef} /* outras props do swiper */>
+                <SuiteComponent suites={suites} />
+                <SuiteComponent2 suites={suites2} />
+            </Swiper>
             <Footer />
         </>
     );
