@@ -160,21 +160,21 @@ const acomodaHome = [
       subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
       backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra2_lhgcj2.jpg",
       features: [
-        { icon: <FaRulerCombined />, text: "52m²" },
+        { icon: <FaRulerCombined />, text: "77m²" },
         { icon: <FaSnowflake />, text: "Ar condicionado" },
         { icon: <FaBed />, text: "Cama king size" },
         { icon: <FaBath />, text: "Banheira" },
-        { icon: <FaTv />, text: "Smart TV com canais a cabo" },
-        { icon: <FaFire />, text: "Lareira" }
+        { icon: <FaUtensils />, text: 'Chaise lounge' },
+        { icon: <FaUtensils />, text: 'Bay window' }
       ]
     },
     {
-        id: "suite-superior-1",
-        title: "Nome da suite",
+        id: "suite-standard-6",
+        title: "Suíte Standard 6",
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125876/suiteMar2_yb1nqi.jpg",
         features: [
-            { icon: <FaRulerCombined />, text: "52m²" },
+            { icon: <FaRulerCombined />, text: "32m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
             { icon: <FaBed />, text: "Cama king size" },
             { icon: <FaBath />, text: "Banheira" },
@@ -183,12 +183,12 @@ const acomodaHome = [
       ]
     },
     {
-        id: "suite-superior-1",
-        title: "Nome da suite",
+        id: "suite-standart-2",
+        title: "Suíte Standard 2",
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125876/suiteMar1_pmcoje.jpg",
         features: [
-            { icon: <FaRulerCombined />, text: "52m²" },
+            { icon: <FaRulerCombined />, text: "30m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
             { icon: <FaBed />, text: "Cama king size" },
             { icon: <FaBath />, text: "Banheira" },
@@ -200,13 +200,13 @@ const acomodaHome = [
         id: "suite-master-10",
         title: "Suíte Master 10",
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125194/suiteSerra3_ayqtcj.jpg",
+        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730147346/1_lj4tav.jpg",
         features: [
-            { icon: <FaRulerCombined />, text: "52m²" },
+            { icon: <FaRulerCombined />, text: "77m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
             { icon: <FaBed />, text: "Cama king size" },
-            { icon: <FaBath />, text: "Banheira" },
-            { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+            { icon: <FaFire />, text: 'Recamier e poltrona de leitura' },
+            { icon: <FaUtensils />, text: 'Couch lounge' },
             { icon: <FaFire />, text: "Lareira" }
       ]
     },
@@ -233,78 +233,75 @@ const StyledAcomoda = styled.section`
 
 const slideDataCoverflow = [
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg',
-        title: 'Aconchego',
-        description: 'Nossas áreas internas, contam com três salas superequipadas e aconchegantes, sendo elas: sala de TV, sala de estar, sala de jogos com mesa de bilhar, carteado, jogos de tabuleiro e biblioteca.',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833084/5_sfnitt.png',
+        title: 'Pet Friendly',
+        description: 'Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!',
+        buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Serra e Mar'
+    },
+    {
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/praia_flvqaf.webp',
+        title: 'Praia',
+        description: 'Para os amantes da praia, estamos a apenas 150 metros da areia da Praia Rasa, onde você e seu pet podem aproveitar juntinhos e dar um mergulho delicioso no mar.',
+        buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Mar',
+    },
+    {
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/sauna-1_gmuhlq.webp',
+        title: 'Sossego',
+        description: 'A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/piscina_vw7plw.webp',
+        title: 'Piscinas',
+        description: 'Nossa piscina aquecida com vista panorâmica para o oceano é de surpreender! Possui tratamento especial por ozônio com níveis baixíssimos de cloro, pensando no bem-estar da sua pele a do seu pet também!',
+        buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Mar e Serra',
+    },
+    {
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/cafedamanha_n4vr9z.jpg',
         title: 'Cozinha',
         description: 'Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.',
         buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange | ',
+        topLeftText: 'Le Ange Serra e Mar',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/suites_gmhdsf.jpg',
-        title: 'Suites',
-        description: 'Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira com vista para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/ofuros_zeqb9x.webp',
+        title: 'Ofurôs',
+        description: 'São dois ofurôs acoplados na piscina, para você relaxar na água quentinha, apreciando a vista exuberante do mar.',
         buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange | ',
+        topLeftText: 'Le Ange Mar',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/conforto_oebwyu.webp',
-        title: 'Relaxar',
-        description: 'Relaxe em nosso SPA com uma vista de frente para mata! Você pode escolher contratar nossos serviços de massoterapia, manicure, pedicure.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange | ',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126869/refrescar_id0f4o.png',
-        title: 'Refrescar',
-        description: 'Nossa maravilhosa piscina de borda infinita possui aquecimento solar e tratamento especial por ozônio, com níveis baixíssimos de cloro, além de contar com o ofurô aquecido, perfeito para aproveitar no final de tarde.',
-        topLeftText: 'Le Ange | ',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126869/aventura_waih8i.png',
-        title: 'Aventura',
-        description: 'Na propriedade, temos trilhas dentro da natureza, beirando o rio! Em diversos pontos você pode escolher dar uma paradinha para tomar um banho e renovar as energias!',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange | ',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/diversao_jpykdy.jpg',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/IMG_7134-scaled_stgkmc.jpg',
         title: 'Divercão',
         description: 'Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet, correr, pular e nadar!',
         buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange | ',
+        topLeftText: 'Le Ange Serra',
     },
-
+    {
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832503/bar_qgdbog.webp',
+        title: 'Bar',
+        description: 'Para completar ainda mais sua experiência, contamos com uma carta variada de vinhos, destilados, drinks e cervejas!',
+        buttonText: 'Viver minha experiência agora',
+        topLeftText: 'Le Ange Mar',
+    },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/adega_n0cszf.jpg',
         title: 'Adega',
         description: 'Para completar ainda mais sua experiência, contamos com uma adega subterrânea para climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.',
         buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange | ',
+        topLeftText: 'Le Ange Serra',
     },
-
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png',
-        title: 'Sossego',
-        description: 'A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/suites_px4fhy.webp',
+        title: 'Suítes',
+        description: 'São 8 suítes elegantemente decoradas, todas com vista para o mar, banheira de imersão, varanda, cama king size, ar condicionado e frigobar.',
         buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange | ',
+        topLeftText: 'Le Ange Mar e Serra',
     },
-
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126872/petfriendly_xxpntj.png',
-        title: 'Pet Friendly',
-        description: 'Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange | ',
-    },
-    // Adicione mais slides conforme necessário
 ];
 
 const StyledEstrutura = styled.div`

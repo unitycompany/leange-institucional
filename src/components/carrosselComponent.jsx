@@ -19,7 +19,7 @@ const SlideContent = styled.div`
 
   @media (max-width: 768px){
     border: 1px solid var(--color--black);
-    border-radius: 10px;
+    border-radius: 15px 0 15px 0;
     height: auto;
     flex-direction: column;
     width: 95%;

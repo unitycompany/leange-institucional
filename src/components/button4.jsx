@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaEye, FaShoppingCart } from 'react-icons/fa';
+import { MdHotel } from "react-icons/md";
+import { LuMousePointerClick } from "react-icons/lu";
 
 const ButtonContainer = styled.button`
   position: relative;
@@ -72,11 +74,11 @@ const IconButton = ({
   return (
     <ButtonContainer borderColor={borderColor} textColor={textColor} onClick={handleClick}>
       <DefaultButton className="default-btn">
-        <FaEye size={15} color={textColor || 'var(--color--black)'} />
+        <MdHotel size={15} color={textColor || 'var(--color--black)'} />
         <ButtonText textColor={textColor}>{text}</ButtonText>
       </DefaultButton>
       <HoverButton className="hover-btn" hoverColor={hoverColor}>
-        <FaShoppingCart size={15} color={hoverTextColor || 'var(--color--white)'} />
+        <LuMousePointerClick size={15} color={hoverTextColor || 'var(--color--white)'} />
         <HoverButtonText hoverTextColor={hoverTextColor}>{text2}</HoverButtonText>
       </HoverButton>
     </ButtonContainer>
