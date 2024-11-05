@@ -9,8 +9,8 @@ const ButtonContainer = styled.button`
   cursor: pointer;
   border-radius: 50px;
   background-color: transparent;
-  border: solid 2px var(--color--black);
-  color: var(--color--black);
+  border: solid 2px ${({ borderColor }) => borderColor || 'var(--color--black)'};
+  color: ${({ textColor }) => textColor || 'var(--color--black)'};
   font-family: inherit;
 
   &:hover .default-btn {
@@ -34,9 +34,9 @@ const DefaultButton = styled.div`
   border-radius: 50px;
   font-size: 13px;
   font-weight: 500;
-  transition: transform 0.3s ease; /* Adicionei a transição para o transform */
+  transition: transform 0.3s ease;
 
-  @media (max-width:768px){
+  @media (max-width: 768px) {
     padding: 7px 30px;
     font-size: 12px;
   }
@@ -45,28 +45,39 @@ const DefaultButton = styled.div`
 const HoverButton = styled(DefaultButton)`
   position: absolute;
   inset: 0;
-  background-color: var(--color--blue);
+  background-color: ${({ hoverColor }) => hoverColor || 'var(--color--blue)'};
   transform: translate(0%, 100%);
 `;
 
 const ButtonText = styled.span`
-color: var(--color--black);
+  color: ${({ textColor }) => textColor || 'var(--color--black)'};
 `;
 
 const HoverButtonText = styled.span`
-  color: var(--color--white);
+  color: ${({ hoverTextColor }) => hoverTextColor || 'var(--color--white)'};
 `;
 
-const IconButton = ({ text = "Quick View", text2 = "Shop Now" }) => {
+const IconButton = ({
+  text = "Quick View",
+  text2 = "Clique e reserve",
+  borderColor,
+  textColor,
+  hoverColor,
+  hoverTextColor,
+}) => {
+  const handleClick = () => {
+    window.open("https://wa.link/dojlwi", "_blank");
+  };
+
   return (
-    <ButtonContainer>
+    <ButtonContainer borderColor={borderColor} textColor={textColor} onClick={handleClick}>
       <DefaultButton className="default-btn">
-        <FaEye size={15} color="var(--color--black)" />
-        <ButtonText>{text}</ButtonText>
+        <FaEye size={15} color={textColor || 'var(--color--black)'} />
+        <ButtonText textColor={textColor}>{text}</ButtonText>
       </DefaultButton>
-      <HoverButton className="hover-btn">
-        <FaShoppingCart size={15} color="var(--color--white)" />
-        <HoverButtonText>{text2}</HoverButtonText>
+      <HoverButton className="hover-btn" hoverColor={hoverColor}>
+        <FaShoppingCart size={15} color={hoverTextColor || 'var(--color--white)'} />
+        <HoverButtonText hoverTextColor={hoverTextColor}>{text2}</HoverButtonText>
       </HoverButton>
     </ButtonContainer>
   );

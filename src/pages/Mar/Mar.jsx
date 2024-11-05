@@ -33,7 +33,7 @@ const StyledSectionHome = styled(motion.section)`
         width: 100%;
         height: 100vh;
         left: 0;
-        top: -5vh;
+        top: 0vh;
         position: absolute;
         z-index: -1;
         opacity: .1;

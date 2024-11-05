@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import { useNavigate } from 'react-router-dom'; // Importando useNavigate
 import ButtonAcomoda from './button2';
 
 // Global styles for Swiper
@@ -29,9 +30,8 @@ const SwiperStyles = createGlobalStyle`
       opacity: 0.7;
       &.swiper-pagination-bullet-active {
           background: #A5C933;
-      }
-  }
-`;
+      }}
+`
 
 // Keyframes for animation
 const waterWave = keyframes`
@@ -65,9 +65,6 @@ const SlideContent = styled(motion.div)`
   bottom: 30px;
   left: 20px;
   color: white;
-
-  @media (max-width: 768px){
-  }
 `;
 
 const Title = styled(motion.h2)`
@@ -154,6 +151,11 @@ const SliderAcomodaHome = ({
   const titleY = useTransform(scrollY, [0, 300], [0, -30]);
   const subtitleY = useTransform(scrollY, [0, 300], [0, -20]);
   const featuresY = useTransform(scrollY, [0, 300], [0, -10]);
+  const navigate = useNavigate(); // Criando uma instância do useNavigate
+
+  const handleButtonClick = (suiteId) => {
+    navigate('/acomoda', { state: { suiteId } }); // Navega para /acomoda e passa o ID da suíte
+  };
 
   return (
     <SliderWrapper>
@@ -161,17 +163,17 @@ const SliderAcomodaHome = ({
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         navigation={showNavigation}
-        pagination={false}
+        pagination={showPagination}
         spaceBetween={spaceBetween}
         loop={true}
-        slidesPerView={1} // 1 por vez em telas menores
+        slidesPerView={1}
         autoplay={{
           delay: autoplayDelay,
           disableOnInteraction: false,
         }}
         breakpoints={{
-          640: { slidesPerView: 1 }, // 1 slide em telas pequenas
-          1024: { slidesPerView: 2 }, // 2 slides em telas grandes
+          640: { slidesPerView: 1 },
+          1024: { slidesPerView: 2 },
         }}
       >
         {content.map((item, index) => (
@@ -188,8 +190,9 @@ const SliderAcomodaHome = ({
                   ))}
                 </Features>
                 <ButtonAcomoda 
-                  text="Conhecer acomodação completa"
-                  suiteId={item.id} // Passando o ID da suíte para o botão
+                  onClick={() => handleButtonClick(item.id)} // Passa o ID da suíte para o botão
+                  text="Conhecer acomodações"
+                  suiteId={item.id}
                 />
               </SlideContent>
             </SlideContainer>

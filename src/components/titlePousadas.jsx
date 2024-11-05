@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import Button from "./button";
 import styled, { keyframes } from "styled-components";
-import { useNavigate } from "react-router-dom"; // Importa o useNavigate
 
 const DivAnimated = keyframes`
     0% {
@@ -27,7 +26,7 @@ const StyledDiv = styled(motion.div)`
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     width: 40%;
     height: 60vh;
     padding: 50px;
@@ -40,7 +39,7 @@ const StyledDiv = styled(motion.div)`
         padding: 5% 5%;
         gap: 30px;
         position: relative;
-        z-index: 2;
+        z-index: 10;
         top: -80px;
         margin-bottom: -80px;
     }
@@ -53,7 +52,7 @@ const StyledDiv = styled(motion.div)`
         opacity: 0.1;
         left: 0;
         top: 0;
-        border: 1px solid var(--color--black);
+        /* border: 1px solid var(--color--black); */
         background-image: url('../../public/background/background_black.webp');
         background-position: center;
         background-size: contain;
@@ -64,6 +63,7 @@ const StyledDiv = styled(motion.div)`
             animation: none;
             border-top: none;
             border-radius: 0 0 35px 0;
+            border: 1px solid var(--color--black);
         }
     }
 `;
@@ -72,8 +72,8 @@ const StyledTitlePag = styled(motion.h1)`
     width: 100%;
     text-align: left;
     font-family: var(--font--comfortaa);
-    font-weight: 400;
-    font-size: 1.8rem;
+    font-weight: 600;
+    font-size: 1.3rem;
 
     @media (max-width: 768px) {
         text-align: center;
@@ -81,17 +81,19 @@ const StyledTitlePag = styled(motion.h1)`
         width: auto;
         padding: 6px 15px;
         border-radius: 0px 10px 0px 10px;
-        font-size: 1rem;
+        font-size: .9rem;
         font-weight: 800;
-        background-color: var(--color--white);
-        backdrop-filter: blur(10px);
-        box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 1px solid white;
+        backdrop-filter: blur(40px);
+        box-shadow: 0 0 5px rgba(255, 255, 255, 1);
     }
 `;
 
 const StyledParagPag = styled(motion.p)`
-    width: 80%;
-    font-family: var(--font--avenir);
+    width: 100%;
+    font-size: .95rem;
+    font-family: var(--font--comfortaa);
 
     @media (max-width: 768px) {
         text-align: justify;
@@ -116,14 +118,8 @@ const TitlePousadas = ({
     buttonColor,
     buttonHover,
     buttonBorder,
-    targetPage // Nova prop para a página de destino
+    onClick // Adiciona a prop onClick
 }) => {
-    const navigate = useNavigate(); // Usa o hook useNavigate
-
-    const handleButtonClick = () => {
-        navigate(targetPage); // Navega para a página especificada
-    };
-
     return (
         <StyledDiv
             borderColor={borderColor}
@@ -156,7 +152,7 @@ const TitlePousadas = ({
                 style={{ zIndex: 3 }}
             >
                 <Button 
-                    onClick={handleButtonClick} // Usa a função handleButtonClick
+                    onClick={onClick} // Usa a prop onClick
                     text="Saber mais" 
                     backgroundColor={buttonColor}
                     borderColor={buttonBorder}

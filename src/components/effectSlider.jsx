@@ -9,6 +9,7 @@ import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 import ButtonAcomoda from './button2';
 import Button from './button';
+import IconButton from './button4';
 
 const SwiperStyles = createGlobalStyle`
     .swiper-button-next, .swiper-button-prev {
@@ -192,13 +193,13 @@ const CoverflowSliderComponent = ({
                             <SlideContent>
                                 <Title>{item.title}</Title>
                                 <Description>{item.description}</Description>
-                                <Button
-                                onClick=""
-                                color="var(--color--white)"
-                                background="var(--color--white)" // Use backgroundColor aqui
-                                borderColor="var(--color--white)"
-                                hoverColor="var(--color--white)"
-                                text="Reservar agora"/>
+                                <IconButton
+                                 text="Reservar agora"
+                                 text2="Clique e reserve agora"
+                                 borderColor="var(--color--white)"
+                                 textColor="var(--color--white)"
+                                 hoverColor="var(--color--green)"
+                                 hoverTextColor="var(--color--black)"/>
                             </SlideContent>
                         </SlideContainer>
                     </SwiperSlide>

@@ -46,7 +46,6 @@ const CardContainer = styled(motion.div)`
         animation: none;
         border-radius: 15px 15px 5px 5px;
     }
-
 `;
 
 const CardImage = styled.img`
@@ -154,6 +153,10 @@ const InViewCardContainer = ({ event, delay }) => {
     const ref = React.useRef(null);
     const isInView = useInView(ref, { once: true }); // Animar apenas uma vez quando visível
 
+    const handleClick = () => {
+        window.open("https://wa.link/dojlwi", "_blank");
+    };
+
     return (
         <CardContainer
             ref={ref}
@@ -175,7 +178,12 @@ const InViewCardContainer = ({ event, delay }) => {
                 <PriceSection>
                     <Price>A partir de: <span>10x</span>R${event.price}</Price>
                 </PriceSection>
-                <ButtonAcomoda text="Quero fechar minha reserva agora" backDefine="var(--color--black)" colorDefine="var(--color--white)"/>
+                <ButtonAcomoda 
+                    text="Quero fechar minha reserva agora" 
+                    backDefine="var(--color--black)" 
+                    colorDefine="var(--color--white)"
+                    onClick={handleClick} // Passa o onClick para o ButtonAcomoda
+                />
             </CardContent>
         </CardContainer>
     );

@@ -15,6 +15,7 @@ import { BiSolidHomeHeart } from "react-icons/bi";
 import { MdFoodBank } from "react-icons/md";
 import { BsCalendar2HeartFill } from "react-icons/bs";
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
+import PromotionModal from '../../components/modal';
 
 
 
@@ -68,15 +69,17 @@ const StyledContainerPousadas = styled.section`
     &:nth-child(2){
         @media (max-width: 768px){
             flex-direction: column;
-            position: relative;
-            z-index: -1;
+            position: relative!important;
+            z-index: -100!important;
+        
         }
     }
 
     @media (max-width: 768px){
         flex-direction: column-reverse;
         position: relative;
-        z-index: -1;
+        z-index: -100!important;
+    
         height: auto;
 
         .slider{
@@ -100,8 +103,9 @@ const StyledPousadas = styled.div`
     @media (max-width: 768px){
         height: auto;
         padding: 10% 0;
-        position: relative;
-        z-index: -1;
+        position: relative!important;
+        z-index: 10!important; /* Isso aqui resolve o erro do botão e o carrossel não funcionar */
+    
     }
 `
 
@@ -505,6 +509,8 @@ const Home = () => {
                 <title>Início - Pousada Le Ange</title>
             </Helmet>
 
+            <PromotionModal />
+
             <BackgroundVideo />
             <StyledPousadas 
             containerAnimation={{ opacity: 0, scale: 0.8 }}
@@ -528,7 +534,7 @@ const Home = () => {
                     showPagination={false} 
                     />
                     <TitlePousadas 
-                    title="Pousada Le Ange Serra" 
+                    title="Le Ange Serra - Miguel Pereira RJ" 
                     text="Aqui na LeAnge, costumamos dizer que a hospedagem é muito mais do que um final de semana para relaxar. É uma EXPERIÊNCIA ÚNICA ao lado do seu PET, para que você colecione os melhores momentos ao lado dele!" 
                     borderColor="var(--color--green)"
                     borderRadius="30px" 
@@ -540,7 +546,7 @@ const Home = () => {
 
                 <StyledContainerPousadas>
                     <TitlePousadas 
-                    title="Pousada Le Ange Mar" 
+                    title="Pousada Le Ange Mar - Búzios RJ" 
                     text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da propriedade e o seu pet é calorosamente recebido para momentos especiais." 
                     borderColor="var(--color--blue)"
                     borderRadius="30px" 

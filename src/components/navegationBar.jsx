@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import Logo from '../../public/logos/black.png';
-import Button from './Button';
+import Button from './button';
 import { FaHome, FaInfoCircle, FaAnchor, FaMountain, FaCalendar, FaBed } from 'react-icons/fa';
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { useState, useEffect } from 'react';
@@ -308,10 +308,10 @@ const NavegationBar = () => {
                 </Link>
                 <StyledHeader>
                     <StyledLink to="/" isActive={location.pathname === "/"}><IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início</StyledLink>
-                    {/* <StyledLink to="/sobre" isActive={location.pathname === "/sobre"}><IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós</StyledLink> */}
+                    <StyledLink to="/sobre" isActive={location.pathname === "/sobre"}><IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós</StyledLink>
                     <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountain /></IconContainer>Le Ange Serra</StyledLink>
-                    <StyledLink to="/leange#pacotes" isActive={location.pathname === "/home" && location.hash === "#pacotes"}><IconContainer isVisible={location.pathname === "/home" && location.hash === "#pacotes"}><FaBed /></IconContainer>Pacotes</StyledLink>
+                    {/* <StyledLink to="/leange#pacotes" isActive={location.pathname === "/home" && location.hash === "#pacotes"}><IconContainer isVisible={location.pathname === "/home" && location.hash === "#pacotes"}><FaBed /></IconContainer>Pacotes</StyledLink> */}
                     {/* <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton> */}
                     <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"}><IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações</StyledLink>
                 </StyledHeader>
@@ -345,9 +345,9 @@ const NavegationBar = () => {
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/serra"}><FaMountain /></IconContainer>Le Ange Serra
                     </StyledLink>
-                    <StyledLink to="/home/#pacotes" isActive={location.pathname === "/home/#pacotes"} onClick={closeSidebar}>
+                    {/* <StyledLink to="/home/#pacotes" isActive={location.pathname === "/home/#pacotes"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/home/#pacotes"}><FaBed /></IconContainer>Pacotes
-                    </StyledLink>
+                    </StyledLink> */}
                     <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos
                     </EventButton>

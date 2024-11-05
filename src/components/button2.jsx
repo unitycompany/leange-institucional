@@ -46,7 +46,7 @@ const StyledButtonAcomodo = styled.button`
   }
 `;
 
-const ButtonAcomoda = ({ text, suiteId, backDefine, colorDefine }) => {
+const ButtonAcomoda = ({ text, suiteId, backDefine, colorDefine, onClick}) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -55,7 +55,7 @@ const ButtonAcomoda = ({ text, suiteId, backDefine, colorDefine }) => {
   };
   
   return (
-    <StyledButtonAcomodo backDefine={backDefine} colorDefine={colorDefine} onClick={handleClick}>
+    <StyledButtonAcomodo backDefine={backDefine} colorDefine={colorDefine} onClick={onClick}>
       {text}
       <FaArrowRight className="icon" />
     </StyledButtonAcomodo>
