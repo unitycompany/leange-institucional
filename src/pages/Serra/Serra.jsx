@@ -37,7 +37,7 @@ const StyledSectionHome = styled(motion.section)`
         position: absolute;
         z-index: -1;
         opacity: .1;
-        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730130104/fotoSerra4_zgia0i.jpg');
+        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730901634/9_iinz0o.png');
         background-position: center;
         background-size: cover;
 
@@ -55,7 +55,7 @@ const StyledSectionHome = styled(motion.section)`
 const StyledHomeDiv = styled(motion.div)`
     width: 45%;
     height: 100%;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730130104/fotoSerra4_zgia0i.jpg');
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730901634/9_iinz0o.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -263,27 +263,38 @@ const StyledSectionEstrutura = styled.section`
 
 const slides = [
     {
-      title: "Tranquilidade",
+      title: "Espaço",
       description: "A área da sauna fica localizada ao lado da mata, A área da sauna fica localizada ao lado da mat, A área da sauna fica localizada ao lado da mata",
-      imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png",
+      imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901634/9_iinz0o.png",
     },
     {
-      title: "Conforto",
+      title: "Cachoeira",
       description: "Desfrute de acomodações de luxo...",
       buttonText: "Reserve já seu lugar",
-      imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra2_lhgcj2.jpg",
+      imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901554/16_mwucoo.png",
     },
     {
-        title: "Tranquilidade",
-        description: "A área da sauna fica localizada ao lado da mata, A área da sauna fica localizada ao lado da mat, A área da sauna fica localizada ao lado da mata",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png",
-      },
-      {
-        title: "Conforto",
-        description: "Desfrute de acomodações de luxo...",
-        buttonText: "Reserve já seu lugar",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra2_lhgcj2.jpg",
-      },
+    title: "Conforto",
+    description: "A área da sauna fica localizada ao lado da mata, A área da sauna fica localizada ao lado da mat, A área da sauna fica localizada ao lado da mata",
+    imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/biblioteca_l0ce1h.webp",
+    },
+    {
+    title: "Hot Tube",
+    description: "Desfrute de acomodações de luxo...",
+    buttonText: "Reserve já seu lugar",
+    imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/sauna-1_gmuhlq.webp",
+    },
+    {
+    title: "Tudo incluso",
+    description: "A área da sauna fica localizada ao lado da mata, A área da sauna fica localizada ao lado da mat, A área da sauna fica localizada ao lado da mata",
+    imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/cafedamanha_n4vr9z.jpg",
+    },
+    {
+    title: "Hot Tube",
+    description: "Desfrute de acomodações de luxo...",
+    buttonText: "Reserve já seu lugar",
+    imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/sauna-1_gmuhlq.webp",
+    },
   ];
 
 

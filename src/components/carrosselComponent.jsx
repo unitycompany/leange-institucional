@@ -50,6 +50,7 @@ const Title = styled.h2`
   margin-bottom: 0.5em;
   font-family: var(--font--comfortaa);
   color: ${({ $colorDefined }) => $colorDefined || 'var(--color--green)'}; // Prefixo $ adicionado
+  font-weight: 100;
 
   @media (max-width: 768px){
     display: inline-block;
@@ -58,11 +59,12 @@ const Title = styled.h2`
 `;
 
 const Description = styled.p`
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   font-size: .9rem;
   width: 80%;
   color: var(--color--black);
   font-family: var(--font--comfortaa);
+  font-weight: 100;
 
   @media (max-width: 768px){
     width: 100%;

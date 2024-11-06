@@ -215,6 +215,7 @@ const Sidebar = styled.div`
         border-radius: 50%;
         background-color: var(--color--black);
         color: var(--color--white);
+        font-family: var(--font--comfortaa);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -348,9 +349,9 @@ const NavegationBar = () => {
                     {/* <StyledLink to="/home/#pacotes" isActive={location.pathname === "/home/#pacotes"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/home/#pacotes"}><FaBed /></IconContainer>Pacotes
                     </StyledLink> */}
-                    <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
+                    {/* <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos
-                    </EventButton>
+                    </EventButton> */}
                     <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações
                     </StyledLink>

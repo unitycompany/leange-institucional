@@ -16,7 +16,6 @@ const StyledTextDepoimentos = styled.section`
     justify-content: center;
     align-items: center;
     height: 12vh;
-    border: 1px solid red;
     
     @media (max-width: 768px){
         height: 10vh;
@@ -43,10 +42,8 @@ const CarouselContainer = styled.div`
     align-items: center;
     height: 80vh;
     padding: 0 5%;
-    border: 1px solid red;
 
     @media (max-width: 768px){
-        border: 2px solid red;
         height: auto;
     }
 `;
@@ -62,58 +59,36 @@ const Container = styled.div`
     border-radius: 15px 0 15px 0; /* Bordas arredondadas */
     position: relative; /* Para posicionar o texto em cima da imagem */
     overflow: hidden; /* Para esconder qualquer conteúdo que extrapole o container */
-    border: 1px solid red;
 
     @media (max-width: 768px){
-        border: 1px solid red;
+        width: 100%;
+        margin: 0;
         height: 65vh;
     }
 `;
 
-const Name = styled.h2`
-    font-size: .8rem;
-    border-radius: 10px 0 10px 0;
-    border: 1px solid red;
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    padding: 5px 20px;
-    margin: 10px 0; /* Espaço entre o nome e o depoimento */
-    color: var(--color--white);
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(20px);
-    z-index: 1; /* Para garantir que o texto fique acima da imagem */
-    font-family: var(--font--comfortaa);
-
-    @media (max-width: 768px){
-        border: 1px solid red;
-        padding: 6px 20px;
-        border-radius: 5px;
-        top: 5px;
-        left: 10px;
-        font-size: .9rem;
-    }
-`;
-
 const DepoimentoText = styled.p`
-    font-size: .8rem;
+    font-size: .6rem;
     border-radius: 0 10px 0 10px;
-    border: 1px solid red;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    padding: 5px 20px;
+    bottom: 75%;
+    left: -50px;
+    transform: rotate(270deg);
+    padding: 5px 25px;
     margin: 10px 0; /* Espaço entre o nome e o depoimento */
     color: var(--color--white);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     z-index: 1; /* Para garantir que o texto fique acima da imagem */
     font-family: var(--font--comfortaa);
+    font-weight: 100;
 
     @media (max-width: 768px){
-        font-size: .9rem;
-        border: 1px solid red;
-        width: 90%;
+        font-size: .7rem;
+        text-align: center;
+        width: 60%;
+        display: inline-block;
     }
 `;
 
@@ -121,40 +96,39 @@ const DepoimentoText = styled.p`
 const depoimentosData = [
     {
         id: 1,
-        name: "João Silva",
-        text: "Ótima experiência!",
-        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/2.JPG", "/public/serra/3.JPG"],
+        text: "Pousada Le Ange Mar",
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730899114/3_nxmzvb.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899113/2_kck8ru.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899113/5_tb7gyj.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899113/4_zkfafk.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899113/6_y0fjmz.jpg"],
     },
     {
         id: 2,
-        name: "Maria Oliveira",
-        text: "Atendimento excepcional.",
-        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/5.JPG", "/public/serra/6.JPG"],
+        text: "Pousada Le Ange Serra",
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730899371/1_yigwnv.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899370/3_ji6uzq.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899370/2_v8reyz.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899370/4_u1pvbr.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899370/5_ty6zqr.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899369/6_dovfum.jpg"],
     },
     {
         id: 3,
-        name: "Carlos Pereira",
-        text: "Recomendo a todos!",
-        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/8.JPG", "/public/serra/9.JPG"],
+        text: "Pousada Le Ange Mar",
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730899583/1_fddk63.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899583/2_eomyvd.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899581/3_islkto.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899580/4_tds2ap.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899580/5_cvbsbp.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899579/6_cs2odp.jpg"],
     },
     {
         id: 4,
-        name: "Ana Santos",
-        text: "Fiquei encantado!",
-        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/11.JPG", "/public/serra/12.JPG"],
+        text: "Pousada Le Ange Serra",
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730899737/1_vw8gku.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899736/2_u9soep.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899735/3_aryhje.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899735/4_g2prnk.jpg"],
     },
     {
         id: 5,
-        name: "Pedro Lima",
-        text: "Voltarei com certeza.",
-        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/14.JPG", "/public/serra/15.JPG"],
+        text: "Pousada Le Ange Mar",
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730899833/1_urlgor.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899832/2_elrwj3.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899831/3_scnvzz.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899831/4_j7wxsn.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899830/5_jn3xrs.jpg"],
     },
     {
         id: 6,
-        name: "Fernanda Costa",
-        text: "Uma experiência inesquecível!",
-        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg", "/public/serra/17.JPG", "/public/serra/18.JPG"],
+        text: "Pousada Le Ange Serra",
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730899980/1_zt1frt.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899979/2_m6a7pn.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899978/3_f1nazk.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899977/4_al1kde.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730899976/5_fz3g46.jpg"],
     },
+    {
+        id: 6,
+        text: "Pousada Le Ange Mar",
+        bgImages: ["https://res.cloudinary.com/dupg7clzc/image/upload/v1730900129/1_adshm2.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730900127/2_gvo2bk.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730900126/3_eqkktf.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730900125/4_pw8xsl.jpg", "https://res.cloudinary.com/dupg7clzc/image/upload/v1730900125/5_abwhg7.jpg"],
+    }
 ];
 
 const Depoimentos = () => {
@@ -171,8 +145,9 @@ const Depoimentos = () => {
                     modules={[ Navigation, Pagination, Autoplay ]}
                     pagination={false ? { clickable: true } : false}
                     navigation={true}
+                    loop={true}
                     grabCursor={true}
-                    autoplay={{ delay: 5000, disableOnInteraction: false }}
+                    autoplay={{ delay: 7000, disableOnInteraction: false }}
                     breakpoints={{
                         1024: {
                             slidesPerView: 3, // Desktop
@@ -209,13 +184,12 @@ const Depoimentos = () => {
                                                     backgroundPosition: 'center',
                                                     width: '100%',
                                                     height: '100%',
-                                                    borderRadius: '10px',
+                                                    borderRadius: '25px 0 25px 0',
                                                 }}
                                             />
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
-                                <Name>{depoimento.name}</Name>
                                 <DepoimentoText>{depoimento.text}</DepoimentoText>
                             </Container>
                         </SwiperSlide>

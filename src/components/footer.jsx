@@ -182,6 +182,7 @@ const StyledForm = styled.div`
         border: none;
         padding: 20px;
         background-color: var(--color--white);
+        font-family: var(--font--comfortaa);
 
         @media (max-width: 768px){
             width: 100%;

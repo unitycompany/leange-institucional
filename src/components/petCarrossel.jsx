@@ -1,24 +1,11 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import ImageCarouselSliderComponent from './infinitiSlider';
 import styled from 'styled-components';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import CustomButton from './button3';
-
-const images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142186/pet10_yvsbk7.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142192/pet9_vighbx.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142194/pet7_q7qi0y.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142193/pet8_vdoyh2.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142195/pet6_tuwm6x.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142204/pet5_lrhzej.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142204/pet4_zw9sc2.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142218/pet3_g6dhdo.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142219/pet2_aztjoa.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730142220/pet1_krkmac.jpg',
-];
 
 const CarouselContainer = styled.div`
     height: 90vh;
@@ -97,6 +84,31 @@ const StyledTextPet = styled.section`
     }
 `;
 
+const images5 = [
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901643/1_sxf4fc.jpg", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901642/2_cldel9.jpg", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901641/3_i0ctxp.jpg", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901634/9_iinz0o.png", alt: 'Pousada Le Ange Serra', loading: "lazy", label: 'Le Ange Serra' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901639/4_kuujqb.jpg", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901638/5_flrzdf.jpg", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901554/16_mwucoo.png", alt: 'Pousada Le Ange Serra', loading: "lazy", label: 'Le Ange Serra' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901555/15_epymcf.jpg", alt: 'Pousada Le Ange Serra', loading: "lazy", label: 'Le Ange Serra' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901637/6_b6jtbs.jpg", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901636/8_zr7p3o.jpg", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+];
+
+const images6 = [
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901636/7_gutmna.jpg", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901633/10_olepft.png", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901631/11_wlyxbh.png", alt: 'Pousada Le Ange Serra', loading: "lazy", label: 'Le Ange Serra' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901634/9_iinz0o.png", alt: 'Pousada Le Ange Serra', loading: "lazy", label: 'Le Ange Serra' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901566/12_epl2gw.png", alt: 'Pousada Le Ange Serra', loading: "lazy", label: 'Le Ange Serra' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901565/13_hhitda.png", alt: 'Pousada Le Ange Serra', loading: "lazy", label: 'Le Ange Serra' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901556/14_ybyv7y.png", alt: 'Pousada Le Ange Serra', loading: "lazy", label: 'Le Ange Serra' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901490/17_awkinq.png", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901639/4_kuujqb.jpg", alt: 'Pousada Le Ange Mar', loading: "lazy", label: 'Le Ange Mar' },
+];
+
 const PetFriendlyCarousel = () => {
     const autoplayDelay = 1000;
 
@@ -118,33 +130,8 @@ const PetFriendlyCarousel = () => {
                 />
             </StyledTextPet>
 
-            <CarouselContainer>
-                <Swiper
-                    loop={true}
-                    modules={[Autoplay, Navigation, Pagination]}
-                    autoplay={{
-                        delay: autoplayDelay,
-                        disableOnInteraction: false,
-                    }}
-                    spaceBetween={10}
-                    breakpoints={{
-                        1024: { slidesPerView: 5 }, // 5 slides para telas grandes
-                        768: { slidesPerView: 2 },  // 4 slides para tablets
-                        480: { slidesPerView: 1 },  // 3 slides para celulares
-                    }}
-                >
-                    {images.map((image, index) => (
-                        <StyledSwiperSlide key={index}>
-                            <SlideContainer>
-                                <StyledImage src={image} alt={`Pet ${index}`} index={index} />
-                                {index + 1 < images.length && (
-                                    <StyledImage src={images[index + 1]} alt={`Pet ${index + 1}`} index={index + 1} />
-                                )}
-                            </SlideContainer>
-                        </StyledSwiperSlide>
-                    ))}
-                </Swiper>
-            </CarouselContainer>
+            <ImageCarouselSliderComponent images={images5} />
+            <ImageCarouselSliderComponent images={images6} reverse={true} />
         </>
     );
 };
