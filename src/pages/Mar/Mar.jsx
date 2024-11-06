@@ -38,8 +38,8 @@ const StyledSectionHome = styled(motion.section)`
         position: absolute;
         z-index: -1;
         opacity: .1;
-        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730901638/5_flrzdf.jpg');
-        background-position: top;
+        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730926399/IMG_0454_gpdc1l.jpg');
+        background-position: center;
         background-size: cover;
 
         @media (max-width:768px){
@@ -57,7 +57,7 @@ const StyledSectionHome = styled(motion.section)`
 const StyledHomeDiv = styled(motion.div)`
     width: 45%;
     height: 100%;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730901638/5_flrzdf.jpg');
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730926455/IMG_0454_o2cwol.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

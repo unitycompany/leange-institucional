@@ -26,6 +26,7 @@ const SobreContainer = styled.section`
         gap: 20px;
         padding: 0 0 0 5%;
 
+
         @media (max-width: 768px){
             width: 100%;
             gap: 50px;
@@ -37,6 +38,8 @@ const SobreContainer = styled.section`
             font-size: 3rem;
             font-family: var(--font--comfortaa);
             color: var(--color--blue);
+    
+            font-weight: 100;
 
             @media (max-width: 768px){
                 font-size: 30px;
@@ -48,11 +51,12 @@ const SobreContainer = styled.section`
         }
 
         & > h4 {
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
             color: var(--color--black);
             font-weight: 100;
-            margin-top: -30px;
+            margin-top: -20px;
             font-size: 1.2rem;
+    
 
             @media (max-width: 768px){
                 margin-top: -50px;
@@ -64,7 +68,10 @@ const SobreContainer = styled.section`
 
         & > p {
             width: 80%;
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
+            font-size: .9rem;
+            font-weight: 100;
+            line-height: 120%;
 
             @media (max-width: 768px){
                 width: 100%;
@@ -84,6 +91,7 @@ const SobreContainer = styled.section`
         position: relative;
         z-index: 1;
 
+
         @media (max-width: 768px){
             width: 100%;
             height: auto;
@@ -101,6 +109,7 @@ const SobreContainer = styled.section`
             background-color: var(--color--blue);
             border-radius: 100px 0 0 50px;
             z-index: -1;
+    
 
             @media (max-width: 768px){
                 border-radius: 70px 0 0 25px;
@@ -111,8 +120,9 @@ const SobreContainer = styled.section`
         & > img {
             width: 100%;
             height: 100%;
-            filter: drop-shadow(5px 5px 2px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.2));
             object-fit: contain;
+    
 
             @media (max-width: 768px){
                 filter: drop-shadow(5px 0px 2px rgba(0, 0, 0, 0.2));
@@ -155,6 +165,7 @@ const UnidadeContainer = styled.section`
         justify-content: center;
         gap: 10px;
 
+
         @media (max-width: 768px){
             max-width: 100%;
             height: 30vh;
@@ -164,27 +175,28 @@ const UnidadeContainer = styled.section`
         & > img:nth-child(1){
             width: 60%;
             height: 100%;
-            border-radius: 20px;
+            border-radius: 20px 0 20px 0;
             object-fit: cover;
+    
 
             @media (max-width: 768px){
                 width: 48%;
                 height: 100%;
-                border-radius: 10px;
+                border-radius: 10px 0 10px 0;
             }
         }
 
         & > img:nth-child(2){
             width: 40%;
             height: 100%;
-            border-radius: 20px;
+            border-radius: 0px 20px 0px 20px;
             object-fit: cover;
 
             @media (max-width: 768px){
                 width: 48%;
                 height: 100%!important;
                 object-fit: cover;
-                border-radius: 10px;
+                border-radius: 0px 10px 0 10px;
     
             }
         }
@@ -198,9 +210,9 @@ const UnidadeContainer = styled.section`
         flex-direction: column;
         gap: 20px;
 
+
         @media (max-width: 768px){
             width: 100%;
-
             height: 50%;
             gap: 40px;
         }
@@ -209,6 +221,8 @@ const UnidadeContainer = styled.section`
             font-size: 3rem;
             font-family: var(--font--comfortaa);
             color: var(--color--green);
+    
+            font-weight: 100;
 
             @media (max-width: 768px){
                 width: 100%;
@@ -219,10 +233,11 @@ const UnidadeContainer = styled.section`
         }
 
         & > h4 {
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
             font-weight: 100;
-            margin-top: -30px;
+            margin-top: -20px;
             font-size: 1.2rem;
+    
 
             @media (max-width: 768px){
                 width: 100%;
@@ -234,7 +249,11 @@ const UnidadeContainer = styled.section`
 
         & > p {
             width: 80%;
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
+    
+            font-weight: 100;
+            line-height: 130%;
+            font-size: .9rem;
 
             @media (max-width: 768px){
                 width: 100%;
@@ -257,7 +276,7 @@ const DiferenciaisContainer = styled.section`
         flex-direction: column-reverse;
         gap: 25px;
         margin-top: 35px;
-        padding: 10% 5%;
+        padding: 0% 5%;
     }
 
     & > div:nth-child(1){
@@ -267,18 +286,19 @@ const DiferenciaisContainer = styled.section`
         justify-content: center;
         flex-direction: column;
 
+
         @media (max-width: 768px){
             width: 100%;
-
         }
 
         & > h1{
             font-size: 3rem;
             font-family: var(--font--comfortaa);
             color: var(--color--blue);
+            font-weight: 100;
+            margin-bottom: 15px;
 
             @media (max-width: 768px){
-    
                 font-size: 28px;
                 width: 100%;
                 text-align: center;
@@ -288,7 +308,10 @@ const DiferenciaisContainer = styled.section`
 
         & > p {
             width: 80%;
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
+            font-size: .9rem;
+            font-weight: 100;
+            line-height: 130%;
 
             @media (max-width: 768px){
                 width: 100%;
@@ -301,33 +324,33 @@ const DiferenciaisContainer = styled.section`
         width: 50%;
         height: 80%;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
 
+
         @media (max-width: 768px){
             width: 100%;
-
             justify-content: space-between;
         }
 
        & > img{
         width: 45%;
-        border-radius: 30px 0 30px 0; 
-        height: 48%;
+        border-radius: 20px 0 20px 0; 
+        height: 50%;
         object-fit: cover;
 
         &:nth-child(2){
-            border-radius: 0 30px 0 30px;
+            border-radius: 0 20px 0 20px;
         }
 
         &:nth-child(4){
-            border-radius: 30px 0px 30px 0px!important;
+            border-radius: 20px 0px 20px 0px!important;
         }
 
         @media (max-width: 768px){
-            width: 48%;
+            width: 49%;
             height: 20vh;
 
         }
@@ -335,7 +358,7 @@ const DiferenciaisContainer = styled.section`
        }
 
        & > img:nth-child(n +3){
-        border-radius: 0 30px 0 30px;
+        border-radius: 0 20px 0 20px;
        }
 
     }
@@ -364,10 +387,11 @@ const ContainerDuplo = styled.section`
         justify-content: center;
         width: 100%;
         height: 40%;
+
         
         @media (max-width: 768px){
             width: 100%;
-            flex-direction: column;
+            flex-direction: column-reverse;
             height: auto;
         }
 
@@ -378,6 +402,7 @@ const ContainerDuplo = styled.section`
             align-items: flex-start;
             justify-content: center;
             flex-direction: column;
+    
 
             @media (max-width: 768px){
                 width: 100%;
@@ -388,9 +413,10 @@ const ContainerDuplo = styled.section`
             font-size: 2.5rem;
             font-family: var(--font--comfortaa);
             color: var(--color--green);
+            font-weight: 100;
+            margin-bottom: 15px;
                 
                 @media (max-width: 768px){
-        
                     font-size: 28px;
                     margin-bottom: 10px;
                     width: 100%;
@@ -400,7 +426,10 @@ const ContainerDuplo = styled.section`
 
             & > p {
             width: 80%;
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
+            font-weight: 100;
+            line-height: 130%;
+            font-size: .9rem;
 
                 @media (max-width: 768px){
         
@@ -414,11 +443,13 @@ const ContainerDuplo = styled.section`
         & > div:nth-child(2){
             width: 50%;
             height: 100%;
+    
 
             @media (max-width: 768px){
                 width: 100%;
                 height: 35vh;
-                margin-top: 25px;
+                margin-top: -20px;
+                margin-bottom: 50px;
             }
 
             & > img {
@@ -435,14 +466,14 @@ const ContainerDuplo = styled.section`
             & > img:nth-child(1){
                 position: relative;
                 left: 10px;
-                border-radius: 30px 0 30px 0;
+                border-radius: 20px 0 20px 0;
             }
 
             & > img:nth-child(2){
                 position: relative;
-                top: 20px;
-                right: 10px;
-                border-radius: 0 30px 0 30px;
+                top: 40px;
+                right: 20px;
+                border-radius: 0 20px 0 20px;
             }
         }
     }
@@ -454,6 +485,7 @@ const ContainerDuplo = styled.section`
         width: 100%;
         height: 40%;
 
+
         @media (max-width: 768px){
             flex-direction: column-reverse;
             height: auto;
@@ -462,10 +494,11 @@ const ContainerDuplo = styled.section`
         & > div:nth-child(1){
             width: 50%;
             height: 100%;
+    
 
             @media (max-width: 768px){
                 width: 100%;
-                margin-top: 40px;
+                margin-top: 15px;
                 height: 35vh;
             }
 
@@ -473,6 +506,7 @@ const ContainerDuplo = styled.section`
                 width: 50%;
                 height: 80%;
                 object-fit: cover;
+        
 
 
                 @media (max-width: 768px){
@@ -484,14 +518,14 @@ const ContainerDuplo = styled.section`
             & > img:nth-child(1){
                 position: relative;
                 left: 10px;
-                border-radius: 30px 0 30px 0;
+                border-radius: 20px 0 20px 0;
             }
 
             & > img:nth-child(2){
                 position: relative;
                 top: 20px;
                 right: 10px;
-                border-radius: 0 30px 0 30px;
+                border-radius: 0 20px 0 20px;
             }
         }
 
@@ -502,6 +536,7 @@ const ContainerDuplo = styled.section`
             align-items: flex-end;
             justify-content: center;
             flex-direction: column;
+    
 
             @media (max-width: 768px){
                 width: 100%;
@@ -513,10 +548,12 @@ const ContainerDuplo = styled.section`
             color: var(--color--blue);
             line-height: 100%;
             text-align: right;
+            font-weight: 100;
+            margin-bottom: 15px;
                 
                 @media (max-width: 768px){
         
-                    margin-top: 50px;
+                    margin-top: 0px;
                     font-size: 28px;
                     margin-bottom: 10px;
                     width: 100%;
@@ -526,8 +563,11 @@ const ContainerDuplo = styled.section`
 
             & > p {
             width: 90%;
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
             text-align: right;
+            font-weight: 100;
+            font-size: .9rem;
+            line-height: 130%;
 
                 @media (max-width: 768px){
 
@@ -550,7 +590,6 @@ const PublicoContainer = styled.section`
     padding: 0 5%;
 
         @media (max-width: 768px){
-
             height: auto;
             flex-direction: column;
         }
@@ -564,6 +603,7 @@ const PublicoContainer = styled.section`
         flex-direction: column;
         gap: 10px;
 
+
         @media (max-width: 768px){
             width: 100%;
             height: auto;
@@ -576,10 +616,12 @@ const PublicoContainer = styled.section`
             font-size: 2.5em;
             font-family: var(--font--comfortaa);
             color: var(--color--green);
+            font-weight: 100;
+            margin-bottom: 15px;
 
                 @media (max-width: 768px){
         
-                    margin-top: 50px;
+                    margin-top: 20px;
                     margin-bottom: 15px;
                     width: 100%;
                     text-align: center;
@@ -589,10 +631,13 @@ const PublicoContainer = styled.section`
 
             & > p {
             width: 80%;
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
+            font-size: 0.9rem;
+            font-weight: 100;
+            line-height: 130%;
+            margin-bottom: 20px;
 
             @media (max-width: 768px){
-    
                 width: 100%;
                 text-align: justify;
             }
@@ -606,10 +651,12 @@ const PublicoContainer = styled.section`
             font-size: 2.5em;
             font-family: var(--font--comfortaa);
             color: var(--color--blue);
+            font-weight: 100;
+            margin-bottom: 15px;
 
                 @media (max-width: 768px){
         
-                    margin-top: 25px;
+                    margin-top: 5px;
                     margin-bottom: 15px;
                     width: 100%;
                     text-align: center;
@@ -619,7 +666,10 @@ const PublicoContainer = styled.section`
 
             & > p {
             width: 80%;
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
+            font-size: 0.9rem;
+            font-weight: 100;
+            line-height: 130%;
 
             @media (max-width: 768px){
     
@@ -647,7 +697,8 @@ const PublicoContainer = styled.section`
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 80px 0 80px 0;
+            object-position: center;
+            border-radius: 30px 0 30px 0;
         }
     }
 `
@@ -701,7 +752,7 @@ const PublicoContainer = styled.section`
 
 //         & > p {
 //             width: 80%;
-//             font-family: var(--font--avenir);
+//             font-family: var(--font--comfortaa);
 //             color: var(--color--white);
 //             text-align: justify;
 
@@ -732,6 +783,7 @@ const CTA = styled.div`
         width: 35%;
         text-align: center;
         line-height: 100%;
+        font-weight: 100;
 
         @media (max-width: 768px){
             width: 90%;

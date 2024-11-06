@@ -314,7 +314,7 @@ const StyledSectionEspaco = styled.section`
 
     @media (max-width: 768px){
         height: auto;
-        padding: 10% 0;
+        padding: 0% 0 5% 0 ;
     }
 `
 
