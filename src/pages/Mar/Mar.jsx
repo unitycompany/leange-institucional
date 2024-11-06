@@ -68,7 +68,7 @@ const StyledHomeDiv = styled(motion.div)`
         border-radius: 0px;
         border-image: fill 0 linear-gradient(#0001, #ffffff);
         position: absolute;
-        height: 70%;
+        height: 80%;
         top: 0;
         z-index: -1;
     }
@@ -86,7 +86,7 @@ const StyledHomeTexts = styled(motion.div)`
     @media (max-width: 768px){
         width: 100%;
         align-items: center;
-        height: 50%;
+        height: 35%;
     }
 
     & > h4 {
@@ -120,11 +120,16 @@ const StyledHomeTexts = styled(motion.div)`
             font-size: 35px;
             text-align: center;
             margin-top: -5px;
+            font-weight: 100;
         }
     }
 
     & > h1 b {
         color: var(--color--blue);
+
+        @media (max-width: 768px){
+            font-weight: 100;
+        }
     }
 
     & > p {
@@ -140,7 +145,7 @@ const StyledHomeTexts = styled(motion.div)`
             width: 80%;
             font-size: 1rem;
             text-align: center;
-            padding-bottom: 50px;
+            padding-bottom: 10px;
         }
     }
 `;
@@ -344,75 +349,75 @@ const StyledContainerEvents = styled.section`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131262/frutosdomar_xqfm5b.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919563/frutos_do_mar_zmftbs.jpg',
         title: 'Frutos do mar',
-        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        dateRange: '22/11/2024 até 24/11/2024 (2 diárias)',
         features: [
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaUtensils />, text: '23/11 - Frutos do Mar' },
+            { icon: <FaMusic />, text: 'Todas as refeições incluídas' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '354,20',
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131254/buteco_ck7tmg.jpg',
-        title: 'Noite do Boteco',
-        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919809/1_vdy0cc.jpg',
+        title: 'Noite de Risotos',
+        dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
         features: [
+            { icon: <FaUtensils />, text: '30/11 - Noite de Risostos' },
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Música ao vivo' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '354,20',
+        price: '359,20',
         discount: 25,
     },
     {
         image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
         title: 'Noite das pizzas',
-        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        dateRange: '06/12/2024 até 08/12/2024 (3 diárias)',
         features: [
+            { icon: <FaUtensils />, text: '07/12 - Noite das pizzas' },
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Música ao vivo' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '354,20',
+        price: '359,20',
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131253/arabe_orkglt.png',
-        title: 'Noite Árabe',
-        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919952/2_blegej.jpg',
+        title: 'Frutos do Mar',
+        dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
+            { icon: <FaUtensils />, text: '14/12 - Frutos do Mar' },
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Música ao vivo' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '354,20',
+        price: '359,20',
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131254/massas_geg7x7.jpg',
-        title: 'Noite de Massas',
-        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920150/3_oxsk37.jpg',
+        title: 'Fique 3 pague 4',
+        dateRange: 'Segunda-feira a Sexta-feira',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '354,20',
+        price: '538,90',
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131256/hamburguer_jbi1rv.jpg',
-        title: 'Noite de Hámburguer',
-        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920274/4_cl1vx0.jpg',
+        title: 'Pacote de Natal',
+        dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '354,20',
+        price: '918,40',
         discount: 25,
     },
     // Adicione mais eventos conforme necessário

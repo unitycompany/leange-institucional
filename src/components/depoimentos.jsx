@@ -26,6 +26,7 @@ const StyledTextDepoimentos = styled.section`
     & > h1 {
         font-size: 2rem;
         font-family: var(--font--comfortaa);
+        font-weight: 100;
         text-align: center;
         width: 100%;
         
@@ -64,6 +65,7 @@ const Container = styled.div`
         width: 100%;
         margin: 0;
         height: 65vh;
+        border: 1px solid transparent;
     }
 `;
 
@@ -89,6 +91,9 @@ const DepoimentoText = styled.p`
         text-align: center;
         width: 60%;
         display: inline-block;
+        left: -75px;
+        bottom: 72.5%;
+        width: 55%;
     }
 `;
 

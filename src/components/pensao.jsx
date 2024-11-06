@@ -106,12 +106,14 @@ const StyledTitle = styled.h1`
     font-size: 2.5rem;
     color: var(--color--black);
     font-family: var(--font--comfortaa);
+    font-weight: 100;
 
     @media (max-width: 768px){
         font-size: 1.6rem;
     }
 
     & > b {
+        font-weight: 100;
         color: ${({ colorDefinedBold }) => colorDefinedBold ? colorDefinedBold : 'var(--color--green)'};
     }
 `;
@@ -121,7 +123,8 @@ const StyledParagraph = styled.p`
     font-size: 1rem;
     line-height: 100%;
     width: 80%;
-    font-family: var(--font--avenir);
+    font-family: var(--font--comfortaa);
+    font-weight: 100;
 
     @media (max-width: 768px){
         width: 100%;
@@ -141,12 +144,12 @@ const Pensao = ({ colorDefinedBold }) => {
             <StyledPensaoImages>
                 <StyledTable>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530957/sushi_g7sbq9.jpg" alt="Imagem 1" />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730131254/buteco_ck7tmg.jpg" alt="Imagem 2" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920611/1_z2nkyx.png" alt="Imagem 1" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920609/2_sxwyp9.png" alt="Imagem 2" />
                     </div>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730131262/frutosdomar_xqfm5b.jpg" alt="Imagem 3" />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/adega_n0cszf.jpg" alt="Imagem 4" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920606/5_utfvwq.png" alt="Imagem 3" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920607/3_cijslx.png" alt="Imagem 4" />
                     </div>
                 </StyledTable>
             </StyledPensaoImages>
@@ -163,9 +166,7 @@ const Pensao = ({ colorDefinedBold }) => {
                     <br />
                     Nossa estadia dispõe de um restaurante, onde são oferecidas todas as
                     refeições do dia – café da manhã, almoço, chá da tarde e jantar, incluindo
-                    nossas deliciosas sobremesas. Adaptamos nosso cardápio para atender a diferentes
-                    estilos alimentares, incluindo opções tradicionais, veganas, vegetarianas,
-                    diabéticos, low carb e outras preferências individuais.
+                    nossas deliciosas sobremesas.
                 </StyledParagraph>
                 <StyledButton
                     text="Reservar agora!"
@@ -175,8 +176,8 @@ const Pensao = ({ colorDefinedBold }) => {
                     iconColor="var(--color--black)"
                     hoverBackgroundColor="var(--color--black)"
                     hoverBorderColor="var(--color--black)"
-                    hoverColor="var(--color--white)"
-                    hoverIconColor="var(--color--white)"
+                    hoverColor="var(--color--black)"
+                    hoverIconColor="var(--color--black)"
                     onClick={() => alert("Reservado!")}
                 />
             </StyledPensaoTexts>

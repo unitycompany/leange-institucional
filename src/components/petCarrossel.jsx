@@ -61,7 +61,7 @@ const StyledTextPet = styled.section`
     margin-top: 5vh;
 
     @media (max-width: 768px){
-        flex-direction: column-reverse;
+        flex-direction: column;
         justify-content: center;
         gap: 10px;
         margin-top: -5vh;
@@ -72,9 +72,10 @@ const StyledTextPet = styled.section`
     & > h1 {
         font-size: 2rem;
         font-family: var(--font--comfortaa);
+        font-weight: 100;
 
         @media (max-width: 768px){
-            font-size: 1rem;
+            font-size: 1.6rem;
             color: var(--color--black);
             background-color: rgba(255, 255, 255, 0.4);
             padding: 10px 20px;

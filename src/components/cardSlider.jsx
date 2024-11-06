@@ -86,13 +86,13 @@ const Features = styled.div`
     gap: 8px;
     flex-wrap: wrap;
     font-size: 12px;
-    color: #555;
+    color: var(--color--black);
 
     span {
         display: flex;
         align-items: center;
         gap: 5px;
-        background: #e0e0e0;
+        background: var(--color--white);
         font-family: var(--font--comfortaa);
         padding: 5px 8px;
         border-radius: 8px;
