@@ -30,8 +30,11 @@ const StyledAcomodaContainer = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2.5% 5%;
+    padding: 0% 5% 2.5% 5%;
     position: relative;
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730914386/mar_vbkejw.png');
+    background-size: cover;
+    background-position: center;
 
     @media (max-width: 768px){
         height: auto;
@@ -82,6 +85,8 @@ const StyledAcomodaContainer = styled.section`
         object-fit: cover;
         transition: all .2s ease-in-out;
         animation: ${waterWave} 5s ease-in-out infinite;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     & > main img:nth-child(-n + 5) {
@@ -104,9 +109,9 @@ const StyledAcomodaContainer = styled.section`
         position: absolute;
         top: 15px;
         right: 20px;
-        background-color: rgba(255, 255, 255, 0.2);
+        background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(10px);
-        color: white;
+        color: var(--color--white);
         padding: 3px 7px;
         font-size: 0.6rem;
         border-radius: 5px 0 5px 0;
@@ -179,12 +184,13 @@ const StyledAcomodaTexts = styled.div`
     }
 
     & > div h1 {
-        font-size: 2.5rem;
-        color: var(--color--black);
+        font-size: 2rem;
+        color: var(--color--white);
         font-family: var(--font--comfortaa);
+        font-weight: 100;
 
         @media (max-width: 768px){
-            font-size: 2rem;
+            font-size: 1.3rem;
             text-align: center;
             margin-bottom: 30px;
             margin-top: 15px;
@@ -194,7 +200,7 @@ const StyledAcomodaTexts = styled.div`
     & > div p {
         width: 80%;
         font-family: var(--font--avenir);
-        color: var(--color--black);
+        color: var(--color--white);
         line-height: 100%;
         font-size: 1rem;
 
@@ -214,17 +220,17 @@ const AcomodaComponent2 = ({ images }) => {
         <StyledAcomodaContainer>
             <StyledAcomodaTexts>
                 <div>
-                    <h1>Suítes</h1>
+                    <h1>Conheça as nossas suítes</h1>
                     {/* <p>Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira excepcional com vista deliciosa para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.</p> */}
                 </div>
                 <div>
                     <CustomButton 
                         text="Reservar agora!"
-                        textColor="var(--color--black)"
+                        textColor="var(--color--white)"
                         backgroundColor="transparent"
-                        borderColor="var(--color--black)"
-                        iconColor="var(--color--black)"
-                        hoverBackgroundColor="var(--color--black)"
+                        borderColor="var(--color--white)"
+                        iconColor="var(--color--white)"
+                        hoverBackgroundColor="var(--color--white)"
                         hoverBorderColor="var(--color--white)"
                         hoverColor="var(--color--white)"
                         hoverIconColor="var(--color--white)"

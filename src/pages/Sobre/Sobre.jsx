@@ -318,6 +318,14 @@ const DiferenciaisContainer = styled.section`
         height: 48%;
         object-fit: cover;
 
+        &:nth-child(2){
+            border-radius: 0 30px 0 30px;
+        }
+
+        &:nth-child(4){
+            border-radius: 30px 0px 30px 0px!important;
+        }
+
         @media (max-width: 768px){
             width: 48%;
             height: 20vh;

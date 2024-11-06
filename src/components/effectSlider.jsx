@@ -43,7 +43,7 @@ const SlideContainer = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
-    border-radius: 15px;
+    border-radius: 25px 0 25px 0;
     overflow: hidden;
     background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
     background-size: cover;
@@ -62,7 +62,7 @@ const BorderOverlay = styled.div`
     left: 0;
     width: 100%;
     height: 60%;
-    border-radius: 15px; /* Mantém o mesmo border-radius */
+    border-radius: 25px 0 25px 0;/* Mantém o mesmo border-radius */
     background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradiente */
     pointer-events: none; /* Apenas decorativa */
     z-index: 1;

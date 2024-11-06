@@ -35,11 +35,28 @@ const SwiperStyles = createGlobalStyle`
 
 // Keyframes for animation
 const waterWave = keyframes`
-  0% { border-radius: 0 60px 20px 0; }
-  25% { border-radius: 20px 0 60px 20px; }
-  50% { border-radius: 60px 20px 0 60px; }
-  75% { border-radius: 60px 60px 20px 0; }
-  100% { border-radius: 0 20px 60px 0; }
+  0% { border-radius: 0 30px 20px 0; }
+  25% { border-radius: 20px 0 30px 20px; }
+  50% { border-radius: 30px 20px 0 30px; }
+  75% { border-radius: 30px 30px 20px 0; }
+  100% { border-radius: 0 20px 30px 0; }
+`;
+
+const BorderOverlay = styled.div`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    border-radius: 25px 0 25px 0;/* Mantém o mesmo border-radius */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradiente */
+    pointer-events: none; /* Apenas decorativa */
+    animation: ${waterWave} 5s ease-in-out infinite;
+    z-index: 1;
+
+    @media (max-width: 768px){
+        border-radius: 20px 0 20px 0;
+    }
 `;
 
 // Styled components
@@ -65,6 +82,7 @@ const SlideContent = styled(motion.div)`
   bottom: 30px;
   left: 20px;
   color: white;
+  z-index: 10;
 `;
 
 const Title = styled(motion.h2)`
@@ -80,7 +98,7 @@ const Title = styled(motion.h2)`
 `;
 
 const Subtitle = styled(motion.p)`
-  font-size: 16px;
+  font-size: 13px;
   margin: 0px 0;
   font-family: var(--font--comfortaa);
 
@@ -96,8 +114,8 @@ const Subtitle = styled(motion.p)`
 
 const Features = styled(motion.div)`
   display: flex;
-  gap: 8px;
-  margin-top: 10px;
+  gap: 5px;
+  margin-top: 5px;
   flex-wrap: wrap;
 
   @media (max-width: 768px){
@@ -109,9 +127,9 @@ const Features = styled(motion.div)`
       align-items: center;
       gap: 5px;
       background: rgba(0, 0, 0, 0.5);
-      padding: 5px 10px;
-      border-radius: 12px;
-      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 5px 0 5px 0;
+      font-size: 10px;
       font-family: var(--font--comfortaa);
 
       @media (max-width: 768px){
@@ -127,7 +145,7 @@ const Features = styled(motion.div)`
   }
 
   svg {
-      font-size: 16px;
+      font-size: 12px;
 
       @media (max-width: 768px){
         font-size: 12px;
@@ -175,11 +193,12 @@ const SliderAcomodaHome = ({
         }}
         breakpoints={{
           640: { slidesPerView: 1 },
-          1024: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
         }}
       >
         {content.map((item, index) => (
           <SwiperSlide key={index}>
+            <BorderOverlay />
             <SlideContainer style={{ backgroundImage: `url(${item.backgroundImage})` }}>
               <SlideContent>
                 <Title style={{ y: titleY }}>{item.title}</Title>

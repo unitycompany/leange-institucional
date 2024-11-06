@@ -15,7 +15,6 @@ const SlideContent = styled.div`
   gap: 20px;
   padding: 5vh 5%;
   flex-direction: ${({ imagePosition }) => (imagePosition === 'right' ? 'row-reverse' : 'row')};
-  background-color: var(--color--black);
 
   @media (max-width: 768px){
     border: 1px solid var(--color--black);
@@ -35,6 +34,7 @@ const SlideText = styled.div`
   padding: 20px;
   border-radius: 0px 40px 0px 40px;
   background-color: var(--color--white);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 
   @media (max-width: 768px){
     width: 100%;
@@ -162,8 +162,8 @@ const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 
                 iconColor="var(--color--black)"
                 hoverBackgroundColor="var(--color--black)"
                 hoverBorderColor="var(--color--black)"
-                hoverColor="var(--color--white)"
-                hoverIconColor="var(--color--white)"
+                hoverColor="var(--color--black)"
+                hoverIconColor="var(--color--black)"
                 onClick={() => alert("Reservado!")}
               />
             </SlideText>

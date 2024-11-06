@@ -72,7 +72,7 @@ const StyledImage = styled(motion.img)`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 20px 0 20px 0;
 
     @media (max-width: 768px){
         border-radius: 0 15px 0 20px;

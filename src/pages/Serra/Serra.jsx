@@ -9,8 +9,9 @@ import CarouselComponent from '../../components/carrosselComponent';
 import AcomodaComponent from '../../components/acomodaComponent';
 import Pensao from '../../components/pensao';
 import PetFriendly from '../../components/petCarrossel';
-import Atracoes from '../../components/atracoesSlider';
 import Depoimentos from '../../components/depoimentos';
+import EventCardCarousel from '../../components/cardSlider';
+import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 
 const StyledEspace = styled.div`
     height: 5vh;
@@ -226,6 +227,7 @@ const StyledSectionEstrutura = styled.section`
     justify-content: center;
     gap: 50px;
     flex-direction: column;
+    display: none;
 
     @media (max-width: 768px){
         height: auto;
@@ -352,6 +354,96 @@ const StyledLocall = styled.div`
     }
 `
 
+const StyledContainerEvents = styled.section`
+    width: 100%;
+    height: 80vh;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px){
+        height: auto;
+        padding: 5% 2.5%;
+    }
+`
+
+const events = [
+    {
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131262/frutosdomar_xqfm5b.jpg',
+        title: 'Frutos do mar',
+        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '354,20',
+        discount: 25,
+    },
+    {
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131254/buteco_ck7tmg.jpg',
+        title: 'Noite do Boteco',
+        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '354,20',
+        discount: 25,
+    },
+    {
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
+        title: 'Noite das pizzas',
+        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '354,20',
+        discount: 25,
+    },
+    {
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131253/arabe_orkglt.png',
+        title: 'Noite Árabe',
+        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '354,20',
+        discount: 25,
+    },
+    {
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131254/massas_geg7x7.jpg',
+        title: 'Noite de Massas',
+        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '354,20',
+        discount: 25,
+    },
+    {
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730131256/hamburguer_jbi1rv.jpg',
+        title: 'Noite de Hámburguer',
+        dateRange: '20/09/2024 até 22/09/2024 (2 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Música ao vivo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '354,20',
+        discount: 25,
+    },
+    // Adicione mais eventos conforme necessário
+];
+
 const Serra = () => {
     return (
         <>
@@ -463,6 +555,10 @@ const Serra = () => {
             {/* <Atracoes /> */}
 
             <Depoimentos />
+
+            <StyledContainerEvents>
+                <EventCardCarousel events={events} />
+            </StyledContainerEvents>
 
             <Footer />
         </>

@@ -35,9 +35,8 @@ const CardContainer = styled(motion.div)`
     border-radius: 12px;
     overflow: hidden;
     width: 100%;
-    border: 1px solid var(--color--black);
     animation: ${waterWave2} 5s ease-in-out infinite;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 
     @media (max-width: 768px){
         border: none;

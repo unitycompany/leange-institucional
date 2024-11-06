@@ -220,7 +220,7 @@ const StyledAcomoda = styled.section`
     flex-direction: column;
     gap: 20px;
     padding: 2.5% 5%;
-    background-color: var(--color--black);
+    background-color: rgba(0, 0, 0, 0.1);
     clip-path: polygon(1% 1%, 99% 1%, 99% 99%, 1% 99%);
 
     @media (max-width: 768px){
@@ -343,7 +343,7 @@ const StyledEstruturaTitle2 = styled.h1`
     justify-content: center;
     gap: 10px;
     font-family: var(--font--comfortaa);
-    color: var(--color--white);
+    color: var(--color--black);
 
     @media (max-width: 768px){
         display: inline-block;
@@ -369,7 +369,7 @@ const StyledEstruturaTitle = styled.h1`
         display: inline-block;
         font-size: 1.3rem;
         line-height: 110%;
-        width: 95%;
+        width: 100%;
         margin-left: 2.5%;
     }
 
@@ -379,7 +379,7 @@ const StyledEstruturaSubTitle = styled.p`
     width: 100%;
     text-align: center;
     font-family: var(--font--avenir);
-    color: var(--color--white);
+    color: var(--color--black);
     opacity: 0.7;
 
     @media (max-width: 768px){
@@ -479,7 +479,7 @@ const StyledCarrosselSection = styled.section`
 
 const StyledContainerEvents = styled.section`
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     padding: 0 5%;
     display: flex;
     align-items: center;
@@ -577,7 +577,7 @@ const Home = () => {
             
             <StyledEstrutura>
                 <div>
-                    <StyledEstruturaTitle>Carinho em cada <StyledColorBBlue>detalhe</StyledColorBBlue> <BiSolidHomeHeart /> </StyledEstruturaTitle>
+                    <StyledEstruturaTitle>Carinho em cada <StyledColorBBlue>detalhe</StyledColorBBlue></StyledEstruturaTitle>
                     <StyledEstruturaSubTitle>Venha ter essa experiência</StyledEstruturaSubTitle>
                 </div>
                 <CoverflowSliderComponent

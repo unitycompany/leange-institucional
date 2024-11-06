@@ -19,7 +19,6 @@ const AcomodaContainer = styled.section`
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: var(--color--green);
     
     @media(max-width: 768px){
         height: auto;
@@ -115,7 +114,7 @@ const SuiteContent = styled.main`
     flex-direction: column;
     gap: 20px;
     padding: 25px;
-    background-color: var(--color--white);
+    background-color: rgba(0, 0, 0, 0.1);
     border-radius: 0px 30px 0px 10px;
     
     @media (max-width: 768px){
@@ -230,7 +229,7 @@ const Features = styled.div`
         display: flex;
         align-items: center;
         gap: 5px;
-        background: rgba(0, 0, 0, 0.1);
+        background: var(--color--white);
         backdrop-filter: blur(10px);
         justify-content: center;
         gap: 10px;

@@ -20,7 +20,7 @@ const AcomodaContainer = styled.section`
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: var(--color--blue);
+    background-color: rgba(0 ,0, 0 ,0.1);
 
     @media(max-width: 768px){
         height: auto;
