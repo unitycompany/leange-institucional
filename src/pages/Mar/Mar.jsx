@@ -523,7 +523,6 @@ const Mar = () => {
 
             </StyledSectionEspaco> 
 
-
             <AcomodaComponent2 images={ImagesAcomoda}/>
 
             <Pensao colorDefinedBold="var(--color--blue)" />

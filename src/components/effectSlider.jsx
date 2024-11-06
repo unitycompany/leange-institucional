@@ -174,7 +174,7 @@ const CoverflowSliderComponent = ({
                 coverflowEffect={{
                     rotate: 50,
                     stretch: 50,
-                    depth: 200,
+                    depth: 300,
                     modifier: 1,
                     slideShadows: true,
                 }}
