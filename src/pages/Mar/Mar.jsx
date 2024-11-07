@@ -69,6 +69,7 @@ const StyledHomeDiv = styled(motion.div)`
         width: 100%;
         border-radius: 0px;
         border-image: fill 0 linear-gradient(#0001, #ffffff);
+        box-shadow: none;
         position: absolute;
         height: 80%;
         top: 0;

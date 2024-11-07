@@ -244,7 +244,7 @@ const SobreContainer = styled.section`
 
                 & > p{
                     color: var(--color--white);
-                    font-family: var(--font--avenir);
+                    font-family: var(--font--comfortaa);
                     line-height: 100%;
 
                     @media (max-width: 768px){
@@ -384,6 +384,7 @@ const CasamentoContainer = styled.section`
             font-size: 2.2rem;
             font-family: var(--font--comfortaa);
             font-weight: 100;
+            color: var(--color--black);
 
             @media (max-width: 768px){
                 background-color: var(--color--white);
@@ -402,11 +403,10 @@ const CasamentoContainer = styled.section`
             font-family: var(--font--comfortaa);
             width: 70%;
             line-height: 120%;
-        
             font-weight: 100;
 
             @media (max-width: 768px){
-    
+                font-family: var(--font--comfortaa);
                 width: 100%;
                 font-size: 1rem;
                 margin-top: 5px;
@@ -553,6 +553,7 @@ const NiverContainer = styled.section`
             font-size: 2.2rem;
             font-family: var(--font--comfortaa);
             font-weight: 100;
+            color: var(--color--black);
 
             @media (max-width: 768px){
     
@@ -576,7 +577,7 @@ const NiverContainer = styled.section`
             font-weight: 100;
 
             @media (max-width: 768px){
-    
+                font-family: var(--font--comfortaa);
                 width: 100%;
                 font-size: 1rem;
                 margin-top: 5px;
@@ -617,6 +618,7 @@ const Eventos = () => {
                     <h1>Do alto da <b><a href='#/serra'>Serra</a></b>,<br></br> às ondas do <b><a href='#/mar'>Mar</a></b></h1>
                     <p>Venha celebrar na LeAnge, onde o amor pelos pets encontra o cenário perfeito para os seus eventos.</p>
                     <Button 
+                    onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
                     text="Fazer meu evento"
                     />
                 </div>
@@ -649,6 +651,7 @@ const Eventos = () => {
                             <p>Fundada em 2018, a Pousada LeAnge nasceu da paixão dos seus fundadores pelo amor aos pets, bem-estar e hospitalidade. Localizada em Miguel Pereira, a LeAnge Serra proporciona uma experiência única na região serrana do Rio de Janeiro, sendo um verdadeiro refúgio entre as belezas naturais da Mata Atlântica.
                             </p>
                             <Button 
+                            onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
                             text="Fazer reserva"
                             />
                         </div>
@@ -659,6 +662,7 @@ const Eventos = () => {
                             <p>Fundada em 2018, a Pousada LeAnge nasceu da paixão dos seus fundadores pelo amor aos pets, bem-estar e hospitalidade. Localizada em Miguel Pereira, a LeAnge Serra proporciona uma experiência única na região serrana do Rio de Janeiro, sendo um verdadeiro refúgio entre as belezas naturais da Mata Atlântica.
                             </p>
                             <Button 
+                            onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
                             text="Fazer reserva"
                             />
                         </div>
