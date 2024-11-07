@@ -135,6 +135,7 @@ const CarrosselContainer = styled.section`
     align-items: center;
     justify-content: center;
 
+
     @media (max-width: 768px){
         height: auto;
         padding: 7% 2.5%;
@@ -273,24 +274,32 @@ const SobreContainer = styled.section`
 `
 
 const images1 = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219568/5_ixs7te.jpg', alt: 'Imagem 1' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219564/1_ocvsg5.jpg', alt: 'Imagem 1' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219563/8_bo21xo.jpg', alt: 'Imagem 1' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219563/3_mytnsf.jpg', alt: 'Imagem 1' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219562/6_ju1e1x.jpg', alt: 'Imagem 1' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730219563/2_ydykif.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998910/espaco10_zbobfs.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998910/espaco6_dfprnt.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998905/espaco1_e9bneq.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998903/espaco4_wmcp95.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998906/espaco3_awfzgo.jpg', alt: 'Imagem 1' },
+
+];
+
+const images2 = [
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998908/espaco9_ldc1oy.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998907/espaco8_pzjgiz.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998907/espaco2_twf5e1.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998907/espaco5_gzy5ng.jpg', alt: 'Imagem 1' },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730998908/espaco7_nlscx5.jpg', alt: 'Imagem 1' },
 
 ];
 
 const CasamentoContainer = styled.section`
     width: 100%;
-    height: 120vh;
+    height: 100vh;
     padding: 0 5%;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    background-color: #F7E7CE;
+    gap: 25px;
+    background-color: rgba(0, 0, 0, 0.1);
 
     @media (max-width: 768px){
         height: auto;
@@ -299,8 +308,9 @@ const CasamentoContainer = styled.section`
     }
 
     & > div{
-        width: 50%;
-        height: 80%;
+        width: 45%;
+        height: 90%;
+    
 
         @media (max-width: 768px){
             width: 100%;
@@ -311,7 +321,9 @@ const CasamentoContainer = styled.section`
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 40px 0 40px 0;
+            border-radius: 70px 20px 40px 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
 
             @media (max-width: 768px){
                 border-radius: 25px 0 25px 0; 
@@ -324,16 +336,18 @@ const CasamentoContainer = styled.section`
 
         & > div {
             width: 100%;
-            height: 25%;
+            height: 35%;
             display: flex;
             align-items: center;
             justify-content: space-between;
+        
 
             & > img {
                 width: 32%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 30px 0 30px 0;
+                border-radius: 20px 0 20px 0;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
                 @media (max-width: 768px){
                     height: 15vh;
@@ -345,27 +359,35 @@ const CasamentoContainer = styled.section`
     }
 
     & > div:nth-child(2){
-        padding: 10px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        width: 55%;
         align-items: flex-start;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 20px 30px 20px 0px;
+        background-color: var(--color--white);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    
 
         @media (max-width: 768px){
             align-items: center;
             width: 100%;
-            margin-top: -25px;
+            margin-top: -20px;
             height: auto;
             gap: 15px;
         }
 
         & > h1{
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-family: var(--font--comfortaa);
+            font-weight: 100;
 
             @media (max-width: 768px){
-
-                background-color: #F7E7CE;
+                background-color: var(--color--white);
+                margin-top: 12px;
                 padding: 5px 15px;
                 color: var(--color--black);
                 border-radius: 5px 15px 0 0;
@@ -377,9 +399,11 @@ const CasamentoContainer = styled.section`
 
         & > p{
             font-size: 1rem;
-            font-family: var(--font--avenir);
+            font-family: var(--font--comfortaa);
             width: 70%;
-            line-height: 100%;
+            line-height: 120%;
+        
+            font-weight: 100;
 
             @media (max-width: 768px){
     
@@ -398,6 +422,11 @@ const CasamentoContainer = styled.section`
             flex-wrap: wrap;
             width: 100%;
             gap: 5px;
+            
+            @media(max-width: 768px){
+                margin-bottom: 10px;
+            }
+        
         }
         
     }
@@ -406,17 +435,18 @@ const CasamentoContainer = styled.section`
 const StyledItemEvent = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.2);
     display: inline-flex;
-    padding: 3px 8px;
+    padding: 4px 8px;
     align-items: center;
     justify-content: flex-start;
     width: auto;
     gap: 10px;
     border-radius: 0 10px 0 10px;
-    font-size: 1rem;
+    font-size: .75rem;
     transition: all .2s ease;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(20px);
     font-family: var(--font--comfortaa);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
 
     @media (max-width: 768px){
         font-size: .8rem;
@@ -425,7 +455,7 @@ const StyledItemEvent = styled.div`
     }
 
     &:hover{
-        padding: 3px 10px;
+        padding: 5px 9px;
         background-color: var(--color--black);
         color: var(--color--white);
         cursor: default;
@@ -439,8 +469,9 @@ const NiverContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
-    background-color: #D3D3D3;
+    gap: 25px;
+    background-color: var(--color--white);
+
 
     @media (max-width: 768px){
         height: auto;
@@ -449,8 +480,9 @@ const NiverContainer = styled.section`
     }
 
     & > div{
-        width: 50%;
-        height: 80%;
+        width: 45%;
+        height: 90%;
+    
 
         @media (max-width: 768px){
             width: 100%;
@@ -461,7 +493,8 @@ const NiverContainer = styled.section`
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 40px 0 40px 0;
+            border-radius: 20px 80px 40px 60px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 
             @media (max-width: 768px){
                 border-radius: 25px 0 25px 0; 
@@ -474,7 +507,7 @@ const NiverContainer = styled.section`
 
         & > div {
             width: 100%;
-            height: 25%;
+            height: 35%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -485,6 +518,8 @@ const NiverContainer = styled.section`
                 height: 100%;
                 object-fit: cover;
                 border-radius: 30px 0 30px 0;
+            
+                box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 
                 @media (max-width: 768px){
                     height: 15vh;
@@ -496,11 +531,15 @@ const NiverContainer = styled.section`
     }
 
     & > div:nth-child(1){
-        padding: 15px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 30px 10px 40px 0px;
+        width: 55%;
+    
 
         @media (max-width: 768px){
             align-items: center;
@@ -513,10 +552,12 @@ const NiverContainer = styled.section`
         & > h1{
             font-size: 2.2rem;
             font-family: var(--font--comfortaa);
+            font-weight: 100;
 
             @media (max-width: 768px){
     
-                background-color: #D3D3D3;
+                background-color: var(--color--white);
+                margin-top: 20px;
                 padding: 5px 15px;
                 color: var(--color--black);
                 border-radius: 5px 15px 0 0;
@@ -527,10 +568,12 @@ const NiverContainer = styled.section`
         }
 
         & > p{
-            font-size: 1.2rem;
-            font-family: var(--font--avenir);
+            font-size: 1.1rem;
+            font-family: var(--font--comfortaa);
             width: 70%;
             line-height: 100%;
+        
+            font-weight: 100;
 
             @media (max-width: 768px){
     
@@ -549,6 +592,11 @@ const NiverContainer = styled.section`
             flex-wrap: wrap;
             width: 100%;
             gap: 5px;
+
+            @media(max-width: 768px){
+                margin-bottom: 10px;
+            }
+        
         }
 
         
@@ -725,7 +773,7 @@ const Eventos = () => {
             
             <CarrosselContainer>
                 <SliderComponent3
-                        content={images1} 
+                        content={images2} 
                         spaceBetween={20} 
                         slidesPerView={1} 
                         width="100%"
