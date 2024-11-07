@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion'; // Importando motion
 import { TbChristmasBall } from "react-icons/tb";
 
-const ModalContainer = styled.div`
+const ModalContainer = styled(motion.div)` // Aplicando motion ao ModalContainer
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +16,7 @@ const ModalContainer = styled.div`
   z-index: 1000;
 `;
 
-const ModalCard = styled.div`
+const ModalCard = styled(motion.div)` // Aplicando motion ao ModalCard
   background: white;
   border-radius: 60px 20px 35px 10px;
   padding: 20px;
@@ -55,20 +56,42 @@ const ModalCard = styled.div`
   }
 `;
 
-const CloseButton = styled.button`
+const CloseButton = styled(motion.button)` // Aplicando motion ao CloseButton
   background: transparent;
-  border: none;
   font-size: 50px;
   position: absolute;
-  top: 5px;
+  top: 10px;
   right: 15px;
   cursor: pointer;
-  color: var(--color--white);
+  color: rgba(255, 0, 0, 1);
   font-family: var(--font--comfortaa);
   font-weight: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 0, 0, 1);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s ease;
+
+  @media(max-width: 768px){
+    width: 35px;
+    height: 35px;
+    font-size: 35px;
+  }
+
+  &:hover{
+    background-color: var(--color--white);
+    color: var(--color--black);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    border: 1px solid var(--color--white);
+  }
 `;
 
-const WhatsAppButton = styled.a`
+const WhatsAppButton = styled(motion.a)` // Aplicando motion ao WhatsAppButton
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +120,7 @@ const WhatsAppButton = styled.a`
   }
 `;
 
-const SuiteCountCircle = styled.div`
+const SuiteCountCircle = styled(motion.div)` // Aplicando motion ao SuiteCountCircle
   position: absolute;
   top: -25px;
   left: -25px;
@@ -134,14 +157,40 @@ const PromotionModal = () => {
 
   return (
     isOpen && (
-      <ModalContainer>
-        <ModalCard>
-          <CloseButton onClick={handleClose}>×</CloseButton>
-          <SuiteCountCircle>
+      <ModalContainer
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <ModalCard
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <CloseButton
+            onClick={handleClose}
+            whileHover={{ scale: 1 }}
+            transition={{ duration: 0.2 }}
+          >
+            ×
+          </CloseButton>
+          <SuiteCountCircle
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             {suiteCount} {suiteText}
           </SuiteCountCircle>
           <p>Aproveite nossa promoção especial. Clique abaixo para mais informações.</p>
-          <WhatsAppButton href="https://wa.me/5511999999999" target="_blank">
+          <WhatsAppButton
+            href="https://wa.me/5511999999999"
+            target="_blank"
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}
+          >
             Fazer minha reserva agora!
             <TbChristmasBall />
           </WhatsAppButton>

@@ -7,6 +7,34 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 
+// Animação de loading
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const LoadingOverlay = styled.div`
+  display: ${({ isLoading }) => (isLoading ? 'flex' : 'none')};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Garantir que fique acima de outros elementos */
+
+  & img {
+    width: 350px; /* Ajuste o tamanho do GIF aqui */
+    height: auto;
+  }
+`;
+
 const StyledDiv = styled.div`
     display: none;
 
@@ -98,7 +126,7 @@ const IconContainer = styled.span`
     transition: opacity 0.3s ease, transform 0.3s ease, width 0.3s ease, height 0.3s ease;
     overflow: hidden;
 
-    ${({ isVisible }) => isVisible && `
+    ${({ isVisible }) => isVisible && ` 
         width: 13px;
         height: 13px;
         opacity: 1;
@@ -200,7 +228,7 @@ const Sidebar = styled.div`
     transform: translateX(-100%);
     transition: transform 0.3s ease;
 
-    ${({ isOpen }) => isOpen && `
+    ${({ isOpen }) => isOpen && ` 
         transform: translateX(0);
     `}
 
@@ -248,6 +276,7 @@ const NavegationBar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     let scrollTimeout;
 
     const toggleSidebar = () => {
@@ -277,6 +306,20 @@ const NavegationBar = () => {
     }, []);
 
     useEffect(() => {
+        if (location.pathname !== "/") { // Verifica se não está na home
+            setIsLoading(true);
+            // O carregamento deve durar exatamente 1 segundo
+            const loadingTimer = setTimeout(() => {
+                setIsLoading(false);
+            }, 1000); // Duração do GIF
+
+            return () => clearTimeout(loadingTimer);
+        } else {
+            setIsLoading(false); // Garante que o loading esteja falso na home
+        }
+    }, [location.pathname]);
+
+    useEffect(() => {
         if (location.pathname === "/event") {
             setShowConfetti(true);
             setConfettiVisible(true);
@@ -293,6 +336,9 @@ const NavegationBar = () => {
 
     return (
         <>
+            <LoadingOverlay isLoading={isLoading}>
+                <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1731005268/1107_3_uoa5ff.gif" alt="Loading..." />
+            </LoadingOverlay>
             <StyledDiv isScrolled={isScrolled}>
                 {showConfetti && (
                     <ConfettiContainer isVisible={confettiVisible}>
@@ -312,19 +358,18 @@ const NavegationBar = () => {
                     <StyledLink to="/sobre" isActive={location.pathname === "/sobre"}><IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós</StyledLink>
                     <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountain /></IconContainer>Le Ange Serra</StyledLink>
-                    {/* <StyledLink to="/leange#pacotes" isActive={location.pathname === "/home" && location.hash === "#pacotes"}><IconContainer isVisible={location.pathname === "/home" && location.hash === "#pacotes"}><FaBed /></IconContainer>Pacotes</StyledLink> */}
                     <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton>
                     <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"}><IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações</StyledLink>
                 </StyledHeader>
                 <Button
-                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
-                text="Fazer minha reserva"
+                    onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                    text="Fazer minha reserva"
                 />
             </StyledDiv>
 
             <MobileBar isScrolled={isScrolled}>
-                    <img src={Logo} alt='logo da le ange' />
-                    <button onClick={toggleSidebar} isClicked={isClicked}>
+                <img src={Logo} alt='logo da le ange' />
+                <button onClick={toggleSidebar} isClicked={isClicked}>
                     Menu
                     <HiBars3BottomRight />
                 </button>
@@ -346,9 +391,6 @@ const NavegationBar = () => {
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/serra"}><FaMountain /></IconContainer>Le Ange Serra
                     </StyledLink>
-                    {/* <StyledLink to="/home/#pacotes" isActive={location.pathname === "/home/#pacotes"} onClick={closeSidebar}>
-                        <IconContainer isVisible={location.pathname === "/home/#pacotes"}><FaBed /></IconContainer>Pacotes
-                    </StyledLink> */}
                     <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos
                     </EventButton>
@@ -357,9 +399,9 @@ const NavegationBar = () => {
                     </StyledLink>
                 </div>
                 <Button
-                text="Fazer minha reserva"
-                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
-                 />
+                    text="Fazer minha reserva"
+                    onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                />
             </Sidebar>
         </>
     );
