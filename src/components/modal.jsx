@@ -13,7 +13,6 @@ const ModalContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  filtecontrast(120%r
 `;
 
 const ModalCard = styled.div`
@@ -65,7 +64,6 @@ const CloseButton = styled.button`
   right: 15px;
   cursor: pointer;
   color: var(--color--white);
-  filtecontrast(120%r
   font-family: var(--font--comfortaa);
   font-weight: 100;
 `;
