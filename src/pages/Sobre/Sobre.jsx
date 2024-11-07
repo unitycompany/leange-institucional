@@ -955,7 +955,7 @@ const Sobre = () => {
                 hoverBorderColor="var(--color--white)"
                 hoverColor="var(--color--white)"
                 hoverIconColor="var(--color--white)"
-                onClick={() => alert("Reservado!")}
+                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 />
             </CTA>
 

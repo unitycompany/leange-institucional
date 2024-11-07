@@ -49,9 +49,10 @@ const InicioContainer = styled.section`
         & > h1{
             font-size: 3.5rem;
             width: 100%;
-            line-height: 120%;
+            line-height: 100%;
             font-family: var(--font--comfortaa);
-            font-weight: 200;
+            color: var(--color--black);
+            font-weight: 100;
 
             @media (max-width: 768px){
                 font-size: 1.8rem;
@@ -60,7 +61,7 @@ const InicioContainer = styled.section`
             }
 
             & > b{
-                font-weight: 400;
+                font-weight: 100;
             }
 
             & > b > a{
@@ -70,6 +71,8 @@ const InicioContainer = styled.section`
 
             & > b > a:hover{
                 opacity: 0.8;
+                border: 1px solid;
+                padding: 0 5px;
             }
 
             & > b:nth-child(1) > a{
@@ -82,11 +85,12 @@ const InicioContainer = styled.section`
         }
 
         & > p{
-            font-family: var(--font--avenir);
-            font-size: 1.2rem;
+            font-family: var(--font--comfortaa);
+            font-size: 1rem;
             color: var(--color--black);
-            width: 70%;
-            line-height: 100%;
+            width: 80%;
+            line-height: 120%;
+            font-weight: 100;
 
             @media (max-width: 768px){
                 font-size: 1rem;
@@ -562,7 +566,7 @@ const Eventos = () => {
             <InicioContainer>
 
                 <div>
-                    <h1>Do alto da <b><a href='#'>Serra</a></b>,<br></br> às ondas do <b><a href='#'>Mar</a></b></h1>
+                    <h1>Do alto da <b><a href='#/serra'>Serra</a></b>,<br></br> às ondas do <b><a href='#/mar'>Mar</a></b></h1>
                     <p>Venha celebrar na LeAnge, onde o amor pelos pets encontra o cenário perfeito para os seus eventos.</p>
                     <Button 
                     text="Fazer meu evento"
@@ -709,13 +713,13 @@ const Eventos = () => {
                     text="Fazer reserva"
                     />
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto do casamento' />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto do casamento' />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730986303/niver5_vqhh94.png" alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730986303/niver3_katslf.jpg" alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730986304/niver2_rb3hvs.png" alt='foto do casamento' />
                     </div>
                 </div>
                 <div>
-                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730202199/home_cmvjd9.png" alt='foto do casamento' />
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730985907/niver1_zyq8zi.png" alt='foto de aniversário' />
                 </div>
             </NiverContainer>
             

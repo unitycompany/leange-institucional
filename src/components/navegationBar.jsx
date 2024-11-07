@@ -313,7 +313,7 @@ const NavegationBar = () => {
                     <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountain /></IconContainer>Le Ange Serra</StyledLink>
                     {/* <StyledLink to="/leange#pacotes" isActive={location.pathname === "/home" && location.hash === "#pacotes"}><IconContainer isVisible={location.pathname === "/home" && location.hash === "#pacotes"}><FaBed /></IconContainer>Pacotes</StyledLink> */}
-                    {/* <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton> */}
+                    <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton>
                     <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"}><IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações</StyledLink>
                 </StyledHeader>
                 <Button
@@ -349,9 +349,9 @@ const NavegationBar = () => {
                     {/* <StyledLink to="/home/#pacotes" isActive={location.pathname === "/home/#pacotes"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/home/#pacotes"}><FaBed /></IconContainer>Pacotes
                     </StyledLink> */}
-                    {/* <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
+                    <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos
-                    </EventButton> */}
+                    </EventButton>
                     <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações
                     </StyledLink>

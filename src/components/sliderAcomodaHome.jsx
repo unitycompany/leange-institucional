@@ -30,8 +30,9 @@ const SwiperStyles = createGlobalStyle`
       opacity: 0.7;
       &.swiper-pagination-bullet-active {
           background: #A5C933;
-      }}
-`
+      }
+  }
+`;
 
 // Keyframes for animation
 const waterWave = keyframes`

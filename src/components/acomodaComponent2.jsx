@@ -234,7 +234,7 @@ const AcomodaComponent2 = ({ images }) => {
                         hoverBorderColor="var(--color--white)"
                         hoverColor="var(--color--white)"
                         hoverIconColor="var(--color--white)"
-                        onClick={() => alert("Reservado!")}
+                        onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                     />
                 </div>
             </StyledAcomodaTexts>
@@ -246,7 +246,7 @@ const AcomodaComponent2 = ({ images }) => {
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <img src={image.src} alt={`Imagem ${index + 1}`} />
-                        <span onClick={() => alert("Conhecendo suíte")}>
+                        <span onClick={() => window.location.href = "#/acomoda"}>
                             {hoveredIndex === index ? "Conhecer Suíte" : image.text}
                             {hoveredIndex === index && <FaArrowRight />}
                         </span>

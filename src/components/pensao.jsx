@@ -178,7 +178,7 @@ const Pensao = ({ colorDefinedBold }) => {
                     hoverBorderColor="var(--color--black)"
                     hoverColor="var(--color--black)"
                     hoverIconColor="var(--color--black)"
-                    onClick={() => alert("Reservado!")}
+                    onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 />
             </StyledPensaoTexts>
         </StyledSectionPensao>

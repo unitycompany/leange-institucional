@@ -11,9 +11,9 @@ const StyledButtonAcomodo = styled.button`
   gap: 5px; /* Ajusta a distância entre o texto e o ícone */
   padding: 0px 20px;
   font-size: 12px;
-  background-color: ${({backDefine}) => backDefine || 'var(--color--white)'};
+  background-color: ${({ backDefine }) => backDefine || 'var(--color--white)'};
   border-radius: 10px;
-  color: ${({colorDefine}) => colorDefine || 'var(--color--black)'};
+  color: ${({ colorDefine }) => colorDefine || 'var(--color--black)'};
   border: none;
   position: relative;
   cursor: pointer;
@@ -46,16 +46,21 @@ const StyledButtonAcomodo = styled.button`
   }
 `;
 
-const ButtonAcomoda = ({ text, suiteId, backDefine, colorDefine, onClick}) => {
+const ButtonAcomoda = ({ text, suiteId, backDefine, colorDefine }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    console.log("Navegando para:", `/acomoda#${suiteId}`); 
-    navigate(`/acomoda#${suiteId}`); 
+    const targetUrl = `/acomoda#${suiteId}`; // URL alvo com hash
+    console.log("Navegando para:", targetUrl); // Log da URL
+    navigate(targetUrl); // Navega para a URL
   };
   
   return (
-    <StyledButtonAcomodo backDefine={backDefine} colorDefine={colorDefine} onClick={onClick}>
+    <StyledButtonAcomodo 
+      backDefine={backDefine} 
+      colorDefine={colorDefine} 
+      onClick={handleClick} // Chama handleClick ao clicar no botão
+    >
       {text}
       <FaArrowRight className="icon" />
     </StyledButtonAcomodo>

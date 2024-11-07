@@ -127,7 +127,7 @@ const PetFriendlyCarousel = () => {
                     hoverBorderColor="var(--color--black)"
                     hoverColor="var(--color--white)"
                     hoverIconColor="var(--color--white)"
-                    onClick={() => alert("Reservado!")}
+                    onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 />
             </StyledTextPet>
 

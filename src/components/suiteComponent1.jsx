@@ -330,14 +330,17 @@ const SuiteComponent = React.forwardRef(({ suites }, ref) => {
                     pagination={false} 
                     spaceBetween={20}
                     modules={[Navigation, Pagination]}
+                    onInit={(swiper) => {
+                        console.log('Swiper inicializado', swiper);
+                        console.log('Número de slides:', swiper.slides.length); // Log o número de slides
+                    }}
                 >
                     {suites.map((suite, index) => {
                         const [currentImage, setCurrentImage] = useState(suite.images[0]);
 
                         return (
                             <SwiperSlide key={index}>
-                                <SuiteContainer id={`suíte-${suite.NomedaSuite.replace(/\s+/g, '-').toLowerCase()}`}
-                                >
+                                <SuiteContainer id={`suíte-${suite.NomedaSuite.replace(/\s+/g, '-').toLowerCase()}`}>
                                     <ImageCarousel>
                                         <MainImage src={currentImage} alt={suite.NomedaSuite} />
                                         <Thumbnails>

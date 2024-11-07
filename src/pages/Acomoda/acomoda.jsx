@@ -7,11 +7,9 @@ import { Swiper } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Certifique-se de importar o CSS do Swiper
 import { FaUtensils, FaMusic, FaPaw, FaShower, FaBath, FaBed, FaTv, FaFire, FaCloudSunRain } from 'react-icons/fa';
 
-
-
 const suites = [
     {
-        // id: "master-1",
+        id: "suite-1",
         NomedaSuite: "Suíte Superior 1",
         NomedaPousada: "Le Ange Serra",
         medida: "52m²",
@@ -38,9 +36,8 @@ const suites = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730145067/5_onjzk1.jpg',
         ]
     },
-
     {
-        // id: "master-2",
+        id: "suite-2",
         NomedaSuite: "Suíte Superior 2",
         NomedaPousada: "Le Ange Serra",
         medida: "52m²",
@@ -67,9 +64,8 @@ const suites = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730145605/5_olm5xn.jpg',
         ]
     },
-
     {
-        // id: "master-3",
+        id: "suite-3",
         NomedaSuite: "Suíte Superior 3",
         NomedaPousada: "Le Ange Serra",
         medida: "52m²",
@@ -95,9 +91,8 @@ const suites = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730145753/5_tsqexf.jpg',
         ]
     },
-
     {
-        // id: "master-2",
+        id: "suite-4",
         NomedaSuite: "Suíte Standard 4",
         NomedaPousada: "Le Ange Serra",
         medida: "52m²",
@@ -123,9 +118,8 @@ const suites = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730145971/5_kb5ean.jpg',
         ]
     },
-
     {
-        // id: "master-2",
+        id: "suite-5",
         NomedaSuite: "Suíte Standard 5",
         NomedaPousada: "Le Ange Serra",
         medida: "52m²",
@@ -151,10 +145,8 @@ const suites = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730146193/5_cwrlxp.jpg',
         ]
     },
-
     {
-        // id: "master-2",
-        id: "suite-master-6",
+        id: "suite-6",
         NomedaSuite: "Suíte Master 6",
         NomedaPousada: "Le Ange Serra",
         medida: "77m²",
@@ -182,9 +174,8 @@ const suites = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730146443/5_zjbujo.jpg',
         ]
     },
-
     {
-        // id: "master-2",
+        id: "suite-7",
         NomedaSuite: "Suíte Standard 7",
         NomedaPousada: "Le Ange Serra",
         medida: "52m²",
@@ -210,9 +201,8 @@ const suites = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730146631/4_hstjdq.jpg',
         ]
     },
-
     {
-        // id: "master-2",
+        id: "suite-8",
         NomedaSuite: "Suíte Standard 8",
         NomedaPousada: "Le Ange Serra",
         medida: "52m²",
@@ -238,9 +228,8 @@ const suites = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730146988/5_s3imtf.jpg',
         ]
     },
-
     {
-        // id: "master-2",
+        id: "suite-9",
         NomedaSuite: "Suíte Superior 9",
         NomedaPousada: "Le Ange Serra",
         medida: "52m²",
@@ -267,9 +256,8 @@ const suites = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730147147/5_texuuu.jpg',
         ]
     },
-
     {
-        // id: "master-2",
+        id: "suite-10",
         NomedaSuite: "Suíte Master 10",
         NomedaPousada: "Le Ange Serra",
         medida: "77m²",
@@ -302,7 +290,7 @@ const suites = [
 
 const suites2 = [
     {
-        // id: "master-1",
+        id: "suite2-1",
         NomedaSuite: "Suíte Superior 1",
         NomedaPousada: "Le Ange Mar",
         medida: "28m²",
@@ -329,9 +317,8 @@ const suites2 = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149633/5_bw0qou.jpg',
         ]
     },
-
     {
-        // id: "master-2",
+        id: "suite2-2",
         NomedaSuite: "Suíte Standard 2",
         NomedaPousada: "Le Ange Mar",
         medida: "30m²",
@@ -358,9 +345,8 @@ const suites2 = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149729/4_ulr721.jpg',
         ]
     },
-
     {
-        // id: "master-3",
+        id: "suite2-3",
         NomedaSuite: "Suíte Superior 3",
         NomedaPousada: "Le Ange Mar",
         medida: "32m²",
@@ -387,9 +373,8 @@ const suites2 = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149786/4_d5kp62.jpg',
         ]
     },
-
     {
-        // id: "master-3",
+        id: "suite2-4",
         NomedaSuite: "Suíte Superior 4",
         NomedaPousada: "Le Ange Mar",
         medida: "32m²",
@@ -416,9 +401,8 @@ const suites2 = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149838/5_lxdgp4.jpg',
         ]
     },
-
     {
-        // id: "master-3",
+        id: "suite2-5",
         NomedaSuite: "Suíte Superior 5",
         NomedaPousada: "Le Ange Mar",
         medida: "32m²",
@@ -445,10 +429,9 @@ const suites2 = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149917/3_hkxuyr.jpg',
         ]
     },
-
     {
-        // id: "master-3",
-        NomedaSuite: "Suíte Standard 6",
+        id: "suite2-6",
+        NomedaSuite: "Suíte Superior 6",
         NomedaPousada: "Le Ange Mar",
         medida: "32m²",
         adultos: "Até 2 adultos",
@@ -467,16 +450,15 @@ const suites2 = [
             { icon: <FaUtensils />, text: 'Varanda privativa' },
         ],
         images: [
-            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149976/1_tywkpb.jpg',
-            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149977/2_yvfwhn.jpg',
-            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149982/5_b7dida.jpg',
-            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149980/4_p22p1t.jpg',
-            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730149978/3_zpt6tw.jpg',
+            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730150026/1_usupcb.jpg',
+            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730150032/5_v3dnrs.jpg',
+            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730150032/4_n9wkv0.jpg',
+            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730150029/3_pjp0sr.jpg',
+            'https://res.cloudinary.com/dupg7clzc/image/upload/v1730150027/2_egxqmp.jpg',
         ]
     },
-
     {
-        // id: "master-3",
+        id: "suite2-7",
         NomedaSuite: "Suíte Master 7",
         NomedaPousada: "Le Ange Mar",
         medida: "32m²",
@@ -503,9 +485,8 @@ const suites2 = [
             'https://res.cloudinary.com/dupg7clzc/image/upload/v1730150027/2_egxqmp.jpg',
         ]
     },
-
     {
-        // id: "master-3",
+        id: "suite2-8",
         NomedaSuite: "Suíte Master 8",
         NomedaPousada: "Le Ange Mar",
         medida: "32m²",
@@ -540,15 +521,39 @@ const Acomodacoes = () => {
 
     useEffect(() => {
         const hash = location.hash; // Pega o hash da URL
+        console.log("Hash da URL:", hash); // Log do hash para depuração
 
         if (hash) {
             const suiteId = hash.replace('#', ''); // Remove o hash
             const index = suites.findIndex(suite => suite.id === suiteId); // Busca o índice da suíte
 
+            console.log("Índice da suíte:", index); // Log do índice para depuração
+
             if (index !== -1 && swiperRef.current) {
+                console.log("swiperRef:", swiperRef.current); // Log do swiperRef
+
+                // Adicionando um log para verificação da estrutura do Swiper
                 setTimeout(() => {
-                    swiperRef.current.swiper.slideTo(index); // Desloca para o slide correspondente
-                }, 100); // 100 ms de atraso
+                    console.log("Swiper HTML:", swiperRef.current.outerHTML); // Log da estrutura HTML do Swiper
+                    console.log("Número de slides:", swiperRef.current.swiper.slides.length); // Número de slides
+
+                    if (swiperRef.current) {
+                        console.log("Swiper está inicializado.");
+                        console.log("Métodos disponíveis no Swiper:", Object.keys(swiperRef.current.swiper)); // Log dos métodos
+
+                        try {
+                            swiperRef.current.swiper.update(); // Atualiza o Swiper
+                            swiperRef.current.swiper.slideTo(index); // Desloca para o slide correspondente
+                            console.log("Deslocando para o slide:", index); // Log para confirmar o deslocamento
+                        } catch (error) {
+                            console.error("Erro ao tentar deslizar:", error); // Log de erro ao tentar deslizar
+                        }
+                    } else {
+                        console.warn("Swiper não encontrado."); // Log de advertência
+                    }
+                }, 500); // Aumento do atraso para garantir que o Swiper esteja pronto
+            } else {
+                console.warn("Índice da suíte inválido ou Swiper não inicializado."); // Log de advertência
             }
         }
     }, [location]);

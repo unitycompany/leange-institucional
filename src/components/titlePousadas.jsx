@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom"; // Importa useNavigate
 import Button from "./button";
 import styled, { keyframes } from "styled-components";
 
@@ -52,7 +53,6 @@ const StyledDiv = styled(motion.div)`
         opacity: 0.1;
         left: 0;
         top: 0;
-        /* border: 1px solid var(--color--black); */
         background-image: url('../../public/background/background_black.webp');
         background-position: center;
         background-size: contain;
@@ -117,8 +117,14 @@ const TitlePousadas = ({
     buttonColor,
     buttonHover,
     buttonBorder,
-    onClick // Adiciona a prop onClick
+    targetPage // Adiciona a prop targetPage
 }) => {
+    const navigate = useNavigate(); // Inicializa useNavigate
+
+    const handleClick = () => {
+        navigate(targetPage); // Redireciona para a targetPage
+    };
+
     return (
         <StyledDiv
             borderColor={borderColor}
@@ -151,7 +157,7 @@ const TitlePousadas = ({
                 style={{ zIndex: 3 }}
             >
                 <Button 
-                    onClick={onClick} // Usa a prop onClick
+                    onClick={handleClick} // Chama a função de redirecionamento
                     text="Saber mais" 
                     backgroundColor={buttonColor}
                     borderColor={buttonBorder}
