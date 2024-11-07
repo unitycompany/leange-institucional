@@ -37,7 +37,7 @@ const StyledSectionHome = styled(motion.section)`
         top: 0vh;
         position: absolute;
         z-index: -1;
-        opacity: .1;
+        opacity: .05;
         background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730926399/IMG_0454_gpdc1l.jpg');
         background-position: center;
         background-size: cover;
@@ -61,7 +61,9 @@ const StyledHomeDiv = styled(motion.div)`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 100px 0px 100px 0px;
+    border-radius: 50px 10px 100px 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    filter: contrast(110%);
 
     @media (max-width: 768px){
         width: 100%;
@@ -91,9 +93,10 @@ const StyledHomeTexts = styled(motion.div)`
 
     & > h4 {
         font-family: var(--font--comfortaa);
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 200;
         color: var(--color--black);
+
 
         @media (max-width: 768px){
 
@@ -110,8 +113,10 @@ const StyledHomeTexts = styled(motion.div)`
         font-size: 65px;
         width: 100%;
         line-height: 100%;
+        font-weight: 100;
         color: var(--color--black);
         margin-top: -15px;
+
 
         @media (max-width: 768px){
  
@@ -126,6 +131,7 @@ const StyledHomeTexts = styled(motion.div)`
 
     & > h1 b {
         color: var(--color--blue);
+        font-weight: 100;
 
         @media (max-width: 768px){
             font-weight: 100;
@@ -133,15 +139,16 @@ const StyledHomeTexts = styled(motion.div)`
     }
 
     & > p {
-        font-family: var(--font--avenir);
+        font-family: var(--font--comfortaa);
         color: var(--color--black);
         text-align: right;
         font-size: 18px;
         line-height: 100%;
         width: 50%;
+        font-weight: 100;
+
 
         @media (max-width: 768px){
-
             width: 80%;
             font-size: 1rem;
             text-align: center;
@@ -256,28 +263,54 @@ const StyledSectionEstrutura = styled.section`
 `
 const slides = [
     {
-      title: "Tranquilidade",
-      description: "A área da sauna fica localizada ao lado da mata, A área da sauna fica localizada ao lado da mat, A área da sauna fica localizada ao lado da mata",
-      imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png",
+        title: "Pet Friendly",
+        description: "Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/petfriendly-scaled_vsev2s.webp"
     },
     {
-      title: "Conforto",
-      description: "Desfrute de acomodações de luxo...",
-      buttonText: "Reserve já seu lugar",
-      imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra2_lhgcj2.jpg",
+        title: "Praia",
+        description: "Para os amantes da praia, estamos a apenas 150 metros da areia da Praia Rasa, onde você e seu pet podem aproveitar juntinhos e dar um mergulho delicioso no mar.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/praia_flvqaf.webp"
     },
     {
-        title: "Tranquilidade",
-        description: "A área da sauna fica localizada ao lado da mata, A área da sauna fica localizada ao lado da mat, A área da sauna fica localizada ao lado da mata",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png",
-      },
-      {
-        title: "Conforto",
-        description: "Desfrute de acomodações de luxo...",
-        buttonText: "Reserve já seu lugar",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra2_lhgcj2.jpg",
-      },
-  ];
+        title: "Piscinas",
+        description: "Nossa piscina aquecida com vista panorâmica para o oceano é de surpreender! Possui tratamento especial por ozônio com níveis baixíssimos de cloro, pensando no bem-estar da sua pele a do seu pet também!",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/piscina_vw7plw.webp"
+    },
+    {
+        title: "Ofurôs",
+        description: "São dois ofurôs acoplados na piscina, para você relaxar na água quentinha, apreciando a vista exuberante do mar.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/ofuros_zeqb9x.webp"
+    },
+    {
+        title: "Sala de estar",
+        description: "A sala de estar é aquela que abraça e aconchega. Cheia de sofás, você pode se acomodar e assistir uma televisão, ou até mesmo ler um livro, sempre na companhia do seu pet.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/saladeestar_yakcqy.webp"
+    },
+    {
+        title: "Cozinha",
+        description: "Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/cozinha_q3rrwr.webp"
+    },
+    {
+        title: "Bar",
+        description: "Para completar ainda mais sua experiência, contamos com uma carta variada de vinhos, destilados, drinks e cervejas!",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832503/bar_qgdbog.webp"
+    },
+    {
+        title: "Suítes",
+        description: "São 8 suítes elegantemente decoradas, todas com vista para o mar, banheira de imersão, varanda, cama king size, ar condicionado e frigobar.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/suites_px4fhy.webp"
+    }
+];
 
 const StyledSectionEspaco = styled.section`
     width: 100%;
@@ -336,14 +369,15 @@ const StyledLocal = styled.div`
 const StyledContainerEvents = styled.section`
     width: 100%;
     height: 80vh;
-    padding: 0 5%;
+    padding: 10% 5%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10vh;
 
     @media (max-width: 768px){
         height: auto;
-        padding: 5% 2.5%;
+        padding: 10% 2.5% 0 2.5%;
     }
 `
 
@@ -534,11 +568,12 @@ const Mar = () => {
 
             <PetFriendly />
 
-            <Depoimentos />
 
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
+
+            <Depoimentos />
 
             <Footer />
         </>

@@ -37,7 +37,7 @@ const StyledSectionHome = styled(motion.section)`
         top: 0vh;
         position: absolute;
         z-index: -1;
-        opacity: .1;
+        opacity: .05;
         background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730901634/9_iinz0o.png');
         background-position: center;
         background-size: cover;
@@ -60,7 +60,9 @@ const StyledHomeDiv = styled(motion.div)`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 0px 100px 0 100px;
+    border-radius: 100px 10px 50px 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    filter: contrast(110%);
 
     @media (max-width: 768px){
         width: 100%;
@@ -90,9 +92,10 @@ const StyledHomeTexts = styled(motion.div)`
 
     & > h4 {
         font-family: var(--font--comfortaa);
-        font-size: 22px;
+        font-size: 18px;
         font-weight: 200;
         color: var(--color--black);
+        font-weight: 100;
 
         @media (max-width: 768px){
 
@@ -106,10 +109,12 @@ const StyledHomeTexts = styled(motion.div)`
     & > h1 {
         font-family: var(--font--comfortaa);
         font-size: 65px;
+        margin-left: -5px;
         width: 100%;
         line-height: 100%;
         color: var(--color--black);
         margin-top: -15px;
+        font-weight: 100;
 
         @media (max-width: 768px){
  
@@ -117,6 +122,7 @@ const StyledHomeTexts = styled(motion.div)`
             width: 100%;
             font-size: 35px;
             text-align: center;
+            margin-left: 0;
             margin-top: -5px;
             font-weight: 100;
         }
@@ -124,6 +130,7 @@ const StyledHomeTexts = styled(motion.div)`
 
     & > h1 b {
         color: var(--color--green);
+        font-weight: 100;
         
         @media(max-width: 768px){
             font-weight: 100;
@@ -131,11 +138,12 @@ const StyledHomeTexts = styled(motion.div)`
     }
 
     & > p {
-        font-family: var(--font--avenir);
+        font-family: var(--font--comfortaa);
         color: var(--color--black);
         font-size: 18px;
         line-height: 100%;
         width: 50%;
+        font-weight: 100;
 
         @media (max-width: 768px){
 
@@ -270,40 +278,66 @@ const StyledSectionEstrutura = styled.section`
 
 const slides = [
     {
-      title: "Espaço",
-      description: "A área da sauna fica localizada ao lado da mata, A área da sauna fica localizada ao lado da mat, A área da sauna fica localizada ao lado da mata",
-      imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901634/9_iinz0o.png",
+        title: "Pet Friendly",
+        description: "Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833084/5_sfnitt.png"
     },
     {
-      title: "Cachoeira",
-      description: "Desfrute de acomodações de luxo...",
-      buttonText: "Reserve já seu lugar",
-      imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730901554/16_mwucoo.png",
+        title: "Aventura",
+        description: "Na propriedade, temos trilhas dentro da natureza, beirando o rio! Em diversos pontos você pode escolher dar uma paradinha para tomar um banho e renovar as energias!",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833084/8_tk7djv.png"
     },
     {
-    title: "Conforto",
-    description: "A área da sauna fica localizada ao lado da mata, A área da sauna fica localizada ao lado da mat, A área da sauna fica localizada ao lado da mata",
-    imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/biblioteca_l0ce1h.webp",
+        title: "Refrescar",
+        description: "Nossa maravilhosa piscina de borda infinita possui aquecimento solar e tratamento especial por ozônio, com níveis baixíssimos de cloro, além de contar com o ofurô aquecido, perfeito para aproveitar no final de tarde.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833082/6_jwjaru.png"
     },
     {
-    title: "Hot Tube",
-    description: "Desfrute de acomodações de luxo...",
-    buttonText: "Reserve já seu lugar",
-    imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/sauna-1_gmuhlq.webp",
+        title: "Sossego",
+        description: "A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/sauna-1_gmuhlq.webp"
     },
     {
-    title: "Tudo incluso",
-    description: "A área da sauna fica localizada ao lado da mata, A área da sauna fica localizada ao lado da mat, A área da sauna fica localizada ao lado da mata",
-    imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/cafedamanha_n4vr9z.jpg",
+        title: "Aconchego",
+        description: "Nossas áreas internas contam com três salas superequipadas e aconchegantes, sendo elas: sala de TV, sala de estar, sala de jogos com mesa de bilhar, carteado, jogos de tabuleiro e biblioteca.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/biblioteca_l0ce1h.webp"
     },
     {
-    title: "Hot Tube",
-    description: "Desfrute de acomodações de luxo...",
-    buttonText: "Reserve já seu lugar",
-    imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/sauna-1_gmuhlq.webp",
+        title: "Cozinha",
+        description: "Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/cafedamanha_n4vr9z.jpg"
     },
-  ];
-
+    {
+        title: "Diversão",
+        description: "Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet correr, pular e nadar!",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/IMG_7134-scaled_stgkmc.jpg"
+    },
+    {
+        title: "Adega",
+        description: "Para completar ainda mais sua experiência, contamos com uma adega subterrânea para climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/adega_n0cszf.jpg"
+    },
+    {
+        title: "Suítes",
+        description: "Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira com vista para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833076/suites_hsgvxw.webp"
+    },
+    {
+        title: "Relaxar",
+        description: "Relaxe em nosso SPA com uma vista de frente para a mata! Você pode escolher contratar nossos serviços de massoterapia, manicure, pedicure.",
+        buttonText: "Viver minha experiência agora",
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/slide04_li94ks.webp"
+    }
+];
 
 const StyledSectionEspaco = styled.section`
     width: 100%;
@@ -362,14 +396,16 @@ const StyledLocall = styled.div`
 const StyledContainerEvents = styled.section`
     width: 100%;
     height: 80vh;
-    padding: 0 5%;
+    padding: 10% 5%;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
 
     @media (max-width: 768px){
         height: auto;
-        padding: 5% 2.5%;
+        padding: 10% 2.5% 0 2.5%;
+        margin-top: 0;
     }
 `
 
@@ -559,11 +595,11 @@ const Serra = () => {
 
             {/* <Atracoes /> */}
 
-            <Depoimentos />
-
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
+
+            <Depoimentos />
 
             <Footer />
         </>

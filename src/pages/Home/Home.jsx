@@ -20,19 +20,21 @@ import PromotionModal from '../../components/modal';
 
 
 const images1 = [
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png", alt: 'Imagem 1', loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1729513693/9_hyv1zq.jpg", alt: 'Imagem 1', loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/3_d2soci.png", alt: 'Imagem 1', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/5_duax05.png", alt: 'Imagem 1', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/4_ouknmz.png", alt: 'Imagem 1', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png", alt: 'Imagem 1', loading: "lazy" }
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/diversao_jpykdy.jpg", alt: 'Imagem 1', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg", alt: 'Imagem 1', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730130111/fotoSerra1_pa28ry.jpg", alt: 'Imagem 1', loading: "lazy" }
 ];
 
 const images2 = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar1_lhebdi.webp', alt: 'Imagem 1', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar4_hexj9u.webp', alt: 'Imagem 3', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar5_k8fzcv.webp', alt: 'Imagem 1', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar3_sxa0i2.webp', alt: 'Imagem 2', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar2_d3y4tv.webp', alt: 'Imagem 3', loading: "lazy" }
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar1_lhebdi.webp', alt: 'imagem 1',loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730926455/IMG_0454_o2cwol.jpg', alt: 'Imagem 1', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920611/1_z2nkyx.png', alt: 'Imagem 3', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730901639/4_kuujqb.jpg', alt: 'Imagem 1', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/piscina_vw7plw.webp', alt: 'Imagem 2', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130098/IMG_0041_zv7w3d.jpg', alt: 'Imagem 3', loading: "lazy" }
 ];
 
 const images3 = [

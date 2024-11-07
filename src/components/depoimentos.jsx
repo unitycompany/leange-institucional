@@ -73,8 +73,8 @@ const DepoimentoText = styled.p`
     font-size: .6rem;
     border-radius: 0 10px 0 10px;
     position: absolute;
-    bottom: 75%;
-    left: -50px;
+    bottom: 72%;
+    left: -60px;
     transform: rotate(270deg);
     padding: 5px 25px;
     margin: 10px 0; /* Espaço entre o nome e o depoimento */
