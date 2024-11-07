@@ -31,7 +31,7 @@ const ModalCard = styled(motion.div)` // Aplicando motion ao ModalCard
   flex-direction: column;
   gap: 5px;
   font-family: var(--font--comfortaa);
-  background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1731002794/Untitled-1_i9wrqe.png');
+  background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1731008398/Untitled-31_gkzipm.png');
   background-size: cover;
   background-position: center;
   filter: contrast(120%);
@@ -39,6 +39,7 @@ const ModalCard = styled(motion.div)` // Aplicando motion ao ModalCard
   @media (max-width: 768px) {
     width: 85%;
     gap: 40px;
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1731008479/celular-1_02_ahubmo.png');
   }
 
   & > p {
@@ -143,13 +144,15 @@ const SuiteCountCircle = styled(motion.div)` // Aplicando motion ao SuiteCountCi
     width: 70px;
     height: 70px;
     font-size: .6rem;
+    left: -10px;
+    top: -10px;
   }
 `;
 
 const PromotionModal = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [suiteCount, setSuiteCount] = useState(7); // Quantidade de suítes disponíveis
-  const [suiteText, setSuiteText] = useState("súites disponíveis"); // Texto a ser exibido no círculo
+  const [suiteText, setSuiteText] = useState("suítes disponíveis"); // Texto a ser exibido no círculo
 
   const handleClose = () => {
     setIsOpen(false);

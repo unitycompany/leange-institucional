@@ -19,12 +19,13 @@ const SlideContent = styled.div`
   @media (max-width: 768px){
     border: 1px solid var(--color--black);
     border-radius: 15px 0 15px 0;
-    height: auto;
+    height: 75vh;
     flex-direction: column;
     width: 95%;
     margin-left: 2.5%;
-    padding: 20px;
+    padding: 15px;
     background: none;
+  
   }
 `;
 
@@ -41,6 +42,8 @@ const SlideText = styled.div`
     border: none;
     padding: 0;
     background: none;
+    height: 40vh;
+  
   }
 `;
 
@@ -55,6 +58,7 @@ const Title = styled.h2`
   @media (max-width: 768px){
     display: inline-block;
     font-size: 1.7rem;
+    height: auto;
   }
 `;
 
@@ -69,7 +73,7 @@ const Description = styled.p`
   @media (max-width: 768px){
     width: 100%;
     font-size: .9rem;
-    height: 10vh;
+    height: auto;
   }
 `;
 
@@ -78,6 +82,7 @@ const ImageContainer = styled.div`
   height: 100%;
 
   @media (max-width: 768px){
+    height: 30vh;
   }
 `;
 
@@ -106,7 +111,7 @@ const StyledSwiper = styled(Swiper)`
     z-index: 10;
     position: absolute;
     bottom: 20px!important;
-    top: 90% !important;
+    top: 95% !important;
 
     @media (max-width: 768px){
 

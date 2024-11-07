@@ -75,7 +75,7 @@ const StyledLink = styled(({ isActive, ...props }) => <Link {...props} />)`
     font-family: var(--font--avenir);
     padding: 5px 15px;
     transition: all 0.3s ease;
-    border-radius: var(--border--radius--btn);
+    border-radius: 10px 10px 0 10px;
     background-color: ${({ isActive, variant }) =>
         isActive
             ? variant === 'serra'
@@ -173,7 +173,7 @@ const MobileBar = styled.div`
         padding: 0 5%;
         height: 8vh;
         box-shadow: 0 0 5px #4d4d4d80;
-        border-radius: 10px;
+        border-radius: 10px 0 10px 0;
 
         & > img {
             width: 25%;
@@ -184,7 +184,7 @@ const MobileBar = styled.div`
         & > button {
             display: flex;
             width: 30%;
-            border-radius: 5px;
+            border-radius: 5px 0 5px 0;
             font-family: var(--font--comfortaa);
             border: none;
             font-size: 12px;
@@ -337,7 +337,7 @@ const NavegationBar = () => {
     return (
         <>
             <LoadingOverlay isLoading={isLoading}>
-                <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1731005268/1107_3_uoa5ff.gif" alt="Loading..." />
+                <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1731007469/V1_kdjdkc.gif" alt="Loading..." />
             </LoadingOverlay>
             <StyledDiv isScrolled={isScrolled}>
                 {showConfetti && (
