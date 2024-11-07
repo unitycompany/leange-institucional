@@ -401,23 +401,23 @@ const Footer = () => {
                     <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.3 }}>
                         <h2>Âncoras</h2>
                         <a href='#'> <MdOutlineArrowRight /> Início </a>
-                        <a href='#'> <MdOutlineArrowRight /> Acomodações </a>
-                        <a href='#'> <MdOutlineArrowRight /> Estrutura </a>
-                        <a href='#'> <MdOutlineArrowRight /> Pet Friendly </a>
-                        <a href='#'> <MdOutlineArrowRight /> Pacotes </a>
-                        <a href='#'> <MdOutlineArrowRight /> Atrações </a>
+                        <a href='#/sobre'> <MdOutlineArrowRight /> Sobre nós </a>
+                        <a href='#/serra'> <MdOutlineArrowRight /> Le Ange Serra </a>
+                        <a href='#/mar'> <MdOutlineArrowRight /> Le Ange Mar </a>
+                        <a href='#/eventos'> <MdOutlineArrowRight /> Eventos </a>
+                        <a href='#/acomoda'> <MdOutlineArrowRight /> Acomodações </a>
                     </motion.div>
                     <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.4 }}>
                         <h2>Ajuda</h2>
-                        <a href='#'> <MdOutlineArrowRight /> WhatsApp </a>
-                        <a href='#'> <MdOutlineArrowRight /> +55 (24) 98109-0909 </a>
-                        <a href='#'> <MdOutlineArrowRight /> pousadaleange@gmail.com </a>
+                        <a href="https://wa.link/dojlwi" target='_blank'> <MdOutlineArrowRight /> WhatsApp </a>
+                        <a href="https://wa.link/dojlwi" target='_blank'> <MdOutlineArrowRight /> +55 (21) 99423-0871 </a>
+                        <a href='mailto:pousadaleange@gmail.com' target='_blank'> <MdOutlineArrowRight /> pousadaleange@gmail.com </a>
                     </motion.div>
                     <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.5 }}>
                         <h2>Fique por dentro de tudo</h2>
-                        <a href='#'> <MdOutlineArrowRight /> Instagram </a>
-                        <a href='#'> <MdOutlineArrowRight /> TikTok </a>
-                        <a href='#'> <MdOutlineArrowRight /> Pinterest </a>
+                        <a href='https://www.instagram.com/pousadaleange/' target='_blank'> <MdOutlineArrowRight /> Instagram </a>
+                        <a href='https://www.tiktok.com/@pousadaleange' target='_blank'> <MdOutlineArrowRight /> TikTok </a>
+                        <a href='https://br.pinterest.com/pousadaleange/' target='_blank'> <MdOutlineArrowRight /> Pinterest </a>
                     </motion.div>
                 </StyledLinks>
 

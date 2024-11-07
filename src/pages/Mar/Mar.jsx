@@ -262,6 +262,7 @@ const StyledSectionEstrutura = styled.section`
     
 
 `
+
 const slides = [
     {
         title: "Pet Friendly",
@@ -378,6 +379,7 @@ const StyledContainerEvents = styled.section`
 
     @media (max-width: 768px){
         height: auto;
+        margin-top: 0;
         padding: 10% 2.5% 0 2.5%;
     }
 `

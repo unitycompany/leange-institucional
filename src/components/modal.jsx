@@ -57,25 +57,25 @@ const ModalCard = styled(motion.div)` // Aplicando motion ao ModalCard
   }
 `;
 
-const CloseButton = styled(motion.button)` // Aplicando motion ao CloseButton
+const CloseButton = styled(motion.button)` 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   font-size: 50px;
   position: absolute;
   top: 10px;
   right: 15px;
   cursor: pointer;
-  color: rgba(255, 0, 0, 1);
+  color: var(--color--white);
   font-family: var(--font--comfortaa);
   font-weight: 100;
   background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
   border-radius: 50%;
-  border: 1px solid rgba(255, 0, 0, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
   width: 50px;
   height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: all .2s ease;
 
   @media(max-width: 768px){
