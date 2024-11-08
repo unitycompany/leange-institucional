@@ -188,7 +188,7 @@ const PromotionModal = () => {
           </SuiteCountCircle>
           <p>Aproveite nossa promoção especial. Clique abaixo para mais informações.</p>
           <WhatsAppButton
-            href="https://wa.me/5511999999999"
+            href="https://wa.link/dojlwi"
             target="_blank"
             initial={{ scale: 0.8 }}
             animate={{ scale: 1 }}

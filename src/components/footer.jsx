@@ -3,9 +3,9 @@ import { LuInstagram } from "react-icons/lu";
 import { AiOutlineTikTok, AiOutlinePinterest } from "react-icons/ai";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineArrowRight } from "react-icons/md";
-import LogoWhite from '../../public/logos/white.png';
 import { motion, useInView } from 'framer-motion';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import LogoWhite from '../../public/logos/white.png';
 
 const SubmitBtn = styled(motion.button)`
     font-family: inherit;
@@ -151,7 +151,7 @@ const StyledTitles = styled.div`
     & > div > div > a {
         color: var(--color--white);
     }
-`
+`;
 
 const StyledForm = styled.div`
     width: 50%;
@@ -188,7 +188,7 @@ const StyledForm = styled.div`
             width: 100%;
         }
     }
-`
+`;
 
 const StyledSectionTop = styled.section`
     display: flex;
@@ -200,34 +200,7 @@ const StyledSectionTop = styled.section`
         flex-direction: column;
         gap: 25px;
     }
-`
-
-const StyledLocation = styled.section`
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    @media (max-width: 768px){
-        height: auto;
-        flex-direction: column;
-    }
-
-    & > h1{
-        color: var(--color--white);
-        font-family: var(--font--comfortaa);
-        width: 30%;
-        line-height: 100%;
-
-        @media (max-width: 768px){
-            width: 100%;
-            font-size: 20px;
-            text-align: center;
-        }
-    }
-`
+`;
 
 const StyledLinks = styled.section`
     width: 100%;
@@ -277,7 +250,6 @@ const StyledLinks = styled.section`
         @media (max-width: 768px){
             font-size: 20px;
         }
-
     }
 
     & > div a{
@@ -304,7 +276,39 @@ const StyledLinks = styled.section`
         width: 40%;
         object-fit: contain;
     }
-`
+`;
+
+const StyledLocation = styled.section`
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    @media (max-width: 768px){
+        height: auto;
+        flex-direction: column;
+    }
+
+    & > h1{
+        color: var(--color--white);
+        font-family: var(--font--comfortaa);
+        width: 30%;
+        line-height: 100%;
+
+        @media (max-width: 768px){
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+`;
+
+const StyledHR = styled.hr`
+    width: 100%;
+    margin-bottom: -50px;
+`;
 
 const StyledPolitica = styled.div`
     width: 100%;
@@ -334,20 +338,61 @@ const StyledPolitica = styled.div`
         color: var(--color--blue);
         margin-left: 1ch;
     }
-`
-
-const StyledHR = styled.hr`
-    width: 100%;
-    margin-bottom: -50px;
-`
+`;
 
 const Footer = () => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [tel, setTel] = useState('');
 
     const fadeUp = {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault(); // Impede o comportamento padrão de recarregar a página
+
+        // Verifique se os dados estão preenchidos
+        if (!name || !email || !tel) {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
+
+        // Cria um objeto com todos os valores como strings
+        const formData = {
+            name: String(name).trim(),  // Garantindo que seja uma string e removendo espaços em branco
+            email: String(email).trim(), // Garantindo que seja uma string e removendo espaços em branco
+            tel: String(tel).trim(),     // Garantindo que seja uma string e removendo espaços em branco
+        };
+
+        try {
+            const response = await fetch('https://hook.us1.make.com/e79ttwjdwv9soeppgqnu5rbnpk9l828e', { // URL do seu webhook
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData), // Convertendo os dados para JSON
+            });
+
+            // Verifica se a resposta não é um JSON válido
+            const responseBody = await response.text(); // Obtém a resposta como texto
+            if (response.ok) {
+                alert('Dados enviados com sucesso!'); // Mensagem de sucesso
+                // Limpar os campos após o envio
+                setName('');
+                setEmail('');
+                setTel('');
+            } else {
+                console.error('Erro de resposta:', responseBody); // Log do erro
+                alert('Erro ao enviar os dados: ' + responseBody); // Mensagem de erro
+            }
+        } catch (error) {
+            console.error('Erro:', error);
+            alert('Erro ao enviar os dados. Tente novamente.'); // Mensagem de erro
+        }
     };
 
     return (
@@ -355,14 +400,18 @@ const Footer = () => {
             <StyledFooterContainer ref={ref} initial="hidden" animate={isInView ? "visible" : "hidden"}>
                 <StyledSectionTop as={motion.div}>
                     <StyledTitles>
-                        <motion.h1 variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.2 }}>Fale agora com a nossa central de reservas</motion.h1>
+                        <motion.h1 variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.2 }}>
+                            Fale agora com a nossa central de reservas
+                        </motion.h1>
                         <motion.p variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.3 }}>
                             Todas as informações são usadas apenas para entrar em contato. Entenda melhor sobre o uso das suas informações pela nossa 
                             <a href="https://exemplo.com/politica-de-privacidade">política de privacidade</a>.
                         </motion.p>
                         <motion.hr variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.4 }} />
                         <div>
-                            <motion.h4 variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.5 }}>Siga-nos</motion.h4>
+                            <motion.h4 variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.5 }}>
+                                Siga-nos
+                            </motion.h4>
                             <div>
                                 <motion.a href="https://instagram.com" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.6 }}>
                                     <LuInstagram />
@@ -377,13 +426,47 @@ const Footer = () => {
                         </div>
                     </StyledTitles>
                     <StyledForm>
-                        <form id="contactForm">
-                            <motion.input type="text" id="name" placeholder="Me diga seu nome" variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.9 }} />
-                            <motion.input type="email" id="email" placeholder="Preciso saber seu e-mail também!" variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.0 }} />
-                            <motion.input type="tel" id="tel" placeholder="Me diga seu número de WhatsApp" variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.1 }} />
-                            <SubmitBtn whileHover={{ scale: 1.05, backgroundColor: 'var(--color--blue)' }} whileTap={{ scale: 0.95 }}>
+                        <form id="contactForm" onSubmit={handleSubmit}>
+                            <motion.input
+                                type="text"
+                                id="name"
+                                placeholder="Me diga seu nome"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                variants={fadeUp}
+                                initial="hidden"
+                                animate={isInView ? "visible" : "hidden"}
+                                transition={{ delay: 0.9 }}
+                            />
+                            <motion.input
+                                type="email"
+                                id="email"
+                                placeholder="Preciso saber seu e-mail também!"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                variants={fadeUp}
+                                initial="hidden"
+                                animate={isInView ? "visible" : "hidden"}
+                                transition={{ delay: 1.0 }}
+                            />
+                            <motion.input
+                                type="tel"
+                                id="tel"
+                                placeholder="Me diga seu número de WhatsApp"
+                                value={tel}
+                                onChange={(e) => setTel(e.target.value)}
+                                variants={fadeUp}
+                                initial="hidden"
+                                animate={isInView ? "visible" : "hidden"}
+                                transition={{ delay: 1.1 }}
+                            />
+                            <SubmitBtn
+                                type="submit"
+                                whileHover={{ scale: 1.05, backgroundColor: 'var(--color--blue)' }}
+                                whileTap={{ scale: 0.95 }}
+                            >
                                 <FaArrowRightLong size={20} />
-                                <span>Enviar meu dados para contato</span>
+                                <span>Enviar meus dados para contato</span>
                             </SubmitBtn>
                         </form>
                     </StyledForm> 
@@ -391,11 +474,11 @@ const Footer = () => {
 
                 <StyledLinks as={motion.div}>
                     <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.2 }}>
-                    <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1729513421/white_sevdgn.png" 
-                    alt="Descrição da imagem" 
-                    loading="lazy" 
-                    />
+                        <img 
+                            src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1729513421/white_sevdgn.png" 
+                            alt="Descrição da imagem" 
+                            loading="lazy" 
+                        />
                         <p>A pousada mais Pet Friendly, venha conhecer!</p>
                     </motion.div>
                     <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.3 }}>
