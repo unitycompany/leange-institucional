@@ -6,8 +6,8 @@ import './styles/global.css';
 import './styles/index.css';
 import './styles/variables.css';
 
-import Home from './pages/Home/';
-import Event from './pages/Event/event';
+import Home from './pages/Home/Home';
+import Event from './pages/Event/Event';
 import Sobre from './pages/Sobre/Sobre';
 import Serra from './pages/Serra/Serra';
 import Mar from './pages/Mar/Mar';
