@@ -58,7 +58,7 @@ const ImageCarouselSliderComponent = ({ images = [], reverse = false }) => {
                 disableOnInteraction: false,
                 reverseDirection: reverse,
             }}
-            speed={2500}
+            speed={1500}
             freeMode={true}
             freeModeMomentum={false}
             breakpoints={{

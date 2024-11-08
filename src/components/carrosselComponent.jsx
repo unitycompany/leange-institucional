@@ -52,7 +52,7 @@ const Title = styled.h2`
   line-height: 100%;
   margin-bottom: 0.5em;
   font-family: var(--font--comfortaa);
-  color: ${({ $colorDefined }) => $colorDefined || 'var(--color--green)'}; // Prefixo $ adicionado
+  color: ${({ $colorDefined }) => $colorDefined || 'var(--color--green)'}; 
   font-weight: 100;
 
   @media (max-width: 768px){
@@ -99,7 +99,7 @@ const StyledSwiper = styled(Swiper)`
   .swiper-button-prev,
   .swiper-button-next {
     color: #fff;
-    background-color: ${({ $bgColor }) => $bgColor || 'var(--color--green)'}; // Prefixo $ adicionado
+    background-color: ${({ $bgColor }) => $bgColor || 'var(--color--green)'};
     box-shadow: none;
     border-radius: 50%;
     padding: 10px;
@@ -121,8 +121,8 @@ const StyledSwiper = styled(Swiper)`
 
   .swiper-button-prev {
     left: 100px;
-    margin-top: -40px!important;
-    margin-right: 5px; /* Espaço entre os botões */
+    margin-top: -80px!important;
+    margin-right: 5px; 
 
     @media (max-width: 768px){
       left: 40px!important;
@@ -131,8 +131,8 @@ const StyledSwiper = styled(Swiper)`
   }
 
   .swiper-button-next {
-    left: 150px; /* Coloca o botão "next" próximo ao botão "prev" */
-    margin-top: -40px!important;
+    left: 150px;
+    margin-top: -80px!important;
 
     @media (max-width: 768px){
       left: 90px!important;
@@ -146,19 +146,19 @@ const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 
     <StyledSwiper
       navigation={true}
       autoplay={{
-        delay: 3000,
+        delay: 2000,
         disableOnInteraction: false,
       }}
       loop={true}
       modules={[Navigation, Pagination, Autoplay]}
       className="mySwiper"
-      $bgColor={buttonBgColor} // Passando a cor com prefixo $
+      $bgColor={buttonBgColor} 
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
           <SlideContent imagePosition={imagePosition}>
             <SlideText>
-              <Title $colorDefined={titleColor}>{slide.title}</Title> {/* Prefixo $ adicionado */}
+              <Title $colorDefined={titleColor}>{slide.title}</Title> 
               <Description>{slide.description}</Description>
               <CustomButton 
                 text="Reservar agora!"

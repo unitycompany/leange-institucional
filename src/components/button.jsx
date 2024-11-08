@@ -28,12 +28,6 @@ const StyledButton = styled.button`
         scale: 0.95;
         box-shadow: 0 0 0 4px var(--color--black);
     }
-
-    /* @media (max-width: 640px) {
-        color: var(--color--white); // Cor do texto em tela menor
-        background-color: var(--color--black); // Cor de fundo em tela menor
-        border: 4px solid var(--color--white); // Borda em tela menor
-    } */
 `;
 
 const ArrowIcon = styled.svg`
@@ -100,7 +94,7 @@ const Button = ({ text, onClick, color, backgroundColor, borderColor, hoverColor
     <StyledButton
         onClick={onClick}
         color={color}
-        background={backgroundColor} // Use backgroundColor aqui
+        background={backgroundColor}
         borderColor={borderColor}
         hoverColor={hoverColor}
     >

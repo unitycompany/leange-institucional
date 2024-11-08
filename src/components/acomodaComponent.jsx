@@ -197,22 +197,6 @@ const StyledAcomodaTexts = styled.div`
             margin-top: 15px;
         }
     }
-
-    & > div p {
-        width: 80%;
-        font-family: var(--font--avenir);
-        font-weight: 200;
-        color: var(--color--black);
-        line-height: 100%;
-        font-size: 1rem;
-
-        @media (max-width: 768px){
-            width: 100%;
-
-            text-align: justify;
-            margin-bottom: 15px;
-        }
-    }
 `;
 
 const AcomodaComponent = ({ images }) => {
@@ -223,7 +207,6 @@ const AcomodaComponent = ({ images }) => {
             <StyledAcomodaTexts>
                 <div>
                     <h1>Conheça as nossas suítes</h1>
-                    {/* <p>Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira excepcional com vista deliciosa para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.</p> */}
                 </div>
                 <div>
                     <CustomButton 

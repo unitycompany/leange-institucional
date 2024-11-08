@@ -571,7 +571,6 @@ const Mar = () => {
 
             <PetFriendly />
 
-
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>

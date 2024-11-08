@@ -134,9 +134,9 @@ const EventCardCarousel = ({ events = [] }) => {
             pagination={false}
             loop={true}
             breakpoints={{
-                1024: { slidesPerView: 3 }, // Desktop
-                768: { slidesPerView: 2 },  // Tablet
-                0: { slidesPerView: 1 }     // Telefone
+                1024: { slidesPerView: 3 },
+                768: { slidesPerView: 2 },
+                0: { slidesPerView: 1 }
             }}
         >
             {events.map((event, index) => (
@@ -150,7 +150,7 @@ const EventCardCarousel = ({ events = [] }) => {
 
 const InViewCardContainer = ({ event, delay }) => {
     const ref = React.useRef(null);
-    const isInView = useInView(ref, { once: true }); // Animar apenas uma vez quando visível
+    const isInView = useInView(ref, { once: true });
 
     const handleClick = () => {
         window.open("https://wa.link/dojlwi", "_blank");
@@ -181,7 +181,7 @@ const InViewCardContainer = ({ event, delay }) => {
                     text="Quero fechar minha reserva agora" 
                     backDefine="var(--color--black)" 
                     colorDefine="var(--color--white)"
-                    onClick={handleClick} // Passa o onClick para o ButtonAcomoda
+                    onClick={handleClick} 
                 />
             </CardContent>
         </CardContainer>

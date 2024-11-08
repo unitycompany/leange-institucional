@@ -5,10 +5,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
 import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
-import styled, { createGlobalStyle, keyframes } from 'styled-components';
-import { motion } from 'framer-motion';
-import ButtonAcomoda from './button2';
-import Button from './button';
+import styled, { createGlobalStyle } from 'styled-components';
 import IconButton from './button4';
 
 const SwiperStyles = createGlobalStyle`
@@ -62,9 +59,9 @@ const BorderOverlay = styled.div`
     left: 0;
     width: 100%;
     height: 60%;
-    border-radius: 25px 0 25px 0;/* Mantém o mesmo border-radius */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradiente */
-    pointer-events: none; /* Apenas decorativa */
+    border-radius: 25px 0 25px 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
+    pointer-events: none; 
     z-index: 1;
 
     @media (max-width: 768px){
@@ -157,7 +154,7 @@ const CoverflowSliderComponent = ({
     content = [],
     height = '300px',
     width = '100%',
-    autoplayDelay = 3000,
+    autoplayDelay = 1500,
     showPagination = true,
     showNavigation = true,
 }) => {
@@ -185,9 +182,9 @@ const CoverflowSliderComponent = ({
                     disableOnInteraction: false,
                 }}
                 breakpoints={{
-                    1024: { slidesPerView: 2 }, // Desktop
-                    768: { slidesPerView: 2 },  // Tablet
-                    0: { slidesPerView: 1 }     // Telefone
+                    1024: { slidesPerView: 2 }, 
+                    768: { slidesPerView: 2 }, 
+                    0: { slidesPerView: 1 }   
                 }}
                 style={{ width: width, height: height }}
             >

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { FaEye, FaShoppingCart } from 'react-icons/fa';
 import { MdHotel } from "react-icons/md";
 import { LuMousePointerClick } from "react-icons/lu";
 

@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import './styles/App.css';
 import './styles/global.css';
-import './styles/index.css';
 import './styles/variables.css';
-
 import Home from './pages/Home/Home';
 import Event from './pages/Event/Event';
 import Sobre from './pages/Sobre/Sobre';
@@ -26,7 +23,6 @@ function ScrollToTop() {
 
 function AnimatedRoutes() {
   const location = useLocation();
-
   return (
     <>
       <ScrollToTop />
@@ -43,7 +39,6 @@ function AnimatedRoutes() {
     </>
   );
 }
-
 function App() {
   return (
     <Router>
@@ -52,5 +47,4 @@ function App() {
     </Router>
   );
 }
-
 export default App;

@@ -11,51 +11,48 @@ import ImageCarouselSliderComponent from '../../components/infinitiSlider';
 import EventCardCarousel from '../../components/cardSlider';
 import Footer from '../../components/footer';
 import { MdBedroomParent } from "react-icons/md";
-import { BiSolidHomeHeart } from "react-icons/bi";
 import { MdFoodBank } from "react-icons/md";
 import { BsCalendar2HeartFill } from "react-icons/bs";
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import PromotionModal from '../../components/modal';
 
-
-
-const images1 = [
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png", alt: 'Imagem 1', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1729513693/9_hyv1zq.jpg", alt: 'Imagem 1', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/3_d2soci.png", alt: 'Imagem 1', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/diversao_jpykdy.jpg", alt: 'Imagem 1', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg", alt: 'Imagem 1', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730130111/fotoSerra1_pa28ry.jpg", alt: 'Imagem 1', loading: "lazy" }
+const imagesSerra = [
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png", alt: 'Mulher na rede', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1729513693/9_hyv1zq.jpg", alt: 'Foto da pousada le ange vista de cima', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/3_d2soci.png", alt: '2 cachorros na piscina', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/diversao_jpykdy.jpg", alt: 'Foto da pousada vista de baixo', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg", alt: 'Foto da sala de estar da pousada le ange serra', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730130111/fotoSerra1_pa28ry.jpg", alt: '2 cachorros na cama no meio do quintal', loading: "lazy" }
 ];
 
-const images2 = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar1_lhebdi.webp', alt: 'imagem 1',loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730926455/IMG_0454_o2cwol.jpg', alt: 'Imagem 1', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920611/1_z2nkyx.png', alt: 'Imagem 3', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730901639/4_kuujqb.jpg', alt: 'Imagem 1', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/piscina_vw7plw.webp', alt: 'Imagem 2', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130098/IMG_0041_zv7w3d.jpg', alt: 'Imagem 3', loading: "lazy" }
+const imagesMar = [
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar1_lhebdi.webp', alt: 'Foto da pousada le ange mar',loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730926455/IMG_0454_o2cwol.jpg', alt: '2 pessoas na rede na pousada le ange mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920611/1_z2nkyx.png', alt: 'Foto de churrasco', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730901639/4_kuujqb.jpg', alt: 'Cachorro olhando para a câmera', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/piscina_vw7plw.webp', alt: 'Pousada le ange mar vista de cima', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130098/IMG_0041_zv7w3d.jpg', alt: 'Sala de estar na le ange mar', loading: "lazy" }
 ];
 
-const images3 = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png', label: 'Le Ange Serra' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/3_d2soci.png', label: 'Le Ange Serra' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg', label: 'Le Ange Serra' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png', label: 'Le Ange Serra' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130097/IMG_0885_pou52r.jpg', label: 'Le Ange Mar' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130097/IMG_0478_eymtmg.jpg', label: 'Le Ange Mar' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130098/IMG_0041_zv7w3d.jpg', label: 'Le Ange Mar' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130886/IMG_6320_jovvjl.webp', label: 'Le Ange Serra' },
+const imagesCarrossel01 = [
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png', alt: 'Pessoa na rede', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/3_d2soci.png', alt: '2 cachorros na piscina', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg', alt: 'Sala de estar na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png', alt: 'Hot Tube na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130097/IMG_0885_pou52r.jpg', alt: '2 pessoas bebendo na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130097/IMG_0478_eymtmg.jpg', alt: '2 pessoas na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130098/IMG_0041_zv7w3d.jpg', alt: 'Sala de estar da le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130886/IMG_6320_jovvjl.webp', alt: 'Por do sol na le ange', label: 'Le Ange Serra', loading: "lazy" },
 ];
 
-const images4 = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130887/IMG_7854_zetqsr.webp', label: 'Le Ange Mar' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130887/fotoMar1_wotf3h.webp', label: 'Le Ange Mar' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130105/fotoSerra3_zqwbav.jpg', label: 'Le Ange Serra' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130104/fotoSerra4_zgia0i.jpg', label: 'Le Ange Serra' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130106/fotoMar6_lfgi4u.jpg', label: 'Le Ange Mar' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130111/fotoSerra1_pa28ry.jpg', label: 'Le Ange Serra' },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130112/fotoMar3_ywfvig.jpg', label: 'Le Ange Serra' },
+const imagesCarrossel02 = [
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130887/IMG_7854_zetqsr.webp', alt: 'Foto do quarto na le ange', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130887/fotoMar1_wotf3h.webp', alt: 'Foto de churrasqueira na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130105/fotoSerra3_zqwbav.jpg', alt: 'Cachorro com a cabeça recostada na mão do tutor', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130104/fotoSerra4_zgia0i.jpg', alt: 'Uma pessoa e um cachorro na piscina', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130106/fotoMar6_lfgi4u.jpg', alt: '2 taças com um fundo de por do sol', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130111/fotoSerra1_pa28ry.jpg', alt: '2 cachorros em uma cama no meio do jardim', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130112/fotoMar3_ywfvig.jpg', alt: 'Foto do quadro de cachorro na le ange mar', label: 'Le Ange Serra', loading: "lazy" },
 ];
 
 
@@ -510,14 +507,15 @@ const Home = () => {
             </Helmet>
 
             <PromotionModal />
+
             <BackgroundVideo />
 
             <StyledPousadas 
-            containerAnimation={{ opacity: 0, scale: 0.8 }}
-            titleAnimation={{ opacity: 0, y: -50 }}
-            textAnimation={{ opacity: 0, x: 50 }}
-            buttonAnimation={{ opacity: 0, scale: 0.5 }}
-            animationDuration={0.7}
+                containerAnimation={{ opacity: 0, scale: 0.8 }}
+                titleAnimation={{ opacity: 0, y: -50 }}
+                textAnimation={{ opacity: 0, x: 50 }}
+                buttonAnimation={{ opacity: 0, scale: 0.5 }}
+                animationDuration={0.7}
             >
                 <StyledPousadasTitle>
                     <h1>Conheça o <StyledColorBBlue>melhor de cada cantinho nosso</StyledColorBBlue></h1>
@@ -526,42 +524,42 @@ const Home = () => {
 
                 <StyledContainerPousadas>
                     <SliderComponent 
-                    content={images1} 
-                    spaceBetween={20} 
-                    slidesPerView={1} 
-                    height="60vh" 
-                    contentType="image" 
-                    showPagination={false} 
+                        content={imagesSerra} 
+                        spaceBetween={20} 
+                        slidesPerView={1} 
+                        height="60vh" 
+                        contentType="image" 
+                        showPagination={false} 
                     />
                     <TitlePousadas 
-                    title="Le Ange Serra - Miguel Pereira RJ" 
-                    text="Aqui na LeAnge, costumamos dizer que a hospedagem é muito mais do que um final de semana para relaxar. É uma EXPERIÊNCIA ÚNICA ao lado do seu PET, para que você colecione os melhores momentos ao lado dele!" 
-                    borderColor="var(--color--green)"
-                    borderRadius="30px" 
-                    buttonColor="var(--color--green)"
-                    buttonBorder="1px solid var(--color--black)"
-                    targetPage="/serra"
+                        title="Le Ange Serra - Miguel Pereira RJ" 
+                        text="Aqui na LeAnge, costumamos dizer que a hospedagem é muito mais do que um final de semana para relaxar. É uma experiência única ao lado do seu PET, para que você colecione os melhores momentos ao lado dele!" 
+                        borderColor="var(--color--green)"
+                        borderRadius="30px" 
+                        buttonColor="var(--color--green)"
+                        buttonBorder="1px solid var(--color--black)"
+                        targetPage="/serra"
                     />
                 </StyledContainerPousadas>
 
                 <StyledContainerPousadas>
                     <TitlePousadas 
-                    title="Pousada Le Ange Mar - Búzios RJ" 
-                    text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da propriedade e o seu pet é calorosamente recebido para momentos especiais." 
-                    borderColor="var(--color--blue)"
-                    borderRadius="30px" 
-                    buttonColor="var(--color--blue)"
-                    buttonBorder="1px solid var(--color--black)"
-                    targetPage="/mar"
+                        title="Pousada Le Ange Mar - Búzios RJ" 
+                        text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da propriedade e o seu pet é calorosamente recebido para momentos especiais." 
+                        borderColor="var(--color--blue)"
+                        borderRadius="30px" 
+                        buttonColor="var(--color--blue)"
+                        buttonBorder="1px solid var(--color--black)"
+                        targetPage="/mar"
                     />
                     <SliderComponent 
-                    content={images2} 
-                    spaceBetween={20} 
-                    slidesPerView={1} 
-                    width="60%" 
-                    height="60vh" 
-                    contentType="image"
-                    showPagination={false}
+                        content={imagesMar} 
+                        spaceBetween={20} 
+                        slidesPerView={1} 
+                        width="60%" 
+                        height="60vh" 
+                        contentType="image"
+                        showPagination={false}
                     />
                 </StyledContainerPousadas>
             </StyledPousadas>
@@ -573,7 +571,7 @@ const Home = () => {
                 </div>
 
                 <SliderAcomodaHome 
-                content={acomodaHome} 
+                    content={acomodaHome} 
                 />
 
             </StyledAcomoda>
@@ -584,12 +582,12 @@ const Home = () => {
                     <StyledEstruturaSubTitle>Venha ter essa experiência</StyledEstruturaSubTitle>
                 </div>
                 <CoverflowSliderComponent
-                content={slideDataCoverflow} 
-                spaceBetween={20} 
-                width="100%" 
-                height="70vh" 
-                showPagination={false} 
-                showNavigation={true}
+                    content={slideDataCoverflow} 
+                    spaceBetween={20} 
+                    width="100%" 
+                    height="70vh" 
+                    showPagination={false} 
+                    showNavigation={true}
                 />
             </StyledEstrutura>
 
@@ -599,14 +597,15 @@ const Home = () => {
             </div>
             
             <StyledCarrosselSection>
-                <ImageCarouselSliderComponent images={images3} />
-                <ImageCarouselSliderComponent images={images4} reverse={true} />
+                <ImageCarouselSliderComponent images={imagesCarrossel01} />
+                <ImageCarouselSliderComponent images={imagesCarrossel02} reverse={true} />
             </StyledCarrosselSection>
 
             <div>
                 <StyledEstruturaTitle>Conheça nossos pacotes e <StyledColorBBlue>noites especiais</StyledColorBBlue> <MdFoodBank /> </StyledEstruturaTitle>
                 <StyledEstruturaSubTitle>Estamos te esperando!</StyledEstruturaSubTitle>
             </div>
+
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>

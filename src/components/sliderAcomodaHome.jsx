@@ -6,10 +6,9 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useNavigate } from 'react-router-dom'; // Importando useNavigate
+import { useNavigate } from 'react-router-dom';
 import ButtonAcomoda from './button2';
 
-// Global styles for Swiper
 const SwiperStyles = createGlobalStyle`
   .swiper-button-next, .swiper-button-prev {
       color: white; 
@@ -34,7 +33,6 @@ const SwiperStyles = createGlobalStyle`
   }
 `;
 
-// Keyframes for animation
 const waterWave = keyframes`
   0% { border-radius: 0 30px 20px 0; }
   25% { border-radius: 20px 0 30px 20px; }
@@ -49,9 +47,9 @@ const BorderOverlay = styled.div`
     left: 0;
     width: 100%;
     height: 60%;
-    border-radius: 25px 0 25px 0;/* Mantém o mesmo border-radius */
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradiente */
-    pointer-events: none; /* Apenas decorativa */
+    border-radius: 25px 0 25px 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
+    pointer-events: none;
     animation: ${waterWave} 5s ease-in-out infinite;
     z-index: 1;
 
@@ -60,7 +58,6 @@ const BorderOverlay = styled.div`
     }
 `;
 
-// Styled components
 const SlideContainer = styled(motion.div)`
   position: relative;
   width: 100%;
@@ -160,7 +157,6 @@ const SliderWrapper = styled.div`
   margin: 0 auto;
 `;
 
-// Main Slider Component
 const SliderAcomodaHome = ({
   content = [],
   spaceBetween = 10,
@@ -172,10 +168,10 @@ const SliderAcomodaHome = ({
   const titleY = useTransform(scrollY, [0, 300], [0, -30]);
   const subtitleY = useTransform(scrollY, [0, 300], [0, -20]);
   const featuresY = useTransform(scrollY, [0, 300], [0, -10]);
-  const navigate = useNavigate(); // Criando uma instância do useNavigate
+  const navigate = useNavigate();
 
   const handleButtonClick = (suiteId) => {
-    navigate('/acomoda', { state: { suiteId } }); // Navega para /acomoda e passa o ID da suíte
+    navigate('/acomoda', { state: { suiteId } });
   };
 
   return (
@@ -212,7 +208,7 @@ const SliderAcomodaHome = ({
                   ))}
                 </Features>
                 <ButtonAcomoda 
-                  onClick={() => handleButtonClick(item.id)} // Passa o ID da suíte para o botão
+                  onClick={() => handleButtonClick(item.id)}
                   text="Conhecer acomodações"
                   suiteId={item.id}
                 />

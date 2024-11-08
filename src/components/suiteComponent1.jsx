@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -7,11 +7,8 @@ import 'swiper/css/pagination';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import IconButton from "./button4";
-import { RxRulerSquare } from "react-icons/rx";
-import { GrGroup } from "react-icons/gr";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
 
-// Estilos para o container principal
 const AcomodaContainer = styled.section`
     width: 100%;
     padding: 0 5%;
@@ -195,31 +192,6 @@ const SuiteDescription = styled.p`
     }
 `;
 
-const InfoContainer = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 15px; 
-    width: 50%;
-    display: none;
-
-    @media (max-width: 768px){
-        display: none;
-    }
-
-    & > div:nth-child(1), & > div:nth-child(2) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        padding: 10px;
-
-        @media (max-width: 768px){
-            display: none;
-        }
-    }
-`;
-
 const Features = styled.div`
     display: flex;
     gap: 8px;
@@ -263,11 +235,11 @@ const Features = styled.div`
 
 const ButtonContainer = styled.div`
     position: absolute;
-    bottom: 50px; /* Distância do fundo */
-    right: 25px; /* Distância da direita */
+    bottom: 50px; 
+    right: 25px; 
     display: flex;
     width: 10%;
-    gap: 5px; /* Espaçamento entre os botões */
+    gap: 5px; 
 
     @media (max-width: 768px){
         right: 15px;
@@ -279,15 +251,15 @@ const ButtonContainer = styled.div`
 const SwiperButton = styled.div`
     background-color: var(--color--black);
     color: white;
-    padding: 15px; /* Tamanho do botão */
+    padding: 15px; 
     border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s;
-    display: flex; /* Flexbox para centralizar o ícone */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    width: 45px; /* Largura do botão */
-    height: 45px; /* Altura do botão */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 45px;
+    height: 45px; 
 
     @media (max-width: 768px){
         width: 35px;
@@ -303,14 +275,6 @@ const SwiperButton = styled.div`
         background-color: var(--color--white);
         color: var(--color--black);
         border: 1px solid var(--color--black);
-    }
-`;
-
-const Espace = styled.div`
-    height: 0vh;
-
-    @media (max-width: 768px){
-        height: 0vh;
     }
 `;
 
@@ -332,7 +296,7 @@ const SuiteComponent = React.forwardRef(({ suites }, ref) => {
                     modules={[Navigation, Pagination]}
                     onInit={(swiper) => {
                         console.log('Swiper inicializado', swiper);
-                        console.log('Número de slides:', swiper.slides.length); // Log o número de slides
+                        console.log('Número de slides:', swiper.slides.length);
                     }}
                 >
                     {suites.map((suite, index) => {
@@ -359,7 +323,7 @@ const SuiteComponent = React.forwardRef(({ suites }, ref) => {
                                         <section>
                                             <div>
                                                 <SuiteTitle>{suite.NomedaPousada}</SuiteTitle>
-                                                <p>Suíte: {suite.NomedaSuite}</p>
+                                                <p>{suite.NomedaSuite}</p>
                                             </div>
                                             <div>
                                                 <hr />
@@ -372,16 +336,8 @@ const SuiteComponent = React.forwardRef(({ suites }, ref) => {
                                                 </span>
                                             ))}
                                         </Features>
-                                        <InfoContainer>
-                                            <div>
-                                                <RxRulerSquare size={30} /> {suite.medida}
-                                            </div>
-                                            <div>
-                                                <GrGroup size={30} /> {suite.adultos}
-                                            </div>
-                                        </InfoContainer>
                                         <SuiteDescription>{suite.Description}</SuiteDescription>
-                                        <IconButton text="Fazer reserva!" text2="Vamos lá!" />
+                                        <IconButton text="Fazer reserva!" text2="Clique e reserve!" />
                                     </SuiteContent>
                                 </SuiteContainer>
                             </SwiperSlide>

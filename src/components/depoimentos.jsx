@@ -7,7 +7,6 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import styled from "styled-components";
 import CustomButton from "./button3";
 
-// Styled components
 const StyledTextDepoimentos = styled.section`
     width: 100%;
     margin-top: 5vh;
@@ -57,9 +56,9 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 10px;
-    border-radius: 15px 0 15px 0; /* Bordas arredondadas */
-    position: relative; /* Para posicionar o texto em cima da imagem */
-    overflow: hidden; /* Para esconder qualquer conteúdo que extrapole o container */
+    border-radius: 15px 0 15px 0; 
+    position: relative; 
+    overflow: hidden; 
 
     @media (max-width: 768px){
         width: 100%;
@@ -77,12 +76,12 @@ const DepoimentoText = styled.p`
     left: -60px;
     transform: rotate(270deg);
     padding: 5px 25px;
-    margin: 10px 0; /* Espaço entre o nome e o depoimento */
+    margin: 10px 0; 
     color: var(--color--white);
     background-color: rgba(0, 0, 0, 0.4);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
-    z-index: 1; /* Para garantir que o texto fique acima da imagem */
+    z-index: 1; 
     font-family: var(--font--comfortaa);
     font-weight: 100;
 
@@ -97,7 +96,6 @@ const DepoimentoText = styled.p`
     }
 `;
 
-// Exemplo de dados dos depoimentos
 const depoimentosData = [
     {
         id: 1,
@@ -155,13 +153,13 @@ const Depoimentos = () => {
                     autoplay={{ delay: 7000, disableOnInteraction: false }}
                     breakpoints={{
                         1024: {
-                            slidesPerView: 3, // Desktop
+                            slidesPerView: 3, 
                         },
                         768: {
-                            slidesPerView: 2, // Tablet
+                            slidesPerView: 2, 
                         },
                         480: {
-                            slidesPerView: 1, // Telefone
+                            slidesPerView: 1, 
                         },
                     }}
                 >
@@ -189,8 +187,9 @@ const Depoimentos = () => {
                                                     backgroundPosition: 'center',
                                                     width: '100%',
                                                     height: '100%',
-                                                    borderRadius: '25px 0 25px 0',
+                                                    borderRadius: '25px 0 25px 0'
                                                 }}
+                                                loading="lazy"
                                             />
                                         </SwiperSlide>
                                     ))}

@@ -5,7 +5,6 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineArrowRight } from "react-icons/md";
 import { motion, useInView } from 'framer-motion';
 import React, { useRef, useState } from 'react';
-import LogoWhite from '../../public/logos/white.png';
 
 const SubmitBtn = styled(motion.button)`
     font-family: inherit;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FaArrowRight } from "react-icons/fa"; // Importando o ícone de seta
+import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
 const StyledButtonAcomodo = styled.button`
@@ -8,7 +8,7 @@ const StyledButtonAcomodo = styled.button`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 5px; /* Ajusta a distância entre o texto e o ícone */
+  gap: 5px; 
   padding: 0px 20px;
   font-size: 12px;
   background-color: ${({ backDefine }) => backDefine || 'var(--color--white)'};
@@ -26,7 +26,7 @@ const StyledButtonAcomodo = styled.button`
   .icon {
     font-size: 18px;
     color: var(--color--black);
-    margin-left: 8px; /* Ajusta a margem à esquerda do ícone para maior separação */
+    margin-left: 8px;
   }
 
   &:hover {
@@ -35,7 +35,7 @@ const StyledButtonAcomodo = styled.button`
   }
 
   &:hover .icon {
-    transform: translateX(5px); /* Animação da seta movendo para a direita no hover */
+    transform: translateX(5px); 
     transition: transform 0.3s ease;
     color: var(--color--white);
   }
@@ -50,16 +50,16 @@ const ButtonAcomoda = ({ text, suiteId, backDefine, colorDefine }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    const targetUrl = `/acomoda#${suiteId}`; // URL alvo com hash
-    console.log("Navegando para:", targetUrl); // Log da URL
-    navigate(targetUrl); // Navega para a URL
+    const targetUrl = `/acomoda#${suiteId}`;
+    console.log("Navegando para:", targetUrl);
+    navigate(targetUrl);
   };
   
   return (
     <StyledButtonAcomodo 
       backDefine={backDefine} 
       colorDefine={colorDefine} 
-      onClick={handleClick} // Chama handleClick ao clicar no botão
+      onClick={handleClick} 
     >
       {text}
       <FaArrowRight className="icon" />

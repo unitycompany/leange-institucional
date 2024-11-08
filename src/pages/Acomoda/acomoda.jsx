@@ -4,8 +4,8 @@ import SuiteComponent from "../../components/suiteComponent1";
 import SuiteComponent2 from "../../components/suiteComponent2";
 import Footer from '../../components/footer';
 import { Swiper } from 'swiper/react';
-import 'swiper/swiper-bundle.css'; // Certifique-se de importar o CSS do Swiper
-import { FaUtensils, FaMusic, FaPaw, FaShower, FaBath, FaBed, FaTv, FaFire, FaCloudSunRain } from 'react-icons/fa';
+import 'swiper/swiper-bundle.css';
+import { FaUtensils, FaShower, FaBath, FaBed, FaTv, FaFire, FaCloudSunRain } from 'react-icons/fa';
 
 const suites = [
     {
@@ -517,50 +517,49 @@ const suites2 = [
 
 const Acomodacoes = () => {
     const location = useLocation();
-    const swiperRef = useRef(null); // Criar uma referência para o swiper
+    const swiperRef = useRef(null); 
 
     useEffect(() => {
-        const hash = location.hash; // Pega o hash da URL
-        console.log("Hash da URL:", hash); // Log do hash para depuração
+        const hash = location.hash;
+        console.log("Hash da URL:", hash); 
 
         if (hash) {
-            const suiteId = hash.replace('#', ''); // Remove o hash
-            const index = suites.findIndex(suite => suite.id === suiteId); // Busca o índice da suíte
+            const suiteId = hash.replace('#', '');
+            const index = suites.findIndex(suite => suite.id === suiteId); 
 
-            console.log("Índice da suíte:", index); // Log do índice para depuração
+            console.log("Índice da suíte:", index); 
 
             if (index !== -1 && swiperRef.current) {
-                console.log("swiperRef:", swiperRef.current); // Log do swiperRef
+                console.log("swiperRef:", swiperRef.current); 
 
-                // Adicionando um log para verificação da estrutura do Swiper
                 setTimeout(() => {
-                    console.log("Swiper HTML:", swiperRef.current.outerHTML); // Log da estrutura HTML do Swiper
-                    console.log("Número de slides:", swiperRef.current.swiper.slides.length); // Número de slides
+                    console.log("Swiper HTML:", swiperRef.current.outerHTML); 
+                    console.log("Número de slides:", swiperRef.current.swiper.slides.length); 
 
                     if (swiperRef.current) {
                         console.log("Swiper está inicializado.");
-                        console.log("Métodos disponíveis no Swiper:", Object.keys(swiperRef.current.swiper)); // Log dos métodos
+                        console.log("Métodos disponíveis no Swiper:", Object.keys(swiperRef.current.swiper)); 
 
                         try {
-                            swiperRef.current.swiper.update(); // Atualiza o Swiper
-                            swiperRef.current.swiper.slideTo(index); // Desloca para o slide correspondente
-                            console.log("Deslocando para o slide:", index); // Log para confirmar o deslocamento
+                            swiperRef.current.swiper.update();
+                            swiperRef.current.swiper.slideTo(index); 
+                            console.log("Deslocando para o slide:", index); 
                         } catch (error) {
-                            console.error("Erro ao tentar deslizar:", error); // Log de erro ao tentar deslizar
+                            console.error("Erro ao tentar deslizar:", error); 
                         }
                     } else {
-                        console.warn("Swiper não encontrado."); // Log de advertência
+                        console.warn("Swiper não encontrado.");
                     }
-                }, 500); // Aumento do atraso para garantir que o Swiper esteja pronto
+                }, 500);
             } else {
-                console.warn("Índice da suíte inválido ou Swiper não inicializado."); // Log de advertência
+                console.warn("Índice da suíte inválido ou Swiper não inicializado."); 
             }
         }
     }, [location]);
 
     return (
         <>
-            <Swiper ref={swiperRef} /* outras props do swiper */>
+            <Swiper ref={swiperRef}>
                 <SuiteComponent suites={suites} />
                 <SuiteComponent2 suites={suites2} />
             </Swiper>

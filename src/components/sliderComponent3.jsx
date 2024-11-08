@@ -8,7 +8,6 @@ import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ButtonAcomoda from './button2';
 
-// Global styles for Swiper
 const SwiperStyles = createGlobalStyle`
 
 .swiper-button-next, .swiper-button-prev {
@@ -155,7 +154,6 @@ const Features = styled(motion.div)`
     }
 `;
 
-// Container for Slider
 const SliderWrapper = styled.div`
     width: 100%;
     max-width: 100%;
@@ -166,7 +164,6 @@ const SliderWrapper = styled.div`
     }
 `;
 
-// Main Slider Component
 const SliderComponent = ({
     content = [],
     contentType = 'image',

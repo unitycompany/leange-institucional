@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { motion } from 'framer-motion'; // Importando motion
+import { motion } from 'framer-motion'; 
 import { TbChristmasBall } from "react-icons/tb";
 
-const ModalContainer = styled(motion.div)` // Aplicando motion ao ModalContainer
+const ModalContainer = styled(motion.div)` 
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@ const ModalContainer = styled(motion.div)` // Aplicando motion ao ModalContainer
   z-index: 1000;
 `;
 
-const ModalCard = styled(motion.div)` // Aplicando motion ao ModalCard
+const ModalCard = styled(motion.div)`
   background: white;
   border-radius: 60px 20px 35px 10px;
   padding: 20px;
@@ -62,7 +62,7 @@ const CloseButton = styled(motion.button)`
   align-items: center;
   justify-content: center;
   background: transparent;
-  font-size: 50px;
+  font-size: 35px;
   position: absolute;
   top: 10px;
   right: 15px;
@@ -74,8 +74,8 @@ const CloseButton = styled(motion.button)`
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 1);
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   transition: all .2s ease;
 
   @media(max-width: 768px){
@@ -92,7 +92,7 @@ const CloseButton = styled(motion.button)`
   }
 `;
 
-const WhatsAppButton = styled(motion.a)` // Aplicando motion ao WhatsAppButton
+const WhatsAppButton = styled(motion.a)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +121,7 @@ const WhatsAppButton = styled(motion.a)` // Aplicando motion ao WhatsAppButton
   }
 `;
 
-const SuiteCountCircle = styled(motion.div)` // Aplicando motion ao SuiteCountCircle
+const SuiteCountCircle = styled(motion.div)` 
   position: absolute;
   top: -25px;
   left: -25px;
@@ -151,8 +151,8 @@ const SuiteCountCircle = styled(motion.div)` // Aplicando motion ao SuiteCountCi
 
 const PromotionModal = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [suiteCount, setSuiteCount] = useState(7); // Quantidade de suítes disponíveis
-  const [suiteText, setSuiteText] = useState("suítes disponíveis"); // Texto a ser exibido no círculo
+  const [suiteCount, setSuiteCount] = useState(7);
+  const [suiteText, setSuiteText] = useState("suítes disponíveis"); 
 
   const handleClose = () => {
     setIsOpen(false);
@@ -186,16 +186,16 @@ const PromotionModal = () => {
           >
             {suiteCount} {suiteText}
           </SuiteCountCircle>
-          <p>Aproveite nossa promoção especial. Clique abaixo para mais informações.</p>
+          <p>Aproveite nossa promoção especial de Natal. Clique abaixo para mais informações.</p>
           <WhatsAppButton
-            href="https://wa.link/dojlwi"
-            target="_blank"
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            Fazer minha reserva agora!
-            <TbChristmasBall />
+              href="https://wa.link/dojlwi"
+              target="_blank"
+              initial={{ scale: 0.8 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+              >
+              Fazer minha reserva agora!
+              <TbChristmasBall />
           </WhatsAppButton>
         </ModalCard>
       </ModalContainer>

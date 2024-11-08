@@ -135,7 +135,7 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledButton = styled(CustomButton)`
-    margin-top: auto; // Alinha o botão para o fundo
+    margin-top: auto; 
 `;
 
 const Pensao = ({ colorDefinedBold }) => {
@@ -144,12 +144,12 @@ const Pensao = ({ colorDefinedBold }) => {
             <StyledPensaoImages>
                 <StyledTable>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920611/1_z2nkyx.png" alt="Imagem 1" />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920609/2_sxwyp9.png" alt="Imagem 2" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920611/1_z2nkyx.png" alt="Homem fazendo churrasco na le ange" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920609/2_sxwyp9.png" alt="Risoto no prato na le ange" loading="lazy" />
                     </div>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920606/5_utfvwq.png" alt="Imagem 3" />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920607/3_cijslx.png" alt="Imagem 4" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920606/5_utfvwq.png" alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730920607/3_cijslx.png" alt="Risoto no prato na le ange" loading="lazy" />
                     </div>
                 </StyledTable>
             </StyledPensaoImages>
@@ -158,12 +158,8 @@ const Pensao = ({ colorDefinedBold }) => {
                     Pensão <b>Completa</b>
                 </StyledTitle>
                 <StyledParagraph>
-                    Sabe aquela comida com sabor, tempero e afeto que te abraça?
-                    <br />
-                    <br />
-                    Essa é a gastronomia registrada da LeAnge!
-                    <br />
-                    <br />
+                    Sabe aquela comida com sabor, tempero e afeto que te abraça? <br /> <br />
+                    Essa é a gastronomia registrada da LeAnge! <br /><br />
                     Nossa estadia dispõe de um restaurante, onde são oferecidas todas as
                     refeições do dia – café da manhã, almoço, chá da tarde e jantar, incluindo
                     nossas deliciosas sobremesas.

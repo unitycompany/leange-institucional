@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css"; // Certifique-se de que você tenha importado o CSS do Swiper
+import "swiper/swiper-bundle.css"; 
 import styled from "styled-components";
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -11,7 +11,7 @@ const StyledImage = styled.img`
     margin-left: 5%;
     height: 70vh;
     border-radius: 30px;
-    object-fit: cover; // Para garantir que a imagem cubra o espaço do slide
+    object-fit: cover;
 
     @media (max-width: 768px){
         border-radius: 15px;
@@ -42,7 +42,7 @@ const StyledTextOverlay = styled.div`
 `;
 
 const ImageSwiper = ({ images }) => {
-    const autoplayDelay = 3000; // Defina o valor do delay do autoplay em milissegundos
+    const autoplayDelay = 1500; 
 
     return (
         <Swiper 

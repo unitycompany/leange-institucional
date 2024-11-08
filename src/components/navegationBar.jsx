@@ -1,6 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-import Logo from '../../public/logos/black.png';
 import Button from './button';
 import { FaHome, FaInfoCircle, FaAnchor, FaMountain, FaCalendar, FaBed } from 'react-icons/fa';
 import { HiBars3BottomRight } from "react-icons/hi2";
@@ -347,10 +346,10 @@ const NavegationBar = () => {
                 )}
                 <Link to="/" aria-label="Home">
                     <picture>
-                        <source media="(max-width: 480px)" srcSet={Logo} />
-                        <source media="(max-width: 768px)" srcSet={Logo} />
-                        <source media="(min-width: 769px)" srcSet={Logo} />
-                        <img src={Logo} alt="Logo da Empresa" style={{ maxHeight: '40px' }} />
+                        <source media="(max-width: 480px)" srcSet="https://res.cloudinary.com/dupg7clzc/image/upload/v1729513421/black_kteyv6.png" />
+                        <source media="(max-width: 768px)" srcSet="https://res.cloudinary.com/dupg7clzc/image/upload/v1729513421/black_kteyv6.png" />
+                        <source media="(min-width: 769px)" srcSet="https://res.cloudinary.com/dupg7clzc/image/upload/v1729513421/black_kteyv6.png" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729513421/black_kteyv6.png" alt="Logo da Empresa" style={{ maxHeight: '40px' }} />
                     </picture>
                 </Link>
                 <StyledHeader>
@@ -368,7 +367,7 @@ const NavegationBar = () => {
             </StyledDiv>
 
             <MobileBar isScrolled={isScrolled}>
-                <img src={Logo} alt='logo da le ange' />
+                <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729513421/black_kteyv6.png" alt='logo da le ange' />
                 <button onClick={toggleSidebar} isClicked={isClicked}>
                     Menu
                     <HiBars3BottomRight />
@@ -377,7 +376,7 @@ const NavegationBar = () => {
 
             <Sidebar isOpen={isSidebarOpen}>
                 <button onClick={closeSidebar}>X</button>
-                <img src={Logo} alt='logo da le ange' />
+                <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729513421/black_kteyv6.png" alt='logo da le ange' />
                 <div>
                     <StyledLink to="/" isActive={location.pathname === "/"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início
