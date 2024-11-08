@@ -6,7 +6,7 @@ import './styles/global.css';
 import './styles/index.css';
 import './styles/variables.css';
 
-import Home from './pages/Home/home';
+import Home from './pages/Home/';
 import Event from './pages/Event/event';
 import Sobre from './pages/Sobre/Sobre';
 import Serra from './pages/Serra/Serra';
