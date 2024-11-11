@@ -238,7 +238,7 @@ const Features = styled.div`
 const ButtonContainer = styled.div`
     position: absolute;
     bottom: 50px; 
-    left: 25px; 
+    left: 32%; 
     display: flex;
     width: 10%;
     gap: 5px; 
