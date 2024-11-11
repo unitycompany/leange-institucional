@@ -4,7 +4,6 @@ import Footer from '../../components/footer';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import CustomButton from '../../components/button3';
-import CoverflowSliderComponent from '../../components/effectSlider';
 import CarouselComponent from '../../components/carrosselComponent';
 import AcomodaComponent from '../../components/acomodaComponent';
 import Pensao from '../../components/pensao';
@@ -38,7 +37,7 @@ const StyledSectionHome = styled(motion.section)`
         position: absolute;
         z-index: -1;
         opacity: .05;
-        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730901634/9_iinz0o.png');
+        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
         background-position: center;
         background-size: cover;
 
@@ -56,7 +55,7 @@ const StyledSectionHome = styled(motion.section)`
 const StyledHomeDiv = styled(motion.div)`
     width: 45%;
     height: 100%;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730901634/9_iinz0o.png');
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -156,175 +155,54 @@ const StyledHomeTexts = styled(motion.div)`
     }
 `;
 
-const slideDataCoverflow = [
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833084/5_sfnitt.png',
-        title: 'Pet Friendly',
-        description: 'Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra'
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833084/8_tk7djv.png',
-        title: 'Aventura',
-        description: 'Na propriedade, temos trilhas dentro da natureza, beirando o rio! Em diversos pontos você pode escolher dar uma paradinha para tomar um banho e renovar as energias!',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833082/6_jwjaru.png',
-        title: 'Refrescar',
-        description: 'Nossa maravilhosa piscina de borda infinita possui aquecimento solar e tratamento especial por ozônio, com níveis baixíssimos de cloro, além de contar com o ofurô aquecido, perfeito para aproveitar no final de tarde.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/sauna-1_gmuhlq.webp',
-        title: 'Sossego',
-        description: 'A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/biblioteca_l0ce1h.webp',
-        title: 'Aconchego',
-        description: 'Nossas áreas internas, contam com três salas superequipadas e aconchegantes, sendo elas: sala de TV, sala de estar, sala de jogos com mesa de bilhar, carteado, jogos de tabuleiro e biblioteca.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/cafedamanha_n4vr9z.jpg',
-        title: 'Cozinha',
-        description: 'Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/IMG_7134-scaled_stgkmc.jpg',
-        title: 'Divercão',
-        description: 'Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet, correr, pular e nadar!',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra',
-    },
-
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/adega_n0cszf.jpg',
-        title: 'Adega',
-        description: 'Para completar ainda mais sua experiência, contamos com uma adega subterrânea para climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra',
-    },
-
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833076/suites_hsgvxw.webp',
-        title: 'Suítes',
-        description: 'Nossas suítes são incríveis e cada uma possui o seu charme. Todas contam com banheira com vista para a natureza, lareira para aquecer no friozinho, camas king size, ar condicionado, frigobar e varanda.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra',
-    },
-
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/slide04_li94ks.webp',
-        title: 'Relaxar',
-        description: 'Relaxe em nosso SPA com uma vista de frente para mata! Você pode escolher contratar nossos serviços de massoterapia, manicure, pedicure.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Serra',
-    },
-    // Adicione mais slides conforme necessário
-];
-
-const StyledSectionEstrutura = styled.section`
-    width: 100%;
-    height: 120vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    flex-direction: column;
-    display: none;
-
-    @media (max-width: 768px){
-        height: auto;
-        padding: 5% 0;
-        gap: 30px;
-    }
-    
-
-    & > div h1{
-        font-size: 2rem;
-        font-family: var(--font--comfortaa);
-        text-align: center;
-
-        @media (max-width: 768px){
-
-            font-size: 1.3rem;
-            width: 95%;
-            margin-left: 2.5%;
-        }
-    }
-
-    & > div p{
-        text-align: center;
-        font-family: var(--font--avenir);
-
-        @media (max-width: 768px){
-            font-size: .9rem;
-            margin-top: 10px;
-  
-        }
-    }
-    
-
-`
-
 const slides = [
     {
         title: "Pet Friendly",
         description: "Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833084/5_sfnitt.png"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/cachorro_na_piscina_sjs7ft.webp"
     },
     {
         title: "Aventura",
         description: "Na propriedade, temos trilhas dentro da natureza, beirando o rio! Em diversos pontos você pode escolher dar uma paradinha para tomar um banho e renovar as energias!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833084/8_tk7djv.png"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731332405/aventura_odmky4.webp"
     },
     {
         title: "Refrescar",
         description: "Nossa maravilhosa piscina de borda infinita possui aquecimento solar e tratamento especial por ozônio, com níveis baixíssimos de cloro, além de contar com o ofurô aquecido, perfeito para aproveitar no final de tarde.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833082/6_jwjaru.png"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731332405/cachorro_pulando_na_piscina_lrhxpp.webp"
     },
     {
         title: "Sossego",
         description: "A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/sauna-1_gmuhlq.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_1_jsshhu.webp"
     },
     {
         title: "Aconchego",
         description: "Nossas áreas internas contam com três salas superequipadas e aconchegantes, sendo elas: sala de TV, sala de estar, sala de jogos com mesa de bilhar, carteado, jogos de tabuleiro e biblioteca.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/biblioteca_l0ce1h.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/sala-de-estar_xuxiou.webp"
     },
     {
         title: "Cozinha",
         description: "Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/cafedamanha_n4vr9z.jpg"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/caf%C3%A9_da_manh%C3%A3_vaxwlf.webp"
     },
     {
         title: "Diversão",
         description: "Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet correr, pular e nadar!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/IMG_7134-scaled_stgkmc.jpg"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/parc%C3%A3o_mdvo8p.webp"
     },
     {
         title: "Adega",
         description: "Para completar ainda mais sua experiência, contamos com uma adega subterrânea para climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/adega_n0cszf.jpg"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/adega_uje7gn.webp"
     },
     {
         title: "Suítes",
@@ -354,16 +232,16 @@ const StyledSectionEspaco = styled.section`
 `
 
 const ImagesAcomoda = [
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133147/suiteSuperior1_gpjls0.jpg", text: "Suíte Superior 1" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133146/suiteSuperior2_cqduas.jpg", text: "Suíte Superior 2" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133142/suiteSuperior3_pgr53r.jpg", text: "Suíte Superior 3" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133142/suiteStandard4_mrtwhq.jpg", text: "Suíte Standard 4" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133138/suiteStandard5_j9oyln.jpg", text: "Suíte Standard 5" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133137/suiteMaster6_id3iqs.jpg", text: "Suíte Master 6" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133133/suiteMaster7_bqdek7.jpg", text: "Suíte Master 7" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133111/suiteStandard8_lpyi22.jpg", text: "Suíte Standard 8" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133110/suiteSuperior9_v1mxwb.jpg", text: "Suíte Superior 9" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730133110/suiteMaster10_gqoxfm.jpg", text: "Suíte Superior 10" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133147/suiteSuperior1_gpjls0.jpg", text: "Suíte Superior 1", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133146/suiteSuperior2_cqduas.jpg", text: "Suíte Superior 2", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133142/suiteSuperior3_pgr53r.jpg", text: "Suíte Superior 3", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133142/suiteStandard4_mrtwhq.jpg", text: "Suíte Standard 4", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133138/suiteStandard5_j9oyln.jpg", text: "Suíte Standard 5", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133137/suiteMaster6_id3iqs.jpg", text: "Suíte Master 6", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133133/suiteMaster7_bqdek7.jpg", text: "Suíte Master 7", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133111/suiteStandard8_lpyi22.jpg", text: "Suíte Standard 8", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133110/suiteSuperior9_v1mxwb.jpg", text: "Suíte Superior 9", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133110/suiteMaster10_gqoxfm.jpg", text: "Suíte Superior 10", loading: "lazy" },
 ];
 
 const StyledLocall = styled.div`
@@ -412,7 +290,7 @@ const StyledContainerEvents = styled.section`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919563/frutos_do_mar_zmftbs.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
         title: 'Frutos do mar',
         dateRange: '22/11/2024 até 24/11/2024 (2 diárias)',
         features: [
@@ -424,7 +302,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919809/1_vdy0cc.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp',
         title: 'Noite de Risotos',
         dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
         features: [
@@ -436,7 +314,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330265/pizzas_lgsqcd.webp',
         title: 'Noite das pizzas',
         dateRange: '06/12/2024 até 08/12/2024 (3 diárias)',
         features: [
@@ -448,7 +326,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919952/2_blegej.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330262/frutos_do_mar2_xyxatd.webp',
         title: 'Frutos do Mar',
         dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
@@ -460,7 +338,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920150/3_oxsk37.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/fique3pague4_fiupcm.webp',
         title: 'Fique 3 pague 4',
         dateRange: 'Segunda-feira a Sexta-feira',
         features: [
@@ -472,7 +350,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920274/4_cl1vx0.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330266/natal_wrunee.webp',
         title: 'Pacote de Natal',
         dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
         features: [
@@ -483,7 +361,6 @@ const events = [
         price: '918,40',
         discount: 25,
     },
-    // Adicione mais eventos conforme necessário
 ];
 
 const Serra = () => {
@@ -562,23 +439,6 @@ const Serra = () => {
                 <h1>LeAnge Serra | Miguel Pereira RJ</h1>
             </StyledLocall>
 
-            <StyledSectionEstrutura>
-
-                <div>
-                    <h1>Veja um pouco sobre nosso espaço</h1>
-                    <p>Estamos ansisosos por você!</p>
-                </div>
-
-                <CoverflowSliderComponent
-                content={slideDataCoverflow} 
-                spaceBetween={20} 
-                width="100%" 
-                height="70vh" 
-                showPagination={false} 
-                showNavigation={true}
-                />
-            </StyledSectionEstrutura>
-
             <StyledSectionEspaco> 
 
                 <CarouselComponent
@@ -593,8 +453,6 @@ const Serra = () => {
             <Pensao />
 
             <PetFriendly />
-
-            {/* <Atracoes /> */}
 
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />

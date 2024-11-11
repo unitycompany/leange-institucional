@@ -31,7 +31,7 @@ const StyledAcomodaContainer = styled.section`
     justify-content: center;
     flex-direction: column;
     padding: 0% 5% 2.5% 5%;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730914828/serra_g9hccc.png');
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334823/serraFoto_k1rwb0.webp');
     background-size: cover;
     background-position: center;
     position: relative;

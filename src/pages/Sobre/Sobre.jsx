@@ -703,67 +703,6 @@ const PublicoContainer = styled.section`
     }
 `
 
-// const Compromisso = styled.section`
-//     width: 100%;
-//     height: 100vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/1_fhinom.png');
-//     background-position: center;
-//     background-size: cover;
-//     background-attachment: fixed;
-
-//     @media (max-width: 768px){
-//         flex-direction: column;
-//         background-image: none;
-//         background-color: var(--color--black);
-//     }
-
-//     & > div {
-//         height: 100%;
-//         width: 50%;
-//         display: flex;
-//         align-items: center;
-//         justify-content: center;
-//         flex-direction: column;
-//         gap: 25px;
-
-//         @media (max-width: 768px){
-//             width: 100%;
-//             height: auto;
-//         }
-
-//         & > h1{
-//             font-size: 2.5em;
-//             font-family: var(--font--comfortaa);
-//             color: var(--color--white);
-
-//             @media (max-width: 768px){
-//                 font-size: 24px;
-//                 width: 100%;
-//                 text-align: center;
-//             }
-//         }
-
-//         & > h1 b{
-//             color: var(--color--green);
-//         }
-
-//         & > p {
-//             width: 80%;
-//             font-family: var(--font--comfortaa);
-//             color: var(--color--white);
-//             text-align: justify;
-
-//             @media (max-width: 768px){
-//                 font-size: 14px;
-//                 text-align: justify;
-//             }
-//         }
-//     }
-// `
-
 const CTA = styled.div`
     width: 100%;
     height: 100vh;
@@ -810,8 +749,8 @@ const Sobre = () => {
                 </div>
                 <div>
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729516968/cachorro_rlsw5a.png" 
-                    alt='foto do cachorro'
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331472/cachorro_kcfx8n.webp" 
+                    alt='foto da gaia, cachorra da pousada le ange'
                     loading='lazy'
                     />
                 </div>
@@ -821,12 +760,12 @@ const Sobre = () => {
 
                 <div>
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729529831/7_w7mvfk.jpg" 
-                    alt='foto da le ande da serra' 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331474/foto_da_pousada_do_mar_d9fx7r.webp" 
+                    alt='foto da le ande da mar' 
                     loading='lazy'
                     />
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729529820/7_s8lgut.jpg" 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331474/foto_da_pousada_da_serra_lefdif.webp" 
                     alt='foto da le ande da serra'
                     loading='lazy' 
                     />
@@ -850,24 +789,24 @@ const Sobre = () => {
 
                 <div>
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530455/6_ezddyi.jpg" 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331473/rede_no_mar_ajtwwv.webp" 
                     loading='lazy'
-                    alt='foto do diferencial' 
+                    alt='rede na le ange mar' 
                     />
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530449/8_n7asdv.jpg" 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_1_jsshhu.webp" 
                     loading='lazy'
-                    alt='foto do diferencial' 
+                    alt='hot tube na le ange serra' 
                     />
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530446/5_lx3fxd.jpg"
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/divers%C3%A3o_na_serra_fzhl7y.webp"
                     loading='lazy' 
-                    alt='foto do diferencial'
+                    alt='casal se divertindo na le ange serra'
                     />
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530444/1_nhk8wd.jpg" 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331479/natal_jwdzzh.webp" 
                     loading='lazy'
-                    alt='foto do diferencial' 
+                    alt='foto da le ange com tema de natal' 
                     />
                 </div>
 
@@ -882,14 +821,14 @@ const Sobre = () => {
                     </div>
                     <div>
                         <img 
-                        src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530841/pizza_apuref.jpg" 
+                        src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330265/pizzas_lgsqcd.webp" 
                         loading='lazy'
-                        alt='foto de gastronomia' 
+                        alt='foto da noite de pizzas na pousada le ange' 
                         />
                         <img 
-                        src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729530957/sushi_g7sbq9.jpg" 
+                        src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp" 
                         loading='lazy'
-                        alt='foto de gastronomia' 
+                        alt='foto da noite de risotos na pousada le ange' 
                         />
                     </div>
                 </div>
@@ -897,14 +836,14 @@ const Sobre = () => {
                 <div>
                     <div>
                         <img 
-                        src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729531441/espaco_bvmt8g.jpg"
+                        src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331477/cachorro_olhando_pra_camera_ndannw.webp"
                         loading='lazy'
-                        alt='foto de gastronomia' 
+                        alt='foto do cachorro sorrindo para camera' 
                          />
                         <img 
-                        src="https://res.cloudinary.com/dupg7clzc/image/upload/v1729531444/espaco2_i3ieau.png" 
+                        src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp" 
                         loading='lazy'
-                        alt='foto de gastronomia' 
+                        alt='uma mulher e dois cachorros na pousada le ange' 
                         />
                     </div>
                     <div>
@@ -929,19 +868,10 @@ const Sobre = () => {
                 </div>
                 
                 <div>
-                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/v1730130112/fotoMar3_ywfvig.jpg" alt='foto da pousada'/>
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/quadro_de_cachorro_s1mnbq.webp" alt='foto do quadro de cachorro na pousada le ange mar'/>
                 </div>
 
             </PublicoContainer>
-
-            {/* <Compromisso>
-
-                <div>
-                    <h1>Compromisso com o <b>Meio Ambiente</b></h1>
-                    <p>Estamos, profundamente, comprometidos com a sustentabilidade. Utilizamos produtos de produtores rurais locais, promovendo a economia regional e minimizando nosso impacto ambiental. Implementamos práticas ecológicas em todas as nossas operações, desde o uso de energia solar até a gestão eficiente de recursos.</p>
-                </div>
-
-            </Compromisso> */}
 
             <CTA>
                 <h1>Venha viver essa experiência com a gente!</h1>

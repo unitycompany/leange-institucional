@@ -32,7 +32,7 @@ const StyledAcomodaContainer = styled.section`
     flex-direction: column;
     padding: 0% 5% 2.5% 5%;
     position: relative;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730914386/mar_vbkejw.png');
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334824/marFoto_oxc2py.webp');
     background-size: cover;
     background-position: center;
 

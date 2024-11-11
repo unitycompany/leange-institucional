@@ -4,7 +4,6 @@ import Footer from '../../components/footer';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import CustomButton from '../../components/button3';
-import CoverflowSliderComponent from '../../components/effectSlider';
 import CarouselComponent from '../../components/carrosselComponent';
 import AcomodaComponent2 from '../../components/acomodaComponent2';
 import Pensao from '../../components/pensao';
@@ -38,7 +37,7 @@ const StyledSectionHome = styled(motion.section)`
         position: absolute;
         z-index: -1;
         opacity: .05;
-        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730926399/IMG_0454_gpdc1l.jpg');
+        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327000/casal_na_rede_watzjg.webp');
         background-position: center;
         background-size: cover;
 
@@ -57,7 +56,7 @@ const StyledSectionHome = styled(motion.section)`
 const StyledHomeDiv = styled(motion.div)`
     width: 45%;
     height: 100%;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730926455/IMG_0454_o2cwol.jpg');
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327000/casal_na_rede_watzjg.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -158,159 +157,54 @@ const StyledHomeTexts = styled(motion.div)`
     }
 `;
 
-const slideDataCoverflow = [
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/petfriendly-scaled_vsev2s.webp',
-        title: 'Pet Friendly',
-        description: 'Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Mar',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/praia_flvqaf.webp',
-        title: 'Praia',
-        description: 'Para os amantes da praia, estamos a apenas 150 metros da areia da Praia Rasa, onde você e seu pet podem aproveitar juntinhos e dar um mergulho delicioso no mar.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Mar',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/piscina_vw7plw.webp',
-        title: 'Piscinas',
-        description: 'Nossa piscina aquecida com vista panorâmica para o oceano é de surpreender! Possui tratamento especial por ozônio com níveis baixíssimos de cloro, pensando no bem-estar da sua pele a do seu pet também!',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Mar',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/ofuros_zeqb9x.webp',
-        title: 'Ofurôs',
-        description: 'São dois ofurôs acoplados na piscina, para você relaxar na água quentinha, apreciando a vista exuberante do mar.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Mar',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/saladeestar_yakcqy.webp',
-        title: 'Sala de estar',
-        description: 'A sala de estar é aquela que abraça e aconchega. Cheia de sofás, você pode se acomodar e assistir uma televisão, ou até mesmo ler um livro, sempre na companhia do seu pet.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Mar',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/cozinha_q3rrwr.webp',
-        title: 'Cozinha',
-        description: 'Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Mar',
-    },
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832503/bar_qgdbog.webp',
-        title: 'Bar',
-        description: 'Para completar ainda mais sua experiência, contamos com uma carta variada de vinhos, destilados, drinks e cervejas!',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Mar',
-    },
-
-    {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/suites_px4fhy.webp',
-        title: 'Suítes',
-        description: 'São 8 suítes elegantemente decoradas, todas com vista para o mar, banheira de imersão, varanda, cama king size, ar condicionado e frigobar.',
-        buttonText: 'Viver minha experiência agora',
-        topLeftText: 'Le Ange Mar',
-    },
-    // Adicione mais slides conforme necessário
-];
-
-const StyledSectionEstrutura = styled.section`
-    width: 100%;
-    height: 120vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    flex-direction: column;
-    display: none;
-
-    @media (max-width: 768px){
-        height: auto;
-        padding: 5% 0;
-        gap: 30px;
-    }
-    
-
-    & > div h1{
-        font-size: 2rem;
-        font-family: var(--font--comfortaa);
-        text-align: center;
-
-        @media (max-width: 768px){
-
-            font-size: 1.3rem;
-            width: 95%;
-            margin-left: 2.5%;
-        }
-    }
-
-    & > div p{
-        text-align: center;
-        font-family: var(--font--avenir);
-
-        @media (max-width: 768px){
-            font-size: .9rem;
-            margin-top: 10px;
-  
-        }
-    }
-    
-
-`
-
 const slides = [
     {
         title: "Pet Friendly",
         description: "Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/petfriendly-scaled_vsev2s.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730832504/petfriendly-scaled_vsev2s.webp"
     },
     {
         title: "Praia",
         description: "Para os amantes da praia, estamos a apenas 150 metros da areia da Praia Rasa, onde você e seu pet podem aproveitar juntinhos e dar um mergulho delicioso no mar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/praia_flvqaf.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329813/cachorro_na_praia_pmqyi4.webp"
     },
     {
         title: "Piscinas",
         description: "Nossa piscina aquecida com vista panorâmica para o oceano é de surpreender! Possui tratamento especial por ozônio com níveis baixíssimos de cloro, pensando no bem-estar da sua pele a do seu pet também!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/piscina_vw7plw.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/pousada_de_cima_vpzpdb.webp"
     },
     {
         title: "Ofurôs",
         description: "São dois ofurôs acoplados na piscina, para você relaxar na água quentinha, apreciando a vista exuberante do mar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/ofuros_zeqb9x.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329813/ofuros_kyjddp.webp"
     },
     {
         title: "Sala de estar",
         description: "A sala de estar é aquela que abraça e aconchega. Cheia de sofás, você pode se acomodar e assistir uma televisão, ou até mesmo ler um livro, sempre na companhia do seu pet.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/saladeestar_yakcqy.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730832504/saladeestar_yakcqy.webp"
     },
     {
         title: "Cozinha",
         description: "Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/cozinha_q3rrwr.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/caf%C3%A9_da_manh%C3%A3_vaxwlf.webp"
     },
     {
         title: "Bar",
         description: "Para completar ainda mais sua experiência, contamos com uma carta variada de vinhos, destilados, drinks e cervejas!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832503/bar_qgdbog.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730832503/bar_qgdbog.webp"
     },
     {
         title: "Suítes",
         description: "São 8 suítes elegantemente decoradas, todas com vista para o mar, banheira de imersão, varanda, cama king size, ar condicionado e frigobar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/suites_px4fhy.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329811/suites_pzghlo.webp"
     }
 ];
 
@@ -330,14 +224,14 @@ const StyledSectionEspaco = styled.section`
 `
 
 const ImagesAcomoda = [
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730144220/suiteMar01_p6bfoi.jpg", text: "Suíte Superior 1" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730144220/suiteMar02_pzxjim.jpg", text: "Suíte Standard 2" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730144223/suiteMar07_dgfxzq.jpg", text: "Suíte Superior 3" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730144223/suiteMar05_oid9as.jpg", text: "Suíte Superior 4" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730144223/suiteMar08_g1gmt0.jpg", text: "Suíte Superior 5" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730144224/suiteMar03_o9sxbf.jpg", text: "Suíte Standard 6" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730144224/suiteMar04_jcaps2.jpg", text: "Suíte Master 7" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730144226/suiteMar06_jywv1q.jpg", text: "Suíte Master 8" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334570/suiteMar01_p6bfoi-compressed_kixsaa.jpg", text: "Suíte Superior 1", loading: "lazy"},
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334571/suiteMar02_pzxjim-compressed_voukzk.jpg", text: "Suíte Standard 2", loading: "lazy"},
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334571/suiteMar07_dgfxzq-compressed_kody5f.jpg", text: "Suíte Superior 3", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334573/suiteMar05_oid9as-compressed_al5vur.jpg", text: "Suíte Superior 4", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334574/suiteMar08_g1gmt0-compressed_mymcv1.jpg", text: "Suíte Superior 5", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334576/suiteMar03_o9sxbf-compressed_uw2hox.jpg", text: "Suíte Standard 6", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334577/suiteMar04_jcaps2-compressed_evaonu.jpg", text: "Suíte Master 7", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334579/suiteMar06_jywv1q-compressed_u1tfqp.jpg", text: "Suíte Master 8", loading: "lazy" },
 ];
 
 const StyledLocal = styled.div`
@@ -386,7 +280,7 @@ const StyledContainerEvents = styled.section`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919563/frutos_do_mar_zmftbs.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
         title: 'Frutos do mar',
         dateRange: '22/11/2024 até 24/11/2024 (2 diárias)',
         features: [
@@ -398,7 +292,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919809/1_vdy0cc.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp',
         title: 'Noite de Risotos',
         dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
         features: [
@@ -410,7 +304,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330265/pizzas_lgsqcd.webp',
         title: 'Noite das pizzas',
         dateRange: '06/12/2024 até 08/12/2024 (3 diárias)',
         features: [
@@ -422,7 +316,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919952/2_blegej.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330262/frutos_do_mar2_xyxatd.webp',
         title: 'Frutos do Mar',
         dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
@@ -434,7 +328,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920150/3_oxsk37.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/fique3pague4_fiupcm.webp',
         title: 'Fique 3 pague 4',
         dateRange: 'Segunda-feira a Sexta-feira',
         features: [
@@ -446,7 +340,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920274/4_cl1vx0.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330266/natal_wrunee.webp',
         title: 'Pacote de Natal',
         dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
         features: [
@@ -457,7 +351,6 @@ const events = [
         price: '918,40',
         discount: 25,
     },
-    // Adicione mais eventos conforme necessário
 ];
 
 const Mar = () => {
@@ -536,23 +429,6 @@ const Mar = () => {
             <StyledLocal>
                 <h1>LeAnge Mar | Armação dos Búzios RJ</h1>
             </StyledLocal>
-
-            <StyledSectionEstrutura>
-
-                <div>
-                    <h1>Veja um pouco sobre nosso espaço</h1>
-                    <p>Estamos ansisosos por você!</p>
-                </div>
-
-                <CoverflowSliderComponent
-                content={slideDataCoverflow} 
-                spaceBetween={20} 
-                width="100%" 
-                height="70vh" 
-                showPagination={false} 
-                showNavigation={true}
-                />
-            </StyledSectionEstrutura>
 
             <StyledSectionEspaco> 
 

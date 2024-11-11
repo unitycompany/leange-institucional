@@ -10,51 +10,55 @@ import CoverflowSliderComponent from '../../components/effectSlider';
 import ImageCarouselSliderComponent from '../../components/infinitiSlider';
 import EventCardCarousel from '../../components/cardSlider';
 import Footer from '../../components/footer';
-import { MdBedroomParent } from "react-icons/md";
-import { MdFoodBank } from "react-icons/md";
-import { BsCalendar2HeartFill } from "react-icons/bs";
+import { SiApachecouchdb } from "react-icons/si";
+import { TbBrandWindows } from "react-icons/tb";
+import { MdChair } from "react-icons/md";
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import PromotionModal from '../../components/modal';
 
 const imagesSerra = [
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png", alt: 'Mulher na rede', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1729513693/9_hyv1zq.jpg", alt: 'Foto da pousada le ange vista de cima', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/3_d2soci.png", alt: '2 cachorros na piscina', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/diversao_jpykdy.jpg", alt: 'Foto da pousada vista de baixo', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg", alt: 'Foto da sala de estar da pousada le ange serra', loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730130111/fotoSerra1_pa28ry.jpg", alt: '2 cachorros na cama no meio do quintal', loading: "lazy" }
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/mulher-na-rede_bj91d1.webp", alt: 'Mulher na rede', loading: "lazy" },
+
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/pousada-de-cima_hum4rw.webp", alt: 'Foto da pousada le ange vista de cima', loading: "lazy" },
+
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/cachorro-na-piscina_mnkqrv.webp", alt: '2 cachorros na piscina', loading: "lazy" },
+
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/parque-na-pousada_rfde1i.webp", alt: 'Foto da pousada vista de baixo', loading: "lazy" },
+
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/sala-de-estar_xuxiou.webp", alt: 'Foto da sala de estar da pousada le ange serra', loading: "lazy" },
+
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/cachorro-na-cama-no-mato_pa3yt6.webp", alt: '2 cachorros na cama no meio do quintal', loading: "lazy" }
 ];
 
 const imagesMar = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121191/mar1_lhebdi.webp', alt: 'Foto da pousada le ange mar',loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730926455/IMG_0454_o2cwol.jpg', alt: '2 pessoas na rede na pousada le ange mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920611/1_z2nkyx.png', alt: 'Foto de churrasco', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730901639/4_kuujqb.jpg', alt: 'Cachorro olhando para a câmera', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/piscina_vw7plw.webp', alt: 'Pousada le ange mar vista de cima', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130098/IMG_0041_zv7w3d.jpg', alt: 'Sala de estar na le ange mar', loading: "lazy" }
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/foto_da_pousada_e3djry.webp', alt: 'Foto da pousada le ange mar',loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327000/casal_na_rede_watzjg.webp', alt: '2 pessoas na rede na pousada le ange mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/churrasqueira_w7akaf.webp', alt: 'Foto de churrasco', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327000/cachorro-olhando-para-camera_wpovwv.webp', alt: 'Cachorro olhando para a câmera', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/pousada_de_cima_vpzpdb.webp', alt: 'Pousada le ange mar vista de cima', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/sala-de-estar_blaa0x.webp', alt: 'Sala de estar na le ange mar', loading: "lazy" }
 ];
 
 const imagesCarrossel01 = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/2_bwzqa4.png', alt: 'Pessoa na rede', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730121054/3_d2soci.png', alt: '2 cachorros na piscina', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126866/aconchego_y0rxho.jpg', alt: 'Sala de estar na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126873/sossego_dutvww.png', alt: 'Hot Tube na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130097/IMG_0885_pou52r.jpg', alt: '2 pessoas bebendo na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130097/IMG_0478_eymtmg.jpg', alt: '2 pessoas na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130098/IMG_0041_zv7w3d.jpg', alt: 'Sala de estar da le ange mar', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130886/IMG_6320_jovvjl.webp', alt: 'Por do sol na le ange', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/mulher-na-rede_bj91d1.webp', alt: 'Pessoa na rede', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/cachorro-na-piscina_mnkqrv.webp', alt: '2 cachorros na piscina', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/sala-de-estar_xuxiou.webp', alt: 'Sala de estar na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_1_jsshhu.webp', alt: 'Hot Tube na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/casal_comendo_no_mar_nkkwkl.webp', alt: '2 pessoas bebendo na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_d2asun.webp', alt: '2 pessoas na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/sala-de-estar_blaa0x.webp', alt: 'Sala de estar da le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327606/por_do_sol_wmwzur.webp', alt: 'Por do sol na le ange', label: 'Le Ange Serra', loading: "lazy" },
 ];
 
 const imagesCarrossel02 = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130887/IMG_7854_zetqsr.webp', alt: 'Foto do quarto na le ange', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130887/fotoMar1_wotf3h.webp', alt: 'Foto de churrasqueira na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130105/fotoSerra3_zqwbav.jpg', alt: 'Cachorro com a cabeça recostada na mão do tutor', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130104/fotoSerra4_zgia0i.jpg', alt: 'Uma pessoa e um cachorro na piscina', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130106/fotoMar6_lfgi4u.jpg', alt: '2 taças com um fundo de por do sol', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130111/fotoSerra1_pa28ry.jpg', alt: '2 cachorros em uma cama no meio do jardim', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730130112/fotoMar3_ywfvig.jpg', alt: 'Foto do quadro de cachorro na le ange mar', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328215/suite_ajrwh0.webp', alt: 'Foto do quarto na le ange', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328215/churrasqueira_feg3jy.webp', alt: 'Foto de churrasqueira na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/cachorro_na_m%C3%A3o_kil7xk.webp', alt: 'Cachorro com a cabeça recostada na mão do tutor', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/mulher_e_cachorro_na_piscina_wwgxkq.webp', alt: 'Uma pessoa e um cachorro na piscina', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/2_ta%C3%A7as_ocgwdi.webp', alt: '2 taças com um fundo de por do sol', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/cachorro-na-cama-no-mato_pa3yt6.webp', alt: '2 cachorros em uma cama no meio do jardim', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/quadro_de_cachorro_s1mnbq.webp', alt: 'Foto do quadro de cachorro na le ange mar', label: 'Le Ange Serra', loading: "lazy" },
 ];
-
 
 const StyledContainerPousadas = styled.section`
     width: 100%;
@@ -143,7 +147,7 @@ const acomodaHome = [
       id: "suite-1",
       title: "Suíte Superior 1",
       subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-      backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra1_u0olej.jpg",
+      backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328712/suiteSerra1_wm28o4.webp",
       features: [
         { icon: <FaRulerCombined />, text: "52m²" },
         { icon: <FaSnowflake />, text: "Ar condicionado" },
@@ -157,21 +161,21 @@ const acomodaHome = [
       id: "suite-master-6",
       title: "Suíte Master 6",
       subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-      backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730124671/suiteSerra2_lhgcj2.jpg",
+      backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328713/suiteSerra2_aksiu9.webp",
       features: [
         { icon: <FaRulerCombined />, text: "77m²" },
         { icon: <FaSnowflake />, text: "Ar condicionado" },
         { icon: <FaBed />, text: "Cama king size" },
         { icon: <FaBath />, text: "Banheira" },
-        { icon: <FaUtensils />, text: 'Chaise lounge' },
-        { icon: <FaUtensils />, text: 'Bay window' }
+        { icon: <SiApachecouchdb />, text: 'Couch lounge' },
+        { icon: <TbBrandWindows />, text: 'Bay window' }
       ]
     },
     {
         id: "suite2-6",
         title: "Suíte Standard 6",
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
-        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125876/suiteMar2_yb1nqi.jpg",
+        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328711/suiteMar2_qlgel2.webp",
         features: [
             { icon: <FaRulerCombined />, text: "32m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
@@ -185,7 +189,7 @@ const acomodaHome = [
         id: "suite2-2",
         title: "Suíte Standard 2",
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
-        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730125876/suiteMar1_pmcoje.jpg",
+        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328711/suiteMar1_zu3lmc.webp",
         features: [
             { icon: <FaRulerCombined />, text: "30m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
@@ -199,13 +203,13 @@ const acomodaHome = [
         id: "suite-10",
         title: "Suíte Master 10",
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/v1730147346/1_lj4tav.jpg",
+        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328711/1_e6cnxy.webp",
         features: [
             { icon: <FaRulerCombined />, text: "77m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
             { icon: <FaBed />, text: "Cama king size" },
-            { icon: <FaFire />, text: 'Recamier e poltrona de leitura' },
-            { icon: <FaUtensils />, text: 'Couch lounge' },
+            { icon: <MdChair />, text: 'Recamier e poltrona de leitura' },
+            { icon: <SiApachecouchdb />, text: 'Couch lounge' },
             { icon: <FaFire />, text: "Lareira" }
       ]
     },
@@ -232,70 +236,70 @@ const StyledAcomoda = styled.section`
 
 const slideDataCoverflow = [
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833084/5_sfnitt.png',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/cachorro_na_piscina_sjs7ft.webp',
         title: 'Pet Friendly',
         description: 'Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra e Mar'
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/praia_flvqaf.webp',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329813/cachorro_na_praia_pmqyi4.webp',
         title: 'Praia',
         description: 'Para os amantes da praia, estamos a apenas 150 metros da areia da Praia Rasa, onde você e seu pet podem aproveitar juntinhos e dar um mergulho delicioso no mar.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/sauna-1_gmuhlq.webp',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_1_jsshhu.webp',
         title: 'Sossego',
         description: 'A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/piscina_vw7plw.webp',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/pousada_de_cima_vpzpdb.webp',
         title: 'Piscinas',
         description: 'Nossa piscina aquecida com vista panorâmica para o oceano é de surpreender! Possui tratamento especial por ozônio com níveis baixíssimos de cloro, pensando no bem-estar da sua pele a do seu pet também!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar e Serra',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/cafedamanha_n4vr9z.jpg',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/caf%C3%A9_da_manh%C3%A3_vaxwlf.webp',
         title: 'Cozinha',
         description: 'Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra e Mar',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/ofuros_zeqb9x.webp',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329813/ofuros_kyjddp.webp',
         title: 'Ofurôs',
         description: 'São dois ofurôs acoplados na piscina, para você relaxar na água quentinha, apreciando a vista exuberante do mar.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730833077/IMG_7134-scaled_stgkmc.jpg',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/parc%C3%A3o_mdvo8p.webp',
         title: 'Divercão',
         description: 'Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet, correr, pular e nadar!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832503/bar_qgdbog.webp',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329811/bar_xl6dvc.webp',
         title: 'Bar',
         description: 'Para completar ainda mais sua experiência, contamos com uma carta variada de vinhos, destilados, drinks e cervejas!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126865/adega_n0cszf.jpg',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/adega_uje7gn.webp',
         title: 'Adega',
         description: 'Para completar ainda mais sua experiência, contamos com uma adega subterrânea para climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra',
     },
     {
-        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730832504/suites_px4fhy.webp',
+        backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329811/suites_pzghlo.webp',
         title: 'Suítes',
         description: 'São 8 suítes elegantemente decoradas, todas com vista para o mar, banheira de imersão, varanda, cama king size, ar condicionado e frigobar.',
         buttonText: 'Viver minha experiência agora',
@@ -389,7 +393,7 @@ const StyledEstruturaSubTitle = styled.p`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919563/frutos_do_mar_zmftbs.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
         title: 'Frutos do mar',
         dateRange: '22/11/2024 até 24/11/2024 (2 diárias)',
         features: [
@@ -401,7 +405,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919809/1_vdy0cc.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp',
         title: 'Noite de Risotos',
         dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
         features: [
@@ -413,7 +417,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730126391/cozinha_qvars1.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330265/pizzas_lgsqcd.webp',
         title: 'Noite das pizzas',
         dateRange: '06/12/2024 até 08/12/2024 (3 diárias)',
         features: [
@@ -425,7 +429,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730919952/2_blegej.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330262/frutos_do_mar2_xyxatd.webp',
         title: 'Frutos do Mar',
         dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
@@ -437,7 +441,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920150/3_oxsk37.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/fique3pague4_fiupcm.webp',
         title: 'Fique 3 pague 4',
         dateRange: 'Segunda-feira a Sexta-feira',
         features: [
@@ -449,7 +453,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1730920274/4_cl1vx0.jpg',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330266/natal_wrunee.webp',
         title: 'Pacote de Natal',
         dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
         features: [
@@ -460,7 +464,6 @@ const events = [
         price: '918,40',
         discount: 25,
     },
-    // Adicione mais eventos conforme necessário
 ];
 
 const StyledCarrosselSection = styled.section`
@@ -566,7 +569,7 @@ const Home = () => {
 
             <StyledAcomoda>
                 <div>
-                    <StyledEstruturaTitle2>Nossos quartos <StyledColorBGreen>mais procurados</StyledColorBGreen> <MdBedroomParent /> </StyledEstruturaTitle2>
+                    <StyledEstruturaTitle2>Nossos quartos <StyledColorBGreen>mais procurados</StyledColorBGreen> </StyledEstruturaTitle2>
                     <StyledEstruturaSubTitle>Já consegue se imaginar dormindo aqui?</StyledEstruturaSubTitle>
                 </div>
 
@@ -592,7 +595,7 @@ const Home = () => {
             </StyledEstrutura>
 
             <div>
-                <StyledEstruturaTitle> <StyledColorBGreen>Viva</StyledColorBGreen> essa experiência <BsCalendar2HeartFill /> </StyledEstruturaTitle>
+                <StyledEstruturaTitle> <StyledColorBGreen>Viva</StyledColorBGreen> essa experiência </StyledEstruturaTitle>
                 <StyledEstruturaSubTitle>Alguns dos nossos momentos</StyledEstruturaSubTitle>
             </div>
             
@@ -602,7 +605,7 @@ const Home = () => {
             </StyledCarrosselSection>
 
             <div>
-                <StyledEstruturaTitle>Conheça nossos pacotes e <StyledColorBBlue>noites especiais</StyledColorBBlue> <MdFoodBank /> </StyledEstruturaTitle>
+                <StyledEstruturaTitle>Conheça nossos pacotes e <StyledColorBBlue>noites especiais</StyledColorBBlue> </StyledEstruturaTitle>
                 <StyledEstruturaSubTitle>Estamos te esperando!</StyledEstruturaSubTitle>
             </div>
 
