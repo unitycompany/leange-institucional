@@ -6,6 +6,7 @@ import { BiSolidDrink, BiSolidStar, BiCamera, BiHeart, BiBus, BiBug, BiSpa, BiBa
 import { FaClock } from "react-icons/fa";
 import SliderComponent3 from '../../components/sliderComponent3';
 import Footer from '../../components/footer';
+import WhatsAppButton from '../../components/Whatsapp';
 
 const Espace = styled.div`
     height: 15vh;
@@ -610,6 +611,8 @@ const Eventos = () => {
                 <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429565/5_qchldm.svg" />
             </Helmet>
             <Espace />
+
+            <WhatsAppButton />
 
             <InicioContainer>
 

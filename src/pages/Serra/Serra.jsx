@@ -12,6 +12,7 @@ import Depoimentos from '../../components/depoimentos';
 import EventCardCarousel from '../../components/cardSlider';
 import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import Button from '../../components/button';
+import WhatsAppButton from '../../components/Whatsapp';
 
 const StyledEspace = styled.div`
     height: 5vh;
@@ -142,8 +143,8 @@ const StyledHomeTexts = styled(motion.div)`
         font-family: var(--font--comfortaa);
         color: var(--color--black);
         font-size: 18px;
-        line-height: 100%;
-        width: 50%;
+        line-height: 120%;
+        width: 80%;
         font-weight: 100;
 
         @media (max-width: 768px){
@@ -386,8 +387,8 @@ const Serra = () => {
             </Helmet>
 
             <StyledEspace />
-
             
+            <WhatsAppButton />
 
             <StyledSectionHome
                 initial={{ opacity: 0 }}
@@ -410,7 +411,7 @@ const Serra = () => {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.6 }}
                     >
-                        FALAR SEMPRE SOBRE A LEANGE SERRA
+                        LeAnge Serra, a pousada mais
                     </motion.h4>
 
                     <motion.h1
@@ -426,7 +427,7 @@ const Serra = () => {
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.6 }}
                     >
-                        Aqui você e seu pet, são mais do que bem-vindos!
+                        Aqui, você e seu pet são tratados como VIPs! Venham viver momentos inesquecíveis.
                     </motion.p>
 
                     <motion.div

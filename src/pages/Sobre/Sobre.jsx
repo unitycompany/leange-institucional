@@ -1,4 +1,5 @@
 import React from 'react';
+import WhatsAppButton from '../../components/Whatsapp';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import CustomButton from '../../components/button3';
@@ -741,6 +742,8 @@ const Sobre = () => {
                 <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429555/2_mvzbuj.svg" />
             </Helmet>
             <Espaco></Espaco>
+
+            <WhatsAppButton />
 
             <SobreContainer>
                 <div>

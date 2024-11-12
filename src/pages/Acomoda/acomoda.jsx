@@ -581,6 +581,8 @@ const Acomodacoes = () => {
                 <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429751/6_lvujcp.svg" />
             </Helmet>
 
+            <WhatsAppButton />
+
             <Swiper ref={swiperRef}>
                 <SuiteComponent suites={suites} />
                 <SuiteComponent2 suites={suites2} />

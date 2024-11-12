@@ -16,6 +16,7 @@ import { MdChair } from "react-icons/md";
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import PromotionModal from '../../components/modal';
 import Button from '../../components/button';
+import WhatsAppButton from '../../components/Whatsapp';
 
 const imagesSerra = [
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/mulher-na-rede_bj91d1.webp", alt: 'Mulher na rede', loading: "lazy" },
@@ -530,6 +531,8 @@ const Home = () => {
             {/* <PromotionModal /> */}
 
             <BackgroundVideo />
+
+            <WhatsAppButton />
 
             <StyledPousadas 
                 containerAnimation={{ opacity: 0, scale: 0.8 }}

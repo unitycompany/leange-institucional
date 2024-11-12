@@ -12,6 +12,7 @@ import Depoimentos from '../../components/depoimentos';
 import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import EventCardCarousel from '../../components/cardSlider';
 import Button from '../../components/button';
+import WhatsAppButton from '../../components/Whatsapp';
 
 const StyledEspace = styled.div`
     height: 5vh;
@@ -376,6 +377,8 @@ const Mar = () => {
             </Helmet>
 
             <StyledEspace />
+
+            <WhatsAppButton />
 
             <StyledSectionHome
                 initial={{ opacity: 0 }}
