@@ -316,6 +316,7 @@ const StyledPolitica = styled.div`
     align-items: center;
     justify-content: space-between;
     height: 2vh;
+    font-family: var(--font--comfortaa);
 
     @media (max-width: 768px){
         height: auto;
@@ -404,8 +405,7 @@ const Footer = () => {
                             Fale agora com a nossa central de reservas
                         </motion.h1>
                         <motion.p variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.3 }}>
-                            Todas as informações são usadas apenas para entrar em contato. Entenda melhor sobre o uso das suas informações pela nossa 
-                            <a href="https://exemplo.com/politica-de-privacidade">política de privacidade</a>.
+                            Todas as informações são usadas apenas para entrar em contato. Entenda melhor sobre o uso das suas informações pela nossa<a href="https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view" target='_blank'>política de privacidade</a>.
                         </motion.p>
                         <motion.hr variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.4 }} />
                         <div>
@@ -536,7 +536,7 @@ const Footer = () => {
 
                 <StyledPolitica as={motion.div} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.8 }}>
                     <p>Todos os direitos reservados | <RiCopyrightLine /> 2024</p>
-                    <a href='#'>Termos de condições</a>
+                    <a href='https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view' target='_blank'>Termos de condições</a>
                     <p>Desenvolvido por <b><a href='https://www.linkedin.com/in/aleph-ramos' target='_blank'>Aleph</a></b></p>
                 </StyledPolitica>
             </StyledFooterContainer>
