@@ -89,7 +89,7 @@ const Title = styled.h2`
 
 const Description = styled.p`
   margin-bottom: 1.2em;
-  font-size: .9rem;
+  font-size: 1rem;
   width: 80%;
   color: var(--color--black);
   font-family: var(--font--comfortaa);
@@ -174,14 +174,14 @@ const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,  // Pausa o autoplay ao passar o mouse
+          pauseOnMouseEnter: true,  
         }}
         loop={true}
         modules={[Navigation, Pagination, Autoplay]}
         className="mySwiper"
         $bgColor={buttonBgColor}
-        onMouseEnter={() => {}}  // Garante que a pausa aconteça ao passar o mouse
-        onMouseLeave={() => {}}  // Retorna ao autoplay quando o mouse sai
+        onMouseEnter={() => {}}  
+        onMouseLeave={() => {}}  
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
