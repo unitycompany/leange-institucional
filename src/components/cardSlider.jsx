@@ -6,8 +6,6 @@ import 'swiper/css/pagination';
 import styled, { keyframes } from 'styled-components';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { motion, useInView } from 'framer-motion';
-import ButtonAcomoda from './button2';
-import Button from './button';
 import IconButton from './button4';
 
 const waterWave2 = keyframes`

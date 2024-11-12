@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import Button from './button';
+import { FaMountainSun } from "react-icons/fa6";
 import { FaHome, FaInfoCircle, FaAnchor, FaMountain, FaCalendar, FaBed } from 'react-icons/fa';
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { useState, useEffect } from 'react';
@@ -39,7 +40,7 @@ const StyledDiv = styled.div`
 
     @media (min-width: 1080px) {
         display: flex;
-        background-color: ${({ isScrolled }) => (isScrolled ? 'rgba(251, 251, 251, 0.4)' : '#fbfbfb')};
+        background-color: ${({ isScrolled }) => (isScrolled ? 'rgba(251, 251, 251, 0.5)' : '#fbfbfb')};
         backdrop-filter: ${({ isScrolled }) => (isScrolled ? 'blur(10px)' : 'none')}; 
         position: fixed;
         align-items: center;
@@ -51,8 +52,8 @@ const StyledDiv = styled.div`
         margin-top: 10px;
         padding: 0 2.5%;
         height: 10vh;
-        box-shadow: 0 0 5px #4d4d4d80;
-        border-radius: 15px;
+        box-shadow: 0 0 5px #4d4d4d50;
+        border-radius: 16px 8px 16px 8px;
         z-index: 999;
         transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     }
@@ -67,11 +68,12 @@ const StyledLink = styled(({ isActive, ...props }) => <Link {...props} />)`
     position: relative;
     color: var(--color--black);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font--avenir);
+    font-family: var(--font--comfortaa);
+    font-weight: 400;
     padding: 5px 15px;
     transition: all 0.3s ease;
     border-radius: 10px 10px 0 10px;
@@ -96,7 +98,7 @@ const StyledLink = styled(({ isActive, ...props }) => <Link {...props} />)`
         opacity: 0;
         z-index: -1;
         transition: all 0.5s;
-        border-radius: var(--border--radius--btn);
+        border-radius: 10px 10px 0 10px;
     }
 
     &:hover {
@@ -305,20 +307,18 @@ const NavegationBar = () => {
     }, []);
 
     useEffect(() => {
-        // Verifica se a página não é a home
-        if (location.pathname !== "/") {
+        if (location.pathname !== "/") { // Verifica se não está na home
             setIsLoading(true);
             // O carregamento deve durar exatamente 1 segundo
             const loadingTimer = setTimeout(() => {
                 setIsLoading(false);
             }, 1000); // Duração do GIF
-    
+
             return () => clearTimeout(loadingTimer);
         } else {
-            // Na home, o carregamento é finalizado imediatamente
-            setIsLoading(false);
+            setIsLoading(false); // Garante que o loading esteja falso na home
         }
-    }, [location.pathname]); 
+    }, [location.pathname]);
 
     useEffect(() => {
         if (location.pathname === "/event") {
@@ -358,7 +358,7 @@ const NavegationBar = () => {
                     <StyledLink to="/" isActive={location.pathname === "/"}><IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início</StyledLink>
                     <StyledLink to="/sobre" isActive={location.pathname === "/sobre"}><IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós</StyledLink>
                     <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
-                    <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountain /></IconContainer>Le Ange Serra</StyledLink>
+                    <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountainSun /></IconContainer>Le Ange Serra</StyledLink>
                     <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton>
                     <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"}><IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações</StyledLink>
                 </StyledHeader>
