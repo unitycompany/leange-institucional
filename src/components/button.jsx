@@ -18,6 +18,10 @@ const StyledButton = styled.button`
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     font-family: var(--font--comfortaa);
 
+    @media(max-width: 768px){
+        font-size: 10px;    
+    }
+
     &:hover {
         box-shadow: 0 0 0 12px transparent;
         color: ${({ hoverColor }) => hoverColor || 'var(--color--black)'};

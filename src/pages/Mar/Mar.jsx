@@ -11,6 +11,7 @@ import PetFriendly from '../../components/petCarrossel';
 import Depoimentos from '../../components/depoimentos';
 import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import EventCardCarousel from '../../components/cardSlider';
+import Button from '../../components/button';
 
 const StyledEspace = styled.div`
     height: 5vh;
@@ -353,6 +354,19 @@ const events = [
     },
 ];
 
+const StyledButtonCenter = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    margin-bottom: -10vh;
+
+    @media (max-width: 768px){
+        display: none;
+    }
+`
+
 const Mar = () => {
     return (
         <>
@@ -446,6 +460,12 @@ const Mar = () => {
             <Pensao colorDefinedBold="var(--color--blue)" />
 
             <PetFriendly />
+
+            <StyledButtonCenter>
+                <Button 
+                text="Fazer minha reserva!"
+                />
+            </StyledButtonCenter>
 
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />

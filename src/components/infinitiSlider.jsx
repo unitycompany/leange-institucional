@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -26,7 +26,6 @@ const Image = styled(motion.img)`
     object-fit: cover;
     transition: transform 0.5s ease;
 
-
     &:hover {
         transform: scale(1.2) rotate(3deg); // Zoom e rotação ao passar o mouse
     }
@@ -48,6 +47,28 @@ const OverlayText = styled(motion.div)`
 `;
 
 const ImageCarouselSliderComponent = ({ images = [], reverse = false }) => {
+    const [isPaused, setIsPaused] = useState(false); // Estado para controlar o autoplay
+
+    // Função para pausar o autoplay
+    const handleMouseEnter = () => {
+        setIsPaused(true); // Pausar o autoplay
+    };
+
+    // Função para retomar o autoplay
+    const handleMouseLeave = () => {
+        setIsPaused(false); // Retomar o autoplay
+    };
+
+    // Função para pausar o autoplay no mobile
+    const handleTouchStart = () => {
+        setIsPaused(true); // Pausar o autoplay ao tocar na tela
+    };
+
+    // Função para retomar o autoplay no mobile
+    const handleTouchEnd = () => {
+        setIsPaused(false); // Retomar o autoplay
+    };
+
     return (
         <Swiper
             modules={[Autoplay]}
@@ -57,14 +78,20 @@ const ImageCarouselSliderComponent = ({ images = [], reverse = false }) => {
                 delay: 0,
                 disableOnInteraction: false,
                 reverseDirection: reverse,
+                stopOnLastSlide: false,
             }}
             speed={1500}
             freeMode={true}
             freeModeMomentum={false}
+            pauseOnMouseEnter={isPaused}
+            onMouseEnter={handleMouseEnter} 
+            onMouseLeave={handleMouseLeave}
+            onTouchStart={handleTouchStart} 
+            onTouchEnd={handleTouchEnd} 
             breakpoints={{
-                320: { slidesPerView: 3 }, // Telefone
-                768: { slidesPerView: 4 }, // Tablet
-                1024: { slidesPerView: 5 } // Desktop
+                320: { slidesPerView: 3 }, 
+                768: { slidesPerView: 4 }, 
+                1024: { slidesPerView: 5 } 
             }}
         >
             {images.map((image, index) => (

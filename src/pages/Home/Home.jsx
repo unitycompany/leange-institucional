@@ -15,6 +15,7 @@ import { TbBrandWindows } from "react-icons/tb";
 import { MdChair } from "react-icons/md";
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import PromotionModal from '../../components/modal';
+import Button from '../../components/button';
 
 const imagesSerra = [
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/mulher-na-rede_bj91d1.webp", alt: 'Mulher na rede', loading: "lazy" },
@@ -502,6 +503,22 @@ const StyledColorBBlue = styled.b`
     color: var(--color--blue);
 `
 
+const StyledButtonCenter = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15vh;
+    margin-top: -10vh;
+    margin-bottom: 5vh;
+
+    @media (max-width: 768px){
+        margin-bottom: 5vh;
+        margin-top: -5vh;
+        height: 10vh;
+    }
+`
+
 const Home = () => {
     return (
         <>
@@ -603,6 +620,12 @@ const Home = () => {
                 <ImageCarouselSliderComponent images={imagesCarrossel01} />
                 <ImageCarouselSliderComponent images={imagesCarrossel02} reverse={true} />
             </StyledCarrosselSection>
+
+            <StyledButtonCenter>
+                <Button
+                text="Fazer minha reserva!"
+                />
+            </StyledButtonCenter>
 
             <div>
                 <StyledEstruturaTitle>Conheça nossos pacotes e <StyledColorBBlue>noites especiais</StyledColorBBlue> </StyledEstruturaTitle>

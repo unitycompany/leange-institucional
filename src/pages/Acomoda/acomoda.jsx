@@ -5,7 +5,7 @@ import SuiteComponent2 from "../../components/suiteComponent2";
 import Footer from '../../components/footer';
 import { Swiper } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import { FaSink, FaRulerCombined, FaUtensils, FaShower, FaBath, FaBed, FaTv, FaFire, FaCloudSunRain } from 'react-icons/fa';
+import { FaSink, FaRulerCombined, FaShower, FaBath, FaBed, FaTv, FaFire, FaCloudSunRain } from 'react-icons/fa';
 import { BiSolidFridge } from "react-icons/bi";
 import { BsCupHotFill } from "react-icons/bs";
 import { SiApachecouchdb } from "react-icons/si";
@@ -316,7 +316,6 @@ const suites2 = [
             { icon: <FaRulerCombined />, text: "28m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <FaFire />, text: 'Lareira' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
@@ -345,7 +344,6 @@ const suites2 = [
             { icon: <FaRulerCombined />, text: "30m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <FaFire />, text: 'Lareira' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
@@ -374,7 +372,6 @@ const suites2 = [
             { icon: <FaRulerCombined />, text: "32m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <FaFire />, text: 'Lareira' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
@@ -403,7 +400,6 @@ const suites2 = [
             { icon: <FaRulerCombined />, text: "32m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <FaFire />, text: 'Lareira' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
@@ -432,7 +428,6 @@ const suites2 = [
             { icon: <FaRulerCombined />, text: "32m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <FaFire />, text: 'Lareira' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
@@ -461,7 +456,6 @@ const suites2 = [
             { icon: <FaRulerCombined />, text: "32m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <FaFire />, text: 'Lareira' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
@@ -490,7 +484,6 @@ const suites2 = [
             { icon: <FaRulerCombined />, text: "32m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <FaFire />, text: 'Lareira' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
@@ -519,7 +512,6 @@ const suites2 = [
             { icon: <FaRulerCombined />, text: "32m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <FaFire />, text: 'Lareira' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },

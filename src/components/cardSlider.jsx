@@ -7,6 +7,8 @@ import styled, { keyframes } from 'styled-components';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { motion, useInView } from 'framer-motion';
 import ButtonAcomoda from './button2';
+import Button from './button';
+import IconButton from './button4';
 
 const waterWave2 = keyframes`
   0% {
@@ -152,7 +154,7 @@ const InViewCardContainer = ({ event, delay }) => {
     const ref = React.useRef(null);
     const isInView = useInView(ref, { once: true });
 
-    const handleClick = () => {
+    const handleClickWPP = () => {
         window.open("https://wa.link/dojlwi", "_blank");
     };
 
@@ -177,11 +179,14 @@ const InViewCardContainer = ({ event, delay }) => {
                 <PriceSection>
                     <Price>A partir de: <span>10x</span>R${event.price}</Price>
                 </PriceSection>
-                <ButtonAcomoda 
-                    text="Quero fechar minha reserva agora" 
-                    backDefine="var(--color--black)" 
-                    colorDefine="var(--color--white)"
-                    onClick={handleClick} 
+                <IconButton
+                     text=  "Quero fazer minha reserva agora"
+                     text2= "Clique e reserve!"
+                     borderColor= "var(--color--black)"
+                     textColor= "var(--color--black)"
+                     hoverColor= "var(--color--black)"
+                     hoverTextColor= "var(--color--white)"
+                     onClick={handleClickWPP} 
                 />
             </CardContent>
         </CardContainer>

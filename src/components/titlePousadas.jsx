@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Button from "./button";
 import styled, { keyframes } from "styled-components";
+import { HiCubeTransparent } from "react-icons/hi2";
 
 const DivAnimated = keyframes`
   0% {
@@ -105,6 +106,16 @@ const StyledParagPag = styled(motion.p)`
   }
 `;
 
+const StyledDivButton = styled.div`
+  display: flex;
+  width: 100%;
+  gap: 25px;
+
+  @media (max-width:768px){
+    gap: 15px;
+  }
+`
+
 const TitlePousadas = ({
   text,
   title,
@@ -123,6 +134,10 @@ const TitlePousadas = ({
 
   const handleClick = () => {
     navigate(targetPage);
+  };
+
+  const handleClick2 = () => {
+    window.open("https://wa.link/dojlwi", "_blank");
   };
 
   return (
@@ -156,6 +171,7 @@ const TitlePousadas = ({
         transition={{ duration: animationDuration, delay: 0.6 }}
         style={{ zIndex: 3 }}
       >
+      <StyledDivButton>
         <Button
           onClick={handleClick}
           text="Saber mais"
@@ -165,6 +181,16 @@ const TitlePousadas = ({
           border="1px solid"
           color="var(--color--black)"
         />
+        <Button
+          onClick={handleClick2}
+          text="Fazer reserva!"
+          backgroundColor= "transparent"
+          borderColor={buttonBorder}
+          hoverColor={buttonHover}
+          border="1px solid"
+          color="var(--color--black)"
+        />
+      </StyledDivButton>
       </motion.div>
     </StyledDiv>
   );

@@ -5,7 +5,32 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import CustomButton from "./button3";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+const SwiperStyles = createGlobalStyle`
+    .swiper-button-next, .swiper-button-prev {
+        color: var(--color--white); 
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        &:after {
+            font-size: 20px;
+        }
+    }
+    .swiper-pagination-bullet {
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0.7;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        &.swiper-pagination-bullet-active {
+            background: #A5C933;
+            opacity: 1;
+        }
+    }
+`;
 
 const SlideContent = styled.div`
   display: flex;
@@ -143,6 +168,10 @@ const StyledSwiper = styled(Swiper)`
 
 const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 'left' }) => {
   return (
+
+  <> 
+    <SwiperStyles />
+
     <StyledSwiper
       navigation={true}
       autoplay={{
@@ -179,6 +208,8 @@ const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 
         </SwiperSlide>
       ))}
     </StyledSwiper>
+
+    </> 
   );
 };
 
