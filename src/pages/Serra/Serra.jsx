@@ -382,6 +382,7 @@ const Serra = () => {
         <>
             <Helmet>
                 <title>Le Ange Serra - Pousada Le Ange</title>
+                <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429558/3_gkl82v.svg" />
             </Helmet>
 
             <StyledEspace />

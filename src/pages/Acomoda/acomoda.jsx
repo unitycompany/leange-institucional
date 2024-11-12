@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import SuiteComponent from "../../components/suiteComponent1";
+import { Helmet } from 'react-helmet';
 import SuiteComponent2 from "../../components/suiteComponent2";
 import Footer from '../../components/footer';
 import { Swiper } from 'swiper/react';
@@ -575,6 +576,11 @@ const Acomodacoes = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Acomodações - Pousada Le Ange</title>
+                <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429751/6_lvujcp.svg" />
+            </Helmet>
+
             <Swiper ref={swiperRef}>
                 <SuiteComponent suites={suites} />
                 <SuiteComponent2 suites={suites2} />

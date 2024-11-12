@@ -372,6 +372,7 @@ const Mar = () => {
         <>
             <Helmet>
                 <title>Le Ange Serra - Pousada Le Ange</title>
+                <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429562/4_bbtihr.svg" />
             </Helmet>
 
             <StyledEspace />

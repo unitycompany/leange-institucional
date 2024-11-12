@@ -315,14 +315,10 @@ const NavegationBar = () => {
     
             return () => clearTimeout(loadingTimer);
         } else {
-            // Na home, o carregamento é configurado como true por 1 segundo para garantir que o GIF apareça
-            setIsLoading(true);
-            const loadingTimer = setTimeout(() => {
-                setIsLoading(false);
-            }, 1000); // Duração do GIF
-            return () => clearTimeout(loadingTimer);
+            // Na home, o carregamento é finalizado imediatamente
+            setIsLoading(false);
         }
-    }, [location.pathname]);
+    }, [location.pathname]); 
 
     useEffect(() => {
         if (location.pathname === "/event") {

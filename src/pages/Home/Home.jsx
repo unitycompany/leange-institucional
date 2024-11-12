@@ -524,6 +524,7 @@ const Home = () => {
         <>
             <Helmet>
                 <title>Início - Pousada Le Ange</title>
+                <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429553/1_zzajkn.svg" />
             </Helmet>
 
             {/* <PromotionModal /> */}
@@ -564,7 +565,7 @@ const Home = () => {
 
                 <StyledContainerPousadas>
                     <TitlePousadas 
-                        title="Pousada Le Ange Mar - Búzios RJ" 
+                        title="Le Ange Mar - Búzios RJ" 
                         text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da propriedade e o seu pet é calorosamente recebido para momentos especiais." 
                         borderColor="var(--color--blue)"
                         borderRadius="30px" 

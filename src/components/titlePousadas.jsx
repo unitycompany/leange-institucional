@@ -72,8 +72,9 @@ const StyledTitlePag = styled(motion.h1)`
   width: 100%;
   text-align: left;
   font-family: var(--font--comfortaa);
-  font-weight: 600;
+  font-weight: 100;
   font-size: 1.3rem;
+  line-height: 100%;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -91,7 +92,8 @@ const StyledTitlePag = styled(motion.h1)`
 
 const StyledParagPag = styled(motion.p)`
   width: 100%;
-  font-size: .95rem;
+  font-size: .90rem;
+  color: var(--color--black);
   font-family: var(--font--comfortaa);
 
   @media (max-width: 768px) {

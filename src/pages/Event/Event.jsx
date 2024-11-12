@@ -606,7 +606,8 @@ const Eventos = () => {
     return (
         <>
             <Helmet>
-                <title>Eventos - Pousada Le Ange</title>
+                <title>Eventos - Pousada Le Ange</title> 
+                <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429565/5_qchldm.svg" />
             </Helmet>
             <Espace />
 

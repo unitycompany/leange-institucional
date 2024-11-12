@@ -738,6 +738,7 @@ const Sobre = () => {
         <>
             <Helmet>
                 <title>Sobre Nós - Pousada Le Ange</title>
+                <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429555/2_mvzbuj.svg" />
             </Helmet>
             <Espaco></Espaco>
 

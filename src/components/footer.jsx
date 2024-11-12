@@ -413,13 +413,13 @@ const Footer = () => {
                                 Siga-nos
                             </motion.h4>
                             <div>
-                                <motion.a href="https://instagram.com" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.6 }}>
+                                <motion.a href="https://instagram.com/pousadaleange" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.6 }}>
                                     <LuInstagram />
                                 </motion.a>
-                                <motion.a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.7 }}>
+                                <motion.a href="https://tiktok.com/@pousadaleange" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.7 }}>
                                     <AiOutlineTikTok />
                                 </motion.a>
-                                <motion.a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.8 }}>
+                                <motion.a href="https://pinterest.com/pousadaleange" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.8 }}>
                                     <AiOutlinePinterest />
                                 </motion.a>
                             </div>
