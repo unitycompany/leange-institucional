@@ -1,6 +1,19 @@
+import { transform } from 'framer-motion';
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const wppAnimation = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+`;
 
 const Button = styled.button`
   display: flex;
@@ -19,6 +32,7 @@ const Button = styled.button`
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
   background-color: #00d757;
   z-index: 1000;
+  animation: ${wppAnimation} .5s infinite;
 
   &:hover {
     width: 325px;
