@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Button from "./button";
 import styled, { keyframes } from "styled-components";
-import { HiCubeTransparent } from "react-icons/hi2";
 
 const DivAnimated = keyframes`
   0% {

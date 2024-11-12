@@ -9,7 +9,6 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import ButtonAcomoda from './button2';
 
 const SwiperStyles = createGlobalStyle`
-
 .swiper-button-next, .swiper-button-prev {
         color: var(--color--white); 
         background-color: var(--color--black);
@@ -192,7 +191,8 @@ const SliderComponent = ({
                 slidesPerView={slidesPerView}
                 autoplay={{
                     delay: autoplayDelay,
-                    disableOnInteraction: true,
+                    disableOnInteraction: false,  // Mantém o autoplay após a interação
+                    pauseOnMouseEnter: true,      // Pausa o autoplay ao passar o mouse
                 }}
                 style={{ height: height }}
                 breakpoints={{

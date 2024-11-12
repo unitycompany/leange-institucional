@@ -4,6 +4,7 @@ import { AiOutlineTikTok, AiOutlinePinterest } from "react-icons/ai";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdOutlineArrowRight } from "react-icons/md";
 import { motion, useInView } from 'framer-motion';
+import { RiCopyrightLine } from "react-icons/ri";
 import React, { useRef, useState } from 'react';
 
 const SubmitBtn = styled(motion.button)`
@@ -534,9 +535,9 @@ const Footer = () => {
                 <StyledHR as={motion.hr} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.7 }} />
 
                 <StyledPolitica as={motion.div} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.8 }}>
-                    <p>Todos os direitos reservados | &copy 2024</p>
+                    <p>Todos os direitos reservados | <RiCopyrightLine /> 2024</p>
                     <a href='#'>Termos de condições</a>
-                    <p>Desenvolvido por <b><a href='#'>Aleph</a></b></p>
+                    <p>Desenvolvido por <b><a href='https://www.linkedin.com/in/aleph-ramos' target='_blank'>Aleph</a></b></p>
                 </StyledPolitica>
             </StyledFooterContainer>
         </>

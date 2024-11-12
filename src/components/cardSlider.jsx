@@ -130,7 +130,7 @@ const EventCardCarousel = ({ events = [] }) => {
     return (
         <Swiper
             modules={[Navigation, Pagination, Autoplay]}
-            autoplay={true}
+            autoplay={{ delay: 7000, disableOnInteraction: false, pauseOnMouseEnter: true }} 
             spaceBetween={20}
             navigation
             pagination={false}
@@ -180,13 +180,13 @@ const InViewCardContainer = ({ event, delay }) => {
                     <Price>A partir de: <span>10x</span>R${event.price}</Price>
                 </PriceSection>
                 <IconButton
-                     text=  "Quero fazer minha reserva agora"
-                     text2= "Clique e reserve!"
-                     borderColor= "var(--color--black)"
-                     textColor= "var(--color--black)"
-                     hoverColor= "var(--color--black)"
-                     hoverTextColor= "var(--color--white)"
-                     onClick={handleClickWPP} 
+                    text="Quero fazer minha reserva agora"
+                    text2="Clique e reserve!"
+                    borderColor="var(--color--black)"
+                    textColor="var(--color--black)"
+                    hoverColor="var(--color--black)"
+                    hoverTextColor="var(--color--white)"
+                    onClick={handleClickWPP}
                 />
             </CardContent>
         </CardContainer>

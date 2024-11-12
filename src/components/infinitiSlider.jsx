@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
@@ -15,7 +15,7 @@ const ImageContainer = styled(motion.div)`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         height: 25vh;
     }
 `;
@@ -47,28 +47,6 @@ const OverlayText = styled(motion.div)`
 `;
 
 const ImageCarouselSliderComponent = ({ images = [], reverse = false }) => {
-    const [isPaused, setIsPaused] = useState(false); // Estado para controlar o autoplay
-
-    // Função para pausar o autoplay
-    const handleMouseEnter = () => {
-        setIsPaused(true); // Pausar o autoplay
-    };
-
-    // Função para retomar o autoplay
-    const handleMouseLeave = () => {
-        setIsPaused(false); // Retomar o autoplay
-    };
-
-    // Função para pausar o autoplay no mobile
-    const handleTouchStart = () => {
-        setIsPaused(true); // Pausar o autoplay ao tocar na tela
-    };
-
-    // Função para retomar o autoplay no mobile
-    const handleTouchEnd = () => {
-        setIsPaused(false); // Retomar o autoplay
-    };
-
     return (
         <Swiper
             modules={[Autoplay]}
@@ -79,19 +57,15 @@ const ImageCarouselSliderComponent = ({ images = [], reverse = false }) => {
                 disableOnInteraction: false,
                 reverseDirection: reverse,
                 stopOnLastSlide: false,
+                pauseOnMouseEnter: true, // Pausa automaticamente o autoplay ao passar o mouse
             }}
-            speed={1500}
+            speed={2000}
             freeMode={true}
             freeModeMomentum={false}
-            pauseOnMouseEnter={isPaused}
-            onMouseEnter={handleMouseEnter} 
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouchStart} 
-            onTouchEnd={handleTouchEnd} 
             breakpoints={{
                 320: { slidesPerView: 3 }, 
                 768: { slidesPerView: 4 }, 
-                1024: { slidesPerView: 5 } 
+                1024: { slidesPerView: 5 }
             }}
         >
             {images.map((image, index) => (

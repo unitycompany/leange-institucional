@@ -187,6 +187,7 @@ const SliderAcomodaHome = ({
         autoplay={{
           delay: autoplayDelay,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,  // Pausa o autoplay ao passar o mouse
         }}
         breakpoints={{
           640: { slidesPerView: 1 },

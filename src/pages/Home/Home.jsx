@@ -24,7 +24,7 @@ const imagesSerra = [
 
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/cachorro-na-piscina_mnkqrv.webp", alt: '2 cachorros na piscina', loading: "lazy" },
 
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/parque-na-pousada_rfde1i.webp", alt: 'Foto da pousada vista de baixo', loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331474/foto_da_pousada_da_serra_lefdif.webp", alt: 'Foto da pousada vista de baixo', loading: "lazy" },
 
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/sala-de-estar_xuxiou.webp", alt: 'Foto da sala de estar da pousada le ange serra', loading: "lazy" },
 
@@ -526,7 +526,7 @@ const Home = () => {
                 <title>Início - Pousada Le Ange</title>
             </Helmet>
 
-            <PromotionModal />
+            {/* <PromotionModal /> */}
 
             <BackgroundVideo />
 

@@ -305,16 +305,22 @@ const NavegationBar = () => {
     }, []);
 
     useEffect(() => {
-        if (location.pathname !== "/") { // Verifica se não está na home
+        // Verifica se a página não é a home
+        if (location.pathname !== "/") {
             setIsLoading(true);
             // O carregamento deve durar exatamente 1 segundo
             const loadingTimer = setTimeout(() => {
                 setIsLoading(false);
             }, 1000); // Duração do GIF
-
+    
             return () => clearTimeout(loadingTimer);
         } else {
-            setIsLoading(false); // Garante que o loading esteja falso na home
+            // Na home, o carregamento é configurado como true por 1 segundo para garantir que o GIF apareça
+            setIsLoading(true);
+            const loadingTimer = setTimeout(() => {
+                setIsLoading(false);
+            }, 1000); // Duração do GIF
+            return () => clearTimeout(loadingTimer);
         }
     }, [location.pathname]);
 

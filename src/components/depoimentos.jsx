@@ -142,6 +142,7 @@ const Depoimentos = () => {
             </StyledTextDepoimentos>
 
             <CarouselContainer>
+                {/* Primeiro Swiper - Carrossel de depoimentos */}
                 <Swiper
                     slidesPerView={1}
                     spaceBetween={10}
@@ -150,7 +151,7 @@ const Depoimentos = () => {
                     navigation={true}
                     loop={true}
                     grabCursor={true}
-                    autoplay={{ delay: 7000, disableOnInteraction: false }}
+                    autoplay={{ delay: 7000, disableOnInteraction: false, pauseOnMouseEnter: true }}
                     breakpoints={{
                         1024: {
                             slidesPerView: 3, 
@@ -166,11 +167,13 @@ const Depoimentos = () => {
                     {depoimentosData.map((depoimento) => (
                         <SwiperSlide key={depoimento.id}>
                             <Container>
+                                {/* Segundo Swiper - Carrossel de imagens de fundo dentro de cada depoimento */}
                                 <Swiper
                                     slidesPerView={1}
                                     spaceBetween={10}
                                     loop={true}
                                     style={{ width: '100%', height: '100%' }}
+                                    autoplay={{ delay: 5000, disableOnInteraction: false, pauseOnMouseEnter: true }}
                                     onTouchStart={(e) => {
                                         e.stopPropagation();
                                     }}

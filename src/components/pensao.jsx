@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import CustomButton from "./button3";
+import IconButton from "./button4";
 
 const StyledSectionPensao = styled.section`
     width: 100%;
@@ -164,17 +165,13 @@ const Pensao = ({ colorDefinedBold }) => {
                     refeições do dia – café da manhã, almoço, chá da tarde e jantar, incluindo
                     nossas deliciosas sobremesas.
                 </StyledParagraph>
-                <StyledButton
-                    text="Reservar agora!"
-                    textColor="var(--color--black)"
-                    backgroundColor="transparent"
-                    borderColor="var(--color--black)"
-                    iconColor="var(--color--black)"
-                    hoverBackgroundColor="var(--color--black)"
-                    hoverBorderColor="var(--color--black)"
-                    hoverColor="var(--color--black)"
-                    hoverIconColor="var(--color--black)"
-                    onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                <IconButton
+                    text = "Fazer reserva!"
+                    text2 = "Clique e reserve"
+                    borderColor = "var(--color--black)"
+                    textColor = "var(--color--black)"
+                    hoverColor = "var(--color--black)"
+                    hoverTextColor = "var(--color--white)"
                 />
             </StyledPensaoTexts>
         </StyledSectionPensao>

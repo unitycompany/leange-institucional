@@ -50,7 +50,7 @@ const SlideContainer = styled.div`
         width: 90%;
         margin-left: 5%;
         border-radius: 20px 0px 20px 0px;
-        }
+    }
 `;
 
 const BorderOverlay = styled.div`
@@ -180,6 +180,7 @@ const CoverflowSliderComponent = ({
                 autoplay={{
                     delay: autoplayDelay,
                     disableOnInteraction: false,
+                    pauseOnMouseEnter: true, // Pausa o autoplay automaticamente ao passar o mouse
                 }}
                 breakpoints={{
                     1024: { slidesPerView: 2 }, 
@@ -191,18 +192,19 @@ const CoverflowSliderComponent = ({
                 {content.map((item, index) => (
                     <SwiperSlide key={index} style={{ width: '60%' }}>
                         <SlideContainer backgroundImage={item.backgroundImage}>
-                        <TopLeftText>{item.topLeftText}</TopLeftText>
+                            <TopLeftText>{item.topLeftText}</TopLeftText>
                             <BorderOverlay />
                             <SlideContent>
                                 <Title>{item.title}</Title>
                                 <Description>{item.description}</Description>
                                 <IconButton
-                                 text="Reservar agora"
-                                 text2="Clique e reserve agora"
-                                 borderColor="var(--color--white)"
-                                 textColor="var(--color--white)"
-                                 hoverColor="var(--color--green)"
-                                 hoverTextColor="var(--color--black)"/>
+                                    text="Reservar agora"
+                                    text2="Clique e reserve agora"
+                                    borderColor="var(--color--white)"
+                                    textColor="var(--color--white)"
+                                    hoverColor="var(--color--green)"
+                                    hoverTextColor="var(--color--black)"
+                                />
                             </SlideContent>
                         </SlideContainer>
                     </SwiperSlide>

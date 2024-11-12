@@ -173,13 +173,20 @@ const SuiteContent = styled.main`
 `;
 
 const SuiteTitle = styled.h2`
-    font-size: 2rem;
+    font-size: .8rem;
     color: var(--color--black);
     font-family: var(--font--comfortaa);
-    display: none;
+    font-weight: 400;
+    padding: 3px 12px;
+    border-radius: 0 10px 0 10px;
+    background-color: transparent;
+    cursor: default;
 
     @media (max-width: 768px){
-        display: none;
+        font-size: .7rem;
+        padding: 5px 15px;
+        display: inline;
+        white-space: nowrap;
     }
 `;
 
@@ -190,7 +197,7 @@ const SuiteDescription = styled.p`
     font-family: var(--font--comfortaa);
     
     @media (max-width: 768px){
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 `;
 
@@ -308,8 +315,8 @@ const SuiteComponent2 = ({ suites }) => {
                                     <SuiteContent>
                                         <section>
                                             <div>
-                                                <SuiteTitle>{suite.NomedaPousada}</SuiteTitle>
                                                 <p>{suite.NomedaSuite}</p>
+                                                <SuiteTitle>{suite.NomedaPousada}</SuiteTitle>
                                             </div>
                                             <div>
                                                 <hr />
@@ -323,7 +330,14 @@ const SuiteComponent2 = ({ suites }) => {
                                             ))}
                                         </Features>
                                         <SuiteDescription>{suite.Description}</SuiteDescription>
-                                        <IconButton text="Fazer reserva!" text2="Clique e reserve!" />
+                                        <IconButton 
+                                        text="Fazer reserva!" 
+                                        text2="Clique e reserve!" 
+                                        borderColor= "var(--color--black)"
+                                        textColor= "var(--color--black)"
+                                        hoverColor= "var(--color--black)"
+                                        hoverTextColor= "var(--color--white)"
+                                        />
                                     </SuiteContent>
 
                                     <ImageCarousel>

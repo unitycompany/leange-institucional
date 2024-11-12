@@ -99,6 +99,7 @@ const PetFriendlyCarousel = () => {
                 />
             </StyledTextPet>
 
+            {/* Passando a lógica de autoplay pausado para o Swiper em ambos os carrosséis */}
             <ImageCarouselSliderComponent images={imagesCarrossel01} />
             <ImageCarouselSliderComponent images={imagesCarrossel02} reverse={true} />
         </>

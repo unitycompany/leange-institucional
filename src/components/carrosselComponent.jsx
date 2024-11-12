@@ -139,7 +139,6 @@ const StyledSwiper = styled(Swiper)`
     top: 95% !important;
 
     @media (max-width: 768px){
-
       left: 50%!important;
     }
   }
@@ -167,48 +166,48 @@ const StyledSwiper = styled(Swiper)`
 `;
 
 const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 'left' }) => {
-  return (
-
-  <> 
-    <SwiperStyles />
-
-    <StyledSwiper
-      navigation={true}
-      autoplay={{
-        delay: 2000,
-        disableOnInteraction: false,
-      }}
-      loop={true}
-      modules={[Navigation, Pagination, Autoplay]}
-      className="mySwiper"
-      $bgColor={buttonBgColor} 
-    >
-      {slides.map((slide, index) => (
-        <SwiperSlide key={index}>
-          <SlideContent imagePosition={imagePosition}>
-            <SlideText>
-              <Title $colorDefined={titleColor}>{slide.title}</Title> 
-              <Description>{slide.description}</Description>
-              <CustomButton 
-                text="Reservar agora!"
-                textColor="var(--color--black)"
-                borderColor="var(--color--black)"
-                iconColor="var(--color--black)"
-                hoverBackgroundColor="var(--color--black)"
-                hoverBorderColor="var(--color--black)"
-                hoverColor="var(--color--black)"
-                hoverIconColor="var(--color--black)"
-                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
-              />
-            </SlideText>
-            <ImageContainer>
-              <SlideImage src={slide.imageUrl} alt={slide.title} />
-            </ImageContainer>
-          </SlideContent>
-        </SwiperSlide>
-      ))}
-    </StyledSwiper>
-
+  return (  
+    <> 
+      <SwiperStyles />
+      <StyledSwiper
+        navigation={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,  // Pausa o autoplay ao passar o mouse
+        }}
+        loop={true}
+        modules={[Navigation, Pagination, Autoplay]}
+        className="mySwiper"
+        $bgColor={buttonBgColor}
+        onMouseEnter={() => {}}  // Garante que a pausa aconteça ao passar o mouse
+        onMouseLeave={() => {}}  // Retorna ao autoplay quando o mouse sai
+      >
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <SlideContent imagePosition={imagePosition}>
+              <SlideText>
+                <Title $colorDefined={titleColor}>{slide.title}</Title> 
+                <Description>{slide.description}</Description>
+                <CustomButton 
+                  text="Reservar agora!"
+                  textColor="var(--color--black)"
+                  borderColor="var(--color--black)"
+                  iconColor="var(--color--black)"
+                  hoverBackgroundColor="var(--color--black)"
+                  hoverBorderColor="var(--color--black)"
+                  hoverColor="var(--color--black)"
+                  hoverIconColor="var(--color--black)"
+                  onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                />
+              </SlideText>
+              <ImageContainer>
+                <SlideImage src={slide.imageUrl} alt={slide.title} />
+              </ImageContainer>
+            </SlideContent>
+          </SwiperSlide>
+        ))}
+      </StyledSwiper>
     </> 
   );
 };

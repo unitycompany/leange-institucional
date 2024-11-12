@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 import CustomButton from "./button3";
 import { FaArrowRight } from "react-icons/fa";
+import IconButton from "./button4";
 
 
 const waterWave = keyframes`
@@ -209,17 +210,13 @@ const AcomodaComponent = ({ images }) => {
                     <h1>Conheça as nossas suítes</h1>
                 </div>
                 <div>
-                    <CustomButton 
-                        text="Reservar agora!"
-                        textColor="var(--color--white)"
-                        backgroundColor="transparent"
-                        borderColor="var(--color--white)"
-                        iconColor="var(--color--white)"
-                        hoverBackgroundColor="var(--color--white)"
-                        hoverBorderColor="var(--color--white)"
-                        hoverColor="var(--color--white)"
-                        hoverIconColor="var(--color--white)"
-                        onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                    <IconButton
+                        text = "Fazer reserva!"
+                        text2 = "Clique e reserve"
+                        borderColor = "var(--color--white)"
+                        textColor = "var(--color--white)"
+                        hoverColor = "var(--color--black)"
+                        hoverTextColor = "var(--color--white)"
                     />
                 </div>
             </StyledAcomodaTexts>
