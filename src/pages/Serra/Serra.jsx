@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../../components/footer';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import CustomButton from '../../components/button3';
 import CarouselComponent from '../../components/carrosselComponent';
 import AcomodaComponent from '../../components/acomodaComponent';
@@ -22,7 +21,7 @@ const StyledEspace = styled.div`
     }
 `;
 
-const StyledSectionHome = styled(motion.section)`
+const StyledSectionHome = styled.section`
     width: 100%;
     display: flex;
     padding: 5% 5% 2.5% 10%;
@@ -54,7 +53,7 @@ const StyledSectionHome = styled(motion.section)`
     }
 `;
 
-const StyledHomeDiv = styled(motion.div)`
+const StyledHomeDiv = styled.div`
     width: 45%;
     height: 100%;
     background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
@@ -77,7 +76,7 @@ const StyledHomeDiv = styled(motion.div)`
     }
 `;
 
-const StyledHomeTexts = styled(motion.div)`
+const StyledHomeTexts = styled.div`
     width: 50%;
     height: 100%;
     display: flex;
@@ -100,7 +99,6 @@ const StyledHomeTexts = styled(motion.div)`
         font-weight: 100;
 
         @media (max-width: 768px){
-
             color: var(--color--black);
             font-size: 14px;
             text-align: center;
@@ -119,7 +117,6 @@ const StyledHomeTexts = styled(motion.div)`
         font-weight: 100;
 
         @media (max-width: 768px){
- 
             display: inline-block;
             width: 100%;
             font-size: 35px;
@@ -148,7 +145,6 @@ const StyledHomeTexts = styled(motion.div)`
         font-weight: 100;
 
         @media (max-width: 768px){
-
             width: 80%;
             font-size: 1rem;
             text-align: center;
@@ -231,20 +227,7 @@ const StyledSectionEspaco = styled.section`
         height: auto;
         padding: 0% 0 5% 0 ;
     }
-`
-
-const ImagesAcomoda = [
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133147/suiteSuperior1_gpjls0.jpg", text: "Suíte Superior 1", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133146/suiteSuperior2_cqduas.jpg", text: "Suíte Superior 2", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133142/suiteSuperior3_pgr53r.jpg", text: "Suíte Superior 3", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133142/suiteStandard4_mrtwhq.jpg", text: "Suíte Standard 4", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133138/suiteStandard5_j9oyln.jpg", text: "Suíte Standard 5", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133137/suiteMaster6_id3iqs.jpg", text: "Suíte Master 6", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133133/suiteMaster7_bqdek7.jpg", text: "Suíte Master 7", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133111/suiteStandard8_lpyi22.jpg", text: "Suíte Standard 8", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133110/suiteSuperior9_v1mxwb.jpg", text: "Suíte Superior 9", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133110/suiteMaster10_gqoxfm.jpg", text: "Suíte Superior 10", loading: "lazy" },
-];
+`;
 
 const StyledLocall = styled.div`
     display: flex;
@@ -272,7 +255,7 @@ const StyledLocall = styled.div`
             font-weight: 400;
         }
     }
-`
+`;
 
 const StyledContainerEvents = styled.section`
     width: 100%;
@@ -288,7 +271,7 @@ const StyledContainerEvents = styled.section`
         padding: 10% 2.5% 0 2.5%;
         margin-top: 0;
     }
-`
+`;
 
 const events = [
     {
@@ -376,7 +359,20 @@ const StyledButtonCenter = styled.div`
     @media (max-width: 768px){
         display: none;
     }
-`
+`;
+
+const ImagesAcomoda = [
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133147/suiteSuperior1_gpjls0.jpg", text: "Suíte Superior 1", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133146/suiteSuperior2_cqduas.jpg", text: "Suíte Superior 2", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133142/suiteSuperior3_pgr53r.jpg", text: "Suíte Superior 3", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133142/suiteStandard4_mrtwhq.jpg", text: "Suíte Standard 4", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133138/suiteStandard5_j9oyln.jpg", text: "Suíte Standard 5", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133137/suiteMaster6_id3iqs.jpg", text: "Suíte Master 6", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133133/suiteMaster7_bqdek7.jpg", text: "Suíte Master 7", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133111/suiteStandard8_lpyi22.jpg", text: "Suíte Standard 8", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133110/suiteSuperior9_v1mxwb.jpg", text: "Suíte Superior 9", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1730133110/suiteMaster10_gqoxfm.jpg", text: "Suíte Superior 10", loading: "lazy" },
+];
 
 const Serra = () => {
     return (
@@ -390,64 +386,23 @@ const Serra = () => {
             
             <WhatsAppButton />
 
-            <StyledSectionHome
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-            >
-                <StyledHomeDiv
-                    initial={{ scale: 0.8, x: "-100vw" }}
-                    animate={{ scale: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                />
-
-                <StyledHomeTexts
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    <motion.h4
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        LeAnge Serra, a pousada mais
-                    </motion.h4>
-
-                    <motion.h1
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        PET FRIENDLY<br /> DO <b>BRASIL</b>
-                    </motion.h1>
-
-                    <motion.p
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        Aqui, você e seu pet são tratados como VIPs! Venham viver momentos inesquecíveis.
-                    </motion.p>
-
-                    <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.6, ease: "backOut" }}
-                    >
-                        <CustomButton
-                            text="Reservar agora!"
-                            textColor="var(--color--black)"
-                            backgroundColor="transparent"
-                            borderColor="var(--color--black)"
-                            iconColor="var(--color--black)"
-                            hoverBackgroundColor="var(--color--black)"
-                            hoverBorderColor="var(--color--black)"
-                            hoverColor="var(--color--white)"
-                            hoverIconColor="var(--color--white)"
-                            onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
-                        />
-                    </motion.div>
+            <StyledSectionHome>
+                <StyledHomeDiv />
+                <StyledHomeTexts>
+                    <h4>LeAnge Serra, a pousada mais</h4>
+                    <h1>PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
+                    <p>Aqui, você e seu pet são tratados como VIPs! Venham viver momentos inesquecíveis.</p>
+                    <CustomButton
+                        text="Reservar agora!"
+                        textColor="var(--color--black)"
+                        backgroundColor="transparent"
+                        borderColor="var(--color--black)"
+                        hoverBackgroundColor="var(--color--black)"
+                        hoverBorderColor="var(--color--black)"
+                        hoverColor="var(--color--white)"
+                        hoverIconColor="var(--color--white)"
+                        onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                    />
                 </StyledHomeTexts>
             </StyledSectionHome>
 
@@ -455,34 +410,26 @@ const Serra = () => {
                 <h1>LeAnge Serra | Miguel Pereira RJ</h1>
             </StyledLocall>
 
-            <StyledSectionEspaco> 
+            <StyledSectionEspaco>
+                <CarouselComponent slides={slides} />
+            </StyledSectionEspaco>
 
-                <CarouselComponent
-                slides={slides}
-                />
-
-            </StyledSectionEspaco> 
-
-
-            <AcomodaComponent images={ImagesAcomoda}/>
+            <AcomodaComponent images={ImagesAcomoda} />
 
             <Pensao />
-
+            
             <PetFriendly />
 
             <StyledButtonCenter>
-                <Button 
-                text="Fazer minha reserva!"
-                />
+                <Button text="Fazer minha reserva!" />
             </StyledButtonCenter>
             
-
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
 
             <Depoimentos />
-
+            
             <Footer />
         </>
     );

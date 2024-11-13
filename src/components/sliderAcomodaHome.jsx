@@ -47,7 +47,7 @@ const BorderOverlay = styled.div`
     width: 100%;
     height: 30%;
     border-radius: 25px 0 25px 0;
-    background: linear-gradient(0deg, rgba(255, 255, 255, .8), rgba(0, 0, 0, 0)); 
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1 ), rgba(0, 0, 0, 0)); 
     pointer-events: none;
     animation: ${waterWave} 5s ease-in-out infinite;
     z-index: 1;
@@ -67,7 +67,6 @@ const SlideContainer = styled.div`
   background-size: cover;
   background-position: center;
   animation: ${waterWave} 5s ease-in-out infinite;
-  border: 1px solid var(--color--black);
 
   @media (max-width: 768px){
     animation: none!important;
