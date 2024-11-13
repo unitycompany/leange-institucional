@@ -5,7 +5,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import ButtonAcomoda from './button2';
 
 const SwiperStyles = createGlobalStyle`
@@ -66,7 +65,7 @@ const waterWave = keyframes`
   }
 `;
 
-const StyledImage = styled(motion.img)`
+const StyledImage = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -77,7 +76,7 @@ const StyledImage = styled(motion.img)`
     }
 `;
 
-const SlideContainer = styled(motion.div)`
+const SlideContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
@@ -91,7 +90,7 @@ const SlideContainer = styled(motion.div)`
   background-position: center;
 `;
 
-const BorderOverlay = styled(motion.div)`
+const BorderOverlay = styled.div`
     position: absolute;
     top: 0;
     left: 0;
@@ -105,7 +104,7 @@ const BorderOverlay = styled(motion.div)`
     pointer-events: none;
 `;
 
-const SlideContent = styled(motion.div)`
+const SlideContent = styled.div`
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -113,19 +112,19 @@ const SlideContent = styled(motion.div)`
     font-family: Arial, sans-serif;
 `;
 
-const Title = styled(motion.h2)`
+const Title = styled.h2`
     font-size: 24px;
     font-weight: bold;
     font-family: var(--font--comfortaa);
 `;
 
-const Subtitle = styled(motion.p)`
+const Subtitle = styled.p`
     font-size: 16px;
     margin: 5px 0;
     font-family: var(--font--avenir);
 `;
 
-const Features = styled(motion.div)`
+const Features = styled.div`
     display: flex;
     gap: 8px;
     margin-top: 10px;
@@ -173,12 +172,6 @@ const SliderComponent = ({
     showPagination = true,
     showNavigation = true,
 }) => {
-    const { scrollY } = useScroll();
-    const titleY = useTransform(scrollY, [0, 300], [0, -30]);
-    const subtitleY = useTransform(scrollY, [0, 300], [0, -20]);
-    const featuresY = useTransform(scrollY, [0, 300], [0, -10]);
-    const buttonY = useTransform(scrollY, [0, 300], [0, -5]);
-
     return (
         <SliderWrapper>
             <SwiperStyles />
@@ -191,8 +184,8 @@ const SliderComponent = ({
                 slidesPerView={slidesPerView}
                 autoplay={{
                     delay: autoplayDelay,
-                    disableOnInteraction: false,  // Mantém o autoplay após a interação
-                    pauseOnMouseEnter: true,      // Pausa o autoplay ao passar o mouse
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
                 }}
                 style={{ height: height }}
                 breakpoints={{
@@ -220,40 +213,21 @@ const SliderComponent = ({
                                 src={item.src} 
                                 loading='lazy'
                                 alt={item.alt || `Slide ${index + 1}`} 
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.7, ease: 'easeOut' }}
                             />
                         ) : (
-                            <SlideContainer 
-                                backgroundImage={item.backgroundImage}
-                                initial={{ opacity: 0 }}
-                                whileInView={{ opacity: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8, ease: 'easeOut' }}
-                            >
+                            <SlideContainer backgroundImage={item.backgroundImage}>
                                 <BorderOverlay />
-                                <SlideContent
-                                    initial={{ opacity: 0, y: 50 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-                                >
-                                    <Title style={{ y: titleY }}>
-                                        {item.title}
-                                    </Title>
-                                    <Subtitle style={{ y: subtitleY }}>
-                                        {item.subtitle}
-                                    </Subtitle>
-                                    <Features style={{ y: featuresY }}>
+                                <SlideContent>
+                                    <Title>{item.title}</Title>
+                                    <Subtitle>{item.subtitle}</Subtitle>
+                                    <Features>
                                         {item.features.map((feature, idx) => (
                                             <span key={idx}>
                                                 {feature.icon} {feature.text}
                                             </span>
                                         ))}
                                     </Features>
-                                    <ButtonAcomoda text="Conhecer todas as acomodações" style={{ y: buttonY }} />
+                                    <ButtonAcomoda text="Conhecer todas as acomodações" />
                                 </SlideContent>
                             </SlideContainer>
                         )}

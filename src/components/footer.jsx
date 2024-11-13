@@ -337,7 +337,6 @@ const StyledPolitica = styled.div`
 
     & > p > b > a{
         color: var(--color--blue);
-        margin-left: 1ch;
     }
 `;
 
@@ -511,7 +510,7 @@ const Footer = () => {
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235239.22077211382!2d-43.355636!3d-22.461517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99106a0d4d634d%3A0x5a069366075bf207!2sPousada%20Le%20Ange!5e0!3m2!1spt-BR!2sbr!4v1697101366468!5m2!1spt-BR!2sbr"
                             width="300"
                             height="150"
-                            style={{ border: 0, borderRadius: 15 }}
+                            style={{ border: 0, borderRadius: '15px 0px 15px 0px' }}
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
@@ -523,7 +522,7 @@ const Footer = () => {
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14718.952062952678!2d-41.958707!3d-22.737977!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x97ab01cac79615%3A0x6b404b4741597da1!2sLeAnge%20Mar!5e0!3m2!1spt-BR!2sus!4v1728577984633!5m2!1spt-BR!2sus"
                             width="300"
                             height="150"
-                            style={{ border: 0, borderRadius: 15 }}
+                            style={{ border: 0, borderRadius: '0px 15px 0px 15px' }}
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"

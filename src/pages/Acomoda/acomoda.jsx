@@ -13,6 +13,7 @@ import { SiApachecouchdb } from "react-icons/si";
 import { TbBrandWindows } from "react-icons/tb";
 import { MdChair } from "react-icons/md";
 import { MdDeck } from "react-icons/md";
+import WhatsAppButton from '../../components/Whatsapp';
 
 const suites = [
     {

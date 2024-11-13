@@ -5,7 +5,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import styled, { keyframes } from 'styled-components';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { motion, useInView } from 'framer-motion';
 import IconButton from './button4';
 
 const waterWave2 = keyframes`
@@ -26,7 +25,7 @@ const waterWave2 = keyframes`
   }
 `;
 
-const CardContainer = styled(motion.div)`
+const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
     height: auto;
@@ -141,53 +140,35 @@ const EventCardCarousel = ({ events = [] }) => {
         >
             {events.map((event, index) => (
                 <SwiperSlide key={index}>
-                    <InViewCardContainer event={event} delay={index * 0.1} />
+                    <CardContainer>
+                        <CardImage src={event.image} alt={event.title} />
+                        <CardContent>
+                            <Title>{event.title}</Title>
+                            <DateRange>{event.dateRange}</DateRange>
+                            <Features>
+                                {event.features.map((feature, i) => (
+                                    <span key={i}>
+                                        {feature.icon} {feature.text}
+                                    </span>
+                                ))}
+                            </Features>
+                            <PriceSection>
+                                <Price>A partir de: <span>10x</span>R${event.price}</Price>
+                            </PriceSection>
+                            <IconButton
+                                text="Quero fazer minha reserva agora"
+                                text2="Clique e reserve!"
+                                borderColor="var(--color--black)"
+                                textColor="var(--color--black)"
+                                hoverColor="var(--color--black)"
+                                hoverTextColor="var(--color--white)"
+                                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                            />
+                        </CardContent>
+                    </CardContainer>
                 </SwiperSlide>
             ))}
         </Swiper>
-    );
-};
-
-const InViewCardContainer = ({ event, delay }) => {
-    const ref = React.useRef(null);
-    const isInView = useInView(ref, { once: true });
-
-    const handleClickWPP = () => {
-        window.open("https://wa.link/dojlwi", "_blank");
-    };
-
-    return (
-        <CardContainer
-            ref={ref}
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay }}
-        >
-            <CardImage src={event.image} alt={event.title} />
-            <CardContent>
-                <Title>{event.title}</Title>
-                <DateRange>{event.dateRange}</DateRange>
-                <Features>
-                    {event.features.map((feature, i) => (
-                        <span key={i}>
-                            {feature.icon} {feature.text}
-                        </span>
-                    ))}
-                </Features>
-                <PriceSection>
-                    <Price>A partir de: <span>10x</span>R${event.price}</Price>
-                </PriceSection>
-                <IconButton
-                    text="Quero fazer minha reserva agora"
-                    text2="Clique e reserve!"
-                    borderColor="var(--color--black)"
-                    textColor="var(--color--black)"
-                    hoverColor="var(--color--black)"
-                    hoverTextColor="var(--color--white)"
-                    onClick={handleClickWPP}
-                />
-            </CardContent>
-        </CardContainer>
     );
 };
 

@@ -5,7 +5,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import ButtonAcomoda from './button2';
 
@@ -46,19 +45,20 @@ const BorderOverlay = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60%;
+    height: 30%;
     border-radius: 25px 0 25px 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
+    background: linear-gradient(0deg, rgba(255, 255, 255, .8), rgba(0, 0, 0, 0)); 
     pointer-events: none;
     animation: ${waterWave} 5s ease-in-out infinite;
     z-index: 1;
 
     @media (max-width: 768px){
         border-radius: 20px 0 20px 0;
+        animation: none;
     }
 `;
 
-const SlideContainer = styled(motion.div)`
+const SlideContainer = styled.div`
   position: relative;
   width: 100%;
   height: 95vh;
@@ -67,15 +67,16 @@ const SlideContainer = styled(motion.div)`
   background-size: cover;
   background-position: center;
   animation: ${waterWave} 5s ease-in-out infinite;
+  border: 1px solid var(--color--black);
 
   @media (max-width: 768px){
-    animation: none;
-    border-radius: 25px 0 25px 0;
+    animation: none!important;
+    border-radius: 20px 0 20px 0;
     height: 80vh;
   }
 `;
 
-const SlideContent = styled(motion.div)`
+const SlideContent = styled.div`
   position: absolute;
   bottom: 30px;
   left: 20px;
@@ -83,7 +84,7 @@ const SlideContent = styled(motion.div)`
   z-index: 10;
 `;
 
-const Title = styled(motion.h2)`
+const Title = styled.h2`
   font-size: 20px;
   font-weight: bold;
   font-family: var(--font--comfortaa);
@@ -95,7 +96,7 @@ const Title = styled(motion.h2)`
   }
 `;
 
-const Subtitle = styled(motion.p)`
+const Subtitle = styled.p`
   font-size: 13px;
   margin: 0px 0;
   font-family: var(--font--comfortaa);
@@ -110,11 +111,12 @@ const Subtitle = styled(motion.p)`
   }
 `;
 
-const Features = styled(motion.div)`
+const Features = styled.div`
   display: flex;
   gap: 5px;
   margin-top: 5px;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 
   @media (max-width: 768px){
     gap: 6px;
@@ -164,10 +166,6 @@ const SliderAcomodaHome = ({
   showPagination = true,
   showNavigation = true,
 }) => {
-  const { scrollY } = useScroll();
-  const titleY = useTransform(scrollY, [0, 300], [0, -30]);
-  const subtitleY = useTransform(scrollY, [0, 300], [0, -20]);
-  const featuresY = useTransform(scrollY, [0, 300], [0, -10]);
   const navigate = useNavigate();
 
   const handleButtonClick = (suiteId) => {
@@ -187,7 +185,7 @@ const SliderAcomodaHome = ({
         autoplay={{
           delay: autoplayDelay,
           disableOnInteraction: false,
-          pauseOnMouseEnter: true,  // Pausa o autoplay ao passar o mouse
+          pauseOnMouseEnter: true,
         }}
         breakpoints={{
           640: { slidesPerView: 1 },
@@ -199,9 +197,9 @@ const SliderAcomodaHome = ({
             <BorderOverlay />
             <SlideContainer style={{ backgroundImage: `url(${item.backgroundImage})` }}>
               <SlideContent>
-                <Title style={{ y: titleY }}>{item.title}</Title>
-                <Subtitle style={{ y: subtitleY }}>{item.subtitle}</Subtitle>
-                <Features style={{ y: featuresY }}>
+                <Title>{item.title}</Title>
+                <Subtitle>{item.subtitle}</Subtitle>
+                <Features>
                   {item.features.map((feature, idx) => (
                     <span key={idx}>
                       {feature.icon} {feature.text}

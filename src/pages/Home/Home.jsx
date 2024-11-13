@@ -225,8 +225,18 @@ const StyledAcomoda = styled.section`
     flex-direction: column;
     gap: 20px;
     padding: 2.5% 5%;
-    background-color: rgba(0, 0, 0, 0.1);
-    clip-path: polygon(1% 1%, 99% 1%, 99% 99%, 1% 99%);
+    position: relative;
+    
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.1);
+        clip-path: polygon(1% 1%, 99% 1%, 99% 85%, 1% 85%);
+    }
 
     @media (max-width: 768px){
         height: auto;

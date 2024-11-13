@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import Button from "./button";
 import styled, { keyframes } from "styled-components";
@@ -22,7 +21,7 @@ const DivAnimated = keyframes`
   }
 `;
 
-const StyledDiv = styled(motion.div)`
+const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -68,7 +67,7 @@ const StyledDiv = styled(motion.div)`
   }
 `;
 
-const StyledTitlePag = styled(motion.h1)`
+const StyledTitlePag = styled.h1`
   width: 100%;
   text-align: left;
   font-family: var(--font--comfortaa);
@@ -90,7 +89,7 @@ const StyledTitlePag = styled(motion.h1)`
   }
 `;
 
-const StyledParagPag = styled(motion.p)`
+const StyledParagPag = styled.p`
   width: 100%;
   font-size: .90rem;
   color: var(--color--black);
@@ -115,17 +114,12 @@ const StyledDivButton = styled.div`
   @media (max-width:768px){
     gap: 15px;
   }
-`
+`;
 
 const TitlePousadas = ({
   text,
   title,
   borderColor,
-  containerAnimation = { opacity: 0, y: 50 },
-  titleAnimation = { opacity: 0, y: -20 },
-  textAnimation = { opacity: 0, x: -20 },
-  buttonAnimation = { opacity: 0, scale: 0.8 },
-  animationDuration = 0.5,
   buttonColor,
   buttonHover,
   buttonBorder,
@@ -142,36 +136,13 @@ const TitlePousadas = ({
   };
 
   return (
-    <StyledDiv
-      borderColor={borderColor}
-      initial={containerAnimation}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: animationDuration }}
-    >
-      <StyledTitlePag
-        initial={titleAnimation}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: animationDuration, delay: 0.2 }}
-      >
+    <StyledDiv borderColor={borderColor}>
+      <StyledTitlePag>
         {title}
       </StyledTitlePag>
-      <StyledParagPag
-        initial={textAnimation}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: animationDuration, delay: 0.4 }}
-      >
+      <StyledParagPag>
         {text}
       </StyledParagPag>
-      <motion.div
-        initial={buttonAnimation}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: animationDuration, delay: 0.6 }}
-        style={{ zIndex: 3 }}
-      >
       <StyledDivButton>
         <Button
           onClick={handleClick}
@@ -185,14 +156,13 @@ const TitlePousadas = ({
         <Button
           onClick={handleClick2}
           text="Fazer reserva!"
-          backgroundColor= "transparent"
+          backgroundColor="transparent"
           borderColor={buttonBorder}
           hoverColor={buttonHover}
           border="1px solid"
           color="var(--color--black)"
         />
       </StyledDivButton>
-      </motion.div>
     </StyledDiv>
   );
 };
