@@ -1,4 +1,3 @@
-import { transform } from 'framer-motion';
 import React from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 import styled, { keyframes } from 'styled-components';
@@ -48,24 +47,24 @@ const Sign = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50px;  /* Ícone fica fixo */
+  width: 50px;  
   transition: width 0.3s ease-in-out;
 `;
 
 const Text = styled.div`
   position: absolute;
-  left: 0;  /* Texto começa fora da tela */
+  left: 0;  
   width: 0;
   opacity: 0;
   color: white;
-  font-size: 1.4em;
+  font-size: 1rem;
   font-weight: 300;
   transition: opacity 0.3s ease-in-out, width 0.3s ease-in-out;
   padding-left: 125px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font--family);
+  font-family: var(--font--comfortaa)!important;
   white-space: nowrap;
 
   ${Button}:hover & {
