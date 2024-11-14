@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import CustomButton from "./button3";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import styled, { createGlobalStyle } from "styled-components";
+import IconButton from "./button4";
 
 const SwiperStyles = createGlobalStyle`
     .swiper-button-next, .swiper-button-prev {
@@ -116,6 +117,7 @@ const SlideImage = styled.img`
   border-radius: 25px 0 25px 0;
   height: 100%;
   object-fit: cover;
+  filter: contrast(120%);
 `;
 
 const StyledSwiper = styled(Swiper)`
@@ -150,7 +152,7 @@ const StyledSwiper = styled(Swiper)`
 
     @media (max-width: 768px){
       left: 40px!important;
-      margin-top: 0;
+      margin-top: -50px!important;
     }
   }
 
@@ -160,7 +162,7 @@ const StyledSwiper = styled(Swiper)`
 
     @media (max-width: 768px){
       left: 90px!important;
-      margin-top: 0;
+      margin-top: -50px!important;
     }
   }
 `;
@@ -189,16 +191,13 @@ const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 
               <SlideText>
                 <Title $colorDefined={titleColor}>{slide.title}</Title> 
                 <Description>{slide.description}</Description>
-                <CustomButton 
-                  text="Reservar agora!"
-                  textColor="var(--color--black)"
-                  borderColor="var(--color--black)"
-                  iconColor="var(--color--black)"
-                  hoverBackgroundColor="var(--color--black)"
-                  hoverBorderColor="var(--color--black)"
-                  hoverColor="var(--color--black)"
-                  hoverIconColor="var(--color--black)"
-                  onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                <IconButton
+                    text = "Fazer reserva!"
+                    text2 = "Clique e reserve"
+                    borderColor = "var(--color--black)"
+                    textColor = "var(--color--black)"
+                    hoverColor = "var(--color--black)"
+                    hoverTextColor = "var(--color--white)"
                 />
               </SlideText>
               <ImageContainer>

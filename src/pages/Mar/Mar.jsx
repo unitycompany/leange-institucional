@@ -375,7 +375,7 @@ const Mar = () => {
 
             <StyledSectionHome>
                 <StyledHomeTexts>
-                    <h4>FALAR SEMPRE SOBRE A LEANGE MAR</h4>
+                    <h4>Le Ange Mar, a pousada mais</h4>
                     <h1>PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
                     <p>Aqui você e seu pet, são mais do que bem-vindos!</p>
                     <div>

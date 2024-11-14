@@ -148,7 +148,7 @@ const StyledHomeTexts = styled.div`
             width: 80%;
             font-size: 1rem;
             text-align: center;
-            padding-bottom: 10px;
+            padding-bottom: 0px;
         }
     }
 `;
@@ -391,7 +391,7 @@ const Serra = () => {
                 <StyledHomeTexts>
                     <h4>LeAnge Serra, a pousada mais</h4>
                     <h1>PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
-                    <p>Aqui, você e seu pet são tratados como VIPs! Venham viver momentos inesquecíveis.</p>
+                    <p>Aqui você e seu pet, são mais do que bem-vindos!</p>
                     <CustomButton
                         text="Reservar agora!"
                         textColor="var(--color--black)"

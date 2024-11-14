@@ -32,9 +32,7 @@ const suites = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -61,9 +59,7 @@ const suites = [
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -89,9 +85,7 @@ const suites = [
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -117,9 +111,7 @@ const suites = [
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -145,9 +137,7 @@ const suites = [
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -175,9 +165,7 @@ const suites = [
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Ampla varanda privativa' },
         ],
         images: [
@@ -203,9 +191,7 @@ const suites = [
             { icon: <BiSolidFridge />, text: 'Frigobar' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda NÃO privativa' },
         ],
         images: [
@@ -231,9 +217,7 @@ const suites = [
             { icon: <BiSolidFridge />, text: 'Frigobar' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda NÃO privativa' },
         ],
         images: [
@@ -260,9 +244,7 @@ const suites = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -291,9 +273,7 @@ const suites = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba para casal' },
             { icon: <MdDeck />, text: 'Ampla varanda privativa' },
         ],
         images: [
@@ -322,9 +302,7 @@ const suites2 = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -350,9 +328,7 @@ const suites2 = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -378,9 +354,7 @@ const suites2 = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -406,9 +380,7 @@ const suites2 = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -434,9 +406,7 @@ const suites2 = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -462,9 +432,7 @@ const suites2 = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -490,9 +458,7 @@ const suites2 = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
@@ -518,9 +484,7 @@ const suites2 = [
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
-            { icon: <FaShower />, text: 'Chuveiro' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
-            { icon: <FaSink />, text: 'Cuba única' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
         images: [
