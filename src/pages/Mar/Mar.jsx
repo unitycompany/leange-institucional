@@ -224,7 +224,7 @@ const ImagesAcomoda = [
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594863/IMG_0141-compressed_pl7ep8.webp", text: "Suíte Superior 3", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594863/IMG_0139-compressed_nqmqdj.webp", text: "Suíte Superior 4", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594862/IMG_0144-compressed_kqrioa.webp", text: "Suíte Superior 5", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334576/suiteMar03_o9sxbf-compressed_uw2hox.jpg", text: "Suíte Standard 6", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594870/mar_master_8_m1x38m.jpg", text: "Suíte Standard 6", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594863/IMG_0143-compressed_fk4kgv.webp", text: "Suíte Master 7", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594870/mar_master_8_m1x38m.jpg", text: "Suíte Master 8", loading: "lazy" }
 ];
@@ -376,15 +376,8 @@ const Mar = () => {
             <StyledSectionHome>
                 <StyledHomeTexts>
                     <h4>FALAR SEMPRE SOBRE A LEANGE MAR</h4>
-
-                    <h1>
-                        PET FRIENDLY<br /> DO <b>BRASIL</b>
-                    </h1>
-
-                    <p>
-                        Aqui você e seu pet, são mais do que bem-vindos!
-                    </p>
-
+                    <h1>PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
+                    <p>Aqui você e seu pet, são mais do que bem-vindos!</p>
                     <div>
                         <CustomButton
                             text="Reservar agora!"

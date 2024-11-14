@@ -156,7 +156,7 @@ const Pensao = ({ colorDefinedBold }) => {
             </StyledPensaoImages>
             <StyledPensaoTexts>
                 <StyledTitle colorDefinedBold={colorDefinedBold}>
-                    Pensão <b>Completa</b>
+                    Alimentação <b>Inclusa</b>
                 </StyledTitle>
                 <StyledParagraph>
                     Sabe aquela comida com sabor, tempero e afeto que te abraça? <br /> <br />
