@@ -219,14 +219,14 @@ const StyledSectionEspaco = styled.section`
 `;
 
 const ImagesAcomoda = [
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334570/suiteMar01_p6bfoi-compressed_kixsaa.jpg", text: "Suíte Superior 1", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334571/suiteMar02_pzxjim-compressed_voukzk.jpg", text: "Suíte Standard 2", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334571/suiteMar07_dgfxzq-compressed_kody5f.jpg", text: "Suíte Superior 3", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334573/suiteMar05_oid9as-compressed_al5vur.jpg", text: "Suíte Superior 4", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334574/suiteMar08_g1gmt0-compressed_mymcv1.jpg", text: "Suíte Superior 5", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594862/IMG_0140-compressed_q2fn5t.webp", text: "Suíte Superior 1", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594863/IMG_0142-compressed_lfijwu.webp", text: "Suíte Standard 2", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594863/IMG_0141-compressed_pl7ep8.webp", text: "Suíte Superior 3", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594863/IMG_0139-compressed_nqmqdj.webp", text: "Suíte Superior 4", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594862/IMG_0144-compressed_kqrioa.webp", text: "Suíte Superior 5", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334576/suiteMar03_o9sxbf-compressed_uw2hox.jpg", text: "Suíte Standard 6", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334577/suiteMar04_jcaps2-compressed_evaonu.jpg", text: "Suíte Master 7", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334579/suiteMar06_jywv1q-compressed_u1tfqp.jpg", text: "Suíte Master 8", loading: "lazy" }
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594863/IMG_0143-compressed_fk4kgv.webp", text: "Suíte Master 7", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731594870/mar_master_8_m1x38m.jpg", text: "Suíte Master 8", loading: "lazy" }
 ];
 
 const StyledLocal = styled.div`
