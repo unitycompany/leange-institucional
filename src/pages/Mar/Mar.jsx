@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../../components/footer';
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
 import CustomButton from '../../components/button3';
 import CarouselComponent from '../../components/carrosselComponent';
 import AcomodaComponent2 from '../../components/acomodaComponent2';
@@ -17,12 +16,12 @@ import WhatsAppButton from '../../components/Whatsapp';
 const StyledEspace = styled.div`
     height: 5vh;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         height: 0vh;
     }
 `;
 
-const StyledSectionHome = styled(motion.section)`
+const StyledSectionHome = styled.section`
     width: 100%;
     display: flex;
     padding: 5% 10% 2.5% 5%;
@@ -30,7 +29,7 @@ const StyledSectionHome = styled(motion.section)`
     justify-content: space-between;
     height: 95vh;
 
-    &::before{
+    &::before {
         content: '';
         width: 100%;
         height: 100vh;
@@ -38,24 +37,23 @@ const StyledSectionHome = styled(motion.section)`
         top: 0vh;
         position: absolute;
         z-index: -1;
-        opacity: .05;
+        opacity: 0.05;
         background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327000/casal_na_rede_watzjg.webp');
         background-position: center;
         background-size: cover;
 
-        @media (max-width:768px){
+        @media (max-width: 768px) {
             display: none;
         }
-
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         padding: 10% 2.5%;
         flex-direction: column-reverse;
     }
 `;
 
-const StyledHomeDiv = styled(motion.div)`
+const StyledHomeDiv = styled.div`
     width: 45%;
     height: 100%;
     background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327000/casal_na_rede_watzjg.webp');
@@ -66,7 +64,7 @@ const StyledHomeDiv = styled(motion.div)`
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     filter: contrast(110%);
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         width: 100%;
         border-radius: 0px;
         border-image: fill 0 linear-gradient(#0001, #ffffff);
@@ -78,7 +76,7 @@ const StyledHomeDiv = styled(motion.div)`
     }
 `;
 
-const StyledHomeTexts = styled(motion.div)`
+const StyledHomeTexts = styled.div`
     width: 50%;
     height: 100%;
     display: flex;
@@ -87,7 +85,7 @@ const StyledHomeTexts = styled(motion.div)`
     gap: 20px;
     flex-direction: column;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         width: 100%;
         align-items: center;
         height: 35%;
@@ -99,9 +97,7 @@ const StyledHomeTexts = styled(motion.div)`
         font-weight: 200;
         color: var(--color--black);
 
-
-        @media (max-width: 768px){
-
+        @media (max-width: 768px) {
             color: var(--color--black);
             font-size: 14px;
             text-align: center;
@@ -119,9 +115,7 @@ const StyledHomeTexts = styled(motion.div)`
         color: var(--color--black);
         margin-top: -15px;
 
-
-        @media (max-width: 768px){
- 
+        @media (max-width: 768px) {
             display: inline-block;
             width: 100%;
             font-size: 35px;
@@ -135,7 +129,7 @@ const StyledHomeTexts = styled(motion.div)`
         color: var(--color--blue);
         font-weight: 100;
 
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             font-weight: 100;
         }
     }
@@ -149,8 +143,7 @@ const StyledHomeTexts = styled(motion.div)`
         width: 50%;
         font-weight: 100;
 
-
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             width: 80%;
             font-size: 1rem;
             text-align: center;
@@ -218,22 +211,22 @@ const StyledSectionEspaco = styled.section`
     justify-content: center;
     margin-top: -5vh;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         height: auto;
         padding: 0% 0 5% 0;
         margin-top: 0;
     }
-`
+`;
 
 const ImagesAcomoda = [
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334570/suiteMar01_p6bfoi-compressed_kixsaa.jpg", text: "Suíte Superior 1", loading: "lazy"},
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334571/suiteMar02_pzxjim-compressed_voukzk.jpg", text: "Suíte Standard 2", loading: "lazy"},
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334570/suiteMar01_p6bfoi-compressed_kixsaa.jpg", text: "Suíte Superior 1", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334571/suiteMar02_pzxjim-compressed_voukzk.jpg", text: "Suíte Standard 2", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334571/suiteMar07_dgfxzq-compressed_kody5f.jpg", text: "Suíte Superior 3", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334573/suiteMar05_oid9as-compressed_al5vur.jpg", text: "Suíte Superior 4", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334574/suiteMar08_g1gmt0-compressed_mymcv1.jpg", text: "Suíte Superior 5", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334576/suiteMar03_o9sxbf-compressed_uw2hox.jpg", text: "Suíte Standard 6", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334577/suiteMar04_jcaps2-compressed_evaonu.jpg", text: "Suíte Master 7", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334579/suiteMar06_jywv1q-compressed_u1tfqp.jpg", text: "Suíte Master 8", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334579/suiteMar06_jywv1q-compressed_u1tfqp.jpg", text: "Suíte Master 8", loading: "lazy" }
 ];
 
 const StyledLocal = styled.div`
@@ -245,24 +238,24 @@ const StyledLocal = styled.div`
     background-color: var(--color--blue);
     font-family: var(--font--comfortaa);
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         height: 8vh;
         margin-bottom: 25px;
     }
 
-    & > h1{
+    & > h1 {
         font-weight: 200;
         width: 80%;
         text-align: center;
         font-size: 1.1rem;
         color: var(--color--white);
 
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             font-size: 1rem;
             font-weight: 400;
         }
     }
-`
+`;
 
 const StyledContainerEvents = styled.section`
     width: 100%;
@@ -273,12 +266,12 @@ const StyledContainerEvents = styled.section`
     justify-content: center;
     margin-top: 10vh;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         height: auto;
         margin-top: 0;
         padding: 10% 2.5% 0 2.5%;
     }
-`
+`;
 
 const events = [
     {
@@ -288,10 +281,10 @@ const events = [
         features: [
             { icon: <FaUtensils />, text: '23/11 - Frutos do Mar' },
             { icon: <FaMusic />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
         ],
         price: '354,20',
-        discount: 25,
+        discount: 25
     },
     {
         image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp',
@@ -300,10 +293,10 @@ const events = [
         features: [
             { icon: <FaUtensils />, text: '30/11 - Noite de Risostos' },
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
         ],
         price: '359,20',
-        discount: 25,
+        discount: 25
     },
     {
         image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330265/pizzas_lgsqcd.webp',
@@ -312,10 +305,10 @@ const events = [
         features: [
             { icon: <FaUtensils />, text: '07/12 - Noite das pizzas' },
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
         ],
         price: '359,20',
-        discount: 25,
+        discount: 25
     },
     {
         image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330262/frutos_do_mar2_xyxatd.webp',
@@ -324,10 +317,10 @@ const events = [
         features: [
             { icon: <FaUtensils />, text: '14/12 - Frutos do Mar' },
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
         ],
         price: '359,20',
-        discount: 25,
+        discount: 25
     },
     {
         image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/fique3pague4_fiupcm.webp',
@@ -336,10 +329,10 @@ const events = [
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
             { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
         ],
         price: '538,90',
-        discount: 25,
+        discount: 25
     },
     {
         image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330266/natal_wrunee.webp',
@@ -348,11 +341,11 @@ const events = [
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
             { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
         ],
         price: '918,40',
-        discount: 25,
-    },
+        discount: 25
+    }
 ];
 
 const StyledButtonCenter = styled.div`
@@ -363,10 +356,10 @@ const StyledButtonCenter = styled.div`
     height: 15vh;
     margin-bottom: -10vh;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         display: none;
     }
-`
+`;
 
 const Mar = () => {
     return (
@@ -380,46 +373,19 @@ const Mar = () => {
 
             <WhatsAppButton />
 
-            <StyledSectionHome
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-            >
+            <StyledSectionHome>
+                <StyledHomeTexts>
+                    <h4>FALAR SEMPRE SOBRE A LEANGE MAR</h4>
 
-<StyledHomeTexts
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                    <motion.h4
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6 }}
-                    >
-                        FALAR SEMPRE SOBRE A LEANGE MAR
-                    </motion.h4>
-
-                    <motion.h1
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6 }}
-                    >
+                    <h1>
                         PET FRIENDLY<br /> DO <b>BRASIL</b>
-                    </motion.h1>
+                    </h1>
 
-                    <motion.p
-                        initial={{ x: -100, opacity: 0 }}
-                        animate={{ x: 0, opacity: 1 }}
-                        transition={{ duration: 0.6 }}
-                    >
+                    <p>
                         Aqui você e seu pet, são mais do que bem-vindos!
-                    </motion.p>
+                    </p>
 
-                    <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.6, ease: "backOut" }}
-                    >
+                    <div>
                         <CustomButton
                             text="Reservar agora!"
                             textColor="var(--color--black)"
@@ -432,43 +398,33 @@ const Mar = () => {
                             hoverIconColor="var(--color--white)"
                             onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                         />
-                    </motion.div>
+                    </div>
                 </StyledHomeTexts>
 
-                <StyledHomeDiv
-                    initial={{ scale: 0.8, x: "-100vw" }}
-                    animate={{ scale: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                />
-
-                
+                <StyledHomeDiv />
             </StyledSectionHome>
 
             <StyledLocal>
                 <h1>LeAnge Mar | Armação dos Búzios RJ</h1>
             </StyledLocal>
 
-            <StyledSectionEspaco> 
-
+            <StyledSectionEspaco>
                 <CarouselComponent
-                slides={slides}
-                titleColor="var(--color--blue)"
-                buttonBgColor="var(--color--blue)"
-                imagePosition="left"
+                    slides={slides}
+                    titleColor="var(--color--blue)"
+                    buttonBgColor="var(--color--blue)"
+                    imagePosition="left"
                 />
+            </StyledSectionEspaco>
 
-            </StyledSectionEspaco> 
-
-            <AcomodaComponent2 images={ImagesAcomoda}/>
+            <AcomodaComponent2 images={ImagesAcomoda} />
 
             <Pensao colorDefinedBold="var(--color--blue)" />
 
             <PetFriendly />
 
             <StyledButtonCenter>
-                <Button 
-                text="Fazer minha reserva!"
-                />
+                <Button text="Fazer minha reserva!" />
             </StyledButtonCenter>
 
             <StyledContainerEvents>
