@@ -6,6 +6,7 @@ import { FaHome, FaInfoCircle, FaAnchor, FaMountain, FaCalendar, FaBed } from 'r
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
+import { useNavigate } from 'react-router-dom';
 
 // Animação de loading
 const fadeIn = keyframes`
@@ -14,6 +15,39 @@ const fadeIn = keyframes`
   }
   to {
     opacity: 1;
+  }
+`;
+
+const Select = styled.select`
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  font-size: 16px;
+  color: #333;
+  appearance: none;
+  cursor: pointer;
+  font-family: var(--font--comfortaa);
+  font-size: .8rem;
+  color: var(--color--black);
+  border-radius: 0;
+
+  &:focus {
+    outline: none;
+  }
+
+  option:hover {
+    background-color: var(--color--white)!important;
+  }
+
+  option:nth-child(2) {
+    color: var(--color--green);
+    font-weight: 800;
+  }
+
+  option:nth-child(3) {
+    color: var(--color--blue);
+    font-weight: 800;
   }
 `;
 
@@ -270,6 +304,8 @@ const Sidebar = styled.div`
     }
 `;
 
+
+
 const NavegationBar = () => {
     const location = useLocation();
     const [showConfetti, setShowConfetti] = useState(false);
@@ -297,6 +333,15 @@ const NavegationBar = () => {
             setIsScrolled(false);
         }, 3000);
     };
+
+    const navigate = useNavigate();
+
+    const handleNavigation = (event) => {
+        const value = event.target.value;
+        if (value) {
+          navigate(value);
+        }
+      };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -360,7 +405,14 @@ const NavegationBar = () => {
                     <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountainSun /></IconContainer>Le Ange Serra</StyledLink>
                     <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton>
-                    <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"}><IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações</StyledLink>
+                    <Select onChange={handleNavigation} defaultValue="">
+                        <option disabled value="">
+                            Acomodações
+                        </option>
+                        <option value="/acomodaSerra">Suítes Serra</option>
+                        <option value="/acomodaMar">Suítes Mar</option>
+                    </Select>
+                    {/* <StyledLink to="/acomodaMar" isActive={location.pathname === "/acomodaMar"}><IconContainer isVisible={location.pathname === "/acomodaMar"}><FaBed /></IconContainer>Acomodações</StyledLink> */}
                 </StyledHeader>
                 <Button
                     onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
@@ -395,9 +447,13 @@ const NavegationBar = () => {
                     <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos
                     </EventButton>
-                    <StyledLink to="/acomoda" isActive={location.pathname === "/acomoda"} onClick={closeSidebar}>
-                        <IconContainer isVisible={location.pathname === "/acomoda"}><FaBed /></IconContainer>Acomodações
-                    </StyledLink>
+                    <Select onChange={handleNavigation} defaultValue="">
+                        <option disabled value="">
+                            Acomodações
+                        </option>
+                        <option value="/acomodaSerra">Suítes Serra</option>
+                        <option value="/acomodaMar">Suítes Mar</option>
+                    </Select>
                 </div>
                 <Button
                     text="Fazer minha reserva"

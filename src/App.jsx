@@ -12,7 +12,8 @@ import Sobre from './pages/Sobre/Sobre';
 import Serra from './pages/Serra/Serra';
 import Mar from './pages/Mar/Mar';
 import NavegationBar from './components/navegationBar';
-import Acomodacoes from './pages/Acomoda/acomoda';
+import AcomodaSerra from './pages/Acomoda/acomodaSerra';
+import AcomodaMar from './pages/Acomoda/acomodaMar';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -37,7 +38,8 @@ function AnimatedRoutes() {
           <Route path="/mar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Mar /></motion.div>} />
           <Route path="/serra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Serra /></motion.div>} />
           <Route path="/event" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Event /></motion.div>} />
-          <Route path="/acomoda" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Acomodacoes /></motion.div>} />
+          <Route path="/acomodaMar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><AcomodaMar /></motion.div>} />
+          <Route path="/acomodaSerra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><AcomodaSerra /></motion.div>} />
         </Routes>
       </AnimatePresence>
     </>

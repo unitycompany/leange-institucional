@@ -352,22 +352,44 @@ const Footer = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
     };
 
+    const generateUniqueId = () => {
+        return `user_${Math.random().toString(36).substr(2, 9)}_${Date.now()}`;
+    };
+    
+    const getUTMs = () => {
+        const params = new URLSearchParams(window.location.search);
+        const utms = {
+            utm_source: params.get('utm_source') || 'organico',
+            utm_medium: params.get('utm_medium') || '',
+            utm_campaign: params.get('utm_campaign') || '',
+            utm_term: params.get('utm_term') || '',
+            utm_content: params.get('utm_content') || '',
+        };
+        return utms;
+    };
+    
     const handleSubmit = async (e) => {
         e.preventDefault(); // Impede o comportamento padrão de recarregar a página
-
+    
         // Verifique se os dados estão preenchidos
         if (!name || !email || !tel) {
             alert('Por favor, preencha todos os campos.');
             return;
         }
-
+    
+        // Gera um ID único para o usuário
+        const uniqueId = generateUniqueId();
+    
         // Cria um objeto com todos os valores como strings
         const formData = {
+            id: uniqueId, // Adiciona o ID único ao objeto
             name: String(name).trim(),  // Garantindo que seja uma string e removendo espaços em branco
             email: String(email).trim(), // Garantindo que seja uma string e removendo espaços em branco
             tel: String(tel).trim(),     // Garantindo que seja uma string e removendo espaços em branco
+            conversion_url: window.location.href, // Inclui a URL da conversão
+            ...getUTMs(),                // Adiciona as UTM's capturadas
         };
-
+    
         try {
             const response = await fetch('https://hook.us1.make.com/e79ttwjdwv9soeppgqnu5rbnpk9l828e', { // URL do seu webhook
                 method: 'POST',
@@ -376,8 +398,7 @@ const Footer = () => {
                 },
                 body: JSON.stringify(formData), // Convertendo os dados para JSON
             });
-
-            // Verifica se a resposta não é um JSON válido
+    
             const responseBody = await response.text(); // Obtém a resposta como texto
             if (response.ok) {
                 alert('Dados enviados com sucesso!'); // Mensagem de sucesso
@@ -394,6 +415,8 @@ const Footer = () => {
             alert('Erro ao enviar os dados. Tente novamente.'); // Mensagem de erro
         }
     };
+    
+    
 
     return (
         <>
