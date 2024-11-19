@@ -23,7 +23,6 @@ const Select = styled.select`
   border: none;
   border-radius: 8px;
   background: none;
-  font-size: 16px;
   color: #333;
   appearance: none;
   cursor: pointer;
@@ -34,6 +33,8 @@ const Select = styled.select`
 
   @media (max-width: 768px){
     text-align: center;
+    font-size: .8rem;
+    margin-top: -6px;
   }
 
   &:focus {
@@ -44,14 +45,35 @@ const Select = styled.select`
     background-color: var(--color--white) !important;
   }
 
+  option:nth-child(1){
+    @media (max-width: 768px){
+        font-size: .6rem!important;
+        padding: 10px!important;
+        color: transparent!important;
+        background-color: transparent!important;
+    }
+  }
+
   option:nth-child(2) {
     color: var(--color--green);
     font-weight: 800;
+
+    @media (max-width: 768px){
+        font-size: .6rem!important;
+        padding: 10px!important;
+        text-align: left;
+    }
   }
 
   option:nth-child(3) {
     color: var(--color--blue);
     font-weight: 800;
+
+    @media (max-width: 768px){
+        font-size: .6rem!important;
+        padding: 10px!important;
+        text-align: left;
+    }
   }
 
   option:checked {
