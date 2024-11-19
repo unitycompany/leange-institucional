@@ -367,12 +367,13 @@ const DiferenciaisContainer = styled.section`
 
 const ContainerDuplo = styled.section`
     width: 100%;
-    height: 100vh;
+    height: 150vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 0 5%;
+
 
     @media (max-width: 768px){
         height: auto;
@@ -387,7 +388,8 @@ const ContainerDuplo = styled.section`
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 40%;
+        height: 45%;
+    
 
         
         @media (max-width: 768px){
@@ -484,7 +486,8 @@ const ContainerDuplo = styled.section`
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 40%;
+        height: 45%;
+    
 
 
         @media (max-width: 768px){
@@ -872,7 +875,7 @@ const Sobre = () => {
                 </div>
                 
                 <div>
-                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/quadro_de_cachorro_s1mnbq.webp" alt='foto do quadro de cachorro na pousada le ange mar'/>
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_50,w_1500/v1732037857/IMG_0254_wdrn4v.webp" alt='foto do quadro de cachorro na pousada le ange mar'/>
                 </div>
 
             </PublicoContainer>

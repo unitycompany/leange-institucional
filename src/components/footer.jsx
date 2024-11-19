@@ -424,7 +424,7 @@ const Footer = () => {
                 <StyledSectionTop as={motion.div}>
                     <StyledTitles>
                         <motion.h1 variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.2 }}>
-                            Fale agora com a nossa central de reservas
+                            Fale agora com a nossa Central de Reservas
                         </motion.h1>
                         <motion.p variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.3 }}>
                             Todas as informações são usadas apenas para entrar em contato. Entenda melhor sobre o uso das suas informações pela nossa<a href="https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view" target='_blank'>política de privacidade</a>.
@@ -452,7 +452,7 @@ const Footer = () => {
                             <motion.input
                                 type="text"
                                 id="name"
-                                placeholder="Me diga seu nome"
+                                placeholder="Digite o seu nome"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
                                 variants={fadeUp}
@@ -474,7 +474,7 @@ const Footer = () => {
                             <motion.input
                                 type="tel"
                                 id="tel"
-                                placeholder="Me diga seu número de WhatsApp"
+                                placeholder="Por fim, seu número de WhatsApp"
                                 value={tel}
                                 onChange={(e) => setTel(e.target.value)}
                                 variants={fadeUp}

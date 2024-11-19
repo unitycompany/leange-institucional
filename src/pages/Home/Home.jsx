@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { FaRulerCombined, FaSnowflake, FaBed, FaBath, FaTv, FaFire } from 'react-icons/fa';
 import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import { Helmet } from 'react-helmet';
@@ -16,6 +17,8 @@ import { MdChair } from "react-icons/md";
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const imagesSerra = [
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/mulher-na-rede_bj91d1.webp", alt: 'Mulher na rede', loading: "lazy" },
@@ -41,24 +44,24 @@ const imagesMar = [
 ];
 
 const imagesCarrossel01 = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/mulher-na-rede_bj91d1.webp', alt: 'Pessoa na rede', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/cachorro-na-piscina_mnkqrv.webp', alt: '2 cachorros na piscina', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/sala-de-estar_xuxiou.webp', alt: 'Sala de estar na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_1_jsshhu.webp', alt: 'Hot Tube na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/casal_comendo_no_mar_nkkwkl.webp', alt: '2 pessoas bebendo na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_d2asun.webp', alt: '2 pessoas na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/sala-de-estar_blaa0x.webp', alt: 'Sala de estar da le ange mar', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327606/por_do_sol_wmwzur.webp', alt: 'Por do sol na le ange', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731326209/mulher-na-rede_bj91d1.webp', alt: 'Pessoa na rede', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731326209/cachorro-na-piscina_mnkqrv.webp', alt: '2 cachorros na piscina', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731326209/sala-de-estar_xuxiou.webp', alt: 'Sala de estar na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731327605/sossego_1_jsshhu.webp', alt: 'Hot Tube na le ange serra', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731327605/casal_comendo_no_mar_nkkwkl.webp', alt: '2 pessoas bebendo na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731327605/sossego_d2asun.webp', alt: '2 pessoas na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731327001/sala-de-estar_blaa0x.webp', alt: 'Sala de estar da le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731327606/por_do_sol_wmwzur.webp', alt: 'Por do sol na le ange', label: 'Le Ange Serra', loading: "lazy" },
 ];
 
 const imagesCarrossel02 = [
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328215/suite_ajrwh0.webp', alt: 'Foto do quarto na le ange', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328215/churrasqueira_feg3jy.webp', alt: 'Foto de churrasqueira na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/cachorro_na_m%C3%A3o_kil7xk.webp', alt: 'Cachorro com a cabeça recostada na mão do tutor', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/mulher_e_cachorro_na_piscina_wwgxkq.webp', alt: 'Uma pessoa e um cachorro na piscina', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/2_ta%C3%A7as_ocgwdi.webp', alt: '2 taças com um fundo de por do sol', label: 'Le Ange Mar', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731326209/cachorro-na-cama-no-mato_pa3yt6.webp', alt: '2 cachorros em uma cama no meio do jardim', label: 'Le Ange Serra', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328214/quadro_de_cachorro_s1mnbq.webp', alt: 'Foto do quadro de cachorro na le ange mar', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731328215/suite_ajrwh0.webp', alt: 'Foto do quarto na le ange', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731328215/churrasqueira_feg3jy.webp', alt: 'Foto de churrasqueira na le ange mar', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731328214/cachorro_na_m%C3%A3o_kil7xk.webp', alt: 'Cachorro com a cabeça recostada na mão do tutor', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731328214/mulher_e_cachorro_na_piscina_wwgxkq.webp', alt: 'Uma pessoa e um cachorro na piscina', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731328214/2_ta%C3%A7as_ocgwdi.webp', alt: '2 taças com um fundo de por do sol', label: 'Le Ange Mar', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731326209/cachorro-na-cama-no-mato_pa3yt6.webp', alt: '2 cachorros em uma cama no meio do jardim', label: 'Le Ange Serra', loading: "lazy" },
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731328214/quadro_de_cachorro_s1mnbq.webp', alt: 'Foto do quadro de cachorro na le ange mar', label: 'Le Ange Serra', loading: "lazy" },
 ];
 
 const StyledContainerPousadas = styled.section`
@@ -119,6 +122,11 @@ const StyledPousadasTitle = styled.aside `
         width: 100%;
         text-align: center;
         color: var(--color--black);
+        font-weight: 200;
+
+        & > b{
+            font-weight: 300;
+        }
 
         @media (max-width: 768px){
             font-size: 22px;
@@ -134,6 +142,7 @@ const StyledPousadasTitle = styled.aside `
         width: 100%;
         text-align: center;
         color: var(--color--black);
+        font-weight: 200;
         
         @media (max-width: 768px){
             font-size: 12px;
@@ -248,36 +257,36 @@ const StyledAcomoda = styled.section`
 const slideDataCoverflow = [
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/cachorro_na_piscina_sjs7ft.webp',
-        title: 'Pet Friendly',
-        description: 'Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Seu pet tem liberdade total para acessar todas as nossas comodidades!',
+        title: '100% Pet Friendly',
+        description: 'Não temos restrições quanto ao porte ou à raça do seu pet, nem cobramos taxas adicionais para a vinda deles. Na Le Ange, o seu pet tem total liberdade para acessar todas as nossas comodidades!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra e Mar'
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329813/cachorro_na_praia_pmqyi4.webp',
         title: 'Praia',
-        description: 'Para os amantes da praia, estamos a apenas 150 metros da areia da Praia Rasa, onde você e seu pet podem aproveitar juntinhos e dar um mergulho delicioso no mar.',
+        description: 'Para os amantes da praia, estamos localizados a apenas 150 metros da Praia Rasa, onde você e o seu pet podem aproveitar juntinhos e dar um mergulho delicioso no mar.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_1_jsshhu.webp',
         title: 'Sossego',
-        description: 'A área da sauna fica localizada ao lado da mata, com barulho do rio que passa e conta com um HotTub abastecido por água natural e aquecido à lenha, o combo completo para você relaxar.',
+        description: 'A área da sauna fica situada ao lado da mata, envolvida pelo som relaxante do rio que passa. Aqui, você pode desfrutar de um HotTub abastecido por água natural e aquecido à lenha, o combo perfeito para você relaxar.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/pousada_de_cima_vpzpdb.webp',
         title: 'Piscinas',
-        description: 'Nossa piscina aquecida com vista panorâmica para o oceano é de surpreender! Possui tratamento especial por ozônio com níveis baixíssimos de cloro, pensando no bem-estar da sua pele a do seu pet também!',
+        description: 'Nossa piscina aquecida possui um tratamento especial por ozônio com níveis baixíssimos de cloro - aqui, tudo é pensando para o bem-estar da sua pele a do seu pet também!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar e Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/caf%C3%A9_da_manh%C3%A3_vaxwlf.webp',
         title: 'Cozinha',
-        description: 'Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.',
+        description: 'Na sua hospedagem, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Também, aceitamos todas as restrições alimentares para garantir que todos desfrutem da nossa gastronomia.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra e Mar',
     },
@@ -291,28 +300,28 @@ const slideDataCoverflow = [
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/parc%C3%A3o_mdvo8p.webp',
         title: 'Diversão',
-        description: 'Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet, correr, pular e nadar!',
+        description: 'Espaço de sobra para o seu pet se divertir! Espaço agility à beira do lago, com muita grama, para o seu pet, correr, pular, brincar e, claro, nadar!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329811/bar_xl6dvc.webp',
         title: 'Bar',
-        description: 'Para completar ainda mais sua experiência, contamos com uma carta variada de vinhos, destilados, drinks e cervejas!',
+        description: 'Para completar ainda mais a sua experiência, contamos com uma carta variada de vinhos, destilados, drinks e cervejas!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/adega_uje7gn.webp',
         title: 'Adega',
-        description: 'Para completar ainda mais sua experiência, contamos com uma adega subterrânea para climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.',
+        description: 'Para tornar a sua experiência ainda mais especial, contamos com uma adega subterrânea para a climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra',
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329811/suites_pzghlo.webp',
         title: 'Suítes',
-        description: 'São Suítes elegantemente decoradas, todas com vistas incriveis, banheira de imersão, varanda, cama king size, ar condicionado e frigobar.',
+        description: 'Nossas suítes são, elegantemente, decoradas. Todas com vistas maravilhosas, banheira de imersão, cama king-size, varanda, ar-condicionado e frigobar.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar e Serra',
     },
@@ -358,6 +367,11 @@ const StyledEstruturaTitle2 = styled.h1`
     gap: 10px;
     font-family: var(--font--comfortaa);
     color: var(--color--black);
+    font-weight: 200;
+
+    & > b{
+        font-weight: 400;
+    }
 
     @media (max-width: 768px){
         display: inline-block;
@@ -378,6 +392,11 @@ const StyledEstruturaTitle = styled.h1`
     font-family: var(--font--comfortaa);
     color: var(--color--black);
     font-size: 1.5rem;
+    font-weight: 200;
+
+    & > b{
+        font-weight: 400;
+    }
 
     @media (max-width: 768px){
         display: inline-block;
@@ -392,9 +411,11 @@ const StyledEstruturaTitle = styled.h1`
 const StyledEstruturaSubTitle = styled.p`
     width: 100%;
     text-align: center;
-    font-family: var(--font--avenir);
+    font-family: var(--font--comfortaa);
     color: var(--color--black);
     opacity: 0.7;
+    font-family: 200;
+    font-size: .9rem;
 
     @media (max-width: 768px){
         font-size: 0.9rem;
@@ -530,6 +551,13 @@ const StyledButtonCenter = styled.div`
 `
 
 const Home = () => {
+    useEffect(() => {
+        AOS.init({
+          duration: 1000, // Duração da animação (em ms)
+          once: true,     // Executar animação apenas uma vez
+        });
+      }, []);
+      
     return (
         <>
             <Helmet>
@@ -551,11 +579,11 @@ const Home = () => {
                 animationDuration={0.7}
             >
                 <StyledPousadasTitle>
-                    <h1>Conheça o <StyledColorBBlue>melhor de cada cantinho nosso</StyledColorBBlue></h1>
-                    <p>Pousada mais Pet Friendly</p>
+                    <h1 data-aos="fade-up">Pousada<StyledColorBBlue> 100% Pet Friendly</StyledColorBBlue> que aceita humanos de estimação</h1>
+                    <p data-aos="fade-up" data-aos-delay="200">Duas unidades, dois refúgios únicos</p>
                 </StyledPousadasTitle>
 
-                <StyledContainerPousadas>
+                <StyledContainerPousadas data-aos="fade-up">
                     <SliderComponent 
                         content={imagesSerra} 
                         spaceBetween={20} 
@@ -566,7 +594,7 @@ const Home = () => {
                     />
                     <TitlePousadas 
                         title="Le Ange Serra - Miguel Pereira RJ" 
-                        text="Aqui na LeAnge, costumamos dizer que a hospedagem é muito mais do que um final de semana para relaxar. É uma experiência única ao lado do seu PET, para que você colecione os melhores momentos ao lado dele!" 
+                        text="Na Le Ange Serra, costumamos dizer que a hospedagem é muito mais do que um final de semana para relaxar. É uma experiência única ao lado do seu pet entre as belezas naturais da Mata Atlântica, para que você colecione os melhores momentos ao lado dele!" 
                         borderColor="var(--color--green)"
                         borderRadius="30px" 
                         buttonColor="var(--color--green)"
@@ -575,10 +603,10 @@ const Home = () => {
                     />
                 </StyledContainerPousadas>
 
-                <StyledContainerPousadas>
+                <StyledContainerPousadas data-aos="fade-up" data-aos-delay="200">
                     <TitlePousadas 
                         title="Le Ange Mar - Búzios RJ" 
-                        text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da propriedade e o seu pet é calorosamente recebido para momentos especiais." 
+                        text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da pousada e o seu pet é, calorosamente, recebido para momentos especiais à beira-mar." 
                         borderColor="var(--color--blue)"
                         borderRadius="30px" 
                         buttonColor="var(--color--blue)"
@@ -599,8 +627,8 @@ const Home = () => {
 
             <StyledAcomoda>
                 <div>
-                    <StyledEstruturaTitle2>Nossos quartos <StyledColorBGreen>mais procurados</StyledColorBGreen> </StyledEstruturaTitle2>
-                    <StyledEstruturaSubTitle>Já consegue se imaginar dormindo aqui?</StyledEstruturaSubTitle>
+                    <StyledEstruturaTitle2 data-aos="fade-up">Nossas suítes <StyledColorBGreen>mais procuradas</StyledColorBGreen> </StyledEstruturaTitle2>
+                    <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Já consegue se imaginar dormindo aqui ao lado do seu pet?</StyledEstruturaSubTitle>
                 </div>
 
                 <SliderAcomodaHome 
@@ -611,8 +639,8 @@ const Home = () => {
             
             <StyledEstrutura>
                 <div>
-                    <StyledEstruturaTitle>Carinho em cada <StyledColorBBlue>detalhe</StyledColorBBlue></StyledEstruturaTitle>
-                    <StyledEstruturaSubTitle>Venha ter essa experiência</StyledEstruturaSubTitle>
+                    <StyledEstruturaTitle data-aos="fade-up">Mais que Pet Friendly, <StyledColorBBlue>Pet Lovers</StyledColorBBlue></StyledEstruturaTitle>
+                    <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Venha viver essa experiência</StyledEstruturaSubTitle>
                 </div>
                 <CoverflowSliderComponent
                     content={slideDataCoverflow} 
@@ -625,11 +653,11 @@ const Home = () => {
             </StyledEstrutura>
 
             <div>
-                <StyledEstruturaTitle> <StyledColorBGreen>Viva</StyledColorBGreen> essa experiência </StyledEstruturaTitle>
-                <StyledEstruturaSubTitle>Alguns dos nossos momentos</StyledEstruturaSubTitle>
+                <StyledEstruturaTitle data-aos="fade-up"> <StyledColorBGreen>Viva</StyledColorBGreen> essa experiência </StyledEstruturaTitle>
+                <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Alguns dos nossos momentos</StyledEstruturaSubTitle>
             </div>
             
-            <StyledCarrosselSection>
+            <StyledCarrosselSection data-aos="fade-in">
                 <ImageCarouselSliderComponent images={imagesCarrossel01} />
                 <ImageCarouselSliderComponent images={imagesCarrossel02} reverse={true} />
             </StyledCarrosselSection>
@@ -641,11 +669,11 @@ const Home = () => {
             </StyledButtonCenter>
 
             <div>
-                <StyledEstruturaTitle>Conheça nossos pacotes e <StyledColorBBlue>noites especiais</StyledColorBBlue> </StyledEstruturaTitle>
-                <StyledEstruturaSubTitle>Estamos te esperando!</StyledEstruturaSubTitle>
+                <StyledEstruturaTitle data-aos="fade-up">Conheça nossos pacotes e <StyledColorBBlue>noites especiais</StyledColorBBlue> </StyledEstruturaTitle>
+                <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Estamos te esperando!</StyledEstruturaSubTitle>
             </div>
 
-            <StyledContainerEvents>
+            <StyledContainerEvents data-aos="fade-down" data-aos-delay="200">
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
 

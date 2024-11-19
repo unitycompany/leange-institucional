@@ -15,6 +15,7 @@ import NavegationBar from './components/navegationBar';
 import AcomodaSerra from './pages/Acomoda/acomodaSerra';
 import AcomodaMar from './pages/Acomoda/acomodaMar';
 
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 

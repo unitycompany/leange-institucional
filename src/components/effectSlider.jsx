@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -7,6 +7,8 @@ import 'swiper/css/effect-coverflow';
 import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
 import styled, { createGlobalStyle } from 'styled-components';
 import IconButton from './button4';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SwiperStyles = createGlobalStyle`
     .swiper-button-next, .swiper-button-prev {
@@ -45,11 +47,12 @@ const SlideContainer = styled.div`
     background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
     background-size: cover;
     background-position: center;
+    transform-style: preserve-3d;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         width: 90%;
         margin-left: 5%;
-        border-radius: 20px 0px 20px 0px;
+        border-radius: 20px 0 20px 0;
     }
 `;
 
@@ -58,13 +61,13 @@ const BorderOverlay = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60%;
+    height: 50%;
     border-radius: 25px 0 25px 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); 
-    pointer-events: none; 
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    pointer-events: none;
     z-index: 1;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         border-radius: 20px 0 20px 0;
     }
 `;
@@ -78,7 +81,7 @@ const SlideContent = styled.div`
     border-radius: 8px;
     z-index: 2;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         left: 10px;
         display: flex;
         flex-direction: column;
@@ -93,29 +96,23 @@ const TopLeftText = styled.div`
     font-size: 12px;
     font-weight: bold;
     padding: 5px 15px;
-    color: white;
+    color: var(--color--black);
     z-index: 3;
     font-family: var(--font--comfortaa);
     font-weight: 800;
     background-color: var(--color--white);
     border-radius: 10px 0 10px 0;
     backdrop-filter: blur(10px);
-    color: var(--color--black);
     box-shadow: 0 0 5px rgba(255, 255, 255, 1);
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         left: 0;
         top: 10px;
         padding: 7px 10px;
         width: 50%;
         transform: translateX(50%);
         font-weight: 200;
-        font-size: .7rem;
-        background-color: var(--color--white);
-        border-radius: 10px 0 10px 0;
-        backdrop-filter: blur(10px);
-        color: var(--color--black);
-        box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+        font-size: 0.7rem;
         text-align: center;
     }
 `;
@@ -126,12 +123,10 @@ const Title = styled.h2`
     font-family: var(--font--comfortaa);
     margin: 0;
     margin-bottom: 15px;
-    font-weight: 100;
 
-    @media (max-width: 768px){
-        font-weight: 100;
+    @media (max-width: 768px) {
         font-size: 26px;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 `;
 
@@ -140,13 +135,13 @@ const Description = styled.p`
     width: 80%;
     margin-bottom: 15px;
     font-family: var(--font--comfortaa)!important;
+    font-weight: 300;
     text-align: left!important;
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         width: 100%;
-        text-align: left!important;
         font-size: 13px!important;
-        margin-bottom: 0px;
+        margin-bottom: 0;
     }
 `;
 
@@ -158,6 +153,22 @@ const CoverflowSliderComponent = ({
     showPagination = true,
     showNavigation = true,
 }) => {
+    const tiltRef = useRef([]);
+
+    useEffect(() => {
+        if (tiltRef.current) {
+            tiltRef.current.forEach((tiltElement) => {
+                if (tiltElement) {
+                    window.VanillaTilt.init(tiltElement, {
+                        max: 2,
+                        speed: 400,
+                        glare: false,
+                    });
+                }
+            });
+        }
+    }, []);
+
     return (
         <>
             <SwiperStyles />
@@ -180,21 +191,24 @@ const CoverflowSliderComponent = ({
                 autoplay={{
                     delay: autoplayDelay,
                     disableOnInteraction: false,
-                    pauseOnMouseEnter: true, // Pausa o autoplay automaticamente ao passar o mouse
+                    pauseOnMouseEnter: true,
                 }}
                 breakpoints={{
-                    1024: { slidesPerView: 2 }, 
-                    768: { slidesPerView: 2 }, 
-                    0: { slidesPerView: 1 }   
+                    1024: { slidesPerView: 2 },
+                    768: { slidesPerView: 2 },
+                    0: { slidesPerView: 1 }
                 }}
                 style={{ width: width, height: height }}
             >
                 {content.map((item, index) => (
                     <SwiperSlide key={index} style={{ width: '60%' }}>
-                        <SlideContainer backgroundImage={item.backgroundImage}>
+                        <SlideContainer
+                            ref={(el) => (tiltRef.current[index] = el)}
+                            backgroundImage={item.backgroundImage}
+                        >
                             <TopLeftText>{item.topLeftText}</TopLeftText>
                             <BorderOverlay />
-                            <SlideContent>
+                            <SlideContent data-aos="fade-up" data-aos-delay="100">
                                 <Title>{item.title}</Title>
                                 <Description>{item.description}</Description>
                                 <IconButton

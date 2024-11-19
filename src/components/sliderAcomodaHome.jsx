@@ -7,6 +7,8 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import styled, { createGlobalStyle, keyframes } from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import ButtonAcomoda from './button2';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SwiperStyles = createGlobalStyle`
   .swiper-button-next, .swiper-button-prev {
@@ -207,7 +209,7 @@ const SliderAcomodaHome = ({
           <SwiperSlide key={index}>
             <BorderOverlay />
             <SlideContainer style={{ backgroundImage: `url(${item.backgroundImage})` }}>
-              <SlideContent>
+              <SlideContent data-aos="fade-down" data-aos-delay="100">
                 <Title>{item.title}</Title>
                 <Subtitle>{item.subtitle}</Subtitle>
                 <Features>
