@@ -46,20 +46,20 @@ const StyledButtonAcomodo = styled.button`
   }
 `;
 
-const ButtonAcomoda = ({ text, suiteId, backDefine, colorDefine }) => {
-  const navigate = useNavigate();
+const ButtonAcomoda = ({ text, onClick, backDefine, colorDefine }) => {
+  // const navigate = useNavigate();
 
-  const handleClick = () => {
-    const targetUrl = `/acomoda#${suiteId}`;
-    console.log("Navegando para:", targetUrl);
-    navigate(targetUrl);
-  };
+  // const handleClick = () => {
+  //   const targetUrl = `/acomoda#${suiteId}`;
+  //   console.log("Navegando para:", targetUrl);
+  //   navigate(targetUrl);
+  // };
   
   return (
     <StyledButtonAcomodo 
       backDefine={backDefine} 
       colorDefine={colorDefine} 
-      onClick={handleClick} 
+      onClick={onClick} 
     >
       {text}
       <FaArrowRight className="icon" />

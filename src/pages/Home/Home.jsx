@@ -145,7 +145,7 @@ const StyledPousadasTitle = styled.aside `
 
 const acomodaHome = [
     {
-      id: "suite-1",
+      id: "Serra#suite1",
       title: "Suíte Superior 1",
       subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
       backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328712/suiteSerra1_wm28o4.webp",
@@ -159,7 +159,7 @@ const acomodaHome = [
       ]
     },
     {
-      id: "suite-master-6",
+      id: "Serra#suite6",
       title: "Suíte Master 6",
       subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
       backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328713/suiteSerra2_aksiu9.webp",
@@ -173,7 +173,7 @@ const acomodaHome = [
       ]
     },
     {
-        id: "suite2-6",
+        id: "Mar#suite6",
         title: "Suíte Standard 6",
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328711/suiteMar2_qlgel2.webp",
@@ -187,7 +187,7 @@ const acomodaHome = [
       ]
     },
     {
-        id: "suite2-2",
+        id: "Mar#suite2",
         title: "Suíte Standard 2",
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328711/suiteMar1_zu3lmc.webp",
@@ -201,7 +201,7 @@ const acomodaHome = [
       ]
     },
     {
-        id: "suite-10",
+        id: "Serra#suite10",
         title: "Suíte Master 10",
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328711/1_e6cnxy.webp",

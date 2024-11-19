@@ -81,6 +81,18 @@ const SlideContent = styled.div`
   left: 20px;
   color: white;
   z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 90%;
+
+  @media (max-width: 768px){
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 90%;
+  }
 `;
 
 const Title = styled.h2`
@@ -101,7 +113,7 @@ const Subtitle = styled.p`
   font-family: var(--font--comfortaa);
 
   @media (max-width: 768px){
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 200;
     width: 80%;
     line-height: 100%;
@@ -205,11 +217,15 @@ const SliderAcomodaHome = ({
                     </span>
                   ))}
                 </Features>
-                <ButtonAcomoda 
-                  onClick={() => handleButtonClick(item.id)}
-                  text="Conhecer acomodações"
-                  suiteId={item.id}
+                <ButtonAcomoda
+                    onClick={() => {
+                        const newUrl = `/leange/#/acomoda${item.id}`; // Concatena exatamente o que está no ID com 'acomoda'
+                        window.location.href = newUrl; // Redireciona para a URL correta
+                    }}
+                    text="Conhecer essa acomodação"
+                    suiteId={item.id}
                 />
+
               </SlideContent>
             </SlideContainer>
           </SwiperSlide>
