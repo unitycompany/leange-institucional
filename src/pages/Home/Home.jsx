@@ -14,7 +14,6 @@ import { SiApachecouchdb } from "react-icons/si";
 import { TbBrandWindows } from "react-icons/tb";
 import { MdChair } from "react-icons/md";
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
-import PromotionModal from '../../components/modal';
 import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
 

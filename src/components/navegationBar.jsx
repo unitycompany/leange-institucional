@@ -32,6 +32,10 @@ const Select = styled.select`
   color: var(--color--black);
   border-radius: 0;
 
+  @media (max-width: 768px){
+    text-align: center;
+  }
+
   &:focus {
     outline: none;
   }
@@ -388,6 +392,13 @@ const NavegationBar = () => {
         }
     }, [location.pathname]);
 
+    useEffect(() => {
+        if (isSidebarOpen) {
+            closeSidebar(); // Fecha a sidebar ao mudar de rota
+        }
+    }, [location.pathname]);
+    
+
     return (
         <>
             <LoadingOverlay isLoading={isLoading}>
@@ -455,13 +466,7 @@ const NavegationBar = () => {
                     <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos
                     </EventButton>
-                    <Select
-                        onChange={(e) => {
-                            handleNavigation(e.target.value);
-                            e.target.value = ""; 
-                        }}
-                        defaultValue=""
-                        >
+                    <Select onChange={handleNavigation} value={selectedValue}>
                         <option disabled value="">
                             Acomodações
                         </option>

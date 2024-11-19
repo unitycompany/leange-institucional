@@ -145,12 +145,12 @@ const Pensao = ({ colorDefinedBold }) => {
             <StyledPensaoImages>
                 <StyledTable>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335113/churrasco_l0chmi.jpg" alt="Homem fazendo churrasco na le ange" loading="lazy" />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335110/risoto-compressed_xqyhqx.jpg" alt="Risoto no prato na le ange" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335113/churrasco_l0chmi.jpg" alt="Homem fazendo churrasco na le ange" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335110/risoto-compressed_xqyhqx.jpg" alt="Risoto no prato na le ange" loading="lazy" />
                     </div>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335111/hamburguer-compressed_dhh0dx.jpg" alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335108/risoto1-compressed_m583dd.jpg" alt="Risoto no prato na le ange" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335111/hamburguer-compressed_dhh0dx.jpg" alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335108/risoto1-compressed_m583dd.jpg" alt="Risoto no prato na le ange" loading="lazy" />
                     </div>
                 </StyledTable>
             </StyledPensaoImages>
