@@ -28,7 +28,7 @@ const Select = styled.select`
   appearance: none;
   cursor: pointer;
   font-family: var(--font--comfortaa);
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: var(--color--black);
   border-radius: 0;
 
@@ -37,7 +37,7 @@ const Select = styled.select`
   }
 
   option:hover {
-    background-color: var(--color--white)!important;
+    background-color: var(--color--white) !important;
   }
 
   option:nth-child(2) {
@@ -48,6 +48,12 @@ const Select = styled.select`
   option:nth-child(3) {
     color: var(--color--blue);
     font-weight: 800;
+  }
+
+  option:checked {
+    background-color: var(--color--black); /* Cor de destaque da opção selecionada */
+    color: var(--color--white); /* Ajuste da cor do texto */
+    font-weight: bold;
   }
 `;
 
@@ -335,13 +341,15 @@ const NavegationBar = () => {
     };
 
     const navigate = useNavigate();
+    const [selectedValue, setSelectedValue] = useState("");
 
     const handleNavigation = (event) => {
         const value = event.target.value;
         if (value) {
-          navigate(value);
+        setSelectedValue(value); // Atualiza o estado com a opção selecionada
+        navigate(value);
         }
-      };
+    };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -352,16 +360,16 @@ const NavegationBar = () => {
     }, []);
 
     useEffect(() => {
-        if (location.pathname !== "/") { // Verifica se não está na home
+        if (location.pathname !== "/") { 
             setIsLoading(true);
-            // O carregamento deve durar exatamente 1 segundo
+
             const loadingTimer = setTimeout(() => {
                 setIsLoading(false);
-            }, 1000); // Duração do GIF
+            }, 1000);
 
             return () => clearTimeout(loadingTimer);
         } else {
-            setIsLoading(false); // Garante que o loading esteja falso na home
+            setIsLoading(false);
         }
     }, [location.pathname]);
 
@@ -405,7 +413,7 @@ const NavegationBar = () => {
                     <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountainSun /></IconContainer>Le Ange Serra</StyledLink>
                     <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton>
-                    <Select onChange={handleNavigation} defaultValue="">
+                    <Select onChange={handleNavigation} value={selectedValue}>
                         <option disabled value="">
                             Acomodações
                         </option>
@@ -447,7 +455,13 @@ const NavegationBar = () => {
                     <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos
                     </EventButton>
-                    <Select onChange={handleNavigation} defaultValue="">
+                    <Select
+                        onChange={(e) => {
+                            handleNavigation(e.target.value);
+                            e.target.value = ""; 
+                        }}
+                        defaultValue=""
+                        >
                         <option disabled value="">
                             Acomodações
                         </option>

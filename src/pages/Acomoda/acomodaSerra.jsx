@@ -1,5 +1,7 @@
 import Quarto from "../../components/quarto";
 import styled from "styled-components";
+import React, { useEffect, useRef } from "react";
+import { useLocation } from 'react-router-dom';
 import { FaRulerCombined, FaBath, FaBed, FaTv, FaFire, FaCloudSunRain } from 'react-icons/fa';
 import { BiSolidFridge } from "react-icons/bi";
 import { BsCupHotFill } from "react-icons/bs";
@@ -8,6 +10,7 @@ import { TbBrandWindows } from "react-icons/tb";
 import { MdChair } from "react-icons/md";
 import { MdDeck } from "react-icons/md";
 import Footer from "../../components/footer";
+import WhatsAppButton from "../../components/Whatsapp";
 
 const TituloAcomoda = styled.div`
     width: 100%;
@@ -314,24 +317,85 @@ const SuiteMas10Text = [
 ]
 
 const AcomodaSerra = () => {
-    return(
-        <>
-            <TituloAcomoda>Acomodações da<b>Pousada Le Ange Serra</b></TituloAcomoda>
+    const location = useLocation();
 
-            <Quarto images={SuiteSup1Images} suites={SuiteSup1Text} reverse={true} background="#CAD76680"/>
-            <Quarto images={SuiteSup2Images} suites={SuiteSup2Text} reverse={false} background="#CAD76680"/>
-            <Quarto images={SuiteSup3Images} suites={SuiteSup3Text} reverse={true} background="#CAD76680"/>
-            <Quarto images={SuiteStan4Images} suites={SuiteStan4Text} reverse={false} background="#CAD76680"/>
-            <Quarto images={SuiteStan5Images} suites={SuiteStan5Text} reverse={true} background="#CAD76680"/>
-            <Quarto images={SuiteMas6Images} suites={SuiteMas6Text} reverse={false} background="#CAD76680"/>
-            <Quarto images={SuiteStan7Images} suites={SuiteStan7Text} reverse={true} background="#CAD76680"/>
-            <Quarto images={SuiteStan8Images} suites={SuiteStan8Text} reverse={false} background="#CAD76680"/>
-            <Quarto images={SuiteSup9Images} suites={SuiteSup9Text} reverse={true} background="#CAD76680"/>
-            <Quarto images={SuiteMas10Images} suites={SuiteMas10Text} reverse={false} background="#CAD76680"/>
+    // Criar refs dinâmicas para as suítes
+    const suiteRefs = {
+        suite1: useRef(null),
+        suite2: useRef(null),
+        suite3: useRef(null),
+        suite4: useRef(null),
+        suite5: useRef(null),
+        suite6: useRef(null),
+        suite7: useRef(null),
+        suite8: useRef(null),
+        suite9: useRef(null),
+        suite10: useRef(null),
+    };
+
+    useEffect(() => {
+        const scrollToHash = () => {
+            const hash = location.hash.replace("#", "");
+            console.log("Hash atual:", hash);
+    
+            if (hash && suiteRefs[hash]?.current) {
+                const element = suiteRefs[hash].current;
+    
+                if (element) {
+                    // Calcula a posição ajustada
+                    const offsetTop = element.offsetTop - 100; // Garantir offset com margem superior
+                    console.log(`Elemento encontrado: ${hash}, rolando para: ${offsetTop}px`);
+    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: "smooth",
+                    });
+                } else {
+                    console.log(`Elemento com ID ${hash} não encontrado no DOM.`);
+                }
+            } else {
+                console.log(`Hash ${hash} não está associado a um ref válido.`);
+            }
+        };
+    
+        const handlePageLoad = () => {
+            console.log("Página carregada, verificando hash...");
+            scrollToHash();
+        };
+    
+        window.addEventListener("load", handlePageLoad);
+        window.addEventListener("hashchange", scrollToHash);
+    
+        scrollToHash();
+    
+        return () => {
+            window.removeEventListener("load", handlePageLoad);
+            window.removeEventListener("hashchange", scrollToHash);
+        };
+    }, [location, suiteRefs]);
+
+    return (
+        <>
+            <WhatsAppButton />
+
+            <TituloAcomoda>
+                Acomodações da<b>Pousada Le Ange Serra</b>
+            </TituloAcomoda>
+
+            <Quarto id="suite1" ref={suiteRefs.suite1} images={SuiteSup1Images} suites={SuiteSup1Text} reverse={true} background="#CAD76680" />
+            <Quarto id="suite2" ref={suiteRefs.suite2} images={SuiteSup2Images} suites={SuiteSup2Text} reverse={false} background="#CAD76680" />
+            <Quarto id="suite3" ref={suiteRefs.suite3} images={SuiteSup3Images} suites={SuiteSup3Text} reverse={true} background="#CAD76680" />
+            <Quarto id="suite4" ref={suiteRefs.suite4} images={SuiteStan4Images} suites={SuiteStan4Text} reverse={false} background="#CAD76680" />
+            <Quarto id="suite5" ref={suiteRefs.suite5} images={SuiteStan5Images} suites={SuiteStan5Text} reverse={true} background="#CAD76680" />
+            <Quarto id="suite6" ref={suiteRefs.suite6} images={SuiteMas6Images} suites={SuiteMas6Text} reverse={false} background="#CAD76680" />
+            <Quarto id="suite7" ref={suiteRefs.suite7} images={SuiteStan7Images} suites={SuiteStan7Text} reverse={true} background="#CAD76680" />
+            <Quarto id="suite8" ref={suiteRefs.suite8} images={SuiteStan8Images} suites={SuiteStan8Text} reverse={false} background="#CAD76680" />
+            <Quarto id="suite9" ref={suiteRefs.suite9} images={SuiteSup9Images} suites={SuiteSup9Text} reverse={true} background="#CAD76680" />
+            <Quarto id="suite10" ref={suiteRefs.suite10} images={SuiteMas10Images} suites={SuiteMas10Text} reverse={false} background="#CAD76680" />
 
             <Footer />
         </>
-    )
-} 
+    );
+};
 
 export default AcomodaSerra;

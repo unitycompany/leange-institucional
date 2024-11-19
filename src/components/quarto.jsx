@@ -203,9 +203,11 @@ const SwiperImage = styled.img`
     }
 `;
 
-const Quarto = ({ images = [], suites = [], reverse = false, background = "rgba(0, 0, 0, 0.1)" }) => {
+import React from "react";
+
+const Quarto = React.forwardRef(({ images = [], suites = [], reverse = false, background = "rgba(0, 0, 0, 0.1)" }, ref) => {
     return (
-        <ContainerQuarto reverse={reverse}>
+        <ContainerQuarto reverse={reverse} ref={ref}>
             <CarrosselDoQuarto>
                 <SwiperStyles />
                 <Swiper
@@ -255,7 +257,7 @@ const Quarto = ({ images = [], suites = [], reverse = false, background = "rgba(
             </TextsDoQuarto>
         </ContainerQuarto>
     );
-};
-
+});
 
 export default Quarto;
+

@@ -84,7 +84,7 @@ const StyledAcomodaContainer = styled.section`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: all .2s ease-in-out;
+        transition: all .1s ease-in-out;
         animation: ${waterWave} 5s ease-in-out infinite;
         box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -116,7 +116,7 @@ const StyledAcomodaContainer = styled.section`
         padding: 3px 7px;
         font-size: 0.6rem;
         border-radius: 5px 0 5px 0;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.3s ease-in-out;
         font-family: var(--font--comfortaa);
         cursor: pointer;
 
@@ -227,8 +227,8 @@ const AcomodaComponent2 = ({ images }) => {
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <img src={image.src} alt={`Imagem ${index + 1}`} />
-                        <span onClick={() => window.location.href = "#/acomoda"}>
-                            {hoveredIndex === index ? "Conhecer Suíte" : image.text}
+                        <span onClick={() => window.location.href = `/leange/#/acomodaMar#suite${index + 1}`}>
+                            {hoveredIndex === index ? "Conhecer Suítes" : image.text}
                             {hoveredIndex === index && <FaArrowRight />}
                         </span>
                     </div>

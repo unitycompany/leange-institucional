@@ -6,12 +6,12 @@ import CustomButton from '../../components/button3';
 import CarouselComponent from '../../components/carrosselComponent';
 import AcomodaComponent from '../../components/acomodaComponent';
 import Pensao from '../../components/pensao';
-import PetFriendly from '../../components/petCarrossel';
 import Depoimentos from '../../components/depoimentos';
 import EventCardCarousel from '../../components/cardSlider';
 import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
+import PetFriendlyCarousel from '../../components/petCarrossel';
 
 const StyledEspace = styled.div`
     height: 5vh;
@@ -216,6 +216,38 @@ const slides = [
     }
 ];
 
+const PetFriendlyImages = [
+    {
+        images: [
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732016972/serra1_dlmpih.webp", alt: 'Cachorro surfando na piscina', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732016973/serra2_h64lp3.webp", alt: 'Cachorro andando na borda da piscina', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732016973/serra3_hqphcd.webp", alt: 'Cachorro sentado tomando sol e sorrindo para a foto', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp", alt: '2 cachorros e uma mulher no meio', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732016973/serra5_liz2la.webp", alt: 'Cachorro mordendo uma bolinha', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732016973/serra4_anm8q9.webp", alt: 'Casal com um casal de cachorro sentado na beira da piscina', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335890/16_mwucoo_qw5inq.webp", alt: 'Mulher na cachoeira com cachorros brincando', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335889/15_epymcf_vqg5qs.webp", alt: 'Mulher e cachorro na piscina sorrindo', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732018336/serra5_vgmvai.webp", alt: '3 cachorros tirando uma selfie', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732018336/serra3_abkfr4.webp", alt: 'Cachorro dormindo na rede em cima da cachoeira', loading: "lazy", label: 'Le Ange Serra' },
+        ],
+    },
+    {
+        images: [
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732018336/serra2_qzxvpu.webp", alt: 'Cachorro dormindo no sofá', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732018336/serra4_wdvsmr.webp", alt: 'Cachorro papai noel', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335883/11_wlyxbh_wxtele.webp", alt: 'Um cachorro no cola de um humano sorrindo', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/parc%C3%A3o_mdvo8p.webp", alt: '2 cachorros e uma mulher no meio', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335884/12_epl2gw_oc9uc0.webp", alt: 'Cachorro brincando na grama', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335885/13_hhitda_hfolhl.webp", alt: '2 cachorros sorrindo na rede', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335887/14_ybyv7y_wt3zn2.webp", alt: 'Uma mulher e um cachorro do lado dela', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731335892/17_awkinq_ommg1k.webp", alt: '3 cachorros brincando na praia', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732018336/serra1_tohjvc.webp", alt: 'Cachorro andando na cachoeira', loading: "lazy", label: 'Le Ange Serra' },
+        ],
+        reverse: true
+    }
+];
+
+
 const StyledSectionEspaco = styled.section`
     width: 100%;
     height: 100vh;
@@ -418,7 +450,7 @@ const Serra = () => {
 
             <Pensao />
             
-            <PetFriendly />
+            <PetFriendlyCarousel carousels={PetFriendlyImages}/>
 
             <StyledButtonCenter>
                 <Button text="Fazer minha reserva!" />

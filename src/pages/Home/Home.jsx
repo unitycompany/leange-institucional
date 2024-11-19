@@ -291,7 +291,7 @@ const slideDataCoverflow = [
     },
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329808/parc%C3%A3o_mdvo8p.webp',
-        title: 'Divercão',
+        title: 'Diversão',
         description: 'Espaço de sobra para seu PET se divertir! Espaço agility na beira do lago, com muita grama, para seu pet, correr, pular e nadar!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Serra',
@@ -313,7 +313,7 @@ const slideDataCoverflow = [
     {
         backgroundImage: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731329811/suites_pzghlo.webp',
         title: 'Suítes',
-        description: 'São 8 suítes elegantemente decoradas, todas com vista para o mar, banheira de imersão, varanda, cama king size, ar condicionado e frigobar.',
+        description: 'São Suítes elegantemente decoradas, todas com vistas incriveis, banheira de imersão, varanda, cama king size, ar condicionado e frigobar.',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar e Serra',
     },
