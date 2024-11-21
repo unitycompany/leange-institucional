@@ -75,7 +75,7 @@ const StyledHomeDiv = styled.div`
         border-image: fill 0 linear-gradient(#0001, #ffffff);
         position: absolute;
         box-shadow: none!important;
-        height: 80%;
+        height: 800%;
         top: 0;
 
     }
