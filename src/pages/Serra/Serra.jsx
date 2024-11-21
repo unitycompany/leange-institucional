@@ -75,7 +75,7 @@ const StyledHomeDiv = styled.div`
         border-image: fill 0 linear-gradient(#0001, #ffffff);
         position: absolute;
         box-shadow: none!important;
-        height: 800%;
+        height: 100%;
         top: 0;
 
     }
@@ -415,7 +415,7 @@ const Serra = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
-        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+        AOS.refresh(); 
       }, []);
 
     return (

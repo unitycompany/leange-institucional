@@ -203,12 +203,6 @@ const StyledAcomodaTexts = styled.div`
 const AcomodaComponent = ({ images }) => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    useEffect(() => {
-        AOS.init({ duration: 1000, once: false });
-        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
-      }, []);
-
-
     return (
         <StyledAcomodaContainer>
             <StyledAcomodaTexts>

@@ -257,7 +257,6 @@ const AcomodaMar = () => {
 
     const location = useLocation();
 
-    // Criar refs dinâmicas para as suítes
     const suiteRefs = {
         suite1: useRef(null),
         suite2: useRef(null),
@@ -314,7 +313,7 @@ const AcomodaMar = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
-        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+        AOS.refresh(); 
       }, []);
 
     return(
