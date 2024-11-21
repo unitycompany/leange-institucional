@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import CustomButton from "./button3";
 import IconButton from "./button4";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const StyledSectionPensao = styled.section`
     width: 100%;
@@ -145,20 +147,20 @@ const Pensao = ({ colorDefinedBold }) => {
             <StyledPensaoImages>
                 <StyledTable>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335113/churrasco_l0chmi.jpg" alt="Homem fazendo churrasco na le ange" loading="lazy" />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335110/risoto-compressed_xqyhqx.jpg" alt="Risoto no prato na le ange" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335113/churrasco_l0chmi.jpg" alt="Homem fazendo churrasco na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="100"/>
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335110/risoto-compressed_xqyhqx.jpg" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="200"/>
                     </div>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335111/hamburguer-compressed_dhh0dx.jpg" alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335108/risoto1-compressed_m583dd.jpg" alt="Risoto no prato na le ange" loading="lazy" />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335111/hamburguer-compressed_dhh0dx.jpg" alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" data-aos="fade-down" data-aos-delay="100"/>
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335108/risoto1-compressed_m583dd.jpg" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-down" data-aos-delay="200"/>
                     </div>
                 </StyledTable>
             </StyledPensaoImages>
             <StyledPensaoTexts>
-                <StyledTitle colorDefinedBold={colorDefinedBold}>
+                <StyledTitle colorDefinedBold={colorDefinedBold} data-aos="fade-up" data-aos-delay="400">
                     Alimentação <b>Inclusa</b>
                 </StyledTitle>
-                <StyledParagraph>
+                <StyledParagraph data-aos="fade-down" data-aos-delay="500">
                     Sabe aquela comida com sabor, tempero e afeto que te abraça? <br /> <br />
                     Essa é a gastronomia registrada da LeAnge! <br /><br />
                     Nossa estadia dispõe de um restaurante, onde são oferecidas todas as
@@ -166,6 +168,7 @@ const Pensao = ({ colorDefinedBold }) => {
                     nossas deliciosas sobremesas.
                 </StyledParagraph>
                 <IconButton
+                    data-aos="fade-up" data-aos-delay="200"
                     text = "Fazer reserva!"
                     text2 = "Clique e reserve"
                     borderColor = "var(--color--black)"

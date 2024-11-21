@@ -13,6 +13,8 @@ import EventCardCarousel from '../../components/cardSlider';
 import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
 import PetFriendlyCarousel from '../../components/petCarrossel';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const StyledEspace = styled.div`
     height: 5vh;
@@ -408,10 +410,10 @@ const Mar = () => {
 
             <StyledSectionHome>
                 <StyledHomeTexts>
-                    <h4>Le Ange Mar, a pousada mais</h4>
-                    <h1>PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
-                    <p>Aqui você e seu pet, são mais do que bem-vindos!</p>
-                    <div>
+                    <h4 data-aos="fade-up" data-aos-delay="100">Le Ange Mar, a pousada mais</h4>
+                    <h1 data-aos="fade-down" data-aos-delay="200">PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
+                    <p data-aos="fade-up" data-aos-delay="400">Aqui você e seu pet, são mais do que bem-vindos!</p>
+                    <div data-aos="fade-in" data-aos-delay="500">
                         <CustomButton
                             text="Reservar agora!"
                             textColor="var(--color--black)"
@@ -427,14 +429,14 @@ const Mar = () => {
                     </div>
                 </StyledHomeTexts>
 
-                <StyledHomeDiv />
+                <StyledHomeDiv data-aos="fade-left" data-aos-delay="200" />
             </StyledSectionHome>
 
-            <StyledLocal>
-                <h1>LeAnge Mar | Armação dos Búzios RJ</h1>
+            <StyledLocal data-aos="fade-in" data-aos-delay="100">
+                <h1 data-aos="fade-up" data-aos-delay="300">LeAnge Mar | Armação dos Búzios RJ</h1>
             </StyledLocal>
 
-            <StyledSectionEspaco>
+            <StyledSectionEspaco data-aos="fade-up" data-aos-delay="50">
                 <CarouselComponent
                     slides={slides}
                     titleColor="var(--color--blue)"
@@ -445,15 +447,15 @@ const Mar = () => {
 
             <AcomodaComponent2 images={ImagesAcomoda} />
 
-            <Pensao colorDefinedBold="var(--color--blue)" />
+            <Pensao colorDefinedBold="var(--color--blue)" data-aos="fade-up" data-aos-delay="400" />
 
-            <PetFriendlyCarousel carousels={PetFriendlyImages} />
+            <PetFriendlyCarousel carousels={PetFriendlyImages} data-aos="fade-in" data-aos-delay="400"/>
 
             <StyledButtonCenter>
                 <Button text="Fazer minha reserva!" />
             </StyledButtonCenter>
 
-            <StyledContainerEvents>
+            <StyledContainerEvents data-aos="fade-up" data-aos-delay="400">
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
 

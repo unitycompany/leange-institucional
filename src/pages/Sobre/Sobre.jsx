@@ -3,6 +3,8 @@ import WhatsAppButton from '../../components/Whatsapp';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import CustomButton from '../../components/button3';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SobreContainer = styled.section`
     width: 100%;
@@ -750,15 +752,16 @@ const Sobre = () => {
 
             <SobreContainer>
                 <div>
-                    <h1>Pousada Le Ange</h1>
-                    <h4>A pousada mais Pet Friendly do Brasil</h4>
-                    <p>Um empreendimento familiar fundado em 2018, a Pousada LeAnge Serra surgiu da paixão dos fundadores pelo amor por quatro patas, bem-estar e hospitalidade, situando-se em Miguel Pereira, Rio de Janeiro. Com o sucesso da primeira unidade, expandimos para Búzios em 2023, criando a Pousada LeAnge Mar. A filosofia por trás das nossas pousadas é oferecer um refúgio acolhedor e luxuoso, em que cada detalhe é cuidadosamente pensado para proporcionar conforto e satisfação.</p>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Pousada Le Ange</h1>
+                    <h4 data-aos="fade-down" data-aos-delay="200">A pousada mais Pet Friendly do Brasil</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">Um empreendimento familiar fundado em 2018, a Pousada LeAnge Serra surgiu da paixão dos fundadores pelo amor por quatro patas, bem-estar e hospitalidade, situando-se em Miguel Pereira, Rio de Janeiro. Com o sucesso da primeira unidade, expandimos para Búzios em 2023, criando a Pousada LeAnge Mar. A filosofia por trás das nossas pousadas é oferecer um refúgio acolhedor e luxuoso, em que cada detalhe é cuidadosamente pensado para proporcionar conforto e satisfação.</p>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-delay="400">
                     <img 
                     src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331472/cachorro_kcfx8n.webp" 
                     alt='foto da gaia, cachorra da pousada le ange'
                     loading='lazy'
+                    data-aos="fade-right" data-aos-delay="500"
                     />
                 </div>
             </SobreContainer>
@@ -770,19 +773,21 @@ const Sobre = () => {
                     src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331474/foto_da_pousada_do_mar_d9fx7r.webp" 
                     alt='foto da le ande da mar' 
                     loading='lazy'
+                    data-aos="fade-up" data-aos-delay="100"
                     />
                     <img 
                     src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331474/foto_da_pousada_da_serra_lefdif.webp" 
                     alt='foto da le ande da serra'
                     loading='lazy' 
+                    data-aos="fade-down" data-aos-delay="100"
                     />
                 </div>
 
 
                 <div>
-                    <h1>Duas unidades,</h1>
-                    <h4>dois cenários incomparáveis</h4>
-                    <p>A Pousada LeAnge Serra oferece 10 suítes deslumbrantes em meio à natureza exuberante de Miguel Pereira. Já a Pousada LeAnge Mar, com suas 8 suítes exclusivas, proporciona uma experiência costeira em Búzios, com vista direta para o mar.</p>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Duas unidades,</h1>
+                    <h4 data-aos="fade-down" data-aos-delay="200">dois cenários incomparáveis</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">A Pousada LeAnge Serra oferece 10 suítes deslumbrantes em meio à natureza exuberante de Miguel Pereira. Já a Pousada LeAnge Mar, com suas 8 suítes exclusivas, proporciona uma experiência costeira em Búzios, com vista direta para o mar.</p>
                 </div>
 
             </UnidadeContainer>
@@ -790,8 +795,8 @@ const Sobre = () => {
             <DiferenciaisContainer>
 
                 <div>
-                    <h1>Diferenciais</h1>
-                    <p>Somos Pet Lovers, aqui não temos limite de porte, quantidade ou raça. Nosso conceito permite que os pets frequentem o restaurente, a piscina e qualquer outro espaço. Nos tornando assim ÚNICOS com este tipo de experiência.</p>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Diferenciais</h1>
+                    <p data-aos="fade-down" data-aos-delay="200">Somos Pet Lovers, aqui não temos limite de porte, quantidade ou raça. Nosso conceito permite que os pets frequentem o restaurente, a piscina e qualquer outro espaço. Nos tornando assim ÚNICOS com este tipo de experiência.</p>
                 </div>
 
                 <div>
@@ -799,21 +804,25 @@ const Sobre = () => {
                     src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331473/rede_no_mar_ajtwwv.webp" 
                     loading='lazy'
                     alt='rede na le ange mar' 
+                    data-aos="fade-up" data-aos-delay="100"
                     />
                     <img 
                     src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_1_jsshhu.webp" 
                     loading='lazy'
                     alt='hot tube na le ange serra' 
+                    data-aos="fade-down" data-aos-delay="200"
                     />
                     <img 
                     src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/divers%C3%A3o_na_serra_fzhl7y.webp"
                     loading='lazy' 
                     alt='casal se divertindo na le ange serra'
+                    data-aos="fade-up" data-aos-delay="300"
                     />
                     <img 
                     src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331479/natal_jwdzzh.webp" 
                     loading='lazy'
                     alt='foto da le ange com tema de natal' 
+                    data-aos="fade-down" data-aos-delay="400"
                     />
                 </div>
 
@@ -823,19 +832,21 @@ const Sobre = () => {
                 
                 <div>
                     <div>
-                        <h1>Gastronomias</h1>
-                        <p>Oferecemos um serviço all inclusive que abrange todas as refeições, atendendo todas as restrições alimentares de nossos hóspedes. Nosso compromisso é proporcionar uma experiência gastronômica diversificada e de alta qualidade, utilizando produtos frescos e locais.</p>
+                        <h1 data-aos="fade-down" data-aos-delay="100">Gastronomias</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Oferecemos um serviço all inclusive que abrange todas as refeições, atendendo todas as restrições alimentares de nossos hóspedes. Nosso compromisso é proporcionar uma experiência gastronômica diversificada e de alta qualidade, utilizando produtos frescos e locais.</p>
                     </div>
                     <div>
                         <img 
                         src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330265/pizzas_lgsqcd.webp" 
                         loading='lazy'
                         alt='foto da noite de pizzas na pousada le ange' 
+                        data-aos="fade-up" data-aos-delay="300"
                         />
                         <img 
                         src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp" 
                         loading='lazy'
                         alt='foto da noite de risotos na pousada le ange' 
+                        data-aos="fade-down" data-aos-delay="400"
                         />
                     </div>
                 </div>
@@ -846,16 +857,18 @@ const Sobre = () => {
                         src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331477/cachorro_olhando_pra_camera_ndannw.webp"
                         loading='lazy'
                         alt='foto do cachorro sorrindo para camera' 
+                        data-aos="fade-up" data-aos-delay="100"
                          />
                         <img 
                         src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp" 
                         loading='lazy'
                         alt='uma mulher e dois cachorros na pousada le ange' 
+                        data-aos="fade-down" data-aos-delay="200"
                         />
                     </div>
                     <div>
-                        <h1>Espaços compartilhados</h1>
-                        <p>Nossos espaços compartilhados incluem bibliotecas aconchegantes, sala de jogos e áreas de lazer diversificadas. Na Serra, temos piscinas, ofurô, hot tub, spa e acesso às cachoeiras, enquanto em Búzios, nossos hóspedes desfrutam de piscinas e ofurôs com vistas incríveis do mar aberto, além disso, estamos localizados próximo ao Mirante do Pai Vitório.</p>
+                        <h1 data-aos="fade-up" data-aos-delay="300">Espaços compartilhados</h1>
+                        <p data-aos="fade-down" data-aos-delay="400">Nossos espaços compartilhados incluem bibliotecas aconchegantes, sala de jogos e áreas de lazer diversificadas. Na Serra, temos piscinas, ofurô, hot tub, spa e acesso às cachoeiras, enquanto em Búzios, nossos hóspedes desfrutam de piscinas e ofurôs com vistas incríveis do mar aberto, além disso, estamos localizados próximo ao Mirante do Pai Vitório.</p>
                     </div>
                 </div>
 
@@ -865,23 +878,27 @@ const Sobre = () => {
 
                 <div>
                     <div>
-                        <h1>Suítes</h1>
-                        <p>Ambas as unidades dispõem de suítes luxuosas, equipadas com banheiras de imersão, camas king-size e roupas de cama de 400 fios; na Serra, cada suíte conta com uma lareira aconchegante, enquanto em Búzios, a vista para o mar é um espetáculo à parte, garantindo uma experiência de tranquilidade incomparável.</p>
+                        <h1 data-aos="fade-up" data-aos-delay="150">Suítes</h1>
+                        <p data-aos="fade-down" data-aos-delay="300">Ambas as unidades dispõem de suítes luxuosas, equipadas com banheiras de imersão, camas king-size e roupas de cama de 400 fios; na Serra, cada suíte conta com uma lareira aconchegante, enquanto em Búzios, a vista para o mar é um espetáculo à parte, garantindo uma experiência de tranquilidade incomparável.</p>
                     </div>
                     <div>
-                        <h1>Público de alto padrão</h1>
-                        <p>Nosso público é de classe A, buscando experiências de alto padrão e exclusividade. Para manter a tranquilidade e a exclusividade, a idade mínima para hospedagem é de 13 anos.</p>
+                        <h1 data-aos="fade-up" data-aos-delay="400">Público de alto padrão</h1>
+                        <p data-aos="fade-down" data-aos-delay="500">Nosso público é de classe A, buscando experiências de alto padrão e exclusividade. Para manter a tranquilidade e a exclusividade, a idade mínima para hospedagem é de 13 anos.</p>
                     </div>
                 </div>
                 
                 <div>
-                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_50,w_1500/v1732037857/IMG_0254_wdrn4v.webp" alt='foto do quadro de cachorro na pousada le ange mar'/>
+                    <img 
+                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_50,w_1500/v1732037857/IMG_0254_wdrn4v.webp" 
+                    alt='foto do quadro de cachorro na pousada le ange mar'
+                    data-aos="flip-left" data-aos-delay="600"
+                    />
                 </div>
 
             </PublicoContainer>
 
             <CTA>
-                <h1>Venha viver essa experiência com a gente!</h1>
+                <h1 data-aos="fade-up" data-aos-delay="200">Venha viver essa experiência com a gente!</h1>
                 <CustomButton 
                 text="Reservar agora!"
                 textColor="var(--color--white)"
@@ -893,6 +910,7 @@ const Sobre = () => {
                 hoverColor="var(--color--white)"
                 hoverIconColor="var(--color--white)"
                 onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                data-aos="fade-in" data-aos-delay="500"
                 />
             </CTA>
 

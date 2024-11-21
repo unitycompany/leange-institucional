@@ -12,6 +12,8 @@ import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
 import PetFriendlyCarousel from '../../components/petCarrossel';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const StyledEspace = styled.div`
     height: 5vh;
@@ -419,11 +421,11 @@ const Serra = () => {
             <WhatsAppButton />
 
             <StyledSectionHome>
-                <StyledHomeDiv />
+                <StyledHomeDiv data-aos="zoom-in" data-aos-delay="100"/>
                 <StyledHomeTexts>
-                    <h4>LeAnge Serra, a pousada mais</h4>
-                    <h1>PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
-                    <p>Aqui você e seu pet, são mais do que bem-vindos!</p>
+                    <h4 data-aos="fade-up" data-aos-delay="100">LeAnge Serra, a pousada mais</h4>
+                    <h1 data-aos="fade-down" data-aos-delay="200">PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
+                    <p data-aos="fade-up" data-aos-delay="400">Aqui você e seu pet, são mais do que bem-vindos!</p>
                     <CustomButton
                         text="Reservar agora!"
                         textColor="var(--color--black)"
@@ -438,15 +440,15 @@ const Serra = () => {
                 </StyledHomeTexts>
             </StyledSectionHome>
 
-            <StyledLocall>
-                <h1>LeAnge Serra | Miguel Pereira RJ</h1>
+            <StyledLocall data-aos="fade-up" data-aos-delay="200">
+                <h1 data-aos="fade-in" data-aos-delay="400">LeAnge Serra | Miguel Pereira RJ</h1>
             </StyledLocall>
 
             <StyledSectionEspaco>
                 <CarouselComponent slides={slides} />
             </StyledSectionEspaco>
 
-            <AcomodaComponent images={ImagesAcomoda} />
+            <AcomodaComponent images={ImagesAcomoda} data-aos="fade-up" data-aos-delay="200"/>
 
             <Pensao />
             

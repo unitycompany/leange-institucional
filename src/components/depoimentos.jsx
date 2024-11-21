@@ -6,6 +6,8 @@ import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import styled from "styled-components";
 import CustomButton from "./button3";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const StyledTextDepoimentos = styled.section`
     width: 100%;
@@ -166,7 +168,7 @@ const Depoimentos = () => {
                 >
                     {depoimentosData.map((depoimento) => (
                         <SwiperSlide key={depoimento.id}>
-                            <Container>
+                            <Container data-aos="fade-up" data-aos-delay="200">
                                 {/* Segundo Swiper - Carrossel de imagens de fundo dentro de cada depoimento */}
                                 <Swiper
                                     slidesPerView={1}

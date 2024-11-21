@@ -1,3 +1,4 @@
+import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -5,6 +6,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Button from "./button";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SwiperStyles = createGlobalStyle`
   .swiper-button-next, .swiper-button-prev {
@@ -60,7 +63,7 @@ const ContainerQuarto = styled.section`
 const CarrosselDoQuarto = styled.div`
     width: 50%;
     height: 95%;
-    border-radius: 35px 0 35px 0;
+    border-radius: 15px 10px 25px 5px;
 
     @media (max-width: 768px){
         width: 100%;
@@ -196,19 +199,18 @@ const SwiperImage = styled.img`
     width: 100%;
     height: 75.8vh;
     object-fit: cover;
-    border-radius: 35px 0 35px 0;
+    border-radius: 15px 10px 25px 5px;
 
     @media (max-width: 768px){
         height: 50vh;
     }
 `;
 
-import React from "react";
 
 const Quarto = React.forwardRef(({ images = [], suites = [], reverse = false, background = "rgba(0, 0, 0, 0.1)" }, ref) => {
     return (
         <ContainerQuarto reverse={reverse} ref={ref}>
-            <CarrosselDoQuarto>
+            <CarrosselDoQuarto data-aos="zoom-in" data-aos-delay="50">
                 <SwiperStyles />
                 <Swiper
                     modules={[Autoplay, Pagination, Navigation]}
@@ -231,23 +233,23 @@ const Quarto = React.forwardRef(({ images = [], suites = [], reverse = false, ba
                 </Swiper>
             </CarrosselDoQuarto>
 
-            <TextsDoQuarto background={background}>
+            <TextsDoQuarto background={background} data-aos="fade-up" data-aos-delay="100">
                 {suites.map((suite, index) => (
                     <div key={index}>
                         <section>
                             <div>
-                                <p>{suite.NomedaSuite}</p>
-                                <SuiteTitle>{suite.NomedaPousada}</SuiteTitle>
+                                <p data-aos="fade-up" data-aos-delay="150">{suite.NomedaSuite}</p>
+                                <SuiteTitle data-aos="fade-up" data-aos-delay="200">{suite.NomedaPousada}</SuiteTitle>
                             </div>
                         </section>
-                        <Features>
+                        <Features data-aos="fade-up" data-aos-delay="250">
                             {suite.features?.map((feature, idx) => (
                                 <span key={idx}>
                                     {feature.icon} {feature.text}
                                 </span>
                             ))}
                         </Features>
-                        <SuiteDescription>{suite.Description}</SuiteDescription>
+                        <SuiteDescription data-aos="fade-in" data-aos-delay="400">{suite.Description}</SuiteDescription>
                         <Button
                             onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                             text="Fazer reserva agora!"

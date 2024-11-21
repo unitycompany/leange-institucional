@@ -111,7 +111,8 @@ const StyledTitles = styled.div`
         width: 80%;
         line-height: 110%;
         color: var(--color--white);
-        font-family: var(--font--avenir);
+        font-family: var(--font--comfortaa);
+        font-size: .9rem;
 
         @media (max-width: 768px){
             width: 90%;
@@ -139,6 +140,8 @@ const StyledTitles = styled.div`
         justify-content: space-between;
         margin-top: -25px;
         color: var(--color--white);
+        font-family: var(--font--comfortaa);
+        font-weight: 200;
 
         @media (max-width: 768px){
             display: none;
@@ -234,8 +237,9 @@ const StyledLinks = styled.section`
         color: var(--color--white);
         width: 80%;
         line-height: 100%;
-        font-family: var(--font--avenir);
+        font-family: var(--font--comfortaa);
         margin-top: 10px;
+        font-size: .9rem;
 
         @media (max-width: 768px){
             font-size: 16px;
@@ -257,10 +261,12 @@ const StyledLinks = styled.section`
     & > div a{
         color: var(--color--white);
         text-decoration: none;
-        font-family: var(--font--avenir);
+        font-family: var(--font--comfortaa);
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        font-size: .9rem;
+        font-weight: 200;
         gap: 2px;
         transition: all .2s ease!important;
         border-radius: 5px;
@@ -296,6 +302,7 @@ const StyledLocation = styled.section`
     & > h1{
         color: var(--color--white);
         font-family: var(--font--comfortaa);
+        font-weight: 200;
         width: 30%;
         line-height: 100%;
 
@@ -493,13 +500,14 @@ const Footer = () => {
                         <p data-aos="fade-down" data-aos-delay="400">A pousada mais Pet Friendly, venha conhecer!</p>
                     </div>
                     <div>
-                        <h2 data-aos="fade-up" data-aos-delay="50">Âncoras</h2>
+                        <h2 data-aos="fade-up" data-aos-delay="50">Mapa do site</h2>
                         <a href='#' data-aos="fade-down" data-aos-delay="100"> <MdOutlineArrowRight /> Início </a>
                         <a href='#/sobre' data-aos="fade-up" data-aos-delay="150"> <MdOutlineArrowRight /> Sobre nós </a>
                         <a href='#/serra' data-aos="fade-down" data-aos-delay="200"> <MdOutlineArrowRight /> Le Ange Serra </a>
                         <a href='#/mar' data-aos="fade-up" data-aos-delay="250"> <MdOutlineArrowRight /> Le Ange Mar </a>
-                        <a href='#/eventos' data-aos="fade-down" data-aos-delay="300"> <MdOutlineArrowRight /> Eventos </a>
-                        <a href='#/acomoda' data-aos="fade-up" data-aos-delay="350"> <MdOutlineArrowRight /> Acomodações </a>
+                        <a href='#/event' data-aos="fade-down" data-aos-delay="300"> <MdOutlineArrowRight /> Eventos </a>
+                        <a href='#/acomodaSerra' data-aos="fade-up" data-aos-delay="350"> <MdOutlineArrowRight /> Acomodação Serra </a>
+                        <a href='#/acomodaMar' data-aos="fade-up" data-aos-delay="400"> <MdOutlineArrowRight /> Acomodação Mar </a>
                     </div>
                     <div>
                         <h2 data-aos="fade-up" data-aos-delay="400">Ajuda</h2>

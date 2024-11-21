@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import { Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 
+
 const ImageContainer = styled(motion.div)`
     width: 100%;
     height: 40vh;

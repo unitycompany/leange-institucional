@@ -6,6 +6,8 @@ import 'swiper/css/pagination';
 import styled, { keyframes } from 'styled-components';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import IconButton from './button4';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const waterWave2 = keyframes`
   0% {
@@ -140,20 +142,20 @@ const EventCardCarousel = ({ events = [] }) => {
         >
             {events.map((event, index) => (
                 <SwiperSlide key={index}>
-                    <CardContainer>
-                        <CardImage src={event.image} alt={event.title} />
+                    <CardContainer data-aos="fade-up" data-aos-delay="0">
+                        <CardImage src={event.image} alt={event.title}  data-aos="fade-up" data-aos-delay="100"/>
                         <CardContent>
-                            <Title>{event.title}</Title>
-                            <DateRange>{event.dateRange}</DateRange>
-                            <Features>
+                            <Title data-aos="fade-up" data-aos-delay="200">{event.title}</Title>
+                            <DateRange data-aos="fade-down" data-aos-delay="250">{event.dateRange}</DateRange>
+                            <Features data-aos="fade-up" data-aos-delay="300"> 
                                 {event.features.map((feature, i) => (
-                                    <span key={i}>
+                                    <span key={i} data-aos="fade-up" data-aos-delay="400">
                                         {feature.icon} {feature.text}
                                     </span>
                                 ))}
                             </Features>
                             <PriceSection>
-                                <Price>A partir de: <span>10x</span>R${event.price}</Price>
+                                <Price data-aos="fade-in" data-aos-delay="500">A partir de: <span>10x</span>R${event.price}</Price>
                             </PriceSection>
                             <IconButton
                                 text="Quero fazer minha reserva agora"

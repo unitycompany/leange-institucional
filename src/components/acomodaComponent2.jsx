@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import CustomButton from "./button3";
 import { FaArrowRight } from "react-icons/fa";
 import IconButton from "./button4";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const waterWave = keyframes`
@@ -206,9 +207,9 @@ const AcomodaComponent2 = ({ images }) => {
         <StyledAcomodaContainer>
             <StyledAcomodaTexts>
                 <div>
-                    <h1>Conheça as nossas suítes</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Conheça as nossas suítes</h1>
                 </div>
-                <div>
+                <div data-aos="fade-down" data-aos-delay="250">
                     <IconButton
                         text = "Fazer reserva!"
                         text2 = "Clique e reserve"
@@ -219,14 +220,14 @@ const AcomodaComponent2 = ({ images }) => {
                     />
                 </div>
             </StyledAcomodaTexts>
-            <main>
+            <main data-aos="zoom-in-up" data-aos-delay="400">
                 {images.map((image, index) => (
                     <div 
                         key={index}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
-                        <img src={image.src} alt={`Imagem ${index + 1}`} />
+                        <img src={image.src} alt={`Imagem ${index + 1}`}/>
                         <span onClick={() => window.location.href = `/leange/#/acomodaMar#suite${index + 1}`}>
                             {hoveredIndex === index ? "Conhecer Suítes" : image.text}
                             {hoveredIndex === index && <FaArrowRight />}

@@ -3,10 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import CustomButton from "./button3";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import styled, { createGlobalStyle } from "styled-components";
 import IconButton from "./button4";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SwiperStyles = createGlobalStyle`
     .swiper-button-next, .swiper-button-prev {
@@ -189,9 +190,10 @@ const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 
           <SwiperSlide key={index}>
             <SlideContent imagePosition={imagePosition}>
               <SlideText>
-                <Title $colorDefined={titleColor}>{slide.title}</Title> 
-                <Description>{slide.description}</Description>
+                <Title $colorDefined={titleColor} data-aos="fade-up" data-aos-delay="100">{slide.title}</Title> 
+                <Description data-aos="fade-down" data-aos-delay="250">{slide.description}</Description>
                 <IconButton
+                    data-aos="fade-up" data-aos-delay="200"
                     text = "Fazer reserva!"
                     text2 = "Clique e reserve"
                     borderColor = "var(--color--black)"
@@ -200,7 +202,7 @@ const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 
                     hoverTextColor = "var(--color--white)"
                 />
               </SlideText>
-              <ImageContainer>
+              <ImageContainer data-aos="fade-left" data-aos-delay="400">
                 <SlideImage src={slide.imageUrl} alt={slide.title} />
               </ImageContainer>
             </SlideContent>

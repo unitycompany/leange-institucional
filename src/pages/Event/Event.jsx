@@ -7,6 +7,8 @@ import { FaClock } from "react-icons/fa";
 import SliderComponent3 from '../../components/sliderComponent3';
 import Footer from '../../components/footer';
 import WhatsAppButton from '../../components/Whatsapp';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Espace = styled.div`
     height: 15vh;
@@ -617,20 +619,21 @@ const Eventos = () => {
             <InicioContainer>
 
                 <div>
-                    <h1>Do alto da <b><a href='#/serra'>Serra</a></b>,<br></br> às ondas do <b><a href='#/mar'>Mar</a></b></h1>
-                    <p>Venha celebrar na LeAnge, onde o amor pelos pets encontra o cenário perfeito para os seus eventos.</p>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Do alto da <b><a href='#/serra'>Serra</a></b>,<br></br> às ondas do <b><a href='#/mar'>Mar</a></b></h1>
+                    <p data-aos="fade-up" data-aos-delay="200">Venha celebrar na LeAnge, onde o amor pelos pets encontra o cenário perfeito para os seus eventos.</p>
                     <Button 
+                    data-aos="fade-up" data-aos-delay="300"
                     onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
                     text="Fazer meu evento"
                     />
                 </div>
                 <div>
-                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342456/home_df8ub0_rqju2u.webp" alt='foto da home da página de eventos' />
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342456/home_df8ub0_rqju2u.webp" alt='foto da home da página de eventos' data-aos="fade-left" data-aos-delay="150"/>
                 </div>
 
             </InicioContainer>
 
-            <CarrosselContainer>
+            <CarrosselContainer data-aos="fade-up" data-aos-delay="100">
                 <SliderComponent3 
                         content={images1} 
                         spaceBetween={20} 
@@ -644,7 +647,7 @@ const Eventos = () => {
 
             <SobreContainer>
                 <div>
-                    <h1>Sobre nós</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Sobre nós</h1>
                 </div>
                 <div>
                     <div>
@@ -674,48 +677,48 @@ const Eventos = () => {
 
             <CasamentoContainer>
                 <div>
-                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342454/11_gzr6ei_ikd2hm.webp" alt='foto do casamento' />
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342454/11_gzr6ei_ikd2hm.webp" alt='foto do casamento' data-aos="zoom-in" data-aos-delay="100" />
                 </div>
                 <div>
-                    <h1>Pré-Wedding</h1>
-                    <p>Coração palpitando, emoções à flor da pele e a certeza de dias inesquecíveis.</p>
+                    <h1 data-aos="fade-up" data-aos-delay="200">Pré-Wedding</h1>
+                    <p data-aos="fade-down" data-aos-delay="200">Coração palpitando, emoções à flor da pele e a certeza de dias inesquecíveis.</p>
                     <ol>
-                    <StyledItemEvent>
+                    <StyledItemEvent data-aos="fade-up" data-aos-delay="50">
                         <BiSolidDrink />
                             Coquetel na Chegada (Sexta-feira)
                         </StyledItemEvent>
 
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="100">
                             <BiSolidStar />
                             Noite Especial no Sábado
                         </StyledItemEvent>
 
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="150">
                             <BiCamera />
                             Ensaio Fotográfico dos Noivos
                         </StyledItemEvent>
 
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="200">
                             <BiHeart />
                             Decoração Romântica na Suíte
                         </StyledItemEvent>
 
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="250">
                             <BiBus />
                             Massagem Relaxante
                         </StyledItemEvent>
 
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="300">
                             <BiBug />
                             Passeio de Bugre
                         </StyledItemEvent>
 
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="350">
                             <BiBasket />
                             Piquenique para os Noivos
                         </StyledItemEvent>
 
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="400">
                             <FaClock />
                             Late Checkout no Domingo
                         </StyledItemEvent>
@@ -725,39 +728,39 @@ const Eventos = () => {
                     text="Fazer reserva"
                     />
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342448/7_sgewp5_rx9vfw.webp" alt='foto do casamento' />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342452/10_deybdj_khogtb.webp" alt='foto do casamento' />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342450/9_eavaty_zcw9bc.webp" alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342448/7_sgewp5_rx9vfw.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342452/10_deybdj_khogtb.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200"/>
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342450/9_eavaty_zcw9bc.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300"/>
                     </div>
                 </div>
             </CasamentoContainer>
 
             <NiverContainer>
                 <div>
-                    <h1>Aniversário</h1>
-                    <p>Comemore os momentos doces da vida.</p>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Aniversário</h1>
+                    <p data-aos="fade-down" data-aos-delay="200">Comemore os momentos doces da vida.</p>
                     <ol>
-                    <StyledItemEvent>
+                    <StyledItemEvent data-aos="fade-up" data-aos-delay="50">
                         <BiSolidDrink />
                             Coquetel na Chegada (Sexta-feira)
                         </StyledItemEvent>
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="100">
                             <BiSolidStar />
                             Noite Especial no Sábado
                         </StyledItemEvent>
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="150">
                             <BiSpa />
                             Massagem Relaxante
                         </StyledItemEvent>
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="200">
                             <BiBus />
                             Passeio de Bugre
                         </StyledItemEvent>
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="250">
                             <BiBasket />
                             Piquenique
                         </StyledItemEvent>
-                        <StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="300">
                             <FaClock />
                             Late Checkout no Domingo
                         </StyledItemEvent>
@@ -767,17 +770,17 @@ const Eventos = () => {
                     text="Fazer reserva"
                     />
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342464/niver5_vqhh94_pitqka.webp" alt='foto do casamento' />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342462/niver3_katslf_fapku3.webp" alt='foto do casamento' />
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342460/niver2_rb3hvs_nofpdf.webp" alt='foto do casamento' />
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342464/niver5_vqhh94_pitqka.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342462/niver3_katslf_fapku3.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200"/>
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342460/niver2_rb3hvs_nofpdf.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300"/>
                     </div>
                 </div>
                 <div>
-                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342458/niver1_zyq8zi_gandzx.webp" alt='foto de aniversário' />
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342458/niver1_zyq8zi_gandzx.webp" alt='foto de aniversário' data-aos="zoom-in" data-aos-delay="200" />
                 </div>
             </NiverContainer>
             
-            <CarrosselContainer>
+            <CarrosselContainer data-aos="fade-up" data-aos-delay="100">
                 <SliderComponent3
                         content={images2} 
                         spaceBetween={20} 

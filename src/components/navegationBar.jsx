@@ -430,7 +430,7 @@ const NavegationBar = () => {
             const timer = setTimeout(() => {
                 setConfettiVisible(false);
                 setTimeout(() => setShowConfetti(false), 1000);
-            }, 5000);
+            }, 8000);
             return () => clearTimeout(timer);
         } else {
             setConfettiVisible(false);
