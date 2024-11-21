@@ -53,7 +53,6 @@ const StyledSectionHome = styled.section`
     @media (max-width: 768px) {
         padding: 10% 2.5%;
         flex-direction: column-reverse;
-        background-color: #ffffff!important;
     }
 `;
 
