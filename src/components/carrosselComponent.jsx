@@ -44,7 +44,7 @@ const SlideContent = styled.div`
   flex-direction: ${({ imagePosition }) => (imagePosition === 'right' ? 'row-reverse' : 'row')};
 
   @media (max-width: 768px){
-    border: 1px solid var(--color--black);
+    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 15px 0 15px 0;
     height: 75vh;
     flex-direction: column;

@@ -89,7 +89,6 @@ const SlideContent = styled.div`
   width: 90%;
 
   @media (max-width: 768px){
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     gap: 7px;

@@ -40,7 +40,7 @@ const StyledSectionHome = styled.section`
         position: absolute;
         z-index: -1;
         opacity: .05;
-        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
+        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
         background-position: center;
         background-size: cover;
 
@@ -52,17 +52,18 @@ const StyledSectionHome = styled.section`
     @media (max-width: 768px){
         padding: 10% 2.5%;
         flex-direction: column-reverse;
+        background-color: #ffffff!important;
     }
 `;
 
 const StyledHomeDiv = styled.div`
     width: 45%;
     height: 100%;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
+    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 100px 10px 50px 20px;
+    border-radius: 40px 10px 30px 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     filter: contrast(110%);
 
@@ -71,7 +72,7 @@ const StyledHomeDiv = styled.div`
         border-radius: 0px;
         border-image: fill 0 linear-gradient(#0001, #ffffff);
         position: absolute;
-        box-shadow: none;
+        box-shadow: none!important;
         height: 80%;
         top: 0;
         z-index: -1;
