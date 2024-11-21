@@ -252,7 +252,6 @@ const PetFriendlyImages = [
     }
 ];
 
-
 const StyledSectionEspaco = styled.section`
     width: 100%;
     height: 100vh;
@@ -312,18 +311,6 @@ const StyledContainerEvents = styled.section`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
-        title: 'Frutos do mar',
-        dateRange: '22/11/2024 até 24/11/2024 (2 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: '23/11 - Frutos do Mar' },
-            { icon: <FaMusic />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '354,20',
-        discount: 25,
-    },
-    {
         image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp',
         title: 'Noite de Risotos',
         dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
@@ -348,7 +335,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330262/frutos_do_mar2_xyxatd.webp',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
         title: 'Frutos do Mar',
         dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
@@ -400,15 +387,15 @@ const StyledButtonCenter = styled.div`
 
 const ImagesAcomoda = [
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133147/suiteSuperior1_gpjls0.jpg", text: "Suíte Superior 1", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133146/suiteSuperior2_cqduas.jpg", text: "Suíte Superior 2", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1732214237/foto2_pn8axc.webp", text: "Suíte Superior 2", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133142/suiteSuperior3_pgr53r.jpg", text: "Suíte Superior 3", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133142/suiteStandard4_mrtwhq.jpg", text: "Suíte Standard 4", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133138/suiteStandard5_j9oyln.jpg", text: "Suíte Standard 5", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133137/suiteMaster6_id3iqs.jpg", text: "Suíte Master 6", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133133/suiteMaster7_bqdek7.jpg", text: "Suíte Master 7", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133133/suiteMaster7_bqdek7.jpg", text: "Suíte Superior 7", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133111/suiteStandard8_lpyi22.jpg", text: "Suíte Standard 8", loading: "lazy" },
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133110/suiteSuperior9_v1mxwb.jpg", text: "Suíte Superior 9", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133110/suiteMaster10_gqoxfm.jpg", text: "Suíte Superior 10", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133110/suiteMaster10_gqoxfm.jpg", text: "Suíte Master 10", loading: "lazy" },
 ];
 
 const Serra = () => {
@@ -434,7 +421,7 @@ const Serra = () => {
                 <StyledHomeTexts>
                     <h4 data-aos="fade-up" data-aos-delay="100">LeAnge Serra, a pousada mais</h4>
                     <h1 data-aos="fade-down" data-aos-delay="200">PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
-                    <p data-aos="fade-up" data-aos-delay="400">Aqui você e seu pet, são mais do que bem-vindos!</p>
+                    <p>Aqui você e seu pet, são mais do que bem-vindos!</p>
                     <CustomButton
                         text="Reservar agora!"
                         textColor="var(--color--black)"

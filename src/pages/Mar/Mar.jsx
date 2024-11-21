@@ -225,14 +225,14 @@ const StyledSectionEspaco = styled.section`
 `;
 
 const ImagesAcomoda = [
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594862/IMG_0140-compressed_q2fn5t.webp", "text": "Suíte Superior 1", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334570/suiteMar01_p6bfoi-compressed_kixsaa.jpg", "text": "Suíte Superior 1", "loading": "lazy" },
     { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594863/IMG_0142-compressed_lfijwu.webp", "text": "Suíte Standard 2", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594863/IMG_0141-compressed_pl7ep8.webp", "text": "Suíte Superior 3", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594863/IMG_0139-compressed_nqmqdj.webp", "text": "Suíte Superior 4", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594862/IMG_0144-compressed_kqrioa.webp", "text": "Suíte Superior 5", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594870/mar_master_8_m1x38m.jpg", "text": "Suíte Standard 6", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594863/IMG_0143-compressed_fk4kgv.webp", "text": "Suíte Master 7", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594870/mar_master_8_m1x38m.jpg", "text": "Suíte Master 8", "loading": "lazy" }
+    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334576/suiteMar03_o9sxbf-compressed_uw2hox.jpg", "text": "Suíte Superior 3", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594863/IMG_0143-compressed_fk4kgv.webp", "text": "Suíte Superior 4", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334573/suiteMar05_oid9as-compressed_al5vur.jpg", "text": "Suíte Superior 5", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594870/mar_master_8_m1x38m.jpg", "text": "Suíte Superior 6", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334571/suiteMar07_dgfxzq-compressed_kody5f.jpg", "text": "Suíte Master 7", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334574/suiteMar08_g1gmt0-compressed_mymcv1.jpg", "text": "Suíte Master 8", "loading": "lazy" }
 ];
 
 
@@ -282,18 +282,6 @@ const StyledContainerEvents = styled.section`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
-        title: 'Frutos do mar',
-        dateRange: '22/11/2024 até 24/11/2024 (2 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: '23/11 - Frutos do Mar' },
-            { icon: <FaMusic />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
-        ],
-        price: '354,20',
-        discount: 25
-    },
-    {
         image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp',
         title: 'Noite de Risotos',
         dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
@@ -318,7 +306,7 @@ const events = [
         discount: 25
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330262/frutos_do_mar2_xyxatd.webp',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
         title: 'Frutos do Mar',
         dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
@@ -421,8 +409,8 @@ const Mar = () => {
                 <StyledHomeTexts>
                     <h4 data-aos="fade-up" data-aos-delay="100">Le Ange Mar, a pousada mais</h4>
                     <h1 data-aos="fade-down" data-aos-delay="200">PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
-                    <p data-aos="fade-up" data-aos-delay="400">Aqui você e seu pet, são mais do que bem-vindos!</p>
-                    <div data-aos="fade-in" data-aos-delay="500">
+                    <p>Aqui você e seu pet, são mais do que bem-vindos!</p>
+                    <div>
                         <CustomButton
                             text="Reservar agora!"
                             textColor="var(--color--black)"

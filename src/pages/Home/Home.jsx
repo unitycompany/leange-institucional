@@ -40,7 +40,7 @@ const imagesMar = [
     { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/churrasqueira_w7akaf.webp', alt: 'Foto de churrasco', loading: "lazy" },
     { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327000/cachorro-olhando-para-camera_wpovwv.webp', alt: 'Cachorro olhando para a câmera', loading: "lazy" },
     { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/pousada_de_cima_vpzpdb.webp', alt: 'Pousada le ange mar vista de cima', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/sala-de-estar_blaa0x.webp', alt: 'Sala de estar na le ange mar', loading: "lazy" }
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1732214398/Imagem_do_WhatsApp_de_2024-11-21_%C3%A0_s_15.39.05_992dfdf0_nqi5h2.jpg', alt: 'Sala de estar na le ange mar com o quadro na parede', loading: "lazy" }
 ];
 
 const imagesCarrossel01 = [
@@ -167,6 +167,20 @@ const acomodaHome = [
         { icon: <FaFire />, text: "Lareira" }
       ]
     },
+    {
+        id: "Serra#suite2",
+        title: "Suíte Standard 2",
+        subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
+        backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732214237/foto2_pn8axc.webp",
+        features: [
+          { icon: <FaRulerCombined />, text: "52m²" },
+          { icon: <FaSnowflake />, text: "Ar condicionado" },
+          { icon: <FaBed />, text: "Cama king size" },
+          { icon: <FaBath />, text: "Banheira" },
+          { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+          { icon: <FaFire />, text: "Lareira" }
+        ]
+      },
     {
       id: "Serra#suite6",
       title: "Suíte Master 6",
@@ -425,18 +439,6 @@ const StyledEstruturaSubTitle = styled.p`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
-        title: 'Frutos do mar',
-        dateRange: '22/11/2024 até 24/11/2024 (2 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: '23/11 - Frutos do Mar' },
-            { icon: <FaMusic />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '354,20',
-        discount: 25,
-    },
-    {
         image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp',
         title: 'Noite de Risotos',
         dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
@@ -461,7 +463,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330262/frutos_do_mar2_xyxatd.webp',
+        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
         title: 'Frutos do Mar',
         dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
@@ -580,7 +582,7 @@ const Home = () => {
             >
                 <StyledPousadasTitle>
                     <h1 data-aos="fade-up">Pousada<StyledColorBBlue> 100% Pet Friendly</StyledColorBBlue> que aceita humanos de estimação</h1>
-                    <p data-aos="fade-up" data-aos-delay="200">Duas unidades, dois refúgios únicos</p>
+                    <p data-aos="fade-up" data-aos-delay="200">2 unidades, 2 refúgios únicos</p>
                 </StyledPousadasTitle>
 
                 <StyledContainerPousadas data-aos="fade-up">

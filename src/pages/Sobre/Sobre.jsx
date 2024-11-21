@@ -888,8 +888,8 @@ const Sobre = () => {
                         <p data-aos="fade-down" data-aos-delay="300">Ambas as unidades dispõem de suítes luxuosas, equipadas com banheiras de imersão, camas king-size e roupas de cama de 400 fios; na Serra, cada suíte conta com uma lareira aconchegante, enquanto em Búzios, a vista para o mar é um espetáculo à parte, garantindo uma experiência de tranquilidade incomparável.</p>
                     </div>
                     <div>
-                        <h1 data-aos="fade-up" data-aos-delay="400">Público de alto padrão</h1>
-                        <p data-aos="fade-down" data-aos-delay="500">Nosso público é de classe A, buscando experiências de alto padrão e exclusividade. Para manter a tranquilidade e a exclusividade, a idade mínima para hospedagem é de 13 anos.</p>
+                        <h1 data-aos="fade-up" data-aos-delay="400">Nossa Pousada</h1>
+                        <p data-aos="fade-down" data-aos-delay="500">Pedimos que leve em consideração, se o seu pet é amigavel, pois teremos diversos pets na pousada, também só aceitamos humanos acompanhados por pets e, a idade mínima para hospedagem é de 13 anos.</p>
                     </div>
                 </div>
                 

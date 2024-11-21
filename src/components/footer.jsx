@@ -510,7 +510,7 @@ const Footer = () => {
                         <a href='#/acomodaMar' data-aos="fade-up" data-aos-delay="400"> <MdOutlineArrowRight /> Acomodação Mar </a>
                     </div>
                     <div>
-                        <h2 data-aos="fade-up" data-aos-delay="400">Ajuda</h2>
+                        <h2 data-aos="fade-up" data-aos-delay="400">Central de reserva</h2>
                         <a href="https://wa.link/dojlwi" target='_blank' data-aos="fade-up" data-aos-delay="100"> <MdOutlineArrowRight /> WhatsApp </a>
                         <a href="https://wa.link/dojlwi" target='_blank' data-aos="fade-down" data-aos-delay="150"> <MdOutlineArrowRight /> +55 (21) 99423-0871 </a>
                         <a href='mailto:pousadaleange@gmail.com' target='_blank' data-aos="fade-up" data-aos-delay="200"> <MdOutlineArrowRight /> pousadaleange@gmail.com </a>

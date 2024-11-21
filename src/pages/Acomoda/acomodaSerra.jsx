@@ -41,11 +41,11 @@ const TituloAcomoda = styled.div`
 `
 
 const SuiteSup1Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344205/suiteSuperior1_gpjls0_l6yhv9.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344197/1_o5yez9_vrlet1.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344198/3_aiyrqa_btekxc.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344200/4_ywuuuc_b8t7x3.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344203/5_onjzk1_ysyao3.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731344205/suiteSuperior1_gpjls0_l6yhv9.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731344197/1_o5yez9_vrlet1.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731344198/3_aiyrqa_btekxc.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731344200/4_ywuuuc_b8t7x3.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731344203/5_onjzk1_ysyao3.webp',
 ];
 
 const SuiteSup1Text = [
@@ -57,7 +57,7 @@ const SuiteSup1Text = [
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
             { icon: <FaFire />, text: 'Lareira' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
@@ -69,11 +69,10 @@ const SuiteSup1Text = [
 ]
 
 const SuiteSup2Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344820/1_x3uulk_dj8iz3.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344821/2_o7w1df_rfa8ao.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344824/3_u2ikyj_bbap70.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344826/4_wte9h1_nbgckn.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731344829/5_olm5xn_up47by.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1732214237/foto2_pn8axc.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731344824/3_u2ikyj_bbap70.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731344826/4_wte9h1_nbgckn.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731344829/5_olm5xn_up47by.webp',
 ];
 
 const SuiteSup2Text = [
@@ -86,7 +85,7 @@ const SuiteSup2Text = [
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <FaFire />, text: 'Lareira' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
@@ -97,11 +96,11 @@ const SuiteSup2Text = [
 ]
 
 const SuiteSup3Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345105/1_ylximp_j7rlx6.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345099/3_drrdp6_jeadzb.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345108/2_naq3yx_r415zb.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345101/4_lpovtm_pybn3y.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345103/5_tsqexf_xy8tbc.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345105/1_ylximp_j7rlx6.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345099/3_drrdp6_jeadzb.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345108/2_naq3yx_r415zb.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345101/4_lpovtm_pybn3y.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345103/5_tsqexf_xy8tbc.webp',
 ];
 
 const SuiteSup3Text = [
@@ -113,7 +112,7 @@ const SuiteSup3Text = [
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <FaFire />, text: 'Lareira' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
@@ -124,11 +123,11 @@ const SuiteSup3Text = [
 ]
 
 const SuiteStan4Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345365/1_s9b5nq_bkdxnp.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345367/2_hyhg8t_a7ameu.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345369/3_s0ig5c_vrsvhv.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345371/4_oppeg3_o41fdi.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345374/5_kb5ean_xhm0vu.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345365/1_s9b5nq_bkdxnp.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345367/2_hyhg8t_a7ameu.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345369/3_s0ig5c_vrsvhv.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345371/4_oppeg3_o41fdi.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345374/5_kb5ean_xhm0vu.webp',
 ];
 
 const SuiteStan4Text = [
@@ -140,7 +139,7 @@ const SuiteStan4Text = [
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <FaFire />, text: 'Lareira' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
@@ -151,11 +150,11 @@ const SuiteStan4Text = [
 ]
 
 const SuiteStan5Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345603/1_rnbhj2_kghiue.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345605/2_msj4wh_rrl3zt.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345608/3_b8v99f_aiaxqa.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345617/4_rdcxvu_sjgtje.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345621/5_cwrlxp_pjsznc.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345603/1_rnbhj2_kghiue.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345605/2_msj4wh_rrl3zt.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345608/3_b8v99f_aiaxqa.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345617/4_rdcxvu_sjgtje.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345621/5_cwrlxp_pjsznc.webp',
 ];
 
 const SuiteStan5Text = [
@@ -167,7 +166,7 @@ const SuiteStan5Text = [
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <FaFire />, text: 'Lareira' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
@@ -178,11 +177,11 @@ const SuiteStan5Text = [
 ]
 
 const SuiteMas6Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345889/1_ytelar_a4gkq4.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345890/2_y07hp1_gxkw0f.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345893/3_ennrfl_tsrdpf.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345900/4_nmnmdm_pb6suc.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731345903/5_zjbujo_ojixkc.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345889/1_ytelar_a4gkq4.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345890/2_y07hp1_gxkw0f.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345893/3_ennrfl_tsrdpf.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345900/4_nmnmdm_pb6suc.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731345903/5_zjbujo_ojixkc.webp',
 ];
 
 const SuiteMas6Text = [
@@ -190,13 +189,13 @@ const SuiteMas6Text = [
         NomedaSuite: "Suíte Master 6",
         NomedaPousada: "Le Ange Serra",
         features: [
-            { icon: <FaRulerCombined />, text: "77m²" },
+            { icon: <FaRulerCombined />, text: "93m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <FaFire />, text: 'Lareira' },
             { icon: <MdChair />, text: 'Chaise lounge' },
             { icon: <TbBrandWindows />, text: 'Bay window' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
@@ -207,16 +206,16 @@ const SuiteMas6Text = [
 ]
 
 const SuiteStan7Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730146635/1_r9brij.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730146632/2_lp3nwj.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730146632/3_hahgqj.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730146193/4_rdcxvu.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1730146631/4_hstjdq.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1730146635/1_r9brij.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1730146632/2_lp3nwj.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1730146632/3_hahgqj.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1730146193/4_rdcxvu.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1730146631/4_hstjdq.jpg',
 ];
 
 const SuiteStan7Text = [
     {
-        NomedaSuite: "Suíte Standard 7",
+        NomedaSuite: "Suíte Master 7",
         NomedaPousada: "Le Ange Serra",
         features: [
             { icon: <FaRulerCombined />, text: "52m²" },
@@ -234,11 +233,11 @@ const SuiteStan7Text = [
 ]
 
 const SuiteStan8Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346391/1_deflqw_o0h5op.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346395/3_apyt83_m5wg8y.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346393/2_vtsru4_j58fi3.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346398/4_a4uhie_akrdkl.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346401/5_s3imtf_jey5us.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346391/1_deflqw_o0h5op.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346395/3_apyt83_m5wg8y.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346393/2_vtsru4_j58fi3.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346398/4_a4uhie_akrdkl.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346401/5_s3imtf_jey5us.webp',
 ];
 
 const SuiteStan8Text = [
@@ -261,11 +260,11 @@ const SuiteStan8Text = [
 ]
 
 const SuiteSup9Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346629/1_ougeas_aj0kkp.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346631/2_qiphp1_zbes5m.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346636/4_ams1oh_mxicwx.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346633/3_x7jhml_auko3f.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731346640/5_texuuu_e0gps2.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346629/1_ougeas_aj0kkp.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346631/2_qiphp1_zbes5m.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346636/4_ams1oh_mxicwx.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346633/3_x7jhml_auko3f.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731346640/5_texuuu_e0gps2.webp',
 ];
 
 const SuiteSup9Text = [
@@ -279,7 +278,7 @@ const SuiteSup9Text = [
             { icon: <FaFire />, text: 'Lareira' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
             { icon: <FaTv />, text: 'Smart TV' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
@@ -289,11 +288,11 @@ const SuiteSup9Text = [
 ]
 
 const SuiteMas10Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347011/1_lj4tav_i26aev.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347012/2_rwd1oh_clvvnj.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347015/3_hybfzc_rsrbwj.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347018/4_p052an_rslqub.webp',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347020/5_aqbze0_ae2782.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347011/1_lj4tav_i26aev.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347012/2_rwd1oh_clvvnj.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347015/3_hybfzc_rsrbwj.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347018/4_p052an_rslqub.webp',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347020/5_aqbze0_ae2782.webp',
 ];
 
 const SuiteMas10Text = [
@@ -301,7 +300,7 @@ const SuiteMas10Text = [
         NomedaSuite: "Suíte Master 10",
         NomedaPousada: "Le Ange Serra",
         features: [
-            { icon: <FaRulerCombined />, text: "77m²" },
+            { icon: <FaRulerCombined />, text: "80m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: < SiApachecouchdb />, text: 'Recamier e poltrona de leitura' },
@@ -309,7 +308,7 @@ const SuiteMas10Text = [
             { icon: <MdChair />, text: 'Couch lounge' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
             { icon: <FaTv />, text: 'Smart TV' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Ampla varanda privativa' },

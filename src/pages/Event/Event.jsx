@@ -7,6 +7,8 @@ import { FaClock } from "react-icons/fa";
 import SliderComponent3 from '../../components/sliderComponent3';
 import Footer from '../../components/footer';
 import WhatsAppButton from '../../components/Whatsapp';
+import { PiFlagBannerFill } from "react-icons/pi";
+import { FaBirthdayCake } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -634,7 +636,7 @@ const Eventos = () => {
                     />
                 </div>
                 <div>
-                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342456/home_df8ub0_rqju2u.webp" alt='foto da home da página de eventos' data-aos="fade-left" data-aos-delay="150"/>
+                    <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342448/7_sgewp5_rx9vfw.webp" alt='foto da home da página de eventos' data-aos="fade-left" data-aos-delay="150"/>
                 </div>
 
             </InicioContainer>
@@ -686,7 +688,7 @@ const Eventos = () => {
                     <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731342454/11_gzr6ei_ikd2hm.webp" alt='foto do casamento' data-aos="zoom-in" data-aos-delay="100" />
                 </div>
                 <div>
-                    <h1 data-aos="fade-up" data-aos-delay="200">Pré-Wedding</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="200">Casamento</h1>
                     <p data-aos="fade-down" data-aos-delay="200">Coração palpitando, emoções à flor da pele e a certeza de dias inesquecíveis.</p>
                     <ol>
                     <StyledItemEvent data-aos="fade-up" data-aos-delay="50">
@@ -715,16 +717,6 @@ const Eventos = () => {
                         </StyledItemEvent>
 
                         <StyledItemEvent data-aos="fade-up" data-aos-delay="300">
-                            <BiBug />
-                            Passeio de Bugre
-                        </StyledItemEvent>
-
-                        <StyledItemEvent data-aos="fade-up" data-aos-delay="350">
-                            <BiBasket />
-                            Piquenique para os Noivos
-                        </StyledItemEvent>
-
-                        <StyledItemEvent data-aos="fade-up" data-aos-delay="400">
                             <FaClock />
                             Late Checkout no Domingo
                         </StyledItemEvent>
@@ -759,16 +751,16 @@ const Eventos = () => {
                             Massagem Relaxante
                         </StyledItemEvent>
                         <StyledItemEvent data-aos="fade-up" data-aos-delay="200">
-                            <BiBus />
-                            Passeio de Bugre
-                        </StyledItemEvent>
-                        <StyledItemEvent data-aos="fade-up" data-aos-delay="250">
-                            <BiBasket />
-                            Piquenique
-                        </StyledItemEvent>
-                        <StyledItemEvent data-aos="fade-up" data-aos-delay="300">
                             <FaClock />
                             Late Checkout no Domingo
+                        </StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="250">
+                            <PiFlagBannerFill />
+                            Painéis temáticos
+                        </StyledItemEvent>
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="300">
+                            <FaBirthdayCake />
+                            Bolo para o pet
                         </StyledItemEvent>
 
                     </ol>

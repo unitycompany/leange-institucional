@@ -152,7 +152,7 @@ const Pensao = ({ colorDefinedBold }) => {
                     </div>
                     <div>
                         <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335111/hamburguer-compressed_dhh0dx.jpg" alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" data-aos="fade-down" data-aos-delay="100"/>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335108/risoto1-compressed_m583dd.jpg" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-down" data-aos-delay="200"/>
+                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_50,w_1000/v1732215093/buffetComprimido-compressed-_1__tjiacp.webp" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-down" data-aos-delay="200"/>
                     </div>
                 </StyledTable>
             </StyledPensaoImages>

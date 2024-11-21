@@ -38,11 +38,11 @@ const TituloAcomoda = styled.div`
 `
 
 const SuiteSup1Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347671/1_jbfcfw-compressed_fowhdw.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347679/2_avh1mm-compressed_jmpbxs.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347674/5_bw0qou-compressed_au8uhx.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347677/4_j3c1yo-compressed_fmuvak.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731347669/3_kplwmw-compressed_ctw3wb.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347671/1_jbfcfw-compressed_fowhdw.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347679/2_avh1mm-compressed_jmpbxs.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347674/5_bw0qou-compressed_au8uhx.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347677/4_j3c1yo-compressed_fmuvak.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731347669/3_kplwmw-compressed_ctw3wb.jpg',
 ];
 
 const SuiteSup1Text = [
@@ -50,10 +50,10 @@ const SuiteSup1Text = [
         NomedaSuite: "Suíte Superior 1",
         NomedaPousada: "Le Ange Mar",
         features: [
-            { icon: <FaRulerCombined />, text: "28m²" },
+            { icon: <FaRulerCombined />, text: "50m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            { icon: <BsCupHotFill />, text: 'Cafeteira 3 corações' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
@@ -65,11 +65,11 @@ const SuiteSup1Text = [
 ]
 
 const SuiteStan2Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348252/2_uonrhf-compressed_vtj5ay.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348249/3_ysfzuk-compressed_drqyfp.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348244/5_dub0pj-compressed_nycmvi.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348255/1_ofu5mj-compressed_ele8hy.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348246/4_ulr721-compressed_njwzhs.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348252/2_uonrhf-compressed_vtj5ay.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348249/3_ysfzuk-compressed_drqyfp.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348244/5_dub0pj-compressed_nycmvi.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348255/1_ofu5mj-compressed_ele8hy.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348246/4_ulr721-compressed_njwzhs.jpg',
 ];
 
 const SuiteStan2Text = [
@@ -77,26 +77,26 @@ const SuiteStan2Text = [
         NomedaSuite: "Suíte Standard 2",
         NomedaPousada: "Le Ange Mar",
         features: [
-            { icon: <FaRulerCombined />, text: "30m²" },
+            { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            { icon: <BsCupHotFill />, text: 'Cafeteira 3 corações' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
-        Description: "A Suíte Standard 2 no Le Ange Mar oferece 30m² de conforto e tranquilidade, ideal para até 4 adultos. Com cama King Size, ar-condicionado e lareira, é o ambiente perfeito para relaxar. A suíte conta com frigobar, chaleira elétrica e Smart TV para seu entretenimento.",
+        Description: "A Suíte Standard 2 no Le Ange Mar oferece 30m² de conforto e tranquilidade, ideal para até 4 adultos. Com cama King Size, ar-condicionado e lareira, é o ambiente perfeito para relaxar. A suíte conta com frigobar, Cafeteira 3 corações e Smart TV para seu entretenimento.",
     },
 ]
 
 const SuiteSup3Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348602/1_mkvfcp-compressed_gr43kj.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348599/2_ciuk0m-compressed_cehbai.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348597/3_njizit-compressed_na7v2c.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348592/5_mjfm3k-compressed_tfneqy.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731348594/4_d5kp62-compressed_lcocv8.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348602/1_mkvfcp-compressed_gr43kj.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348599/2_ciuk0m-compressed_cehbai.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348597/3_njizit-compressed_na7v2c.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348592/5_mjfm3k-compressed_tfneqy.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731348594/4_d5kp62-compressed_lcocv8.jpg',
 ];
 
 const SuiteSup3Text = [
@@ -104,26 +104,26 @@ const SuiteSup3Text = [
         NomedaSuite: "Suíte Superior 3",
         NomedaPousada: "Le Ange Mar",
         features: [
-            { icon: <FaRulerCombined />, text: "32m²" },
+            { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            { icon: <BsCupHotFill />, text: 'Cafeteira 3 corações' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
-        Description: "A Suíte Superior 3 no Le Ange Mar oferece 32m² de sofisticação e conforto, ideal para até 2 adultos. A cama King Size, ar-condicionado e lareira criam um ambiente acolhedor, enquanto o frigobar, chaleira elétrica e Smart TV.",
+        Description: "A Suíte Superior 3 no Le Ange Mar oferece 32m² de sofisticação e conforto, ideal para até 2 adultos. A cama King Size, ar-condicionado e lareira criam um ambiente acolhedor, enquanto o frigobar, Cafeteira 3 corações e Smart TV.",
     },
 ]
 
 const SuiteSup4Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349318/1_znboil-compressed_yri6qq.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349281/3_srrc1g-compressed_sxde4s.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349273/5_lxdgp4-compressed_qaobnt.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349314/2_edqaq4-compressed_hggyrj.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349275/4_k1afap-compressed_do1fjk.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349318/1_znboil-compressed_yri6qq.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349281/3_srrc1g-compressed_sxde4s.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349273/5_lxdgp4-compressed_qaobnt.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349314/2_edqaq4-compressed_hggyrj.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349275/4_k1afap-compressed_do1fjk.jpg',
 ];
 
 const SuiteSup4Text = [
@@ -131,26 +131,26 @@ const SuiteSup4Text = [
         NomedaSuite: "Suíte Superior 4",
         NomedaPousada: "Le Ange Mar",
         features: [
-            { icon: <FaRulerCombined />, text: "32m²" },
+            { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            { icon: <BsCupHotFill />, text: 'Cafeteira 3 corações' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
-        Description: "A Suíte Superior 4 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, chaleira elétrica e Smart TV.",
+        Description: "A Suíte Superior 4 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, Cafeteira 3 corações e Smart TV.",
     },
 ]
 
 const SuiteSup5Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349664/1_ztjmyc-compressed_qvus4l.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349653/5_dkyssi-compressed_prm4wc.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349655/4_rg0jvi-compressed_pknmhg.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349661/2_djdgbx-compressed_zscwrg.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731349658/3_hkxuyr-compressed_fpwsiy.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349664/1_ztjmyc-compressed_qvus4l.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349653/5_dkyssi-compressed_prm4wc.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349655/4_rg0jvi-compressed_pknmhg.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349661/2_djdgbx-compressed_zscwrg.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731349658/3_hkxuyr-compressed_fpwsiy.jpg',
 ];
 
 const SuiteSup5Text = [
@@ -158,26 +158,26 @@ const SuiteSup5Text = [
         NomedaSuite: "Suíte Superior 5",
         NomedaPousada: "Le Ange Mar",
         features: [
-            { icon: <FaRulerCombined />, text: "32m²" },
+            { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            { icon: <BsCupHotFill />, text: 'Cafeteira 3 corações' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
-        Description: "A Suíte Superior 5 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, chaleira elétrica e Smart TV.",
+        Description: "A Suíte Superior 5 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, Cafeteira 3 corações e Smart TV.",
     },
 ]
 
 const SuiteSup6Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350736/1_usupcb-compressed_z7nnww.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350716/5_v3dnrs-compressed_svhspj.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350716/4_n9wkv0-compressed_qqq4nw.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350720/2_egxqmp-compressed_hnybrg.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350716/3_pjp0sr-compressed_hnudyo.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731334579/suiteMar06_jywv1q-compressed_u1tfqp.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1730149982/5_b7dida.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1730149980/4_p22p1t.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1730149976/1_tywkpb.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1730149978/3_zpt6tw.jpg',
 ];
 
 const SuiteSup6Text = [
@@ -185,26 +185,26 @@ const SuiteSup6Text = [
         NomedaSuite: "Suíte Superior 6",
         NomedaPousada: "Le Ange Mar",
         features: [
-            { icon: <FaRulerCombined />, text: "32m²" },
+            { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            { icon: <BsCupHotFill />, text: 'Cafeteira 3 corações' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
-        Description: "A Suíte Superior 6 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, chaleira elétrica e Smart TV.",
+        Description: "A Suíte Superior 6 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, Cafeteira 3 corações e Smart TV.",
     },
 ]
 
 const SuiteStan7Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350736/1_usupcb-compressed_z7nnww.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350716/5_v3dnrs-compressed_svhspj.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350716/4_n9wkv0-compressed_qqq4nw.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350720/2_egxqmp-compressed_hnybrg.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350716/3_pjp0sr-compressed_hnudyo.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350736/1_usupcb-compressed_z7nnww.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350716/5_v3dnrs-compressed_svhspj.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350716/4_n9wkv0-compressed_qqq4nw.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350720/2_egxqmp-compressed_hnybrg.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350716/3_pjp0sr-compressed_hnudyo.jpg',
 ];
 
 const SuiteStan7Text = [
@@ -212,26 +212,26 @@ const SuiteStan7Text = [
         NomedaSuite: "Suíte Master 7",
         NomedaPousada: "Le Ange Mar",
         features: [
-            { icon: <FaRulerCombined />, text: "32m²" },
+            { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            { icon: <BsCupHotFill />, text: 'Cafeteira 3 corações' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
-        Description: "A Suíte Master 7 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, chaleira elétrica e Smart TV.",
+        Description: "A Suíte Master 7 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, Cafeteira 3 corações e Smart TV.",
     },
 ]
 
 const SuiteMas8Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350404/1_pcudqj-compressed_sbpmpu.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350402/2-compressed_rudncg.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350399/3-compressed_tjw0xv.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350396/4-compressed_x5k7tn.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/v1731350394/5-compressed_rxetai.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350404/1_pcudqj-compressed_sbpmpu.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350402/2-compressed_rudncg.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350399/3-compressed_tjw0xv.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350396/4-compressed_x5k7tn.jpg',
+    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2000/v1731350394/5-compressed_rxetai.jpg',
 ];
 
 const SuiteMas8Text = [
@@ -239,17 +239,17 @@ const SuiteMas8Text = [
         NomedaSuite: "Suíte Master 8",
         NomedaPousada: "Le Ange Mar",
         features: [
-            { icon: <FaRulerCombined />, text: "32m²" },
+            { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaCloudSunRain />, text: 'Ar condicionado' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            { icon: <BsCupHotFill />, text: 'Chaleira elétrica' },
+            { icon: <BsCupHotFill />, text: 'Cafeteira 3 corações' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBed />, text: 'Cama king size' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
         ],
-        Description: "A Suíte Master 8 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, chaleira elétrica e Smart TV.",
+        Description: "A Suíte Master 8 no Le Ange Mar oferece 32m² de conforto e elegância, ideal para até 2 adultos. Com cama King Size, ar-condicionado e lareira, o ambiente é perfeito para relaxar. A suíte conta com frigobar, Cafeteira 3 corações e Smart TV.",
     },
 ]
 
