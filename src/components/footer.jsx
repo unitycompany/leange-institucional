@@ -6,6 +6,8 @@ import { MdOutlineArrowRight } from "react-icons/md";
 import { motion, useInView } from 'framer-motion';
 import { RiCopyrightLine } from "react-icons/ri";
 import React, { useRef, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const SubmitBtn = styled(motion.button)`
     font-family: inherit;
@@ -260,14 +262,14 @@ const StyledLinks = styled.section`
         align-items: center;
         justify-content: flex-start;
         gap: 2px;
-        transition: all .2s ease;
+        transition: all .2s ease!important;
         border-radius: 5px;
         width: 80%;
     }
 
     & > div a:hover{
         background-color: var(--color--white);
-        transform: translateX(20px);
+        transform: translateX(20px)!important;
         color: var(--color--black);
         width: 80%;
     }
@@ -420,114 +422,101 @@ const Footer = () => {
 
     return (
         <>
-            <StyledFooterContainer ref={ref} initial="hidden" animate={isInView ? "visible" : "hidden"}>
-                <StyledSectionTop as={motion.div}>
+            <StyledFooterContainer ref={ref}>
+                <StyledSectionTop>
                     <StyledTitles>
-                        <motion.h1 variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.2 }}>
+                        <h1 data-aos="fade-up">
                             Fale agora com a nossa Central de Reservas
-                        </motion.h1>
-                        <motion.p variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.3 }}>
-                            Todas as informações são usadas apenas para entrar em contato. Entenda melhor sobre o uso das suas informações pela nossa<a href="https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view" target='_blank'>política de privacidade</a>.
-                        </motion.p>
-                        <motion.hr variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.4 }} />
+                        </h1>
+                        <p data-aos="fade-up" data-aos-delay="100">
+                            Todas as informações são usadas apenas para entrar em contato. Entenda melhor sobre o uso das suas informações pela nossa
+                            <a href="https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view" target='_blank'>política de privacidade</a>.
+                        </p>
+                        <hr data-aos="fade-right" data-aos-delay="200" />
                         <div>
-                            <motion.h4 variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.5 }}>
-                                Siga-nos
-                            </motion.h4>
+                            <h4 data-aos="fade-up" data-aos-delay="300">Siga-nos</h4>
                             <div>
-                                <motion.a href="https://instagram.com/pousadaleange" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.6 }}>
+                                <a href="https://instagram.com/pousadaleange" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="400">
                                     <LuInstagram />
-                                </motion.a>
-                                <motion.a href="https://tiktok.com/@pousadaleange" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.7 }}>
+                                </a>
+                                <a href="https://tiktok.com/@pousadaleange" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="450">
                                     <AiOutlineTikTok />
-                                </motion.a>
-                                <motion.a href="https://pinterest.com/pousadaleange" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.1 }} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 0.8 }}>
+                                </a>
+                                <a href="https://pinterest.com/pousadaleange" target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-delay="500">
                                     <AiOutlinePinterest />
-                                </motion.a>
+                                </a>
                             </div>
                         </div>
                     </StyledTitles>
-                    <StyledForm>
+                    <StyledForm data-aos="fade-down" data-aos-delay="500">
                         <form id="contactForm" onSubmit={handleSubmit}>
-                            <motion.input
+                            <input
                                 type="text"
                                 id="name"
                                 placeholder="Digite o seu nome"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                variants={fadeUp}
-                                initial="hidden"
-                                animate={isInView ? "visible" : "hidden"}
-                                transition={{ delay: 0.9 }}
+                                data-aos="fade-up" data-aos-delay="600"
                             />
-                            <motion.input
+                            <input
                                 type="email"
                                 id="email"
                                 placeholder="Preciso saber seu e-mail também!"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
-                                variants={fadeUp}
-                                initial="hidden"
-                                animate={isInView ? "visible" : "hidden"}
-                                transition={{ delay: 1.0 }}
+                                data-aos="fade-up" data-aos-delay="700"
                             />
-                            <motion.input
+                            <input
                                 type="tel"
                                 id="tel"
                                 placeholder="Por fim, seu número de WhatsApp"
                                 value={tel}
                                 onChange={(e) => setTel(e.target.value)}
-                                variants={fadeUp}
-                                initial="hidden"
-                                animate={isInView ? "visible" : "hidden"}
-                                transition={{ delay: 1.1 }}
+                                data-aos="fade-up" data-aos-delay="800"
                             />
-                            <SubmitBtn
-                                type="submit"
-                                whileHover={{ scale: 1.05, backgroundColor: 'var(--color--blue)' }}
-                                whileTap={{ scale: 0.95 }}
-                            >
+                            <SubmitBtn type="submit" data-aos="fade-up" data-aos-delay="1000">
                                 <FaArrowRightLong size={20} />
                                 <span>Enviar meus dados para contato</span>
                             </SubmitBtn>
                         </form>
-                    </StyledForm> 
+                    </StyledForm>
                 </StyledSectionTop>
-
-                <StyledLinks as={motion.div}>
-                    <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.2 }}>
-                        <img 
-                            src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1729513421/white_sevdgn.png" 
-                            alt="Descrição da imagem" 
-                            loading="lazy" 
+    
+                <StyledLinks>
+                    <div>
+                        <img
+                            src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1729513421/white_sevdgn.png"
+                            alt="Descrição da imagem"
+                            loading="lazy"
+                            data-aos="fade-up" data-aos-delay="200"
                         />
-                        <p>A pousada mais Pet Friendly, venha conhecer!</p>
-                    </motion.div>
-                    <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.3 }}>
-                        <h2>Âncoras</h2>
-                        <a href='#'> <MdOutlineArrowRight /> Início </a>
-                        <a href='#/sobre'> <MdOutlineArrowRight /> Sobre nós </a>
-                        <a href='#/serra'> <MdOutlineArrowRight /> Le Ange Serra </a>
-                        <a href='#/mar'> <MdOutlineArrowRight /> Le Ange Mar </a>
-                        <a href='#/eventos'> <MdOutlineArrowRight /> Eventos </a>
-                        <a href='#/acomoda'> <MdOutlineArrowRight /> Acomodações </a>
-                    </motion.div>
-                    <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.4 }}>
-                        <h2>Ajuda</h2>
-                        <a href="https://wa.link/dojlwi" target='_blank'> <MdOutlineArrowRight /> WhatsApp </a>
-                        <a href="https://wa.link/dojlwi" target='_blank'> <MdOutlineArrowRight /> +55 (21) 99423-0871 </a>
-                        <a href='mailto:pousadaleange@gmail.com' target='_blank'> <MdOutlineArrowRight /> pousadaleange@gmail.com </a>
-                    </motion.div>
-                    <motion.div variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.5 }}>
-                        <h2>Fique por dentro de tudo</h2>
-                        <a href='https://www.instagram.com/pousadaleange/' target='_blank'> <MdOutlineArrowRight /> Instagram </a>
-                        <a href='https://www.tiktok.com/@pousadaleange' target='_blank'> <MdOutlineArrowRight /> TikTok </a>
-                        <a href='https://br.pinterest.com/pousadaleange/' target='_blank'> <MdOutlineArrowRight /> Pinterest </a>
-                    </motion.div>
+                        <p data-aos="fade-down" data-aos-delay="400">A pousada mais Pet Friendly, venha conhecer!</p>
+                    </div>
+                    <div>
+                        <h2 data-aos="fade-up" data-aos-delay="50">Âncoras</h2>
+                        <a href='#' data-aos="fade-down" data-aos-delay="100"> <MdOutlineArrowRight /> Início </a>
+                        <a href='#/sobre' data-aos="fade-up" data-aos-delay="150"> <MdOutlineArrowRight /> Sobre nós </a>
+                        <a href='#/serra' data-aos="fade-down" data-aos-delay="200"> <MdOutlineArrowRight /> Le Ange Serra </a>
+                        <a href='#/mar' data-aos="fade-up" data-aos-delay="250"> <MdOutlineArrowRight /> Le Ange Mar </a>
+                        <a href='#/eventos' data-aos="fade-down" data-aos-delay="300"> <MdOutlineArrowRight /> Eventos </a>
+                        <a href='#/acomoda' data-aos="fade-up" data-aos-delay="350"> <MdOutlineArrowRight /> Acomodações </a>
+                    </div>
+                    <div>
+                        <h2 data-aos="fade-up" data-aos-delay="400">Ajuda</h2>
+                        <a href="https://wa.link/dojlwi" target='_blank' data-aos="fade-up" data-aos-delay="100"> <MdOutlineArrowRight /> WhatsApp </a>
+                        <a href="https://wa.link/dojlwi" target='_blank' data-aos="fade-down" data-aos-delay="150"> <MdOutlineArrowRight /> +55 (21) 99423-0871 </a>
+                        <a href='mailto:pousadaleange@gmail.com' target='_blank' data-aos="fade-up" data-aos-delay="200"> <MdOutlineArrowRight /> pousadaleange@gmail.com </a>
+                    </div>
+                    <div>
+                        <h2 data-aos="fade-up" data-aos-delay="600">Fique por dentro de tudo</h2>
+                        <a href='https://www.instagram.com/pousadaleange/' target='_blank' data-aos="fade-down" data-aos-delay="100"> <MdOutlineArrowRight /> Instagram </a>
+                        <a href='https://www.tiktok.com/@pousadaleange' target='_blank' data-aos="fade-up" data-aos-delay="150"> <MdOutlineArrowRight /> TikTok </a>
+                        <a href='https://br.pinterest.com/pousadaleange/' target='_blank' data-aos="fade-down" data-aos-delay="200"> <MdOutlineArrowRight /> Pinterest </a>
+                    </div>
                 </StyledLinks>
-
-                <StyledLocation as={motion.div} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.6 }}>
-                    <h1>Saiba onde estamos localizados</h1>
+    
+                <StyledLocation>
+                    <h1 data-aos="fade-down" data-aos-delay="200">Saiba onde estamos localizados</h1>
                     <div>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235239.22077211382!2d-43.355636!3d-22.461517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99106a0d4d634d%3A0x5a069366075bf207!2sPousada%20Le%20Ange!5e0!3m2!1spt-BR!2sbr!4v1697101366468!5m2!1spt-BR!2sbr"
@@ -538,6 +527,7 @@ const Footer = () => {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                             title="Mapa da Unidade Serra"
+                            data-aos="fade-left" data-aos-delay="300"
                         ></iframe>
                     </div>
                     <div>
@@ -550,13 +540,14 @@ const Footer = () => {
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                             title="Mapa da Unidade Mar"
+                            data-aos="fade-right" data-aos-delay="400"
                         ></iframe>
                     </div>
                 </StyledLocation>
-
-                <StyledHR as={motion.hr} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.7 }} />
-
-                <StyledPolitica as={motion.div} variants={fadeUp} initial="hidden" animate={isInView ? "visible" : "hidden"} transition={{ delay: 1.8 }}>
+    
+                <StyledHR />
+    
+                <StyledPolitica>
                     <p>Todos os direitos reservados | <RiCopyrightLine /> 2024</p>
                     <a href='https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view' target='_blank'>Termos de condições</a>
                     <p>Desenvolvido por <b><a href='https://www.linkedin.com/in/aleph-ramos' target='_blank'>Aleph</a></b></p>
@@ -564,6 +555,6 @@ const Footer = () => {
             </StyledFooterContainer>
         </>
     );
-}
+}    
 
 export default Footer;

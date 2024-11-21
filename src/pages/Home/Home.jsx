@@ -673,7 +673,7 @@ const Home = () => {
                 <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Estamos te esperando!</StyledEstruturaSubTitle>
             </div>
 
-            <StyledContainerEvents data-aos="fade-down" data-aos-delay="200">
+            <StyledContainerEvents data-aos="fade-in" data-aos-delay="250">
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
 
