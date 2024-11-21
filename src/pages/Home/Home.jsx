@@ -40,7 +40,7 @@ const imagesMar = [
     { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/churrasqueira_w7akaf.webp', alt: 'Foto de churrasco', loading: "lazy" },
     { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327000/cachorro-olhando-para-camera_wpovwv.webp', alt: 'Cachorro olhando para a câmera', loading: "lazy" },
     { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327001/pousada_de_cima_vpzpdb.webp', alt: 'Pousada le ange mar vista de cima', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/v1732214398/Imagem_do_WhatsApp_de_2024-11-21_%C3%A0_s_15.39.05_992dfdf0_nqi5h2.jpg', alt: 'Sala de estar na le ange mar com o quadro na parede', loading: "lazy" }
+    { src: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1732218845/Imagem-do-WhatsApp-de-2024-11-21-%C3%A0_s_-16.51.10_5fc34922_bexmr2.webp', alt: 'Sala de estar na le ange mar com o quadro na parede', loading: "lazy" }
 ];
 
 const imagesCarrossel01 = [

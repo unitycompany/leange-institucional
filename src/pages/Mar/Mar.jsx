@@ -193,7 +193,7 @@ const slides = [
         title: "Cozinha",
         description: "Na nossa diária, todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731329808/caf%C3%A9_da_manh%C3%A3_vaxwlf.webp"
+        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731335108/risoto1-compressed_m583dd.jpg"
     },
     {
         title: "Bar",
