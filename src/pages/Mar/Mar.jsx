@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../../components/footer';
 import styled from 'styled-components';
@@ -31,13 +31,16 @@ const StyledSectionHome = styled.section`
     align-items: center;
     justify-content: space-between;
     height: 95vh;
+    position: relative;
+    z-index: -1;
+    background: #fff;
 
     &::before {
         content: '';
         width: 100%;
         height: 100vh;
         left: 0;
-        top: 0vh;
+        top: -5vh;
         position: absolute;
         z-index: -1;
         opacity: 0.05;
@@ -397,6 +400,12 @@ const PetFriendlyImages = [
 ];
 
 const Mar = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+      }, []);
+
     return (
         <>
             <Helmet>

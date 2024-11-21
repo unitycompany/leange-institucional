@@ -374,6 +374,11 @@ const AcomodaSerra = () => {
         };
     }, [location, suiteRefs]);
 
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+      }, []);
+
     return (
         <>
             <WhatsAppButton />

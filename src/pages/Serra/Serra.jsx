@@ -30,13 +30,16 @@ const StyledSectionHome = styled.section`
     align-items: center;
     justify-content: space-between;
     height: 95vh;
+    background: #fff;
+    position: relative;
+    z-index: -1;
 
     &::before{
         content: '';
         width: 100%;
         height: 100vh;
         left: 0;
-        top: 0vh;
+        top: -5vh;
         position: absolute;
         z-index: -1;
         opacity: .05;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Button from '../../components/button';
@@ -606,6 +606,12 @@ const NiverContainer = styled.section`
 `
 
 const Eventos = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+      }, []);
+
     return (
         <>
             <Helmet>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import WhatsAppButton from '../../components/Whatsapp';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
@@ -740,6 +740,12 @@ const CTA = styled.div`
 `
 
 const Sobre = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+      }, []);
+
     return (
         <>
             <Helmet>
