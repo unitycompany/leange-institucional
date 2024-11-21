@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
 import IconButton from "./button4";
@@ -202,6 +202,12 @@ const StyledAcomodaTexts = styled.div`
 
 const AcomodaComponent2 = ({ images }) => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+      }, []);
+
 
     return (
         <StyledAcomodaContainer>

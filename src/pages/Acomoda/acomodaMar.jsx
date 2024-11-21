@@ -8,6 +8,8 @@ import { BsCupHotFill } from "react-icons/bs";
 import { MdDeck } from "react-icons/md";
 import Footer from "../../components/footer";
 import WhatsAppButton from "../../components/Whatsapp";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const TituloAcomoda = styled.div`
     width: 100%;

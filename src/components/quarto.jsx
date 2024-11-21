@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -208,6 +208,13 @@ const SwiperImage = styled.img`
 
 
 const Quarto = React.forwardRef(({ images = [], suites = [], reverse = false, background = "rgba(0, 0, 0, 0.1)" }, ref) => {
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+      }, []);
+
+
     return (
         <ContainerQuarto reverse={reverse} ref={ref}>
             <CarrosselDoQuarto data-aos="zoom-in" data-aos-delay="50">

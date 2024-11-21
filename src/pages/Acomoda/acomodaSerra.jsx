@@ -11,6 +11,8 @@ import { MdChair } from "react-icons/md";
 import { MdDeck } from "react-icons/md";
 import Footer from "../../components/footer";
 import WhatsAppButton from "../../components/Whatsapp";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const TituloAcomoda = styled.div`
     width: 100%;
@@ -334,6 +336,11 @@ const AcomodaSerra = () => {
     };
 
     useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+      }, []);
+
+    useEffect(() => {
         const scrollToHash = () => {
             const hash = location.hash.replace("#", "");
             console.log("Hash atual:", hash);
@@ -373,11 +380,6 @@ const AcomodaSerra = () => {
             window.removeEventListener("hashchange", scrollToHash);
         };
     }, [location, suiteRefs]);
-
-    useEffect(() => {
-        AOS.init({ duration: 1000, once: false });
-        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
-      }, []);
 
     return (
         <>
