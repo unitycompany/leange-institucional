@@ -45,8 +45,8 @@ const StyledSectionHome = styled.section`
         background-position: center;
         background-size: cover;
 
-        @media (max-width: 768px) {
-            display: none;
+        @media (max-width:1080px){
+            display: none!important;
         }
     }
 

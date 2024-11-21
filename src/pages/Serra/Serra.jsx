@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../../components/footer';
 import styled from 'styled-components';
@@ -44,8 +44,8 @@ const StyledSectionHome = styled.section`
         background-position: center;
         background-size: cover;
 
-        @media (max-width:768px){
-            display: none;
+        @media (max-width:1080px){
+            display: none!important;
         }
     }
 
@@ -74,7 +74,7 @@ const StyledHomeDiv = styled.div`
         box-shadow: none!important;
         height: 80%;
         top: 0;
-        z-index: -1;
+
     }
 `;
 
@@ -409,6 +409,12 @@ const ImagesAcomoda = [
 ];
 
 const Serra = () => {
+
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: false });
+        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
+      }, []);
+
     return (
         <>
             <Helmet>
