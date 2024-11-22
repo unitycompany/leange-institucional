@@ -463,7 +463,10 @@ const LpSerra = () => {
             <PetFriendlyCarousel carousels={PetFriendlyImages}/>
 
             <StyledButtonCenter>
-                <Button text="Fazer minha reserva!" />
+                <Button 
+                text="Fazer minha reserva!" 
+                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                />
             </StyledButtonCenter>
             
             <StyledContainerEvents>

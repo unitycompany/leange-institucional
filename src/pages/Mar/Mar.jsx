@@ -462,7 +462,10 @@ const Mar = () => {
             <PetFriendlyCarousel carousels={PetFriendlyImages} data-aos="fade-in" data-aos-delay="400"/>
 
             <StyledButtonCenter>
-                <Button text="Fazer minha reserva!" />
+                <Button 
+                text="Fazer minha reserva!" 
+                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                />
             </StyledButtonCenter>
 
             <StyledContainerEvents data-aos="fade-up" data-aos-delay="400">
