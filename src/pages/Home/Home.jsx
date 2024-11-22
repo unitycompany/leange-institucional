@@ -187,7 +187,7 @@ const acomodaHome = [
       subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
       backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328713/suiteSerra2_aksiu9.webp",
       features: [
-        { icon: <FaRulerCombined />, text: "77m²" },
+        { icon: <FaRulerCombined />, text: "93m²" },
         { icon: <FaSnowflake />, text: "Ar condicionado" },
         { icon: <FaBed />, text: "Cama king size" },
         { icon: <FaBath />, text: "Banheira" },
@@ -201,7 +201,7 @@ const acomodaHome = [
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328711/suiteMar2_qlgel2.webp",
         features: [
-            { icon: <FaRulerCombined />, text: "32m²" },
+            { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
             { icon: <FaBed />, text: "Cama king size" },
             { icon: <FaBath />, text: "Banheira" },
@@ -215,7 +215,7 @@ const acomodaHome = [
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328711/suiteMar1_zu3lmc.webp",
         features: [
-            { icon: <FaRulerCombined />, text: "30m²" },
+            { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
             { icon: <FaBed />, text: "Cama king size" },
             { icon: <FaBath />, text: "Banheira" },
@@ -229,7 +229,7 @@ const acomodaHome = [
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
         backgroundImage: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731328711/1_e6cnxy.webp",
         features: [
-            { icon: <FaRulerCombined />, text: "77m²" },
+            { icon: <FaRulerCombined />, text: "80m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
             { icon: <FaBed />, text: "Cama king size" },
             { icon: <MdChair />, text: 'Recamier e poltrona de leitura' },

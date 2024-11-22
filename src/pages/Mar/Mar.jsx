@@ -6,7 +6,6 @@ import CustomButton from '../../components/button3';
 import CarouselComponent from '../../components/carrosselComponent';
 import AcomodaComponent2 from '../../components/acomodaComponent2';
 import Pensao from '../../components/pensao';
-import PetFriendly from '../../components/petCarrossel';
 import Depoimentos from '../../components/depoimentos';
 import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import EventCardCarousel from '../../components/cardSlider';
@@ -31,9 +30,8 @@ const StyledSectionHome = styled.section`
     align-items: center;
     justify-content: space-between;
     height: 95vh;
-    position: relative;
-    z-index: -1;
     background: #fff;
+    position: relative;
 
     &::before {
         content: '';
@@ -42,7 +40,7 @@ const StyledSectionHome = styled.section`
         left: 0;
         top: -5vh;
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         opacity: 0.05;
         background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732195397/FOTO-MAR_qssync.webp');
         background-position: center;
@@ -56,6 +54,8 @@ const StyledSectionHome = styled.section`
     @media (max-width: 768px) {
         padding: 10% 2.5%;
         flex-direction: column-reverse;
+        position: relative;
+        z-index: 2;
     }
 `;
 
@@ -78,7 +78,7 @@ const StyledHomeDiv = styled.div`
         position: absolute;
         height: 100%;
         top: 0;
-        z-index: -1;
+        z-index: -3;
     }
 `;
 
@@ -90,11 +90,14 @@ const StyledHomeTexts = styled.div`
     justify-content: center;
     gap: 20px;
     flex-direction: column;
+    position: relative;
+    z-index: 3;
 
     @media (max-width: 768px) {
         width: 100%;
         align-items: center;
         height: 35%;
+        z-index: 10!important;
     }
 
     & > h4 {
@@ -147,6 +150,8 @@ const StyledHomeTexts = styled.div`
         font-size: 18px;
         line-height: 100%;
         width: 50%;
+        position: relative;
+        z-index: 2;
         font-weight: 100;
 
         @media (max-width: 768px) {
@@ -401,6 +406,8 @@ const Mar = () => {
                 <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429562/4_bbtihr.svg" />
             </Helmet>
 
+            {/* <VideoPlayer videoSrc="https://res.cloudinary.com/dupg7clzc/video/upload/f_auto,q_50,w_2000/v1732279143/Mar_bajezt.mp4" /> */}
+
             <StyledEspace />
 
             <WhatsAppButton />
@@ -417,8 +424,8 @@ const Mar = () => {
                             backgroundColor="transparent"
                             borderColor="var(--color--black)"
                             iconColor="var(--color--black)"
-                            hoverBackgroundColor="var(--color--black)"
-                            hoverBorderColor="var(--color--black)"
+                            hoverBackgroundColor="var(--color--blue)"
+                            hoverBorderColor="var(--color--blue)"
                             hoverColor="var(--color--white)"
                             hoverIconColor="var(--color--white)"
                             onClick={() => window.open("https://wa.link/dojlwi", "_blank")}

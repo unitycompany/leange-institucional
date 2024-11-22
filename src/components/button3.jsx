@@ -23,7 +23,7 @@ const ButtonWrapper = styled.button`
   overflow: hidden;
   color: ${(props) => props.textColor || "#000"};
   border: 1px solid ${(props) => props.borderColor || "#000"};
-  transition: color 0.3s 0.1s ease-out;
+  transition: color 0.1s ease-out;
   text-align: center;
 
   &::before {

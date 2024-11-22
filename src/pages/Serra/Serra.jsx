@@ -32,7 +32,7 @@ const StyledSectionHome = styled.section`
     height: 95vh;
     background: #fff;
     position: relative;
-    z-index: -1;
+    
 
     &::before{
         content: '';
@@ -41,7 +41,7 @@ const StyledSectionHome = styled.section`
         left: 0;
         top: -5vh;
         position: absolute;
-        z-index: -1;
+        z-index: 1;
         opacity: .05;
         background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
         background-position: center;
@@ -55,6 +55,8 @@ const StyledSectionHome = styled.section`
     @media (max-width: 768px){
         padding: 10% 2.5%;
         flex-direction: column-reverse;
+        position: relative;
+        z-index: 2;
     }
 `;
 
@@ -77,6 +79,7 @@ const StyledHomeDiv = styled.div`
         box-shadow: none!important;
         height: 100%;
         top: 0;
+        z-index: -3;
 
     }
 `;
@@ -89,6 +92,9 @@ const StyledHomeTexts = styled.div`
     justify-content: center;
     gap: 20px;
     flex-direction: column;
+    position: relative;
+    z-index: 3;
+    
 
     @media (max-width: 768px){
         width: 100%;
@@ -102,6 +108,7 @@ const StyledHomeTexts = styled.div`
         font-weight: 200;
         color: var(--color--black);
         font-weight: 100;
+        
 
         @media (max-width: 768px){
             color: var(--color--black);
@@ -120,6 +127,7 @@ const StyledHomeTexts = styled.div`
         color: var(--color--black);
         margin-top: -15px;
         font-weight: 100;
+        
 
         @media (max-width: 768px){
             display: inline-block;
@@ -129,7 +137,6 @@ const StyledHomeTexts = styled.div`
             margin-left: 0;
             margin-top: -5px;
             font-weight: 100;
-            border: 1px solid red;
         }
     }
 
@@ -151,6 +158,7 @@ const StyledHomeTexts = styled.div`
         font-weight: 100;
         position: relative;
         z-index: 2;
+        
 
         @media (max-width: 768px){
             width: 80%;
@@ -414,6 +422,8 @@ const Serra = () => {
                 <title>Le Ange Serra - Pousada Le Ange</title>
                 <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429558/3_gkl82v.svg" />
             </Helmet>
+            
+            {/* <VideoPlayer videoSrc="https://res.cloudinary.com/dupg7clzc/video/upload/f_auto,q_50,w_2000/v1732279146/Serra_s08vww.mp4" /> */}
 
             <StyledEspace />
             
@@ -430,8 +440,8 @@ const Serra = () => {
                         textColor="var(--color--black)"
                         backgroundColor="transparent"
                         borderColor="var(--color--black)"
-                        hoverBackgroundColor="var(--color--black)"
-                        hoverBorderColor="var(--color--black)"
+                        hoverBackgroundColor="var(--color--green)"
+                        hoverBorderColor="var(--color--green)"
                         hoverColor="var(--color--white)"
                         hoverIconColor="var(--color--white)"
                         onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
