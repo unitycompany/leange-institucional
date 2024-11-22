@@ -51,13 +51,17 @@ const StyledTextPet = styled.section`
             backdrop-filter: blur(10px);
         }
     }
+
+    & > h1 b{
+        font-weight: 500;
+    }
 `;
 
 const PetFriendlyCarousel = ({ carousels }) => {
     return (
         <>
             <StyledTextPet>
-                <h1 data-aos="fade-up" data-aos-delay="200">Pet Friendly</h1>
+                <h1 data-aos="fade-up" data-aos-delay="200"><b>100%</b> Pet Friendly</h1>
                 <CustomButton 
                     text="Reservar agora!"
                     textColor="var(--color--black)"

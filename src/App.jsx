@@ -14,7 +14,8 @@ import Mar from './pages/Mar/Mar';
 import NavegationBar from './components/navegationBar';
 import AcomodaSerra from './pages/Acomoda/acomodaSerra';
 import AcomodaMar from './pages/Acomoda/acomodaMar';
-
+import LpMar from './pages/Mar/LPmar';
+import LpSerra from './pages/Serra/LPserra';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -41,8 +42,25 @@ function AnimatedRoutes() {
           <Route path="/event" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Event /></motion.div>} />
           <Route path="/acomodaMar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><AcomodaMar /></motion.div>} />
           <Route path="/acomodaSerra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><AcomodaSerra /></motion.div>} />
+          <Route path="/lpSerra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><LpSerra /></motion.div>} />
+          <Route path="/lpMar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><LpMar /></motion.div>} />
         </Routes>
       </AnimatePresence>
+    </>
+  );
+}
+
+function AppContent() {
+  const location = useLocation();
+
+  // Ocultar NavegationBar nas rotas lpMar e lpSerra
+  const hiddenRoutes = ['/lpMar', '/lpSerra'];
+  const hideNav = hiddenRoutes.includes(location.pathname);
+
+  return (
+    <>
+      {!hideNav && <NavegationBar />}
+      <AnimatedRoutes />
     </>
   );
 }
@@ -50,8 +68,7 @@ function AnimatedRoutes() {
 function App() {
   return (
     <Router>
-      <NavegationBar />
-      <AnimatedRoutes />
+      <AppContent />
     </Router>
   );
 }

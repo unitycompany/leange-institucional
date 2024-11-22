@@ -129,6 +129,12 @@ const StyledParagraph = styled.p`
     font-family: var(--font--comfortaa);
     font-weight: 100;
 
+    & > ol {
+        margin-left: 20px;
+        list-style-type: disc;
+        line-height: 140%;
+    }
+
     @media (max-width: 768px){
         width: 100%;
         font-size: 1rem;
@@ -161,11 +167,16 @@ const Pensao = ({ colorDefinedBold }) => {
                     Alimentação <b>Inclusa</b>
                 </StyledTitle>
                 <StyledParagraph data-aos="fade-down" data-aos-delay="500">
-                    Sabe aquela comida com sabor, tempero e afeto que te abraça? <br /> <br />
-                    Essa é a gastronomia registrada da LeAnge! <br /><br />
+                    Na <b>Le Ange</b>, tudo é pensado para oferecer uma experiência gastronômica diversificada, atendendo todo tipo de restrição alimentar e valorizando ingredientes locais e frescos.  <br /> <br />
                     Nossa estadia dispõe de um restaurante, onde são oferecidas todas as
-                    refeições do dia – café da manhã, almoço, chá da tarde e jantar, incluindo
-                    nossas deliciosas sobremesas.
+                    refeições do dia:<br /><br />
+                    <ol type="disc">
+                        <li>Café da manhã;</li>
+                        <li>Almoço;</li>
+                        <li>Chá da tarde;</li>
+                        <li>Jantar.</li><br />
+                    </ol>
+                    Incluindo as nossas deliciosas sobremesas.
                 </StyledParagraph>
                 <IconButton
                     data-aos="fade-up" data-aos-delay="200"

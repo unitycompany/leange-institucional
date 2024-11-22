@@ -69,6 +69,10 @@ const SobreContainer = styled.section`
             }
         }
 
+        & > h4 b{
+            font-weight: 400;
+        }
+
         & > p {
             width: 80%;
             font-family: var(--font--comfortaa);
@@ -759,8 +763,8 @@ const Sobre = () => {
             <SobreContainer>
                 <div>
                     <h1 data-aos="fade-up" data-aos-delay="100">Pousada Le Ange</h1>
-                    <h4 data-aos="fade-down" data-aos-delay="200">A pousada mais Pet Friendly do Brasil</h4>
-                    <p data-aos="fade-up" data-aos-delay="300">Um empreendimento familiar fundado em 2018, a Pousada LeAnge Serra surgiu da paixão dos fundadores pelo amor por quatro patas, bem-estar e hospitalidade, situando-se em Miguel Pereira, Rio de Janeiro. Com o sucesso da primeira unidade, expandimos para Búzios em 2023, criando a Pousada LeAnge Mar. A filosofia por trás das nossas pousadas é oferecer um refúgio acolhedor e luxuoso, em que cada detalhe é cuidadosamente pensado para proporcionar conforto e satisfação.</p>
+                    <h4 data-aos="fade-down" data-aos-delay="200">A pousada mais <b>Pet Friendly</b> do Brasil</h4>    
+                    <p data-aos="fade-up" data-aos-delay="300">Fundada em 2018 em Miguel Pereira, Rio de Janeiro, a Pousada Le Ange Serra nasceu da nossa paixão por quatro patas, bem-estar e hospitalidade. Com o sucesso da primeira unidade, expandimos para Búzios, em 2023, criando a Pousada Le Ange Mar. A filosofia por trás é oferecer mais do que uma pousada, um refúgio acolhedor.</p>
                 </div>
                 <div data-aos="fade-left" data-aos-delay="400">
                     <img 
@@ -791,9 +795,9 @@ const Sobre = () => {
 
 
                 <div>
-                    <h1 data-aos="fade-up" data-aos-delay="100">Duas unidades,</h1>
-                    <h4 data-aos="fade-down" data-aos-delay="200">dois cenários incomparáveis</h4>
-                    <p data-aos="fade-up" data-aos-delay="300">A Pousada LeAnge Serra oferece 10 suítes deslumbrantes em meio à natureza exuberante de Miguel Pereira. Já a Pousada LeAnge Mar, com suas 8 suítes exclusivas, proporciona uma experiência costeira em Búzios, com vista direta para o mar.</p>
+                    <h1 data-aos="fade-up" data-aos-delay="100">2 unidades,</h1>
+                    <h4 data-aos="fade-down" data-aos-delay="200">2 refúgios únicos</h4>
+                    <p data-aos="fade-up" data-aos-delay="300">A Pousada LeAnge Serra oferece 10 suítes aconchegantes em meio à região serrana de Miguel Pereira. Já a Pousada LeAnge Mar, com suas 8 suítes exclusivas, proporciona uma experiência costeira em Búzios, com vista direta para o mar.</p>
                 </div>
 
             </UnidadeContainer>
@@ -802,7 +806,7 @@ const Sobre = () => {
 
                 <div>
                     <h1 data-aos="fade-up" data-aos-delay="100">Diferenciais</h1>
-                    <p data-aos="fade-down" data-aos-delay="200">Somos Pet Lovers, aqui não temos limite de porte, quantidade ou raça. Nosso conceito permite que os pets frequentem o restaurente, a piscina e qualquer outro espaço. Nos tornando assim ÚNICOS com este tipo de experiência.</p>
+                    <p data-aos="fade-down" data-aos-delay="200">Somos mais que Pet Friendly, somos <b>Pet Lovers!</b> Por aqui não temos limite de porte, quantidade ou raça. Nosso conceito permite que os pets frequentem o restaurente, a piscina e qualquer outro espaço. Assim, tornando-nos ÚNICOS a oferecer este tipo de experiência.</p>
                 </div>
 
                 <div>
@@ -838,8 +842,8 @@ const Sobre = () => {
                 
                 <div>
                     <div>
-                        <h1 data-aos="fade-down" data-aos-delay="100">Gastronomias</h1>
-                        <p data-aos="fade-up" data-aos-delay="200">Oferecemos um serviço all inclusive que abrange todas as refeições, atendendo todas as restrições alimentares de nossos hóspedes. Nosso compromisso é proporcionar uma experiência gastronômica diversificada e de alta qualidade, utilizando produtos frescos e locais.</p>
+                        <h1 data-aos="fade-down" data-aos-delay="100">Gastronomia</h1>
+                        <p data-aos="fade-up" data-aos-delay="200">Oferecemos um serviço <i>all inclusive</i> que abrange todas as refeições, atendendo todas as restrições alimentares dos nossos hóspedes. Nosso compromisso é proporcionar uma experiência gastronômica diversificada e de alta qualidade, utilizando produtos frescos e locais.</p>
                     </div>
                     <div>
                         <img 
@@ -874,7 +878,7 @@ const Sobre = () => {
                     </div>
                     <div>
                         <h1 data-aos="fade-up" data-aos-delay="300">Espaços compartilhados</h1>
-                        <p data-aos="fade-down" data-aos-delay="400">Nossos espaços compartilhados incluem bibliotecas aconchegantes, sala de jogos e áreas de lazer diversificadas. Na Serra, temos piscinas, ofurô, hot tub, spa e acesso às cachoeiras, enquanto em Búzios, nossos hóspedes desfrutam de piscinas e ofurôs com vistas incríveis do mar aberto, além disso, estamos localizados próximo ao Mirante do Pai Vitório.</p>
+                        <p data-aos="fade-down" data-aos-delay="400">Nossos espaços compartilhados incluem bibliotecas aconchegantes, sala de jogos e áreas de lazer diversificadas. Na Serra, temos piscinas, ofurô, hot tub, SPA e acesso às cachoeiras. Já em Búzios, nossos hóspedes desfrutam da piscina e dos ofurôs com vista incrível do mar aberto, além disso, estamos localizados próximo ao Mirante do Pai Vitório.</p>
                     </div>
                 </div>
 
@@ -885,11 +889,11 @@ const Sobre = () => {
                 <div>
                     <div>
                         <h1 data-aos="fade-up" data-aos-delay="150">Suítes</h1>
-                        <p data-aos="fade-down" data-aos-delay="300">Ambas as unidades dispõem de suítes luxuosas, equipadas com banheiras de imersão, camas king-size e roupas de cama de 400 fios; na Serra, cada suíte conta com uma lareira aconchegante, enquanto em Búzios, a vista para o mar é um espetáculo à parte, garantindo uma experiência de tranquilidade incomparável.</p>
+                        <p data-aos="fade-down" data-aos-delay="300">Ambas as unidades dispõem de suítes luxuosas, equipadas com banheiras de imersão, camas king-size e roupas de cama de 400 fios. Na Serra, cada suíte conta com uma lareira aconchegante, enquanto em Búzios, a vista para o mar é um espetáculo à parte, garantindo uma experiência de tranquilidade incomparável.</p>
                     </div>
                     <div>
-                        <h1 data-aos="fade-up" data-aos-delay="400">Nossa Pousada</h1>
-                        <p data-aos="fade-down" data-aos-delay="500">Pedimos que leve em consideração, se o seu pet é amigavel, pois teremos diversos pets na pousada, também só aceitamos humanos acompanhados por pets e, a idade mínima para hospedagem é de 13 anos.</p>
+                        <h1 data-aos="fade-up" data-aos-delay="400">Convivência</h1>
+                        <p data-aos="fade-down" data-aos-delay="500">Pedimos que considere se o seu pet é amigável, pois a pousada recebe vários outros pets. Além disso, aceitamos apenas humanos acompanhados por pets, e a idade mínima para hospedagem é 13 anos.</p>
                     </div>
                 </div>
                 

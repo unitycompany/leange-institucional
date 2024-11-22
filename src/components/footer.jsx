@@ -436,7 +436,7 @@ const Footer = () => {
                             Fale agora com a nossa Central de Reservas
                         </h1>
                         <p data-aos="fade-up" data-aos-delay="100">
-                            Todas as informações são usadas apenas para entrar em contato. Entenda melhor sobre o uso das suas informações pela nossa
+                            As suas informações são mantidas em segurança e utilizadas apenas para entrar em contato. Entenda melhor como tratamos os seus dados pela nossa
                             <a href="https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view" target='_blank'>política de privacidade</a>.
                         </p>
                         <hr data-aos="fade-right" data-aos-delay="200" />
@@ -468,7 +468,7 @@ const Footer = () => {
                             <input
                                 type="email"
                                 id="email"
-                                placeholder="Preciso saber seu e-mail também!"
+                                placeholder="Preciso saber o seu e-mail também"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 data-aos="fade-up" data-aos-delay="700"
@@ -476,14 +476,14 @@ const Footer = () => {
                             <input
                                 type="tel"
                                 id="tel"
-                                placeholder="Por fim, seu número de WhatsApp"
+                                placeholder="Por fim, o seu número de WhatsApp"
                                 value={tel}
                                 onChange={(e) => setTel(e.target.value)}
                                 data-aos="fade-up" data-aos-delay="800"
                             />
                             <SubmitBtn type="submit" data-aos="fade-up" data-aos-delay="1000">
                                 <FaArrowRightLong size={20} />
-                                <span>Enviar meus dados para contato</span>
+                                <span>Enviar dados para contato</span>
                             </SubmitBtn>
                         </form>
                     </StyledForm>
@@ -506,8 +506,8 @@ const Footer = () => {
                         <a href='#/serra' data-aos="fade-down" data-aos-delay="200"> <MdOutlineArrowRight /> Le Ange Serra </a>
                         <a href='#/mar' data-aos="fade-up" data-aos-delay="250"> <MdOutlineArrowRight /> Le Ange Mar </a>
                         <a href='#/event' data-aos="fade-down" data-aos-delay="300"> <MdOutlineArrowRight /> Eventos </a>
-                        <a href='#/acomodaSerra' data-aos="fade-up" data-aos-delay="350"> <MdOutlineArrowRight /> Acomodação Serra </a>
-                        <a href='#/acomodaMar' data-aos="fade-up" data-aos-delay="400"> <MdOutlineArrowRight /> Acomodação Mar </a>
+                        <a href='#/acomodaSerra' data-aos="fade-up" data-aos-delay="350"> <MdOutlineArrowRight /> Acomodações Serra </a>
+                        <a href='#/acomodaMar' data-aos="fade-up" data-aos-delay="400"> <MdOutlineArrowRight /> Acomodações Mar </a>
                     </div>
                     <div>
                         <h2 data-aos="fade-up" data-aos-delay="400">Central de reserva</h2>

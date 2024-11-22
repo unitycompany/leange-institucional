@@ -628,7 +628,7 @@ const Eventos = () => {
 
                 <div>
                     <h1 data-aos="fade-up" data-aos-delay="100">Do alto da <b><a href='#/serra'>Serra</a></b>,<br></br> às ondas do <b><a href='#/mar'>Mar</a></b></h1>
-                    <p data-aos="fade-up" data-aos-delay="200">Venha celebrar na LeAnge, onde o amor pelos pets encontra o cenário perfeito para os seus eventos.</p>
+                    <p data-aos="fade-up" data-aos-delay="200">Venha celebrar na Le Ange, onde o amor pelos pets encontra o cenário ideal para tornar os seus eventos ainda mais especiais.</p>
                     <Button 
                     data-aos="fade-up" data-aos-delay="300"
                     onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
@@ -711,11 +711,6 @@ const Eventos = () => {
                             Decoração Romântica na Suíte
                         </StyledItemEvent>
 
-                        <StyledItemEvent data-aos="fade-up" data-aos-delay="250">
-                            <BiBus />
-                            Massagem Relaxante
-                        </StyledItemEvent>
-
                         <StyledItemEvent data-aos="fade-up" data-aos-delay="300">
                             <FaClock />
                             Late Checkout no Domingo
@@ -756,11 +751,11 @@ const Eventos = () => {
                         </StyledItemEvent>
                         <StyledItemEvent data-aos="fade-up" data-aos-delay="250">
                             <PiFlagBannerFill />
-                            Painéis temáticos
+                            Painéis Temáticos
                         </StyledItemEvent>
                         <StyledItemEvent data-aos="fade-up" data-aos-delay="300">
                             <FaBirthdayCake />
-                            Bolo para o pet
+                            Bolo para o Pet
                         </StyledItemEvent>
 
                     </ol>

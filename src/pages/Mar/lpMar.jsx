@@ -16,7 +16,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const StyledEspace = styled.div`
-    height: 5vh;
+    height: 0vh;
 
     @media (max-width: 768px) {
         height: 0vh;
@@ -398,7 +398,7 @@ const PetFriendlyImages = [
     }
 ];
 
-const Mar = () => {
+const LpMar = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
@@ -476,4 +476,4 @@ const Mar = () => {
     );
 };
 
-export default Mar;
+export default LpMar;

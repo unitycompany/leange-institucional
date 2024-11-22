@@ -213,7 +213,7 @@ const AcomodaComponent2 = ({ images }) => {
         <StyledAcomodaContainer>
             <StyledAcomodaTexts>
                 <div>
-                    <h1 data-aos="fade-up" data-aos-delay="100">Conheça as nossas suítes</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Conheça as suítes da Le Ange Mar</h1>
                 </div>
                 <div data-aos="fade-down" data-aos-delay="250">
                     <IconButton

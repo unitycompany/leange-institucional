@@ -16,7 +16,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const StyledEspace = styled.div`
-    height: 5vh;
+    height: 0vh;
 
     @media (max-width: 768px){
         height: 0vh;
@@ -408,7 +408,7 @@ const ImagesAcomoda = [
     { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133110/suiteMaster10_gqoxfm.jpg", text: "Suíte Master 10", loading: "lazy" },
 ];
 
-const Serra = () => {
+const LpSerra = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
@@ -477,4 +477,4 @@ const Serra = () => {
     );
 };
 
-export default Serra;
+export default LpSerra;
