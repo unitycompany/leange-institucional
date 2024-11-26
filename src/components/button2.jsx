@@ -57,6 +57,7 @@ const ButtonAcomoda = ({ text, onClick, backDefine, colorDefine }) => {
   
   return (
     <StyledButtonAcomodo 
+      id='clickwpp'
       backDefine={backDefine} 
       colorDefine={colorDefine} 
       onClick={onClick} 

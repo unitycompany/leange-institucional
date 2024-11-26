@@ -96,6 +96,7 @@ const ButtonText = styled.span`
 
 const Button = ({ text, onClick, color, backgroundColor, borderColor, hoverColor }) => (
     <StyledButton
+        id='clickwpp'
         onClick={onClick}
         color={color}
         background={backgroundColor}

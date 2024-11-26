@@ -71,12 +71,12 @@ const IconButton = ({
   };
 
   return (
-    <ButtonContainer borderColor={borderColor} textColor={textColor} onClick={handleClick}>
+    <ButtonContainer borderColor={borderColor} textColor={textColor} onClick={handleClick} id='clickwpp'>
       <DefaultButton className="default-btn">
         <MdHotel size={15} color={textColor || 'var(--color--black)'} />
         <ButtonText textColor={textColor}>{text}</ButtonText>
       </DefaultButton>
-      <HoverButton className="hover-btn" hoverColor={hoverColor}>
+      <HoverButton className="hover-btn" hoverColor={hoverColor} id='clickwpp'>
         <LuMousePointerClick size={15} color={hoverTextColor || 'var(--color--white)'} />
         <HoverButtonText hoverTextColor={hoverTextColor}>{text2}</HoverButtonText>
       </HoverButton>

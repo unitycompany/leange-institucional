@@ -82,6 +82,7 @@ const CustomButton = ({
 }) => {
   return (
     <ButtonWrapper
+      id='clickwpp'
       onClick={onClick}
       textColor={textColor}
       backgroundColor={backgroundColor}
