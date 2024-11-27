@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, memo } from 'react';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -24,8 +24,18 @@ const BackgroundVideo = () => {
 
   useEffect(() => {
     const videoElement = videoRef.current;
-    videoElement?.play().catch((error) => console.error("Falha ao iniciar o vídeo:", error));
-  }, []);
+
+    if (videoElement) {
+      console.log("Iniciando o vídeo apenas uma vez.");
+      videoElement.play().catch((error) => {
+        console.error("Erro ao iniciar o vídeo:", error);
+      });
+    }
+
+    return () => {
+      console.log("Componente desmontado.");
+    };
+  }, []); 
 
   return (
     <StyledVideo
@@ -34,13 +44,14 @@ const BackgroundVideo = () => {
       loop
       muted
       playsInline
-      initial={{ clipPath: 'circle(0% at 50% 50%)' }}
-      animate={{ clipPath: 'circle(100% at 50% 50%)' }}
-      transition={{ duration: 1, ease: 'easeInOut' }}
+      preload="auto"
+      initial={{ clipPath: "circle(0% at 50% 50%)" }}
+      animate={{ clipPath: "circle(100% at 50% 50%)" }}
+      transition={{ duration: 1, ease: "easeInOut" }}
     >
-      <source 
-        src="https://res.cloudinary.com/dupg7clzc/video/upload/v1730836205/V%C3%8DDEO_SITE_xvpltm.mp4" 
-        type="video/mp4" 
+      <source
+        src="https://res.cloudinary.com/dupg7clzc/video/upload/v1730836205/V%C3%8DDEO_SITE_xvpltm.mp4"
+        type="video/mp4"
       />
       Seu navegador não suporta o elemento de vídeo.
     </StyledVideo>

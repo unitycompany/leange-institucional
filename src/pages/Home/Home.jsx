@@ -552,6 +552,33 @@ const StyledButtonCenter = styled.div`
     }
 `
 
+const HomeImage = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 1000px 1000px / 100px 100px;
+    overflow: hidden;
+
+    @media (max-width:768px){
+        flex-direction: column;
+    }
+
+    & > img{
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+
+        @media (max-width:768px){
+            width: 100%;
+            height: 50%;
+            object-position: center;
+        }
+        
+    }
+`
+
 const Home = () => {
     useEffect(() => {
         AOS.init({
@@ -569,7 +596,12 @@ const Home = () => {
 
             {/* <PromotionModal /> */}
 
-            <BackgroundVideo />
+            {/* <BackgroundVideo /> */}
+
+            <HomeImage>
+                <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1732195397/FOTO-MAR_qssync.webp"></img>
+                <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp"></img>
+            </HomeImage>
 
             <WhatsAppButton />
 
