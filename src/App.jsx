@@ -14,8 +14,8 @@ import Mar from './pages/Mar/Mar';
 import NavegationBar from './components/navegationBar';
 import AcomodaSerra from './pages/Acomoda/acomodaSerra';
 import AcomodaMar from './pages/Acomoda/acomodaMar';
-import LpMar from './pages/Mar/LPmar';
-import LpSerra from './pages/Serra/LPserra';
+import LpMar from './pages/Mar/lpMar';
+import LpSerra from './pages/Serra/lpSerra';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
