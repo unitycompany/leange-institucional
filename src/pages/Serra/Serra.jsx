@@ -43,7 +43,7 @@ const StyledSectionHome = styled.section`
         position: absolute;
         z-index: 1;
         opacity: .05;
-        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
+        background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/foto_de_mulher_com_dois_cachorros_bwwkmi_pyqnx0.jpg');
         background-position: center;
         background-size: cover;
 
@@ -63,7 +63,7 @@ const StyledSectionHome = styled.section`
 const StyledHomeDiv = styled.div`
     width: 45%;
     height: 100%;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp');
+    background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/foto_de_mulher_com_dois_cachorros_bwwkmi_pyqnx0.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -174,89 +174,89 @@ const slides = [
         title: "Pet Friendly",
         description: "Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Aqui, o seu pet tem liberdade total para acessar todas as nossas comodidades!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731329808/cachorro_na_piscina_sjs7ft.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730868/cachorro_olhando_pra_camera_ndannw_hvd1rf.webp"
     },
     {
         title: "Aventura",
         description: "Na propriedade, há trilhas que percorrem a natureza, beirando o rio! Em diversos pontos, você pode dar uma paradinha para tomar um banho nas águas frescas e renovar as energias!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731332405/aventura_odmky4.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732523/aventura_odmky4_x0nryc.webp"
     },
     {
         title: "Refrescar",
         description: "Nossa maravilhosa piscina de borda infinita possui aquecimento solar e tratamento especial por ozônio, com níveis baixíssimos de cloro, além de contar com um ofurô acoplado, perfeito para aproveitar o final de tarde.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731332405/cachorro_pulando_na_piscina_lrhxpp.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732524/cachorro_pulando_na_piscina_lrhxpp_gyqrfv.jpg"
     },
     {
         title: "Sossego",
         description: "A área da sauna fica situada ao lado da mata, envolvida pelo som relaxante do rio que passa. Aqui, você pode desfrutar de um hot tub abastecido por água natural e aquecido à lenha, o combo perfeito para você relaxar.",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731327605/sossego_1_jsshhu.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730257/sossego_1_jsshhu_1_pyjrgu.jpg"
     },
     {
         title: "Lazer",
         description: "Nossas áreas internas contam com três salas superequipadas e aconchegantes, sendo elas: sala de TV, sala de estar, sala de jogos com mesa de bilhar, carteado, jogos de tabuleiro e biblioteca.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731326209/sala-de-estar_xuxiou.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/sala-de-estar_xuxiou_knlqok.webp"
     },
     {
         title: "Cozinha",
         description: "Todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1732215093/buffetComprimido-compressed-_1__tjiacp.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731824/buffetComprimido-compressed-_1__tjiacp_gv9frv.webp"
     },
     {
         title: "Diversão",
         description: "Espaço de sobra para o seu pet se divertir! Espaço agility à beira do lago, com muita grama, para o seu pet, correr, pular, brincar e, claro, nadar!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731329808/parc%C3%A3o_mdvo8p.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730258/parc%C3%A3o_mdvo8p_sfazpp.webp"
     },
     {
         title: "Adega",
         description: "Para tornar a sua experiência ainda mais especial, contamos com uma adega subterrânea para a climatização perfeita dos vinhos, bar com carta variada de drinks, cervejas e destilados.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731329808/adega_uje7gn.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730261/adega_uje7gn_gdxn3g.webp"
     },
     {
         title: "Suítes",
         description: "São 10 suítes encatadoras e cada uma possui o seu charme. Todas dispõem de uma banheira com vista para a natureza, lareira, cama king-size, ar-condicionado, frigobar e varanda.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731345889/1_ytelar_a4gkq4.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732729616/suiteSerra2_aksiu9_feouvg.webp"
     },
     {
         title: "Relaxar",
         description: "Relaxe no nosso SPA com uma vista de frente para a mata! Você pode escolher contratar os nossos serviços de massoterapia, manicure e pedicure.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1730833077/slide04_li94ks.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732524/slide04_li94ks_oorjnr.webp"
     }
 ];
 
 const PetFriendlyImages = [
     {
         images: [
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016972/serra1_dlmpih.webp", alt: 'Cachorro surfando na piscina', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/serra2_h64lp3.webp", alt: 'Cachorro andando na borda da piscina', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/serra3_hqphcd.webp", alt: 'Cachorro sentado tomando sol e sorrindo para a foto', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp", alt: '2 cachorros e uma mulher no meio', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/serra5_liz2la.webp", alt: 'Cachorro mordendo uma bolinha', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/serra4_anm8q9.webp", alt: 'Casal com um casal de cachorro sentado na beira da piscina', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335890/16_mwucoo_qw5inq.webp", alt: 'Mulher na cachoeira com cachorros brincando', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335889/15_epymcf_vqg5qs.webp", alt: 'Mulher e cachorro na piscina sorrindo', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732018336/serra5_vgmvai.webp", alt: '3 cachorros tirando uma selfie', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732018336/serra3_abkfr4.webp", alt: 'Cachorro dormindo na rede em cima da cachoeira', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732696/serra1_dlmpih_to7gwm.webp", alt: 'Cachorro surfando na piscina', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732698/serra2_h64lp3_dtgvyt.webp", alt: 'Cachorro andando na borda da piscina', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732700/serra3_hqphcd_xoguiy.webp", alt: 'Cachorro sentado tomando sol e sorrindo para a foto', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/foto_de_mulher_com_dois_cachorros_bwwkmi_pyqnx0.jpg", alt: '2 cachorros e uma mulher no meio', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732701/serra5_liz2la_exkn5b.jpg", alt: 'Cachorro mordendo uma bolinha', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732704/serra4_anm8q9_zueh0h.webp", alt: 'Casal com um casal de cachorro sentado na beira da piscina', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732707/16_mwucoo_qw5inq_od6ein.jpg", alt: 'Mulher na cachoeira com cachorros brincando', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732708/15_epymcf_vqg5qs_ljexgt.webp", alt: 'Mulher e cachorro na piscina sorrindo', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732709/serra5_vgmvai_aa3uh5.jpg", alt: '3 cachorros tirando uma selfie', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732713/serra3_abkfr4_abucit.webp", alt: 'Cachorro dormindo na rede em cima da cachoeira', loading: "lazy", label: 'Le Ange Serra' },
         ],
     },
     {
         images: [
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732018336/serra2_qzxvpu.webp", alt: 'Cachorro dormindo no sofá', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732018336/serra4_wdvsmr.webp", alt: 'Cachorro papai noel', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335883/11_wlyxbh_wxtele.webp", alt: 'Um cachorro no cola de um humano sorrindo', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731329808/parc%C3%A3o_mdvo8p.webp", alt: '2 cachorros e uma mulher no meio', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335884/12_epl2gw_oc9uc0.webp", alt: 'Cachorro brincando na grama', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335885/13_hhitda_hfolhl.webp", alt: '2 cachorros sorrindo na rede', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335887/14_ybyv7y_wt3zn2.webp", alt: 'Uma mulher e um cachorro do lado dela', loading: "lazy", label: 'Le Ange Serra' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335892/17_awkinq_ommg1k.webp", alt: '3 cachorros brincando na praia', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732018336/serra1_tohjvc.webp", alt: 'Cachorro andando na cachoeira', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732714/serra2_qzxvpu_ttcjqm.webp", alt: 'Cachorro dormindo no sofá', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732717/11_wlyxbh_wxtele_kbbm8r.webp", alt: 'Cachorro papai noel', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732718/serra4_wdvsmr_z6jid2.webp", alt: 'Um cachorro no cola de um humano sorrindo', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732720/12_epl2gw_oc9uc0_w3jelm.jpg", alt: '2 cachorros e uma mulher no meio', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732729373/cachorro_na_m%C3%A3o_kil7xk_q6lqew.webp", alt: 'Cachorro brincando na grama', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732721/13_hhitda_hfolhl_ilbwmk.jpg", alt: '2 cachorros sorrindo na rede', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732723/14_ybyv7y_wt3zn2_w8whu2.webp", alt: 'Uma mulher e um cachorro do lado dela', loading: "lazy", label: 'Le Ange Serra' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732724/17_awkinq_ommg1k_1_vqdt6j.jpg", alt: '3 cachorros brincando na praia', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732728/serra1_tohjvc_b6hpdg.jpgp", alt: 'Cachorro andando na cachoeira', loading: "lazy", label: 'Le Ange Serra' },
         ],
         reverse: true
     }
@@ -321,7 +321,7 @@ const StyledContainerEvents = styled.section`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730393/risotos_oj42yf_nivhjz.webp',
         title: 'Noite de Risotos',
         dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
         features: [
@@ -333,7 +333,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330265/pizzas_lgsqcd.webp',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/pizzas_lgsqcd_ekmh4f.webp',
         title: 'Noite das pizzas',
         dateRange: '06/12/2024 até 08/12/2024 (3 diárias)',
         features: [
@@ -345,7 +345,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/frutos_do_mar1_ly3hq1_ch6mr3.webp',
         title: 'Frutos do Mar',
         dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
@@ -357,8 +357,8 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/fique3pague4_fiupcm.webp',
-        title: 'Fique 3 pague 4',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/fique3pague4_fiupcm_bgpy9c.webp',
+        title: 'Fique 4 pague 3',
         dateRange: 'Segunda-feira a Sexta-feira',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
@@ -369,7 +369,7 @@ const events = [
         discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330266/natal_wrunee.webp',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730395/natal_wrunee_ceaifp.webp',
         title: 'Pacote de Natal',
         dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
         features: [
@@ -396,16 +396,16 @@ const StyledButtonCenter = styled.div`
 `;
 
 const ImagesAcomoda = [
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133147/suiteSuperior1_gpjls0.jpg", text: "Suíte Superior 1", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1732214237/foto2_pn8axc.webp", text: "Suíte Superior 2", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133142/suiteSuperior3_pgr53r.jpg", text: "Suíte Superior 3", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133142/suiteStandard4_mrtwhq.jpg", text: "Suíte Standard 4", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133138/suiteStandard5_j9oyln.jpg", text: "Suíte Standard 5", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133137/suiteMaster6_id3iqs.jpg", text: "Suíte Master 6", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133133/suiteMaster7_bqdek7.jpg", text: "Suíte Superior 7", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133111/suiteStandard8_lpyi22.jpg", text: "Suíte Standard 8", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133110/suiteSuperior9_v1mxwb.jpg", text: "Suíte Superior 9", loading: "lazy" },
-    { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1730133110/suiteMaster10_gqoxfm.jpg", text: "Suíte Master 10", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732729616/suiteSerra1_wm28o4_pbmwec.webp", text: "Suíte Superior 1", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732729616/foto2_pn8axc_qyclur.webp", text: "Suíte Superior 2", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732956/suiteSuperior3_pgr53r_xengfh.webp", text: "Suíte Superior 3", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732957/suiteStandard4_mrtwhq_vpx77n.webp", text: "Suíte Standard 4", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732960/suiteStandard5_j9oyln_id3z9p.webp", text: "Suíte Standard 5", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732963/suiteMaster6_id3iqs_gttw2r.webp", text: "Suíte Master 6", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732964/suiteMaster7_bqdek7_gbhmfk.webp", text: "Suíte Superior 7", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732967/suiteStandard8_lpyi22_yiiemz.webp", text: "Suíte Standard 8", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732972/suiteSuperior9_v1mxwb_pfd3ww.webp", text: "Suíte Superior 9", loading: "lazy" },
+    { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732975/suiteMaster10_gqoxfm_kxxaso.webp", text: "Suíte Master 10", loading: "lazy" },
 ];
 
 const Serra = () => {
@@ -419,10 +419,7 @@ const Serra = () => {
         <>
             <Helmet>
                 <title>Le Ange Serra - Pousada Le Ange</title>
-                <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429558/3_gkl82v.svg" />
             </Helmet>
-            
-            {/* <VideoPlayer videoSrc="https://res.cloudinary.com/dupg7clzc/video/upload/f_auto,q_50,w_2000/v1732279146/Serra_s08vww.mp4" /> */}
 
             <StyledEspace />
             
