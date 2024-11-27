@@ -754,7 +754,6 @@ const Sobre = () => {
         <>
             <Helmet>
                 <title>Sobre Nós - Pousada Le Ange</title>
-                <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429555/2_mvzbuj.svg" />
             </Helmet>
             <Espaco></Espaco>
 
@@ -768,7 +767,7 @@ const Sobre = () => {
                 </div>
                 <div data-aos="fade-left" data-aos-delay="400">
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331472/cachorro_kcfx8n.webp" 
+                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730866/cachorro_kcfx8n_meecoi.webp" 
                     alt='foto da gaia, cachorra da pousada le ange'
                     loading='lazy'
                     data-aos="fade-right" data-aos-delay="500"
@@ -780,13 +779,13 @@ const Sobre = () => {
 
                 <div>
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331474/foto_da_pousada_do_mar_d9fx7r.webp" 
+                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/pousada_de_cima_vpzpdb_kssj6e.webp" 
                     alt='foto da le ande da mar' 
                     loading='lazy'
                     data-aos="fade-up" data-aos-delay="100"
                     />
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331474/foto_da_pousada_da_serra_lefdif.webp" 
+                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728791/foto_da_pousada_da_serra_lefdif_aikpna.jpg" 
                     alt='foto da le ande da serra'
                     loading='lazy' 
                     data-aos="fade-down" data-aos-delay="100"
@@ -811,25 +810,25 @@ const Sobre = () => {
 
                 <div>
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331473/rede_no_mar_ajtwwv.webp" 
+                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730866/rede_no_mar_ajtwwv_oz8zod.webp" 
                     loading='lazy'
                     alt='rede na le ange mar' 
                     data-aos="fade-up" data-aos-delay="100"
                     />
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731327605/sossego_1_jsshhu.webp" 
+                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730257/sossego_1_jsshhu_1_pyjrgu.jpg" 
                     loading='lazy'
                     alt='hot tube na le ange serra' 
                     data-aos="fade-down" data-aos-delay="200"
                     />
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/divers%C3%A3o_na_serra_fzhl7y.webp"
+                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730867/divers%C3%A3o_na_serra_fzhl7y_t91e9t.jpg"
                     loading='lazy' 
                     alt='casal se divertindo na le ange serra'
                     data-aos="fade-up" data-aos-delay="300"
                     />
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331479/natal_jwdzzh.webp" 
+                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730867/natal_jwdzzh_atfzzu.webp" 
                     loading='lazy'
                     alt='foto da le ange com tema de natal' 
                     data-aos="fade-down" data-aos-delay="400"
@@ -847,13 +846,13 @@ const Sobre = () => {
                     </div>
                     <div>
                         <img 
-                        src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330265/pizzas_lgsqcd.webp" 
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/pizzas_lgsqcd_ekmh4f.webp" 
                         loading='lazy'
                         alt='foto da noite de pizzas na pousada le ange' 
                         data-aos="fade-up" data-aos-delay="300"
                         />
                         <img 
-                        src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp" 
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730393/risotos_oj42yf_nivhjz.webp" 
                         loading='lazy'
                         alt='foto da noite de risotos na pousada le ange' 
                         data-aos="fade-down" data-aos-delay="400"
@@ -864,13 +863,13 @@ const Sobre = () => {
                 <div>
                     <div>
                         <img 
-                        src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331477/cachorro_olhando_pra_camera_ndannw.webp"
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730868/cachorro_olhando_pra_camera_ndannw_hvd1rf.webp"
                         loading='lazy'
                         alt='foto do cachorro sorrindo para camera' 
                         data-aos="fade-up" data-aos-delay="100"
                          />
                         <img 
-                        src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731331476/foto_de_mulher_com_dois_cachorros_bwwkmi.webp" 
+                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/foto_de_mulher_com_dois_cachorros_bwwkmi_pyqnx0.jpg" 
                         loading='lazy'
                         alt='uma mulher e dois cachorros na pousada le ange' 
                         data-aos="fade-down" data-aos-delay="200"
@@ -899,7 +898,7 @@ const Sobre = () => {
                 
                 <div>
                     <img 
-                    src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_50,w_1500/v1732037857/IMG_0254_wdrn4v.webp" 
+                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730871/IMG_0254_wdrn4v_hghvvd.webp" 
                     alt='foto do quadro de cachorro na pousada le ange mar'
                     data-aos="flip-left" data-aos-delay="600"
                     />
