@@ -153,12 +153,12 @@ const Pensao = ({ colorDefinedBold }) => {
             <StyledPensaoImages>
                 <StyledTable>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335113/churrasco_l0chmi.jpg" alt="Homem fazendo churrasco na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="100"/>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335110/risoto-compressed_xqyhqx.jpg" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="200"/>
+                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728791/churrasqueira_w7akaf_x5xysl.jpg" alt="Homem fazendo churrasco na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="100"/>
+                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732731824/risoto-compressed_xqyhqx_pkztib.jpg" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="200"/>
                     </div>
                     <div>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1731335111/hamburguer-compressed_dhh0dx.jpg" alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" data-aos="fade-down" data-aos-delay="100"/>
-                        <img src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_50,w_1000/v1732215093/buffetComprimido-compressed-_1__tjiacp.webp" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-down" data-aos-delay="200"/>
+                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732731824/hamburguer-compressed_dhh0dx_bdo8iz.webp" alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" data-aos="fade-down" data-aos-delay="100"/>
+                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732731824/buffetComprimido-compressed-_1__tjiacp_gv9frv.webp" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-down" data-aos-delay="200"/>
                     </div>
                 </StyledTable>
             </StyledPensaoImages>
