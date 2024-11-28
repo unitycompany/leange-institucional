@@ -16,7 +16,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const StyledEspace = styled.div`
-    height: 0vh;
+    height: 5vh;
 
     @media (max-width: 768px) {
         height: 0vh;
@@ -42,7 +42,7 @@ const StyledSectionHome = styled.section`
         position: absolute;
         z-index: 1;
         opacity: 0.05;
-        background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732195397/FOTO-MAR_qssync.webp');
+        background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1732728789/FOTO-MAR_qssync_ei8mel.webp');
         background-position: center;
         background-size: cover;
 
@@ -62,7 +62,7 @@ const StyledSectionHome = styled.section`
 const StyledHomeDiv = styled.div`
     width: 45%;
     height: 100%;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1000/v1732195397/FOTO-MAR_qssync.webp');
+    background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1732728789/FOTO-MAR_qssync_ei8mel.webp');
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -174,49 +174,49 @@ const slides = [
         title: "Pet Friendly",
         description: "Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Aqui, o seu pet tem liberdade total para acessar todas as nossas comodidades!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1730832504/petfriendly-scaled_vsev2s.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731156/petfriendly-scaled_vsev2s_obkojq.webp"
     },
     {
         title: "Praia",
         description: "Para os amantes da praia, estamos localizados a apenas 150 metros da Praia Rasa, onde você e o seu pet podem aproveitar juntinhos e dar um mergulho delicioso no mar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731329813/cachorro_na_praia_pmqyi4.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730256/cachorro_na_praia_pmqyi4_p4nhwo.webp"
     },
     {
         title: "Piscina",
         description: "Nossa piscina aquecida com vista panorâmica para o oceano é de surpreender! Possui tratamento especial por ozônio com níveis baixíssimos de cloro, pensando no bem-estar da sua pele e a do seu pet também!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731327001/pousada_de_cima_vpzpdb.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/pousada_de_cima_vpzpdb_kssj6e.webp"
     },
     {
         title: "Ofurôs",
         description: "São dois ofurôs acoplados na piscina, para você relaxar na água quentinha, apreciando a vista exuberante do mar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731329813/ofuros_kyjddp.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730257/ofuros_kyjddp_raquu4.webp"
     },
     {
         title: "Sala de estar",
         description: "A sala de estar é aquela que abraça e aconchega. Cheia de sofás, você pode se acomodar e assistir à televisão, ou até mesmo ler um livro, sempre na companhia do seu pet.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1730832504/saladeestar_yakcqy.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731157/saladeestar_yakcqy_dtbu48.webp"
     },
     {
         title: "Cozinha",
         description: "Todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731335108/risoto1-compressed_m583dd.jpg"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731157/risoto1-compressed_m583dd_ekltxk.webp"
     },
     {
         title: "Bar",
         description: "Para completar ainda mais a sua experiência, contamos com uma carta variada de vinhos, destilados, drinks e cervejas!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1730832503/bar_qgdbog.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730257/bar_xl6dvc_bkc9w5.webp"
     },
     {
         title: "Suítes",
         description: "São 8 suítes, elegantemente, decoradas, todas com vista para o mar, banheira de imersão, varanda, cama king-size, ar-condicionado e frigobar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_1500/v1731329811/suites_pzghlo.webp"
+        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732729616/suiteMar2_qlgel2_d11sun.webp"
     }
 ];
 
@@ -236,14 +236,14 @@ const StyledSectionEspaco = styled.section`
 `;
 
 const ImagesAcomoda = [
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334570/suiteMar01_p6bfoi-compressed_kixsaa.jpg", "text": "Suíte Superior 1", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594863/IMG_0142-compressed_lfijwu.webp", "text": "Suíte Standard 2", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334576/suiteMar03_o9sxbf-compressed_uw2hox.jpg", "text": "Suíte Superior 3", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594863/IMG_0143-compressed_fk4kgv.webp", "text": "Suíte Superior 4", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334573/suiteMar05_oid9as-compressed_al5vur.jpg", "text": "Suíte Superior 5", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731594870/mar_master_8_m1x38m.jpg", "text": "Suíte Superior 6", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334571/suiteMar07_dgfxzq-compressed_kody5f.jpg", "text": "Suíte Master 7", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_5,w_1500/v1731334574/suiteMar08_g1gmt0-compressed_mymcv1.jpg", "text": "Suíte Master 8", "loading": "lazy" }
+    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731480/suiteMar01_p6bfoi-compressed_kixsaa_kjg49l.webp", "text": "Suíte Superior 1", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731481/IMG_0142-compressed_lfijwu_h6x05q.webp", "text": "Suíte Standard 2", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731481/suiteMar03_o9sxbf-compressed_uw2hox_plhelj.webp", "text": "Suíte Superior 3", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731484/IMG_0143-compressed_fk4kgv_oxklv8.webp", "text": "Suíte Superior 4", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731487/suiteMar05_oid9as-compressed_al5vur_spz4rq.webp", "text": "Suíte Superior 5", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731489/mar_master_8_m1x38m_onrxki.webp", "text": "Suíte Superior 6", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731489/suiteMar07_dgfxzq-compressed_kody5f_uyjy7m.webp", "text": "Suíte Master 7", "loading": "lazy" },
+    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731494/suiteMar08_g1gmt0-compressed_mymcv1_rtodwa.webp", "text": "Suíte Master 8", "loading": "lazy" }
 ];
 
 
@@ -293,65 +293,65 @@ const StyledContainerEvents = styled.section`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330264/risotos_oj42yf.webp',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730393/risotos_oj42yf_nivhjz.webp',
         title: 'Noite de Risotos',
         dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
         features: [
             { icon: <FaUtensils />, text: '30/11 - Noite de Risostos' },
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '359,20',
-        discount: 25
+        discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330265/pizzas_lgsqcd.webp',
-        title: 'Noite das Pizzas',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/pizzas_lgsqcd_ekmh4f.webp',
+        title: 'Noite das pizzas',
         dateRange: '06/12/2024 até 08/12/2024 (3 diárias)',
         features: [
             { icon: <FaUtensils />, text: '07/12 - Noite das pizzas' },
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '359,20',
-        discount: 25
+        discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/frutos_do_mar1_ly3hq1.webp',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/frutos_do_mar1_ly3hq1_ch6mr3.webp',
         title: 'Frutos do Mar',
         dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
             { icon: <FaUtensils />, text: '14/12 - Frutos do Mar' },
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '359,20',
-        discount: 25
+        discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330263/fique3pague4_fiupcm.webp',
-        title: 'Fique 3 Pague 4',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/fique3pague4_fiupcm_bgpy9c.webp',
+        title: 'Fique 4 pague 3',
         dateRange: 'Segunda-feira a Sexta-feira',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
             { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '538,90',
-        discount: 25
+        discount: 25,
     },
     {
-        image: 'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731330266/natal_wrunee.webp',
+        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730395/natal_wrunee_ceaifp.webp',
         title: 'Pacote de Natal',
         dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
             { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' }
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '918,40',
-        discount: 25
-    }
+        discount: 25,
+    },
 ];
 
 const StyledButtonCenter = styled.div`
@@ -370,29 +370,29 @@ const StyledButtonCenter = styled.div`
 const PetFriendlyImages = [
     {
         images: [
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335871/1_sxf4fc_a9uljb.webp", alt: 'Foto de cachorro com uma bola na boca', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335872/2_cldel9_wnqquw.webp", alt: 'Foto do cachorro sentado tomando sol', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335873/3_i0ctxp_megfsi.webp", alt: 'Cachorro na piscina sorrindo', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016972/mar5_wwsqtk.webp", alt: 'Cachorro tirando uma selfie com outros 3 cachorros', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731327000/cachorro-olhando-para-camera_wpovwv.webp", alt: 'Foto do cachorro olhando para a câmera', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335875/5_flrzdf_wyxn6v.webp", alt: 'Cachorro com a lingua para fora', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/mar4_ilxhpl.webp", alt: 'Cachorro na borda da piscina', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/mar6_wcjggv.webp", alt: 'Cachorro em uma prancha de surf na onda', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335877/6_b6jtbs_dfnbyu.webp", alt: 'Cachorro com óculos escuros', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335880/8_zr7p3o_czbag1.webp", alt: 'Cachorro e um cachorro pequeno', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731907/1_sxf4fc_a9uljb_pbaml7.webp", alt: 'Foto de cachorro com uma bola na boca', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731908/2_cldel9_wnqquw_gnk0f4.webp", alt: 'Foto do cachorro sentado tomando sol', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731908/3_i0ctxp_megfsi_exu5hi.jpg", alt: 'Cachorro na piscina sorrindo', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731911/mar5_wwsqtk_dmwbdd.webp", alt: 'Cachorro tirando uma selfie com outros 3 cachorros', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731912/cachorro-olhando-para-camera_wpovwv_jhxkqd.webp", alt: 'Foto do cachorro olhando para a câmera', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732025/5_flrzdf_wyxn6v_h37kx5.jpg", alt: 'Cachorro com a lingua para fora', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732025/mar4_ilxhpl_buvyxu.webp", alt: 'Cachorro na borda da piscina', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732026/mar6_wcjggv_nheujx.webp", alt: 'Cachorro em uma prancha de surf na onda', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732029/6_b6jtbs_dfnbyu_m0dpfv.webp", alt: 'Cachorro com óculos escuros', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732029/8_zr7p3o_czbag1_jfqnsr.jpg", alt: 'Cachorro e um cachorro pequeno', loading: "lazy", label: 'Le Ange Mar' },
         ],
     },
     {
         images: [
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335878/7_gutmna_mncfkn.webp", alt: 'Foto de um cachorro com uma taça do lado', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335881/10_olepft_mfx8nm.webp", alt: '3 cachorros e um homem na piscina', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/mar2_xvqf5o.webp", alt: 'Cachorro marrom', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/mar1_tsyxm8.webp", alt: 'Cachorro marrom na piscina', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/mar3_jmdiw8.webp", alt: 'Cachorro branco olhando para a camera', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016973/mar7_vyslpi.webp", alt: 'Cachorro dormindo no sofá', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1732016974/mar8_ywe1hn.webp", alt: 'Cachorro em cima do morro olhando para o lado', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731335892/17_awkinq_ommg1k.webp", alt: '3 cachorros brincando na praia', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_600/v1731328214/cachorro_na_m%C3%A3o_kil7xk.webp", alt: 'Foto do cachorro olhando para a câmera', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732032/7_gutmna_mncfkn_o93tly.webp", alt: 'Foto de um cachorro com uma taça do lado', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732033/10_olepft_mfx8nm_hxzfgu.webp", alt: '3 cachorros e um homem na piscina', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732035/mar2_xvqf5o_skheep.webp", alt: 'Cachorro marrom', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732036/mar1_tsyxm8_ek8eoa.webp", alt: 'Cachorro marrom na piscina', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732038/mar3_jmdiw8_lyw4uq.webp", alt: 'Cachorro branco olhando para a camera', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732039/mar7_vyslpi_blujc7.webp", alt: 'Cachorro dormindo no sofá', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732041/mar8_ywe1hn_vulehv.jpg", alt: 'Cachorro em cima do morro olhando para o lado', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732042/17_awkinq_ommg1k_wuhbs8.jpg", alt: '3 cachorros brincando na praia', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732729373/cachorro_na_m%C3%A3o_kil7xk_q6lqew.webp", alt: 'Foto do cachorro olhando para a câmera', loading: "lazy", label: 'Le Ange Mar' },
         ],
         reverse: true
     }
@@ -409,7 +409,6 @@ const LpMar = () => {
         <>
             <Helmet>
                 <title>Le Ange Serra - Pousada Le Ange</title>
-                <link rel="icon" href="https://res.cloudinary.com/dupg7clzc/image/upload/v1731429562/4_bbtihr.svg" />
             </Helmet>
 
             {/* <VideoPlayer videoSrc="https://res.cloudinary.com/dupg7clzc/video/upload/f_auto,q_50,w_2000/v1732279143/Mar_bajezt.mp4" /> */}

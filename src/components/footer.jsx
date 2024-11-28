@@ -492,7 +492,7 @@ const Footer = () => {
                 <StyledLinks>
                     <div>
                         <img
-                            src="https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1729513421/white_sevdgn.png"
+                            src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732793434/white_sevdgn_xz8yuf.webp"
                             alt="Descrição da imagem"
                             loading="lazy"
                             data-aos="fade-up" data-aos-delay="200"
