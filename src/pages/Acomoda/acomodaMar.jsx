@@ -38,11 +38,11 @@ const TituloAcomoda = styled.div`
 `
 
 const SuiteSup1Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731347671/1_jbfcfw-compressed_fowhdw.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731347679/2_avh1mm-compressed_jmpbxs.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731347674/5_bw0qou-compressed_au8uhx.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731347677/4_j3c1yo-compressed_fmuvak.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731347669/3_kplwmw-compressed_ctw3wb.jpg',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794904/1_jbfcfw-compressed_fowhdw_pwhthv.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794904/2_avh1mm-compressed_jmpbxs_irwtgy.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794904/5_bw0qou-compressed_au8uhx_ceqilz.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794907/4_j3c1yo-compressed_fmuvak_yl6rif.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794908/3_kplwmw-compressed_ctw3wb_x0b8bl.webp',
 ];
 
 const SuiteSup1Text = [
@@ -65,11 +65,11 @@ const SuiteSup1Text = [
 ]
 
 const SuiteStan2Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348252/2_uonrhf-compressed_vtj5ay.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348249/3_ysfzuk-compressed_drqyfp.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348244/5_dub0pj-compressed_nycmvi.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348255/1_ofu5mj-compressed_ele8hy.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348246/4_ulr721-compressed_njwzhs.jpg',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794983/2_uonrhf-compressed_vtj5ay_tnnd7t.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794983/3_ysfzuk-compressed_drqyfp_yfcgly.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794984/5_dub0pj-compressed_nycmvi_gci7lf.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794986/1_ofu5mj-compressed_ele8hy_comdxg.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732794987/4_ulr721-compressed_njwzhs_jxppzm.webp',
 ];
 
 const SuiteStan2Text = [
@@ -92,11 +92,11 @@ const SuiteStan2Text = [
 ]
 
 const SuiteSup3Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348602/1_mkvfcp-compressed_gr43kj.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348599/2_ciuk0m-compressed_cehbai.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348597/3_njizit-compressed_na7v2c.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348592/5_mjfm3k-compressed_tfneqy.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731348594/4_d5kp62-compressed_lcocv8.jpg',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795055/1_mkvfcp-compressed_gr43kj_jzkgrj.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795055/3_njizit-compressed_na7v2c_xq2bzu.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795055/2_ciuk0m-compressed_cehbai_vuqq0y.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795058/5_mjfm3k-compressed_tfneqy_eq3zvz.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795060/4_d5kp62-compressed_lcocv8_jc1p0u.webp',
 ];
 
 const SuiteSup3Text = [
@@ -119,11 +119,11 @@ const SuiteSup3Text = [
 ]
 
 const SuiteSup4Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349318/1_znboil-compressed_yri6qq.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349281/3_srrc1g-compressed_sxde4s.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349273/5_lxdgp4-compressed_qaobnt.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349314/2_edqaq4-compressed_hggyrj.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349275/4_k1afap-compressed_do1fjk.jpg',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795148/1_znboil-compressed_yri6qq_k7u1af.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795149/3_srrc1g-compressed_sxde4s_pn4jgn.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795149/5_lxdgp4-compressed_qaobnt_hjnfmh.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795152/2_edqaq4-compressed_hggyrj_b7saxa.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795153/4_k1afap-compressed_do1fjk_r0ktya.webp',
 ];
 
 const SuiteSup4Text = [
@@ -146,11 +146,11 @@ const SuiteSup4Text = [
 ]
 
 const SuiteSup5Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349664/1_ztjmyc-compressed_qvus4l.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349653/5_dkyssi-compressed_prm4wc.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349655/4_rg0jvi-compressed_pknmhg.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349661/2_djdgbx-compressed_zscwrg.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731349658/3_hkxuyr-compressed_fpwsiy.jpg',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795224/1_ztjmyc-compressed_qvus4l_pe1dnz.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795225/5_dkyssi-compressed_prm4wc_uzlbat.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795226/4_rg0jvi-compressed_pknmhg_nsm08m.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795229/2_djdgbx-compressed_zscwrg_cehaak.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795230/3_hkxuyr-compressed_fpwsiy_pg3fuf.webp',
 ];
 
 const SuiteSup5Text = [
@@ -173,11 +173,11 @@ const SuiteSup5Text = [
 ]
 
 const SuiteSup6Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731334579/suiteMar06_jywv1q-compressed_u1tfqp.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1730149982/5_b7dida.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1730149980/4_p22p1t.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1730149976/1_tywkpb.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1730149978/3_zpt6tw.jpg',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795340/suiteMar06_jywv1q-compressed_u1tfqp_n26dhd.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795341/5_b7dida_zqibum.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795345/1_tywkpb_ncjczz.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795344/4_p22p1t_ppwnfc.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795346/3_zpt6tw_ervd5a.jpg',
 ];
 
 const SuiteSup6Text = [
@@ -200,11 +200,11 @@ const SuiteSup6Text = [
 ]
 
 const SuiteStan7Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350736/1_usupcb-compressed_z7nnww.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350716/5_v3dnrs-compressed_svhspj.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350716/4_n9wkv0-compressed_qqq4nw.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350720/2_egxqmp-compressed_hnybrg.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350716/3_pjp0sr-compressed_hnudyo.jpg',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795416/1_usupcb-compressed_z7nnww_vuwzgw.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795418/5_v3dnrs-compressed_svhspj_jut4b7.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795420/4_n9wkv0-compressed_qqq4nw_ivgjgm.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795421/2_egxqmp-compressed_hnybrg_hrhxvm.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795424/3_pjp0sr-compressed_hnudyo_hez5id.webp',
 ];
 
 const SuiteStan7Text = [
@@ -227,11 +227,11 @@ const SuiteStan7Text = [
 ]
 
 const SuiteMas8Images = [
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350404/1_pcudqj-compressed_sbpmpu.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350402/2-compressed_rudncg.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350399/3-compressed_tjw0xv.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350396/4-compressed_x5k7tn.jpg',
-    'https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto,w_2500/v1731350394/5-compressed_rxetai.jpg',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795507/1_pcudqj-compressed_sbpmpu_oxzuox.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795509/2-compressed_rudncg_m5bfoq.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795510/3-compressed_tjw0xv_cf95eh.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795513/4-compressed_x5k7tn_enedcb.webp',
+    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795514/5-compressed_rxetai_hmhlu2.webp',
 ];
 
 const SuiteMas8Text = [
