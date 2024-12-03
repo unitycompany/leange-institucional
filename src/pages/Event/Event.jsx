@@ -279,19 +279,27 @@ const SobreContainer = styled.section`
 `
 
 const images1 = [
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733235/espaco10_zbobfs_kgmqz5_oj3nwz.webp', alt: 'Cadeira customizada para casamento na le ange', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733238/espaco6_dfprnt-compressed_zrduvr_ngtoxi.webp', alt: 'Foto do bolo de casamento na pousada le ange', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733240/espaco1_e9bneq-compressed_ch0xzx_d51uau.webp', alt: 'Foto de uma fogueira na pousada le ange', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733246/espaco4_wmcp95-compressed_yv3qly_lfxlcy.webp', alt: 'Espaço de comer na pousada le ange em casamentos', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733249/espaco3_awfzgo-compressed_evyhwv_uf7iua.webp', alt: 'Champagne na pousada le ange', loading: "lazy" },
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/29ccc6ec-9001-47af-4c90-36bc2a2ba300/public', alt: 'Cadeira customizada para casamento na le ange', loading: "lazy" },
+
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a5bfa9ba-2a81-4ff5-1bda-74a4993f2500/public', alt: 'Foto do bolo de casamento na pousada le ange', loading: "lazy" },
+
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e2ee18a4-384c-49ed-c38c-d15f243f5700/public', alt: 'Foto de uma fogueira na pousada le ange', loading: "lazy" },
+
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d887cc1d-1cb7-47c1-06cf-ce55fcb0f400/public', alt: 'Espaço de comer na pousada le ange em casamentos', loading: "lazy" },
+
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/94f6e656-dcb6-477a-23d0-79cc3f816e00/public', alt: 'Champagne na pousada le ange', loading: "lazy" },
 ];
 
 const images2 = [
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733507/espaco9_ldc1oy_uqmmwu_xcyujb.webp', alt: 'Cadeiras para casamento na pousada le ange', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733508/espaco8_pzjgiz_gittbv_mwfe2p.jpg', alt: 'Noivos se casando na pousada le ange', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733509/espaco2_twf5e1-compressed_itpmkk_o7idb4.webp', alt: 'Comida do casamento na pousada le ange', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733513/espaco5_gzy5ng-compressed_gjqaig_x84gfh.webp', alt: 'Imagem do bar no casamento da pousada le ange', loading: "lazy" },
-    { src: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732733515/espaco7_nlscx5-compressed_horerr_xsbdyl.webp', alt: 'Casamento fotos pousada le ange', loading: "lazy" },
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a7da5629-c2cc-411d-3167-702f3a09f300/public', alt: 'Cadeiras para casamento na pousada le ange', loading: "lazy" },
+
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/08af42b1-ad7c-4d07-8fb5-20e740b9b900/public', alt: 'Noivos se casando na pousada le ange', loading: "lazy" },
+
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9ce391b0-09af-4d6b-d2b5-c38fb17b4000/public', alt: 'Comida do casamento na pousada le ange', loading: "lazy" },
+
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/977a5b2b-eea7-45c3-8f86-55a821264800/public', alt: 'Imagem do bar no casamento da pousada le ange', loading: "lazy" },
+
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/6d4feba5-fa91-4d86-be6d-ed01beefb800/public', alt: 'Casamento fotos pousada le ange', loading: "lazy" },
 ];
 
 const CasamentoContainer = styled.section`
@@ -635,7 +643,7 @@ const Eventos = () => {
                     />
                 </div>
                 <div>
-                    <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732733184/7_sgewp5_rx9vfw_r1rjc9.webp" alt='foto da home da página de eventos' data-aos="fade-left" data-aos-delay="150"/>
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4129a834-fd9a-42db-4770-46bcaae2c200/public" alt='foto da home da página de eventos' data-aos="fade-left" data-aos-delay="150"/>
                 </div>
 
             </InicioContainer>
@@ -684,7 +692,7 @@ const Eventos = () => {
 
             <CasamentoContainer>
                 <div>
-                    <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732733185/11_gzr6ei_ikd2hm_siih9l.webp" alt='foto do casamento' data-aos="zoom-in" data-aos-delay="100" />
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/59f2aa9f-b14c-4a77-d44d-19d04bbfad00/public" alt='foto do casamento' data-aos="zoom-in" data-aos-delay="100" />
                 </div>
                 <div>
                     <h1 data-aos="fade-up" data-aos-delay="200">Casamento</h1>
@@ -720,9 +728,9 @@ const Eventos = () => {
                     text="Fazer reserva"
                     />
                     <div>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732733184/7_sgewp5_rx9vfw_r1rjc9.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732733187/10_deybdj_khogtb_jtkr6b.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200"/>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732733190/9_eavaty_zcw9bc_ef7srj.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300"/>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4129a834-fd9a-42db-4770-46bcaae2c200/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/fdcd50a3-60fa-409c-8e77-2d1ccef2ec00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200"/>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c5657ad4-000d-4c21-0570-1de76bd8c700/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300"/>
                     </div>
                 </div>
             </CasamentoContainer>
@@ -762,13 +770,13 @@ const Eventos = () => {
                     text="Fazer reserva"
                     />
                     <div>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732733203/niver5_vqhh94_pitqka_lam4cz.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732733204/niver3_katslf_fapku3_uateko.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200"/>
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732733229/niver2_rb3hvs_nofpdf_jgopfc.webp" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300"/>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e2fda94b-3aeb-4561-b4ad-688ff898ee00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/f8c3dd3f-c32b-4c9d-2496-dcdc601a7e00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200"/>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/980e5da2-7a6b-4d04-8e10-389d3ee83000/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300"/>
                     </div>
                 </div>
                 <div>
-                    <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732733230/niver1_zyq8zi_gandzx_jxfo1i.webp" alt='foto de aniversário' data-aos="zoom-in" data-aos-delay="200" />
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5361ac8b-1299-4fc6-7cbb-7e71c171e300/public" alt='foto de aniversário' data-aos="zoom-in" data-aos-delay="200" />
                 </div>
             </NiverContainer>
             
