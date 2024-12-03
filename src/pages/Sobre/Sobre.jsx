@@ -767,7 +767,7 @@ const Sobre = () => {
                 </div>
                 <div data-aos="fade-left" data-aos-delay="400">
                     <img 
-                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730866/cachorro_kcfx8n_meecoi.webp" 
+                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/3e74beb7-77f8-4598-ec38-1e6f6e4d9300/public" 
                     alt='foto da gaia, cachorra da pousada le ange'
                     loading='lazy'
                     data-aos="fade-right" data-aos-delay="500"
@@ -779,13 +779,13 @@ const Sobre = () => {
 
                 <div>
                     <img 
-                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/pousada_de_cima_vpzpdb_kssj6e.webp" 
+                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2edd1026-cdea-4ac6-f501-713bba86d600/public" 
                     alt='foto da le ande da mar' 
                     loading='lazy'
                     data-aos="fade-up" data-aos-delay="100"
                     />
                     <img 
-                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728791/foto_da_pousada_da_serra_lefdif_aikpna.jpg" 
+                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/74bff9be-8742-4468-e032-4cf79abe5300/public" 
                     alt='foto da le ande da serra'
                     loading='lazy' 
                     data-aos="fade-down" data-aos-delay="100"
@@ -810,25 +810,25 @@ const Sobre = () => {
 
                 <div>
                     <img 
-                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730866/rede_no_mar_ajtwwv_oz8zod.webp" 
+                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d476f2e3-90fe-4291-137c-bc9f9e7f4000/public" 
                     loading='lazy'
                     alt='rede na le ange mar' 
                     data-aos="fade-up" data-aos-delay="100"
                     />
                     <img 
-                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730257/sossego_1_jsshhu_1_pyjrgu.jpg" 
+                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/902b9f7b-b521-4545-08ee-f5386e777400/public" 
                     loading='lazy'
                     alt='hot tube na le ange serra' 
                     data-aos="fade-down" data-aos-delay="200"
                     />
                     <img 
-                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730867/divers%C3%A3o_na_serra_fzhl7y_t91e9t.jpg"
+                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/db3f6942-0de2-433d-1235-33bfa547e500/public"
                     loading='lazy' 
                     alt='casal se divertindo na le ange serra'
                     data-aos="fade-up" data-aos-delay="300"
                     />
                     <img 
-                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730867/natal_jwdzzh_atfzzu.webp" 
+                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/920ca71e-b200-4a6c-5c7e-cc605234d700/public" 
                     loading='lazy'
                     alt='foto da le ange com tema de natal' 
                     data-aos="fade-down" data-aos-delay="400"
@@ -846,13 +846,13 @@ const Sobre = () => {
                     </div>
                     <div>
                         <img 
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/pizzas_lgsqcd_ekmh4f.webp" 
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bbca820c-502b-48cf-a6d6-8a4d4da25900/public" 
                         loading='lazy'
                         alt='foto da noite de pizzas na pousada le ange' 
                         data-aos="fade-up" data-aos-delay="300"
                         />
                         <img 
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730393/risotos_oj42yf_nivhjz.webp" 
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9c2d46b5-4488-4382-1bf4-865c6f914100/public" 
                         loading='lazy'
                         alt='foto da noite de risotos na pousada le ange' 
                         data-aos="fade-down" data-aos-delay="400"
@@ -863,13 +863,13 @@ const Sobre = () => {
                 <div>
                     <div>
                         <img 
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730868/cachorro_olhando_pra_camera_ndannw_hvd1rf.webp"
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/415e2adb-0537-4ce0-23cb-124869c06c00/public"
                         loading='lazy'
                         alt='foto do cachorro sorrindo para camera' 
                         data-aos="fade-up" data-aos-delay="100"
                          />
                         <img 
-                        src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/foto_de_mulher_com_dois_cachorros_bwwkmi_pyqnx0.jpg" 
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/f9af3c90-2ae9-4250-2ac9-afedce182000/public" 
                         loading='lazy'
                         alt='uma mulher e dois cachorros na pousada le ange' 
                         data-aos="fade-down" data-aos-delay="200"
@@ -898,7 +898,7 @@ const Sobre = () => {
                 
                 <div>
                     <img 
-                    src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732730871/IMG_0254_wdrn4v_hghvvd.webp" 
+                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/cc7ff3b2-c267-4a5b-140b-cfae14d7f900/public" 
                     alt='foto do quadro de cachorro na pousada le ange mar'
                     data-aos="flip-left" data-aos-delay="600"
                     />
