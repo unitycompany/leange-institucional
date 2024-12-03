@@ -40,11 +40,11 @@ const TituloAcomoda = styled.div`
 `
 
 const SuiteSup1Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795659/suiteSuperior1_gpjls0_l6yhv9_umytyv.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795661/1_o5yez9_vrlet1_lfbo7c.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795663/3_aiyrqa_btekxc_hz3xhq.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795664/4_ywuuuc_b8t7x3_hw9wbm.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795667/5_onjzk1_ysyao3_ufxxs1.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7d1df8a5-0905-4ac0-5a2d-621e8a48dd00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/27861ce8-6beb-438a-6ff4-3cee719fe500/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c22957a6-e82d-46ab-01f2-336a3d84ec00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/26d9fcee-7e13-4b45-4d95-6248723ddc00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7336810d-d00e-4445-529b-f16b72cc7700/public',
 ];
 
 const SuiteSup1Text = [
@@ -67,10 +67,10 @@ const SuiteSup1Text = [
 ]
 
 const SuiteSup2Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795738/foto2_pn8axc_1_sh4eu9.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795739/3_u2ikyj_bbap70_x49zfi.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795742/4_wte9h1_nbgckn_gbc50n.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795744/5_olm5xn_up47by_xrfk9u.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/fab53301-9865-467b-5746-7d359f21fe00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a27173c0-d56c-4c22-ea55-7f23cba7a800/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/beb843cb-3ae0-4ea0-348c-5af6f79b9600/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c22c1ab9-1c7a-47e4-3642-0024f2b24700/public',
 ];
 
 const SuiteSup2Text = [
@@ -93,11 +93,11 @@ const SuiteSup2Text = [
 ]
 
 const SuiteSup3Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795919/1_ylximp_j7rlx6_ozwjw1.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795921/3_drrdp6_jeadzb_rmyxjj.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795923/2_naq3yx_r415zb_jqdqkf.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795925/4_lpovtm_pybn3y_lbykns.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795927/5_tsqexf_xy8tbc_dihhel.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/eaddb3bf-35e7-4bff-09ff-0c5a80525800/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/711abf2e-87c0-4568-ffa3-71f98954af00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/58b29f7d-d13e-4c97-06d7-c23613222d00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e01a043d-e7ca-4edc-d4ad-103e63e79600/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a297c1da-191f-4479-7de3-3403c90a8400/public',
 ];
 
 const SuiteSup3Text = [
@@ -120,11 +120,11 @@ const SuiteSup3Text = [
 ]
 
 const SuiteStan4Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796005/1_s9b5nq_bkdxnp_gifcsy.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796002/2_hyhg8t_a7ameu_ngap78.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796000/3_s0ig5c_vrsvhv_gezgyc.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795998/4_oppeg3_o41fdi_zfcgfj.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732795996/5_kb5ean_xhm0vu_qoxdsf.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a0c090c6-7dcb-4886-8dae-e439370b2a00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/932de633-2aa1-41b9-a3ff-3a99f4cb5e00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e5f64afd-bc17-4cf3-b790-453e90545200/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/18dc1fbd-cbbe-4ccf-d204-c47841cdc900/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ceb5e56-07d1-44cf-b194-9a5ed2265b00/public',
 ];
 
 const SuiteStan4Text = [
@@ -146,11 +146,11 @@ const SuiteStan4Text = [
 ]
 
 const SuiteStan5Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796079/1_rnbhj2_kghiue_nyeois.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796077/2_msj4wh_rrl3zt_wtuir0.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796075/3_b8v99f_aiaxqa_wz9bci.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796073/4_rdcxvu_sjgtje_zicxmh.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796071/5_cwrlxp_pjsznc_ozeyy6.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9cb4ce2c-7d70-4a5d-fa18-7615aa389d00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ae1efc69-3fed-4143-0162-fa6659f85000/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e3c9ebb8-4dc0-42f0-7c77-efb7b307ef00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c2a76285-c7ca-4cfc-3194-567e7e193000/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/3e9c2e45-b349-403a-3d09-93b6a0661c00/public',
 ];
 
 const SuiteStan5Text = [
@@ -172,11 +172,11 @@ const SuiteStan5Text = [
 ]
 
 const SuiteMas6Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796147/1_ytelar_a4gkq4_g65wuj.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796145/2_y07hp1_gxkw0f_sytf1p.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796143/3_ennrfl_tsrdpf_bucyak.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796140/4_nmnmdm_pb6suc_ymxs3p.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796139/5_zjbujo_ojixkc_k2y5xz.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d24e6cd4-c8e9-437d-afdb-dadebbcb4000/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ef9ef222-11b1-4689-435b-290edb163900/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/178e93c6-234b-45a2-7fa1-167362cae400/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5e9145f7-431e-49be-10c3-861a9289cc00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/fcae768c-1514-4874-e9eb-1dde99a62b00/public',
 ];
 
 const SuiteMas6Text = [
@@ -200,11 +200,11 @@ const SuiteMas6Text = [
 ]
 
 const SuiteStan7Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796219/1_r9brij_gje5sv.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796216/2_lp3nwj_znqmoa.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796214/3_hahgqj_yqo9dp.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796212/4_rdcxvu_xhilch.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796210/4_hstjdq_tijeyz.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/f3d777cf-17c2-4055-75a9-4be9fcc33800/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0860b499-9c8c-4e99-192a-3ebe36229d00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9dd5297d-5fba-438f-555c-8cb19bb82a00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e8184c4c-b550-4166-7448-7492a7477f00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/421cea52-70a2-477b-0331-b21666a29c00/public',
 ];
 
 const SuiteStan7Text = [
@@ -227,11 +227,11 @@ const SuiteStan7Text = [
 ]
 
 const SuiteStan8Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796292/1_deflqw_o0h5op_fctmle.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796290/3_apyt83_m5wg8y_xtm3gb.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796287/2_vtsru4_j58fi3_btmslh.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796285/4_a4uhie_akrdkl_is73tk.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796283/5_s3imtf_jey5us_nwmnum.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7fd53b58-4a7e-428b-ff6f-73a485a99f00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/46aeb5ba-8400-4a23-f4e4-df0d97083b00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b151e809-9f33-4e2c-6f87-0903cb86db00/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5651b927-c41d-4f77-f187-3796426ae300/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/af920b8e-ebfe-482c-c876-683601310500/public',
 ];
 
 const SuiteStan8Text = [
@@ -254,11 +254,11 @@ const SuiteStan8Text = [
 ]
 
 const SuiteSup9Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796371/1_ougeas_aj0kkp_jtjwra.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796369/2_qiphp1_zbes5m_teu7di.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796366/4_ams1oh_mxicwx_wsc66p.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796364/3_x7jhml_auko3f_lscb8k.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796363/5_texuuu_e0gps2_wfdia2.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/40cb4a09-1c14-43cb-e17a-bf61a96c6300/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/cd1824ad-8a82-49bf-ecdb-292e6a0e3500/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/05d8b494-9ae3-429f-ed5c-8b192bf3e500/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b70f4c55-c0c6-4356-0098-f6318c8ce600/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c51dc547-138b-434c-dd48-60ae2ae95900/public',
 ];
 
 const SuiteSup9Text = [
@@ -282,11 +282,11 @@ const SuiteSup9Text = [
 ]
 
 const SuiteMas10Images = [
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796451/2_rwd1oh_clvvnj_twtnlk.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796453/1_lj4tav_i26aev_wtffl7.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796449/3_hybfzc_rsrbwj_zqoyet.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796446/4_p052an_rslqub_uogcbj.webp',
-    'https://res.cloudinary.com/dabucfkmg/image/upload/v1732796444/5_aqbze0_ae2782_iikt6s.webp',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b04be4b1-aa90-4228-6dad-507f08379500/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/8caf9f13-0f6c-48cf-5606-6b2b0ce5d000/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/85e23a34-3058-43dc-a035-61fd0e65c700/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/79feb4e3-78e2-4c90-92e3-b0acbe649300/public',
+    'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/63467d9f-7285-43e0-ce5e-e5a83e158300/public',
 ];
 
 const SuiteMas10Text = [
