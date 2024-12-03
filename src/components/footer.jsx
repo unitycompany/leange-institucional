@@ -6,7 +6,6 @@ import { MdOutlineArrowRight } from "react-icons/md";
 import { motion, useInView } from 'framer-motion';
 import { RiCopyrightLine } from "react-icons/ri";
 import React, { useRef, useState } from 'react';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const SubmitBtn = styled(motion.button)`
@@ -492,7 +491,7 @@ const Footer = () => {
                 <StyledLinks>
                     <div>
                         <img
-                            src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732793434/white_sevdgn_xz8yuf.webp"
+                            src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0b4e1dd7-194d-4d4c-da16-c16c77281000/public"
                             alt="Descrição da imagem"
                             loading="lazy"
                             data-aos="fade-up" data-aos-delay="200"

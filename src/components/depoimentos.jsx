@@ -6,7 +6,6 @@ import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import styled from "styled-components";
 import CustomButton from "./button3";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const StyledTextDepoimentos = styled.section`
@@ -102,37 +101,43 @@ const depoimentosData = [
     {
         id: 1,
         text: "Pousada Le Ange Mar",
-        bgImages: ["https://res.cloudinary.com/dabucfkmg/image/upload/v1732793650/3_nxmzvb_uqceix_ecvuyx.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732793650/4_zkfafk_oftuer_o9xslm.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732793650/5_tb7gyj_m9gzdd_mrm1gl.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732793651/2_kck8ru_pps4we_seocfb.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732793651/6_y0fjmz_u19wod_aosz5p.webp"],
+        bgImages: ["https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/6f192299-26a5-4cba-0d3d-f042f7cc4100/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/96048cf4-e533-42ef-631c-17c79f758300/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/53ddb117-9d86-42b5-0188-2733003a8400/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/95f365f9-0cf7-4a99-de39-71618b26a300/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/86f7d35e-3494-439d-483c-48e036d31a00/public"],
     },
+
     {
         id: 2,
         text: "Pousada Le Ange Serra",
-        bgImages: ["https://res.cloudinary.com/dabucfkmg/image/upload/v1732793814/1_ph73ii_ctm2dz.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732793814/2_v8reyz_vm3ce1_f54jky.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732793815/6_dovfum_tswv2e_h5v5it.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732793815/5_ty6zqr_q1l2mc_pkippf.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732793815/4_u1pvbr_zcx4gk_s0rsvb.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732793815/3_ji6uzq_daetsl_atd9a5.jpg"],
+        bgImages: ["https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7e872f9c-0035-4872-cf50-e7eac0bf1600/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/532a9b10-7c75-4668-65bc-97a13ace5600/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/abd1748a-6b4f-4c8d-4dfa-af0a83aaaf00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5f04125f-47d3-4abd-c359-9e3c129f6500/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e6c7bed9-f486-4be9-db47-7087f6943500/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/122827e6-c434-44a2-0546-d37d2ffeaf00/public"],
     },
+
     {
         id: 3,
         text: "Pousada Le Ange Mar",
-        bgImages: ["https://res.cloudinary.com/dabucfkmg/image/upload/v1732794079/1_fddk63_gm2m6g_zsmz72.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794080/3_islkto_wkjaco_rhlozj.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794079/2_eomyvd_nnnec7_eswd1j.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794080/4_tds2ap_sarfwc_hc9hcp.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794080/6_cs2odp_vpnkmq_qh6coq.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794080/5_cvbsbp_vbx4jm_vzhrge.webp"],
+        bgImages: ["https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/cac55f28-555d-4ce5-6e3b-457af8476c00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a38d49ef-f498-4f03-cecd-d4ac8c69ac00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ffcf23fa-d075-4682-9bda-844c527d7f00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d0f29504-829a-4c8f-8720-4c8ae3d27f00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/3f1ccf0e-8406-4164-0955-29087e5a0f00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/480b1655-49d4-4323-86c1-345224294000/public"],
     },
+
     {
         id: 4,
         text: "Pousada Le Ange Serra",
-        bgImages: ["https://res.cloudinary.com/dabucfkmg/image/upload/v1732794343/1_vw8gku_jdpu1m_tbtbsi.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794344/2_u9soep_axzzap_di3ov7.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794344/4_g2prnk_ejavci_jbyp2i.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794344/3_aryhje_lmyuui_kgbzi6.webp"],
+        bgImages: ["https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/3908ea8d-5d8e-4a13-ac75-dc312f545100/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/66aa3be9-dd1d-460a-2a0d-4da92e68dc00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bf5974c4-3129-43bb-db61-23404c00d600/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/def5ad59-dc78-4e9a-320b-28d28ec6c500/public"],
     },
+
     {
         id: 5,
         text: "Pousada Le Ange Mar",
-        bgImages: ["https://res.cloudinary.com/dabucfkmg/image/upload/v1732794449/1_urlgor_pasdht_nv4zgw.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794450/2_ij3lu8_hd6jwr.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794450/4_j7wxsn_d4icoi_kdvfuv.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794450/3_scnvzz_z55ake_f6spei.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794453/5_jn3xrs_bx73kp_on8czh.webp"],
+        bgImages: ["https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0afec340-71f1-42f3-3ffe-5af2438d7500/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2603ac07-7df2-43eb-697f-99e79942c200/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b2c446cd-cffd-49f1-cb59-65ace1b57a00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ca778cf7-62d4-48fb-6e1c-1e6d1fc29400/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/67bb7d62-0ff9-490f-160a-1335e4800200/public"],
     },
+
     {
         id: 6,
         text: "Pousada Le Ange Serra",
-        bgImages: ["https://res.cloudinary.com/dabucfkmg/image/upload/v1732794515/1_zt1frt_tozga2_ncycjb.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794515/2_m6a7pn_dljjpo_y0vvml.jpg", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794515/3_f1nazk_rjbcys_yotipf.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794516/4_al1kde_fctxov_rekeo3.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794520/5_fz3g46_f4bfjz_qs5laa.webp"],
+        bgImages: ["https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5abab547-8a8a-408f-013d-0ec1ce1b7a00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/faa5f682-d069-4b1c-c022-6d7f99612700/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a78d689b-9028-473c-6edd-b0d0c4912400/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2e5748ca-ff68-4da1-bff2-e852fa441a00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a2ac9fb3-1ba9-422f-ccee-9aea2852df00/public"],
     },
+
     {
         id: 7,
         text: "Pousada Le Ange Mar",
-        bgImages: ["https://res.cloudinary.com/dabucfkmg/image/upload/v1732794621/1_adshm2_k64nfp_uorp6c.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794622/2_gvo2bk_z3cakr_qgy2tg.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794622/3_eqkktf_gldizg_wu5png.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794625/4_pw8xsl_suk6of_mtx3s5.webp", "https://res.cloudinary.com/dabucfkmg/image/upload/v1732794625/5_abwhg7_odyfrq_yini7c.webp"],
+        bgImages: ["https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/695f6ec1-0347-4549-4f16-663780080f00/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ddb51ed-4ba4-44ed-06a2-7d6c21838700/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/cb252e21-68b5-495b-d8fc-3a1dbe454600/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a2e35092-b9d0-49c7-701a-082307a62400/public", "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/be407d5c-724c-4ebd-9873-a4057f301100/public"],
     }
 ];
 

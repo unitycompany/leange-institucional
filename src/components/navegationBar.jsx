@@ -448,7 +448,7 @@ const NavegationBar = () => {
     return (
         <>
             <LoadingOverlay isLoading={isLoading}>
-                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732793361/V1_kdjdkc_hl7uak.gif" alt="Loading..." />
+                <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/59746ba9-5d6e-4873-dad6-26930b03a900/public" alt="Loading..." />
             </LoadingOverlay>
             <StyledDiv isScrolled={isScrolled}>
                 {showConfetti && (
@@ -458,10 +458,10 @@ const NavegationBar = () => {
                 )}
                 <Link to="/" aria-label="Home">
                     <picture>
-                        <source media="(max-width: 480px)" srcSet="https://res.cloudinary.com/dabucfkmg/image/upload/v1732793361/black_kteyv6_tywhc1.png" />
-                        <source media="(max-width: 768px)" srcSet="https://res.cloudinary.com/dabucfkmg/image/upload/v1732793361/black_kteyv6_tywhc1.png" />
-                        <source media="(min-width: 769px)" srcSet="https://res.cloudinary.com/dabucfkmg/image/upload/v1732793361/black_kteyv6_tywhc1.png" />
-                        <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732793361/black_kteyv6_tywhc1.png" alt="Logo da Empresa" style={{ maxHeight: '40px' }} />
+                        <source media="(max-width: 480px)" srcSet="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" />
+                        <source media="(max-width: 768px)" srcSet="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" />
+                        <source media="(min-width: 769px)" srcSet="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" />
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" alt="Logo da Empresa" style={{ maxHeight: '40px' }} />
                     </picture>
                 </Link>
                 <StyledHeader>
@@ -486,7 +486,7 @@ const NavegationBar = () => {
             </StyledDiv>
 
             <MobileBar isScrolled={isScrolled}>
-                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732793361/black_kteyv6_tywhc1.png" alt='logo da le ange' />
+                <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" alt='logo da le ange' />
                 <button onClick={toggleSidebar} isClicked={isClicked}>
                     Menu
                     <HiBars3BottomRight />
@@ -495,7 +495,7 @@ const NavegationBar = () => {
 
             <Sidebar isOpen={isSidebarOpen}>
                 <button onClick={closeSidebar}>X</button>
-                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732793361/black_kteyv6_tywhc1.png" alt='logo da le ange' />
+                <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" alt='logo da le ange' />
                 <div>
                     <StyledLink to="/" isActive={location.pathname === "/"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início
