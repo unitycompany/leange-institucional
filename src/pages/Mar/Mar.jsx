@@ -42,7 +42,7 @@ const StyledSectionHome = styled.section`
         position: absolute;
         z-index: 1;
         opacity: 0.05;
-        background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1732728789/FOTO-MAR_qssync_ei8mel.webp');
+        background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ddb82947-e348-414c-3db1-f51552701b00/public');
         background-position: center;
         background-size: cover;
 
@@ -62,7 +62,7 @@ const StyledSectionHome = styled.section`
 const StyledHomeDiv = styled.div`
     width: 45%;
     height: 100%;
-    background-image: url('https://res.cloudinary.com/dabucfkmg/image/upload/v1732728789/FOTO-MAR_qssync_ei8mel.webp');
+    background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ddb82947-e348-414c-3db1-f51552701b00/public');
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
@@ -174,49 +174,56 @@ const slides = [
         title: "Pet Friendly",
         description: "Não temos restrições quanto ao porte ou raça do seu pet, também não cobramos taxas adicionais para a vinda deles. Aqui, o seu pet tem liberdade total para acessar todas as nossas comodidades!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731156/petfriendly-scaled_vsev2s_obkojq.webp"
+        imageUrl: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/42a70d06-97d1-4f5c-5df8-36c30f21c100/public"
     },
+
     {
         title: "Praia",
         description: "Para os amantes da praia, estamos localizados a apenas 150 metros da Praia Rasa, onde você e o seu pet podem aproveitar juntinhos e dar um mergulho delicioso no mar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730256/cachorro_na_praia_pmqyi4_p4nhwo.webp"
+        imageUrl: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/da4810e5-6e85-45f5-1fcf-f6a74754bd00/public"
     },
+
     {
         title: "Piscina",
         description: "Nossa piscina aquecida com vista panorâmica para o oceano é de surpreender! Possui tratamento especial por ozônio com níveis baixíssimos de cloro, pensando no bem-estar da sua pele e a do seu pet também!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/pousada_de_cima_vpzpdb_kssj6e.webp"
+        imageUrl: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/09da9d76-57b8-4d44-02b2-3c4c2380c800/public"
     },
+
     {
         title: "Ofurôs",
         description: "São dois ofurôs acoplados na piscina, para você relaxar na água quentinha, apreciando a vista exuberante do mar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730257/ofuros_kyjddp_raquu4.webp"
+        imageUrl: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0d1d1a6a-5935-4c57-6b12-d1f028604400/public"
     },
+
     {
         title: "Sala de estar",
         description: "A sala de estar é aquela que abraça e aconchega. Cheia de sofás, você pode se acomodar e assistir à televisão, ou até mesmo ler um livro, sempre na companhia do seu pet.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731157/saladeestar_yakcqy_dtbu48.webp"
+        imageUrl: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/939f40ce-048b-4746-7ce7-83fc2f4bbc00/public"
     },
+
     {
         title: "Cozinha",
         description: "Todas as refeições estão incluídas: café da manhã, almoço, chá da tarde e jantar! Todas preparadas com muito tempero, amor e afeto.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731157/risoto1-compressed_m583dd_ekltxk.webp"
+        imageUrl: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bec96bcc-f2d6-431c-a7d5-31e1c5b7d000/public"
     },
+
     {
         title: "Bar",
         description: "Para completar ainda mais a sua experiência, contamos com uma carta variada de vinhos, destilados, drinks e cervejas!",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732730257/bar_xl6dvc_bkc9w5.webp"
+        imageUrl: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/67318553-8e4b-4d4c-b914-3ea76fc7be00/public"
     },
+
     {
         title: "Suítes",
         description: "São 8 suítes, elegantemente, decoradas, todas com vista para o mar, banheira de imersão, varanda, cama king-size, ar-condicionado e frigobar.",
         buttonText: "Viver minha experiência agora",
-        imageUrl: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732729616/suiteMar2_qlgel2_d11sun.webp"
+        imageUrl: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4d6afdaf-1cfe-4860-8099-818abedfdd00/public"
     }
 ];
 
@@ -236,16 +243,22 @@ const StyledSectionEspaco = styled.section`
 `;
 
 const ImagesAcomoda = [
-    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731480/suiteMar01_p6bfoi-compressed_kixsaa_kjg49l.webp", "text": "Suíte Superior 1", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731481/IMG_0142-compressed_lfijwu_h6x05q.webp", "text": "Suíte Standard 2", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731481/suiteMar03_o9sxbf-compressed_uw2hox_plhelj.webp", "text": "Suíte Superior 3", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731484/IMG_0143-compressed_fk4kgv_oxklv8.webp", "text": "Suíte Superior 4", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731487/suiteMar05_oid9as-compressed_al5vur_spz4rq.webp", "text": "Suíte Superior 5", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731489/mar_master_8_m1x38m_onrxki.webp", "text": "Suíte Superior 6", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731489/suiteMar07_dgfxzq-compressed_kody5f_uyjy7m.webp", "text": "Suíte Master 7", "loading": "lazy" },
-    { "src": "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731494/suiteMar08_g1gmt0-compressed_mymcv1_rtodwa.webp", "text": "Suíte Master 8", "loading": "lazy" }
-];
+    { "src": "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/04491c1f-dc99-499a-4e92-13037b3eab00/public", "text": "Suíte Superior 1", "loading": "lazy" },
 
+    { "src": "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4551d99f-d7fa-440f-bdb1-9126c3a82100/public", "text": "Suíte Standard 2", "loading": "lazy" },
+
+    { "src": "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a81bc75d-a475-4dc9-6101-2f7dbb4e4b00/public", "text": "Suíte Superior 3", "loading": "lazy" },
+
+    { "src": "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e0b4c640-813a-4586-bdf9-91b0be3f7300/public", "text": "Suíte Superior 4", "loading": "lazy" },
+
+    { "src": "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/912f5f6c-6f94-4dae-30b3-85c460f0f700/public", "text": "Suíte Superior 5", "loading": "lazy" },
+
+    { "src": "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/70b133ff-56ab-44b4-76b3-ef1638c79000/public", "text": "Suíte Superior 6", "loading": "lazy" },
+
+    { "src": "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e9d95c2b-081d-4808-6bf6-431e89183c00/public", "text": "Suíte Master 7", "loading": "lazy" },
+
+    { "src": "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/baf68f87-5db9-47ec-0fb5-dc4b5e1f4b00/public", "text": "Suíte Master 8", "loading": "lazy" }
+];
 
 const StyledLocal = styled.div`
     display: flex;
@@ -293,19 +306,7 @@ const StyledContainerEvents = styled.section`
 
 const events = [
     {
-        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730393/risotos_oj42yf_nivhjz.webp',
-        title: 'Noite de Risotos',
-        dateRange: '29/11/2024 até 01/12/2024 (2 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: '30/11 - Noite de Risostos' },
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '359,20',
-        discount: 25,
-    },
-    {
-        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/pizzas_lgsqcd_ekmh4f.webp',
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bbca820c-502b-48cf-a6d6-8a4d4da25900/public',
         title: 'Noite das pizzas',
         dateRange: '06/12/2024 até 08/12/2024 (3 diárias)',
         features: [
@@ -316,8 +317,9 @@ const events = [
         price: '359,20',
         discount: 25,
     },
+
     {
-        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/frutos_do_mar1_ly3hq1_ch6mr3.webp',
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/79fdce4b-cea9-43ec-5c67-2235d2319a00/public',
         title: 'Frutos do Mar',
         dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
         features: [
@@ -328,8 +330,9 @@ const events = [
         price: '359,20',
         discount: 25,
     },
+
     {
-        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730394/fique3pague4_fiupcm_bgpy9c.webp',
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/58c77a3d-d9fb-422f-c84b-ad4798b74600/public',
         title: 'Fique 4 pague 3',
         dateRange: 'Segunda-feira a Sexta-feira',
         features: [
@@ -340,8 +343,9 @@ const events = [
         price: '538,90',
         discount: 25,
     },
+
     {
-        image: 'https://res.cloudinary.com/dabucfkmg/image/upload/v1732730395/natal_wrunee_ceaifp.webp',
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1e2853af-cbe7-48ba-a6cc-7e36642f0f00/public',
         title: 'Pacote de Natal',
         dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
         features: [
@@ -350,6 +354,19 @@ const events = [
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '918,40',
+        discount: 25,
+    },
+    
+    {
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/70044ef4-2814-404f-5465-3e5acefd8600/public',
+        title: 'Pacoto Ano Novo',
+        dateRange: '28/12/2024 até 01/01/2025 (4 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: '31/12 - Ceia maravilhosa' },
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '1171,50',
         discount: 25,
     },
 ];
@@ -370,29 +387,47 @@ const StyledButtonCenter = styled.div`
 const PetFriendlyImages = [
     {
         images: [
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731907/1_sxf4fc_a9uljb_pbaml7.webp", alt: 'Foto de cachorro com uma bola na boca', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731908/2_cldel9_wnqquw_gnk0f4.webp", alt: 'Foto do cachorro sentado tomando sol', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731908/3_i0ctxp_megfsi_exu5hi.jpg", alt: 'Cachorro na piscina sorrindo', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731911/mar5_wwsqtk_dmwbdd.webp", alt: 'Cachorro tirando uma selfie com outros 3 cachorros', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732731912/cachorro-olhando-para-camera_wpovwv_jhxkqd.webp", alt: 'Foto do cachorro olhando para a câmera', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732025/5_flrzdf_wyxn6v_h37kx5.jpg", alt: 'Cachorro com a lingua para fora', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732025/mar4_ilxhpl_buvyxu.webp", alt: 'Cachorro na borda da piscina', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732026/mar6_wcjggv_nheujx.webp", alt: 'Cachorro em uma prancha de surf na onda', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732029/6_b6jtbs_dfnbyu_m0dpfv.webp", alt: 'Cachorro com óculos escuros', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732029/8_zr7p3o_czbag1_jfqnsr.jpg", alt: 'Cachorro e um cachorro pequeno', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c9f443a0-365f-4341-67c4-dc3b15d8d200/public", alt: 'Foto de cachorro com uma bola na boca', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/f381312d-98e6-4e3a-2267-b72775b77800/public", alt: 'Foto do cachorro sentado tomando sol', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ebe09a3c-386f-4683-b025-9734976d0b00/public", alt: 'Cachorro na piscina sorrindo', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2ea4864a-bc1c-4b0f-c720-4f4db60d6600/public", alt: 'Cachorro tirando uma selfie com outros 3 cachorros', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0d4896d4-5675-4739-7cb3-30fc1c6dec00/public", alt: 'Foto do cachorro olhando para a câmera', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/6a09554d-7f59-42f4-603b-bf2a3bf24600/public", alt: 'Cachorro com a lingua para fora', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/6f6a0274-479c-4c48-e1ce-23fa90998500/public", alt: 'Cachorro na borda da piscina', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b784a222-c8bc-4a35-ac3a-a6056d717300/public", alt: 'Cachorro em uma prancha de surf na onda', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d826fa54-7c2b-47b9-9cb6-4e0540d8dd00/public", alt: 'Cachorro com óculos escuros', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/00e287de-9719-47ee-0fb1-3ef507b3a800/public", alt: 'Cachorro e um cachorro pequeno', loading: "lazy", label: 'Le Ange Mar' },
         ],
     },
+    
     {
         images: [
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732032/7_gutmna_mncfkn_o93tly.webp", alt: 'Foto de um cachorro com uma taça do lado', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732033/10_olepft_mfx8nm_hxzfgu.webp", alt: '3 cachorros e um homem na piscina', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732035/mar2_xvqf5o_skheep.webp", alt: 'Cachorro marrom', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732036/mar1_tsyxm8_ek8eoa.webp", alt: 'Cachorro marrom na piscina', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732038/mar3_jmdiw8_lyw4uq.webp", alt: 'Cachorro branco olhando para a camera', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732039/mar7_vyslpi_blujc7.webp", alt: 'Cachorro dormindo no sofá', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732041/mar8_ywe1hn_vulehv.jpg", alt: 'Cachorro em cima do morro olhando para o lado', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732732042/17_awkinq_ommg1k_wuhbs8.jpg", alt: '3 cachorros brincando na praia', loading: "lazy", label: 'Le Ange Mar' },
-            { src: "https://res.cloudinary.com/dabucfkmg/image/upload/v1732729373/cachorro_na_m%C3%A3o_kil7xk_q6lqew.webp", alt: 'Foto do cachorro olhando para a câmera', loading: "lazy", label: 'Le Ange Mar' },
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b4ddd8c3-b6c1-4c00-d54b-06a44c074900/public", alt: 'Foto de um cachorro com uma taça do lado', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a6b63bf4-92e1-43d5-9a86-ed900bdc4800/public", alt: '3 cachorros e um homem na piscina', loading: "lazy", label: 'Le Ange Mar' },
+            
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1cd65a71-7f00-4f13-5a67-c4ff922d8f00/public", alt: 'Cachorro marrom', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/366f42cc-6fe9-4fc0-5ef6-15ea8e420b00/public", alt: 'Cachorro marrom na piscina', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5b19b1f4-fd46-4dc9-5faa-96995d69b400/public", alt: 'Cachorro branco olhando para a camera', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/252ec971-e6a4-4b55-3e1b-2069f4570800/public", alt: 'Cachorro dormindo no sofá', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9ca851c2-347a-4f8c-752e-b90080865800/public", alt: 'Cachorro em cima do morro olhando para o lado', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7a0ae482-3436-4db1-9ed3-c1c7b1b02b00/public", alt: '3 cachorros brincando na praia', loading: "lazy", label: 'Le Ange Mar' },
+
+            { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d9be2586-3341-4990-f3c8-685edcad8900/public", alt: 'Foto do cachorro olhando para a câmera', loading: "lazy", label: 'Le Ange Mar' },
         ],
         reverse: true
     }
