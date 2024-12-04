@@ -398,18 +398,6 @@ const events = [
         discount: 25,
     },
     
-    {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/70044ef4-2814-404f-5465-3e5acefd8600/public',
-        title: 'Pacoto Ano Novo',
-        dateRange: '28/12/2024 até 01/01/2025 (4 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: '31/12 - Ceia maravilhosa' },
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '1171,50',
-        discount: 25,
-    },
 ];
 
 const StyledButtonCenter = styled.div`
