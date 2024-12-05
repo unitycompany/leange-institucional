@@ -1,4 +1,4 @@
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import Button from './button';
 import { FaMountainSun } from "react-icons/fa6";
@@ -6,7 +6,7 @@ import { FaHome, FaInfoCircle, FaAnchor, FaMountain, FaCalendar, FaBed } from 'r
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate as usePageNavigation } from 'react-router-dom';
 
 // Animação de loading
 const fadeIn = keyframes`
@@ -370,6 +370,8 @@ const NavegationBar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const validRoutes = ["/", "/sobre", "/mar", "/serra", "/event", "/acomodaSerra", "/acomodaMar", "/lpMar", "lpSerra"]; // Adicione todas as rotas válidas aqui
+
     let scrollTimeout;
 
     const toggleSidebar = () => {
@@ -400,6 +402,14 @@ const NavegationBar = () => {
         navigate(value);
         }
     };
+
+    useEffect(() => {
+        // Verifica se a rota atual não é válida
+        if (!validRoutes.includes(location.pathname)) {
+            navigate("/", { replace: false }); // Redireciona para a página inicial sem alterar a URL
+        }
+    }, [location.pathname, navigate]);
+    
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
