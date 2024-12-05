@@ -116,6 +116,12 @@ const StyledDivButton = styled.div`
   }
 `;
 
+const IdadeCrianca = styled.p`
+  font-size: .9rem;
+  opacity: .4;
+  font-weight: 200;
+`
+
 const TitlePousadas = ({
   text,
   title,
@@ -123,7 +129,8 @@ const TitlePousadas = ({
   buttonColor,
   buttonHover,
   buttonBorder,
-  targetPage
+  targetPage,
+  idade
 }) => {
   const navigate = useNavigate();
 
@@ -162,7 +169,9 @@ const TitlePousadas = ({
           border="1px solid"
           color="var(--color--black)"
         />
+        
       </StyledDivButton>
+        <IdadeCrianca>{idade}</IdadeCrianca>
     </StyledDiv>
   );
 };

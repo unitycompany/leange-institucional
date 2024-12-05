@@ -477,7 +477,7 @@ const events = [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '359,20',
+        price: '299,30',
         discount: 25,
     },
 
@@ -490,7 +490,7 @@ const events = [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '359,20',
+        price: '299,30',
         discount: 25,
     },
 
@@ -503,7 +503,7 @@ const events = [
             { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '538,90',
+        price: '449,00',
         discount: 25,
     },
 
@@ -516,7 +516,33 @@ const events = [
             { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '918,40',
+        price: '765,30',
+        discount: 25,
+    },
+
+    {
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ea7ed06-0da2-4123-00bf-c74543625600/public',
+        title: 'Pacote de Carnaval',
+        dateRange: '28/02/2025 até 04/03/2025 (4 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Churrasco no sábado' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '757,25',
+        discount: 25,
+    },
+
+    {
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7e26f340-d751-4102-9259-3b9ec67e3600/public',
+        title: 'Pacote de Páscoa',
+        dateRange: '17/04/2025 até 21/04/2025 (4 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Almoço especial no domingo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '653,80',
         discount: 25,
     },
     
@@ -651,6 +677,7 @@ const Home = () => {
                         buttonColor="var(--color--green)"
                         buttonBorder="1px solid var(--color--black)"
                         targetPage="/serra"
+                        idade="*Só permitimos crianças acima de 13 anos!"
                     />
                 </StyledContainerPousadas>
 
@@ -663,6 +690,7 @@ const Home = () => {
                         buttonColor="var(--color--blue)"
                         buttonBorder="1px solid var(--color--black)"
                         targetPage="/mar"
+                        idade="*Só permitimos crianças acima de 13 anos!"
                     />
                     <SliderComponent 
                         content={imagesMar} 

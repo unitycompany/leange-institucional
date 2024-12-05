@@ -345,6 +345,12 @@ const StyledContainerEvents = styled.section`
     }
 `;
 
+const IdadeCrianca = styled.p`
+  font-size: .9rem!important;
+  opacity: .4;
+  font-weight: 200;
+`
+
 const events = [
     {
         image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bbca820c-502b-48cf-a6d6-8a4d4da25900/public',
@@ -355,7 +361,7 @@ const events = [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '359,20',
+        price: '299,30',
         discount: 25,
     },
 
@@ -368,7 +374,7 @@ const events = [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '359,20',
+        price: '299,30',
         discount: 25,
     },
 
@@ -381,7 +387,7 @@ const events = [
             { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '538,90',
+        price: '449,00',
         discount: 25,
     },
 
@@ -394,7 +400,33 @@ const events = [
             { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
-        price: '918,40',
+        price: '765,30',
+        discount: 25,
+    },
+
+    {
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ea7ed06-0da2-4123-00bf-c74543625600/public',
+        title: 'Pacote de Carnaval',
+        dateRange: '28/02/2025 até 04/03/2025 (4 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Churrasco no sábado' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '757,25',
+        discount: 25,
+    },
+
+    {
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5b70a620-136b-4466-8f6f-a7898b4b0d00/public',
+        title: 'Pacote de Páscoa',
+        dateRange: '17/04/2025 até 21/04/2025 (4 diárias)',
+        features: [
+            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
+            { icon: <FaMusic />, text: 'Almoço especial no domingo' },
+            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
+        ],
+        price: '653,80',
         discount: 25,
     },
     
@@ -472,6 +504,7 @@ const LpSerra = () => {
                         hoverIconColor="var(--color--white)"
                         onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                     />
+                    <IdadeCrianca>*Só permitimos crianças acima de 13 anos!</IdadeCrianca>
                 </StyledHomeTexts>
             </StyledSectionHome>
 
