@@ -12,6 +12,7 @@ import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
 import PetFriendlyCarousel from '../../components/petCarrossel';
+import { FaRegCreditCard } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -378,7 +379,7 @@ const events = [
         dateRange: 'Segunda-feira a Sexta-feira',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
+            { icon: <FaRegCreditCard />, text: 'Até 12X SEM JUROS' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '449,00',
@@ -391,7 +392,7 @@ const events = [
         dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Até 12X SEM JUROS' },
+            { icon: <FaRegCreditCard />, text: 'Até 12X SEM JUROS' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '765,30',
@@ -404,7 +405,7 @@ const events = [
         dateRange: '28/02/2025 até 04/03/2025 (4 diárias)',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Churrasco no sábado' },
+            { icon: <FaUtensils />, text: 'Churrasco no sábado' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '757,25',
@@ -417,7 +418,7 @@ const events = [
         dateRange: '17/04/2025 até 21/04/2025 (4 diárias)',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaMusic />, text: 'Almoço especial no domingo' },
+            { icon: <FaUtensils />, text: 'Almoço especial no domingo' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '653,80',
