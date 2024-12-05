@@ -20,7 +20,7 @@ const StyledEspace = styled.div`
     height: 5vh;
 
     @media (max-width: 768px){
-        height: 0vh;
+        height: 0vh!important;
     }
 `;
 
@@ -54,10 +54,11 @@ const StyledSectionHome = styled.section`
     }
 
     @media (max-width: 768px){
-        padding: 10% 2.5%;
+        padding: 5% 2.5%;
         flex-direction: column-reverse;
         position: relative;
         z-index: 2;
+        height: 100vh;
     }
 `;
 
@@ -100,6 +101,7 @@ const StyledHomeTexts = styled.div`
     @media (max-width: 768px){
         width: 100%;
         align-items: center;
+        justify-content: flex-end;
         height: 35%;
     }
 
@@ -108,8 +110,6 @@ const StyledHomeTexts = styled.div`
         font-size: 18px;
         font-weight: 200;
         color: var(--color--black);
-        font-weight: 100;
-        
 
         @media (max-width: 768px){
             color: var(--color--black);
@@ -166,6 +166,7 @@ const StyledHomeTexts = styled.div`
             font-size: 1rem;
             text-align: center;
             padding-bottom: 0px;
+            line-height: 100%;
         }
     }
 `;
@@ -466,6 +467,10 @@ const IdadeCrianca = styled.p`
   font-size: .9rem!important;
   opacity: .4;
   font-weight: 200;
+
+  @media (max-width: 768px) {
+    width: 100%!important;
+  }
 `
 
 const Serra = () => {
