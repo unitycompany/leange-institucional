@@ -117,9 +117,25 @@ const StyledDivButton = styled.div`
 `;
 
 const IdadeCrianca = styled.p`
-  font-size: .9rem;
-  opacity: .4;
-  font-weight: 200;
+  font-size: .6rem;
+  opacity: .6;
+  font-weight: 400;
+  background-color: var(--color--green);
+  padding: 5px 10px;
+  color: #000;
+  border-radius: 5px;
+  transition: all .1s ease;
+  font-family: var(--font--comfortaa);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: default;
+
+  &:hover{
+    transform: scale(1.05) translateX(5px);
+    border: 1px solid red;
+    font-weight: 600;
+  }
 `
 
 const TitlePousadas = ({
@@ -152,18 +168,18 @@ const TitlePousadas = ({
       </StyledParagPag>
       <StyledDivButton>
         <Button
-          onClick={handleClick}
-          text="Saber mais"
-          backgroundColor={buttonColor}
+          onClick={handleClick2}
+          text="Fazer reserva!"
+          backgroundColor="transparent"
           borderColor={buttonBorder}
           hoverColor={buttonHover}
           border="1px solid"
           color="var(--color--black)"
         />
         <Button
-          onClick={handleClick2}
-          text="Fazer reserva!"
-          backgroundColor="transparent"
+          onClick={handleClick}
+          text="Saber mais"
+          backgroundColor={buttonColor}
           borderColor={buttonBorder}
           hoverColor={buttonHover}
           border="1px solid"

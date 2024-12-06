@@ -12,29 +12,49 @@ const RegrasAll = styled.div`
     gap: 50px;
     margin-top: -2.5%;
 
+    @media (max-width: 768px){
+        padding: 10% 5%;
+        flex-direction: column;
+        height: auto;
+    }
+
     & > div{
         width: 50%;
         height: 80%;
+
+        @media (max-width:768px){
+            width: 100%;
+        }
     }
 
     & > div:nth-child(1){
-        border: 1px solid red;
         display: flex;
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
         gap: 25px;
 
+        @media (max-width: 768px){
+            align-items: center;
+        }
+
         & > h1{
-            border: 1px solid red;
             line-height: 110%;
-            font-weight: 500;
+            font-weight: 300;
             font-family: var(--font--comfortaa);
             color: var(--color--black);
+            font-size: 1.8rem;
+            width: 70%;
+
+            @media (max-width: 768px){
+                font-size: 1.5rem;
+                text-align: center;
+                width: 100%;
+            }
 
             & > b{
                 color: var(--color--green);
-                font-weight: 500;
+                font-weight: 300;
             }
         }
 
@@ -53,6 +73,16 @@ const RegrasAll = styled.div`
                 color: var(--color--black);
                 font-size: 1rem;
                 font-weight: 400;
+
+                @media (max-width: 768px){
+                    font-size: .9rem;
+                    font-weight: 300!important;
+                }
+
+                & > b{
+                    font-weight: 500;
+                    color: var(--color--black);
+                }
             }
         }
 
@@ -63,6 +93,11 @@ const RegrasAll = styled.div`
 
     & > div:nth-child(2){
         display: flex;
+
+        @media (max-width: 768px){
+            width: 110%;
+            display: none;
+        }
     }
 
     & > div:nth-child(2) div{
@@ -71,23 +106,23 @@ const RegrasAll = styled.div`
         justify-content: center;
         flex-direction: column;
         width: 50%;
-        margin: 5px;
+        margin: 2.5px;
 
         & > img:nth-child(1){
             height: 40%;
             width: 100%;
             object-fit: cover;
-            margin: 5px;
+            margin: 2.5px;
             border-radius: 0px 20px 0px 20px;
-        }
+                    }
 
         & > img:nth-child(2){
             height: 60%;
             width: 100%;
             object-fit: cover;
-            margin: 5px;
+            margin: 2.5px;
             border-radius: 20px 0px 20px 0px;
-        }
+                    }
     }
 
     & > div:nth-child(2) div:nth-child(2){
@@ -101,17 +136,17 @@ const RegrasAll = styled.div`
             height: 60%;
             width: 100%;
             object-fit: cover;
-            margin: 5px;
+            margin: 2.5px;
             border-radius: 20px 0px 20px 0px;
-        }
+                    }
 
         & > img:nth-child(2){
             height: 40%;
             width: 100%;
             object-fit: cover;
-            margin: 5px;
+            margin: 2.5px;
             border-radius: 0px 20px 0px 20px;
-        }
+                    }
     }
 `
 
@@ -122,23 +157,23 @@ const Regras = () => {
                 <div>
                     <h1>A nossa pousada foi feita para <b>você</b> e o <b>seu pet!</b></h1>
                     <ol>
-                        <li>Apenas para pessoas acompanhadas de seus cães;</li>
+                        <li>Apenas para pessoas <b>acompanhadas de seus pets;</b></li>
 
-                        <li>Humanos acima de 14 anos: para a segurança das crianças e dos cachorros. Alguns doguinhos não estão acostumados com crianças e podem machucá-las até mesmo brincando;</li>
+                        <li>Humanos <b>acima de 13 anos:</b> para a segurança das crianças e dos cachorros. Alguns doguinhos <b>não estão acostumados com crianças e podem machucá-las</b> até mesmo brincando;</li>
 
-                        <li>Pessoas que gostam de proporcionar liberdade aos seus cães, afinal eles ficam sempre soltos;</li>
+                        <li>Pessoas que gostam de <b>proporcionar liberdade</b> aos seus cães, afinal eles ficam sempre soltos;</li>
 
-                        <li>Humanos que AMAM cachorros (como alguém pode não gostar de cachorro?).</li>
+                        <li>Humanos que AMAM cachorros <b>(como alguém pode não gostar de cachorro?).</b></li>
                     </ol>
                     <ol>
-                        <li>Vale ressaltar que fêmeas NÃO podem estar no cio! Como os cães ficam livres pela pousada, criamos essa regra para não gerar nenhum desconforto.</li>
+                        <li>Vale ressaltar que fêmeas <b>NÃO</b> podem estar no cio! Como os cães ficam livres pela pousada, criamos essa regra para não gerar nenhum desconforto.</li>
                     </ol>
                     <Button
                     onClick="www.google.com"
-                    text="Fazer reserva!"
-                    backgroundColor="transparent"
-                    borderColor="var (--color--green)"
-                    hoverColor="red"
+                    text="Saber mais"
+                    backgroundColor="var(--color--green)"
+                    borderColor="var(--color--white)"
+                    hoverColor="var(--color--white)"
                     border="1px solid"
                     color="var(--color--black)"
                     />
