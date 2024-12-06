@@ -72,7 +72,7 @@ const RegrasAll = styled.div`
                 padding-left: 5px;
                 color: var(--color--black);
                 font-size: 1rem;
-                font-weight: 400;
+                font-weight: 300;
 
                 @media (max-width: 768px){
                     font-size: .9rem;
@@ -80,7 +80,7 @@ const RegrasAll = styled.div`
                 }
 
                 & > b{
-                    font-weight: 500;
+                    font-weight: 400;
                     color: var(--color--black);
                 }
             }
@@ -114,7 +114,8 @@ const RegrasAll = styled.div`
             object-fit: cover;
             margin: 2.5px;
             border-radius: 0px 20px 0px 20px;
-                    }
+            
+            }
 
         & > img:nth-child(2){
             height: 60%;
@@ -170,7 +171,7 @@ const Regras = () => {
                     </ol>
                     <Button
                     onClick="www.google.com"
-                    text="Saber mais"
+                    text="Reservar agora"
                     backgroundColor="var(--color--green)"
                     borderColor="var(--color--white)"
                     hoverColor="var(--color--white)"

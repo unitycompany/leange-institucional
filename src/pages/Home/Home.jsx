@@ -629,6 +629,44 @@ const HomeImage = styled.div`
     }
 `
 
+const HomeImageOficial = styled.div`
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    overflow: hidden;
+
+    @media (max-width:768px){
+    }
+
+    & > a{
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        
+        & > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all .5s ease-in-out;
+        position: relative;
+
+        &:hover{
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        @media (max-width:768px){
+            width: 100%;
+            height: 50%;
+            object-position: center;
+        }
+        
+    }
+    }
+`
+
 const Home = () => {
     useEffect(() => {
         AOS.init({
@@ -643,10 +681,16 @@ const Home = () => {
                 <title>Início - Pousada Le Ange</title>
             </Helmet>
 
-            <HomeImage>
-                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/foto_de_mulher_com_dois_cachorros_bwwkmi_pyqnx0.jpg"></img>
-                <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728789/FOTO-MAR_qssync_ei8mel.webp"></img>
-            </HomeImage>
+            <HomeImageOficial>
+                <a href='/#/mar'>
+                    <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/foto_de_mulher_com_dois_cachorros_bwwkmi_pyqnx0.jpg"></img>
+                </a>
+                <a href='/#/serra'>
+                    <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728789/FOTO-MAR_qssync_ei8mel.webp"></img>
+                </a>
+            </HomeImageOficial>
+
+
 
             <WhatsAppButton />
 
