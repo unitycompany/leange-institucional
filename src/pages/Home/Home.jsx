@@ -19,6 +19,7 @@ import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Regras from '../../components/regras';
 
 const imagesSerra = [
     { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a4f0a292-2de1-4a0a-9c78-b40450f19a00/public", alt: 'Mulher na rede', loading: "lazy" },
@@ -117,7 +118,7 @@ const StyledContainerPousadas = styled.section`
 
 const StyledPousadas = styled.div`
     width: 100%;
-    height: 160vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -704,6 +705,8 @@ const Home = () => {
                     />
                 </StyledContainerPousadas>
             </StyledPousadas>
+
+            <Regras />
 
             <StyledAcomoda>
                 <div>
