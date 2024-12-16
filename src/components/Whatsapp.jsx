@@ -55,22 +55,30 @@ const Popup = styled.div`
   animation: ${popupAnimation} 0.5s ease-in-out;
   display: flex;
   flex-direction: column;
+  font-family: var(--font--comfortaa);
 `;
 
 const CloseButton = styled.button`
   position: absolute;
   transform: translateX(-50%);
-  top: 5px;
+  top: -15px;
   left: 50%;
   background: transparent;
   border: none;
   font-size: 18px;
   cursor: pointer;
   color: #b10000;
-  opacity: .6;
+  padding: 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--color--white);
+  transition: all .2s ease;
 
   &:hover {
     color: #000;
+    font-size: 22px;
   }
 `;
 
@@ -82,6 +90,7 @@ const MessagesContainer = styled.div`
   overflow-y: auto;
   margin-bottom: 10px;
   margin-top: 20px;
+  font-family: var(--font--comfortaa)!important;
 `;
 
 const MessageRow = styled.div`
@@ -91,6 +100,7 @@ const MessageRow = styled.div`
   margin-bottom: 10px;
   font-weight: 200;
   font-size: 14px;
+  font-family: var(--font--comfortaa)!important;
 `;
 
 const ProfilePicture = styled.img`
@@ -110,13 +120,16 @@ const MessageBox = styled.div`
   max-width: 70%;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
   white-space: pre-wrap; // Adicione esta linha
+  font-family: var(--font--comfortaa)!important;
+  font-size: 12px;
 `;
 
 const BotName = styled.div`
-  font-size: 12px;
+  font-size: 10px;
   color: #b6b6b6;
   font-weight: 200;
   margin-bottom: 5px;
+  font-family: var(--font--comfortaa)!important;
 `;
 
 const TypingDots = styled.div`
@@ -124,6 +137,7 @@ const TypingDots = styled.div`
   font-size: 14px;
   font-style: italic;
   color: #b6b6b6;
+  font-family: var(--font--comfortaa)!important;
 
   &::after {
     content: "";
@@ -149,6 +163,7 @@ const TypingDots = styled.div`
 const InputContainer = styled.div`
   display: flex;
   gap: 10px;
+  font-family: var(--font--comfortaa)!important;
 `;
 
 const Input = styled.input`
@@ -157,6 +172,7 @@ const Input = styled.input`
   border: 1px solid #ddd;
   border-radius: 15px;
   font-size: 12px;
+  font-family: var(--font--comfortaa)!important;
 
   &::placeholder{
     font-size: 12px!important;
@@ -171,6 +187,7 @@ const SendButton = styled.button`
   border: none;
   border-radius: 15px;
   cursor: pointer;
+  font-family: var(--font--comfortaa)!important;
   font-weight: 300;
 
   &:hover {
@@ -297,11 +314,9 @@ const WhatsAppButton = ({ footerRendered }) => {
       </Button>
       {showPopup && (
         <Popup>
-          {finalStage && (
-            <CloseButton onClick={handleCloseChat}>
-              <IoClose />
-            </CloseButton>
-          )}
+          <CloseButton onClick={handleCloseChat}>
+            <IoClose />
+          </CloseButton>
           <MessagesContainer>
             {messages.map((msg) => (
               <MessageRow key={msg.id} sent={msg.sent}>

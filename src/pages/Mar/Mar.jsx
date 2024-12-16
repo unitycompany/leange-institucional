@@ -120,6 +120,13 @@ const StyledHomeTexts = styled.div`
     & > h4 b{
         color: var(--color--blue);
         font-weight: 300;
+
+        @media (max-width: 768px){
+            color: var(--color--white);
+            font-weight: 600;
+            background-color: #7AC4F390;
+            padding: 5px;
+        }
     }
 
     & > h1 {

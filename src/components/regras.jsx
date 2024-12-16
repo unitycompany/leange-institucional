@@ -11,6 +11,7 @@ const RegrasAll = styled.div`
     height: 80vh;
     gap: 50px;
     margin-top: -2.5%;
+    font-family: var(--font--comfortaa)!important;
 
     @media (max-width: 768px){
         padding: 10% 5%;
@@ -54,7 +55,7 @@ const RegrasAll = styled.div`
 
             & > b{
                 color: var(--color--green);
-                font-weight: 300;
+                font-weight: 400!important;
             }
         }
 
@@ -168,8 +169,8 @@ const Regras = () => {
                     </ol>
                     <ol>
                         <li>Vale ressaltar que fêmeas <b>NÃO</b> podem estar no cio;</li>
-                        <li>O chachorro tem que <b>ser socializado</b>, caso contrario será necessário mante-lo na guia.</li>
-                        <li>Não trabalhamos com <b>Day Use</b></li>
+                        <li>O chachorro precisa <b>ser socializado</b>, caso contrário será necessário mantê-lo na guia.</li>
+                        <li>Não trabalhamos com <b>Day Use</b>.</li>
                     </ol>
                     <Button
                     onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
