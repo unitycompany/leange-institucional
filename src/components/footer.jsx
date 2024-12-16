@@ -7,6 +7,7 @@ import { motion, useInView } from 'framer-motion';
 import { RiCopyrightLine } from "react-icons/ri";
 import React, { useRef, useState } from 'react';
 import 'aos/dist/aos.css';
+import WhatsAppButton from './Whatsapp';
 
 const SubmitBtn = styled(motion.button)`
     font-family: inherit;
@@ -414,6 +415,9 @@ const Footer = () => {
                 setName('');
                 setEmail('');
                 setTel('');
+    
+                // Redirecionar para o WhatsApp após sucesso
+                window.open('https://wa.link/dojlwi', '_blank');
             } else {
                 console.error('Erro de resposta:', responseBody); // Log do erro
                 alert('Erro ao enviar os dados: ' + responseBody); // Mensagem de erro
@@ -423,6 +427,7 @@ const Footer = () => {
             alert('Erro ao enviar os dados. Tente novamente.'); // Mensagem de erro
         }
     };
+    
     
     
 
@@ -560,6 +565,8 @@ const Footer = () => {
                     <p>Desenvolvido por <b><a href='https://www.linkedin.com/in/aleph-ramos' target='_blank'>Aleph</a></b></p>
                 </StyledPolitica>
             </StyledFooterContainer>
+
+            <WhatsAppButton footerRendered={isInView} />
         </>
     );
 }    

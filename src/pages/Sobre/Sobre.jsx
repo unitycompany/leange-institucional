@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import CustomButton from '../../components/button3';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Regras from '../../components/regras';
 
 const SobreContainer = styled.section`
     width: 100%;
@@ -905,6 +906,8 @@ const Sobre = () => {
                 </div>
 
             </PublicoContainer>
+
+            <Regras />
 
             <CTA>
                 <h1 data-aos="fade-up" data-aos-delay="200">Venha viver essa experiência com a gente!</h1>

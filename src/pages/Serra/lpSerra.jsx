@@ -15,6 +15,7 @@ import { FaRegCreditCard } from "react-icons/fa";
 import PetFriendlyCarousel from '../../components/petCarrossel';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Regras from '../../components/regras';
 
 const StyledEspace = styled.div`
     height: 5vh;
@@ -355,32 +356,6 @@ const IdadeCrianca = styled.p`
 
 const events = [
     {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bbca820c-502b-48cf-a6d6-8a4d4da25900/public',
-        title: 'Noite das pizzas',
-        dateRange: '06/12/2024 até 08/12/2024 (3 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: '07/12 - Noite das pizzas' },
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '299,30',
-        discount: 25,
-    },
-
-    {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/79fdce4b-cea9-43ec-5c67-2235d2319a00/public',
-        title: 'Frutos do Mar',
-        dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: '14/12 - Frutos do Mar' },
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '299,30',
-        discount: 25,
-    },
-
-    {
         image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/58c77a3d-d9fb-422f-c84b-ad4798b74600/public',
         title: 'Fique 4 pague 3',
         dateRange: 'Segunda-feira a Sexta-feira',
@@ -420,12 +395,12 @@ const events = [
     },
 
     {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5b70a620-136b-4466-8f6f-a7898b4b0d00/public',
+        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7e26f340-d751-4102-9259-3b9ec67e3600/public',
         title: 'Pacote de Páscoa',
         dateRange: '17/04/2025 até 21/04/2025 (4 diárias)',
         features: [
             { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaUtensils />, text: 'Almoço especial no domingo' },
+            { icon: <FaUtensils />, text: 'Almoço e noite especial' },
             { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
         ],
         price: '653,80',
@@ -433,6 +408,7 @@ const events = [
     },
     
 ];
+
 
 const StyledButtonCenter = styled.div`
     width: 100%;
@@ -513,6 +489,8 @@ const LpSerra = () => {
             <StyledLocall data-aos="fade-up" data-aos-delay="200">
                 <h1 data-aos="fade-in" data-aos-delay="400">LeAnge Serra | Miguel Pereira RJ</h1>
             </StyledLocall>
+
+            <Regras />
 
             <StyledSectionEspaco>
                 <CarouselComponent slides={slides} />

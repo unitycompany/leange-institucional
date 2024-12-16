@@ -158,21 +158,23 @@ const Regras = () => {
                 <div>
                     <h1>A nossa pousada foi feita para <b>você</b> e o <b>seu pet!</b></h1>
                     <ol>
-                        <li>Apenas para pessoas <b>acompanhadas de seus pets;</b></li>
+                        {/* <li>Apenas para pessoas <b>acompanhadas de seus pets;</b></li> */}
+                        <li>Para pessoas que vêem o <b>pet como parte da família.</b></li>
 
-                        <li>Humanos <b>acima de 13 anos:</b> para a segurança das crianças e dos cachorros. Alguns doguinhos <b>não estão acostumados com crianças e podem machucá-las</b> até mesmo brincando;</li>
+                        <li>Para pessoas que querem proporcionar aos seus pets a <b>liberdade</b> de estarem sempre soltos.</li>
 
-                        <li>Pessoas que gostam de <b>proporcionar liberdade</b> aos seus cães, afinal eles ficam sempre soltos;</li>
-
-                        <li>Humanos que AMAM cachorros <b>(como alguém pode não gostar de cachorro?).</b></li>
+                        <li>Para garantir uma experiência segura, <b>não aceitamos menores de 13 anos</b>, mesmo que acompanhado dos pais.</li>
+                        
                     </ol>
                     <ol>
-                        <li>Vale ressaltar que fêmeas <b>NÃO</b> podem estar no cio! Como os cães ficam livres pela pousada, criamos essa regra para não gerar nenhum desconforto.</li>
+                        <li>Vale ressaltar que fêmeas <b>NÃO</b> podem estar no cio;</li>
+                        <li>O chachorro tem que <b>ser socializado</b>, caso contrario será necessário mante-lo na guia.</li>
+                        <li>Não trabalhamos com <b>Day Use</b></li>
                     </ol>
                     <Button
-                    onClick="www.google.com"
+                    onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                     text="Reservar agora"
-                    backgroundColor="var(--color--green)"
+                    backgroundColor="transparent"
                     borderColor="var(--color--white)"
                     hoverColor="var(--color--white)"
                     border="1px solid"

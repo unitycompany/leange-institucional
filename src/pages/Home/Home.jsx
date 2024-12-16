@@ -471,32 +471,6 @@ const StyledEstruturaSubTitle = styled.p`
 
 const events = [
     {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bbca820c-502b-48cf-a6d6-8a4d4da25900/public',
-        title: 'Noite das pizzas',
-        dateRange: '06/12/2024 até 08/12/2024 (3 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: '07/12 - Noite das pizzas' },
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '299,30',
-        discount: 25,
-    },
-
-    {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/79fdce4b-cea9-43ec-5c67-2235d2319a00/public',
-        title: 'Frutos do Mar',
-        dateRange: '13/12/2024 até 15/12/2024 (2 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: '14/12 - Frutos do Mar' },
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '299,30',
-        discount: 25,
-    },
-
-    {
         image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/58c77a3d-d9fb-422f-c84b-ad4798b74600/public',
         title: 'Fique 4 pague 3',
         dateRange: 'Segunda-feira a Sexta-feira',
@@ -650,16 +624,17 @@ const HomeImageOficial = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover;
-        transition: all .5s ease-in-out;
+        transition: all 1s ease-in-out;
         position: relative;
+        filter: brightness(120%);
 
         &:hover{
-            transform: scale(1.1) rotate(5deg);
+            transform: scale(1.02) rotate(1deg);
         }
 
         @media (max-width:768px){
             width: 100%;
-            height: 50%;
+            height: 100%;
             object-position: center;
         }
         
@@ -683,14 +658,12 @@ const Home = () => {
 
             <HomeImageOficial>
                 <a href='/#/mar'>
-                    <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728790/foto_de_mulher_com_dois_cachorros_bwwkmi_pyqnx0.jpg"></img>
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b3e6c25b-9ed6-4a84-5ee0-3ed539b29b00/public"></img>
                 </a>
                 <a href='/#/serra'>
-                    <img src="https://res.cloudinary.com/dabucfkmg/image/upload/v1732728789/FOTO-MAR_qssync_ei8mel.webp"></img>
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/565f57fa-9f92-434e-7e76-192ec1299700/public"></img>
                 </a>
             </HomeImageOficial>
-
-
 
             <WhatsAppButton />
 
@@ -791,6 +764,7 @@ const Home = () => {
 
             <StyledButtonCenter>
                 <Button
+                onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 text="Fazer minha reserva!"
                 />
             </StyledButtonCenter>
