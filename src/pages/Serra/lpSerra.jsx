@@ -16,6 +16,7 @@ import PetFriendlyCarousel from '../../components/petCarrossel';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
+import EventAlert from '../../components/alertEvent';
 
 const StyledEspace = styled.div`
     height: 5vh;
@@ -369,19 +370,6 @@ const events = [
     },
 
     {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1e2853af-cbe7-48ba-a6cc-7e36642f0f00/public',
-        title: 'Pacote de Natal',
-        dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaRegCreditCard />, text: 'Até 12X SEM JUROS' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '765,30',
-        discount: 25,
-    },
-
-    {
         image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ea7ed06-0da2-4123-00bf-c74543625600/public',
         title: 'Pacote de Carnaval',
         dateRange: '28/02/2025 até 04/03/2025 (4 diárias)',
@@ -444,6 +432,20 @@ const ImagesAcomoda = [
 
     { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/853f4009-5ddc-49ad-717f-3d49d3ad4900/public", text: "Suíte Master 10", loading: "lazy" },
 ];
+
+const AlertDiv = styled.div`
+    width: 100%;
+    margin-top: 5vh;
+    margin-bottom: -5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px){
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+`
 
 
 const LpSerra = () => {
@@ -508,6 +510,10 @@ const LpSerra = () => {
                 onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 />
             </StyledButtonCenter>
+
+            <AlertDiv>
+                <EventAlert />
+            </AlertDiv>
             
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />

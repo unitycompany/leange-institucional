@@ -20,6 +20,7 @@ import WhatsAppButton from '../../components/Whatsapp';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
+import EventAlert from '../../components/alertEvent';
 
 const imagesSerra = [
     { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a4f0a292-2de1-4a0a-9c78-b40450f19a00/public", alt: 'Mulher na rede', loading: "lazy" },
@@ -484,19 +485,6 @@ const events = [
     },
 
     {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1e2853af-cbe7-48ba-a6cc-7e36642f0f00/public',
-        title: 'Pacote de Natal',
-        dateRange: '21/12/2024 até 25/12/2024 (4 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaRegCreditCard />, text: 'Até 12X SEM JUROS' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '765,30',
-        discount: 25,
-    },
-
-    {
         image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ea7ed06-0da2-4123-00bf-c74543625600/public',
         title: 'Pacote de Carnaval',
         dateRange: '28/02/2025 até 04/03/2025 (4 diárias)',
@@ -773,6 +761,8 @@ const Home = () => {
                 <StyledEstruturaTitle data-aos="fade-up">Conheça nossos pacotes e <StyledColorBBlue>noites especiais</StyledColorBBlue> </StyledEstruturaTitle>
                 <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Estamos te esperando!</StyledEstruturaSubTitle>
             </div>
+
+            <EventAlert />
 
             <StyledContainerEvents data-aos="fade-in" data-aos-delay="250">
                 <EventCardCarousel events={events} />
