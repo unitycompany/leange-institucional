@@ -246,6 +246,13 @@ const WhatsAppButton = ({ footerRendered }) => {
       const phoneToStore = isNumber ? currentMessage : "Número inválido";
       setUserPhone(phoneToStore);
 
+      // Empurrar o número para o dataLayer
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "userPhoneCaptured",
+        phoneNumber: phoneToStore
+      });
+
       setTimeout(() => {
         setIsTyping(false);
         setMessages((prev) => [
