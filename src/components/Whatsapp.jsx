@@ -310,7 +310,7 @@ const WhatsAppButton = ({ footerRendered }) => {
   return (
     <ButtonContainer>
       <Button onClick={() => window.open(whatsappLink, "_blank")} id="clickwpp">
-        <FaWhatsapp />
+        <FaWhatsapp id="clickwpp"/>
       </Button>
       {showPopup && (
         <Popup>
@@ -336,6 +336,7 @@ const WhatsAppButton = ({ footerRendered }) => {
           {!finalStage && (
             <InputContainer>
               <Input
+                id="chat-iniciado"
                 type="text"
                 placeholder="Digite sua mensagem"
                 value={message}
