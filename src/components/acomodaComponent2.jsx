@@ -115,8 +115,9 @@ const StyledAcomodaContainer = styled.section`
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(10px);
         color: var(--color--white);
-        padding: 3px 7px;
-        font-size: 0.6rem;
+        padding: 10px;
+        font-size: 0.7rem;
+        font-weight: 100;
         border-radius: 5px 0 5px 0;
         transition: all 0.3s ease-in-out;
         font-family: var(--font--comfortaa);
@@ -140,7 +141,7 @@ const StyledAcomodaContainer = styled.section`
         justify-content: center;
         gap: 10px;
         transform: translate(-50%, -50%);
-        padding: 5px 10px;
+        padding: 10px;
         background-color: var(--color--white);
         color: var(--color--black);
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);

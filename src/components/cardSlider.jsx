@@ -78,7 +78,8 @@ const Title = styled.h3`
 const DateRange = styled.p`
     font-size: 14px;
     color: #777;
-    font-family: var(--font--avenir);
+    font-family: var(--font--comfortaa);
+    font-weight: 100;
     margin: 0;
 `;
 
