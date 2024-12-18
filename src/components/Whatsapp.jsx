@@ -200,7 +200,7 @@ const WhatsAppButton = ({ footerRendered }) => {
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const [isTyping, setIsTyping] = useState(false);
-  const [userPhone, setUserPhone] = useState(null);
+  const [userPhone, setUserPhone] = useState("Número inválido");
   const [phoneRequested, setPhoneRequested] = useState(false);
   const [finalStage, setFinalStage] = useState(false); 
 
@@ -229,7 +229,7 @@ const WhatsAppButton = ({ footerRendered }) => {
 
     setIsTyping(true);
 
-    if (!phoneRequested && userPhone === null) {
+    if (!phoneRequested && userPhone === "Número inválido") {
       setTimeout(() => {
         setIsTyping(false);
         setMessages((prev) => [
@@ -241,9 +241,9 @@ const WhatsAppButton = ({ footerRendered }) => {
       return;
     }
 
-    if (phoneRequested && userPhone === null) {
+    if (phoneRequested && userPhone === "Número inválido") {
       const isNumber = /^\d+$/.test(currentMessage);
-      const phoneToStore = isNumber ? currentMessage : "não informado";
+      const phoneToStore = isNumber ? currentMessage : "Número inválido";
       setUserPhone(phoneToStore);
 
       setTimeout(() => {
@@ -262,33 +262,9 @@ const WhatsAppButton = ({ footerRendered }) => {
             sent: false,
           },
         ]);
-        if (isNumber) {
-          axios.post(webhookURL, { phone: phoneToStore });
-          setTimeout(() => {
-            setMessages((prev) => [
-              ...prev,
-              {
-                id: Date.now(),
-                text: (
-                  <span>
-                    Para facilitar, basta clicar neste link a seguir e conversar conosco pelo WhatsApp:{" "}<br /><br />
-                    <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-                      Oiê, vamos conversar!
-                    </a>
-                  </span>
-                ),
-                sent: false,
-              },
-            ]);
-            setTimeout(() => {
-              setFinalStage(true);
-            }, 500);
-          }, 1500);
-        } else {
-          setTimeout(() => {
-            setFinalStage(true);
-          }, 500);
-        }
+        setTimeout(() => {
+          setFinalStage(true);
+        }, 500);
         setPhoneRequested(false);
       }, 1500);
       return;
