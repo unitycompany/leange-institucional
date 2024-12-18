@@ -62,7 +62,7 @@ const StyledSectionHome = styled.section`
 `;
 
 const StyledHomeDiv = styled.div`
-    width: 55%;
+    width: 50%;
     height: 100%;
     background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ddb82947-e348-414c-3db1-f51552701b00/public');
     background-position: center;
@@ -75,7 +75,7 @@ const StyledHomeDiv = styled.div`
 
     &::before{
         content: '';
-        width: 30%;
+        width: 25%;
         height: 100%;
         position: absolute;
         top: 0;
