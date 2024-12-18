@@ -65,7 +65,7 @@ const StyledHomeDiv = styled.div`
     width: 55%;
     height: 100%;
     background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ddb82947-e348-414c-3db1-f51552701b00/public');
-    background-position: bottom;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     filter: contrast(110%);
@@ -75,7 +75,7 @@ const StyledHomeDiv = styled.div`
 
     &::before{
         content: '';
-        width: 100%;
+        width: 30%;
         height: 100%;
         position: absolute;
         top: 0;
@@ -99,7 +99,6 @@ const StyledHomeDiv = styled.div`
         z-index: -3;
     }
 `;
-
 
 const StyledHomeTexts = styled.div`
     width: 50%;

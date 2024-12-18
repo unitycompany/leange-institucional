@@ -79,11 +79,11 @@ const StyledHomeDiv = styled.div`
 
     &::before{
         content: '';
-        width: 100%;
+        width: 30%;
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         z-index: 10;
         border-image: fill 0 linear-gradient(90deg, #0000, #ffffff);
 
