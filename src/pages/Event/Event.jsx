@@ -640,6 +640,7 @@ const Eventos = () => {
                     data-aos="fade-up" data-aos-delay="300"
                     onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
                     text="Fazer meu evento"
+                    backgroundColor="var(--color--green)"
                     />
                 </div>
                 <div>
@@ -671,6 +672,7 @@ const Eventos = () => {
                             <p>Fundada em 2018, a Pousada LeAnge nasceu da paixão dos seus fundadores pelo amor aos pets, bem-estar e hospitalidade. Localizada em Miguel Pereira, a LeAnge Serra proporciona uma experiência única na região serrana do Rio de Janeiro, sendo um verdadeiro refúgio entre as belezas naturais da Mata Atlântica.
                             </p>
                             <Button 
+                            backgroundColor="var(--color--green)"
                             onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
                             text="Fazer reserva"
                             />
@@ -726,6 +728,8 @@ const Eventos = () => {
                     </ol>
                     <Button 
                     text="Fazer reserva"
+                    backgroundColor="var(--color--green)"
+                    onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
                     />
                     <div>
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4129a834-fd9a-42db-4770-46bcaae2c200/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>
@@ -768,6 +772,8 @@ const Eventos = () => {
                     </ol>
                     <Button 
                     text="Fazer reserva"
+                    backgroundColor="var(--color--green)"
+                    onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
                     />
                     <div>
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e2fda94b-3aeb-4561-b4ad-688ff898ee00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>

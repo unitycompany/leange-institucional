@@ -215,8 +215,8 @@ const CoverflowSliderComponent = ({
                                     text="Reservar agora"
                                     text2="Clique e reserve agora"
                                     borderColor="var(--color--white)"
-                                    textColor="var(--color--white)"
-                                    hoverColor="var(--color--green)"
+                                    textColor="var(--color--black)"
+                                    hoverColor="var(--color--white)"
                                     hoverTextColor="var(--color--black)"
                                 />
                             </SlideContent>

@@ -494,6 +494,7 @@ const Mar = () => {
                     titleColor="var(--color--blue)"
                     buttonBgColor="var(--color--blue)"
                     imagePosition="left"
+                    backgroundColor="var(--color--blue)"
                 />
             </StyledSectionEspaco>
 
@@ -506,6 +507,7 @@ const Mar = () => {
             <StyledButtonCenter>
                 <Button 
                 text="Fazer minha reserva!" 
+                backgroundColor="var(--color--green)"
                 onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 />
             </StyledButtonCenter>

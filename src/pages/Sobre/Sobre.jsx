@@ -721,7 +721,7 @@ const CTA = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1730130105/fotoSerra3_zqwbav.jpg');
+    background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d9be2586-3341-4990-f3c8-685edcad8900/public');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -175,7 +175,7 @@ const Regras = () => {
                     <Button
                     onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                     text="Reservar agora"
-                    backgroundColor="transparent"
+                    backgroundColor="var(--color--green)"
                     borderColor="var(--color--white)"
                     hoverColor="var(--color--white)"
                     border="1px solid"

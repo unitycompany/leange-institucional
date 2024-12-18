@@ -8,6 +8,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import IconButton from "./button4";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Button from "./button";
 
 const SwiperStyles = createGlobalStyle`
     .swiper-button-next, .swiper-button-prev {
@@ -168,7 +169,7 @@ const StyledSwiper = styled(Swiper)`
   }
 `;
 
-const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 'left' }) => {
+const CarouselComponent = ({ slides, titleColor, backgroundColor, buttonBgColor, imagePosition = 'left' }) => {
   return (  
     <> 
       <SwiperStyles />
@@ -192,14 +193,10 @@ const CarouselComponent = ({ slides, titleColor, buttonBgColor, imagePosition = 
               <SlideText>
                 <Title $colorDefined={titleColor} data-aos="fade-up" data-aos-delay="100">{slide.title}</Title> 
                 <Description data-aos="fade-down" data-aos-delay="250">{slide.description}</Description>
-                <IconButton
-                    data-aos="fade-up" data-aos-delay="200"
-                    text = "Fazer reserva!"
-                    text2 = "Clique e reserve"
-                    borderColor = "var(--color--black)"
-                    textColor = "var(--color--black)"
-                    hoverColor = "var(--color--black)"
-                    hoverTextColor = "var(--color--white)"
+                <Button 
+                text="Reservar agora!"
+                backgroundColor= {backgroundColor}
+                onClick={() =>  window.open("https://wa.link/dojlwi", "_blank")}
                 />
               </SlideText>
               <ImageContainer data-aos="fade-left" data-aos-delay="400">

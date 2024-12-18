@@ -9,7 +9,7 @@ const ButtonContainer = styled.button`
   outline: none;
   cursor: pointer;
   border-radius: 50px;
-  background-color: transparent;
+  background-color: var(--color--green);
   border: solid 2px ${({ borderColor }) => borderColor || 'var(--color--black)'};
   color: ${({ textColor }) => textColor || 'var(--color--black)'};
   font-family: inherit;

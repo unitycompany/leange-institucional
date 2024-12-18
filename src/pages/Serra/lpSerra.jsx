@@ -495,7 +495,8 @@ const LpSerra = () => {
             <Regras />
 
             <StyledSectionEspaco>
-                <CarouselComponent slides={slides} />
+                <CarouselComponent slides={slides} 
+                backgroundColor="var(--color--green)"/>
             </StyledSectionEspaco>
 
             <AcomodaComponent images={ImagesAcomoda} data-aos="fade-up" data-aos-delay="200"/>
@@ -506,6 +507,7 @@ const LpSerra = () => {
 
             <StyledButtonCenter>
                 <Button 
+                backgroundColor="var(--color--green)"
                 text="Fazer minha reserva!" 
                 onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 />

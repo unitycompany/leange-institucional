@@ -754,6 +754,7 @@ const Home = () => {
                 <Button
                 onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 text="Fazer minha reserva!"
+                backgroundColor="var(--color--green)"
                 />
             </StyledButtonCenter>
 

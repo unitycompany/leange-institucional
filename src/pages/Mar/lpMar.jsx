@@ -487,6 +487,7 @@ const LpMar = () => {
                     titleColor="var(--color--blue)"
                     buttonBgColor="var(--color--blue)"
                     imagePosition="left"
+                    backgroundColor="var(--color--blue)"
                 />
             </StyledSectionEspaco>
 
@@ -498,6 +499,7 @@ const LpMar = () => {
 
             <StyledButtonCenter>
                 <Button 
+                backgroundColor="var(--color--green)"
                 text="Fazer minha reserva!" 
                 onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
                 />

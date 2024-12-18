@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
 import IconButton from "./button4";
 import 'aos/dist/aos.css';
+import Button from "./button";
 
 
 const waterWave = keyframes`
@@ -210,13 +211,10 @@ const AcomodaComponent = ({ images }) => {
                     <h1 data-aos="fade-up" data-aos-delay="100">Conheça as suítes da Le Ange Serra</h1>
                 </div>
                 <div data-aos="fade-down" data-aos-delay="200">
-                    <IconButton
-                        text = "Fazer reserva!"
-                        text2 = "Clique e reserve"
-                        borderColor = "var(--color--white)"
-                        textColor = "var(--color--white)"
-                        hoverColor = "var(--color--black)"
-                        hoverTextColor = "var(--color--white)"
+                    <Button 
+                    text="Reservar agora"
+                    backgroundColor="var(--color--green)"
+                    borderColor="var(--color--white)"
                     />
                 </div>
             </StyledAcomodaTexts>

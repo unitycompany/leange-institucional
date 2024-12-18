@@ -50,7 +50,7 @@ const CardContainer = styled.div`
 
 const CardImage = styled.img`
     width: 100%;
-    height: 220px;
+    height: 40vh!important;
     object-fit: cover;
     border-radius: 10px;
 
