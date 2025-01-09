@@ -1,5 +1,5 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect, useState } from "react";
+import { getEvents } from "../../../firebaseService";
 import { FaRulerCombined, FaSnowflake, FaBed, FaBath, FaTv, FaFire } from 'react-icons/fa';
 import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import { Helmet } from 'react-helmet';
@@ -470,48 +470,6 @@ const StyledEstruturaSubTitle = styled.p`
     }
 `
 
-const events = [
-    {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/58c77a3d-d9fb-422f-c84b-ad4798b74600/public',
-        title: 'Fique 4 pague 3',
-        dateRange: 'Segunda-feira a Sexta-feira',
-        features: [
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaRegCreditCard />, text: 'Até 12X SEM JUROS' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '449,00',
-        discount: 25,
-    },
-
-    {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ea7ed06-0da2-4123-00bf-c74543625600/public',
-        title: 'Pacote de Carnaval',
-        dateRange: '28/02/2025 até 04/03/2025 (4 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaUtensils />, text: 'Churrasco no sábado' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '757,25',
-        discount: 25,
-    },
-
-    {
-        image: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7e26f340-d751-4102-9259-3b9ec67e3600/public',
-        title: 'Pacote de Páscoa',
-        dateRange: '17/04/2025 até 21/04/2025 (4 diárias)',
-        features: [
-            { icon: <FaUtensils />, text: 'Todas as refeições incluídas' },
-            { icon: <FaUtensils />, text: 'Almoço e noite especial' },
-            { icon: <FaPaw />, text: 'Taxa pet free (não cobramos por pet)' },
-        ],
-        price: '653,80',
-        discount: 25,
-    },
-    
-];
-
 const StyledCarrosselSection = styled.section`
     height: 80vh;
     margin-bottom: 10vh;
@@ -637,6 +595,25 @@ const Home = () => {
           once: true,     // Executar animação apenas uma vez
         });
       }, []);
+      
+        const [events, setEvents] = useState([]);
+        const [loading, setLoading] = useState(true);
+      
+        useEffect(() => {
+          const fetchData = async () => {
+            try {
+              const data = await getEvents();
+              setEvents(data);
+            } catch (error) {
+              console.error("Erro ao buscar eventos do Firebase:", error);
+            } finally {
+              setLoading(false);
+            }
+          };
+      
+          fetchData();
+        }, []);
+      
       
     return (
         <>
