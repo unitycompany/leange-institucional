@@ -613,8 +613,7 @@ const Home = () => {
       
           fetchData();
         }, []);
-      
-      
+
     return (
         <>
             <Helmet>
@@ -742,11 +741,7 @@ const Home = () => {
 
             <EventAlert />
 
-            <StyledContainerEvents data-aos="fade-in" data-aos-delay="250">
-                <EventCardCarousel events={events} />
-            </StyledContainerEvents>
-
-            <Footer />
+               <Footer />
 
         </>
     );
