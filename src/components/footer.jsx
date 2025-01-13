@@ -400,7 +400,7 @@ const Footer = () => {
         };
     
         try {
-            const response = await fetch('https://hook.us1.make.com/e79ttwjdwv9soeppgqnu5rbnpk9l828e', { // URL do seu webhook
+            const response = await fetch('https://hook.us1.make.com/t8b8er7tynfc1gxx8y9ulf2z6gyaymcw', { // URL do seu webhook
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
