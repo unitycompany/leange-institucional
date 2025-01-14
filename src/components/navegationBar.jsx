@@ -397,11 +397,12 @@ const NavegationBar = () => {
 
     const handleNavigation = (event) => {
         const value = event.target.value;
-        if (value) {
-        setSelectedValue(value); // Atualiza o estado com a opção selecionada
-        navigate(value);
+        if (value && validRoutes.includes(value)) { // Adicione essa verificação
+            setSelectedValue(value);
+            navigate(value);
         }
     };
+    
 
     useEffect(() => {
         // Verifica se a rota atual não é válida
@@ -490,7 +491,7 @@ const NavegationBar = () => {
                     {/* <StyledLink to="/acomodaMar" isActive={location.pathname === "/acomodaMar"}><IconContainer isVisible={location.pathname === "/acomodaMar"}><FaBed /></IconContainer>Acomodações</StyledLink> */}
                 </StyledHeader>
                 <Button
-                    onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                     text="Fazer minha reserva"
                 />
             </StyledDiv>
@@ -532,7 +533,7 @@ const NavegationBar = () => {
                 </div>
                 <Button
                     text="Fazer minha reserva"
-                    onClick={() => window.open("https://wa.link/dojlwi", "_blank")}
+                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                 />
             </Sidebar>
         </>

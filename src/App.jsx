@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Substituir HashRouter por BrowserRouter
 import { AnimatePresence, motion } from 'framer-motion';
 import './styles/App.css';
 import './styles/global.css';
@@ -53,7 +53,6 @@ function AnimatedRoutes() {
 function AppContent() {
   const location = useLocation();
 
-  // Ocultar NavegationBar nas rotas lpMar e lpSerra
   const hiddenRoutes = ['/lpMar', '/lpSerra'];
   const hideNav = hiddenRoutes.includes(location.pathname);
 
