@@ -6,7 +6,6 @@ import { FaHome, FaInfoCircle, FaAnchor, FaMountain, FaCalendar, FaBed } from 'r
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
-import { useNavigate as usePageNavigation } from 'react-router-dom';
 
 // Animação de loading
 const fadeIn = keyframes`
@@ -370,7 +369,7 @@ const NavegationBar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const validRoutes = ["/", "/sobre", "/mar", "/serra", "/event", "/acomodaSerra", "/acomodaMar", "/lpMar", "lpSerra"]; // Adicione todas as rotas válidas aqui
+    const validRoutes = ["/", "/sobre", "/mar", "/serra", "/event", "/acomodaSerra", "/acomodaMar", "/lpMar", "/lpSerra"]; // Adicione todas as rotas válidas aqui
 
     let scrollTimeout;
 
@@ -410,7 +409,6 @@ const NavegationBar = () => {
         }
     }, [location.pathname, navigate]);
     
-
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -450,7 +448,7 @@ const NavegationBar = () => {
 
     useEffect(() => {
         if (isSidebarOpen) {
-            closeSidebar(); // Fecha a sidebar ao mudar de rota
+            closeSidebar(); 
         }
     }, [location.pathname]);
     

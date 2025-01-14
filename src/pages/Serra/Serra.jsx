@@ -459,8 +459,6 @@ const Serra = () => {
             </Helmet>
 
             <StyledEspace />
-            
-            <WhatsAppButton />
 
             <StyledSectionHome>
                 <StyledHomeDiv data-aos="zoom-in" data-aos-delay="100"/>
@@ -518,6 +516,8 @@ const Serra = () => {
             <Depoimentos />
             
             <Footer />
+
+            <WhatsAppButton />
         </>
     );
 };
