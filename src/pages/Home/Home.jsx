@@ -621,10 +621,10 @@ const Home = () => {
             </Helmet>
 
             <HomeImageOficial>
-                <a href='/mar'>
+                <a href='/#/mar'>
                     <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b3e6c25b-9ed6-4a84-5ee0-3ed539b29b00/public"></img>
                 </a>
-                <a href='/serra'>
+                <a href='/#/serra'>
                     <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/565f57fa-9f92-434e-7e76-192ec1299700/public"></img>
                 </a>
             </HomeImageOficial>

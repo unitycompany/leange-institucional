@@ -6,6 +6,7 @@ import { FaHome, FaInfoCircle, FaAnchor, FaMountain, FaCalendar, FaBed } from 'r
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
+import { useNavigate as usePageNavigation } from 'react-router-dom';
 
 // Animação de loading
 const fadeIn = keyframes`
@@ -409,6 +410,7 @@ const NavegationBar = () => {
         }
     }, [location.pathname, navigate]);
     
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
@@ -448,7 +450,7 @@ const NavegationBar = () => {
 
     useEffect(() => {
         if (isSidebarOpen) {
-            closeSidebar(); 
+            closeSidebar(); // Fecha a sidebar ao mudar de rota
         }
     }, [location.pathname]);
     
