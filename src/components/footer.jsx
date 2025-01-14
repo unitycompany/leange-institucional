@@ -7,7 +7,6 @@ import { motion, useInView } from 'framer-motion';
 import { RiCopyrightLine } from "react-icons/ri";
 import React, { useRef, useState } from 'react';
 import 'aos/dist/aos.css';
-import WhatsAppButton from './Whatsapp';
 
 const SubmitBtn = styled(motion.button)`
     font-family: inherit;
@@ -565,8 +564,6 @@ const Footer = () => {
                     <p>Desenvolvido por <b><a href='https://alephsramos.com.br' target='_blank'>Aleph</a></b></p>
                 </StyledPolitica>
             </StyledFooterContainer>
-
-            <WhatsAppButton footerRendered={isInView} />
         </>
     );
 }    

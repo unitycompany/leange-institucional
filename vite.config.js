@@ -5,10 +5,10 @@ export default defineConfig({
   build: {
      rollupOptions: {
        external: [
-          "/assets/index-BHhcukG4.js" 
+          "leange/assets/index-BHhcukG4.js" 
        ],
      },
   },
   plugins: [react()],
-  base: "/", 
+  base: "/leange/", 
 });

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'; // Substituir HashRouter por BrowserRouter
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import './styles/App.css';
 import './styles/global.css';
@@ -35,15 +35,15 @@ function AnimatedRoutes() {
       <ScrollToTop />
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/mar" element={<Mar />} />
-          <Route path="/serra" element={<Serra />} />
-          <Route path="/event" element={<Event />} />
-          <Route path="/acomodaMar" element={<AcomodaMar />} />
-          <Route path="/acomodaSerra" element={<AcomodaSerra />} />
-          <Route path="/lpSerra" element={<LpSerra />} />
-          <Route path="/lpMar" element={<LpMar />} />
+          <Route path="/" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Home /></motion.div>} />
+          <Route path="/sobre" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Sobre /></motion.div>} />
+          <Route path="/mar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Mar /></motion.div>} />
+          <Route path="/serra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Serra /></motion.div>} />
+          <Route path="/event" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Event /></motion.div>} />
+          <Route path="/acomodaMar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><AcomodaMar /></motion.div>} />
+          <Route path="/acomodaSerra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><AcomodaSerra /></motion.div>} />
+          <Route path="/lpSerra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><LpSerra /></motion.div>} />
+          <Route path="/lpMar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><LpMar /></motion.div>} />
         </Routes>
       </AnimatePresence>
     </>
@@ -53,30 +53,9 @@ function AnimatedRoutes() {
 function AppContent() {
   const location = useLocation();
 
-  // Rotas onde o NavegationBar não deve aparecer
+  // Ocultar NavegationBar nas rotas lpMar e lpSerra
   const hiddenRoutes = ['/lpMar', '/lpSerra'];
   const hideNav = hiddenRoutes.includes(location.pathname);
-
-  // Bloquear redirecionamento para o WhatsApp em /mar e /serra
-  useEffect(() => {
-    if (location.pathname === '/mar' || location.pathname === '/serra') {
-      // Remova quaisquer eventos ou lógicas relacionadas ao WhatsApp
-      const links = document.querySelectorAll('a[href^="https://wa.link"], a[href^="https://tintim.link"]');
-      links.forEach((link) => {
-        const preventDefault = (event) => {
-          event.preventDefault(); // Bloqueia o redirecionamento
-          console.log('Redirecionamento para WhatsApp bloqueado em', location.pathname);
-        };
-
-        link.addEventListener('click', preventDefault);
-
-        // Remova o listener ao sair da página para evitar vazamento de memória
-        return () => {
-          link.removeEventListener('click', preventDefault);
-        };
-      });
-    }
-  }, [location.pathname]);
 
   return (
     <>
@@ -88,7 +67,7 @@ function AppContent() {
 
 function App() {
   return (
-    <Router basename="/leange">
+    <Router>
       <AppContent />
     </Router>
   );
