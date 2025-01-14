@@ -454,7 +454,6 @@ const NavegationBar = () => {
             closeSidebar(); // Fecha a sidebar ao mudar de rota
         }
     }, [location.pathname]);
-    
 
     return (
         <>
@@ -491,9 +490,17 @@ const NavegationBar = () => {
                     {/* <StyledLink to="/acomodaMar" isActive={location.pathname === "/acomodaMar"}><IconContainer isVisible={location.pathname === "/acomodaMar"}><FaBed /></IconContainer>Acomodações</StyledLink> */}
                 </StyledHeader>
                 <Button
-                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    onClick={() => {
+                        if (location.pathname !== '/mar' && location.pathname !== '/serra') {
+                        window.open(
+                            'https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329',
+                            '_blank'
+                        );
+                        }
+                    }}
                     text="Fazer minha reserva"
-                />
+                    />
+
             </StyledDiv>
 
             <MobileBar isScrolled={isScrolled}>

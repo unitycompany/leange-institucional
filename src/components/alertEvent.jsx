@@ -84,7 +84,7 @@ const EventAlert = () => {
         <>
             <AlertAll>
                 <div>
-                    <h1><b>ATENÇÃO!!!</b> Neste mês de Janeiro ( 01/2025 ) haverá <b>Churrasco na beira da piscina</b> todos os <b>Sábados</b>. Não perca tempo, <a href="https://wa.link/dojlwi" target="_blank">reserve agora!</a></h1>
+                    <h1><b>ATENÇÃO!!!</b> Neste mês de Janeiro ( 01/2025 ) haverá <b>Churrasco na beira da piscina</b> todos os <b>Sábados</b>. Não perca tempo, <a href="https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329" target="_blank">reserve agora!</a></h1>
                 </div>
             </AlertAll>
         </>

@@ -218,13 +218,11 @@ const SliderAcomodaHome = ({
                   ))}
                 </Features>
                 <ButtonAcomoda
-                    onClick={() => {
-                        const newUrl = `/leange/#/acomoda${item.id}`; // Concatena exatamente o que está no ID com 'acomoda'
-                        window.location.href = newUrl; // Redireciona para a URL correta
-                    }}
+                    onClick={() => navigate(`/acomoda${item.id}`)}
                     text="Conhecer essa acomodação"
                     suiteId={item.id}
                 />
+
 
               </SlideContent>
             </SlideContainer>

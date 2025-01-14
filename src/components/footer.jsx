@@ -505,18 +505,18 @@ const Footer = () => {
                     </div>
                     <div>
                         <h2 data-aos="fade-up" data-aos-delay="50">Mapa do site</h2>
-                        <a href='#' data-aos="fade-down" data-aos-delay="100"> <MdOutlineArrowRight /> Início </a>
-                        <a href='#/sobre' data-aos="fade-up" data-aos-delay="150"> <MdOutlineArrowRight /> Sobre nós </a>
-                        <a href='#/serra' data-aos="fade-down" data-aos-delay="200"> <MdOutlineArrowRight /> Le Ange Serra </a>
-                        <a href='#/mar' data-aos="fade-up" data-aos-delay="250"> <MdOutlineArrowRight /> Le Ange Mar </a>
-                        <a href='#/event' data-aos="fade-down" data-aos-delay="300"> <MdOutlineArrowRight /> Eventos </a>
-                        <a href='#/acomodaSerra' data-aos="fade-up" data-aos-delay="350"> <MdOutlineArrowRight /> Acomodações Serra </a>
-                        <a href='#/acomodaMar' data-aos="fade-up" data-aos-delay="400"> <MdOutlineArrowRight /> Acomodações Mar </a>
+                        <a href='/' data-aos="fade-down" data-aos-delay="100"> <MdOutlineArrowRight /> Início </a>
+                        <a href='/sobre' data-aos="fade-up" data-aos-delay="150"> <MdOutlineArrowRight /> Sobre nós </a>
+                        <a href='/serra' data-aos="fade-down" data-aos-delay="200"> <MdOutlineArrowRight /> Le Ange Serra </a>
+                        <a href='/mar' data-aos="fade-up" data-aos-delay="250"> <MdOutlineArrowRight /> Le Ange Mar </a>
+                        <a href='/event' data-aos="fade-down" data-aos-delay="300"> <MdOutlineArrowRight /> Eventos </a>
+                        <a href='/acomodaSerra' data-aos="fade-up" data-aos-delay="350"> <MdOutlineArrowRight /> Acomodações Serra </a>
+                        <a href='/acomodaMar' data-aos="fade-up" data-aos-delay="400"> <MdOutlineArrowRight /> Acomodações Mar </a>
                     </div>
                     <div>
                         <h2 data-aos="fade-up" data-aos-delay="400">Central de reserva</h2>
-                        <a href="https://wa.link/dojlwi" target='_blank' data-aos="fade-up" data-aos-delay="100"> <MdOutlineArrowRight /> WhatsApp </a>
-                        <a href="https://wa.link/dojlwi" target='_blank' data-aos="fade-down" data-aos-delay="150"> <MdOutlineArrowRight /> +55 (21) 99423-0871 </a>
+                        <a href="https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329" target='_blank' data-aos="fade-up" data-aos-delay="100"> <MdOutlineArrowRight /> WhatsApp </a>
+                        <a href="https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329" target='_blank' data-aos="fade-down" data-aos-delay="150"> <MdOutlineArrowRight /> +55 (21) 99423-0871 </a>
                         <a href='mailto:pousadaleange@gmail.com' target='_blank' data-aos="fade-up" data-aos-delay="200"> <MdOutlineArrowRight /> pousadaleange@gmail.com </a>
                     </div>
                     <div>
@@ -562,7 +562,7 @@ const Footer = () => {
                 <StyledPolitica>
                     <p>Todos os direitos reservados | <RiCopyrightLine /> 2024</p>
                     <a href='https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view' target='_blank'>Termos de condições</a>
-                    <p>Desenvolvido por <b><a href='https://www.linkedin.com/in/aleph-ramos' target='_blank'>Aleph</a></b></p>
+                    <p>Desenvolvido por <b><a href='https://alephsramos.com.br' target='_blank'>Aleph</a></b></p>
                 </StyledPolitica>
             </StyledFooterContainer>
 
