@@ -222,6 +222,7 @@ const AcomodaComponent2 = ({ images }) => {
                     text="Reservar agora"
                     backgroundColor="var(--color--blue)"
                     borderColor="var(--color--white)"
+                    onClick={( window.open('https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329'))}
                     />
                 </div>
             </StyledAcomodaTexts>

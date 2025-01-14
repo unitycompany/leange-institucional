@@ -400,12 +400,12 @@ const Footer = () => {
         };
     
         try {
-            const response = await fetch('https://hook.us1.make.com/t8b8er7tynfc1gxx8y9ulf2z6gyaymcw', { // URL do seu webhook
+            const response = await fetch('https://hook.us1.make.com/t8b8er7tynfc1gxx8y9ulf2z6gyaymcw', { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify(formData), // Convertendo os dados para JSON
+                body: JSON.stringify(formData),
             });
     
             const responseBody = await response.text(); // Obtém a resposta como texto
@@ -417,7 +417,7 @@ const Footer = () => {
                 setTel('');
     
                 // Redirecionar para o WhatsApp após sucesso
-                window.open('https://wa.link/dojlwi', '_blank');
+                window.open('https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329', '_blank');
             } else {
                 console.error('Erro de resposta:', responseBody); // Log do erro
                 alert('Erro ao enviar os dados: ' + responseBody); // Mensagem de erro
