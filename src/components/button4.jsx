@@ -66,17 +66,42 @@ const IconButton = ({
   hoverColor,
   hoverTextColor,
 }) => {
-  const handleClick = () => {
-    window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank");
+  const handleClick = (event) => {
+    console.log("Botão clicado!");
+    console.log("Evento:", event);
+    console.log("Elemento alvo (target):", event.target);
+    console.log("Elemento atual (currentTarget):", event.currentTarget);
+    console.log("Abrindo link do WhatsApp...");
+    
+    event.stopPropagation(); // Impede que o clique afete outros elementos
+    window.open(
+      "https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329",
+      "_blank"
+    );
+  };
+
+  const handleMouseEnter = () => {
+    console.log("Mouse entrou no botão.");
+  };
+
+  const handleMouseLeave = () => {
+    console.log("Mouse saiu do botão.");
   };
 
   return (
-    <ButtonContainer borderColor={borderColor} textColor={textColor} onClick={handleClick} id='clickwpp'>
+    <ButtonContainer
+      borderColor={borderColor}
+      textColor={textColor}
+      onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      id="clickwpp"
+    >
       <DefaultButton className="default-btn">
         <MdHotel size={15} color={textColor || 'var(--color--black)'} />
         <ButtonText textColor={textColor}>{text}</ButtonText>
       </DefaultButton>
-      <HoverButton className="hover-btn" hoverColor={hoverColor} id='clickwpp'>
+      <HoverButton className="hover-btn" hoverColor={hoverColor} id="clickwpp">
         <LuMousePointerClick size={15} color={hoverTextColor || 'var(--color--white)'} />
         <HoverButtonText hoverTextColor={hoverTextColor}>{text2}</HoverButtonText>
       </HoverButton>

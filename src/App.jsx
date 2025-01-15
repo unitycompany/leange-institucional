@@ -8,6 +8,8 @@ import './styles/global.css';
 import './styles/index.css';
 import './styles/variables.css';
 
+import DebugRedirect from '../debug';
+
 import Home from './pages/Home/Home';
 import Event from './pages/Event/Event';
 import Sobre from './pages/Sobre/Sobre';
@@ -41,6 +43,9 @@ function AnimatedRoutes() {
     };
 
     return (
+        <>
+        <DebugRedirect />
+
         <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
                 <Route
@@ -117,6 +122,7 @@ function AnimatedRoutes() {
                 />
             </Routes>
         </AnimatePresence>
+        </>
     );
 }
 

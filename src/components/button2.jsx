@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
 
 const StyledButtonAcomodo = styled.button`
   width: auto;

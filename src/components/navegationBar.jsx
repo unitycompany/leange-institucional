@@ -152,7 +152,17 @@ const StyledHeader = styled.header`
     gap: 5px;
 `;
 
-const StyledLink = styled(({ isActive, ...props }) => <Link {...props} />)`
+const StyledLink = styled(({ onClick, ...props }) => {
+    const handleClick = (event) => {
+        console.log('Link clicado:', props.to);
+        onClick?.(event);
+        if (props.to.includes('whatsapp')) {
+            console.warn('Redirecionamento suspeito:', props.to);
+        }
+    };
+
+    return <Link {...props} onClick={handleClick} />;
+})`
     position: relative;
     color: var(--color--black);
     text-decoration: none;
@@ -372,6 +382,26 @@ const NavegationBar = () => {
 
     let scrollTimeout;
 
+    useEffect(() => {
+        const handleGlobalClick = (event) => {
+            const link = event.target.closest('a');
+            if (link && link.href.includes('whatsapp')) {
+                console.warn('Redirecionamento para WhatsApp detectado:', link.href);
+            }
+        };
+    
+        document.addEventListener('click', handleGlobalClick);
+        return () => document.removeEventListener('click', handleGlobalClick);
+    }, []);
+
+    useEffect(() => {
+        console.log('Rota atual:', location.pathname);
+        if (location.pathname.includes('whatsapp')) {
+            console.warn('Comportamento suspeito detectado na navegação para:', location.pathname);
+        }
+    }, [location.pathname]);
+    
+
     const toggleSidebar = () => {
         setIsSidebarOpen((prev) => !prev);
         setIsClicked((prev) => !prev); // Alterna o estado de clique
@@ -389,6 +419,7 @@ const NavegationBar = () => {
             setIsScrolled(false);
         }, 1000);
     };
+    
 
     const navigate = useNavigate();
     const [selectedValue, setSelectedValue] = useState("");

@@ -37,7 +37,6 @@ const StyledSectionHome = styled.section`
     height: 100vh;
     background: #fff;
     position: relative;
-    
 
     &::before{
         content: '';
@@ -321,7 +320,7 @@ const StyledSectionEspaco = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    border: 1px solid red;
 
     @media (max-width: 768px) {
         height: auto;
@@ -365,7 +364,7 @@ const StyledContainerEvents = styled.section`
     top: 0;
     transform: translateX(-50%)!important;
     position: relative;
-    
+    border: 1px solid red;
     height: auto;
     display: flex;
     align-items: center;
@@ -384,7 +383,7 @@ const StyledButtonCenter = styled.div`
     align-items: center;
     justify-content: center;
     height: 15vh;
-    margin-bottom: 0vh;
+    margin-bottom: -10vh;
 
     @media (max-width: 768px){
         display: none;
@@ -438,18 +437,6 @@ const AlertDiv = styled.div`
 `
 
 const Serra = () => {
-
-    const [allowWhatsApp, setAllowWhatsApp] = useState(false);
-
-    const handleButtonClick = () => {
-        if (allowWhatsApp) {
-            window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank");
-        } else {
-            alert("Por favor, confirme antes de continuar.");
-            setAllowWhatsApp(true); // Permitir apenas após confirmação
-        }
-    };
-
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
