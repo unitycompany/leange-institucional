@@ -30,6 +30,7 @@ const AlertAll = styled.section`
         margin-bottom: 0;
         padding: 0 2.5%;
         height: auto;
+        margin-top: 5vh;
     }
 
     & > div{

@@ -46,6 +46,8 @@ const RegrasAll = styled.div`
 
         @media (max-width: 768px){
             align-items: center;
+            width: 100%;
+            padding-left: 0;
         }
 
         & > h1{

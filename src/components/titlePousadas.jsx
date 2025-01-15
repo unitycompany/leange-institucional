@@ -40,8 +40,8 @@ const StyledDiv = styled.div`
     gap: 30px;
     position: relative;
     z-index: 10;
-    top: -80px;
-    margin-bottom: -80px;
+    top: -60px;
+    margin-bottom: -50px;
   }
 
   &::before {

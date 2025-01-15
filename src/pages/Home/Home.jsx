@@ -276,6 +276,7 @@ const acomodaHome = [
 
 const StyledAcomoda = styled.section`
     height: auto;
+    width: 100%;
     max-width: 1280px;
     left: 50%;
     top: 0;
@@ -308,7 +309,7 @@ const StyledAcomoda = styled.section`
 
     @media (max-width: 768px){
         height: auto;
-        padding: 10% 5%;
+        padding: 10% 2.5%;
         gap: 25px;
         clip-path: polygon(2% 2%, 98% 2%, 98% 98%, 2% 98%);
     }

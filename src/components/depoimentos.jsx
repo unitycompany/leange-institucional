@@ -51,6 +51,7 @@ const CarouselContainer = styled.div`
 
     @media (max-width: 768px){
         height: auto;
+        padding: 0 5%;
     }
 `;
 

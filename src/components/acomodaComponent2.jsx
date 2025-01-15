@@ -70,7 +70,7 @@ const StyledAcomodaContainer = styled.section`
         padding: 0 5%;
 
         @media (max-width: 768px){
-
+            padding: 0 2.5%;
             height: auto;
         }
     }

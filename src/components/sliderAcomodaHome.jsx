@@ -74,6 +74,7 @@ const SlideContainer = styled.div`
     animation: none!important;
     border-radius: 20px 0 20px 0;
     height: 80vh;
+    width: 100%;
   }
 `;
 

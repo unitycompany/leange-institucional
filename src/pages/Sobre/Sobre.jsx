@@ -419,6 +419,7 @@ const ContainerDuplo = styled.section`
         gap: 25px;
         margin-top: 50px;
         padding: 5% 5%;
+
     }
 
     & > div:nth-child(1){
@@ -643,6 +644,7 @@ const PublicoContainer = styled.section`
         @media (max-width: 768px){
             height: auto;
             flex-direction: column;
+            padding: 2.5% 5%;
         }
 
     & > div:nth-child(1){
@@ -660,6 +662,7 @@ const PublicoContainer = styled.section`
             width: 100%;
             height: auto;
             gap: 10px;
+            padding-left: 0;
         }
 
         & > div:nth-child(1){
