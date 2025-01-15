@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { StaticRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+
 import './styles/App.css';
 import './styles/global.css';
 import './styles/index.css';
@@ -18,59 +19,59 @@ import LpMar from './pages/Mar/lpMar';
 import LpSerra from './pages/Serra/lpSerra';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+    const { pathname } = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
-  return null;
+    return null;
 }
 
 function AnimatedRoutes() {
-  const location = useLocation();
+    const location = useLocation();
 
-  return (
-    <>
-      <ScrollToTop />
-      <AnimatePresence>
-        <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Home /></motion.div>} />
-          <Route path="/sobre" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Sobre /></motion.div>} />
-          <Route path="/mar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Mar /></motion.div>} />
-          <Route path="/serra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Serra /></motion.div>} />
-          <Route path="/event" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><Event /></motion.div>} />
-          <Route path="/acomodaMar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><AcomodaMar /></motion.div>} />
-          <Route path="/acomodaSerra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><AcomodaSerra /></motion.div>} />
-          <Route path="/lpSerra" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><LpSerra /></motion.div>} />
-          <Route path="/lpMar" element={<motion.div initial={{ opacity: 0, scale: 0.8, rotateY: 90 }} animate={{ opacity: 1, scale: 1, rotateY: 0 }} exit={{ opacity: 0, scale: 0.8, rotateY: -90 }} transition={{ duration: 0.2, ease: "easeInOut" }}><LpMar /></motion.div>} />
-        </Routes>
-      </AnimatePresence>
-    </>
-  );
+    return (
+        <>
+            <ScrollToTop />
+            <AnimatePresence>
+                <Routes location={location} key={location.pathname}>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/sobre" element={<Sobre />} />
+                    <Route path="/mar" element={<Mar />} />
+                    <Route path="/serra" element={<Serra />} />
+                    <Route path="/event" element={<Event />} />
+                    <Route path="/acomodaMar" element={<AcomodaMar />} />
+                    <Route path="/acomodaSerra" element={<AcomodaSerra />} />
+                    <Route path="/lpSerra" element={<LpSerra />} />
+                    <Route path="/lpMar" element={<LpMar />} />
+                </Routes>
+            </AnimatePresence>
+        </>
+    );
 }
 
 function AppContent() {
-  const location = useLocation();
+    const location = useLocation();
 
-  // Ocultar NavegationBar nas rotas lpMar e lpSerra
-  const hiddenRoutes = ['/lpMar', '/lpSerra'];
-  const hideNav = hiddenRoutes.includes(location.pathname);
+    // Ocultar NavegationBar nas rotas lpMar e lpSerra
+    const hiddenRoutes = ['/lpMar', '/lpSerra'];
+    const hideNav = hiddenRoutes.includes(location.pathname);
 
-  return (
-    <>
-      {!hideNav && <NavegationBar />}
-      <AnimatedRoutes />
-    </>
-  );
+    return (
+        <>
+            {!hideNav && <NavegationBar />}
+            <AnimatedRoutes />
+        </>
+    );
 }
 
 function App() {
-  return (
-    <Router>
-      <AppContent />
-    </Router>
-  );
+    return (
+        <Router>
+            <AppContent />
+        </Router>
+    );
 }
 
 export default App;
