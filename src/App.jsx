@@ -1,6 +1,5 @@
-import React from 'react';
-import { StaticRouter } from 'react-router-dom/server';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import './styles/App.css';
@@ -19,7 +18,19 @@ import AcomodaMar from './pages/Acomoda/acomodaMar';
 import LpMar from './pages/Mar/lpMar';
 import LpSerra from './pages/Serra/lpSerra';
 
-function AnimatedRoutes({ location }) {
+function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
+
+function AnimatedRoutes() {
+    const location = useLocation();
+
     return (
         <AnimatePresence>
             <Routes location={location} key={location.pathname}>
@@ -37,14 +48,29 @@ function AnimatedRoutes({ location }) {
     );
 }
 
-function App() {
-    const currentLocation = window.location.pathname;
+function AppContent() {
+  const location = useLocation();
 
+  // Rotas onde o NavegationBar deve ser escondido
+  const hiddenRoutes = ['/lpMar', '/lpSerra'];
+
+  // Verifica se a rota atual está na lista de rotas escondidas
+  const hideNav = hiddenRoutes.some((route) => location.pathname.startsWith(route));
+
+  return (
+      <>
+          {!hideNav && <NavegationBar />}
+          <AnimatedRoutes />
+      </>
+  );
+}
+
+
+function App() {
     return (
-        <StaticRouter location={currentLocation}>
-            <NavegationBar />
-            <AnimatedRoutes location={{ pathname: currentLocation }} />
-        </StaticRouter>
+        <Router>
+            <AppContent />
+        </Router>
     );
 }
 
