@@ -139,7 +139,7 @@ const StyledDiv = styled.div`
         left: 50%;
         transform: translateX(-50%);
         padding: 0 2.5%;
-        height: 8.5vh;
+        height: 9vh;
         box-shadow: 0 0 5px #4d4d4d50;
         border-radius: 0 0 20px 20px ;
         z-index: 999;
