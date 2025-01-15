@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="refresh" content="0; URL=/" />
+    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <script>
+        // Redireciona para o index.html mantendo a rota original
+        const redirectTo = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace('/' + redirectTo);
+    </script>
 </head>
 <body>
 </body>
