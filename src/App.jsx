@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
-import { StaticRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import React from 'react';
+import { StaticRouter } from 'react-router-dom/server';
+import { Routes, Route } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import './styles/App.css';
@@ -18,59 +19,32 @@ import AcomodaMar from './pages/Acomoda/acomodaMar';
 import LpMar from './pages/Mar/lpMar';
 import LpSerra from './pages/Serra/lpSerra';
 
-function ScrollToTop() {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
-    return null;
-}
-
-function AnimatedRoutes() {
-    const location = useLocation();
-
+function AnimatedRoutes({ location }) {
     return (
-        <>
-            <ScrollToTop />
-            <AnimatePresence>
-                <Routes location={location} key={location.pathname}>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/sobre" element={<Sobre />} />
-                    <Route path="/mar" element={<Mar />} />
-                    <Route path="/serra" element={<Serra />} />
-                    <Route path="/event" element={<Event />} />
-                    <Route path="/acomodaMar" element={<AcomodaMar />} />
-                    <Route path="/acomodaSerra" element={<AcomodaSerra />} />
-                    <Route path="/lpSerra" element={<LpSerra />} />
-                    <Route path="/lpMar" element={<LpMar />} />
-                </Routes>
-            </AnimatePresence>
-        </>
-    );
-}
-
-function AppContent() {
-    const location = useLocation();
-
-    // Ocultar NavegationBar nas rotas lpMar e lpSerra
-    const hiddenRoutes = ['/lpMar', '/lpSerra'];
-    const hideNav = hiddenRoutes.includes(location.pathname);
-
-    return (
-        <>
-            {!hideNav && <NavegationBar />}
-            <AnimatedRoutes />
-        </>
+        <AnimatePresence>
+            <Routes location={location} key={location.pathname}>
+                <Route path="/" element={<Home />} />
+                <Route path="/sobre" element={<Sobre />} />
+                <Route path="/mar" element={<Mar />} />
+                <Route path="/serra" element={<Serra />} />
+                <Route path="/event" element={<Event />} />
+                <Route path="/acomodaMar" element={<AcomodaMar />} />
+                <Route path="/acomodaSerra" element={<AcomodaSerra />} />
+                <Route path="/lpSerra" element={<LpSerra />} />
+                <Route path="/lpMar" element={<LpMar />} />
+            </Routes>
+        </AnimatePresence>
     );
 }
 
 function App() {
+    const currentLocation = window.location.pathname;
+
     return (
-        <Router>
-            <AppContent />
-        </Router>
+        <StaticRouter location={currentLocation}>
+            <NavegationBar />
+            <AnimatedRoutes location={{ pathname: currentLocation }} />
+        </StaticRouter>
     );
 }
 
