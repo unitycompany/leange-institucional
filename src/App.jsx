@@ -31,40 +31,110 @@ function ScrollToTop() {
 function AnimatedRoutes() {
     const location = useLocation();
 
+    // Configurações de animação para entrada e saída
+    const pageTransition = {
+        initial: { opacity: 0, scale: 0.9 },
+        animate: { opacity: 1, scale: 1 },
+        exit: { opacity: 0, scale: 0.9 },
+        transition: { duration: 0.5, ease: 'easeInOut' }
+    };
+
     return (
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
-                <Route path="/" element={<Home />} />
-                <Route path="/sobre" element={<Sobre />} />
-                <Route path="/mar" element={<Mar />} />
-                <Route path="/serra" element={<Serra />} />
-                <Route path="/event" element={<Event />} />
-                <Route path="/acomodaMar" element={<AcomodaMar />} />
-                <Route path="/acomodaSerra" element={<AcomodaSerra />} />
-                <Route path="/lpSerra" element={<LpSerra />} />
-                <Route path="/lpMar" element={<LpMar />} />
+                <Route
+                    path="/"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <Home />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/sobre"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <Sobre />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/mar"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <Mar />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/serra"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <Serra />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/event"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <Event />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/acomodaMar"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <AcomodaMar />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/acomodaSerra"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <AcomodaSerra />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/lpSerra"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <LpSerra />
+                        </motion.div>
+                    }
+                />
+                <Route
+                    path="/lpMar"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <LpMar />
+                        </motion.div>
+                    }
+                />
             </Routes>
         </AnimatePresence>
     );
 }
 
 function AppContent() {
-  const location = useLocation();
+    const location = useLocation();
 
-  // Rotas onde o NavegationBar deve ser escondido
-  const hiddenRoutes = ['/lpMar', '/lpSerra'];
+    // Rotas onde o NavegationBar deve ser escondido
+    const hiddenRoutes = ['/lpMar', '/lpSerra'];
 
-  // Verifica se a rota atual está na lista de rotas escondidas
-  const hideNav = hiddenRoutes.some((route) => location.pathname.startsWith(route));
+    // Verifica se a rota atual está na lista de rotas escondidas
+    const hideNav = hiddenRoutes.some((route) => location.pathname.startsWith(route));
 
-  return (
-      <>
-          {!hideNav && <NavegationBar />}
-          <AnimatedRoutes />
-      </>
-  );
+    return (
+        <>
+            {!hideNav && <NavegationBar />}
+            <AnimatedRoutes />
+        </>
+    );
 }
-
 
 function App() {
     return (
