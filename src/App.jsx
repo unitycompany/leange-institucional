@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { AnimatePresence, motion } from 'framer-motion';
 
 import './styles/App.css';
@@ -132,6 +133,8 @@ function AppContent() {
         <>
             {!hideNav && <NavegationBar />}
             <AnimatedRoutes />
+            {/* Adicione o SpeedInsights aqui */}
+            <SpeedInsights />
         </>
     );
 }
@@ -139,6 +142,7 @@ function AppContent() {
 function App() {
     return (
         <Router>
+            <ScrollToTop />
             <AppContent />
         </Router>
     );
