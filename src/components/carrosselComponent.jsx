@@ -39,7 +39,7 @@ const SlideContent = styled.div`
   display: flex;
   padding: 20px;
   align-items: center;
-  height: 90vh;
+  height: 700px;
   gap: 20px;
   padding: 5vh 5%;
   flex-direction: ${({ imagePosition }) => (imagePosition === 'right' ? 'row-reverse' : 'row')};

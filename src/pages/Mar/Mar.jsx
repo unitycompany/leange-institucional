@@ -255,11 +255,16 @@ const slides = [
 
 const StyledSectionEspaco = styled.section`
     width: 100%;
-    height: 100vh;
+    height: auto;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    position: relative;
+    transform: translateX(-50%)!important;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -5vh;
+    
 
     @media (max-width: 768px) {
         height: auto;
@@ -315,20 +320,24 @@ const StyledLocal = styled.div`
 `;
 
 const StyledContainerEvents = styled.section`
-    width: 100%;
-    height: 80vh;
-    padding: 10% 5%;
+    width: 90%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%)!important;
+    position: relative;
+    
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 10vh;
+    margin-top: 2.5%;
 
-    @media (max-width: 768px) {
+    @media (max-width: 768px){
         height: auto;
-        margin-top: 0;
-        padding: 10% 2.5% 0 2.5%;
+        padding: 5% 2.5%;
     }
-`;
+`
 
 const IdadeCrianca = styled.p`
   font-size: .9rem!important;
@@ -343,7 +352,8 @@ const StyledButtonCenter = styled.div`
     align-items: center;
     justify-content: center;
     height: 15vh;
-    margin-bottom: -10vh;
+    margin-bottom: 0vh;
+    
 
     @media (max-width: 768px) {
         display: none;

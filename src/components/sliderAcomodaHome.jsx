@@ -62,12 +62,13 @@ const BorderOverlay = styled.div`
 const SlideContainer = styled.div`
   position: relative;
   width: 100%;
-  height: 95vh;
+  height: 650px;
   display: flex;
   align-items: flex-end;
   background-size: cover;
   background-position: center;
   animation: ${waterWave} 5s ease-in-out infinite;
+  
 
   @media (max-width: 768px){
     animation: none!important;
@@ -168,6 +169,7 @@ const SliderWrapper = styled.div`
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+  
 `;
 
 const SliderAcomodaHome = ({

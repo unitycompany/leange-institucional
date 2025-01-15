@@ -23,11 +23,16 @@ const Espace = styled.div`
 const InicioContainer = styled.section`
     width: 100%;
     height: 85vh;
-    padding: 0 5%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
+    
 
     @media (max-width: 768px){
         flex-direction: column-reverse;
@@ -42,6 +47,7 @@ const InicioContainer = styled.section`
         justify-content: center;
         gap: 50px;
         align-items: flex-start;
+        padding-left: 5%;
 
         @media (max-width: 768px){
             width: 100%;
@@ -52,7 +58,7 @@ const InicioContainer = styled.section`
         }
 
         & > h1{
-            font-size: 3.5rem;
+            font-size: 3rem;
             width: 100%;
             line-height: 100%;
             font-family: var(--font--comfortaa);
@@ -108,6 +114,7 @@ const InicioContainer = styled.section`
     & > div:nth-child(2){
         width: 55%;
         height: 90%;
+        padding-right: 5%;
 
         @media (max-width: 768px){
             width: 100%;
@@ -134,11 +141,17 @@ const InicioContainer = styled.section`
 
 const CarrosselContainer = styled.section`
     width: 90%;
-    margin-left: 5%;
-    height: 100vh;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%)!important;
+    position: relative;
+    height: 700px;
+    margin-bottom: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
 
     @media (max-width: 768px){
@@ -304,8 +317,8 @@ const images2 = [
 
 const CasamentoContainer = styled.section`
     width: 100%;
-    height: 100vh;
-    padding: 0 5%;
+    height: auto;
+    padding: 5% 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -320,7 +333,8 @@ const CasamentoContainer = styled.section`
 
     & > div{
         width: 45%;
-        height: 90%;
+        height: 650px;
+        
     
 
         @media (max-width: 768px){
@@ -475,8 +489,8 @@ const StyledItemEvent = styled.div`
 
 const NiverContainer = styled.section`
     width: 100%;
-    height: 100vh;
-    padding: 0 5%;
+    height: auto;
+    padding: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -492,7 +506,8 @@ const NiverContainer = styled.section`
 
     & > div{
         width: 45%;
-        height: 90%;
+        height: 650px;
+        
     
 
         @media (max-width: 768px){
@@ -655,7 +670,7 @@ const Eventos = () => {
                         spaceBetween={20} 
                         slidesPerView={1} 
                         width="100%"
-                        height="90vh" 
+                        height="50%" 
                         contentType="image"
                         showPagination={true}
                 />

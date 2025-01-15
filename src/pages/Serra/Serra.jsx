@@ -312,14 +312,21 @@ const PetFriendlyImages = [
 
 const StyledSectionEspaco = styled.section`
     width: 100%;
-    height: 100vh;
+    height: auto;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    position: relative;
+    transform: translateX(-50%)!important;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         height: auto;
-        padding: 0% 0 5% 0 ;
+        padding: 0% 0 5% 0;
+        margin-top: 0;
     }
 `;
 
@@ -352,21 +359,24 @@ const StyledLocall = styled.div`
 `;
 
 const StyledContainerEvents = styled.section`
-    width: 100%;
-    height: 80vh;
-    padding: 10% 5%;
-    margin-top: 10vh;
+    width: 90%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%)!important;
+    position: relative;
+    
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2.5%;
 
     @media (max-width: 768px){
         height: auto;
-        padding: 10% 2.5% 0 2.5%;
-        margin-top: 0;
+        padding: 5% 2.5%;
     }
-`;
-
+`
 
 const StyledButtonCenter = styled.div`
     width: 100%;
@@ -374,7 +384,7 @@ const StyledButtonCenter = styled.div`
     align-items: center;
     justify-content: center;
     height: 15vh;
-    margin-bottom: -10vh;
+    margin-bottom: 0vh;
 
     @media (max-width: 768px){
         display: none;
@@ -428,6 +438,18 @@ const AlertDiv = styled.div`
 `
 
 const Serra = () => {
+
+    const [allowWhatsApp, setAllowWhatsApp] = useState(false);
+
+    const handleButtonClick = () => {
+        if (allowWhatsApp) {
+            window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank");
+        } else {
+            alert("Por favor, confirme antes de continuar.");
+            setAllowWhatsApp(true); // Permitir apenas após confirmação
+        }
+    };
+
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });

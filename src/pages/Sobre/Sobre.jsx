@@ -9,11 +9,18 @@ import Regras from '../../components/regras';
 
 const SobreContainer = styled.section`
     width: 100%;
-    height: 80vh;
+    max-width: 1280px;
+    height: 100vh;
+    left: 50%;
+    top: 0;
+    position: relative;
+    transform: translateX(-50%);
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
+    
 
     @media (max-width: 768px){
         height: auto;
@@ -29,6 +36,7 @@ const SobreContainer = styled.section`
         justify-content: center;
         gap: 20px;
         padding: 0 0 0 5%;
+        
 
 
         @media (max-width: 768px){
@@ -98,6 +106,7 @@ const SobreContainer = styled.section`
         justify-content: center;
         position: relative;
         z-index: 1;
+        
 
 
         @media (max-width: 768px){
@@ -140,7 +149,7 @@ const SobreContainer = styled.section`
 `
 
 const Espaco = styled.div`
-    height: 15vh;
+    height: 5vh;
 
     @media (max-width: 768px){
         height: 0;
@@ -149,13 +158,18 @@ const Espaco = styled.div`
 
 const UnidadeContainer = styled.section`
     width: 100%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    position: relative;
+    transform: translateX(-50%);
     height: 80vh;
-    margin-top: 10vh;
-    padding: 0% 5%;
+    margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 60px;
+    
 
     @media (max-width: 768px){
         flex-direction: column;
@@ -172,6 +186,7 @@ const UnidadeContainer = styled.section`
         align-items: center;
         justify-content: center;
         gap: 10px;
+        
 
 
         @media (max-width: 768px){
@@ -273,11 +288,17 @@ const UnidadeContainer = styled.section`
 
 const DiferenciaisContainer = styled.section`
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 5%;
+    
+    max-width: 1280px;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    margin-top: 5vh;
 
     @media (max-width: 768px){
         height: auto;
@@ -293,6 +314,7 @@ const DiferenciaisContainer = styled.section`
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
+        padding-left: 5%;
 
 
         @media (max-width: 768px){
@@ -334,8 +356,9 @@ const DiferenciaisContainer = styled.section`
         flex-wrap: wrap;
         gap: 5px;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-end;
+        
 
 
         @media (max-width: 768px){
@@ -346,8 +369,9 @@ const DiferenciaisContainer = styled.section`
        & > img{
         width: 45%;
         border-radius: 20px 0 20px 0; 
-        height: 50%;
+        height: 350px;
         object-fit: cover;
+        
 
         &:nth-child(2){
             border-radius: 0 20px 0 20px;
@@ -374,12 +398,19 @@ const DiferenciaisContainer = styled.section`
 
 const ContainerDuplo = styled.section`
     width: 100%;
-    height: 150vh;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 0 5%;
+    gap: 100px;
+    padding: 2.5% 0;
+    
+    max-width: 1280px;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 
 
     @media (max-width: 768px){
@@ -396,6 +427,7 @@ const ContainerDuplo = styled.section`
         justify-content: center;
         width: 100%;
         height: 45%;
+        padding-left: 5%;
     
 
         
@@ -452,7 +484,8 @@ const ContainerDuplo = styled.section`
 
         & > div:nth-child(2){
             width: 50%;
-            height: 100%;
+            height: 400px;
+            
     
 
             @media (max-width: 768px){
@@ -492,8 +525,10 @@ const ContainerDuplo = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 50px;
         width: 100%;
-        height: 45%;
+        height: auto;
+        
     
 
 
@@ -515,7 +550,7 @@ const ContainerDuplo = styled.section`
 
             & > img {
                 width: 50%;
-                height: 80%;
+                height: 350px;
                 object-fit: cover;
         
 
@@ -544,7 +579,7 @@ const ContainerDuplo = styled.section`
             width: 50%;
             height: 100%;
             display: flex;
-            align-items: flex-end;
+            align-items: flex-start;
             justify-content: center;
             flex-direction: column;
     
@@ -558,7 +593,7 @@ const ContainerDuplo = styled.section`
             font-family: var(--font--comfortaa);
             color: var(--color--blue);
             line-height: 100%;
-            text-align: right;
+            text-align: left;
             font-weight: 100;
             margin-bottom: 15px;
                 
@@ -575,7 +610,7 @@ const ContainerDuplo = styled.section`
             & > p {
             width: 90%;
             font-family: var(--font--comfortaa);
-            text-align: right;
+            text-align: left;
             font-weight: 100;
             font-size: .9rem;
             line-height: 130%;
@@ -592,13 +627,18 @@ const ContainerDuplo = styled.section`
 `
 
 const PublicoContainer = styled.section`
-
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 5%;
+    
+    position: relative;
+    max-width: 1280px;
+    padding: 2.5% 0;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
 
         @media (max-width: 768px){
             height: auto;
@@ -613,6 +653,7 @@ const PublicoContainer = styled.section`
         justify-content: center;
         flex-direction: column;
         gap: 10px;
+        padding-left: 5%;
 
 
         @media (max-width: 768px){
@@ -694,7 +735,7 @@ const PublicoContainer = styled.section`
     
     & > div:nth-child(2){
         width: 50%;
-        height: 80%;
+        height: 600px;
 
         @media (max-width: 768px){
 

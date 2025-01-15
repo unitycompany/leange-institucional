@@ -14,10 +14,14 @@ const Animation = keyframes`
 `
 
 const AlertAll = styled.section`
-    width: 100%;
+    width: 90%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    position: relative;
+    transform: translateX(-50%);
+    
     height: 10vh;
-    margin-top: 5vh;
-    margin-bottom: -5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,9 +33,10 @@ const AlertAll = styled.section`
     }
 
     & > div{
-        width: 70%;
+        width: 100%;
         height: 100%;
         text-align: center;
+        
         display: flex;
         align-items: center;
         justify-content: center;

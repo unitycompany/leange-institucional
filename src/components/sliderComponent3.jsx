@@ -68,9 +68,10 @@ const waterWave = keyframes`
 
 const StyledImage = styled(motion.img)`
     width: 100%;
-    height: 100%;
+    height: 700px;
     object-fit: cover;
     border-radius: 50px 0 30px 0;
+    
 
     @media (max-width: 768px){
         border-radius: 0 15px 0 20px;

@@ -28,6 +28,15 @@
     <div id="root"></div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 
+    <script>
+      if (!location.pathname.startsWith('/index.html')) {
+        const newPath = location.pathname.replace(/\/$/, '') + '/index.html';
+        const redirectUrl = location.origin + newPath + location.search + location.hash;
+        if (newPath !== '/index.html') {
+          history.replaceState(null, '', redirectUrl);
+        }
+      }
+    </script>
     
 
     <noscript>

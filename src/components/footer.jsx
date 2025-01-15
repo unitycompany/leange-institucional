@@ -56,10 +56,14 @@ const SubmitBtn = styled(motion.button)`
 
 const StyledFooterContainer = styled(motion.footer)`
     height: auto;
+    max-width: 1280px;
+    position: relative;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
     margin-top: 5vh;
     padding: 5% 5%;
     width: 96%;
-    margin-left: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;

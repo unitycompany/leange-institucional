@@ -39,10 +39,15 @@ const StyledTextDepoimentos = styled.section`
 const CarouselContainer = styled.div`
     display: flex;
     width: 100%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    height: 80vh;
-    padding: 0 5%;
+    height: auto;
+    
 
     @media (max-width: 768px){
         height: auto;
@@ -51,7 +56,7 @@ const CarouselContainer = styled.div`
 
 const Container = styled.div`
     width: 95%; 
-    height: 70vh; 
+    height: 600px; 
     display: flex;
     flex-direction: column;
     justify-content: center;

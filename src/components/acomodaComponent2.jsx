@@ -28,12 +28,17 @@ const waterWave = keyframes`
 
 const StyledAcomodaContainer = styled.section`
     width: 100%;
-    height: 100vh;
+    height: auto;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0% 5% 2.5% 5%;
+    padding-bottom: 2.5%;
     position: relative;
     background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334824/marFoto_oxc2py.webp');
     background-size: cover;
@@ -61,6 +66,8 @@ const StyledAcomodaContainer = styled.section`
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+        
+        padding: 0 5%;
 
         @media (max-width: 768px){
 
@@ -71,7 +78,7 @@ const StyledAcomodaContainer = styled.section`
     & > main div {
         position: relative;
         width: 23%;
-        height: 45%;
+        height: 250px;
         margin: 10px 0;
 
         @media (max-width: 768px){
@@ -161,6 +168,7 @@ const StyledAcomodaTexts = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 25%;
+    padding: 5%;
 
     @media (max-width: 768px){
         flex-direction: column;
@@ -212,6 +220,7 @@ const AcomodaComponent2 = ({ images }) => {
 
 
     return (
+    <>
         <StyledAcomodaContainer>
             <StyledAcomodaTexts>
                 <div>
@@ -234,7 +243,7 @@ const AcomodaComponent2 = ({ images }) => {
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <img src={image.src} alt={`Imagem ${index + 1}`}/>
-                        <span onClick={() => window.location.href = `/leange/#/acomodaMar#suite${index + 1}`}>
+                        <span onClick={() => window.location.href = `/acomodaMar#suite${index + 1}`}>
                             {hoveredIndex === index ? "Conhecer Suítes" : image.text}
                             {hoveredIndex === index && <FaArrowRight />}
                         </span>
@@ -242,6 +251,7 @@ const AcomodaComponent2 = ({ images }) => {
                 ))}
             </main>
         </StyledAcomodaContainer>
+    </>
     );
 };
 

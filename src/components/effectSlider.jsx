@@ -40,8 +40,9 @@ const SlideContainer = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
+    
     width: 100%;
-    height: 100%;
+    height: 600px;
     border-radius: 25px 0 25px 0;
     overflow: hidden;
     background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};

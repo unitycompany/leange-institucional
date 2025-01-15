@@ -12,8 +12,8 @@ import EventCardCarousel from '../../components/cardSlider';
 import { FaUtensils, FaMusic, FaPaw } from 'react-icons/fa';
 import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
-import { FaRegCreditCard } from "react-icons/fa";
 import PetFriendlyCarousel from '../../components/petCarrossel';
+import { FaRegCreditCard } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
@@ -312,14 +312,21 @@ const PetFriendlyImages = [
 
 const StyledSectionEspaco = styled.section`
     width: 100%;
-    height: 100vh;
+    height: auto;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    position: relative;
+    transform: translateX(-50%)!important;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
         height: auto;
-        padding: 0% 0 5% 0 ;
+        padding: 0% 0 5% 0;
+        margin-top: 0;
     }
 `;
 
@@ -352,27 +359,24 @@ const StyledLocall = styled.div`
 `;
 
 const StyledContainerEvents = styled.section`
-    width: 100%;
-    height: 80vh;
-    padding: 10% 5%;
-    margin-top: 10vh;
+    width: 90%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%)!important;
+    position: relative;
+    
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2.5%;
 
     @media (max-width: 768px){
         height: auto;
-        padding: 10% 2.5% 0 2.5%;
-        margin-top: 0;
+        padding: 5% 2.5%;
     }
-`;
-
-const IdadeCrianca = styled.p`
-  font-size: .9rem!important;
-  opacity: .4;
-  font-weight: 200;
 `
-
 
 const StyledButtonCenter = styled.div`
     width: 100%;
@@ -380,7 +384,7 @@ const StyledButtonCenter = styled.div`
     align-items: center;
     justify-content: center;
     height: 15vh;
-    margin-bottom: -10vh;
+    margin-bottom: 0vh;
 
     @media (max-width: 768px){
         display: none;
@@ -409,6 +413,16 @@ const ImagesAcomoda = [
     { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/853f4009-5ddc-49ad-717f-3d49d3ad4900/public", text: "Suíte Master 10", loading: "lazy" },
 ];
 
+const IdadeCrianca = styled.p`
+  font-size: .9rem!important;
+  opacity: .4;
+  font-weight: 200;
+
+  @media (max-width: 768px) {
+    width: 100%!important;
+  }
+`
+
 const AlertDiv = styled.div`
     width: 100%;
     margin-top: 5vh;
@@ -423,8 +437,7 @@ const AlertDiv = styled.div`
     }
 `
 
-
-const LpSerra = () => {
+const Serra = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
@@ -454,12 +467,8 @@ const LpSerra = () => {
             <Helmet>
                 <title>Le Ange Serra - Pousada Le Ange</title>
             </Helmet>
-            
-            {/* <VideoPlayer videoSrc="https://res.cloudinary.com/dupg7clzc/video/upload/f_auto,q_50,w_2000/v1732279146/Serra_s08vww.mp4" /> */}
 
             <StyledEspace />
-            
-            <WhatsAppButton />
 
             <StyledSectionHome>
                 <StyledHomeDiv data-aos="zoom-in" data-aos-delay="100"/>
@@ -490,7 +499,8 @@ const LpSerra = () => {
 
             <StyledSectionEspaco>
                 <CarouselComponent slides={slides} 
-                backgroundColor="var(--color--green)"/>
+                backgroundColor="var(--color--green)"
+                />
             </StyledSectionEspaco>
 
             <AcomodaComponent images={ImagesAcomoda} data-aos="fade-up" data-aos-delay="200"/>
@@ -516,8 +526,10 @@ const LpSerra = () => {
             <Depoimentos />
             
             <Footer />
+
+            <WhatsAppButton />
         </>
     );
 };
 
-export default LpSerra;
+export default Serra;

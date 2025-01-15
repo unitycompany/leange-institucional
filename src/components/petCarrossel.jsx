@@ -21,12 +21,17 @@ const CarouselContainer = styled.div`
 
 const StyledTextPet = styled.section`
     width: 100%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: relative;
     display: flex;
-    padding: 0 5%;
     justify-content: space-between;
     height: 15vh;
     align-items: center;
     margin-top: 5vh;
+    padding: 0 2.5%;
 
     @media (max-width: 768px){
         flex-direction: column;
@@ -55,6 +60,7 @@ const StyledTextPet = styled.section`
     & > h1 b{
         font-weight: 500;
     }
+
 `;
 
 const PetFriendlyCarousel = ({ carousels }) => {

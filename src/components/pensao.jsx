@@ -6,11 +6,17 @@ import 'aos/dist/aos.css';
 
 const StyledSectionPensao = styled.section`
     width: 100%;
-    height: 100vh;
+    height: auto;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: relative;
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.5% 5%;
+    padding: 2.5% 0;
     gap: 50px;
     background-color: var(--color--white);
 
@@ -24,7 +30,7 @@ const StyledSectionPensao = styled.section`
 
 const StyledPensaoImages = styled.div`
     width: 50%;
-    height: 90%;
+    height: 700px;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -40,6 +46,7 @@ const StyledTable = styled.div`
     height: 100%;
     display: flex;
     gap: 15px;
+    
 
     @media (max-width: 768px){
     }
@@ -91,12 +98,13 @@ const StyledTable = styled.div`
 
 const StyledPensaoTexts = styled.div`
     width: 50%;
-    height: 100%;
+    height: 80%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     gap: 25px;
+    
 
     @media (max-width: 768px){
         width: 100%;
@@ -125,7 +133,7 @@ const StyledParagraph = styled.p`
     color: var(--color--black);
     font-size: 1rem;
     line-height: 100%;
-    width: 80%;
+    width: 90%;
     font-family: var(--font--comfortaa);
     font-weight: 100;
 

@@ -86,11 +86,11 @@ const imagesCarrossel02 = [
 
 const StyledContainerPousadas = styled.section`
     width: 100%;
-    height: 60vh;
+    height: auto;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
     padding: 0 5%;
 
     &:nth-child(2){
@@ -119,13 +119,18 @@ const StyledContainerPousadas = styled.section`
 
 const StyledPousadas = styled.div`
     width: 100%;
-    height: 150vh;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    position: relative;
+    padding: 0;
+    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
     justify-content: center;
-    padding: 0;
+    
 
     @media (max-width: 768px){
         height: auto;
@@ -137,6 +142,11 @@ const StyledPousadas = styled.div`
 `
 
 const StyledPousadasTitle = styled.aside `
+
+    
+    width: 100%;
+    padding: 3.5%;
+
     & > h1 {
         font-family: var(--font--comfortaa);
         width: 100%;
@@ -266,13 +276,24 @@ const acomodaHome = [
 
 const StyledAcomoda = styled.section`
     height: auto;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 20px;
-    padding: 2.5% 5%;
+    gap: 0px;
+    padding: 0;
     position: relative;
+    
+
+    & > div {
+        
+        padding: 3.5% 5% 0% 5%;
+        width: 100%;
+    }
     
     &::before{
         content: '';
@@ -281,7 +302,7 @@ const StyledAcomoda = styled.section`
         left: 0;
         top: 0;
         position: absolute;
-        background-color: rgba(0, 0, 0, 0.1);
+        background-color: #f5f5f5;
         clip-path: polygon(1% 1%, 99% 1%, 99% 85%, 1% 85%);
     }
 
@@ -376,13 +397,19 @@ const slideDataCoverflow = [
 ];
 
 const StyledEstrutura = styled.div`
-    height: 110vh;
+    height: auto;
+    width: 100%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
     position: relative;
+    
 
     @media (max-width: 768px){
         height: auto;
@@ -440,6 +467,8 @@ const StyledEstruturaTitle = styled.h1`
     color: var(--color--black);
     font-size: 1.5rem;
     font-weight: 200;
+    
+    margin-top: 5vh;
 
     & > b{
         font-weight: 400;
@@ -463,6 +492,7 @@ const StyledEstruturaSubTitle = styled.p`
     opacity: 0.7;
     font-family: 200;
     font-size: .9rem;
+    margin-bottom: 5vh;
 
     @media (max-width: 768px){
         font-size: 0.9rem;
@@ -484,9 +514,14 @@ const StyledCarrosselSection = styled.section`
 `
 
 const StyledContainerEvents = styled.section`
-    width: 100%;
-    height: 80vh;
-    padding: 0 5%;
+    width: 90%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%)!important;
+    position: relative;
+    
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -621,23 +656,18 @@ const Home = () => {
             </Helmet>
 
             <HomeImageOficial>
-                <a href='/#/mar'>
+                <a href='/mar'>
                     <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b3e6c25b-9ed6-4a84-5ee0-3ed539b29b00/public"></img>
                 </a>
-                <a href='/#/serra'>
+                <a href='/serra'>
                     <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/565f57fa-9f92-434e-7e76-192ec1299700/public"></img>
                 </a>
             </HomeImageOficial>
 
             <WhatsAppButton />
 
-            <StyledPousadas 
-                containerAnimation={{ opacity: 0, scale: 0.8 }}
-                titleAnimation={{ opacity: 0, y: -50 }}
-                textAnimation={{ opacity: 0, x: 50 }}
-                buttonAnimation={{ opacity: 0, scale: 0.5 }}
-                animationDuration={0.7}
-            >
+            <StyledPousadas>
+
                 <StyledPousadasTitle>
                     <h1 data-aos="fade-up">Pousada<StyledColorBBlue> 100% Pet Friendly</StyledColorBBlue> que aceita humanos de estimação</h1>
                     <p data-aos="fade-up" data-aos-delay="200">2 unidades, 2 cenários incomparáveis</p>
@@ -648,7 +678,7 @@ const Home = () => {
                         content={imagesSerra} 
                         spaceBetween={20} 
                         slidesPerView={1} 
-                        height="60vh" 
+                        height="50vh" 
                         contentType="image" 
                         showPagination={false} 
                     />
@@ -680,7 +710,7 @@ const Home = () => {
                         spaceBetween={20} 
                         slidesPerView={1} 
                         width="60%" 
-                        height="60vh" 
+                        height="50vh" 
                         contentType="image"
                         showPagination={false}
                     />
@@ -710,7 +740,7 @@ const Home = () => {
                     content={slideDataCoverflow} 
                     spaceBetween={20} 
                     width="100%" 
-                    height="70vh" 
+                    height="100%" 
                     showPagination={false} 
                     showNavigation={true}
                 />

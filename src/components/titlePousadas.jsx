@@ -52,7 +52,6 @@ const StyledDiv = styled.div`
     opacity: 0.1;
     left: 0;
     top: 0;
-    background-image: url('../../public/background/background_black.webp');
     background-position: center;
     background-size: contain;
     animation: ${DivAnimated} 8s ease-in-out infinite;
@@ -133,7 +132,7 @@ const IdadeCrianca = styled.p`
 
   &:hover{
     transform: scale(1.05) translateX(5px);
-    border: 1px solid red;
+    
     font-weight: 600;
   }
 `

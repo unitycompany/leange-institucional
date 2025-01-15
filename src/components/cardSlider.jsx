@@ -49,6 +49,7 @@ const CardContainer = styled.div`
   width: 100%;
   animation: ${waterWave2} 5s ease-in-out infinite;
   background-color: rgba(0, 0, 0, 0.1);
+  
 
   @media (max-width: 768px) {
     border: none;

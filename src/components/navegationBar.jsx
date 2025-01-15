@@ -21,7 +21,7 @@ const fadeIn = keyframes`
 const Select = styled.select`
   padding: 10px;
   border: 1px solid transparent;
-  border-radius: 10px 10px 0 10px;
+  border-radius: 10px;
   background: linear-gradient(135deg, var(--color--light-gray), var(--color--white));
   color: var(--color--black);
   appearance: none;
@@ -106,7 +106,6 @@ const Select = styled.select`
   }
 `;
 
-
 const LoadingOverlay = styled.div`
   display: ${({ isLoading }) => (isLoading ? 'flex' : 'none')};
   position: fixed;
@@ -131,19 +130,18 @@ const StyledDiv = styled.div`
     @media (min-width: 1080px) {
         display: flex;
         background-color: ${({ isScrolled }) => (isScrolled ? 'rgba(251, 251, 251, 0.5)' : '#fbfbfb')};
-        backdrop-filter: ${({ isScrolled }) => (isScrolled ? 'blur(10px)' : 'none')}; 
+        backdrop-filter: ${({ isScrolled }) => (isScrolled ? 'blur(5px)' : 'none')}; 
         position: fixed;
         align-items: center;
         justify-content: space-between;
         width: 85%;
-        max-width: 1440px;
+        max-width: 1320px;
         left: 50%;
         transform: translateX(-50%);
-        margin-top: 10px;
         padding: 0 2.5%;
-        height: 10vh;
+        height: 8.5vh;
         box-shadow: 0 0 5px #4d4d4d50;
-        border-radius: 16px 8px 16px 8px;
+        border-radius: 0 0 20px 20px ;
         z-index: 999;
         transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     }
@@ -163,10 +161,10 @@ const StyledLink = styled(({ isActive, ...props }) => <Link {...props} />)`
     align-items: center;
     justify-content: center;
     font-family: var(--font--comfortaa);
-    font-weight: 400;
+    font-weight: 600;
     padding: 5px 15px;
     transition: all 0.3s ease;
-    border-radius: 10px 10px 0 10px;
+    border-radius: 10px;
     background-color: ${({ isActive, variant }) =>
         isActive
             ? variant === 'serra'
@@ -188,7 +186,7 @@ const StyledLink = styled(({ isActive, ...props }) => <Link {...props} />)`
         opacity: 0;
         z-index: -1;
         transition: all 0.5s;
-        border-radius: 10px 10px 0 10px;
+        border-radius: 10px;
     }
 
     &:hover {
@@ -389,7 +387,7 @@ const NavegationBar = () => {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
             setIsScrolled(false);
-        }, 3000);
+        }, 1000);
     };
 
     const navigate = useNavigate();

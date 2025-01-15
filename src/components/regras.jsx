@@ -4,14 +4,19 @@ import Button from "./button";
 
 const RegrasAll = styled.div`
     width: 100%;
+    max-width: 1280px;
+    left: 50%;
+    top: 0;
+    position: relative;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 5%;
-    height: 80vh;
-    gap: 50px;
-    margin-top: -2.5%;
+    padding: 2.5% 0;
+    height: auto;
+    gap: 30px;
     font-family: var(--font--comfortaa)!important;
+    
 
     @media (max-width: 768px){
         padding: 10% 5%;
@@ -21,7 +26,8 @@ const RegrasAll = styled.div`
 
     & > div{
         width: 50%;
-        height: 80%;
+        height: 100%;
+        
 
         @media (max-width:768px){
             width: 100%;
@@ -33,7 +39,10 @@ const RegrasAll = styled.div`
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-        gap: 25px;
+        gap: 35px;
+        
+        width: 45%;
+        padding-left: 5%;
 
         @media (max-width: 768px){
             align-items: center;
@@ -45,7 +54,7 @@ const RegrasAll = styled.div`
             font-family: var(--font--comfortaa);
             color: var(--color--black);
             font-size: 1.8rem;
-            width: 70%;
+            width: 80%;
 
             @media (max-width: 768px){
                 font-size: 1.5rem;
@@ -94,6 +103,10 @@ const RegrasAll = styled.div`
 
     & > div:nth-child(2){
         display: flex;
+        height: 700px;
+        width: 55%;
+        padding-right: 5%;
+        position: relative;
 
         @media (max-width: 768px){
             width: 110%;
@@ -110,24 +123,43 @@ const RegrasAll = styled.div`
         margin: 2.5px;
 
         & > img:nth-child(1){
-            height: 40%;
+            height: 50%;
             width: 100%;
             object-fit: cover;
             margin: 2.5px;
-            border-radius: 0px 20px 0px 20px;
+            border-radius: 0px 20px 60px 20px;
             
             }
 
         & > img:nth-child(2){
-            height: 60%;
+            height: 50%;
             width: 100%;
             object-fit: cover;
             margin: 2.5px;
-            border-radius: 20px 0px 20px 0px;
+            border-radius: 20px 60px 20px 0px;
                     }
     }
 
     & > div:nth-child(2) div:nth-child(2){
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 4;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    & > div:nth-child(2) div:nth-child(3){
         display: flex;
         align-items: center;
         justify-content: center;
@@ -135,19 +167,19 @@ const RegrasAll = styled.div`
         width: 50%;
 
         & > img:nth-child(1){
-            height: 60%;
+            height: 50%;
             width: 100%;
             object-fit: cover;
             margin: 2.5px;
-            border-radius: 20px 0px 20px 0px;
+            border-radius: 20px 0px 20px 60px;
                     }
 
         & > img:nth-child(2){
-            height: 40%;
+            height: 50%;
             width: 100%;
             object-fit: cover;
             margin: 2.5px;
-            border-radius: 0px 20px 0px 20px;
+            border-radius: 60px 20px 0px 20px;
                     }
     }
 `
@@ -186,6 +218,9 @@ const Regras = () => {
                     <div>
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c9f443a0-365f-4341-67c4-dc3b15d8d200/public" alt="IMAGE" />
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9ca851c2-347a-4f8c-752e-b90080865800/public" alt="IMAGE" />
+                    </div>
+                    <div>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1a69bf6f-02ea-413a-b67c-62100c6e7e00/public" alt="icon da le ange" />
                     </div>
                     <div>
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/db3f6942-0de2-433d-1235-33bfa547e500/public" alt="IMAGE" />
