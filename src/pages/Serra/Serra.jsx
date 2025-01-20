@@ -5,7 +5,6 @@ import Footer from '../../components/footer';
 import styled from 'styled-components';
 import CustomButton from '../../components/button3';
 import CarouselComponent from '../../components/carrosselComponent';
-import AcomodaComponent from '../../components/acomodaComponent';
 import Pensao from '../../components/pensao';
 import Depoimentos from '../../components/depoimentos';
 import EventCardCarousel from '../../components/cardSlider';
@@ -18,6 +17,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
 import EventAlert from '../../components/alertEvent';
+import AcomodaComponent from '../../components/acomodaComponent';
 
 const StyledEspace = styled.div`
     height: 0vh;
@@ -320,7 +320,6 @@ const StyledSectionEspaco = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid red;
 
     @media (max-width: 768px) {
         height: auto;
@@ -364,7 +363,6 @@ const StyledContainerEvents = styled.section`
     top: 0;
     transform: translateX(-50%)!important;
     position: relative;
-    border: 1px solid red;
     height: auto;
     display: flex;
     align-items: center;

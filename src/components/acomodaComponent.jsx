@@ -224,12 +224,12 @@ const AcomodaComponent2 = ({ images }) => {
         <StyledAcomodaContainer>
             <StyledAcomodaTexts>
                 <div>
-                    <h1 data-aos="fade-up" data-aos-delay="100">Conheça as suítes da Le Ange Mar</h1>
+                    <h1 data-aos="fade-up" data-aos-delay="100">Conheça as suítes da Le Ange Serra</h1>
                 </div>
                 <div data-aos="fade-down" data-aos-delay="250">
                 <Button
                     text="Reservar agora"
-                    backgroundColor="var(--color--blue)"
+                    backgroundColor="var(--color--green)"
                     borderColor="var(--color--white)"
                     onClick={() => {
                         window.open(
@@ -248,7 +248,7 @@ const AcomodaComponent2 = ({ images }) => {
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <img src={image.src} alt={`Imagem ${index + 1}`}/>
-                        <span onClick={() => window.location.href = `/acomodaMar#suite${index + 1}`}>
+                        <span onClick={() => window.location.href = `/acomodaSerra#suite${index + 1}`}>
                             {hoveredIndex === index ? "Conhecer Suítes" : image.text}
                             {hoveredIndex === index && <FaArrowRight />}
                         </span>
