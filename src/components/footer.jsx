@@ -7,6 +7,7 @@ import { motion, useInView } from 'framer-motion';
 import { RiCopyrightLine } from "react-icons/ri";
 import React, { useRef, useState } from 'react';
 import 'aos/dist/aos.css';
+import WhatsAppButton from './Whatsapp';
 
 const SubmitBtn = styled(motion.button)`
     font-family: inherit;
@@ -567,6 +568,8 @@ const Footer = () => {
                     <a href='https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view' target='_blank'>Termos de condições</a>
                     <p>Desenvolvido por <b><a href='https://alephsramos.com.br' target='_blank'>Aleph</a></b></p>
                 </StyledPolitica>
+
+                <WhatsAppButton />
             </StyledFooterContainer>
         </>
     );

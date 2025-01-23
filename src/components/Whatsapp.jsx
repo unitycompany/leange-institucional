@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 // Styled Components
 const FloatingButton = styled.a`
-  position: fixed;
+  position: fixed!important;
   z-index: 9999;
   right: 20px;
   bottom: 20px;
