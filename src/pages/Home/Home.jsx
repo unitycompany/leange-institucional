@@ -770,7 +770,7 @@ const Home = () => {
                 <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Estamos te esperando!</StyledEstruturaSubTitle>
             </div>
 
-            <EventAlert />
+            <EventAlert id="pacotes"git />
 
             <StyledContainerEvents data-aos="fade-in" data-aos-delay="250">
                 <EventCardCarousel events={events} />
