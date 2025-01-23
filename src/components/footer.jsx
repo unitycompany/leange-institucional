@@ -569,8 +569,9 @@ const Footer = () => {
                     <p>Desenvolvido por <b><a href='https://alephsramos.com.br' target='_blank'>Aleph</a></b></p>
                 </StyledPolitica>
 
-                <WhatsAppButton />
+                
             </StyledFooterContainer>
+            <WhatsAppButton />
         </>
     );
 }    
