@@ -319,7 +319,7 @@ const AcomodaMar = () => {
     return(
         <>
 
-            <WhatsAppButton />
+            {/* <WhatsAppButton /> */}
 
             <TituloAcomoda>Acomodações da<b>Pousada Le Ange Mar</b></TituloAcomoda>
 

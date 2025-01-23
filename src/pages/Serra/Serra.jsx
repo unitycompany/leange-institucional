@@ -524,7 +524,7 @@ const Serra = () => {
             
             <Footer />
 
-            <WhatsAppButton />
+            {/* <WhatsAppButton /> */}
         </>
     );
 };

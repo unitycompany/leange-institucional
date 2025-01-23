@@ -456,7 +456,7 @@ const Mar = () => {
 
             <StyledEspace />
 
-            <WhatsAppButton />
+            {/* <WhatsAppButton /> */}
 
             <StyledSectionHome>
                 <StyledHomeTexts>

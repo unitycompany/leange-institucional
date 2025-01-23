@@ -665,7 +665,7 @@ const Home = () => {
                 </a>
             </HomeImageOficial>
 
-            <WhatsAppButton />
+            {/* <WhatsAppButton /> */}
 
             <StyledPousadas>
 

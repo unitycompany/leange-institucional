@@ -376,7 +376,7 @@ const AcomodaSerra = () => {
 
     return (
         <>
-            <WhatsAppButton />
+            {/* <WhatsAppButton /> */}
 
             <TituloAcomoda>
                 Acomodações da<b>Pousada Le Ange Serra</b>
