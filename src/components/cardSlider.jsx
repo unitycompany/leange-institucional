@@ -189,7 +189,7 @@ const EventCardCarousel = ({ events = [] }) => {
                   ))}
                 </Features>
                 <PriceSection>
-                  <Price data-aos="fade-in" data-aos-delay="500">A partir de: <span>12x</span>R${event.price}</Price>
+                  <Price data-aos="fade-in" data-aos-delay="500">A partir de: <span>{event.payment}</span>R${event.price}</Price>
                 </PriceSection>
                 <IconButton
                   text="Quero fazer minha reserva agora"

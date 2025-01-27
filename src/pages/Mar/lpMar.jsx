@@ -513,7 +513,7 @@ const Mar = () => {
                 />
             </StyledButtonCenter>
 
-            <EventAlert />
+            {/* <EventAlert /> */}
 
             <StyledContainerEvents data-aos="fade-in" data-aos-delay="250">
                 <EventCardCarousel events={events} />

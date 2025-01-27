@@ -514,7 +514,7 @@ const Serra = () => {
                 />
             </StyledButtonCenter>
 
-            <EventAlert />
+            {/* <EventAlert /> */}
             
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />

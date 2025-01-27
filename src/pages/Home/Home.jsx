@@ -530,7 +530,7 @@ const StyledContainerEvents = styled.section`
 
     @media (max-width: 768px){
         height: auto;
-        padding: 5% 2.5%;
+        padding: 0% 2.5%;
     }
 `
 
@@ -770,7 +770,7 @@ const Home = () => {
                 <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Estamos te esperando!</StyledEstruturaSubTitle>
             </div>
 
-            <EventAlert id="pacotes" />
+            {/* <EventAlert id="pacotes" /> */}
 
             <StyledContainerEvents data-aos="fade-in" data-aos-delay="250">
                 <EventCardCarousel events={events} />
