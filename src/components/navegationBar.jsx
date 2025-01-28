@@ -7,6 +7,7 @@ import { HiBars3BottomRight } from "react-icons/hi2";
 import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 import { useNavigate as usePageNavigation } from 'react-router-dom';
+import RedirectSelect from './selectNavBar';
 
 // Animação de loading
 const fadeIn = keyframes`
@@ -172,7 +173,7 @@ const StyledLink = styled(({ onClick, ...props }) => {
     justify-content: center;
     font-family: var(--font--comfortaa);
     font-weight: 600;
-    padding: 5px 15px;
+    padding: 10px 15px;
     transition: all 0.3s ease;
     border-radius: 10px;
     background-color: ${({ isActive, variant }) =>
@@ -378,7 +379,7 @@ const NavegationBar = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const [isClicked, setIsClicked] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const validRoutes = ["/", "/sobre", "/mar", "/serra", "/event", "/acomodaSerra", "/acomodaMar", "/lpMar", "/lpSerra"]; // Adicione todas as rotas válidas aqui
+    const validRoutes = ["/", "/sobre", "/mar", "/serra", "/event", "/acomodaSerra", "/acomodaMar", "/lpMar", "/lpSerra", "/pacotes"]; // Adicione todas as rotas válidas aqui
 
     let scrollTimeout;
 
@@ -509,14 +510,17 @@ const NavegationBar = () => {
                     <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountainSun /></IconContainer>Le Ange Serra</StyledLink>
                     <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton>
-                    <Select onChange={handleNavigation} value={selectedValue}>
+                    {/* <Select onChange={handleNavigation} value={selectedValue}>
                         <option disabled value="">
                             Acomodações
                         </option>
                         <option value="/acomodaSerra">Suítes Serra</option>
                         <option value="/acomodaMar">Suítes Mar</option>
-                    </Select>
+                    </Select> */}
                     {/* <StyledLink to="/acomodaMar" isActive={location.pathname === "/acomodaMar"}><IconContainer isVisible={location.pathname === "/acomodaMar"}><FaBed /></IconContainer>Acomodações</StyledLink> */}
+                    <div>
+                        <RedirectSelect />
+                    </div>
                 </StyledHeader>
                 <Button
                     onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
@@ -551,13 +555,16 @@ const NavegationBar = () => {
                     <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos
                     </EventButton>
-                    <Select onChange={handleNavigation} value={selectedValue}>
+                    {/* <Select onChange={handleNavigation} value={selectedValue}>
                         <option disabled value="">
                             Acomodações
                         </option>
                         <option value="/acomodaSerra">Suítes Serra</option>
                         <option value="/acomodaMar">Suítes Mar</option>
-                    </Select>
+                    </Select> */}
+                    <div>
+                        <RedirectSelect />
+                    </div>
                 </div>
                 <Button
                     text="Fazer minha reserva"

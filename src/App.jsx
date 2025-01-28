@@ -20,6 +20,7 @@ import AcomodaSerra from './pages/Acomoda/acomodaSerra';
 import AcomodaMar from './pages/Acomoda/acomodaMar';
 import LpMar from './pages/Mar/lpMar';
 import LpSerra from './pages/Serra/lpSerra';
+import Pacotes from './pages/Pacotes/pacotes';
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -93,6 +94,14 @@ function AnimatedRoutes() {
                     element={
                         <motion.div {...pageTransition}>
                             <AcomodaMar />
+                        </motion.div>
+                    }
+                />
+                 <Route
+                    path="/pacotes"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <Pacotes />
                         </motion.div>
                     }
                 />
