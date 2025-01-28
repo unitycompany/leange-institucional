@@ -89,7 +89,6 @@ const CircularText = styled.svg`
   color: var(--color--black);
 `;
 
-
 const CardLeft = styled.div`
     width: 100%;
     height: 300px;

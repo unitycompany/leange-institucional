@@ -179,6 +179,7 @@ const Pacotes = () => {
                     padding: "10px 15px",
                     borderRadius: "10px",
                     textDecoration: "none",
+                    lineHeight: "50px",
                   }}
                   href="https://chat.whatsapp.com/FsOfaL1Y3jz4XQvNqaAVtZ" target="_blank">GRUPO EXCLUSIVO.</a>
                 </p>
