@@ -111,6 +111,10 @@ const Pacotes = () => {
 
   return (
     <>
+        <Helmet>
+                <title>Pacotes - Pousada Le Ange</title>
+        </Helmet>
+
       <Container>
         {categorias.map((categoria) => {
           const pacotesFiltrados = pacotes.filter((pacote) =>
