@@ -8,7 +8,10 @@ import { IoBedOutline } from "react-icons/io5";
 import { IoStarSharp } from "react-icons/io5";
 import { Navigate, useNavigate } from "react-router-dom";
 
-
+const shine = keyframes`
+  0% { left: -200px; }
+  100% { left: 100%; }
+`;
 
 const CardContainer = styled.div`
     width: 400px!important;
