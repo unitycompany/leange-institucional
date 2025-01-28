@@ -11,6 +11,7 @@ import CardPacote from "../../components/cards/cardPacote";
 import Footer from "../../components/footer";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Container = styled.div`
   width: 100%;
