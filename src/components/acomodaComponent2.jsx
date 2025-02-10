@@ -1,163 +1,44 @@
-import React, { useState, useEffect } from "react";
-import styled, { keyframes } from "styled-components";
+import React, { useEffect } from "react";
+import styled from "styled-components";
 import { FaArrowRight } from "react-icons/fa";
-import IconButton from "./button4";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import Button from "./button";
-
-
-const waterWave = keyframes`
-  0% {
-    border-radius: 0 10px 20px 0;
-  }
-  25% {
-    border-radius: 20px 0 10px 20px;
-  }
-  50% {
-    border-radius: 10px 20px 0 10px;
-  }
-  75% {
-    border-radius: 10px 10px 20px 0;
-  }
-  100% {
-    border-radius: 0 20px 10px 0;
-  }
-`;
-
 
 const StyledAcomodaContainer = styled.section`
     width: 100%;
-    height: auto;
     max-width: 1280px;
     left: 50%;
-    top: 0;
     transform: translateX(-50%);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-bottom: 2.5%;
-    position: relative;
-    background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/f_auto,q_auto/v1731334824/marFoto_oxc2py.webp');
+    padding: 5% 0%;
+    background-color: #ffffff;
     background-size: cover;
     background-position: center;
+    margin-bottom: 50px;
 
-    @media (max-width: 768px){
-        height: auto;
+    @media (max-width: 768px) {
         padding: 5% 2.5%;
-    }
-
-    &::before{
-        background-image: url('../../public/background/background_black.webp');
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        content: '';
-        background-size: contain;
-        opacity: 0.1;
     }
 
     & > main {
         width: 100%;
-        height: 80%;
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        
         padding: 0 5%;
 
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             padding: 0 2.5%;
-            height: auto;
-        }
-    }
-
-    & > main div {
-        position: relative;
-        width: 23%;
-        height: 250px;
-        margin: 10px 0;
-
-        @media (max-width: 768px){
-
-            width: 48%;
-            height: 20vh;
-            margin: 5px 0;
-        }
-    }
-
-    & > main img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: all .1s ease-in-out;
-        animation: ${waterWave} 5s ease-in-out infinite;
-        box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    & > main img:nth-child(-n + 5) {
-        border-radius: 0 30px 0 30px;
-    }
-
-    & > main img:nth-child(-n + 5):hover {
-        border-radius: 30px 0 30px 0;
-    }
-
-    & > main img:nth-child(n + 6) {
-        border-radius: 30px 0 30px 0;
-    }
-
-    & > main img:nth-child(n + 6):hover {
-        border-radius: 0px 30px 0px 30px;
-    }
-
-    & > main span {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(10px);
-        color: var(--color--white);
-        padding: 10px;
-        font-size: 0.7rem;
-        font-weight: 100;
-        border-radius: 5px 0 5px 0;
-        transition: all 0.3s ease-in-out;
-        font-family: var(--font--comfortaa);
-        cursor: pointer;
-
-        @media (max-width: 768px){
-
-            font-size: .8rem;
-            top: 5px;
-            right: 10px;
-        }
-    }
-
-    & > main div:hover span {
-        top: 50%;
-        left: 50%;
-        width: 80%;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        transform: translate(-50%, -50%);
-        padding: 10px;
-        background-color: var(--color--white);
-        color: var(--color--black);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        font-size: 0.7em;
-        border-radius: 8px;
-
-        @media (max-width: 768px){
-            font-size: .6rem;
-            padding: 5px 7px;
         }
     }
 `;
@@ -167,41 +48,30 @@ const StyledAcomodaTexts = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 25%;
     padding: 5%;
 
-    @media (max-width: 768px){
-        flex-direction: column;
-    }
-
-    & > div:nth-child(1) {
-        width: 60%;
-
-        @media (max-width: 768px){
-            width: 100%;
-        }
-    }
-
-    & > div:nth-child(2) {
-        width: 40%;
+    & > div {
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
+        width: 100%;
+        justify-content: space-between;
 
         @media (max-width: 768px){
-            width: 100%;
-            justify-content: center;
-            margin-bottom: 35px;
+            flex-direction: column;
+            align-items: center;
         }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
     }
 
     & > div h1 {
         font-size: 2rem;
-        color: var(--color--white);
+        color: var(--color--black);
         font-family: var(--font--comfortaa);
-        font-weight: 100;
+        font-weight: 300;
 
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
             font-size: 1.3rem;
             text-align: center;
             margin-bottom: 30px;
@@ -210,26 +80,65 @@ const StyledAcomodaTexts = styled.div`
     }
 `;
 
-const AcomodaComponent2 = ({ images }) => {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
+const StyledSlide = styled.div`
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px 30px;
 
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px 30px;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1) rotate(3deg);
+            filter: contrast(110%);
+        }
+    }
+
+    span {
+        position: absolute;
+        bottom: 15px;
+        left: 20px;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(2px);
+        color: white;
+        padding: 10px;
+        font-size: 0.9rem;
+        border-radius: 5px;
+        transition: all 0.2s ease;
+        font-family: var(--font--comfortaa);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &:hover span {
+        background: rgba(255, 255, 255, 0.9);
+        color: black;
+        transform: scale(0.95);
+    }
+`;
+
+const AcomodaComponent2 = ({ images }) => {
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
-        AOS.refresh(); // Atualiza os elementos em caso de re-renderização
-      }, []);
-
+        AOS.refresh();
+    }, []);
 
     return (
-    <>
         <StyledAcomodaContainer>
             <StyledAcomodaTexts>
                 <div>
                     <h1 data-aos="fade-up" data-aos-delay="100">Conheça as suítes da Le Ange Mar</h1>
-                </div>
-                <div data-aos="fade-down" data-aos-delay="250">
-                <Button
+                    <Button
                     text="Reservar agora"
-                    backgroundColor="var(--color--blue)"
+                    backgroundColor="var(--color--green)"
                     borderColor="var(--color--white)"
                     onClick={() => {
                         window.open(
@@ -241,22 +150,40 @@ const AcomodaComponent2 = ({ images }) => {
                 </div>
             </StyledAcomodaTexts>
             <main data-aos="zoom-in-up" data-aos-delay="400">
-                {images.map((image, index) => (
-                    <div 
-                        key={index}
-                        onMouseEnter={() => setHoveredIndex(index)}
-                        onMouseLeave={() => setHoveredIndex(null)}
-                    >
-                        <img src={image.src} alt={`Imagem ${index + 1}`}/>
-                        <span onClick={() => window.location.href = `/acomodaMar#suite${index + 1}`}>
-                            {hoveredIndex === index ? "Conhecer Suítes" : image.text}
-                            {hoveredIndex === index && <FaArrowRight />}
-                        </span>
-                    </div>
-                ))}
+                <Swiper
+                    modules={[Autoplay, Navigation, Pagination]}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    navigation
+                    pagination={false}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    loop={true}
+                    breakpoints={{
+                        768: {
+                            slidesPerView: 1
+                        },
+                        1024: {
+                            slidesPerView: 3
+                        },
+                        1280: {
+                            slidesPerView: 3
+                        }
+                        
+                    }}
+                >
+                    {images.map((image, index) => (
+                        <SwiperSlide key={index}>
+                            <StyledSlide>
+                                <img src={image.src} alt={`Imagem ${index + 1}`} />
+                                <span onClick={() => window.location.href = `/acomodaMar#suite${index + 1}`}>
+                                    {image.text} <FaArrowRight />
+                                </span>
+                            </StyledSlide>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </main>
         </StyledAcomodaContainer>
-    </>
     );
 };
 
