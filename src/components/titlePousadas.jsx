@@ -167,6 +167,7 @@ const TitlePousadas = ({
       </StyledParagPag>
       <StyledDivButton>
         <Button
+          idBtn="clickwpp"
           onClick={handleClick2}
           text="Fazer reserva!"
           backgroundColor="transparent"
@@ -176,6 +177,7 @@ const TitlePousadas = ({
           color="var(--color--black)"
         />
         <Button
+          idBtn="clickSaberMais"
           onClick={handleClick}
           text="Saber mais"
           backgroundColor={buttonColor}

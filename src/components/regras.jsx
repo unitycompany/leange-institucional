@@ -214,6 +214,7 @@ const Regras = () => {
                     hoverColor="var(--color--white)"
                     border="1px solid"
                     color="var(--color--black)"
+                    idBtn="clickwpp"
                     />
                 </div>
                 <div>
