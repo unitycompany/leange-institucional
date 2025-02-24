@@ -652,6 +652,7 @@ const Eventos = () => {
                     <h1 data-aos="fade-up" data-aos-delay="100">Do alto da <b><a href='#/serra'>Serra</a></b>,<br></br> às ondas do <b><a href='#/mar'>Mar</a></b></h1>
                     <p data-aos="fade-up" data-aos-delay="200">Venha celebrar na Le Ange, onde o amor pelos pets encontra o cenário ideal para tornar os seus eventos ainda mais especiais.</p>
                     <Button 
+                    idBtn="clickwpp"
                     data-aos="fade-up" data-aos-delay="300"
                     onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                     text="Fazer meu evento"
@@ -687,6 +688,7 @@ const Eventos = () => {
                             <p>Fundada em 2018, a Pousada LeAnge nasceu da paixão dos seus fundadores pelo amor aos pets, bem-estar e hospitalidade. Localizada em Miguel Pereira, a LeAnge Serra proporciona uma experiência única na região serrana do Rio de Janeiro, sendo um verdadeiro refúgio entre as belezas naturais da Mata Atlântica.
                             </p>
                             <Button 
+                             idBtn="clickwpp"
                             backgroundColor="var(--color--green)"
                             onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                             text="Fazer reserva"
@@ -699,6 +701,7 @@ const Eventos = () => {
                             <p>Fundada em 2018, a Pousada LeAnge nasceu da paixão dos seus fundadores pelo amor aos pets, bem-estar e hospitalidade. Localizada em Miguel Pereira, a LeAnge Serra proporciona uma experiência única na região serrana do Rio de Janeiro, sendo um verdadeiro refúgio entre as belezas naturais da Mata Atlântica.
                             </p>
                             <Button 
+                             idBtn="clickwpp"
                             onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                             text="Fazer reserva"
                             />
@@ -742,6 +745,7 @@ const Eventos = () => {
 
                     </ol>
                     <Button 
+                     idBtn="clickwpp"
                     text="Fazer reserva"
                     backgroundColor="var(--color--green)"
                     onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
@@ -786,6 +790,7 @@ const Eventos = () => {
 
                     </ol>
                     <Button 
+                     idBtn="clickwpp"
                     text="Fazer reserva"
                     backgroundColor="var(--color--green)"
                     onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
