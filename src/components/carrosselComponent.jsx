@@ -194,6 +194,7 @@ const CarouselComponent = ({ slides, titleColor, backgroundColor, buttonBgColor,
                 <Title $colorDefined={titleColor} data-aos="fade-up" data-aos-delay="100">{slide.title}</Title> 
                 <Description data-aos="fade-down" data-aos-delay="250">{slide.description}</Description>
                 <Button 
+                idBtn="clickwpp"
                 text="Reservar agora!"
                 backgroundColor= {backgroundColor}
                 onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}

@@ -137,6 +137,7 @@ const AcomodaComponent2 = ({ images }) => {
                 <div>
                     <h1 data-aos="fade-up" data-aos-delay="100">Conheça as suítes da Le Ange Mar</h1>
                     <Button
+                    idBtn="clickwpp"
                     text="Reservar agora"
                     backgroundColor="var(--color--green)"
                     borderColor="var(--color--white)"
