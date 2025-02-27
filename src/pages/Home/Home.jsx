@@ -603,6 +603,7 @@ const HomeImageOficial = styled.div`
         width: 50%;
         height: 100%;
         overflow: hidden;
+        position: relative;
 
         &:nth-child(2){
             display: flex;
@@ -619,6 +620,36 @@ const HomeImageOficial = styled.div`
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+
+        & > div {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+
+            & > img {
+                width: 150px;
+
+                @media (max-width: 768px){
+                    width: 120px;
+                }
+            }
+
+            & > span {
+                color: var(--color--white);
+                font-weight: 300;
+                font-family: var(--font--comfortaa);
+
+                @media (max-width: 768px){
+                    font-size: 14px;
+                }
+            }
         }
         
         & > img{
@@ -677,9 +708,17 @@ const Home = () => {
             <HomeImageOficial>
                 <a href='/mar'>
                     <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/53fe42a9-f4ac-4202-7b3d-03805d80df00/public"></img>
+                    <div>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0b4e1dd7-194d-4d4c-da16-c16c77281000/public" alt="logo da le ange brnca" />
+                        <span>Le Ange Mar</span>
+                    </div>
                 </a>
                 <a href='/serra'>
                     <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/519c4332-73ef-4e4f-d51e-c5bb8162bc00/public"></img>
+                    <div>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0b4e1dd7-194d-4d4c-da16-c16c77281000/public" alt="logo da le ange brnca" />
+                        <span>Le Ange Serra</span>
+                    </div>
                 </a>
             </HomeImageOficial>
 
