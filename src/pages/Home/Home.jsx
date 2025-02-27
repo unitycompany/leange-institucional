@@ -595,12 +595,31 @@ const HomeImageOficial = styled.div`
     overflow: hidden;
 
     @media (max-width:768px){
+        flex-direction: column;
+        gap: 3px;
     }
 
     & > a{
         width: 50%;
         height: 100%;
         overflow: hidden;
+
+        &:nth-child(2){
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            & > img{
+                object-position: left;
+            } 
+        }
+
+        @media (max-width: 768px){
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         
         & > img{
         width: 100%;
@@ -608,7 +627,6 @@ const HomeImageOficial = styled.div`
         object-fit: cover;
         transition: all 1s ease-in-out;
         position: relative;
-        filter: brightness(120%);
 
         &:hover{
             transform: scale(1.02) rotate(1deg);
@@ -658,10 +676,10 @@ const Home = () => {
 
             <HomeImageOficial>
                 <a href='/mar'>
-                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b3e6c25b-9ed6-4a84-5ee0-3ed539b29b00/public"></img>
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/53fe42a9-f4ac-4202-7b3d-03805d80df00/public"></img>
                 </a>
                 <a href='/serra'>
-                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/565f57fa-9f92-434e-7e76-192ec1299700/public"></img>
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/519c4332-73ef-4e4f-d51e-c5bb8162bc00/public"></img>
                 </a>
             </HomeImageOficial>
 
