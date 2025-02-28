@@ -161,13 +161,30 @@ const Miniatura = styled.div`
 `;
 
 const Modal = () => {
-    const [showModal, setShowModal] = useState(true);
+    // Função para verificar se já passou das 20:01
+    const isExpired = () => {
+        const now = new Date();
+        return now.getHours() >= 20 && now.getMinutes() >= 1;
+    };
+
+    const [showModal, setShowModal] = useState(() => {
+        // Se já passou das 20:01, verifica no localStorage para esconder permanentemente
+        return localStorage.getItem("modalExpired") || isExpired() ? false : true;
+    });
+
     const [showMini, setShowMini] = useState(false);
     const [timeLeft, setTimeLeft] = useState("00:00:00");
 
     useEffect(() => {
+        if (isExpired()) {
+            setShowModal(false);
+            setShowMini(false);
+            localStorage.setItem("modalExpired", "true");
+            return;
+        }
+
         const targetTime = new Date();
-        targetTime.setHours(20, 0, 0, 0);
+        targetTime.setHours(20, 1, 0, 0); // Fim da promoção às 20:01
 
         const interval = setInterval(() => {
             const now = new Date();
@@ -177,6 +194,7 @@ const Modal = () => {
                 clearInterval(interval);
                 setShowModal(false);
                 setShowMini(false);
+                localStorage.setItem("modalExpired", "true");
             } else {
                 const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, "0");
                 const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, "0");
@@ -197,7 +215,7 @@ const Modal = () => {
                         <span>{timeLeft}</span>
                     </div>
                     <span>
-                        Promoção válida apenas para reservas realizadas para o mês de março, não cumulativa com outras ofertas, não aplicável para pacotes, feriados ou períodos de alta procura
+                        Promoção válida apenas para reservas realizadas para o mês de março, não cumulativa com outras ofertas, não aplicável para pacotes, feriados ou períodos de alta procura.
                     </span>
                     <div>
                         <div>
