@@ -21,6 +21,7 @@ import AcomodaMar from './pages/Acomoda/acomodaMar';
 import LpMar from './pages/Mar/lpMar';
 import LpSerra from './pages/Serra/lpSerra';
 import Pacotes from './pages/Pacotes/pacotes';
+import Modal from './components/modal';
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -149,6 +150,7 @@ function AppContent() {
             {!hideNav && <NavegationBar />}
             <AnimatedRoutes />
             {/* Adicione o SpeedInsights aqui */}
+            <Modal />
             <SpeedInsights />
         </>
     );

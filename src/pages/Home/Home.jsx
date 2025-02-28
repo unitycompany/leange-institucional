@@ -706,8 +706,6 @@ const Home = () => {
                 <title>Início - Pousada Le Ange</title>
             </Helmet>
 
-            <Modal />
-
             <HomeImageOficial>
                 <a href='/mar'>
                     <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/53fe42a9-f4ac-4202-7b3d-03805d80df00/public"></img>
