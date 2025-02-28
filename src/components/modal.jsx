@@ -1,206 +1,232 @@
-// import React, { useState } from 'react';
-// import styled from 'styled-components';
-// import { motion } from 'framer-motion'; 
-// import { TbChristmasBall } from "react-icons/tb";
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 
-// const ModalContainer = styled(motion.div)` 
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
-//   background-color: rgba(0, 0, 0, 0.5);
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   z-index: 1000;
-// `;
+const ModalAll = styled.div`
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1000;
+    background-color: #00000050;
+    backdrop-filter: blur(4px);
+    font-family: var(--font--comfortaa);
+    display: ${({ show }) => (show ? "flex" : "none")};
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+`;
 
-// const ModalCard = styled(motion.div)`
-//   background: white;
-//   border-radius: 60px 20px 35px 10px;
-//   padding: 20px;
-//   text-align: center;
-//   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.9);
-//   width: 50%;
-//   height: 70%;
-//   position: relative;
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-end;
-//   flex-direction: column;
-//   gap: 5px;
-//   font-family: var(--font--comfortaa);
-//   background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1731008398/Untitled-31_gkzipm.png');
-//   background-size: cover;
-//   background-position: center;
-//   filter: contrast(120%);
+const ModalContent = styled.div`
+    z-index: 1000;
+    background-color: var(--color--white);
+    padding: 50px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 65%;
+    gap: 30px;
 
-//   @media (max-width: 768px) {
-//     width: 85%;
-//     gap: 40px;
-//     background-image: url('https://res.cloudinary.com/dupg7clzc/image/upload/v1731008479/celular-1_02_ahubmo.png');
-//   }
+    @media (max-width: 768px){
+        width: 90%;
+        height: auto;
+        padding: 35px 25px;
+        gap: 20px;
+    }
 
-//   & > p {
-//     width: 60%;
-//     font-weight: 100;
-//     font-size: .9rem;
-//     line-height: 110%;
-//     color: var(--color--white);
+    & h1 {
+        color: #04808c;
+        font-weight: 400;
+        font-size: 36px;
+        width: 80%;
+        border-bottom: 1px solid #00000020;
+        text-align: center;
+        padding-bottom: 10px;
 
-//     @media(max-width: 768px){
-//       line-height: 120%;
-//       width: 100%;
-//       margin-bottom: -25px;
-//     }
-//   }
-// `;
+        @media (max-width: 768px){
+            width: 100%;
+            font-size: 20px;
+            white-space: nowrap;
+        }
+    }
 
-// const CloseButton = styled(motion.button)` 
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background: transparent;
-//   font-size: 35px;
-//   position: absolute;
-//   top: 10px;
-//   right: 15px;
-//   cursor: pointer;
-//   color: var(--color--white);
-//   font-family: var(--font--comfortaa);
-//   font-weight: 100;
-//   background-color: rgba(0, 0, 0, 0.8);
-//   box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
-//   border-radius: 50%;
-//   border: 1px solid rgba(255, 255, 255, 1);
-//   width: 40px;
-//   height: 40px;
-//   transition: all .2s ease;
+    & > div:nth-child(2) {
+        & span {
+            font-size: 40px;
+            font-weight: 300;
+        }
+    }
 
-//   @media(max-width: 768px){
-//     width: 35px;
-//     height: 35px;
-//     font-size: 35px;
-//   }
+    & > span {
+        width: 80%;
+        font-size: 14px;
+        font-weight: 300;
+        text-align: center;
 
-//   &:hover{
-//     background-color: var(--color--white);
-//     color: var(--color--black);
-//     box-shadow: 0 0 5px rgba(255, 255, 255, 1);
-//     border: 1px solid var(--color--white);
-//   }
-// `;
+        @media (max-width: 768px){
+            width: 100%;
+            font-size: 10px;
+        }
+    }
 
-// const WhatsAppButton = styled(motion.a)`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   gap: 5px;
-//   padding: 8px 20px;
-//   background-color: var(--color--white);
-//   border: 1px dashed #ff0a0a;
-//   font-weight: 600;
-//   color: var(--color--black);
-//   font-size: .9rem;
-//   border-radius: 10px 0 10px 0;
-//   text-decoration: none;
-//   font-weight: 100;
-//   margin-top: 15px;
-//   transition: all .2s ease;
-//   box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    & > div:nth-child(4) {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
 
-//   @media(max-width: 768px){
-//     font-size: .7rem;
-//   }
+        @media (max-width: 768px){
+            width: 100%;
+        }
 
-//   &:hover {
-//     padding: 8px 25px;
-//     background-color: var(--color--black);
-//     color: var(--color--white);
-//   }
-// `;
+        & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
 
-// const SuiteCountCircle = styled(motion.div)` 
-//   position: absolute;
-//   top: -25px;
-//   left: -25px;
-//   background-color: rgba(173, 1, 1, 0.9);
-//   border: 1px solid var(--color--white);
-//   color: white;
-//   border-radius: 50%;
-//   width: 100px;
-//   height: 100px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   font-weight: 400;
-//   font-size: .8rem;
-//   line-height: 100%;
-//   font-family: var(--font--comfortaa);
-//   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            & span {
+                font-size: 30px;
+                color: #475323;
+            }
 
-//   @media(max-width: 768px){
-//     width: 70px;
-//     height: 70px;
-//     font-size: .6rem;
-//     left: -10px;
-//     top: -10px;
-//   }
-// `;
+            & p {
+                font-size: 14px;
+                color: var(--color--black);
+            }
+        }
+    }
 
-// const PromotionModal = () => {
-//   const [isOpen, setIsOpen] = useState(true);
-//   const [suiteCount, setSuiteCount] = useState(7);
-//   const [suiteText, setSuiteText] = useState("suítes disponíveis"); 
+    & > button:nth-child(5) {
+        width: 80%;
+        padding: 20px;
+        background-color: #04808c;
+        color: var(--color--white);
+        font-size: 18px;
+        font-weight: 500;
+        border: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
 
-//   const handleClose = () => {
-//     setIsOpen(false);
-//   };
+        @media (max-width: 768px){
+            width: 100%;
+            font-size: 14px;
+        }
 
-//   return (
-//     isOpen && (
-//       <ModalContainer
-//         initial={{ opacity: 0 }}
-//         animate={{ opacity: 1 }}
-//         exit={{ opacity: 0 }}
-//         transition={{ duration: 0.5 }}
-//       >
-//         <ModalCard
-//           initial={{ scale: 0.8 }}
-//           animate={{ scale: 1 }}
-//           exit={{ scale: 0 }}
-//           transition={{ duration: 0.5 }}
-//         >
-//           <CloseButton
-//             onClick={handleClose}
-//             whileHover={{ scale: 1 }}
-//             transition={{ duration: 0.2 }}
-//           >
-//             ×
-//           </CloseButton>
-//           <SuiteCountCircle
-//             initial={{ y: -20, opacity: 0 }}
-//             animate={{ y: 0, opacity: 1 }}
-//             transition={{ duration: 0.5 }}
-//           >
-//             {suiteCount} {suiteText}
-//           </SuiteCountCircle>
-//           <p>Aproveite nossa promoção especial de Natal. Clique abaixo para mais informações.</p>
-//           <WhatsAppButton
-//               href="https://wa.link/dojlwi"
-//               target="_blank"
-//               initial={{ scale: 0.8 }}
-//               animate={{ scale: 1 }}
-//               transition={{ duration: 0.5 }}
-//               >
-//               Fazer minha reserva agora!
-//               <TbChristmasBall />
-//           </WhatsAppButton>
-//         </ModalCard>
-//       </ModalContainer>
-//     )
-//   );
-// };
+        &:hover {
+            background-color: #475323;
+        }
+    }
 
-// export default PromotionModal;
+    & > button:nth-child(6) {
+        background-color: transparent;
+        border: none;
+        transition: all 0.2s ease;
+        cursor: pointer;
+
+        @media (max-width: 768px){
+            font-size: 12px;
+        }
+
+        &:hover {
+            color: red;
+        }
+    }
+`;
+
+const Miniatura = styled.div`
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #04808c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    display: ${({ show }) => (show ? "block" : "none")};
+    z-index: 100;
+    font-family: var(--font--comfortaa);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 768px){
+        font-size: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+        left: 30px;
+        bottom: 30px;
+    }
+`;
+
+const Modal = () => {
+    const [showModal, setShowModal] = useState(true);
+    const [showMini, setShowMini] = useState(false);
+    const [timeLeft, setTimeLeft] = useState("00:00:00");
+
+    useEffect(() => {
+        const targetTime = new Date();
+        targetTime.setHours(20, 0, 0, 0);
+
+        const interval = setInterval(() => {
+            const now = new Date();
+            const diff = targetTime - now;
+
+            if (diff <= 0) {
+                clearInterval(interval);
+                setShowModal(false);
+                setShowMini(false);
+            } else {
+                const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, "0");
+                const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, "0");
+                const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, "0");
+                setTimeLeft(`${hours}:${minutes}:${seconds}`);
+            }
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, []);
+
+    return (
+        <>
+            <ModalAll show={showModal}>
+                <ModalContent>
+                    <h1>PROMOÇÃO RELÂMPAGO</h1>
+                    <div>
+                        <span>{timeLeft}</span>
+                    </div>
+                    <span>
+                        Promoção válida apenas para reservas realizadas para o mês de março, não cumulativa com outras ofertas, não aplicável para pacotes, feriados ou períodos de alta procura
+                    </span>
+                    <div>
+                        <div>
+                            <span>20%</span>
+                            <p>2 Diárias</p>
+                        </div>
+                        <div>
+                            <span>40%</span>
+                            <p>4 Diárias</p>
+                        </div>
+                        <div>
+                            <span>30%</span>
+                            <p>3 Diárias</p>
+                        </div>
+                    </div>
+                    <button onClick={() => window.location.href = 'https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/c3b54b40-7566-4d71-8130-55158bcb13d7'}>
+                        <span>RESGATAR MINHA PROMOÇÃO</span>
+                    </button>
+                    <button onClick={() => { setShowModal(false); setShowMini(true); }}>
+                        NÃO, TALVEZ NA PRÓXIMA
+                    </button>
+                </ModalContent>
+            </ModalAll>
+
+            <Miniatura show={showMini} onClick={() => { setShowModal(true); setShowMini(false); }}>
+                ⏳ {timeLeft} - Promoção Relâmpago
+            </Miniatura>
+        </>
+    );
+};
+
+export default Modal;

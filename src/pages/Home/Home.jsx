@@ -21,6 +21,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
 import EventAlert from '../../components/alertEvent';
+import Modal from "../../components/modal";
 
 const imagesSerra = [
     { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a4f0a292-2de1-4a0a-9c78-b40450f19a00/public", alt: 'Mulher na rede', loading: "lazy" },
@@ -704,6 +705,8 @@ const Home = () => {
             <Helmet>
                 <title>Início - Pousada Le Ange</title>
             </Helmet>
+
+            <Modal />
 
             <HomeImageOficial>
                 <a href='/mar'>
