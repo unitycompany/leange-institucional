@@ -150,7 +150,6 @@ function AppContent() {
             {!hideNav && <NavegationBar />}
             <AnimatedRoutes />
             {/* Adicione o SpeedInsights aqui */}
-            <Modal />
             <SpeedInsights />
         </>
     );
