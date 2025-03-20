@@ -159,7 +159,7 @@ function AppContent() {
 function App() {
     return (
         <Router>
-            <ModalAlert />
+            
             <ScrollToTop />
             <AppContent />
         </Router>
