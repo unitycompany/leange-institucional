@@ -22,6 +22,7 @@ import LpMar from './pages/Mar/lpMar';
 import LpSerra from './pages/Serra/lpSerra';
 import Pacotes from './pages/Pacotes/pacotes';
 import Modal from './components/modal';
+import ModalAlert from './components/modalAlert';
 
 function ScrollToTop() {
     const { pathname } = useLocation();
@@ -158,6 +159,7 @@ function AppContent() {
 function App() {
     return (
         <Router>
+            <ModalAlert />
             <ScrollToTop />
             <AppContent />
         </Router>
