@@ -35,6 +35,11 @@ const ModalContent = styled.div`
         align-items: center;
         justify-content: space-between;
         width: 100%;
+
+        @media (max-width: 768px){
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     @media (max-width: 768px) {
