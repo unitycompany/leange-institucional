@@ -10,13 +10,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 // Importação dos ícones necessários
-import { FaUtensils, FaRegCreditCard, FaPaw } from 'react-icons/fa';
+import { FaUtensils, FaRegCreditCard, FaPaw, FaCheck } from 'react-icons/fa';
 
 // Mapeamento de strings para componentes de ícones
 const iconMap = {
   '<FaUtensils />': <FaUtensils />,
   '<FaRegCreditCard />': <FaRegCreditCard />,
   '<FaPaw />': <FaPaw />,
+  '<FaCheck />': <FaCheck />,
 };
 
 const waterWave2 = keyframes`
