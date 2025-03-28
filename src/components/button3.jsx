@@ -95,7 +95,7 @@ const CustomButton = ({
       hoverColor={hoverColor}
     >
       <Icon iconColor={iconColor} hoverIconColor={hoverIconColor} />
-      <Text>{text}</Text>
+      <Text id={IdBtn}>{text}</Text>
     </ButtonWrapper>
   );
 };

@@ -103,11 +103,11 @@ const IconButton = ({
     >
       <DefaultButton className="default-btn" id={IdBtn}>
         <MdHotel size={15} color={textColor || 'var(--color--black)'} />
-        <ButtonText textColor={textColor}>{text}</ButtonText>
+        <ButtonText textColor={textColor} id={IdBtn}>{text}</ButtonText>
       </DefaultButton>
       <HoverButton className="hover-btn" hoverColor={hoverColor} id={IdBtn}>
         <LuMousePointerClick size={15} color={hoverTextColor || 'var(--color--white)'} />
-        <HoverButtonText hoverTextColor={hoverTextColor}>{text2}</HoverButtonText>
+        <HoverButtonText hoverTextColor={hoverTextColor} id={IdBtn}>{text2}</HoverButtonText>
       </HoverButton>
     </ButtonContainer>
   );
