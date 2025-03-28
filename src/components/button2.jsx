@@ -45,21 +45,18 @@ const StyledButtonAcomodo = styled.button`
   }
 `;
 
-const ButtonAcomoda = ({ text, onClick, backDefine, colorDefine }) => {
-  // const navigate = useNavigate();
+const ButtonAcomoda = ({ text, onClick, backDefine, colorDefine, IdBtn }) => {
+  const handleClick = (event) => {
+    console.log("Botão clicado com id:", event.currentTarget.id);
+    if (onClick) onClick(event);
+  };
 
-  // const handleClick = () => {
-  //   const targetUrl = `/acomoda#${suiteId}`;
-  //   console.log("Navegando para:", targetUrl);
-  //   navigate(targetUrl);
-  // };
-  
   return (
     <StyledButtonAcomodo 
-      id='clickwpp'
+      id={IdBtn}
       backDefine={backDefine} 
       colorDefine={colorDefine} 
-      onClick={onClick} 
+      onClick={handleClick} 
     >
       {text}
       <FaArrowRight className="icon" />

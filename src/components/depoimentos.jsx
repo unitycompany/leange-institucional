@@ -219,6 +219,7 @@ const Depoimentos = () => {
 
             <StyledTextDepoimentos>
                 <CustomButton 
+                    IdBtn="clickwpp"
                     text="Reservar agora!"
                     textColor="var(--color--black)"
                     backgroundColor="transparent"

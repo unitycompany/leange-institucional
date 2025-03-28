@@ -221,6 +221,7 @@ const SliderAcomodaHome = ({
                   ))}
                 </Features>
                 <ButtonAcomoda
+                    IdBtn="clickwpp"
                     onClick={() => navigate(`/acomoda${item.id}`)}
                     text="Conhecer essa acomodação"
                     suiteId={item.id}

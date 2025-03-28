@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { MdOutlinePets } from "react-icons/md";
 
-
 const ButtonWrapper = styled.button`
   background: ${(props) => props.backgroundColor || "transparent"};
   position: relative;
@@ -12,8 +11,6 @@ const ButtonWrapper = styled.button`
   gap: 5px;
   font-family: var(--font--comfortaa);
   padding: 2px 15px;
-  display: flex;
-  align-items: center;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
@@ -79,11 +76,17 @@ const CustomButton = ({
   hoverBorderColor,
   hoverColor,
   onClick,
+  IdBtn,
 }) => {
+  const handleClick = (event) => {
+    console.log("Botão clicado com id:", event.currentTarget.id);
+    if (onClick) onClick(event);
+  };
+
   return (
     <ButtonWrapper
-      id='clickwpp'
-      onClick={onClick}
+      id={IdBtn}
+      onClick={handleClick}
       textColor={textColor}
       backgroundColor={backgroundColor}
       borderColor={borderColor}

@@ -227,7 +227,9 @@ const SliderComponent = ({
                                             </span>
                                         ))}
                                     </Features>
-                                    <ButtonAcomoda text="Conhecer todas as acomodações" />
+                                    <ButtonAcomoda
+                                    IdBtn="clickwpp"
+                                    text="Conhecer todas as acomodações" />
                                 </SlideContent>
                             </SlideContainer>
                         )}

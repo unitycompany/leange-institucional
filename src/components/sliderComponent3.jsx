@@ -253,7 +253,9 @@ const SliderComponent = ({
                                             </span>
                                         ))}
                                     </Features>
-                                    <ButtonAcomoda text="Conhecer todas as acomodações" style={{ y: buttonY }} />
+                                    <ButtonAcomoda 
+                                    IdBtn="clickwpp"
+                                    text="Conhecer todas as acomodações" style={{ y: buttonY }} />
                                 </SlideContent>
                             </SlideContainer>
                         )}

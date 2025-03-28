@@ -69,6 +69,7 @@ const PetFriendlyCarousel = ({ carousels }) => {
             <StyledTextPet>
                 <h1 data-aos="fade-up" data-aos-delay="200"><b>100%</b> Pet Friendly</h1>
                 <CustomButton 
+                    IdBtn="clickwpp"
                     text="Reservar agora!"
                     textColor="var(--color--black)"
                     backgroundColor="transparent"
