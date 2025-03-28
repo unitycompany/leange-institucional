@@ -213,6 +213,7 @@ const CoverflowSliderComponent = ({
                                 <Title>{item.title}</Title>
                                 <Description>{item.description}</Description>
                                 <IconButton
+                                    IdBtn="clickwpp"
                                     text="Reservar agora"
                                     text2="Clique e reserve agora"
                                     borderColor="var(--color--white)"

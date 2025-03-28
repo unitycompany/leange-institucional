@@ -187,6 +187,7 @@ const Pensao = ({ colorDefinedBold }) => {
                     Incluindo as nossas deliciosas sobremesas.
                 </StyledParagraph>
                 <IconButton
+                    IdBtn="clickwpp"
                     data-aos="fade-up" data-aos-delay="200"
                     text = "Fazer reserva!"
                     text2 = "Clique e reserve"
