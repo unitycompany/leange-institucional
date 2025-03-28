@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { AnimatePresence, motion } from 'framer-motion';
+import { Analytics } from "@vercel/analytics/react"
 
 import './styles/App.css';
 import './styles/global.css';
@@ -152,6 +153,7 @@ function AppContent() {
             <AnimatedRoutes />
             {/* Adicione o SpeedInsights aqui */}
             <SpeedInsights />
+            <Analytics />
         </>
     );
 }
