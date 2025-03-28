@@ -45,7 +45,7 @@ const StyledButtonAcomodo = styled.button`
   }
 `;
 
-const ButtonAcomoda = ({ text, onClick, backDefine, colorDefine, IdBtn }) => {
+const ButtonAcomoda = ({ text, onClick, backDefine, colorDefine, IdBtn = "clickwpp" }) => {
   const handleClick = (event) => {
     console.log("Botão clicado com id:", event.currentTarget.id);
     if (onClick) onClick(event);

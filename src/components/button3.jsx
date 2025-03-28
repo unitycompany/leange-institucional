@@ -76,7 +76,7 @@ const CustomButton = ({
   hoverBorderColor,
   hoverColor,
   onClick,
-  IdBtn,
+  IdBtn = "clickwpp",
 }) => {
   const handleClick = (event) => {
     console.log("Botão clicado com id:", event.currentTarget.id);
