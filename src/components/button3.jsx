@@ -76,7 +76,7 @@ const CustomButton = ({
   hoverBorderColor,
   hoverColor,
   onClick,
-  IdBtn = "clickwpp",
+  idBtn = "clickwpp",
 }) => {
   const handleClick = (event) => {
     console.log("Botão clicado com id:", event.currentTarget.id);
@@ -85,7 +85,7 @@ const CustomButton = ({
 
   return (
     <ButtonWrapper
-      id={IdBtn}
+      id={idBtn}
       onClick={handleClick}
       textColor={textColor}
       backgroundColor={backgroundColor}
@@ -94,8 +94,8 @@ const CustomButton = ({
       hoverBorderColor={hoverBorderColor}
       hoverColor={hoverColor}
     >
-      <Icon iconColor={iconColor} hoverIconColor={hoverIconColor} />
-      <Text id={IdBtn}>{text}</Text>
+      <Icon iconColor={iconColor} hoverIconColor={hoverIconColor} id={idBtn}/>
+      <Text id={idBtn}>{text}</Text>
     </ButtonWrapper>
   );
 };

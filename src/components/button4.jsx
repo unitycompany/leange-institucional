@@ -65,7 +65,7 @@ const IconButton = ({
   textColor,
   hoverColor,
   hoverTextColor,
-  IdBtn = "clickwpp",
+  idBtn = "clickwpp",
 }) => {
   const handleClick = (event) => {
     console.log("Botão clicado com id:", event.currentTarget.id);
@@ -99,15 +99,15 @@ const IconButton = ({
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      id={IdBtn}
+      id={idBtn}
     >
-      <DefaultButton className="default-btn" id={IdBtn}>
-        <MdHotel size={15} color={textColor || 'var(--color--black)'} />
-        <ButtonText textColor={textColor} id={IdBtn}>{text}</ButtonText>
+      <DefaultButton className="default-btn" id={idBtn}>
+        <MdHotel size={15} color={textColor || 'var(--color--black)'} id={idBtn}/>
+        <ButtonText textColor={textColor} id={idBtn}>{text}</ButtonText>
       </DefaultButton>
-      <HoverButton className="hover-btn" hoverColor={hoverColor} id={IdBtn}>
-        <LuMousePointerClick size={15} color={hoverTextColor || 'var(--color--white)'} />
-        <HoverButtonText hoverTextColor={hoverTextColor} id={IdBtn}>{text2}</HoverButtonText>
+      <HoverButton className="hover-btn" hoverColor={hoverColor} id={idBtn}>
+        <LuMousePointerClick size={15} color={hoverTextColor || 'var(--color--white)'} id={idBtn}/>
+        <HoverButtonText hoverTextColor={hoverTextColor} id={idBtn}>{text2}</HoverButtonText>
       </HoverButton>
     </ButtonContainer>
   );
