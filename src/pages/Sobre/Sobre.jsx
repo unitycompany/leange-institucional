@@ -956,7 +956,7 @@ const Sobre = () => {
             <CTA>
                 <h1 data-aos="fade-up" data-aos-delay="200">Venha viver essa experiência com a gente!</h1>
                 <CustomButton 
-                IdBtn="clickwpp"
+                idBtn="clickwpp"
                 text="Reservar agora!"
                 textColor="var(--color--white)"
                 backgroundColor="transparent"

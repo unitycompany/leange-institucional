@@ -69,15 +69,13 @@ const IconButton = ({
 }) => {
   const handleClick = (event) => {
     console.log("Botão clicado com id:", event.currentTarget.id);
-    // Você também pode manter os outros logs se necessário:
     console.log("Evento:", event);
     console.log("Elemento alvo (target):", event.target);
     console.log("Elemento atual (currentTarget):", event.currentTarget);
     console.log("Abrindo link do WhatsApp...");
     
-    event.stopPropagation(); // Impede que o clique afete outros elementos
+    event.stopPropagation(); 
 
-    // Para teste, você pode comentar a linha abaixo para evitar abrir o link
     window.open(
       "https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329",
       "_blank"

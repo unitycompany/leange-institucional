@@ -477,7 +477,7 @@ const Serra = () => {
                     <h1 data-aos="fade-down" data-aos-delay="200">PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
                     <p>Aqui você e o seu pet, são mais do que bem-vindos!</p>
                     <CustomButton
-                        IdBtn="clickwpp"
+                        idBtn="clickwpp"
                         text="Reservar agora!"
                         textColor="var(--color--black)"
                         backgroundColor="transparent"

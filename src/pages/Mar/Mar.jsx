@@ -465,7 +465,7 @@ const Mar = () => {
                     <p>Aqui, você e o seu pet são mais do que bem-vindos!</p>
                     <div>
                         <CustomButton
-                            IdBtn="clickwpp"
+                            idBtn="clickwpp"
                             text="Reservar agora!"
                             textColor="var(--color--black)"
                             backgroundColor="transparent"

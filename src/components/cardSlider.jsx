@@ -193,7 +193,7 @@ const EventCardCarousel = ({ events = [] }) => {
                   <Price data-aos="fade-in" data-aos-delay="500">A partir de: <span>{event.payment}</span>R${event.price}</Price>
                 </PriceSection>
                 <IconButton
-                  IdBtn="clickwpp"
+                  idBtn="clickwpp"
                   text="Quero fazer minha reserva agora"
                   text2="Clique e reserve!"
                   borderColor="var(--color--black)"
