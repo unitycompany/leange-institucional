@@ -8,6 +8,8 @@ import { useState, useEffect } from 'react';
 import Confetti from 'react-confetti';
 import { useNavigate as usePageNavigation } from 'react-router-dom';
 import RedirectSelect from './selectNavBar';
+import { CiCalendarDate } from "react-icons/ci";
+
 
 // Animação de loading
 const fadeIn = keyframes`
@@ -369,8 +371,6 @@ const Sidebar = styled.div`
     }
 `;
 
-
-
 const NavegationBar = () => {
     const location = useLocation();
     const [showConfetti, setShowConfetti] = useState(false);
@@ -506,10 +506,13 @@ const NavegationBar = () => {
                 </Link>
                 <StyledHeader>
                     <StyledLink to="/" isActive={location.pathname === "/"}><IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início</StyledLink>
-                    <StyledLink to="/sobre" isActive={location.pathname === "/sobre"}><IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós</StyledLink>
-                    <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
+                    <StyledLink to="/pacotes" isActive={location.pathname === "/pacotes"}><IconContainer isVisible={location.pathname === "/pacotes"}><CiCalendarDate /></IconContainer>Pacotes</StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountainSun /></IconContainer>Le Ange Serra</StyledLink>
-                    <EventButton to="/event" isActive={location.pathname === "/event"}><IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos</EventButton>
+                    <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
+                    <div>
+                        <RedirectSelect />
+                    </div>
+                    <StyledLink to="/sobre" isActive={location.pathname === "/sobre"}><IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós</StyledLink>
                     {/* <Select onChange={handleNavigation} value={selectedValue}>
                         <option disabled value="">
                             Acomodações
@@ -518,9 +521,6 @@ const NavegationBar = () => {
                         <option value="/acomodaMar">Suítes Mar</option>
                     </Select> */}
                     {/* <StyledLink to="/acomodaMar" isActive={location.pathname === "/acomodaMar"}><IconContainer isVisible={location.pathname === "/acomodaMar"}><FaBed /></IconContainer>Acomodações</StyledLink> */}
-                    <div>
-                        <RedirectSelect />
-                    </div>
                 </StyledHeader>
                 <Button
                     idBtn="clickwpp"
@@ -544,28 +544,21 @@ const NavegationBar = () => {
                     <StyledLink to="/" isActive={location.pathname === "/"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início
                     </StyledLink>
-                    <StyledLink to="/sobre" isActive={location.pathname === "/sobre"} onClick={closeSidebar}>
-                        <IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós
-                    </StyledLink>
-                    <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"} onClick={closeSidebar}>
-                        <IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar
+                    <StyledLink to="/pacotes" isActive={location.pathname === "/pacotes"} onClick={closeSidebar}>
+                        <IconContainer isVisible={location.pathname === "/pacotes"}><CiCalendarDate /></IconContainer>Pacotes
                     </StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/serra"}><FaMountain /></IconContainer>Le Ange Serra
                     </StyledLink>
-                    <EventButton to="/event" isActive={location.pathname === "/event"} onClick={closeSidebar}>
-                        <IconContainer isVisible={location.pathname === "/event"}><FaCalendar /></IconContainer>Eventos
-                    </EventButton>
-                    {/* <Select onChange={handleNavigation} value={selectedValue}>
-                        <option disabled value="">
-                            Acomodações
-                        </option>
-                        <option value="/acomodaSerra">Suítes Serra</option>
-                        <option value="/acomodaMar">Suítes Mar</option>
-                    </Select> */}
+                    <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"} onClick={closeSidebar}>
+                        <IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar
+                    </StyledLink>
                     <div>
                         <RedirectSelect />
                     </div>
+                    <StyledLink to="/sobre" isActive={location.pathname === "/sobre"} onClick={closeSidebar}>
+                        <IconContainer isVisible={location.pathname === "/sobre"}><FaInfoCircle /></IconContainer>Sobre nós
+                    </StyledLink>
                 </div>
                 <Button
                     idBtn="clickwpp"
