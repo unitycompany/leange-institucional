@@ -505,7 +505,7 @@ const NavegationBar = () => {
                     </picture>
                 </Link>
                 <StyledHeader>
-                    <StyledLink to="/" isActive={location.pathname === "/"}><IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início</StyledLink>
+                    {/* <StyledLink to="/" isActive={location.pathname === "/"}><IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início</StyledLink> */}
                     <StyledLink to="/pacotes" isActive={location.pathname === "/pacotes"}><IconContainer isVisible={location.pathname === "/pacotes"}><CiCalendarDate /></IconContainer>Pacotes</StyledLink>
                     <StyledLink to="/serra" variant="serra" isActive={location.pathname === "/serra"}><IconContainer isVisible={location.pathname === "/serra"}><FaMountainSun /></IconContainer>Le Ange Serra</StyledLink>
                     <StyledLink to="/mar" variant="mar" isActive={location.pathname === "/mar"}><IconContainer isVisible={location.pathname === "/mar"}><FaAnchor /></IconContainer>Le Ange Mar</StyledLink>
@@ -541,9 +541,9 @@ const NavegationBar = () => {
                 <button onClick={closeSidebar}>X</button>
                 <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" alt='logo da le ange' />
                 <div>
-                    <StyledLink to="/" isActive={location.pathname === "/"} onClick={closeSidebar}>
+                    {/* <StyledLink to="/" isActive={location.pathname === "/"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início
-                    </StyledLink>
+                    </StyledLink> */}
                     <StyledLink to="/pacotes" isActive={location.pathname === "/pacotes"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/pacotes"}><CiCalendarDate /></IconContainer>Pacotes
                     </StyledLink>

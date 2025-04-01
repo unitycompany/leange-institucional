@@ -124,7 +124,7 @@ const RedirectDropdown = () => {
   return (
     <DropdownContainer>
       <DropdownHeader onClick={() => setIsOpen(!isOpen)}>
-        Acomodações
+        Acomodações & Eventos
         <DropdownArrow isOpen={isOpen}>
           <IoIosArrowDown />
         </DropdownArrow>
