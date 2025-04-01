@@ -530,7 +530,7 @@ const NavegationBar = () => {
             </StyledDiv>
 
             <MobileBar isScrolled={isScrolled}>
-                <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" alt='logo da le ange' />
+                <img onClick={() => navigate('/')} src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" alt='logo da le ange' />
                 <button onClick={toggleSidebar} isClicked={isClicked}>
                     Menu
                     <HiBars3BottomRight />
@@ -539,11 +539,11 @@ const NavegationBar = () => {
 
             <Sidebar isOpen={isSidebarOpen}>
                 <button onClick={closeSidebar}>X</button>
-                <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" alt='logo da le ange' />
+                <img onClick={() => navigate('/')} src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public" alt='logo da le ange' />
                 <div>
-                    {/* <StyledLink to="/" isActive={location.pathname === "/"} onClick={closeSidebar}>
+                    <StyledLink to="/" isActive={location.pathname === "/"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/"}><FaHome /></IconContainer>Início
-                    </StyledLink> */}
+                    </StyledLink>
                     <StyledLink to="/pacotes" isActive={location.pathname === "/pacotes"} onClick={closeSidebar}>
                         <IconContainer isVisible={location.pathname === "/pacotes"}><CiCalendarDate /></IconContainer>Pacotes
                     </StyledLink>
