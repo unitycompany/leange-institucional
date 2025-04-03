@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Página inicial -->
+  <url>
+    <loc>https://pousadaleange.com.br/</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Página "Mar" -->
+  <url>
+    <loc>https://pousadaleange.com.br/mar</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página "LpMar" -->
+  <url>
+    <loc>https://pousadaleange.com.br/lpMar</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página "Serra" -->
+  <url>
+    <loc>https://pousadaleange.com.br/serra</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página "LpSerra" -->
+  <url>
+    <loc>https://pousadaleange.com.br/lpSerra</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página "Pacotes" -->
+  <url>
+    <loc>https://pousadaleange.com.br/pacotes</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Página "AcomodaSerra" -->
+  <url>
+    <loc>https://pousadaleange.com.br/acomodaSerra</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página "AcomodaMar" -->
+  <url>
+    <loc>https://pousadaleange.com.br/acomodaMar</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página "Eventos" -->
+  <url>
+    <loc>https://pousadaleange.com.br/eventos</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Página "Sobre" -->
+  <url>
+    <loc>https://pousadaleange.com.br/sobre</loc>
+    <lastmod>2025-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
