@@ -728,7 +728,7 @@ const Home = () => {
             <StyledPousadas>
 
                 <StyledPousadasTitle>
-                    <h1 data-aos="fade-up">Pousada<StyledColorBBlue> 100% Pet Friendly</StyledColorBBlue> que aceita humanos de estimação</h1>
+                    <h1 data-aos="fade-up">Pousada<StyledColorBBlue> 100% Pet Friendly,</StyledColorBBlue> pra você e seu pet aproveitarem</h1>
                     <p data-aos="fade-up" data-aos-delay="200">2 unidades, 2 cenários incomparáveis</p>
                 </StyledPousadasTitle>
 
