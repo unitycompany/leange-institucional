@@ -749,7 +749,7 @@ const Home = () => {
                         buttonColor="var(--color--green)"
                         buttonBorder="1px solid var(--color--black)"
                         targetPage="/serra"
-                        idade="*Só permitimos crianças acima de 13 anos!"
+                        idade="*Idade miníma para hospedagem 13 anos, mesmo que acompanhado dos pais"
                     />
                 </StyledContainerPousadas>
 
@@ -762,7 +762,7 @@ const Home = () => {
                         buttonColor="var(--color--blue)"
                         buttonBorder="1px solid var(--color--black)"
                         targetPage="/mar"
-                        idade="*Só permitimos crianças acima de 13 anos!"
+                        idade="*Idade miníma para hospedagem 13 anos, mesmo que acompanhado dos pais"
                     />
                     <SliderComponent 
                         content={imagesMar} 

@@ -478,7 +478,7 @@ const Mar = () => {
                             onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                         />
                     </div>
-                    <IdadeCrianca>*Só permitimos crianças acima de 13 anos!</IdadeCrianca>
+                    <IdadeCrianca>*Idade miníma para hospedagem 13 anos, mesmo que acompanhado dos pais</IdadeCrianca>
                 </StyledHomeTexts>
 
                 <StyledHomeDiv data-aos="fade-left" data-aos-delay="200" />
