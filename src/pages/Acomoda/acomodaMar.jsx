@@ -10,6 +10,7 @@ import Footer from "../../components/footer";
 import WhatsAppButton from "../../components/Whatsapp";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from "react-helmet";
 
 const TituloAcomoda = styled.div`
     width: 100%;
@@ -182,7 +183,7 @@ const SuiteSup6Images = [
 
 const SuiteSup6Text = [
     {
-        NomedaSuite: "Suíte Superior 6",
+        NomedaSuite: "Suíte Standard 6",
         NomedaPousada: "Le Ange Mar",
         features: [
             { icon: <FaRulerCombined />, text: "45m²" },
@@ -320,6 +321,10 @@ const AcomodaMar = () => {
         <>
 
             {/* <WhatsAppButton /> */}
+
+            <Helmet>
+                <title>Acomoda Mar - Pousada Le Ange</title>
+            </Helmet>
 
             <TituloAcomoda>Acomodações da<b>Pousada Le Ange Mar</b></TituloAcomoda>
 

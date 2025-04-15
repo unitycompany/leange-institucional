@@ -451,7 +451,7 @@ const Mar = () => {
     return (
         <>
             <Helmet>
-                <title>Le Ange Serra - Pousada Le Ange</title>
+                <title>Le Ange Mar - Pousada Le Ange</title>
             </Helmet>
 
             <StyledEspace />

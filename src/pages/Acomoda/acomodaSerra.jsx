@@ -12,6 +12,7 @@ import Footer from "../../components/footer";
 import WhatsAppButton from "../../components/Whatsapp";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from "react-helmet";
 
 const TituloAcomoda = styled.div`
     width: 100%;
@@ -377,6 +378,10 @@ const AcomodaSerra = () => {
     return (
         <>
             {/* <WhatsAppButton /> */}
+
+            <Helmet>
+                <title>Acomoda Serra - Pousada Le Ange</title>
+            </Helmet>
 
             <TituloAcomoda>
                 Acomodações da<b>Pousada Le Ange Serra</b>
