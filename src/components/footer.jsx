@@ -510,6 +510,7 @@ const Footer = () => {
                     <div>
                         <h2 data-aos="fade-up" data-aos-delay="50">Mapa do site</h2>
                         <a href='/' data-aos="fade-down" data-aos-delay="100"> <MdOutlineArrowRight /> Início </a>
+                        <a href='/pacotes' data-aos="fade-up" data-aos-delay="150"> <MdOutlineArrowRight /> Pacotes </a>
                         <a href='/sobre' data-aos="fade-up" data-aos-delay="150"> <MdOutlineArrowRight /> Sobre nós </a>
                         <a href='/serra' data-aos="fade-down" data-aos-delay="200"> <MdOutlineArrowRight /> Le Ange Serra </a>
                         <a href='/mar' data-aos="fade-up" data-aos-delay="250"> <MdOutlineArrowRight /> Le Ange Mar </a>
