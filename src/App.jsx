@@ -16,6 +16,7 @@ import Event from './pages/Event/Event';
 import Sobre from './pages/Sobre/Sobre';
 import Serra from './pages/Serra/Serra';
 import Mar from './pages/Mar/Mar';
+import PoliticaDePrivacidade from './pages/Politicas/Politica';
 import NavegationBar from './components/navegationBar';
 import AcomodaSerra from './pages/Acomoda/acomodaSerra';
 import AcomodaMar from './pages/Acomoda/acomodaMar';
@@ -117,6 +118,14 @@ function AnimatedRoutes() {
                     }
                 />
                 <Route
+                    path="/politica-de-privacidade"
+                    element={
+                        <motion.div {...pageTransition}>
+                            <PoliticaDePrivacidade />
+                        </motion.div>
+                    }
+                />
+                <Route
                     path="/lpSerra"
                     element={
                         <motion.div {...pageTransition}>
@@ -142,7 +151,7 @@ function AppContent() {
     const location = useLocation();
 
     // Rotas onde o NavegationBar deve ser escondido
-    const hiddenRoutes = ['/lpMar', '/lpSerra'];
+    const hiddenRoutes = ['/lpMar', '/lpSerra', '/politica-de-privacidade'];
 
     // Verifica se a rota atual está na lista de rotas escondidas
     const hideNav = hiddenRoutes.some((route) => location.pathname.startsWith(route));

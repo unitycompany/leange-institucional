@@ -8,6 +8,7 @@ import { RiCopyrightLine } from "react-icons/ri";
 import React, { useRef, useState } from 'react';
 import 'aos/dist/aos.css';
 import WhatsAppButton from './Whatsapp';
+import { Link } from 'react-router-dom';
 
 const SubmitBtn = styled(motion.button)`
     font-family: inherit;
@@ -445,7 +446,7 @@ const Footer = () => {
                         </h1>
                         <p data-aos="fade-up" data-aos-delay="100">
                             As suas informações são mantidas em segurança e utilizadas apenas para entrar em contato. Entenda melhor como tratamos os seus dados pela nossa
-                            <a href="https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view" target='_blank'>política de privacidade</a>.
+                            <Link to="/politica-de-privacidade" rel="noopener noreferrer">política de privacidade</Link>.
                         </p>
                         <hr data-aos="fade-right" data-aos-delay="200" />
                         <div>
