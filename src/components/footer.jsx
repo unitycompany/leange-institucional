@@ -231,7 +231,7 @@ const StyledLinks = styled.section`
         height: 100%;
         display: flex;
         flex-direction: column;
-        gap: 2px;
+        gap: 5px;
 
         @media (max-width: 768px){
          width: 100%;
