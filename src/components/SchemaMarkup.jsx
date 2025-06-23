@@ -18,8 +18,8 @@ const SchemaMarkup = ({ pageType = 'home', pageData = {} }) => {
                     "height": 315
                 },
                 "description": "A pousada mais Pet Friendly do Brasil, com duas unidades localizadas em Miguel Pereira RJ e Búzios RJ",
-                "telephone": "+55 21 99999-9999",
-                "email": "contato@pousadaleange.com.br",
+                "telephone": "+55 21 99424-0871",
+                "email": "pousadaleange@gmail.com",
                 "sameAs": [
                     "https://www.instagram.com/pousadaleange/",
                     "https://www.tiktok.com/@pousadaleange",
@@ -50,8 +50,8 @@ const SchemaMarkup = ({ pageType = 'home', pageData = {} }) => {
                 "name": "Pousada Le Ange",
                 "description": "Pousada 100% Pet Friendly com duas unidades: Le Ange Serra em Miguel Pereira e Le Ange Mar em Búzios. Oferecemos hospedagem completa com todas as refeições incluídas.",
                 "url": "https://pousadaleange.com.br",
-                "telephone": "+55 21 99999-9999",
-                "email": "reservas@pousadaleange.com.br",
+                "telephone": "+55 21 99424-0871",
+                "email": "pousadaleange@gmail.com",
                 "image": [
                     "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/519c4332-73ef-4e4f-d51e-c5bb8162bc00/public",
                     "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/09da9d76-57b8-4d44-02b2-3c4c2380c800/public",
@@ -258,7 +258,7 @@ const SchemaMarkup = ({ pageType = 'home', pageData = {} }) => {
     const pageSchemas = {
         serra: {
             "@type": "Place",
-            "@id": "https://pousadaleange.com.br/serra#place",
+            "@id": "https://pousadaleange.com.br/serra",
             "name": "Le Ange Serra - Miguel Pereira",
             "description": "Pousada Pet Friendly localizada em Miguel Pereira, RJ, na Mata Atlântica com trilhas e cachoeiras",
             "url": "https://pousadaleange.com.br/serra",
@@ -277,7 +277,7 @@ const SchemaMarkup = ({ pageType = 'home', pageData = {} }) => {
         },
         mar: {
             "@type": "Place",
-            "@id": "https://pousadaleange.com.br/mar#place",
+            "@id": "https://pousadaleange.com.br/mar",
             "name": "Le Ange Mar - Búzios",
             "description": "Pousada Pet Friendly localizada em Búzios, RJ, a 150 metros da Praia Rasa",
             "url": "https://pousadaleange.com.br/mar",
@@ -296,7 +296,7 @@ const SchemaMarkup = ({ pageType = 'home', pageData = {} }) => {
         },
         event: {
             "@type": "Event",
-            "@id": "https://pousadaleange.com.br/event#event",
+            "@id": "https://pousadaleange.com.br/event",
             "name": "Eventos Pet Friendly - Pousada Le Ange",
             "description": "Eventos especiais e corporativos em ambiente pet friendly",
             "url": "https://pousadaleange.com.br/event",
@@ -327,7 +327,7 @@ const SchemaMarkup = ({ pageType = 'home', pageData = {} }) => {
         },
         pacotes: {
             "@type": "Product",
-            "@id": "https://pousadaleange.com.br/pacotes#product",
+            "@id": "https://pousadaleange.com.br/pacotes",
             "name": "Pacotes Pet Friendly - Pousada Le Ange",
             "description": "Pacotes especiais, promoções e programações para hospedagem pet friendly",
             "url": "https://pousadaleange.com.br/pacotes",
@@ -345,7 +345,7 @@ const SchemaMarkup = ({ pageType = 'home', pageData = {} }) => {
         },
         sobre: {
             "@type": "AboutPage",
-            "@id": "https://pousadaleange.com.br/sobre#about",
+            "@id": "https://pousadaleange.com.br/sobre",
             "name": "Sobre a Pousada Le Ange",
             "description": "História e filosofia da primeira pousada 100% Pet Friendly do Brasil",
             "url": "https://pousadaleange.com.br/sobre",
@@ -355,7 +355,7 @@ const SchemaMarkup = ({ pageType = 'home', pageData = {} }) => {
         },
         acomodaSerra: {
             "@type": "Accommodation",
-            "@id": "https://pousadaleange.com.br/acomodaSerra#accommodation",
+            "@id": "https://pousadaleange.com.br/acomodaSerra",
             "name": "Acomodações Le Ange Serra",
             "description": "Suítes pet friendly com lareira, banheira, varanda e todas as comodidades",
             "url": "https://pousadaleange.com.br/acomodaSerra",
@@ -372,7 +372,7 @@ const SchemaMarkup = ({ pageType = 'home', pageData = {} }) => {
         },
         acomodaMar: {
             "@type": "Accommodation",
-            "@id": "https://pousadaleange.com.br/acomodaMar#accommodation",
+            "@id": "https://pousadaleange.com.br/acomodaMar",
             "name": "Acomodações Le Ange Mar",
             "description": "Suítes pet friendly com vista para o mar e todas as comodidades",
             "url": "https://pousadaleange.com.br/acomodaMar",
