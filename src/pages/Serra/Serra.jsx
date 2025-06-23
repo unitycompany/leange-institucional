@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { getEvents } from "../../../firebaseService";
 import { Helmet } from 'react-helmet';
 import Footer from '../../components/footer';
@@ -13,6 +13,7 @@ import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
 import PetFriendlyCarousel from '../../components/petCarrossel';
 import { FaRegCreditCard } from "react-icons/fa";
+import SchemaMarkup from '../../components/SchemaMarkup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
@@ -438,37 +439,36 @@ const Serra = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
-        AOS.refresh(); 
-      }, []);
+        AOS.refresh();
+    }, []);
 
-      const [events, setEvents] = useState([]);
-              const [loading, setLoading] = useState(true);
-            
-              useEffect(() => {
-                const fetchData = async () => {
-                  try {
-                    const data = await getEvents();
-                    setEvents(data);
-                  } catch (error) {
-                    console.error("Erro ao buscar eventos do Firebase:", error);
-                  } finally {
-                    setLoading(false);
-                  }
-                };
-            
-                fetchData();
-              }, []);
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    return (
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getEvents();
+                setEvents(data);
+            } catch (error) {
+                console.error("Erro ao buscar eventos do Firebase:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []); return (
         <>
             <Helmet>
                 <title>Le Ange Serra - Pousada Le Ange</title>
             </Helmet>
+            <SchemaMarkup pageType="serra" />
 
             <StyledEspace />
 
             <StyledSectionHome>
-                <StyledHomeDiv data-aos="zoom-in" data-aos-delay="100"/>
+                <StyledHomeDiv data-aos="zoom-in" data-aos-delay="100" />
                 <StyledHomeTexts>
                     <h4 data-aos="fade-up" data-aos-delay="100">Conheça a Le Ange Serra, a pousada mais</h4>
                     <h1 data-aos="fade-down" data-aos-delay="200">PET FRIENDLY<br /> DO <b>BRASIL</b></h1>
@@ -496,34 +496,34 @@ const Serra = () => {
             <Regras />
 
             <StyledSectionEspaco>
-                <CarouselComponent slides={slides} 
-                backgroundColor="var(--color--green)"
+                <CarouselComponent slides={slides}
+                    backgroundColor="var(--color--green)"
                 />
             </StyledSectionEspaco>
 
-            <AcomodaComponent images={ImagesAcomoda} data-aos="fade-up" data-aos-delay="200"/>
+            <AcomodaComponent images={ImagesAcomoda} data-aos="fade-up" data-aos-delay="200" />
 
             <Pensao />
-            
-            <PetFriendlyCarousel carousels={PetFriendlyImages}/>
+
+            <PetFriendlyCarousel carousels={PetFriendlyImages} />
 
             <StyledButtonCenter>
-                <Button 
-                idBtn="clickwpp"
-                backgroundColor="var(--color--green)"
-                text="Fazer minha reserva!" 
-                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                <Button
+                    idBtn="clickwpp"
+                    backgroundColor="var(--color--green)"
+                    text="Fazer minha reserva!"
+                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                 />
             </StyledButtonCenter>
 
             {/* <EventAlert /> */}
-            
+
             <StyledContainerEvents>
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
 
             <Depoimentos />
-            
+
             <Footer />
 
             {/* <WhatsAppButton /> */}

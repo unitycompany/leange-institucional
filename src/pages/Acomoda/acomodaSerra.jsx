@@ -10,6 +10,7 @@ import { MdChair } from "react-icons/md";
 import { MdDeck } from "react-icons/md";
 import Footer from "../../components/footer";
 import WhatsAppButton from "../../components/Whatsapp";
+import SchemaMarkup from "../../components/SchemaMarkup";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Helmet } from "react-helmet";
@@ -83,7 +84,7 @@ const SuiteSup2Text = [
             { icon: <FaBed />, text: 'Cama king-size' },
             { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
             { icon: <FaFire />, text: 'Lareira' },
-            { icon: <BiSolidFridge />, text: 'Frigobar' },   
+            { icon: <BiSolidFridge />, text: 'Frigobar' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
@@ -110,7 +111,7 @@ const SuiteSup3Text = [
             { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
             { icon: <FaFire />, text: 'Lareira' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
-            
+
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
@@ -136,7 +137,7 @@ const SuiteStan4Text = [
             { icon: <FaRulerCombined />, text: "52m²" },
             { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
             { icon: <FaFire />, text: 'Lareira' },
-            { icon: <BiSolidFridge />, text: 'Frigobar' },            
+            { icon: <BiSolidFridge />, text: 'Frigobar' },
             { icon: <FaTv />, text: 'Smart TV' },
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
@@ -273,7 +274,7 @@ const SuiteSup9Text = [
             { icon: <FaFire />, text: 'Lareira' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
             { icon: <FaTv />, text: 'Smart TV' },
-            
+
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Varanda privativa' },
@@ -303,7 +304,7 @@ const SuiteMas10Text = [
             { icon: <MdChair />, text: 'Couch lounge' },
             { icon: <BiSolidFridge />, text: 'Frigobar' },
             { icon: <FaTv />, text: 'Smart TV' },
-            
+
             { icon: <FaBath />, text: 'Banheira relaxante' },
             { icon: <FaCloudSunRain />, text: 'Aquecedor de toalhas' },
             { icon: <MdDeck />, text: 'Ampla varanda privativa' },
@@ -332,21 +333,21 @@ const AcomodaSerra = () => {
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
         AOS.refresh(); // Atualiza os elementos em caso de re-renderização
-      }, []);
+    }, []);
 
     useEffect(() => {
         const scrollToHash = () => {
             const hash = location.hash.replace("#", "");
             console.log("Hash atual:", hash);
-    
+
             if (hash && suiteRefs[hash]?.current) {
                 const element = suiteRefs[hash].current;
-    
+
                 if (element) {
                     // Calcula a posição ajustada
                     const offsetTop = element.offsetTop - 100; // Garantir offset com margem superior
                     console.log(`Elemento encontrado: ${hash}, rolando para: ${offsetTop}px`);
-    
+
                     window.scrollTo({
                         top: offsetTop,
                         behavior: "smooth",
@@ -358,30 +359,29 @@ const AcomodaSerra = () => {
                 console.log(`Hash ${hash} não está associado a um ref válido.`);
             }
         };
-    
+
         const handlePageLoad = () => {
             console.log("Página carregada, verificando hash...");
             scrollToHash();
         };
-    
+
         window.addEventListener("load", handlePageLoad);
         window.addEventListener("hashchange", scrollToHash);
-    
+
         scrollToHash();
-    
+
         return () => {
             window.removeEventListener("load", handlePageLoad);
             window.removeEventListener("hashchange", scrollToHash);
         };
-    }, [location, suiteRefs]);
-
-    return (
+    }, [location, suiteRefs]); return (
         <>
             {/* <WhatsAppButton /> */}
 
             <Helmet>
                 <title>Acomoda Serra - Pousada Le Ange</title>
             </Helmet>
+            <SchemaMarkup pageType="acomodaSerra" />
 
             <TituloAcomoda>
                 Acomodações da<b>Pousada Le Ange Serra</b>

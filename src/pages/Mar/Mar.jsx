@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { getEvents } from "../../../firebaseService";
 import Footer from '../../components/footer';
@@ -14,6 +14,7 @@ import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
 import PetFriendlyCarousel from '../../components/petCarrossel';
 import { FaRegCreditCard } from "react-icons/fa";
+import SchemaMarkup from '../../components/SchemaMarkup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
@@ -384,13 +385,13 @@ const PetFriendlyImages = [
             { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/00e287de-9719-47ee-0fb1-3ef507b3a800/public", alt: 'Cachorro e um cachorro pequeno', loading: "lazy", label: 'Le Ange Mar' },
         ],
     },
-    
+
     {
         images: [
             { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b4ddd8c3-b6c1-4c00-d54b-06a44c074900/public", alt: 'Foto de um cachorro com uma taça do lado', loading: "lazy", label: 'Le Ange Mar' },
 
             { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a6b63bf4-92e1-43d5-9a86-ed900bdc4800/public", alt: '3 cachorros e um homem na piscina', loading: "lazy", label: 'Le Ange Mar' },
-            
+
             { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1cd65a71-7f00-4f13-5a67-c4ff922d8f00/public", alt: 'Cachorro marrom', loading: "lazy", label: 'Le Ange Mar' },
 
             { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/366f42cc-6fe9-4fc0-5ef6-15ea8e420b00/public", alt: 'Cachorro marrom na piscina', loading: "lazy", label: 'Le Ange Mar' },
@@ -428,31 +429,30 @@ const Mar = () => {
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
         AOS.refresh(); // Atualiza os elementos em caso de re-renderização
-      }, []);
+    }, []);
 
-      const [events, setEvents] = useState([]);
-              const [loading, setLoading] = useState(true);
-            
-              useEffect(() => {
-                const fetchData = async () => {
-                  try {
-                    const data = await getEvents();
-                    setEvents(data);
-                  } catch (error) {
-                    console.error("Erro ao buscar eventos do Firebase:", error);
-                  } finally {
-                    setLoading(false);
-                  }
-                };
-            
-                fetchData();
-              }, []);
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    return (
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getEvents();
+                setEvents(data);
+            } catch (error) {
+                console.error("Erro ao buscar eventos do Firebase:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []); return (
         <>
             <Helmet>
                 <title>Le Ange Mar - Pousada Le Ange</title>
             </Helmet>
+            <SchemaMarkup pageType="mar" />
 
             <StyledEspace />
 
@@ -488,7 +488,7 @@ const Mar = () => {
                 <h1 data-aos="fade-up" data-aos-delay="300">LeAnge Mar | Armação dos Búzios RJ</h1>
             </StyledLocal>
 
-            <Regras/> 
+            <Regras />
 
             <StyledSectionEspaco data-aos="fade-up" data-aos-delay="50">
                 <CarouselComponent
@@ -504,14 +504,14 @@ const Mar = () => {
 
             <Pensao colorDefinedBold="var(--color--blue)" data-aos="fade-up" data-aos-delay="400" />
 
-            <PetFriendlyCarousel carousels={PetFriendlyImages} data-aos="fade-in" data-aos-delay="400"/>
+            <PetFriendlyCarousel carousels={PetFriendlyImages} data-aos="fade-in" data-aos-delay="400" />
 
             <StyledButtonCenter>
-                <Button 
-                idBtn="clickwpp"
-                text="Fazer minha reserva!" 
-                backgroundColor="var(--color--green)"
-                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                <Button
+                    idBtn="clickwpp"
+                    text="Fazer minha reserva!"
+                    backgroundColor="var(--color--green)"
+                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                 />
             </StyledButtonCenter>
 
@@ -520,7 +520,7 @@ const Mar = () => {
             <StyledContainerEvents data-aos="fade-in" data-aos-delay="250">
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
-           
+
             <Depoimentos />
 
             <Footer />

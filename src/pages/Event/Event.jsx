@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Helmet } from 'react-helmet';
 import Button from '../../components/button';
@@ -9,6 +9,7 @@ import Footer from '../../components/footer';
 import WhatsAppButton from '../../components/Whatsapp';
 import { PiFlagBannerFill } from "react-icons/pi";
 import { FaBirthdayCake } from "react-icons/fa";
+import SchemaMarkup from '../../components/SchemaMarkup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -635,13 +636,12 @@ const Eventos = () => {
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
         AOS.refresh(); // Atualiza os elementos em caso de re-renderização
-      }, []);
-
-    return (
+    }, []); return (
         <>
             <Helmet>
-                <title>Eventos - Pousada Le Ange</title> 
+                <title>Eventos - Pousada Le Ange</title>
             </Helmet>
+            <SchemaMarkup pageType="event" />
             <Espace />
 
             {/* <WhatsAppButton /> */}
@@ -651,29 +651,29 @@ const Eventos = () => {
                 <div>
                     <h1 data-aos="fade-up" data-aos-delay="100">Do alto da <b><a href='#/serra'>Serra</a></b>,<br></br> às ondas do <b><a href='#/mar'>Mar</a></b></h1>
                     <p data-aos="fade-up" data-aos-delay="200">Venha celebrar na Le Ange, onde o amor pelos pets encontra o cenário ideal para tornar os seus eventos ainda mais especiais.</p>
-                    <Button 
-                    idBtn="clickwpp"
-                    data-aos="fade-up" data-aos-delay="300"
-                    onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
-                    text="Fazer meu evento"
-                    backgroundColor="var(--color--green)"
+                    <Button
+                        idBtn="clickwpp"
+                        data-aos="fade-up" data-aos-delay="300"
+                        onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                        text="Fazer meu evento"
+                        backgroundColor="var(--color--green)"
                     />
                 </div>
                 <div>
-                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4129a834-fd9a-42db-4770-46bcaae2c200/public" alt='foto da home da página de eventos' data-aos="fade-left" data-aos-delay="150"/>
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4129a834-fd9a-42db-4770-46bcaae2c200/public" alt='foto da home da página de eventos' data-aos="fade-left" data-aos-delay="150" />
                 </div>
 
             </InicioContainer>
 
             <CarrosselContainer data-aos="fade-up" data-aos-delay="100">
-                <SliderComponent3 
-                        content={images1} 
-                        spaceBetween={20} 
-                        slidesPerView={1} 
-                        width="100%"
-                        height="50%" 
-                        contentType="image"
-                        showPagination={true}
+                <SliderComponent3
+                    content={images1}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    width="100%"
+                    height="50%"
+                    contentType="image"
+                    showPagination={true}
                 />
             </CarrosselContainer>
 
@@ -687,11 +687,11 @@ const Eventos = () => {
                         <div>
                             <p>Fundada em 2018, a Pousada LeAnge nasceu da paixão dos seus fundadores pelo amor aos pets, bem-estar e hospitalidade. Localizada em Miguel Pereira, a LeAnge Serra proporciona uma experiência única na região serrana do Rio de Janeiro, sendo um verdadeiro refúgio entre as belezas naturais da Mata Atlântica.
                             </p>
-                            <Button 
-                             idBtn="clickwpp"
-                            backgroundColor="var(--color--green)"
-                            onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
-                            text="Fazer reserva"
+                            <Button
+                                idBtn="clickwpp"
+                                backgroundColor="var(--color--green)"
+                                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                                text="Fazer reserva"
                             />
                         </div>
                     </div>
@@ -700,10 +700,10 @@ const Eventos = () => {
                         <div>
                             <p>Fundada em 2018, a Pousada LeAnge nasceu da paixão dos seus fundadores pelo amor aos pets, bem-estar e hospitalidade. Localizada em Miguel Pereira, a LeAnge Serra proporciona uma experiência única na região serrana do Rio de Janeiro, sendo um verdadeiro refúgio entre as belezas naturais da Mata Atlântica.
                             </p>
-                            <Button 
-                             idBtn="clickwpp"
-                            onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
-                            text="Fazer reserva"
+                            <Button
+                                idBtn="clickwpp"
+                                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                                text="Fazer reserva"
                             />
                         </div>
                     </div>
@@ -718,8 +718,8 @@ const Eventos = () => {
                     <h1 data-aos="fade-up" data-aos-delay="200">Casamento</h1>
                     <p data-aos="fade-down" data-aos-delay="200">Coração palpitando, emoções à flor da pele e a certeza de dias inesquecíveis.</p>
                     <ol>
-                    <StyledItemEvent data-aos="fade-up" data-aos-delay="50">
-                        <BiSolidDrink />
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="50">
+                            <BiSolidDrink />
                             Coquetel na Chegada (Sexta-feira)
                         </StyledItemEvent>
 
@@ -744,16 +744,16 @@ const Eventos = () => {
                         </StyledItemEvent>
 
                     </ol>
-                    <Button 
-                     idBtn="clickwpp"
-                    text="Fazer reserva"
-                    backgroundColor="var(--color--green)"
-                    onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    <Button
+                        idBtn="clickwpp"
+                        text="Fazer reserva"
+                        backgroundColor="var(--color--green)"
+                        onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                     />
                     <div>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4129a834-fd9a-42db-4770-46bcaae2c200/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/fdcd50a3-60fa-409c-8e77-2d1ccef2ec00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200"/>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c5657ad4-000d-4c21-0570-1de76bd8c700/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300"/>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4129a834-fd9a-42db-4770-46bcaae2c200/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100" />
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/fdcd50a3-60fa-409c-8e77-2d1ccef2ec00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200" />
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c5657ad4-000d-4c21-0570-1de76bd8c700/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300" />
                     </div>
                 </div>
             </CasamentoContainer>
@@ -763,8 +763,8 @@ const Eventos = () => {
                     <h1 data-aos="fade-up" data-aos-delay="100">Aniversário</h1>
                     <p data-aos="fade-down" data-aos-delay="200">Comemore os momentos doces da vida.</p>
                     <ol>
-                    <StyledItemEvent data-aos="fade-up" data-aos-delay="50">
-                        <BiSolidDrink />
+                        <StyledItemEvent data-aos="fade-up" data-aos-delay="50">
+                            <BiSolidDrink />
                             Coquetel na Chegada (Sexta-feira)
                         </StyledItemEvent>
                         <StyledItemEvent data-aos="fade-up" data-aos-delay="100">
@@ -789,32 +789,32 @@ const Eventos = () => {
                         </StyledItemEvent>
 
                     </ol>
-                    <Button 
-                     idBtn="clickwpp"
-                    text="Fazer reserva"
-                    backgroundColor="var(--color--green)"
-                    onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    <Button
+                        idBtn="clickwpp"
+                        text="Fazer reserva"
+                        backgroundColor="var(--color--green)"
+                        onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
                     />
                     <div>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e2fda94b-3aeb-4561-b4ad-688ff898ee00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100"/>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/f8c3dd3f-c32b-4c9d-2496-dcdc601a7e00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200"/>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/980e5da2-7a6b-4d04-8e10-389d3ee83000/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300"/>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e2fda94b-3aeb-4561-b4ad-688ff898ee00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100" />
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/f8c3dd3f-c32b-4c9d-2496-dcdc601a7e00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="200" />
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/980e5da2-7a6b-4d04-8e10-389d3ee83000/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="300" />
                     </div>
                 </div>
                 <div>
                     <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5361ac8b-1299-4fc6-7cbb-7e71c171e300/public" alt='foto de aniversário' data-aos="zoom-in" data-aos-delay="200" />
                 </div>
             </NiverContainer>
-            
+
             <CarrosselContainer data-aos="fade-up" data-aos-delay="100">
                 <SliderComponent3
-                        content={images2} 
-                        spaceBetween={20} 
-                        slidesPerView={1} 
-                        width="100%"
-                        height="90vh" 
-                        contentType="image"
-                        showPagination={true}
+                    content={images2}
+                    spaceBetween={20}
+                    slidesPerView={1}
+                    width="100%"
+                    height="90vh"
+                    contentType="image"
+                    showPagination={true}
                 />
             </CarrosselContainer>
 

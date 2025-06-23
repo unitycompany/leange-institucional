@@ -12,6 +12,7 @@ import Footer from "../../components/footer";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa";
 import { Helmet } from "react-helmet";
+import SchemaMarkup from "../../components/SchemaMarkup";
 
 const Container = styled.div`
   width: 100%;
@@ -109,12 +110,12 @@ const Pacotes = () => {
   }, []);
 
   const categorias = ["Programações Especiais", "Feriados", "Promoções"];
-
   return (
     <>
-        <Helmet>
-                <title>Pacotes - Pousada Le Ange</title>
-        </Helmet>
+      <Helmet>
+        <title>Pacotes - Pousada Le Ange</title>
+      </Helmet>
+      <SchemaMarkup pageType="pacotes" />
 
       <Container>
         {categorias.map((categoria) => {
@@ -167,21 +168,21 @@ const Pacotes = () => {
                     color: "var(--color--black)",
                   }}
                 >
-                  Por enquanto não temos nenhuma promoção, mas fique por dentro de tudo pelo nosso 
-                  <a 
-                  style={{
-                    color: "var(--color--white)",
-                    fontSize: "16px",
-                    fontWeight: "600",
-                    cursor: "pointer",
-                    marginLeft: "1ch",
-                    background: "var(--color--blue)",
-                    padding: "10px 15px",
-                    borderRadius: "10px",
-                    textDecoration: "none",
-                    lineHeight: "50px",
-                  }}
-                  href="https://chat.whatsapp.com/FsOfaL1Y3jz4XQvNqaAVtZ" target="_blank">GRUPO EXCLUSIVO.</a>
+                  Por enquanto não temos nenhuma promoção, mas fique por dentro de tudo pelo nosso
+                  <a
+                    style={{
+                      color: "var(--color--white)",
+                      fontSize: "16px",
+                      fontWeight: "600",
+                      cursor: "pointer",
+                      marginLeft: "1ch",
+                      background: "var(--color--blue)",
+                      padding: "10px 15px",
+                      borderRadius: "10px",
+                      textDecoration: "none",
+                      lineHeight: "50px",
+                    }}
+                    href="https://chat.whatsapp.com/FsOfaL1Y3jz4XQvNqaAVtZ" target="_blank">GRUPO EXCLUSIVO.</a>
                 </p>
               )}
             </PacotesSection>

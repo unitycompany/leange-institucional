@@ -1,82 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Página inicial -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ===== PÁGINA INICIAL ===== -->
+  <!-- Página principal com maior prioridade -->
   <url>
     <loc>https://pousadaleange.com.br/</loc>
-    <lastmod>2025-06-05</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-06-23</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d3fbafba-3dfe-4924-e857-b45059def500/public</image:loc>
+      <image:caption>Pousada Le Ange - Pet Friendly - Brasil - Hospedagem completa com café da manhã, almoço, jantar e lanche inclusos</image:caption>
+      <image:title>Pousada Le Ange - A Mais Pet Friendly do Brasil</image:title>
+    </image:image>
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://pousadaleange.com.br/" />
   </url>
 
-  <!-- Página "Mar" -->
-  <url>
-    <loc>https://pousadaleange.com.br/mar</loc>
-    <lastmod>2025-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Página "LpMar" -->
-  <url>
-    <loc>https://pousadaleange.com.br/lpMar</loc>
-    <lastmod>2025-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Página "Serra" -->
+  <!-- ===== POUSADAS PRINCIPAIS ===== -->
+  <!-- Páginas das unidades com alta prioridade -->
   <url>
     <loc>https://pousadaleange.com.br/serra</loc>
-    <lastmod>2025-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/519c4332-73ef-4e4f-d51e-c5bb8162bc00/public</image:loc>
+      <image:caption>Le Ange Serra - Miguel Pereira RJ - Pousada Pet Friendly na Mata Atlântica com trilhas, cachoeiras e experiências únicas</image:caption>
+      <image:title>Le Ange Serra - Miguel Pereira RJ</image:title>
+    </image:image>
   </url>
 
-  <!-- Página "LpSerra" -->
   <url>
-    <loc>https://pousadaleange.com.br/lpSerra</loc>
-    <lastmod>2025-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://pousadaleange.com.br/mar</loc>
+    <lastmod>2025-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/09da9d76-57b8-4d44-02b2-3c4c2380c800/public</image:loc>
+      <image:caption>Le Ange Mar - Búzios RJ - Pousada Pet Friendly a 150m da Praia Rasa com vista para o mar</image:caption>
+      <image:title>Le Ange Mar - Búzios RJ</image:title>
+    </image:image>
   </url>
 
-  <!-- Página "Pacotes" -->
+  <!-- ===== PACOTES E PROMOÇÕES ===== -->
+  <!-- Página de pacotes com alta prioridade por conversão -->
   <url>
     <loc>https://pousadaleange.com.br/pacotes</loc>
-    <lastmod>2025-06-05</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-06-23</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bbca820c-502b-48cf-a6d6-8a4d4da25900/public</image:loc>
+      <image:caption>Pacotes Especiais Pousada Le Ange - Promoções, feriados e programações especiais com seu pet</image:caption>
+      <image:title>Pacotes e Promoções Le Ange</image:title>
+    </image:image>
   </url>
 
-  <!-- Página "AcomodaSerra" -->
+  <!-- ===== ACOMODAÇÕES ===== -->
+  <!-- Páginas das acomodações com boa prioridade -->
   <url>
     <loc>https://pousadaleange.com.br/acomodaSerra</loc>
-    <lastmod>2025-06-05</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/db3f6942-0de2-433d-1235-33bfa547e500/public</image:loc>
+      <image:caption>Acomodações Le Ange Serra - Suítes Pet Friendly com lareira, banheira, varanda e frigobar</image:caption>
+      <image:title>Suítes Pet Friendly Le Ange Serra</image:title>
+    </image:image>
   </url>
 
-  <!-- Página "AcomodaMar" -->
   <url>
     <loc>https://pousadaleange.com.br/acomodaMar</loc>
-    <lastmod>2025-06-05</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4d6afdaf-1cfe-4860-8099-818abedfdd00/public</image:loc>
+      <image:caption>Acomodações Le Ange Mar - Suítes Pet Friendly com vista para o mar, ar condicionado e comodidades completas</image:caption>
+      <image:title>Suítes Pet Friendly Le Ange Mar</image:title>
+    </image:image>
   </url>
 
-  <!-- Página "Eventos" -->
+  <!-- ===== EVENTOS ===== -->
+  <!-- Página de eventos corporativos e especiais -->
   <url>
-    <loc>https://pousadaleange.com.br/eventos</loc>
-    <lastmod>2025-06-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://pousadaleange.com.br/event</loc>
+    <lastmod>2025-06-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9c2d46b5-4488-4382-1bf4-865c6f914100/public</image:loc>
+      <image:caption>Eventos Especiais Pousada Le Ange - Comemorações, festas temáticas e eventos corporativos pet friendly</image:caption>
+      <image:title>Eventos Pet Friendly Le Ange</image:title>
+    </image:image>
   </url>
 
-  <!-- Página "Sobre" -->
+  <!-- ===== PÁGINAS INSTITUCIONAIS ===== -->
+  <!-- Página sobre a empresa -->
   <url>
     <loc>https://pousadaleange.com.br/sobre</loc>
-    <lastmod>2025-06-05</lastmod>
+    <lastmod>2025-06-23</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0b4e1dd7-194d-4d4c-da16-c16c77281000/public</image:loc>
+      <image:caption>Sobre a Pousada Le Ange - História, filosofia pet friendly e compromisso com experiências únicas</image:caption>
+      <image:title>Nossa História - Le Ange</image:title>
+    </image:image>
   </url>
+
+  <!-- ===== LANDING PAGES ===== -->
+  <!-- Landing pages específicas para campanhas -->
+  <url>
+    <loc>https://pousadaleange.com.br/lpSerra</loc>
+    <lastmod>2025-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/519c4332-73ef-4e4f-d51e-c5bb8162bc00/public</image:loc>
+      <image:caption>Landing Page Le Ange Serra - Ofertas especiais Miguel Pereira RJ</image:caption>
+      <image:title>Oferta Especial Le Ange Serra</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://pousadaleange.com.br/lpMar</loc>
+    <lastmod>2025-06-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/09da9d76-57b8-4d44-02b2-3c4c2380c800/public</image:loc>
+      <image:caption>Landing Page Le Ange Mar - Ofertas especiais Búzios RJ</image:caption>
+      <image:title>Oferta Especial Le Ange Mar</image:title>
+    </image:image>
+  </url>
+
+  <!-- ===== PÁGINAS LEGAIS ===== -->
+  <!-- Política de privacidade -->
+  <url>
+    <loc>https://pousadaleange.com.br/politica-de-privacidade</loc>
+    <lastmod>2025-06-23</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
 </urlset>

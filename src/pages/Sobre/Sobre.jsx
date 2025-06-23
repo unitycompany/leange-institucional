@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import WhatsAppButton from '../../components/Whatsapp';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import CustomButton from '../../components/button3';
+import SchemaMarkup from '../../components/SchemaMarkup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
@@ -793,13 +794,12 @@ const Sobre = () => {
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
         AOS.refresh(); // Atualiza os elementos em caso de re-renderização
-      }, []);
-
-    return (
+    }, []); return (
         <>
             <Helmet>
                 <title>Sobre Nós - Pousada Le Ange</title>
             </Helmet>
+            <SchemaMarkup pageType="sobre" />
             <Espaco></Espaco>
 
             <WhatsAppButton />
@@ -807,15 +807,15 @@ const Sobre = () => {
             <SobreContainer>
                 <div>
                     <h1 data-aos="fade-up" data-aos-delay="100">Pousada Le Ange</h1>
-                    <h4 data-aos="fade-down" data-aos-delay="200">A pousada mais <b>Pet Friendly</b> do Brasil</h4>    
+                    <h4 data-aos="fade-down" data-aos-delay="200">A pousada mais <b>Pet Friendly</b> do Brasil</h4>
                     <p data-aos="fade-up" data-aos-delay="300">Fundada em 2018 em Miguel Pereira, Rio de Janeiro, a Pousada Le Ange Serra nasceu da nossa paixão por quatro patas, bem-estar e hospitalidade. Com o sucesso da primeira unidade, expandimos para Búzios, em 2023, criando a Pousada Le Ange Mar. A filosofia por trás é oferecer mais do que uma pousada, um refúgio acolhedor.</p>
                 </div>
                 <div data-aos="fade-left" data-aos-delay="400">
-                    <img 
-                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/3e74beb7-77f8-4598-ec38-1e6f6e4d9300/public" 
-                    alt='foto da gaia, cachorra da pousada le ange'
-                    loading='lazy'
-                    data-aos="fade-right" data-aos-delay="500"
+                    <img
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/3e74beb7-77f8-4598-ec38-1e6f6e4d9300/public"
+                        alt='foto da gaia, cachorra da pousada le ange'
+                        loading='lazy'
+                        data-aos="fade-right" data-aos-delay="500"
                     />
                 </div>
             </SobreContainer>
@@ -823,17 +823,17 @@ const Sobre = () => {
             <UnidadeContainer>
 
                 <div>
-                    <img 
-                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2edd1026-cdea-4ac6-f501-713bba86d600/public" 
-                    alt='foto da le ande da mar' 
-                    loading='lazy'
-                    data-aos="fade-up" data-aos-delay="100"
+                    <img
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2edd1026-cdea-4ac6-f501-713bba86d600/public"
+                        alt='foto da le ande da mar'
+                        loading='lazy'
+                        data-aos="fade-up" data-aos-delay="100"
                     />
-                    <img 
-                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/74bff9be-8742-4468-e032-4cf79abe5300/public" 
-                    alt='foto da le ande da serra'
-                    loading='lazy' 
-                    data-aos="fade-down" data-aos-delay="100"
+                    <img
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/74bff9be-8742-4468-e032-4cf79abe5300/public"
+                        alt='foto da le ande da serra'
+                        loading='lazy'
+                        data-aos="fade-down" data-aos-delay="100"
                     />
                 </div>
 
@@ -854,70 +854,70 @@ const Sobre = () => {
                 </div>
 
                 <div>
-                    <img 
-                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d476f2e3-90fe-4291-137c-bc9f9e7f4000/public" 
-                    loading='lazy'
-                    alt='rede na le ange mar' 
-                    data-aos="fade-up" data-aos-delay="100"
+                    <img
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d476f2e3-90fe-4291-137c-bc9f9e7f4000/public"
+                        loading='lazy'
+                        alt='rede na le ange mar'
+                        data-aos="fade-up" data-aos-delay="100"
                     />
-                    <img 
-                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/902b9f7b-b521-4545-08ee-f5386e777400/public" 
-                    loading='lazy'
-                    alt='hot tube na le ange serra' 
-                    data-aos="fade-down" data-aos-delay="200"
+                    <img
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/902b9f7b-b521-4545-08ee-f5386e777400/public"
+                        loading='lazy'
+                        alt='hot tube na le ange serra'
+                        data-aos="fade-down" data-aos-delay="200"
                     />
-                    <img 
-                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/db3f6942-0de2-433d-1235-33bfa547e500/public"
-                    loading='lazy' 
-                    alt='casal se divertindo na le ange serra'
-                    data-aos="fade-up" data-aos-delay="300"
+                    <img
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/db3f6942-0de2-433d-1235-33bfa547e500/public"
+                        loading='lazy'
+                        alt='casal se divertindo na le ange serra'
+                        data-aos="fade-up" data-aos-delay="300"
                     />
-                    <img 
-                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/920ca71e-b200-4a6c-5c7e-cc605234d700/public" 
-                    loading='lazy'
-                    alt='foto da le ange com tema de natal' 
-                    data-aos="fade-down" data-aos-delay="400"
+                    <img
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/920ca71e-b200-4a6c-5c7e-cc605234d700/public"
+                        loading='lazy'
+                        alt='foto da le ange com tema de natal'
+                        data-aos="fade-down" data-aos-delay="400"
                     />
                 </div>
 
             </DiferenciaisContainer>
 
             <ContainerDuplo>
-                
+
                 <div>
                     <div>
                         <h1 data-aos="fade-down" data-aos-delay="100">Gastronomia</h1>
                         <p data-aos="fade-up" data-aos-delay="200">Oferecemos um serviço <i>all inclusive</i> que abrange todas as refeições, atendendo todas as restrições alimentares dos nossos hóspedes. Nosso compromisso é proporcionar uma experiência gastronômica diversificada e de alta qualidade, utilizando produtos frescos e locais.</p>
                     </div>
                     <div>
-                        <img 
-                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bbca820c-502b-48cf-a6d6-8a4d4da25900/public" 
-                        loading='lazy'
-                        alt='foto da noite de pizzas na pousada le ange' 
-                        data-aos="fade-up" data-aos-delay="300"
+                        <img
+                            src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bbca820c-502b-48cf-a6d6-8a4d4da25900/public"
+                            loading='lazy'
+                            alt='foto da noite de pizzas na pousada le ange'
+                            data-aos="fade-up" data-aos-delay="300"
                         />
-                        <img 
-                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9c2d46b5-4488-4382-1bf4-865c6f914100/public" 
-                        loading='lazy'
-                        alt='foto da noite de risotos na pousada le ange' 
-                        data-aos="fade-down" data-aos-delay="400"
+                        <img
+                            src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9c2d46b5-4488-4382-1bf4-865c6f914100/public"
+                            loading='lazy'
+                            alt='foto da noite de risotos na pousada le ange'
+                            data-aos="fade-down" data-aos-delay="400"
                         />
                     </div>
                 </div>
 
                 <div>
                     <div>
-                        <img 
-                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/415e2adb-0537-4ce0-23cb-124869c06c00/public"
-                        loading='lazy'
-                        alt='foto do cachorro sorrindo para camera' 
-                        data-aos="fade-up" data-aos-delay="100"
-                         />
-                        <img 
-                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/f9af3c90-2ae9-4250-2ac9-afedce182000/public" 
-                        loading='lazy'
-                        alt='uma mulher e dois cachorros na pousada le ange' 
-                        data-aos="fade-down" data-aos-delay="200"
+                        <img
+                            src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/415e2adb-0537-4ce0-23cb-124869c06c00/public"
+                            loading='lazy'
+                            alt='foto do cachorro sorrindo para camera'
+                            data-aos="fade-up" data-aos-delay="100"
+                        />
+                        <img
+                            src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/f9af3c90-2ae9-4250-2ac9-afedce182000/public"
+                            loading='lazy'
+                            alt='uma mulher e dois cachorros na pousada le ange'
+                            data-aos="fade-down" data-aos-delay="200"
                         />
                     </div>
                     <div>
@@ -940,12 +940,12 @@ const Sobre = () => {
                         <p data-aos="fade-down" data-aos-delay="500">Pedimos que considere se o seu pet é amigável, pois a pousada recebe vários outros pets. Além disso, aceitamos apenas humanos acompanhados por pets, e a idade mínima para hospedagem é 13 anos.</p>
                     </div>
                 </div>
-                
+
                 <div>
-                    <img 
-                    src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/cc7ff3b2-c267-4a5b-140b-cfae14d7f900/public" 
-                    alt='foto do quadro de cachorro na pousada le ange mar'
-                    data-aos="flip-left" data-aos-delay="600"
+                    <img
+                        src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/cc7ff3b2-c267-4a5b-140b-cfae14d7f900/public"
+                        alt='foto do quadro de cachorro na pousada le ange mar'
+                        data-aos="flip-left" data-aos-delay="600"
                     />
                 </div>
 
@@ -955,19 +955,19 @@ const Sobre = () => {
 
             <CTA>
                 <h1 data-aos="fade-up" data-aos-delay="200">Venha viver essa experiência com a gente!</h1>
-                <CustomButton 
-                idBtn="clickwpp"
-                text="Reservar agora!"
-                textColor="var(--color--white)"
-                backgroundColor="transparent"
-                borderColor="var(--color--white)"
-                iconColor="var(--color--white)"
-                hoverBackgroundColor="var(--color--white)"
-                hoverBorderColor="var(--color--white)"
-                hoverColor="var(--color--white)"
-                hoverIconColor="var(--color--white)"
-                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
-                data-aos="fade-in" data-aos-delay="500"
+                <CustomButton
+                    idBtn="clickwpp"
+                    text="Reservar agora!"
+                    textColor="var(--color--white)"
+                    backgroundColor="transparent"
+                    borderColor="var(--color--white)"
+                    iconColor="var(--color--white)"
+                    hoverBackgroundColor="var(--color--white)"
+                    hoverBorderColor="var(--color--white)"
+                    hoverColor="var(--color--white)"
+                    hoverIconColor="var(--color--white)"
+                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    data-aos="fade-in" data-aos-delay="500"
                 />
             </CTA>
 

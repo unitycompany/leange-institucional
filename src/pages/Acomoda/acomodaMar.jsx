@@ -8,6 +8,7 @@ import { BsCupHotFill } from "react-icons/bs";
 import { MdDeck } from "react-icons/md";
 import Footer from "../../components/footer";
 import WhatsAppButton from "../../components/Whatsapp";
+import SchemaMarkup from "../../components/SchemaMarkup";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Helmet } from "react-helmet";
@@ -267,15 +268,15 @@ const AcomodaMar = () => {
         const scrollToHash = () => {
             const hash = location.hash.replace("#", "");
             console.log("Hash atual:", hash);
-    
+
             if (hash && suiteRefs[hash]?.current) {
                 const element = suiteRefs[hash].current;
-    
+
                 if (element) {
                     // Calcula a posição ajustada
                     const offsetTop = element.offsetTop - 100; // Garantir offset com margem superior
                     console.log(`Elemento encontrado: ${hash}, rolando para: ${offsetTop}px`);
-    
+
                     window.scrollTo({
                         top: offsetTop,
                         behavior: "smooth",
@@ -287,17 +288,17 @@ const AcomodaMar = () => {
                 console.log(`Hash ${hash} não está associado a um ref válido.`);
             }
         };
-    
+
         const handlePageLoad = () => {
             console.log("Página carregada, verificando hash...");
             scrollToHash();
         };
-    
+
         window.addEventListener("load", handlePageLoad);
         window.addEventListener("hashchange", scrollToHash);
-    
+
         scrollToHash();
-    
+
         return () => {
             window.removeEventListener("load", handlePageLoad);
             window.removeEventListener("hashchange", scrollToHash);
@@ -306,10 +307,8 @@ const AcomodaMar = () => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
-        AOS.refresh(); 
-      }, []);
-
-    return(
+        AOS.refresh();
+    }, []); return (
         <>
 
             {/* <WhatsAppButton /> */}
@@ -317,21 +316,22 @@ const AcomodaMar = () => {
             <Helmet>
                 <title>Acomoda Mar - Pousada Le Ange</title>
             </Helmet>
+            <SchemaMarkup pageType="acomodaMar" />
 
             <TituloAcomoda>Acomodações da<b>Pousada Le Ange Mar</b></TituloAcomoda>
 
-            <Quarto id="suite1" ref={suiteRefs.suite1} images={SuiteSup1Images} suites={SuiteSup1Text} reverse={true} background="#7AC4F350"/>
-            <Quarto id="suite2" ref={suiteRefs.suite2} images={SuiteStan2Images} suites={SuiteStan2Text} reverse={false} background="#7AC4F350"/>
-            <Quarto id="suite3" ref={suiteRefs.suite3} images={SuiteSup3Images} suites={SuiteSup3Text} reverse={true} background="#7AC4F350"/>
-            <Quarto id="suite4" ref={suiteRefs.suite4} images={SuiteSup4Images} suites={SuiteSup4Text} reverse={false} background="#7AC4F350"/>
-            <Quarto id="suite5" ref={suiteRefs.suite5} images={SuiteSup5Images} suites={SuiteSup5Text} reverse={true} background="#7AC4F350"/>
-            <Quarto id="suite6" ref={suiteRefs.suite6} images={SuiteSup6Images} suites={SuiteSup6Text} reverse={false} background="#7AC4F350"/>
-            <Quarto id="suite7" ref={suiteRefs.suite7} images={SuiteStan7Images} suites={SuiteStan7Text} reverse={true} background="#7AC4F350"/>
-            <Quarto id="suite8" ref={suiteRefs.suite8} images={SuiteMas8Images} suites={SuiteMas8Text} reverse={false} background="#7AC4F350"/>
+            <Quarto id="suite1" ref={suiteRefs.suite1} images={SuiteSup1Images} suites={SuiteSup1Text} reverse={true} background="#7AC4F350" />
+            <Quarto id="suite2" ref={suiteRefs.suite2} images={SuiteStan2Images} suites={SuiteStan2Text} reverse={false} background="#7AC4F350" />
+            <Quarto id="suite3" ref={suiteRefs.suite3} images={SuiteSup3Images} suites={SuiteSup3Text} reverse={true} background="#7AC4F350" />
+            <Quarto id="suite4" ref={suiteRefs.suite4} images={SuiteSup4Images} suites={SuiteSup4Text} reverse={false} background="#7AC4F350" />
+            <Quarto id="suite5" ref={suiteRefs.suite5} images={SuiteSup5Images} suites={SuiteSup5Text} reverse={true} background="#7AC4F350" />
+            <Quarto id="suite6" ref={suiteRefs.suite6} images={SuiteSup6Images} suites={SuiteSup6Text} reverse={false} background="#7AC4F350" />
+            <Quarto id="suite7" ref={suiteRefs.suite7} images={SuiteStan7Images} suites={SuiteStan7Text} reverse={true} background="#7AC4F350" />
+            <Quarto id="suite8" ref={suiteRefs.suite8} images={SuiteMas8Images} suites={SuiteMas8Text} reverse={false} background="#7AC4F350" />
 
             <Footer />
         </>
     )
-} 
+}
 
 export default AcomodaMar;

@@ -17,6 +17,7 @@ import { FaRegCreditCard } from "react-icons/fa";
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import Button from '../../components/button';
 import WhatsAppButton from '../../components/Whatsapp';
+import SchemaMarkup from '../../components/SchemaMarkup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
@@ -38,7 +39,7 @@ const imagesSerra = [
 ];
 
 const imagesMar = [
-    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2edd1026-cdea-4ac6-f501-713bba86d600/public', alt: 'Foto da pousada le ange mar',loading: "lazy" },
+    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2edd1026-cdea-4ac6-f501-713bba86d600/public', alt: 'Foto da pousada le ange mar', loading: "lazy" },
 
     { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c15257b6-956b-4f1d-ee81-9870ce695d00/public', alt: '2 pessoas na rede na pousada le ange mar', loading: "lazy" },
 
@@ -142,7 +143,7 @@ const StyledPousadas = styled.div`
     }
 `
 
-const StyledPousadasTitle = styled.aside `
+const StyledPousadasTitle = styled.aside`
 
     
     width: 100%;
@@ -185,18 +186,18 @@ const StyledPousadasTitle = styled.aside `
 
 const acomodaHome = [
     {
-      id: "Serra#suite1",
-      title: "Suíte Superior 1",
-      subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-      backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c21ef88c-f22b-497e-1e70-5c5b4c4cf500/public",
-      features: [
-        { icon: <FaRulerCombined />, text: "52m²" },
-        { icon: <FaSnowflake />, text: "Ar condicionado" },
-        { icon: <FaBed />, text: "Cama king size" },
-        { icon: <FaBath />, text: "Banheira" },
-        { icon: <FaTv />, text: "Smart TV com canais a cabo" },
-        { icon: <FaFire />, text: "Lareira" }
-      ]
+        id: "Serra#suite1",
+        title: "Suíte Superior 1",
+        subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
+        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c21ef88c-f22b-497e-1e70-5c5b4c4cf500/public",
+        features: [
+            { icon: <FaRulerCombined />, text: "52m²" },
+            { icon: <FaSnowflake />, text: "Ar condicionado" },
+            { icon: <FaBed />, text: "Cama king size" },
+            { icon: <FaBath />, text: "Banheira" },
+            { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+            { icon: <FaFire />, text: "Lareira" }
+        ]
     },
 
     {
@@ -205,28 +206,28 @@ const acomodaHome = [
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
         backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/23d18593-f941-4c65-0349-6b23e6ea2800/public",
         features: [
-          { icon: <FaRulerCombined />, text: "52m²" },
-          { icon: <FaSnowflake />, text: "Ar condicionado" },
-          { icon: <FaBed />, text: "Cama king size" },
-          { icon: <FaBath />, text: "Banheira" },
-          { icon: <FaTv />, text: "Smart TV com canais a cabo" },
-          { icon: <FaFire />, text: "Lareira" }
+            { icon: <FaRulerCombined />, text: "52m²" },
+            { icon: <FaSnowflake />, text: "Ar condicionado" },
+            { icon: <FaBed />, text: "Cama king size" },
+            { icon: <FaBath />, text: "Banheira" },
+            { icon: <FaTv />, text: "Smart TV com canais a cabo" },
+            { icon: <FaFire />, text: "Lareira" }
         ]
     },
 
     {
-      id: "Serra#suite6",
-      title: "Suíte Master 6",
-      subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-      backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/48a11406-659c-4d98-f2d8-6fc518ef6600/public",
-      features: [
-        { icon: <FaRulerCombined />, text: "93m²" },
-        { icon: <FaSnowflake />, text: "Ar condicionado" },
-        { icon: <FaBed />, text: "Cama king size" },
-        { icon: <FaBath />, text: "Banheira" },
-        { icon: <SiApachecouchdb />, text: 'Couch lounge' },
-        { icon: <TbBrandWindows />, text: 'Bay window' }
-      ]
+        id: "Serra#suite6",
+        title: "Suíte Master 6",
+        subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
+        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/48a11406-659c-4d98-f2d8-6fc518ef6600/public",
+        features: [
+            { icon: <FaRulerCombined />, text: "93m²" },
+            { icon: <FaSnowflake />, text: "Ar condicionado" },
+            { icon: <FaBed />, text: "Cama king size" },
+            { icon: <FaBath />, text: "Banheira" },
+            { icon: <SiApachecouchdb />, text: 'Couch lounge' },
+            { icon: <TbBrandWindows />, text: 'Bay window' }
+        ]
     },
 
     {
@@ -241,7 +242,7 @@ const acomodaHome = [
             { icon: <FaBath />, text: "Banheira" },
             { icon: <FaTv />, text: "Smart TV com canais a cabo" },
             { icon: <FaFire />, text: "Lareira" }
-      ]
+        ]
     },
 
     {
@@ -256,7 +257,7 @@ const acomodaHome = [
             { icon: <FaBath />, text: "Banheira" },
             { icon: <FaTv />, text: "Smart TV com canais a cabo" },
             { icon: <FaFire />, text: "Lareira" }
-      ]
+        ]
     },
 
     {
@@ -271,9 +272,9 @@ const acomodaHome = [
             { icon: <MdChair />, text: 'Recamier e poltrona de leitura' },
             { icon: <SiApachecouchdb />, text: 'Couch lounge' },
             { icon: <FaFire />, text: "Lareira" }
-      ]
+        ]
     },
-  ];
+];
 
 const StyledAcomoda = styled.section`
     height: auto;
@@ -344,7 +345,7 @@ const slideDataCoverflow = [
     {
         backgroundImage: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/09da9d76-57b8-4d44-02b2-3c4c2380c800/public',
         title: 'Piscinas',
-        description: 'Nossa piscina aquecida possui um tratamento especial por ozônio com níveis baixíssimos de cloro - aqui, tudo é pensando para o bem-estar da sua pele a do seu pet também!',
+        description: 'Nossa piscina aquecida possui um tratamento especial por ozônio com níveis baixíssimos de cloro - aqui, tudo é pensado para o bem-estar da sua pele a do seu pet também!',
         buttonText: 'Viver minha experiência agora',
         topLeftText: 'Le Ange Mar e Serra',
     },
@@ -677,34 +678,33 @@ const HomeImageOficial = styled.div`
 const Home = () => {
     useEffect(() => {
         AOS.init({
-          duration: 1000, // Duração da animação (em ms)
-          once: true,     // Executar animação apenas uma vez
+            duration: 1000, // Duração da animação (em ms)
+            once: true,     // Executar animação apenas uma vez
         });
-      }, []);
-      
-        const [events, setEvents] = useState([]);
-        const [loading, setLoading] = useState(true);
-      
-        useEffect(() => {
-          const fetchData = async () => {
-            try {
-              const data = await getEvents();
-              setEvents(data);
-            } catch (error) {
-              console.error("Erro ao buscar eventos do Firebase:", error);
-            } finally {
-              setLoading(false);
-            }
-          };
-      
-          fetchData();
-        }, []);
+    }, []);
 
-    return (
+    const [events, setEvents] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await getEvents();
+                setEvents(data);
+            } catch (error) {
+                console.error("Erro ao buscar eventos do Firebase:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []); return (
         <>
             <Helmet>
                 <title>Início - Pousada Le Ange</title>
             </Helmet>
+            <SchemaMarkup pageType="home" />
 
             <HomeImageOficial>
                 <a href='/mar'>
@@ -733,19 +733,19 @@ const Home = () => {
                 </StyledPousadasTitle>
 
                 <StyledContainerPousadas data-aos="fade-up">
-                    <SliderComponent 
-                        content={imagesSerra} 
-                        spaceBetween={20} 
-                        slidesPerView={1} 
-                        height="50vh" 
-                        contentType="image" 
-                        showPagination={false} 
+                    <SliderComponent
+                        content={imagesSerra}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        height="50vh"
+                        contentType="image"
+                        showPagination={false}
                     />
-                    <TitlePousadas 
-                        title="Le Ange Serra - Miguel Pereira RJ" 
-                        text="Na Le Ange Serra, costumamos dizer que a hospedagem é muito mais do que um final de semana para relaxar. É uma experiência única ao lado do seu pet entre as belezas naturais da Mata Atlântica, para que você colecione os melhores momentos ao lado dele!" 
+                    <TitlePousadas
+                        title="Le Ange Serra - Miguel Pereira RJ"
+                        text="Na Le Ange Serra, costumamos dizer que a hospedagem é muito mais do que um final de semana para relaxar. É uma experiência única ao lado do seu pet entre as belezas naturais da Mata Atlântica, para que você colecione os melhores momentos ao lado dele!"
                         borderColor="var(--color--green)"
-                        borderRadius="30px" 
+                        borderRadius="30px"
                         buttonColor="var(--color--green)"
                         buttonBorder="1px solid var(--color--black)"
                         targetPage="/serra"
@@ -754,22 +754,22 @@ const Home = () => {
                 </StyledContainerPousadas>
 
                 <StyledContainerPousadas data-aos="fade-up" data-aos-delay="200">
-                    <TitlePousadas 
-                        title="Le Ange Mar - Búzios RJ" 
-                        text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da pousada e o seu pet é, calorosamente, recebido para momentos especiais à beira-mar." 
+                    <TitlePousadas
+                        title="Le Ange Mar - Búzios RJ"
+                        text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da pousada e o seu pet é, calorosamente, recebido para momentos especiais à beira-mar."
                         borderColor="var(--color--blue)"
-                        borderRadius="30px" 
+                        borderRadius="30px"
                         buttonColor="var(--color--blue)"
                         buttonBorder="1px solid var(--color--black)"
                         targetPage="/mar"
                         idade="*Idade miníma para hospedagem 13 anos, mesmo que acompanhado dos pais"
                     />
-                    <SliderComponent 
-                        content={imagesMar} 
-                        spaceBetween={20} 
-                        slidesPerView={1} 
-                        width="60%" 
-                        height="50vh" 
+                    <SliderComponent
+                        content={imagesMar}
+                        spaceBetween={20}
+                        slidesPerView={1}
+                        width="60%"
+                        height="50vh"
                         contentType="image"
                         showPagination={false}
                     />
@@ -784,23 +784,23 @@ const Home = () => {
                     <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Já consegue se imaginar dormindo aqui ao lado do seu pet?</StyledEstruturaSubTitle>
                 </div>
 
-                <SliderAcomodaHome 
-                    content={acomodaHome} 
+                <SliderAcomodaHome
+                    content={acomodaHome}
                 />
 
             </StyledAcomoda>
-            
+
             <StyledEstrutura>
                 <div>
                     <StyledEstruturaTitle data-aos="fade-up">Mais que Pet Friendly, <StyledColorBBlue>Pet Lovers</StyledColorBBlue></StyledEstruturaTitle>
                     <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Venha viver essa experiência</StyledEstruturaSubTitle>
                 </div>
                 <CoverflowSliderComponent
-                    content={slideDataCoverflow} 
-                    spaceBetween={20} 
-                    width="100%" 
-                    height="100%" 
-                    showPagination={false} 
+                    content={slideDataCoverflow}
+                    spaceBetween={20}
+                    width="100%"
+                    height="100%"
+                    showPagination={false}
                     showNavigation={true}
                 />
             </StyledEstrutura>
@@ -809,7 +809,7 @@ const Home = () => {
                 <StyledEstruturaTitle data-aos="fade-up"> <StyledColorBGreen>Viva</StyledColorBGreen> essa experiência </StyledEstruturaTitle>
                 <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Alguns dos nossos momentos</StyledEstruturaSubTitle>
             </div>
-            
+
             <StyledCarrosselSection data-aos="fade-in">
                 <ImageCarouselSliderComponent images={imagesCarrossel01} />
                 <ImageCarouselSliderComponent images={imagesCarrossel02} reverse={true} />
@@ -817,10 +817,10 @@ const Home = () => {
 
             <StyledButtonCenter>
                 <Button
-                idBtn="clickwpp"
-                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
-                text="Fazer minha reserva!"
-                backgroundColor="var(--color--green)"
+                    idBtn="clickwpp"
+                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    text="Fazer minha reserva!"
+                    backgroundColor="var(--color--green)"
                 />
             </StyledButtonCenter>
 
@@ -835,7 +835,7 @@ const Home = () => {
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
 
-               <Footer />
+            <Footer />
 
         </>
     );
