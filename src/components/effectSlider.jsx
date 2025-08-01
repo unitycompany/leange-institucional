@@ -40,10 +40,9 @@ const SlideContainer = styled.div`
     align-items: center;
     justify-content: center;
     position: relative;
-    
     width: 100%;
     height: 600px;
-    border-radius: 25px 0 25px 0;
+    border-radius: 20px;
     overflow: hidden;
     background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
     background-size: cover;
@@ -92,17 +91,16 @@ const SlideContent = styled.div`
 
 const TopLeftText = styled.div`
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 12px;
-    font-weight: bold;
+    top: 10px;
+    right: 10px;
+    font-size: 11px;
+    font-weight: 500;
     padding: 5px 15px;
     color: var(--color--black);
     z-index: 3;
     font-family: var(--font--comfortaa);
-    font-weight: 800;
     background-color: var(--color--white);
-    border-radius: 10px 0 10px 0;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 5px rgba(255, 255, 255, 1);
 

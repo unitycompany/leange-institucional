@@ -11,7 +11,8 @@ import Regras from '../../components/regras';
 const SobreContainer = styled.section`
     width: 100%;
     max-width: 1280px;
-    height: 100vh;
+    padding: 2.5% 0% 2.5% 5%;
+    height: auto;
     left: 50%;
     top: 0;
     position: relative;
@@ -21,6 +22,7 @@ const SobreContainer = styled.section`
     align-items: center;
     justify-content: center;
     gap: 25px;
+    
     
 
     @media (max-width: 768px){
@@ -36,7 +38,6 @@ const SobreContainer = styled.section`
         align-items: flex-start;
         justify-content: center;
         gap: 20px;
-        padding: 0 0 0 5%;
         
 
 
@@ -85,16 +86,17 @@ const SobreContainer = styled.section`
 
         & > p {
             width: 80%;
-            font-family: var(--font--comfortaa);
-            font-size: .9rem;
-            font-weight: 100;
+            font-family: var(--font--avenir);
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.7!important;
             line-height: 120%;
 
             @media (max-width: 768px){
                 width: 100%;
                 text-align: justify;
                 margin-top: -25px;
-                font-size: 14px;
+                font-size: 16px;
             }
         }
     }
@@ -107,13 +109,10 @@ const SobreContainer = styled.section`
         justify-content: center;
         position: relative;
         z-index: 1;
-        
-
 
         @media (max-width: 768px){
             width: 100%;
             height: auto;
-
             display: none;
         }
 
@@ -125,7 +124,7 @@ const SobreContainer = styled.section`
             right: 0;
             position: absolute;
             background-color: var(--color--blue);
-            border-radius: 100px 0 0 50px;
+            border-radius: 150px 0 0 150px;
             z-index: -1;
     
 
@@ -162,20 +161,22 @@ const UnidadeContainer = styled.section`
     max-width: 1280px;
     left: 50%;
     top: 0;
+    padding: 2.5% 5%;
     position: relative;
     transform: translateX(-50%);
-    height: 80vh;
+    height: 65vh;
     margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 50px;
+    
     
 
     @media (max-width: 768px){
         flex-direction: column;
         height: auto;
-        gap: 30px;
+        gap: 10px;
         padding: 0 5%;
         margin-top: 5vh;
     }
@@ -186,10 +187,8 @@ const UnidadeContainer = styled.section`
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 10px;
+        gap: 2px;
         
-
-
         @media (max-width: 768px){
             max-width: 100%;
             height: 30vh;
@@ -197,31 +196,30 @@ const UnidadeContainer = styled.section`
         }
 
         & > img:nth-child(1){
-            width: 60%;
+            width: 50%;
             height: 100%;
-            border-radius: 20px 0 20px 0;
+            border-radius: 100px 100px 0px 100px;
             object-fit: cover;
     
 
             @media (max-width: 768px){
                 width: 48%;
                 height: 100%;
-                border-radius: 10px 0 10px 0;
+                border-radius: 50px;
             }
         }
 
         & > img:nth-child(2){
-            width: 40%;
+            width: 50%;
             height: 100%;
-            border-radius: 0px 20px 0px 20px;
+            border-radius: 100px 100px 100px 0;
             object-fit: cover;
 
             @media (max-width: 768px){
                 width: 48%;
                 height: 100%!important;
                 object-fit: cover;
-                border-radius: 0px 10px 0 10px;
-    
+                border-radius: 50px;
             }
         }
     }
@@ -273,11 +271,10 @@ const UnidadeContainer = styled.section`
 
         & > p {
             width: 80%;
-            font-family: var(--font--comfortaa);
-    
-            font-weight: 100;
-            line-height: 130%;
-            font-size: .9rem;
+            font-family: var(--font--avenir);
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.7!important;
 
             @media (max-width: 768px){
                 width: 100%;
@@ -293,8 +290,8 @@ const DiferenciaisContainer = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    
     max-width: 1280px;
+    padding: 0 5%;
     position: relative;
     left: 50%;
     top: 0;
@@ -306,7 +303,6 @@ const DiferenciaisContainer = styled.section`
         flex-direction: column-reverse;
         gap: 25px;
         margin-top: 35px;
-        padding: 0% 5%;
     }
 
     & > div:nth-child(1){
@@ -315,8 +311,6 @@ const DiferenciaisContainer = styled.section`
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
-        padding-left: 5%;
-
 
         @media (max-width: 768px){
             width: 100%;
@@ -339,9 +333,10 @@ const DiferenciaisContainer = styled.section`
 
         & > p {
             width: 80%;
-            font-family: var(--font--comfortaa);
-            font-size: .9rem;
-            font-weight: 100;
+            font-family: var(--font--avenir);
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.7!important;
             line-height: 130%;
 
             @media (max-width: 768px){
@@ -369,17 +364,21 @@ const DiferenciaisContainer = styled.section`
 
        & > img{
         width: 45%;
-        border-radius: 20px 0 20px 0; 
-        height: 350px;
+        border-radius: 100px 100px 0 100px; 
+        height: 300px;
         object-fit: cover;
         
 
         &:nth-child(2){
-            border-radius: 0 20px 0 20px;
+            border-radius: 100px 100px 100px 0px;
+        }
+
+        &:nth-child(3){
+            border-radius: 100px 0px 100px 100px!important;
         }
 
         &:nth-child(4){
-            border-radius: 20px 0px 20px 0px!important;
+            border-radius: 0px 100px 100px 100px!important;
         }
 
         @media (max-width: 768px){
@@ -405,7 +404,7 @@ const ContainerDuplo = styled.section`
     flex-direction: column;
     align-items: center;
     gap: 100px;
-    padding: 2.5% 0;
+    padding: 2.5% 5%;
     
     max-width: 1280px;
     position: relative;
@@ -419,7 +418,6 @@ const ContainerDuplo = styled.section`
         flex-direction: column;
         gap: 25px;
         margin-top: 50px;
-        padding: 5% 5%;
 
     }
 
@@ -429,10 +427,7 @@ const ContainerDuplo = styled.section`
         justify-content: center;
         width: 100%;
         height: 45%;
-        padding-left: 5%;
     
-
-        
         @media (max-width: 768px){
             width: 100%;
             flex-direction: column-reverse;
@@ -446,6 +441,7 @@ const ContainerDuplo = styled.section`
             align-items: flex-start;
             justify-content: center;
             flex-direction: column;
+            
     
 
             @media (max-width: 768px){
@@ -460,20 +456,20 @@ const ContainerDuplo = styled.section`
             font-weight: 100;
             margin-bottom: 15px;
                 
-                @media (max-width: 768px){
-                    font-size: 28px;
-                    margin-bottom: 10px;
-                    width: 100%;
-                    text-align: center;
-                }
+            @media (max-width: 768px){
+                font-size: 28px;
+                margin-bottom: 10px;
+                width: 100%;
+                text-align: center;
+            }
             }
 
             & > p {
             width: 80%;
-            font-family: var(--font--comfortaa);
-            font-weight: 100;
+            font-family: var(--font--avenir);
+            font-weight: 300;
             line-height: 130%;
-            font-size: .9rem;
+            font-size: 1.1rem;
 
                 @media (max-width: 768px){
         
@@ -486,8 +482,12 @@ const ContainerDuplo = styled.section`
 
         & > div:nth-child(2){
             width: 50%;
-            height: 400px;
+            height: 300px;
             
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
     
 
             @media (max-width: 768px){
@@ -499,7 +499,7 @@ const ContainerDuplo = styled.section`
 
             & > img {
                 width: 50%;
-                height: 80%;
+                height: 100%;
                 object-fit: cover;
 
                 @media (max-width: 768px){
@@ -509,16 +509,11 @@ const ContainerDuplo = styled.section`
             }
 
             & > img:nth-child(1){
-                position: relative;
-                left: 10px;
-                border-radius: 20px 0 20px 0;
+                border-radius:70px 70px 0px 70px;
             }
 
             & > img:nth-child(2){
-                position: relative;
-                top: 40px;
-                right: 20px;
-                border-radius: 0 20px 0 20px;
+                border-radius:70px 70px 70px 0px;
             }
         }
     }
@@ -529,11 +524,8 @@ const ContainerDuplo = styled.section`
         justify-content: center;
         gap: 50px;
         width: 100%;
-        height: auto;
-        
+        height: auto;   
     
-
-
         @media (max-width: 768px){
             flex-direction: column-reverse;
             height: auto;
@@ -542,7 +534,10 @@ const ContainerDuplo = styled.section`
         & > div:nth-child(1){
             width: 50%;
             height: 100%;
-    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
 
             @media (max-width: 768px){
                 width: 100%;
@@ -552,11 +547,9 @@ const ContainerDuplo = styled.section`
 
             & > img {
                 width: 50%;
-                height: 350px;
+                height: 300px;
                 object-fit: cover;
         
-
-
                 @media (max-width: 768px){
                     height: 100%;
                     width: 50%;
@@ -564,16 +557,11 @@ const ContainerDuplo = styled.section`
             }
 
             & > img:nth-child(1){
-                position: relative;
-                left: 10px;
-                border-radius: 20px 0 20px 0;
+                border-radius: 70px 70px 0px 70px;
             }
 
             & > img:nth-child(2){
-                position: relative;
-                top: 20px;
-                right: 10px;
-                border-radius: 0 20px 0 20px;
+                border-radius: 70px 70px 70px 0;
             }
         }
 
@@ -611,11 +599,10 @@ const ContainerDuplo = styled.section`
 
             & > p {
             width: 90%;
-            font-family: var(--font--comfortaa);
-            text-align: left;
-            font-weight: 100;
-            font-size: .9rem;
+            font-family: var(--font--avenir);
+            font-weight: 300;
             line-height: 130%;
+            font-size: 1.1rem;
 
                 @media (max-width: 768px){
 
@@ -951,7 +938,12 @@ const Sobre = () => {
 
             </PublicoContainer>
 
-            <Regras />
+            <Regras
+                image1="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c9f443a0-365f-4341-67c4-dc3b15d8d200/public"
+                image2="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/db3f6942-0de2-433d-1235-33bfa547e500/public"
+                image3="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9ca851c2-347a-4f8c-752e-b90080865800/public"
+                image4="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c57174c4-9b12-4842-e8ff-6cfb4867a200/public"
+            />
 
             <CTA>
                 <h1 data-aos="fade-up" data-aos-delay="200">Venha viver essa experiência com a gente!</h1>

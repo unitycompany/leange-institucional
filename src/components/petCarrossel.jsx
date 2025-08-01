@@ -31,7 +31,7 @@ const StyledTextPet = styled.section`
     height: 15vh;
     align-items: center;
     margin-top: 5vh;
-    padding: 0 2.5%;
+    padding: 0 5%;
 
     @media (max-width: 768px){
         flex-direction: column;
@@ -55,10 +55,6 @@ const StyledTextPet = styled.section`
             border-radius: 10px;
             backdrop-filter: blur(10px);
         }
-    }
-
-    & > h1 b{
-        font-weight: 500;
     }
 
 `;

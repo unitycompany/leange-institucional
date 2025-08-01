@@ -183,8 +183,8 @@ const StyledLink = styled(({ onClick, ...props }) => {
             ? variant === 'serra'
                 ? 'var(--color--green)'
                 : variant === 'mar'
-                ? 'var(--color--blue)'
-                : 'var(--color--black)'
+                    ? 'var(--color--blue)'
+                    : 'var(--color--black)'
             : 'transparent'};
     color: ${({ isActive }) => (isActive ? 'var(--color--white)' : 'var(--color--black)')};
 
@@ -204,10 +204,10 @@ const StyledLink = styled(({ onClick, ...props }) => {
 
     &:hover {
         color: var(--color--white);
-        background-color: ${({ variant }) => 
-            variant === 'serra' ? 'var(--color--green)' : 
-            variant === 'mar' ? 'var(--color--blue)' : 
-            'var(--color--black)'};
+        background-color: ${({ variant }) =>
+        variant === 'serra' ? 'var(--color--green)' :
+            variant === 'mar' ? 'var(--color--blue)' :
+                'var(--color--black)'};
     }
 
     &:hover::before {
@@ -390,7 +390,7 @@ const NavegationBar = () => {
                 console.warn('Redirecionamento para WhatsApp detectado:', link.href);
             }
         };
-    
+
         document.addEventListener('click', handleGlobalClick);
         return () => document.removeEventListener('click', handleGlobalClick);
     }, []);
@@ -401,7 +401,7 @@ const NavegationBar = () => {
             console.warn('Comportamento suspeito detectado na navegação para:', location.pathname);
         }
     }, [location.pathname]);
-    
+
 
     const toggleSidebar = () => {
         setIsSidebarOpen((prev) => !prev);
@@ -420,7 +420,7 @@ const NavegationBar = () => {
             setIsScrolled(false);
         }, 1000);
     };
-    
+
 
     const navigate = useNavigate();
     const [selectedValue, setSelectedValue] = useState("");
@@ -428,18 +428,18 @@ const NavegationBar = () => {
     const handleNavigation = (event) => {
         const value = event.target.value;
         if (value) {
-        setSelectedValue(value); // Atualiza o estado com a opção selecionada
-        navigate(value);
+            setSelectedValue(value); // Atualiza o estado com a opção selecionada
+            navigate(value);
         }
     };
 
     useEffect(() => {
         // Verifica se a rota atual não é válida
-        if (!validRoutes.includes(location.pathname)) {
+        if (!validRoutes.includes(location.pathname) && !location.pathname.startsWith('/pacote/')) {
             navigate("/", { replace: false }); // Redireciona para a página inicial sem alterar a URL
         }
     }, [location.pathname, navigate]);
-    
+
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -450,7 +450,7 @@ const NavegationBar = () => {
     }, []);
 
     useEffect(() => {
-        if (location.pathname !== "/") { 
+        if (location.pathname !== "/") {
             setIsLoading(true);
 
             const loadingTimer = setTimeout(() => {
@@ -483,7 +483,7 @@ const NavegationBar = () => {
             closeSidebar(); // Fecha a sidebar ao mudar de rota
         }
     }, [location.pathname]);
-    
+
 
     return (
         <>

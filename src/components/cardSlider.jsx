@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -22,19 +22,10 @@ const iconMap = {
 
 const waterWave2 = keyframes`
   0% {
-    border-radius: 0 20px 20px 0;
-  }
-  25% {
-    border-radius: 20px 0 20px 20px;
-  }
-  50% {
-    border-radius: 20px 20px 0 20px;
-  }
-  75% {
-    border-radius: 20px 20px 20px 0;
+    border-radius: 15px 20px 20px 15px;
   }
   100% {
-    border-radius: 0 20px 20px 0;
+    border-radius: 20px 15px 15px 20px;
   }
 `;
 
@@ -43,54 +34,56 @@ const CardContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   height: auto;
-  padding: 10px;
-  background: var(--color--white);
+  padding: 4px;
+  background: #00000005;
+  border: 1px dashed #00000020;
   border-radius: 12px;
   overflow: hidden;
   width: 100%;
   animation: ${waterWave2} 5s ease-in-out infinite;
-  background-color: rgba(0, 0, 0, 0.1);
   
 
   @media (max-width: 768px) {
-    border: none;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.1);
+    padding: 4px;
+    border-radius: 15px;
     animation: none;
-    border-radius: 15px 15px 5px 5px;
   }
-`;
-
-const SwiperSlideSection = styled('SwiperSlide')`
-   width: 33%; /* Cada card terá 30% de largura */
-  display: flex;
-  justify-content: center; /* Centraliza o conteúdo */
-  box-sizing: border-box;
-  padding: 0 10px; /* Adiciona espaçamento horizontal entre os cards */
-
-  @media (max-width: 768px) {
-    width: 100%; /* No mobile, cada card ocupa 100% da largura */
-    padding: 0; /* Remove o espaçamento horizontal */
-  }
-`
-
-const SwiperContainer = styled.div`
-  display: flex;
-  justify-content: space-between; /* Garante espaçamento uniforme entre os cards */
-  flex-wrap: wrap; /* Permite quebra de linha em telas menores */
-  width: 100%; /* O container ocupa 100% da largura */
-  box-sizing: border-box;
 `;
 
 const CardImage = styled.img`
   width: 100%;
-  height: 40vh !important;
+  height: 40vh!important;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0; /* Placeholder background */
+  transition: opacity 0.3s ease-in-out;
 
   @media (max-width: 768px) {
     border: 2px solid var(--color--black);
     height: 320px;
+  }
+
+  /* Loading state */
+  &.loading {
+    opacity: 0.3;
+    background-image: linear-gradient(
+      90deg,
+      #f0f0f0 0%,
+      #e0e0e0 50%,
+      #f0f0f0 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
   }
 `;
 
@@ -104,9 +97,15 @@ const CardContent = styled.div`
 
 const Title = styled.h3`
   font-size: 22px;
-  font-weight: bold;
+  color: #000;
+  line-height: 100%;
+  font-weight: 500;
   font-family: var(--font--comfortaa);
   margin: 0;
+
+  &:hover {
+    animation-duration: 1.5s;
+  }
 `;
 
 const DateRange = styled.p`
@@ -128,15 +127,11 @@ const Features = styled.div`
     display: flex;
     align-items: center;
     gap: 5px;
-    background: var(--color--white);
+    background: #00000008;
     font-family: var(--font--comfortaa);
     padding: 5px 8px;
     border-radius: 8px;
-    font-size: 10px;
-
-    @media (max-width: 768px) {
-      background-color: var(--color--white);
-    }
+    font-size: 9px;
   }
 `;
 
@@ -151,7 +146,7 @@ const PriceSection = styled.div`
 const Price = styled.p`
   font-size: 18px;
   font-family: var(--font--comfortaa);
-  font-weight: bold;
+  font-weight: 500;
   margin: 0;
   color: #333;
 
@@ -161,54 +156,111 @@ const Price = styled.p`
 `;
 
 const EventCardCarousel = ({ events = [] }) => {
-    return (
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        autoplay={{ delay: 7000, disableOnInteraction: false, pauseOnMouseEnter: true }}
-        spaceBetween={20}
-        navigation
-        pagination={false}
-        loop={true}
-        breakpoints={{
-          1024: { slidesPerView: 3, spaceBetween: 20 }, // Exibe 3 cards em telas maiores
-          768: { slidesPerView: 2, spaceBetween: 15 }, // Exibe 2 cards em tablets
-          0: { slidesPerView: 1, spaceBetween: 0 }, // Exibe 1 card no mobile
-        }}
-      >
-        {events.map((event, index) => (
-          <SwiperSlide key={index}>
-            <CardContainer data-aos="fade-up" data-aos-delay="0">
-              <CardImage src={event.image} alt={event.title} data-aos="fade-up" data-aos-delay="100" />
-              <CardContent>
-                <Title data-aos="fade-up" data-aos-delay="200">{event.title}</Title>
-                <DateRange data-aos="fade-down" data-aos-delay="250">{event.dateRange}</DateRange>
-                <Features data-aos="fade-up" data-aos-delay="300">
-                  {event.features.map((feature, i) => (
-                    <span key={i} data-aos="fade-up" data-aos-delay="400">
-                      {iconMap[feature.icon] || feature.icon} {feature.text}
-                    </span>
-                  ))}
-                </Features>
-                <PriceSection>
-                  <Price data-aos="fade-in" data-aos-delay="500">A partir de: <span>{event.payment}</span>R${event.price}</Price>
-                </PriceSection>
-                <IconButton
-                  idBtn="clickwpp"
-                  text="Quero fazer minha reserva agora"
-                  text2="Clique e reserve!"
-                  borderColor="var(--color--black)"
-                  textColor="var(--color--black)"
-                  hoverColor="var(--color--black)"
-                  hoverTextColor="var(--color--white)"
-                  onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
-                />
-              </CardContent>
-            </CardContainer>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    );
-  };
-  
+  const [loadedImages, setLoadedImages] = useState(new Set([0, 1, 2])); // Carrega as 3 primeiras por padrão
+  const swiperRef = useRef(null);
+
+  const handleSlideChange = useCallback((swiper) => {
+    const currentIndex = swiper.realIndex;
+    const nextIndex = (currentIndex + 1) % events.length;
+    const prevIndex = currentIndex === 0 ? events.length - 1 : currentIndex - 1;
+
+    // Carrega a imagem atual e as adjacentes silenciosamente
+    setLoadedImages(prev => new Set([...prev, currentIndex, nextIndex, prevIndex]));
+  }, [events.length]);
+
+  // Preload das imagens de forma assíncrona
+  const preloadImage = useCallback((src, index) => {
+    const img = new Image();
+    img.onload = () => {
+      setLoadedImages(prev => new Set([...prev, index]));
+    };
+    img.src = src;
+  }, []);
+
+  return (
+    <Swiper
+      ref={swiperRef}
+      modules={[Navigation, Pagination, Autoplay]}
+      autoplay={{ delay: 7000, disableOnInteraction: false, pauseOnMouseEnter: true }}
+      spaceBetween={20}
+      navigation
+      pagination={false}
+      loop={true}
+      onSlideChange={handleSlideChange}
+      onSwiper={(swiper) => {
+        swiperRef.current = swiper;
+        // Preload das primeiras imagens de forma assíncrona
+        setTimeout(() => {
+          events.forEach((event, index) => {
+            if (index < 3) { // Carrega as 3 primeiras imediatamente
+              preloadImage(event.image, index);
+            }
+          });
+        }, 100);
+      }}
+      breakpoints={{
+        1024: { slidesPerView: 3, spaceBetween: 20 }, // Exibe 3 cards em telas maiores
+        768: { slidesPerView: 2, spaceBetween: 15 }, // Exibe 2 cards em tablets
+        0: { slidesPerView: 1, spaceBetween: 0 }, // Exibe 1 card no mobile
+      }}
+    >
+      {events.map((event, index) => (
+        <SwiperSlide key={index}>
+          <CardContainer data-aos="fade-up" data-aos-delay="0">
+            <CardImage
+              src={event.image}
+              alt={event.title}
+              className={loadedImages.has(index) ? '' : 'loading'}
+              data-aos="fade-up"
+              data-aos-delay="100"
+              onLoad={() => preloadImage(event.image, index)}
+            />
+            {/* Preload silencioso das imagens adjacentes */}
+            {!loadedImages.has(index) && (
+              <img
+                src={event.image}
+                alt={event.title}
+                style={{
+                  position: 'absolute',
+                  opacity: 0,
+                  width: '1px',
+                  height: '1px',
+                  pointerEvents: 'none'
+                }}
+                loading="lazy"
+                onLoad={() => preloadImage(event.image, index)}
+              />
+            )}
+            <CardContent>
+              <Title data-aos="fade-up" data-aos-delay="200">{event.title}</Title>
+              <DateRange data-aos="fade-down" data-aos-delay="250">{event.dateRange}</DateRange>
+              <Features data-aos="fade-up" data-aos-delay="300">
+                {event.features.map((feature, i) => (
+                  <span key={i} data-aos="fade-up" data-aos-delay="400">
+                    {iconMap[feature.icon] || feature.icon} {feature.text}
+                  </span>
+                ))}
+              </Features>
+              <PriceSection>
+                <Price data-aos="fade-in" data-aos-delay="500">A partir de: <span>{event.payment}</span>R${event.price}</Price>
+              </PriceSection>
+              <IconButton
+                idBtn="clickwpp"
+                text="Saber mais sobre o pacote"
+                text2="Clique e veja!"
+                borderColor="var(--color--black)"
+                textColor="var(--color--black)"
+                hoverColor="var(--color--black)"
+                hoverTextColor="var(--color--white)"
+                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+              />
+            </CardContent>
+          </CardContainer>
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
+};
+
 
 export default EventCardCarousel;

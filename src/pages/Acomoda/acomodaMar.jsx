@@ -12,6 +12,7 @@ import SchemaMarkup from "../../components/SchemaMarkup";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Helmet } from "react-helmet";
+import CardSuite from "../../components/cards/cardSuite";
 
 const TituloAcomoda = styled.div`
     width: 100%;
@@ -21,15 +22,16 @@ const TituloAcomoda = styled.div`
     justify-content: center;
     flex-direction: column;
     line-height: 100%;
-    padding: 22vh 0 10vh 0;
+    margin-top: 2.5%;
     font-size: 1.7rem;
     font-family: var(--font--comfortaa);
     gap: 5px;
     font-weight: 200;
+    margin-bottom: -60px;
 
     @media (max-width: 768px){
         height: 15vh;
-        padding: 20vh 0 6vh 0 ;
+        padding: 30% 0 20% 0;
     }
 
     & > b{
@@ -37,6 +39,20 @@ const TituloAcomoda = styled.div`
         font-weight: 400;
     }
 
+`
+
+const Acomodacoes = styled.div`
+    width: 100%;
+    max-width: 1280px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    padding: 2.5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
 `
 
 const SuiteSup1Images = [
@@ -312,22 +328,202 @@ const AcomodaMar = () => {
         <>
 
             {/* <WhatsAppButton /> */}
+            <Acomodacoes>
 
-            <Helmet>
-                <title>Acomoda Mar - Pousada Le Ange</title>
-            </Helmet>
-            <SchemaMarkup pageType="acomodaMar" />
+                <Helmet>
+                    <title>Acomoda Mar - Pousada Le Ange</title>
+                </Helmet>
+                <SchemaMarkup pageType="acomodaMar" />
 
-            <TituloAcomoda>Acomodações da<b>Pousada Le Ange Mar</b></TituloAcomoda>
+                <TituloAcomoda>Acomodações da<b>Pousada Le Ange Mar</b></TituloAcomoda>
 
-            <Quarto id="suite1" ref={suiteRefs.suite1} images={SuiteSup1Images} suites={SuiteSup1Text} reverse={true} background="#7AC4F350" />
+                {/* <Quarto id="suite1" ref={suiteRefs.suite1} images={SuiteSup1Images} suites={SuiteSup1Text} reverse={true} background="#7AC4F350" />
             <Quarto id="suite2" ref={suiteRefs.suite2} images={SuiteStan2Images} suites={SuiteStan2Text} reverse={false} background="#7AC4F350" />
             <Quarto id="suite3" ref={suiteRefs.suite3} images={SuiteSup3Images} suites={SuiteSup3Text} reverse={true} background="#7AC4F350" />
             <Quarto id="suite4" ref={suiteRefs.suite4} images={SuiteSup4Images} suites={SuiteSup4Text} reverse={false} background="#7AC4F350" />
             <Quarto id="suite5" ref={suiteRefs.suite5} images={SuiteSup5Images} suites={SuiteSup5Text} reverse={true} background="#7AC4F350" />
             <Quarto id="suite6" ref={suiteRefs.suite6} images={SuiteSup6Images} suites={SuiteSup6Text} reverse={false} background="#7AC4F350" />
             <Quarto id="suite7" ref={suiteRefs.suite7} images={SuiteStan7Images} suites={SuiteStan7Text} reverse={true} background="#7AC4F350" />
-            <Quarto id="suite8" ref={suiteRefs.suite8} images={SuiteMas8Images} suites={SuiteMas8Text} reverse={false} background="#7AC4F350" />
+            <Quarto id="suite8" ref={suiteRefs.suite8} images={SuiteMas8Images} suites={SuiteMas8Text} reverse={false} background="#7AC4F350" /> */}
+
+                <CardSuite
+                    ref={suiteRefs.suite1}
+                    nome="Suíte Superior 1"
+                    descricao="A suíte oferece 50m² de conforto e sofisticação. Com cama king-size, a suíte garante uma estadia relaxante com ar-condicionado, lareira e frigobar. Desfrute de momentos de bem-estar na banheira relaxante ou no chuveiro."
+                    features={[
+                        { icon: <FaRulerCombined />, text: "50m²" },
+                        { icon: <FaBath />, text: 'Banheira' },
+                        { icon: <FaBed />, text: 'Cama King-size' },
+                        { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
+                        { icon: <MdDeck />, text: 'Varanda privativa' },
+                    ]}
+                    images={[
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/8e7cbb0d-87ce-41a8-1622-1ba05d210d00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/99c48a33-a17b-4f44-3869-1fa871251600/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/940c00ac-29d9-4e3a-01f9-3ec09d8cb500/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9c108184-f81d-4156-4515-836c61eda400/public',
+                    ]}
+                    CTA="Solicitar orçamento"
+                    color="#7AC4F3"
+                    direction={true}
+                />
+
+                <CardSuite
+                    ref={suiteRefs.suite2}
+                    nome="Suíte Standard 2"
+                    direction={false}
+                    descricao="Esta suíte de 45m² é ideal para quem busca conforto e tranquilidade. Com cama king-size, ar-condicionado e frigobar, você desfrutará de cada momento ao lado do seu pet. Recarregue as energias na banheira relaxante, aproveite a vista deslumbrante para o mar e sinta a brisa suave da maresia, tornando sua estadia ainda mais especial."
+                    features={[
+                        { icon: <FaRulerCombined />, text: "45m²" },
+                        { icon: <FaBath />, text: 'Banheira' },
+                        { icon: <FaBed />, text: 'Cama King-size' },
+                        { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
+                        { icon: <MdDeck />, text: 'Varanda privativa' },
+                    ]}
+                    images={[
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7af56f99-34ec-4fd1-a833-6acbb3df8d00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d8860874-7032-48bd-ae02-3710dec15b00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/326c638b-bac3-4a97-b245-1ba039d18600/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2e367f8b-45b1-4982-48dc-6fd64ebd4f00/public'
+                    ]}
+                    CTA="Solicitar orçamento"
+                    color="#7AC4F3"
+                />
+
+                <CardSuite
+                    ref={suiteRefs.suite3}
+                    nome="Suíte Superior 3"
+                    direction={true}
+                    descricao="Com 45m², esta suíte conta com uma cama king-size, ar-condicionado e frigobar, oferecendo o necessário para uma estadia repleta de tranquilidade. A vista incrível para o mar, junto à suave maresia, proporciona momentos de relaxamento para aproveitar ao lado do seu pet."
+                    features={[
+                        { icon: <FaRulerCombined />, text: "45m²" },
+                        { icon: <FaBath />, text: 'Banheira' },
+                        { icon: <FaBed />, text: 'Cama King-size' },
+                        { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
+                        { icon: <MdDeck />, text: 'Varanda privativa' },
+                    ]}
+                    images={[
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5566610c-8acd-4656-f60e-b2299bfc7600/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/28b1a2e1-4f75-4113-322c-a155b113cf00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/fca495db-21b2-4da1-4a70-5d6f0b287500/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7e54287b-881d-4a3b-4f9b-e9c0c3ccee00/public'
+                    ]}
+                    CTA="Solicitar orçamento"
+                    color="#7AC4F3"
+                />
+
+                <CardSuite
+                    ref={suiteRefs.suite4}
+                    nome="Suíte Superior 4"
+                    direction={false}
+                    descricao="Desfrute de 45m² de conforto e tranquilidade nesta suíte aconchegante. Equipada com cama king-size, ar-condicionado e frigobar, é o ambiente perfeito para relaxar. Conta, ainda, com uma vista espetacular para o mar, combinada com a brisa fresca da maresia."
+                    features={[
+                        { icon: <FaRulerCombined />, text: "45m²" },
+                        { icon: <FaBath />, text: 'Banheira' },
+                        { icon: <FaBed />, text: 'Cama King-size' },
+                        { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
+                        { icon: <MdDeck />, text: 'Varanda privativa' },
+                    ]}
+                    images={[
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/436ddd6d-93c4-4a6a-b82e-93b7e3d45400/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e3cd11b4-7fc6-480f-f741-27f6ce5dbb00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e4475653-528a-4c32-e09b-c15ff87d9700/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e92f9350-eb38-4876-8cc7-717a24e68700/public'
+                    ]}
+                    CTA="Solicitar orçamento"
+                    color="#7AC4F3"
+                />
+
+                <CardSuite
+                    ref={suiteRefs.suite5}
+                    nome="Suíte Superior 5"
+                    direction={true}
+                    descricao="Uma suíte de 45m² que une conforto e tranquilidade. Com cama king-size, ar-condicionado e frigobar, é ideal para vivenciar aqueles momentos de preguiça ao lado do seu pet. Relaxe ao som das ondas do mar e aproveite a banheira relaxante."
+                    features={[
+                        { icon: <FaRulerCombined />, text: "45m²" },
+                        { icon: <FaBath />, text: 'Banheira' },
+                        { icon: <FaBed />, text: 'Cama King-size' },
+                        { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
+                        { icon: <MdDeck />, text: 'Varanda privativa' },
+                    ]}
+                    images={[
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e0715e71-0836-4817-640d-a92472a02600/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d4f8e584-d0d2-43fd-82b3-f9d6e955eb00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/99082d2e-a5e6-4b9b-d075-5c7d4006bb00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bf23737d-697e-44e9-fffe-88eaa6e9c700/public'
+                    ]}
+                    CTA="Solicitar orçamento"
+                    color="#7AC4F3"
+                />
+
+                <CardSuite
+                    ref={suiteRefs.suite6}
+                    nome="Suíte Standard 6"
+                    direction={false}
+                    descricao="Com 45m² de puro conforto, esta suíte oferece cama king-size, ar-condicionado e frigobar, proporcionando um ambiente mais do que acolhedor, tranquilo. Sem contar que a vista encantadora para o mar e a banheira de imersão tornam a suíte ainda mais relaxante."
+                    features={[
+                        { icon: <FaRulerCombined />, text: "45m²" },
+                        { icon: <FaBath />, text: 'Banheira' },
+                        { icon: <FaBed />, text: 'Cama King-size' },
+                        { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
+                        { icon: <MdDeck />, text: 'Varanda privativa' },
+                    ]}
+                    images={[
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/198f320a-80d4-420c-e1b9-8ee09dbe6600/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7b0abc67-39e4-40fd-6b08-a87c6268ac00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/02fd8248-8928-43ce-2478-eea5ae75fe00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/83dc0644-ac6f-4265-b41e-ed796216a100/public'
+                    ]}
+                    CTA="Solicitar orçamento"
+                    color="#7AC4F3"
+                />
+
+                <CardSuite
+                    ref={suiteRefs.suite7}
+                    nome="Suíte Master 7"
+                    direction={true}
+                    descricao="Esta suíte de 45m² oferece cama king-size, ar-condicionado e frigobar, criando um espaço aconchegante e tranquilo. Aproveite a vista cativante para o mar e relaxe na banheira de imersão, transformando sua estadia em um verdadeiro paraíso."
+                    features={[
+                        { icon: <FaRulerCombined />, text: "45m²" },
+                        { icon: <FaBath />, text: 'Banheira' },
+                        { icon: <FaBed />, text: 'Cama King-size' },
+                        { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
+                        { icon: <MdDeck />, text: 'Varanda privativa' },
+                    ]}
+                    images={[
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4e13e598-d3ef-4159-91d3-61ed63c45500/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/021be2fd-0a73-4302-221f-3135b0bf1400/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4e239870-3c10-46b1-c5c4-11e4abd11e00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/bf0a0236-8121-4a59-0a23-ca33cee34800/public'
+                    ]}
+                    CTA="Solicitar orçamento"
+                    color="#7AC4F3"
+                />
+
+                <CardSuite
+                    ref={suiteRefs.suite8}
+                    nome="Suíte Master 8"
+                    direction={false}
+                    descricao="A suíte de 45m² oferece o melhor em conforto, com cama king-size, ar-condicionado e frigobar. A vista deslumbrante para o mar e a banheira de imersão garantem momentos de total descanso e relaxamento."
+                    features={[
+                        { icon: <FaRulerCombined />, text: "45m²" },
+                        { icon: <FaBath />, text: 'Banheira' },
+                        { icon: <FaBed />, text: 'Cama King-size' },
+                        { icon: <FaCloudSunRain />, text: 'Ar-condicionado' },
+                        { icon: <MdDeck />, text: 'Varanda privativa' },
+                    ]}
+                    images={[
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b686f433-14b2-4059-3dbb-0e7d58c2b400/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9c5355e8-80c2-46ec-196e-9651f94fe100/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/89b9b596-cd77-4d38-c929-da4081aabd00/public',
+                        'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/aa97b6fb-597d-45c8-46c4-d267d01db400/public'
+                    ]}
+                    CTA="Solicitar orçamento"
+                    color="#7AC4F3"
+                />
+
+            </Acomodacoes>
+
 
             <Footer />
         </>

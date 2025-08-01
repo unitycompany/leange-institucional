@@ -69,10 +69,15 @@ const StyledImage = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px 0 20px 0;
+    border-radius: 20px;
+    transition: all .2s ease;
+
+    &:hover {
+        filter: contrast(110%);
+    }
 
     @media (max-width: 768px){
-        border-radius: 0 15px 0 20px;
+        border-radius: 15px;
     }
 `;
 
@@ -83,11 +88,11 @@ const SlideContainer = styled.div`
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  border-radius: 0 20px 20px 0;
   animation: ${waterWave} 5s ease-in-out infinite;
   background-image: ${({ backgroundImage }) => `url(${backgroundImage})`};
   background-size: cover;
   background-position: center;
+  border-radius: 20px;
 `;
 
 const BorderOverlay = styled.div`
@@ -102,6 +107,7 @@ const BorderOverlay = styled.div`
     -webkit-mask-image: linear-gradient(#fff, #fff);
     mask-image: linear-gradient(#fff, #fff);
     pointer-events: none;
+    border-radius: 20px;
 `;
 
 const SlideContent = styled.div`

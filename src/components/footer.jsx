@@ -118,6 +118,8 @@ const StyledTitles = styled.div`
         color: var(--color--white);
         font-family: var(--font--comfortaa);
         font-size: .9rem;
+        font-weight: 200;
+        opacity: .7;
 
         @media (max-width: 768px){
             width: 90%;
@@ -160,6 +162,10 @@ const StyledTitles = styled.div`
 
     & > div > div > a {
         color: var(--color--white);
+    }
+
+    & h4 {
+        font-weight: 300;
     }
 `;
 
@@ -272,15 +278,16 @@ const StyledLinks = styled.section`
         justify-content: flex-start;
         font-size: .9rem;
         font-weight: 200;
+        padding: 2px;
         gap: 2px;
-        transition: all .2s ease!important;
+        transition: all .1s ease!important;
         border-radius: 5px;
         width: 80%;
     }
 
     & > div a:hover{
         background-color: var(--color--white);
-        transform: translateX(20px)!important;
+        transform: translateX(5px)!important;
         color: var(--color--black);
         width: 80%;
     }
@@ -293,10 +300,10 @@ const StyledLinks = styled.section`
 
 const StyledLocation = styled.section`
     width: 100%;
-    height: 30vh;
+    height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 20px;
 
     @media (max-width: 768px){
@@ -538,8 +545,8 @@ const Footer = () => {
                     <div>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235239.22077211382!2d-43.355636!3d-22.461517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99106a0d4d634d%3A0x5a069366075bf207!2sPousada%20Le%20Ange!5e0!3m2!1spt-BR!2sbr!4v1697101366468!5m2!1spt-BR!2sbr"
-                            width="300"
-                            height="150"
+                            width="350"
+                            height="200"
                             style={{ border: 0, borderRadius: '15px 0px 15px 0px' }}
                             allowFullScreen=""
                             loading="lazy"
@@ -551,8 +558,8 @@ const Footer = () => {
                     <div>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14718.952062952678!2d-41.958707!3d-22.737977!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x97ab01cac79615%3A0x6b404b4741597da1!2sLeAnge%20Mar!5e0!3m2!1spt-BR!2sus!4v1728577984633!5m2!1spt-BR!2sus"
-                            width="300"
-                            height="150"
+                            width="350"
+                            height="200"
                             style={{ border: 0, borderRadius: '0px 15px 0px 15px' }}
                             allowFullScreen=""
                             loading="lazy"
@@ -567,7 +574,7 @@ const Footer = () => {
     
                 <StyledPolitica>
                     <p>Todos os direitos reservados | <RiCopyrightLine /> 2024</p>
-                    <a href='https://drive.google.com/file/d/1hcfO5CfNmczgpg2h943ytwg9j0SR9Fas/view' target='_blank'>Termos de condições</a>
+                    <a href='https://pousadaleange.com.br/politica-de-privacidade'>Termos de condições</a>
                     <p>Desenvolvido por <b><a href='https://alephsramos.com.br' target='_blank'>Aleph</a></b></p>
                 </StyledPolitica>
 

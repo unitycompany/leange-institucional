@@ -6,7 +6,7 @@ import { db } from "../../../firebaseConfig"
 import { FaRegCheckCircle } from "react-icons/fa";
 import { IoBedOutline } from "react-icons/io5";
 import { IoStarSharp } from "react-icons/io5";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const shine = keyframes`
   0% { left: -200px; }
@@ -273,72 +273,84 @@ const CardButtons = styled.div`
 `
 
 const CardPacote = ({ pacote }) => {
-    const Navigate = useNavigate ();
+  const navigate = useNavigate();
 
-    return (
-      <CardContainer>
-        {pacote.alert?.[0]?.active && (
-          <CardAlert>
-            <IconContainer>
-              <IoStarSharp />
-            </IconContainer>
-            <CircularText viewBox="0 0 100 100">
-              <path
-                id="circlePath"
-                d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
-                fill="none"
-              />
-              <text fill="black" fontSize="14px" fontWeight="400">
-                <textPath href="#circlePath" startOffset="50%" textAnchor="middle">
-                  Mais Reservado • Mais Reservado •
-                </textPath>
-              </text>
-            </CircularText>
-          </CardAlert>
-        )}
-        <CardLeft>
-          <img src={pacote.imagem} alt="Imagem do pacote" />
-        </CardLeft>
-        <CardRight>
-          <h1>{pacote.title}</h1>
-          <p>{pacote.description}</p>
-  
-          <CardTopics>
-            {pacote.topics?.map((topic, index) => (
-              <div key={index}>
-                <FaRegCheckCircle />
-                <span>{topic}</span>
-              </div>
-            ))}
-          </CardTopics>
-
-          <CardSuites>
-                         {Array.isArray(pacote.suites) && pacote.suites.map((suite, index) => (
-                             <div key={index}>
-                                 <h2>{suite.name}</h2>
-                                 <p>a partir de</p>
-                                 <span>
-                                     {suite.parcel}x <b>R${typeof suite.price === 'number' ? suite.price.toFixed(2) : '0.00'}</b>
-                                 </span>
-                             </div>
-                         ))}
-                     </CardSuites>
-  
-          <CardButtons>
-            <button
-                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
-            >Reservar agora!</button>
-            <button
-                onClick={() => Navigate('/acomodaSerra')}
-            >
-              <span>Acomodações</span>
-              <IoBedOutline />
-            </button>
-          </CardButtons>
-        </CardRight>
-      </CardContainer>
-    );
+  // Função para criar slug a partir do título do pacote
+  const createSlug = (title) => {
+    if (!title) return 'pacote';
+    return title
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+      .replace(/[^a-z0-9\s-]/g, '') // Remove caracteres especiais
+      .replace(/\s+/g, '-') // Substitui espaços por hífens
+      .replace(/-+/g, '-') // Remove hífens duplicados
+      .trim();
   };
-  
-  export default CardPacote;
-  
+
+  return (
+    <CardContainer>
+      {pacote.alert?.[0]?.active && (
+        <CardAlert>
+          <IconContainer>
+            <IoStarSharp />
+          </IconContainer>
+          <CircularText viewBox="0 0 100 100">
+            <path
+              id="circlePath"
+              d="M 50,50 m -40,0 a 40,40 0 1,1 80,0 a 40,40 0 1,1 -80,0"
+              fill="none"
+            />
+            <text fill="black" fontSize="14px" fontWeight="400">
+              <textPath href="#circlePath" startOffset="50%" textAnchor="middle">
+                Mais Reservado • Mais Reservado •
+              </textPath>
+            </text>
+          </CircularText>
+        </CardAlert>
+      )}
+      <CardLeft>
+        <img src={pacote.imagem} alt="Imagem do pacote" />
+      </CardLeft>
+      <CardRight>
+        <h1>{pacote.title}</h1>
+        <p>{pacote.description}</p>
+
+        <CardTopics>
+          {pacote.topics?.map((topic, index) => (
+            <div key={index}>
+              <FaRegCheckCircle />
+              <span>{topic}</span>
+            </div>
+          ))}
+        </CardTopics>
+
+        <CardSuites>
+          {Array.isArray(pacote.suites) && pacote.suites.map((suite, index) => (
+            <div key={index}>
+              <h2>{suite.name}</h2>
+              <p>a partir de</p>
+              <span>
+                {suite.parcel}x <b>R${typeof suite.price === 'number' ? suite.price.toFixed(2) : '0.00'}</b>
+              </span>
+            </div>
+          ))}
+        </CardSuites>
+
+        <CardButtons>
+          <button
+            onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+          >Conhecer pacote</button>
+          <button
+            onClick={() => navigate('/acomodaSerra')}
+          >
+            <span>Acomodações</span>
+            <IoBedOutline />
+          </button>
+        </CardButtons>
+      </CardRight>
+    </CardContainer>
+  );
+};
+
+export default CardPacote;

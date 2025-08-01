@@ -25,27 +25,19 @@ import EventAlert from '../../components/alertEvent';
 import Modal from "../../components/modal";
 
 const imagesSerra = [
-    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a4f0a292-2de1-4a0a-9c78-b40450f19a00/public", alt: 'Mulher na rede', loading: "lazy" },
+    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ac618b7-88c7-4558-45ee-090bab5dde00/public", alt: 'Mulher na rede', loading: "lazy" },
 
-    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/74bff9be-8742-4468-e032-4cf79abe5300/public", alt: 'Foto da pousada le ange vista de cima', loading: "lazy" },
+    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7f0dca3b-3600-42e8-d74a-facfe9501600/public", alt: 'Foto da pousada le ange vista de cima', loading: "lazy" },
 
-    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0f8625da-9e5c-4a5a-e289-7351383ead00/public", alt: '2 cachorros na piscina', loading: "lazy" },
+    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4c98cf1a-dc44-4da1-36f5-dfd9291af000/public", alt: '2 cachorros na piscina', loading: "lazy" },
 
-    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/f4a1515f-dd60-47ad-f799-1a1813af9300/public", alt: 'Foto da pousada vista de baixo', loading: "lazy" },
-
-    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7c086b71-3c6b-442b-584c-dcdabe1be700/public", alt: 'Foto da sala de estar da pousada le ange serra', loading: "lazy" },
-
-    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a310fb24-c12e-431f-e5d1-6a12b8ff7500/public", alt: '2 cachorros na cama no meio do quintal', loading: "lazy" }
+    { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ef9c3de-3e6c-496d-3ac5-67d8878a5300/public", alt: 'Foto da sala de estar da pousada le ange serra', loading: "lazy" },
 ];
 
 const imagesMar = [
     { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2edd1026-cdea-4ac6-f501-713bba86d600/public', alt: 'Foto da pousada le ange mar', loading: "lazy" },
 
     { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c15257b6-956b-4f1d-ee81-9870ce695d00/public', alt: '2 pessoas na rede na pousada le ange mar', loading: "lazy" },
-
-    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ff1e37f5-c2ef-407f-b2fe-e3af31bc2900/public', alt: 'Foto de churrasco', loading: "lazy" },
-
-    { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0d4896d4-5675-4739-7cb3-30fc1c6dec00/public', alt: 'Cachorro olhando para a câmera', loading: "lazy" },
 
     { src: 'https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/09da9d76-57b8-4d44-02b2-3c4c2380c800/public', alt: 'Pousada le ange mar vista de cima', loading: "lazy" },
 
@@ -89,7 +81,6 @@ const imagesCarrossel02 = [
 const StyledContainerPousadas = styled.section`
     width: 100%;
     height: auto;
-    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -189,7 +180,7 @@ const acomodaHome = [
         id: "Serra#suite1",
         title: "Suíte Superior 1",
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c21ef88c-f22b-497e-1e70-5c5b4c4cf500/public",
+        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/27e13be9-163c-4f0b-232f-9f86d4a21000/public",
         features: [
             { icon: <FaRulerCombined />, text: "52m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
@@ -202,9 +193,9 @@ const acomodaHome = [
 
     {
         id: "Serra#suite2",
-        title: "Suíte Standard 2",
+        title: "Suíte Superior 2",
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/23d18593-f941-4c65-0349-6b23e6ea2800/public",
+        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2c18e250-d4c0-431b-b461-29193fd4c800/public",
         features: [
             { icon: <FaRulerCombined />, text: "52m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
@@ -219,7 +210,7 @@ const acomodaHome = [
         id: "Serra#suite6",
         title: "Suíte Master 6",
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/48a11406-659c-4d98-f2d8-6fc518ef6600/public",
+        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ee7567a2-8f90-4b90-031a-ee9a25aff900/public",
         features: [
             { icon: <FaRulerCombined />, text: "93m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
@@ -234,7 +225,7 @@ const acomodaHome = [
         id: "Mar#suite6",
         title: "Suíte Standard 6",
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
-        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4d6afdaf-1cfe-4860-8099-818abedfdd00/public",
+        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d32c205b-b6e7-4144-8b53-1a11adea4200/public",
         features: [
             { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
@@ -249,7 +240,7 @@ const acomodaHome = [
         id: "Mar#suite2",
         title: "Suíte Standard 2",
         subtitle: "Pousada Le Ange Mar | Búzios - RJ",
-        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/2c65f24d-c113-4ea7-def4-783519605e00/public",
+        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b486213a-204f-465d-22ee-9e81990da100/public",
         features: [
             { icon: <FaRulerCombined />, text: "45m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
@@ -264,7 +255,7 @@ const acomodaHome = [
         id: "Serra#suite10",
         title: "Suíte Master 10",
         subtitle: "Pousada Le Ange Serra | Miguel Pereira - RJ",
-        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/5b3e8e3c-57ba-4e47-dd41-7b4a32d25f00/public",
+        backgroundImage: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/0b8cacaa-35cc-4313-4b1c-3cf91ffc9f00/public",
         features: [
             { icon: <FaRulerCombined />, text: "80m²" },
             { icon: <FaSnowflake />, text: "Ar condicionado" },
@@ -290,30 +281,34 @@ const StyledAcomoda = styled.section`
     gap: 0px;
     padding: 0;
     position: relative;
-    
 
     & > div {
-        
         padding: 3.5% 5% 0% 5%;
         width: 100%;
+        border-radius: 1px solid red;
     }
     
     &::before{
         content: '';
-        width: 100%;
-        height: 100%;
-        left: 0;
+        width: 98%;
+        left: 1%;
+        height: 80%;
         top: 0;
         position: absolute;
         background-color: #f5f5f5;
-        clip-path: polygon(1% 1%, 99% 1%, 99% 85%, 1% 85%);
+        border-radius: 75px 75px 30px 30px;
+
+        @media (max-width: 768px){
+            width: 95%;
+            border-radius: 45px 45px 20px 20px;
+            left: 2.5%;
+        }
     }
 
     @media (max-width: 768px){
         height: auto;
-        padding: 10% 2.5%;
+        padding: 5% 2.5%;
         gap: 25px;
-        clip-path: polygon(2% 2%, 98% 2%, 98% 98%, 2% 98%);
     }
 `
 
@@ -441,10 +436,10 @@ const StyledEstruturaTitle2 = styled.h1`
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     font-family: var(--font--comfortaa);
     color: var(--color--black);
-    font-weight: 200;
+    font-weight: 400;
 
     & > b{
         font-weight: 400;
@@ -493,9 +488,9 @@ const StyledEstruturaSubTitle = styled.p`
     font-family: var(--font--comfortaa);
     color: var(--color--black);
     opacity: 0.7;
-    font-family: 200;
+    font-family: 100;
     font-size: .9rem;
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
 
     @media (max-width: 768px){
         font-size: 0.9rem;
@@ -504,13 +499,11 @@ const StyledEstruturaSubTitle = styled.p`
 `
 
 const StyledCarrosselSection = styled.section`
-    height: 80vh;
-    margin-bottom: 10vh;
+    height: auto;
     margin-top: 2.5vh;
 
     @media (max-width: 768px){
         height: auto;
-        margin-bottom: 5vh;
         margin-top: 5vh;
     }
     
@@ -549,14 +542,12 @@ const StyledButtonCenter = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 15vh;
-    margin-top: -10vh;
-    margin-bottom: 5vh;
+    height: 5vh;
+    padding: 5%;
 
     @media (max-width: 768px){
-        margin-bottom: 5vh;
-        margin-top: -5vh;
-        height: 10vh;
+        height: 5vh;
+        padding: 10%;
     }
 `
 
@@ -735,13 +726,15 @@ const Home = () => {
                 <StyledContainerPousadas data-aos="fade-up">
                     <SliderComponent
                         content={imagesSerra}
-                        spaceBetween={20}
+                        spaceBetween={10}
                         slidesPerView={1}
+                        width="55%"
                         height="50vh"
                         contentType="image"
                         showPagination={false}
                     />
                     <TitlePousadas
+                        backgroundColor="#CAD766, #979957"
                         title="Le Ange Serra - Miguel Pereira RJ"
                         text="Na Le Ange Serra, costumamos dizer que a hospedagem é muito mais do que um final de semana para relaxar. É uma experiência única ao lado do seu pet entre as belezas naturais da Mata Atlântica, para que você colecione os melhores momentos ao lado dele!"
                         borderColor="var(--color--green)"
@@ -755,6 +748,7 @@ const Home = () => {
 
                 <StyledContainerPousadas data-aos="fade-up" data-aos-delay="200">
                     <TitlePousadas
+                        backgroundColor="#7AC4F3, #04808c"
                         title="Le Ange Mar - Búzios RJ"
                         text="Situada no coração do Arpoador da Praia Rasa, na Le Ange Mar, oferecemos uma experiência memorável, onde a praia está a poucos passos da pousada e o seu pet é, calorosamente, recebido para momentos especiais à beira-mar."
                         borderColor="var(--color--blue)"
@@ -766,9 +760,9 @@ const Home = () => {
                     />
                     <SliderComponent
                         content={imagesMar}
-                        spaceBetween={20}
+                        spaceBetween={10}
                         slidesPerView={1}
-                        width="60%"
+                        width="55%"
                         height="50vh"
                         contentType="image"
                         showPagination={false}
@@ -776,11 +770,16 @@ const Home = () => {
                 </StyledContainerPousadas>
             </StyledPousadas>
 
-            <Regras />
+            <Regras
+                image1="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c9f443a0-365f-4341-67c4-dc3b15d8d200/public"
+                image2="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/db3f6942-0de2-433d-1235-33bfa547e500/public"
+                image3="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9ca851c2-347a-4f8c-752e-b90080865800/public"
+                image4="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c57174c4-9b12-4842-e8ff-6cfb4867a200/public"
+            />
 
             <StyledAcomoda>
                 <div>
-                    <StyledEstruturaTitle2 data-aos="fade-up">Nossas suítes <StyledColorBGreen>mais procuradas</StyledColorBGreen> </StyledEstruturaTitle2>
+                    <StyledEstruturaTitle2 data-aos="fade-up">Nossas suítes mais procuradas</StyledEstruturaTitle2>
                     <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Já consegue se imaginar dormindo aqui ao lado do seu pet?</StyledEstruturaSubTitle>
                 </div>
 
@@ -792,7 +791,7 @@ const Home = () => {
 
             <StyledEstrutura>
                 <div>
-                    <StyledEstruturaTitle data-aos="fade-up">Mais que Pet Friendly, <StyledColorBBlue>Pet Lovers</StyledColorBBlue></StyledEstruturaTitle>
+                    <StyledEstruturaTitle data-aos="fade-up">Mais que Pet Friendly, Pet Lovers</StyledEstruturaTitle>
                     <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Venha viver essa experiência</StyledEstruturaSubTitle>
                 </div>
                 <CoverflowSliderComponent
@@ -806,7 +805,7 @@ const Home = () => {
             </StyledEstrutura>
 
             <div>
-                <StyledEstruturaTitle data-aos="fade-up"> <StyledColorBGreen>Viva</StyledColorBGreen> essa experiência </StyledEstruturaTitle>
+                <StyledEstruturaTitle data-aos="fade-up"> Viva essa experiência </StyledEstruturaTitle>
                 <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Alguns dos nossos momentos</StyledEstruturaSubTitle>
             </div>
 
@@ -825,7 +824,7 @@ const Home = () => {
             </StyledButtonCenter>
 
             <div>
-                <StyledEstruturaTitle data-aos="fade-up">Conheça nossos pacotes e <StyledColorBBlue>noites especiais</StyledColorBBlue> </StyledEstruturaTitle>
+                <StyledEstruturaTitle data-aos="fade-up">Conheça nossos pacotes e noites especiais </StyledEstruturaTitle>
                 <StyledEstruturaSubTitle data-aos="fade-up" data-aos-delay="200">Estamos te esperando!</StyledEstruturaSubTitle>
             </div>
 

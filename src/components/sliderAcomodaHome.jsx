@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef, useCallback } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -34,11 +34,8 @@ const SwiperStyles = createGlobalStyle`
 `;
 
 const waterWave = keyframes`
-  0% { border-radius: 0 30px 20px 0; }
-  25% { border-radius: 20px 0 30px 20px; }
-  50% { border-radius: 30px 20px 0 30px; }
-  75% { border-radius: 30px 30px 20px 0; }
-  100% { border-radius: 0 20px 30px 0; }
+  0% { border-radius: 30px 20px 0 0; }
+  100% { border-radius: 20px 30px 0 0; }
 `;
 
 const BorderOverlay = styled.div`
@@ -47,7 +44,6 @@ const BorderOverlay = styled.div`
     left: 0;
     width: 100%;
     height: 30%;
-    border-radius: 25px 0 25px 0;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1 ), rgba(0, 0, 0, 0)); 
     pointer-events: none;
     animation: ${waterWave} 5s ease-in-out infinite;
@@ -67,9 +63,10 @@ const SlideContainer = styled.div`
   align-items: flex-end;
   background-size: cover;
   background-position: center;
+  background-color: #f0f0f0; /* Placeholder background */
   animation: ${waterWave} 5s ease-in-out infinite;
+  transition: all .3s ease-in-out;
   
-
   @media (max-width: 768px){
     animation: none!important;
     border-radius: 20px 0 20px 0;
@@ -86,7 +83,7 @@ const SlideContent = styled.div`
   z-index: 10;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   width: 90%;
 
   @media (max-width: 768px){
@@ -99,7 +96,7 @@ const SlideContent = styled.div`
 
 const Title = styled.h2`
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 600;
   font-family: var(--font--comfortaa);
 
   @media (max-width: 768px){
@@ -112,6 +109,8 @@ const Title = styled.h2`
 const Subtitle = styled.p`
   font-size: 13px;
   margin: 0px 0;
+  font-weight: 200;
+  opacity: 0.8;
   font-family: var(--font--comfortaa);
 
   @media (max-width: 768px){
@@ -144,6 +143,7 @@ const Features = styled.div`
       border-radius: 5px 0 5px 0;
       font-size: 10px;
       font-family: var(--font--comfortaa);
+      transition: all .2s ease;
 
       @media (max-width: 768px){
         font-size: 10px;
@@ -181,15 +181,32 @@ const SliderAcomodaHome = ({
   showNavigation = true,
 }) => {
   const navigate = useNavigate();
+  const [loadedImages, setLoadedImages] = useState(new Set([0, 1, 2])); // Carrega as 3 primeiras por padrão
+  const swiperRef = useRef(null);
 
-  const handleButtonClick = (suiteId) => {
-    navigate('/acomoda', { state: { suiteId } });
-  };
+  const handleSlideChange = useCallback((swiper) => {
+    const currentIndex = swiper.realIndex;
+    const nextIndex = (currentIndex + 1) % content.length;
+    const prevIndex = currentIndex === 0 ? content.length - 1 : currentIndex - 1;
+
+    // Carrega a imagem atual e as adjacentes silenciosamente
+    setLoadedImages(prev => new Set([...prev, currentIndex, nextIndex, prevIndex]));
+  }, [content.length]);
+
+  // Preload das imagens de forma assíncrona
+  const preloadImage = useCallback((src, index) => {
+    const img = new Image();
+    img.onload = () => {
+      setLoadedImages(prev => new Set([...prev, index]));
+    };
+    img.src = src;
+  }, []);
 
   return (
     <SliderWrapper>
       <SwiperStyles />
       <Swiper
+        ref={swiperRef}
         modules={[Navigation, Pagination, Autoplay]}
         navigation={showNavigation}
         pagination={false}
@@ -201,6 +218,18 @@ const SliderAcomodaHome = ({
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
+        onSlideChange={handleSlideChange}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+          // Preload das primeiras imagens de forma assíncrona
+          setTimeout(() => {
+            content.forEach((item, index) => {
+              if (index < 3) { // Carrega as 3 primeiras imediatamente
+                preloadImage(item.backgroundImage, index);
+              }
+            });
+          }, 100);
+        }}
         breakpoints={{
           640: { slidesPerView: 1 },
           1024: { slidesPerView: 3 },
@@ -209,7 +238,27 @@ const SliderAcomodaHome = ({
         {content.map((item, index) => (
           <SwiperSlide key={index}>
             <BorderOverlay />
-            <SlideContainer style={{ backgroundImage: `url(${item.backgroundImage})` }}>
+            <SlideContainer
+              style={{
+                backgroundImage: `url(${item.backgroundImage})`
+              }}
+            >
+              {/* Preload silencioso das imagens adjacentes */}
+              {!loadedImages.has(index) && (
+                <img
+                  src={item.backgroundImage}
+                  alt={item.title}
+                  style={{
+                    position: 'absolute',
+                    opacity: 0,
+                    width: '1px',
+                    height: '1px',
+                    pointerEvents: 'none'
+                  }}
+                  loading="lazy"
+                  onLoad={() => preloadImage(item.backgroundImage, index)}
+                />
+              )}
               <SlideContent data-aos="fade-down" data-aos-delay="100">
                 <Title>{item.title}</Title>
                 <Subtitle>{item.subtitle}</Subtitle>
@@ -221,13 +270,19 @@ const SliderAcomodaHome = ({
                   ))}
                 </Features>
                 <ButtonAcomoda
-                    idBtn="clickwpp"
-                    onClick={() => navigate(`/acomoda${item.id}`)}
-                    text="Conhecer essa acomodação"
-                    suiteId={item.id}
+                  idBtn="clickwpp"
+                  onClick={() => {
+                    const [location, suiteNumber] = item.id.split('#suite');
+                    const routeMap = {
+                      'Serra': '/acomodaSerra',
+                      'Mar': '/acomodaMar'
+                    };
+                    const route = routeMap[location] || '/acomodaSerra';
+                    navigate(`${route}#suite${suiteNumber}`);
+                  }}
+                  text="Conhecer essa acomodação"
+                  suiteId={item.id}
                 />
-
-
               </SlideContent>
             </SlideContainer>
           </SwiperSlide>

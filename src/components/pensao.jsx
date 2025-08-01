@@ -4,6 +4,72 @@ import IconButton from "./button4";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+const MealTable = styled.table`
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-family: var(--font--comfortaa);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #00000020;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+`;
+
+const TableHeader = styled.thead`
+    background: #f9fafb;
+    border-bottom: 1px solid #00000020;
+`;
+
+const TableHeaderCell = styled.th`
+    padding: 16px 24px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    color: #00000080;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    @media (max-width: 768px) {
+        padding: 12px 16px;
+        font-size: 12px;
+    }
+`;
+
+const TableRow = styled.tr`
+    &:nth-child(even) {
+        background: #f9fafb;
+    }
+    
+    &:nth-child(odd) {
+        background: #ffffff;
+    }
+
+    &:hover {
+        background: #f3f4f6;
+    }
+`;
+
+const TableCell = styled.td`
+    padding: 16px 24px;
+    border-bottom: 1px solid #e5e7eb;
+    color: #529605;
+    font-weight: 400;
+    font-size: 15px;
+
+    &:first-child {
+        font-weight: 500;
+        color: #111827;
+    }
+
+    @media (max-width: 768px) {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+`;
+
 const StyledSectionPensao = styled.section`
     width: 100%;
     height: auto;
@@ -12,13 +78,11 @@ const StyledSectionPensao = styled.section`
     top: 0;
     transform: translateX(-50%);
     position: relative;
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.5% 0;
+    padding: 5% 5% 2.5% 5%;
     gap: 50px;
-    background-color: var(--color--white);
 
     @media (max-width: 768px){
         flex-direction: column-reverse;
@@ -45,7 +109,7 @@ const StyledTable = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
-    gap: 15px;
+    gap: 5px;
     
 
     @media (max-width: 768px){
@@ -58,11 +122,10 @@ const StyledTable = styled.div`
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 15px;
+        gap: 5px;
 
         @media (max-width: 768px){
             width: 100%!important;
-
             text-align: center;
         }
 
@@ -70,14 +133,14 @@ const StyledTable = styled.div`
             width: 100%;
             height: 60%;
             object-fit: cover;
-            border-radius: 20px 0 20px 0;
+            border-radius: 20px;
         }
 
         & > img:nth-child(2) {
             width: 100%;
             height: 40%;
             object-fit: cover;
-            border-radius: 0px 20px 0 20px;
+            border-radius: 20px;
         }
     }
 
@@ -85,14 +148,14 @@ const StyledTable = styled.div`
         width: 100%;
         height: 40%;
         object-fit: cover;
-        border-radius: 20px 0 20px 0;
+        border-radius: 20px;
     }
 
     & > div:nth-child(2) > img:nth-child(2) {
         width: 100%;
         height: 60%;
         object-fit: cover;
-        border-radius: 20px 0 0 20px;
+        border-radius: 20px;
     }
 `;
 
@@ -125,7 +188,6 @@ const StyledTitle = styled.h1`
 
     & > b {
         font-weight: 100;
-        color: ${({ colorDefinedBold }) => colorDefinedBold ? colorDefinedBold : 'var(--color--green)'};
     }
 `;
 
@@ -136,6 +198,7 @@ const StyledParagraph = styled.p`
     width: 90%;
     font-family: var(--font--comfortaa);
     font-weight: 100;
+    text-align: left!important;
 
     & > ol {
         margin-left: 20px;
@@ -155,35 +218,59 @@ const StyledButton = styled(CustomButton)`
     margin-top: auto; 
 `;
 
-const Pensao = ({ colorDefinedBold }) => {
+const Pensao = ({ colorDefinedBold, image1, image2, image3, image4 }) => {
     return (
         <StyledSectionPensao>
             <StyledPensaoImages>
                 <StyledTable>
                     <div>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ff1e37f5-c2ef-407f-b2fe-e3af31bc2900/public" alt="Homem fazendo churrasco na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="100"/>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/58565dfa-b512-4cb6-661c-044db3e48b00/public" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="200"/>
+                        <img src={image1} alt="Homem fazendo churrasco na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="100"/>
+                        <img src={image2} alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-up" data-aos-delay="200"/>
                     </div>
                     <div>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ca15c837-1a56-47c9-8b78-ec68f1cfa200/public" alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" data-aos="fade-down" data-aos-delay="100"/>
-                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c1c7acdf-aba7-443b-b1e5-3bdc237b3b00/public" alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-down" data-aos-delay="200"/>
+                        <img src={image3} alt="Foto do hamburguer da le ange com batata frita e saladas" loading="lazy" data-aos="fade-down" data-aos-delay="100"/>
+                        <img src={image4} alt="Risoto no prato na le ange" loading="lazy" data-aos="fade-down" data-aos-delay="200"/>
                     </div>
                 </StyledTable>
             </StyledPensaoImages>
             <StyledPensaoTexts>
                 <StyledTitle colorDefinedBold={colorDefinedBold} data-aos="fade-up" data-aos-delay="400">
-                    Alimentação <b>Inclusa</b>
+                    All <b>Inclusive</b>
                 </StyledTitle>
                 <StyledParagraph data-aos="fade-down" data-aos-delay="500">
-                    Na <b>Le Ange</b>, tudo é pensado para oferecer uma experiência gastronômica diversificada, atendendo todo tipo de restrição alimentar e valorizando ingredientes locais e frescos.  <br /> <br />
-                    Nossa estadia dispõe de um restaurante, onde são oferecidas todas as
-                    refeições do dia:<br /><br />
-                    <ol type="disc">
-                        <li>Café da manhã;</li>
-                        <li>Almoço;</li>
-                        <li>Chá da tarde;</li>
-                        <li>Jantar.</li><br />
-                    </ol>
+                    Agora, além de ser referência em hospedagem pet friendly tanto no mar quanto na serra, a LeAnge acaba de anunciar o seu novo formato All Inclusive — e a experiência que já era incrível, ficou simplesmente inesquecível.<br />
+                    
+                    <MealTable data-aos="fade-up" data-aos-delay="600">
+                        <TableHeader>
+                            <tr>
+                                <TableHeaderCell>Refeição</TableHeaderCell>
+                                <TableHeaderCell>Condição</TableHeaderCell>
+                            </tr>
+                        </TableHeader>
+                        <tbody>
+                            <TableRow>
+                                <TableCell>Café da manhã</TableCell>
+                                <TableCell>Incluído</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Almoço</TableCell>
+                                <TableCell>Incluído</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Chá da tarde</TableCell>
+                                <TableCell>Incluído</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Jantar</TableCell>
+                                <TableCell>Incluído</TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>Bebidas</TableCell>
+                                <TableCell>Incluído</TableCell>
+                            </TableRow>
+                        </tbody>
+                    </MealTable>
+                    
                     Incluindo as nossas deliciosas sobremesas.
                 </StyledParagraph>
                 <IconButton

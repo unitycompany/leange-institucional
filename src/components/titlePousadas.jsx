@@ -21,6 +21,15 @@ const DivAnimated = keyframes`
   }
 `;
 
+const ShineAnimation = keyframes`
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+`;
+
 const StyledDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -70,21 +79,37 @@ const StyledTitlePag = styled.h1`
   width: 100%;
   text-align: left;
   font-family: var(--font--comfortaa);
-  font-weight: 100;
-  font-size: 1.3rem;
+  font-weight: 400;
+  font-size: 1.25rem;
   line-height: 100%;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    ${({ backgroundColor }) => {
+      const colors = backgroundColor || '#353535';
+      if (colors.includes(',')) {
+        const [color1, color2] = colors.split(',').map(c => c.trim());
+        return `${color1} 0%, ${color2} 25%, ${color1} 50%, ${color2} 75%, ${color1} 100%`;
+      }
+      return `${colors} 0%, ${colors} 50%, ${colors} 100%`;
+    }}
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: ${ShineAnimation} 10s ease-in-out infinite;
 
   @media (max-width: 768px) {
     text-align: center;
-    color: var(--color--black);
     width: auto;
+    color: #fff;
     padding: 7px 15px;
     border-radius: 0px 10px 0px 10px;
     font-size: .9rem;
-    font-weight: 800;
+    font-weight: 400;
     background-color: rgba(255, 255, 255, 1);
-    backdrop-filter: blur(40px);
-    box-shadow: 0 0 5px rgba(255, 255, 255, 1);
+    backdrop-filter: blur(10px);
+    animation: none;
   }
 `;
 
@@ -93,6 +118,7 @@ const StyledParagPag = styled.p`
   font-size: .90rem;
   color: var(--color--black);
   font-family: var(--font--comfortaa);
+  font-weight: 300;
 
   @media (max-width: 768px) {
     text-align: justify;
@@ -118,12 +144,13 @@ const StyledDivButton = styled.div`
 const IdadeCrianca = styled.p`
   font-size: .6rem;
   opacity: .6;
-  font-weight: 400;
-  background-color: var(--color--green);
-  padding: 5px 10px;
+  font-weight: 500;
+  background-color: #00000020;
+  border: 1px dashed #00000050;
+  padding: 10px 15px;
   color: #000;
-  border-radius: 5px;
-  transition: all .1s ease;
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
   font-family: var(--font--comfortaa);
   display: flex;
   align-items: center;
@@ -131,9 +158,9 @@ const IdadeCrianca = styled.p`
   cursor: default;
 
   &:hover{
-    transform: scale(1.05) translateX(5px);
-    
-    font-weight: 600;
+    transform: translateY(2px);
+    font-weight: 800;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   }
 `
 
@@ -145,6 +172,7 @@ const TitlePousadas = ({
   buttonHover,
   buttonBorder,
   targetPage,
+  backgroundColor,
   idade
 }) => {
   const navigate = useNavigate();
@@ -159,7 +187,7 @@ const TitlePousadas = ({
 
   return (
     <StyledDiv borderColor={borderColor}>
-      <StyledTitlePag>
+      <StyledTitlePag backgroundColor={backgroundColor}>
         {title}
       </StyledTitlePag>
       <StyledParagPag>

@@ -5,8 +5,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import styled, { createGlobalStyle } from "styled-components";
-import IconButton from "./button4";
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Button from "./button";
 
@@ -18,6 +16,7 @@ const SwiperStyles = createGlobalStyle`
         width: 40px;
         height: 40px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(0, 0, 0, 0.2);
         &:after {
             font-size: 20px;
         }
@@ -39,19 +38,19 @@ const SlideContent = styled.div`
   display: flex;
   padding: 20px;
   align-items: center;
-  height: 700px;
+  height: 600px;
   gap: 20px;
   padding: 5vh 5%;
   flex-direction: ${({ imagePosition }) => (imagePosition === 'right' ? 'row-reverse' : 'row')};
 
   @media (max-width: 768px){
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 15px 0 15px 0;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     height: 75vh;
     flex-direction: column;
     width: 95%;
     margin-left: 2.5%;
-    padding: 15px;
+    padding: 25px 10px 10px 10px;
     background: none;
   
   }
@@ -60,8 +59,8 @@ const SlideContent = styled.div`
 const SlideText = styled.div`
   flex: 1;
   height: 100%;
-  padding: 20px;
-  border-radius: 0px 40px 0px 40px;
+  padding: 25px;
+  border-radius: 20px;
   background-color: var(--color--white);
   border: 1px solid rgba(0, 0, 0, 0.2);
 
@@ -76,11 +75,11 @@ const SlideText = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 2.5em;
+  font-size: 2.2em;
   line-height: 100%;
   margin-bottom: 0.5em;
   font-family: var(--font--comfortaa);
-  color: ${({ $colorDefined }) => $colorDefined || 'var(--color--green)'}; 
+  color: var(--color--black); 
   font-weight: 100;
 
   @media (max-width: 768px){
@@ -116,10 +115,15 @@ const ImageContainer = styled.div`
 
 const SlideImage = styled.img`
   width: 100%;
-  border-radius: 25px 0 25px 0;
+  border-radius: 20px;
   height: 100%;
   object-fit: cover;
   filter: contrast(120%);
+
+  @media (max-width: 768px){
+    border-radius: 20px;
+    width: 90vw!important;
+  }
 `;
 
 const StyledSwiper = styled(Swiper)`

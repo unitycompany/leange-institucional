@@ -52,6 +52,7 @@ const PacotesDiv = styled.div`
       font-family: var(--font--comfortaa);
       background: linear-gradient(90deg, var(--color--green), var(--color--blue));
       -webkit-background-clip: text;
+      background-clip: text;
       color: transparent;
       padding-bottom: 15px;
 
@@ -109,7 +110,11 @@ const Pacotes = () => {
     fetchPacotes();
   }, []);
 
-  const categorias = ["Programações Especiais", "Feriados", "Promoções"];
+  const categorias = [
+    { key: "Programações Especiais", titulo: "Aproveite nossas noites especiais" },
+    { key: "Feriados", titulo: "Venha aproveitar o feriado conosco" },
+    { key: "Promoções", titulo: "Aproveite nossas promoções" }
+  ];
   return (
     <>
       <Helmet>
@@ -121,70 +126,48 @@ const Pacotes = () => {
         {categorias.map((categoria) => {
           const pacotesFiltrados = pacotes.filter((pacote) =>
             Array.isArray(pacote.categorias)
-              ? pacote.categorias.includes(categoria)
-              : pacote.categorias === categoria
+              ? pacote.categorias.includes(categoria.key)
+              : pacote.categorias === categoria.key
           );
 
+          // Se não há pacotes para esta categoria, não renderiza nada
+          if (pacotesFiltrados.length === 0) {
+            return null;
+          }
+
           return (
-            <PacotesSection key={categoria}>
+            <PacotesSection key={categoria.key}>
               <PacotesDiv>
                 <div>
-                  <h1>{categoria}</h1>
+                  <h1>{categoria.titulo}</h1>
                   <p>
-                    Pacotes exclusivos para {categoria.toLowerCase()}! Reserve
+                    Pacotes exclusivos para {categoria.key.toLowerCase()}! Reserve
                     agora e aproveite condições especiais.
                   </p>
                 </div>
               </PacotesDiv>
 
-              {pacotesFiltrados.length > 0 ? (
-                <SwiperContainer>
-                  <Swiper
-                    slidesPerView={1}
-                    spaceBetween={30}
-                    loop={true}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
-                    modules={[Autoplay, Navigation]}
-                    breakpoints={{
-                      1280: { slidesPerView: 3, spaceBetween: 30 },
-                      1024: { slidesPerView: 3, spaceBetween: 20 },
-                      768: { slidesPerView: 1, spaceBetween: 15 },
-                      480: { slidesPerView: 1, spaceBetween: 10 },
-                    }}
-                  >
-                    {pacotesFiltrados.map((pacote) => (
-                      <StyledSwiperSlide key={pacote.id}>
-                        <CardPacote pacote={pacote} />
-                      </StyledSwiperSlide>
-                    ))}
-                  </Swiper>
-                </SwiperContainer>
-              ) : (
-                <p
-                  style={{
-                    textAlign: "center",
-                    fontSize: "16px",
-                    fontFamily: "var(--font--comfortaa)",
-                    color: "var(--color--black)",
+              <SwiperContainer>
+                <Swiper
+                  slidesPerView={1}
+                  spaceBetween={30}
+                  loop={true}
+                  autoplay={{ delay: 3000, disableOnInteraction: false }}
+                  modules={[Autoplay, Navigation]}
+                  breakpoints={{
+                    1280: { slidesPerView: 3, spaceBetween: 30 },
+                    1024: { slidesPerView: 3, spaceBetween: 20 },
+                    768: { slidesPerView: 1, spaceBetween: 15 },
+                    480: { slidesPerView: 1, spaceBetween: 10 },
                   }}
                 >
-                  Por enquanto não temos nenhuma promoção, mas fique por dentro de tudo pelo nosso
-                  <a
-                    style={{
-                      color: "var(--color--white)",
-                      fontSize: "16px",
-                      fontWeight: "600",
-                      cursor: "pointer",
-                      marginLeft: "1ch",
-                      background: "var(--color--blue)",
-                      padding: "10px 15px",
-                      borderRadius: "10px",
-                      textDecoration: "none",
-                      lineHeight: "50px",
-                    }}
-                    href="https://chat.whatsapp.com/FsOfaL1Y3jz4XQvNqaAVtZ" target="_blank">GRUPO EXCLUSIVO.</a>
-                </p>
-              )}
+                  {pacotesFiltrados.map((pacote) => (
+                    <StyledSwiperSlide key={pacote.id}>
+                      <CardPacote pacote={pacote} />
+                    </StyledSwiperSlide>
+                  ))}
+                </Swiper>
+              </SwiperContainer>
             </PacotesSection>
           );
         })}

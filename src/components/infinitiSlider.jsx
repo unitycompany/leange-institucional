@@ -9,7 +9,7 @@ import { motion } from 'framer-motion';
 
 const ImageContainer = styled(motion.div)`
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     position: relative;
     overflow: hidden;
     display: flex;
