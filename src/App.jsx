@@ -160,6 +160,15 @@ function AnimatedRoutes() {
 function AppContent() {
     const location = useLocation();
 
+    useEffect(() => {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+        event: 'pageview',
+        page_path: location.pathname + location.search,
+        page_title: document.title
+        });
+    }, [location.pathname, location.search]);
+
     // Estado para controlar o popup de imagem
     const [showImagePopup, setShowImagePopup] = React.useState(false);
     const [popupImageUrl, setPopupImageUrl] = React.useState('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/df48f639-fb6c-4389-b35c-fd86fd344300/public');
