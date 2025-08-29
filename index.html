@@ -24,15 +24,14 @@
 
    <!-- Google Tag Manager (pousadaleange.com.br - via /metrics) -->
 <script>
-  (function(w,d,s,l,i){
-    w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-    var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
-    j.async=true;
-    // ⚠ trocamos o host padrão pelo caminho 1st-party:
-    j.src='/metrics/gtm.js?id='+i+dl;
-    f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-WWQC764');
-</script>
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true; j.src='/metrics/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WWQC764');
+    </script>
+  </head>
 <!-- End Google Tag Manager -->
 
     <!-- Vite -->
@@ -45,9 +44,9 @@
 
     <!-- Noscript 1st-party -->
     <noscript>
-  <iframe src="/metrics/ns.html?id=GTM-WWQC764"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
+      <iframe src="/metrics/ns.html?id=GTM-WWQC764"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
