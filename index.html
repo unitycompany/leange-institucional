@@ -36,7 +36,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <body>
     <div id="root"></div>
 
-    <!-- (Removido o script que forçava /index.html; o SPA fallback agora é no Apache) -->
+    <script>
+      if (!location.pathname.startsWith('/')) {
+          const newPath = '/index.html';
+          window.history.replaceState({}, '', newPath);
+      }
+    </script>  
 
    <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWQC764"

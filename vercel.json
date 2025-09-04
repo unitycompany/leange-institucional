@@ -1,17 +1,6 @@
 {
   "rewrites": [
-    { "source": "/metrics/gtm.js", "destination": "https://www.googletagmanager.com/gtm.js" },
-    { "source": "/metrics/ns.html", "destination": "https://www.googletagmanager.com/ns.html" },
-    { "source": "/metrics/g/collect", "destination": "https://www.google-analytics.com/g/collect" },
-    { "source": "/metrics/j/collect", "destination": "https://www.google-analytics.com/j/collect" }
-  ],
-  "headers": [
-    {
-      "source": "/metrics/(.*)",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-store" },
-        { "key": "Access-Control-Allow-Origin", "value": "*" }
-      ]
-    }
+    { "source": "^/(.*)", "destination": "/index.html" }
   ]
 }
+  

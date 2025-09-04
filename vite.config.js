@@ -3,38 +3,22 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   build: {
-     rollupOptions: {
-       external: [
-          "/assets/index-BHhcukG4.js" 
-       ],
-     },
-  },
-  resolve: { dedupe: ['react', 'react-dom'] },
-  server: {
-    proxy: {
-      '/metrics/gtm.js': {
-        target: 'https://www.googletagmanager.com',
-        changeOrigin: true,
-        rewrite: p => p.replace('/metrics/gtm.js', '/gtm.js'),
-      },
-      '/metrics/ns.html': {
-        target: 'https://www.googletagmanager.com',
-        changeOrigin: true,
-        rewrite: p => p.replace('/metrics/ns.html', '/ns.html'),
-      },
-      '/metrics/g/collect': {
-        target: 'https://www.google-analytics.com',
-        changeOrigin: true,
-        rewrite: p => p.replace('/metrics/g/collect', '/g/collect'),
-      },
-      // opcional: proxy também os pings do consent mode
-      '/metrics/ccm/collect': {
-        target: 'https://www.google.com',
-        changeOrigin: true,
-        rewrite: p => p.replace('/metrics/ccm/collect', '/ccm/collect'),
-      },
+    rollupOptions: {
+      external: [
+        "/assets/index-BHhcukG4.js"
+      ],
     },
   },
   plugins: [react()],
-  base: "/", 
+  base: "/",
+  server: {
+    proxy: {
+      '/api/webhook': {
+        target: 'https://unitycompany.app.n8n.cloud/webhook-test/2a010bee-ce10-4219-b3c5-1c252987f6e9',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/webhook/, ''),
+        secure: true
+      }
+    }
+  }
 });
