@@ -7,6 +7,7 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import styled, { createGlobalStyle } from "styled-components";
 import 'aos/dist/aos.css';
 import Button from "./button";
+import { openBookingEngine } from "../utils/openBookingEngine";
 
 const SwiperStyles = createGlobalStyle`
     .swiper-button-next, .swiper-button-prev {
@@ -173,7 +174,7 @@ const StyledSwiper = styled(Swiper)`
   }
 `;
 
-const CarouselComponent = ({ slides, titleColor, backgroundColor, buttonBgColor, imagePosition = 'left' }) => {
+const CarouselComponent = ({ slides, titleColor, backgroundColor, buttonBgColor, imagePosition = 'left', propertyKey = 'serra' }) => {
   return (  
     <> 
       <SwiperStyles />
@@ -201,7 +202,7 @@ const CarouselComponent = ({ slides, titleColor, backgroundColor, buttonBgColor,
                 idBtn="clickwpp"
                 text="Reservar agora!"
                 backgroundColor= {backgroundColor}
-                onClick={() =>  window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                onClick={() => openBookingEngine({ propertyKey })}
                 />
               </SlideText>
               <ImageContainer data-aos="fade-left" data-aos-delay="400">

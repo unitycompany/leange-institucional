@@ -24,6 +24,7 @@ import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import CarrosselDepoimentos from '../../components/depoimentos';
 import BookingEngine from '../../components/bookingEngine';
 import { BOOKING_PROPERTIES } from '../../constants/bookingEngine';
+import { openBookingEngine } from '../../utils/openBookingEngine';
 
 const StyledEspace = styled.div`
     height: 0vh;
@@ -754,7 +755,7 @@ const Serra = () => {
                         hoverBorderColor="var(--color--green)"
                         hoverColor="var(--color--white)"
                         hoverIconColor="var(--color--white)"
-                        onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                        onClick={() => openBookingEngine({ propertyKey: 'serra' })}
                     />
                     <IdadeCrianca>*Idade miníma para hospedagem 13 anos, mesmo que acompanhado dos pais</IdadeCrianca>
                 </StyledHomeTexts>
@@ -778,11 +779,13 @@ const Serra = () => {
                 image4="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c1d96802-7777-4493-5799-9b927ea1de00/public"
                 image3="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/15251f10-d814-42ff-0b42-fc731ce2e700/public"
                 policyUrl="/src/pages/Politicas/politica-de-reservas-le-ange-serra.pdf"
+                propertyKey="serra"
             />
 
             <StyledSectionEspaco>
                 <CarouselComponent slides={slides}
                     backgroundColor="var(--color--green)"
+                    propertyKey="serra"
                 />
             </StyledSectionEspaco>
 
@@ -795,12 +798,7 @@ const Serra = () => {
                             text="Reservar agora"
                             backgroundColor="var(--color--green)"
                             borderColor="var(--color--white)"
-                            onClick={() => {
-                                window.open(
-                                    'https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329',
-                                    '_blank'
-                                );
-                            }}
+                            onClick={() => openBookingEngine({ propertyKey: 'serra' })}
                         />
                     </div>
                 </StyledAcomodaTexts>
@@ -816,16 +814,17 @@ const Serra = () => {
                 image2="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/d4f2ff80-6255-49ba-a408-fba6a7002c00/public"
                 image3="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4ed4c525-3b4b-4603-7e01-c4cda108a800/public"
                 image4="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9feb8d0c-1247-47f2-b522-be6ed1d3d800/public"
+                propertyKey="serra"
             />
 
-            <PetFriendlyCarousel carousels={PetFriendlyImages} />
+            <PetFriendlyCarousel carousels={PetFriendlyImages} propertyKey="serra" />
 
             <StyledButtonCenter>
                 <Button
                     idBtn="clickwpp"
                     backgroundColor="var(--color--green)"
                     text="Fazer minha reserva!"
-                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    onClick={() => openBookingEngine({ propertyKey: 'serra' })}
                 />
             </StyledButtonCenter>
 
@@ -835,7 +834,7 @@ const Serra = () => {
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
 
-            <CarrosselDepoimentos data={dadosSerra} />
+            <CarrosselDepoimentos data={dadosSerra} propertyKey="serra" />
 
             <Footer />
 

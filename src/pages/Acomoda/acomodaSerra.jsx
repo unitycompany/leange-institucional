@@ -347,6 +347,7 @@ const AcomodaSerra = () => {
             <Quarto id="suite8" ref={suiteRefs.suite8} images={SuiteMas8Images} suites={SuiteMas8Text} reverse={false} background="#CAD76650" /> */}
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite1}
                     nome="Suíte Superior 1"
                     descricao="Uma suíte de 52m² que une conforto e sofisticação. Equipada com cama king-size, ar-condicionado e lareira, também dispõe de uma varanda privativa com vista para a natureza, banheira relaxante e aquecedor de toalhas."
@@ -369,6 +370,7 @@ const AcomodaSerra = () => {
                 />
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite2}
                     nome="Suíte Superior 2"
                     direction={false}
@@ -391,6 +393,7 @@ const AcomodaSerra = () => {
                 />
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite3}
                     nome="Suíte Superior 3"
                     direction={true}
@@ -413,6 +416,7 @@ const AcomodaSerra = () => {
                 />
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite4}
                     nome="Suíte Standard 4"
                     direction={false}
@@ -435,6 +439,7 @@ const AcomodaSerra = () => {
                 />
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite5}
                     nome="Suíte Standard 5"
                     direction={true}
@@ -457,6 +462,7 @@ const AcomodaSerra = () => {
                 />
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite6}
                     nome="Suíte Master 6"
                     direction={false}
@@ -479,6 +485,7 @@ const AcomodaSerra = () => {
                 />
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite7}
                     nome="Suíte Standard 7"
                     direction={true}
@@ -501,6 +508,7 @@ const AcomodaSerra = () => {
                 />
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite8}
                     nome="Suíte Standard 8"
                     direction={false}
@@ -523,6 +531,7 @@ const AcomodaSerra = () => {
                 />
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite9}
                     nome="Suíte Superior 9"
                     direction={true}
@@ -545,6 +554,7 @@ const AcomodaSerra = () => {
                 />
 
                 <CardSuite
+                    propertyKey="serra"
                     ref={suiteRefs.suite10}
                     nome="Suíte Master 10"
                     direction={false}

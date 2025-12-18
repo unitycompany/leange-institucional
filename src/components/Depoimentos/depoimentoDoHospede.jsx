@@ -107,7 +107,7 @@ const SwiperContainer = styled.div`
 `;
 
 
-export default function DepoimentoDoHospede ({ depoimentos = [] }) {
+export default function DepoimentoDoHospede ({ depoimentos = [], propertyKey = 'serra' }) {
     if (!depoimentos.length) {
         return null;
     }
@@ -150,6 +150,7 @@ export default function DepoimentoDoHospede ({ depoimentos = [] }) {
                                 logo={depoimento.logo}
                                 nome={depoimento.nome}
                                 nota={depoimento.nota}
+                                propertyKey={propertyKey}
                             />
                         </SwiperSlide>
                     ))}

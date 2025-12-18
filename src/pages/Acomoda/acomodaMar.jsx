@@ -347,6 +347,7 @@ const AcomodaMar = () => {
             <Quarto id="suite8" ref={suiteRefs.suite8} images={SuiteMas8Images} suites={SuiteMas8Text} reverse={false} background="#7AC4F350" /> */}
 
                 <CardSuite
+                    propertyKey="mar"
                     ref={suiteRefs.suite1}
                     nome="Suíte Superior 1"
                     descricao="A suíte oferece 50m² de conforto e sofisticação. Com cama king-size, a suíte garante uma estadia relaxante com ar-condicionado, lareira e frigobar. Desfrute de momentos de bem-estar na banheira relaxante ou no chuveiro."
@@ -369,6 +370,7 @@ const AcomodaMar = () => {
                 />
 
                 <CardSuite
+                    propertyKey="mar"
                     ref={suiteRefs.suite2}
                     nome="Suíte Standard 2"
                     direction={false}
@@ -391,6 +393,7 @@ const AcomodaMar = () => {
                 />
 
                 <CardSuite
+                    propertyKey="mar"
                     ref={suiteRefs.suite3}
                     nome="Suíte Superior 3"
                     direction={true}
@@ -413,6 +416,7 @@ const AcomodaMar = () => {
                 />
 
                 <CardSuite
+                    propertyKey="mar"
                     ref={suiteRefs.suite4}
                     nome="Suíte Superior 4"
                     direction={false}
@@ -435,6 +439,7 @@ const AcomodaMar = () => {
                 />
 
                 <CardSuite
+                    propertyKey="mar"
                     ref={suiteRefs.suite5}
                     nome="Suíte Superior 5"
                     direction={true}
@@ -457,6 +462,7 @@ const AcomodaMar = () => {
                 />
 
                 <CardSuite
+                    propertyKey="mar"
                     ref={suiteRefs.suite6}
                     nome="Suíte Standard 6"
                     direction={false}
@@ -479,6 +485,7 @@ const AcomodaMar = () => {
                 />
 
                 <CardSuite
+                    propertyKey="mar"
                     ref={suiteRefs.suite7}
                     nome="Suíte Master 7"
                     direction={true}
@@ -501,6 +508,7 @@ const AcomodaMar = () => {
                 />
 
                 <CardSuite
+                    propertyKey="mar"
                     ref={suiteRefs.suite8}
                     nome="Suíte Master 8"
                     direction={false}

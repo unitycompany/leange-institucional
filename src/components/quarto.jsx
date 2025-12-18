@@ -8,6 +8,7 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Button from "./button";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { openBookingEngine } from "../utils/openBookingEngine";
 
 const SwiperStyles = createGlobalStyle`
   .swiper-button-next, .swiper-button-prev {
@@ -207,7 +208,7 @@ const SwiperImage = styled.img`
 `;
 
 
-const Quarto = React.forwardRef(({ images = [], suites = [], reverse = false, background = "rgba(0, 0, 0, 0.1)" }, ref) => {
+const Quarto = React.forwardRef(({ images = [], suites = [], reverse = false, background = "rgba(0, 0, 0, 0.1)", propertyKey = 'serra' }, ref) => {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
@@ -259,7 +260,7 @@ const Quarto = React.forwardRef(({ images = [], suites = [], reverse = false, ba
                         <SuiteDescription data-aos="fade-in" data-aos-delay="400">{suite.Description}</SuiteDescription>
                         <Button
                             idBtn="clickwpp"
-                            onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                            onClick={() => openBookingEngine({ propertyKey })}
                             text="Fazer reserva agora!"
                         />
                     </div>

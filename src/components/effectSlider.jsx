@@ -9,6 +9,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import IconButton from './button4';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { openBookingEngine } from '../utils/openBookingEngine';
 
 const SwiperStyles = createGlobalStyle`
     .swiper-button-next, .swiper-button-prev {
@@ -151,6 +152,7 @@ const CoverflowSliderComponent = ({
     autoplayDelay = 1500,
     showPagination = true,
     showNavigation = true,
+    propertyKey = 'serra',
 }) => {
     const tiltRef = useRef([]);
 
@@ -218,6 +220,7 @@ const CoverflowSliderComponent = ({
                                     textColor="var(--color--black)"
                                     hoverColor="var(--color--white)"
                                     hoverTextColor="var(--color--black)"
+                                    onClick={() => openBookingEngine({ propertyKey })}
                                 />
                             </SlideContent>
                         </SlideContainer>

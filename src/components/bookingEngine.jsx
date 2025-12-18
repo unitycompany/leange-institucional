@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 import { MapPin, CalendarBlank, Users, MagnifyingGlass } from 'phosphor-react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { openExternal } from '../utils/openExternal';
 
 const StickyViewport = styled.div`
     width: 100vw;
@@ -299,7 +300,7 @@ const BookingEngine = ({
     const handleSubmit = (event) => {
         event.preventDefault();
         if (!searchUrl) return;
-        window.open(searchUrl, '_blank', 'noopener,noreferrer');
+        openExternal(searchUrl);
     };
 
     const handleMobileClick = () => {
@@ -308,7 +309,7 @@ const BookingEngine = ({
         
         const baseUrl = property.baseUrl || DEFAULT_BASE_URL;
         const url = `${baseUrl}?q=${property.q}`;
-        window.open(url, '_blank', 'noopener,noreferrer');
+        openExternal(url);
     };
 
     const canSubmit = Boolean(searchUrl);

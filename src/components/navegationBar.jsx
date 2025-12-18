@@ -9,6 +9,7 @@ import Confetti from 'react-confetti';
 import { useNavigate as usePageNavigation } from 'react-router-dom';
 import RedirectSelect from './selectNavBar';
 import { CiCalendarDate } from "react-icons/ci";
+import { openBookingEngine } from '../utils/openBookingEngine';
 
 
 // Animação de loading
@@ -524,7 +525,7 @@ const NavegationBar = () => {
                 </StyledHeader>
                 <Button
                     idBtn="clickwpp"
-                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    onClick={() => openBookingEngine({ propertyKey: 'serra' })}
                     text="Fazer minha reserva"
                 />
             </StyledDiv>
@@ -563,7 +564,7 @@ const NavegationBar = () => {
                 <Button
                     idBtn="clickwpp"
                     text="Fazer minha reserva"
-                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    onClick={() => openBookingEngine({ propertyKey: 'serra' })}
                 />
             </Sidebar>
         </>

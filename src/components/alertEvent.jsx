@@ -1,5 +1,6 @@
 import React from "react";
 import styled, {keyframes} from "styled-components";
+import { openBookingEngine } from "../utils/openBookingEngine";
 
 const Animation = keyframes`
     0% {
@@ -90,7 +91,7 @@ const EventAlert = () => {
         <>
             <AlertAll id="pacotes">
                 <div>
-                    <h1><b>ATENÇÃO!!!</b> Neste mês de Janeiro ( 01/2025 ) haverá <b>Churrasco na beira da piscina</b> todos os <b>Sábados</b>. Não perca tempo, <a href="https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329" target="_blank">reserve agora!</a></h1>
+                    <h1><b>ATENÇÃO!!!</b> Neste mês de Janeiro ( 01/2025 ) haverá <b>Churrasco na beira da piscina</b> todos os <b>Sábados</b>. Não perca tempo, <a href="#" onClick={(e) => { e.preventDefault(); openBookingEngine({ propertyKey: 'serra' }); }}>reserve agora!</a></h1>
                 </div>
             </AlertAll>
         </>

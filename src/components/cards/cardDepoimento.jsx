@@ -2,6 +2,7 @@ import React from "react";
 import { MdStarRate } from "react-icons/md";
 import styled from "styled-components";
 import Button from "../button";
+import { openBookingEngine } from "../../utils/openBookingEngine";
 
 const Content = styled.div`
     display: flex;
@@ -130,7 +131,8 @@ export default function CardDepoimento({
     text,
     logo,
     nome,
-    nota
+    nota,
+    propertyKey = 'serra'
 }) {
     return (
         <>
@@ -161,12 +163,7 @@ export default function CardDepoimento({
                         text="Reservar agora"
                         backgroundColor="var(--color--green)"
                         borderColor="var(--color--white)"
-                        onClick={() => {
-                            window.open(
-                            'https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329',
-                            '_blank'
-                            );
-                        }}
+                        onClick={() => openBookingEngine({ propertyKey })}
                         />
                 </Text>
             </Content>

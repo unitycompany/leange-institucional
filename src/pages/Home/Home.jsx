@@ -25,6 +25,7 @@ import EventAlert from '../../components/alertEvent';
 import Modal from "../../components/modal";
 import BookingEngine from '../../components/bookingEngine';
 import { BOOKING_GENERAL_PROPERTIES } from '../../constants/bookingEngine';
+import { openBookingEngine } from '../../utils/openBookingEngine';
 
 const imagesSerra = [
     { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ac618b7-88c7-4558-45ee-090bab5dde00/public", alt: 'Mulher na rede', loading: "lazy" },
@@ -827,7 +828,7 @@ const Home = () => {
             <StyledButtonCenter>
                 <Button
                     idBtn="clickwpp"
-                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    onClick={() => openBookingEngine({ propertyKey: 'serra' })}
                     text="Fazer minha reserva!"
                     backgroundColor="var(--color--green)"
                 />

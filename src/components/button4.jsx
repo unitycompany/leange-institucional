@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { MdHotel } from "react-icons/md";
 import { LuMousePointerClick } from "react-icons/lu";
+import { openExternal } from '../utils/openExternal';
 
 const ButtonContainer = styled.button`
   position: relative;
@@ -75,10 +76,7 @@ const IconButton = ({
       return;
     }
 
-    window.open(
-      'https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329',
-      '_blank'
-    );
+    openExternal('https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329');
   };
 
   const handleMouseEnter = () => {

@@ -9,6 +9,7 @@ import IconButton from './button4';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { BOOKING_PROPERTIES } from '../constants/bookingEngine';
+import { openExternal } from '../utils/openExternal';
 
 // Importação dos ícones necessários
 import { FaUtensils, FaRegCreditCard, FaPaw, FaCheck } from 'react-icons/fa';
@@ -281,7 +282,7 @@ const openBookingEngineMondayToFriday = ({ propertyKey = 'serra', adults = 2 } =
   params.set('CheckOut', formatForOmnibees(checkOut));
 
   const url = `${DEFAULT_OMNIBEES_BASE_URL}?${params.toString()}`;
-  window.open(url, '_blank', 'noopener,noreferrer');
+  openExternal(url);
 };
 
 const openBookingEngineForEvent = (event, { adults = 2 } = {}) => {
@@ -300,7 +301,7 @@ const openBookingEngineForEvent = (event, { adults = 2 } = {}) => {
   params.set('CheckOut', formatForOmnibees(checkOut));
 
   const url = `${DEFAULT_OMNIBEES_BASE_URL}?${params.toString()}`;
-  window.open(url, '_blank', 'noopener,noreferrer');
+  openExternal(url);
 };
 
 const EventCardCarousel = ({ events = [] }) => {

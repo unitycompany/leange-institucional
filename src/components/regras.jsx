@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "./button";
+import { openBookingEngine } from "../utils/openBookingEngine";
 
 const RegrasAll = styled.div`
     width: 100%;
@@ -233,7 +234,16 @@ const RegrasAll = styled.div`
     }
 `
 
-const Regras = ({color, colorAlert, image1, image2, image3, image4, policyUrl}) => {
+const Regras = ({
+    color,
+    colorAlert,
+    image1,
+    image2,
+    image3,
+    image4,
+    policyUrl,
+    propertyKey = 'serra',
+}) => {
     return (
         <>
             <RegrasAll>
@@ -259,7 +269,7 @@ const Regras = ({color, colorAlert, image1, image2, image3, image4, policyUrl}) 
                         <li style={{background: "#E4863510", border: "1px dashed #E4863550"}}>Não trabalhamos com <b>Day Use</b>.</li>
                     </ol>
                     <Button
-                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    onClick={() => openBookingEngine({ propertyKey })}
                     text="Reservar agora"
                     backgroundColor="var(--color--green)"
                     borderColor="var(--color--white)"

@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "./button";
 import styled, { keyframes } from "styled-components";
+import { openBookingEngine } from "../utils/openBookingEngine";
 
 const DivAnimated = keyframes`
   0% {
@@ -177,12 +178,19 @@ const TitlePousadas = ({
 }) => {
   const navigate = useNavigate();
 
+  const inferPropertyKeyFromTargetPage = () => {
+    const normalized = `${targetPage || ''}`.toLowerCase();
+    if (normalized.includes('mar')) return 'mar';
+    if (normalized.includes('serra')) return 'serra';
+    return 'serra';
+  };
+
   const handleClick = () => {
     navigate(targetPage);
   };
 
   const handleClick2 = () => {
-    window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank");
+    openBookingEngine({ propertyKey: inferPropertyKeyFromTargetPage() });
   };
 
   return (

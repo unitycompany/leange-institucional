@@ -24,6 +24,7 @@ import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import CarrosselDepoimentos from '../../components/depoimentos';
 import BookingEngine from '../../components/bookingEngine';
 import { BOOKING_PROPERTIES } from '../../constants/bookingEngine';
+import { openBookingEngine } from '../../utils/openBookingEngine';
 
 const StyledEspace = styled.div`
     height: 0vh;
@@ -717,7 +718,7 @@ const Serra = () => {
                             hoverBorderColor="var(--color--blue)"
                             hoverColor="var(--color--white)"
                             hoverIconColor="var(--color--white)"
-                            onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                            onClick={() => openBookingEngine({ propertyKey: 'mar' })}
                         />
                     </div>
                     <IdadeCrianca>*Idade miníma para hospedagem 13 anos, mesmo que acompanhado dos pais</IdadeCrianca>
@@ -742,6 +743,7 @@ const Serra = () => {
                 image2="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/82ee632d-8532-412a-56ae-0076c6d6dc00/public"
                 image4="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7da0d553-bf64-492e-fa8d-e125618a5400/public"
                 policyUrl="/src/pages/Politicas/politica-de-reservas-le-ange-mar.pdf"
+                propertyKey="mar"
             />
 
             <StyledSectionEspaco data-aos="fade-up" data-aos-delay="50">
@@ -751,6 +753,7 @@ const Serra = () => {
                     buttonBgColor="var(--color--blue)"
                     imagePosition="left"
                     backgroundColor="var(--color--blue)"
+                    propertyKey="mar"
                 />
             </StyledSectionEspaco>
 
@@ -763,12 +766,7 @@ const Serra = () => {
                             text="Reservar agora"
                             backgroundColor="var(--color--blue)"
                             borderColor="var(--color--white)"
-                            onClick={() => {
-                                window.open(
-                                    'https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329',
-                                    '_blank'
-                                );
-                            }}
+                            onClick={() => openBookingEngine({ propertyKey: 'mar' })}
                         />
                     </div>
                 </StyledAcomodaTexts>
@@ -784,16 +782,17 @@ const Serra = () => {
                 image2="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/97185d8a-752a-4297-25d5-b6e56a4d1f00/public"
                 image3="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4ed4c525-3b4b-4603-7e01-c4cda108a800/public"
                 image4="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/8adfd02c-e2ae-4f41-9f97-994bc416b600/public"
+                propertyKey="mar"
             />
 
-            <PetFriendlyCarousel carousels={PetFriendlyImages} />
+            <PetFriendlyCarousel carousels={PetFriendlyImages} propertyKey="mar" />
 
             <StyledButtonCenter>
                 <Button
                     idBtn="clickwpp"
                     backgroundColor="var(--color--green)"
                     text="Fazer minha reserva!"
-                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    onClick={() => openBookingEngine({ propertyKey: 'mar' })}
                 />
             </StyledButtonCenter>
 
@@ -803,7 +802,7 @@ const Serra = () => {
                 <EventCardCarousel events={events} />
             </StyledContainerEvents>
 
-            <CarrosselDepoimentos data={dadosMar} />
+            <CarrosselDepoimentos data={dadosMar} propertyKey="mar" />
 
             <Footer />
 

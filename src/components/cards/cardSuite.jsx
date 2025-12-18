@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, forwardRef } from "react";
 import styled from "styled-components";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
 import Button from "../button";
+import { openBookingEngine } from "../../utils/openBookingEngine";
 
 const Content = styled.div`
     width: 100%;
@@ -290,7 +291,8 @@ const CardSuite = forwardRef(({
     images = [],
     autoSlideInterval = 10000,
     color,
-    direction = false
+    direction = false,
+    propertyKey = 'serra'
 
 }, ref) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -401,7 +403,7 @@ const CardSuite = forwardRef(({
     };
 
     const handleClick2 = () => {
-        window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank");
+        openBookingEngine({ propertyKey });
     };
 
     const handleImageClick = () => {

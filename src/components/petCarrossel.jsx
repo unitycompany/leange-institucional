@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import CustomButton from './button3';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { openBookingEngine } from '../utils/openBookingEngine';
 
 const CarouselContainer = styled.div`
     height: 90vh;
@@ -59,7 +60,7 @@ const StyledTextPet = styled.section`
 
 `;
 
-const PetFriendlyCarousel = ({ carousels }) => {
+const PetFriendlyCarousel = ({ carousels, propertyKey = 'serra' }) => {
     return (
         <>
             <StyledTextPet>
@@ -75,7 +76,7 @@ const PetFriendlyCarousel = ({ carousels }) => {
                     hoverBorderColor="var(--color--black)"
                     hoverColor="var(--color--white)"
                     hoverIconColor="var(--color--white)"
-                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    onClick={() => openBookingEngine({ propertyKey })}
                 />
             </StyledTextPet>
 

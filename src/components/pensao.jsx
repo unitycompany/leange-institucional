@@ -3,6 +3,7 @@ import CustomButton from "./button3";
 import IconButton from "./button4";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { openBookingEngine } from "../utils/openBookingEngine";
 
 const MealTable = styled.table`
     width: 100%;
@@ -218,7 +219,7 @@ const StyledButton = styled(CustomButton)`
     margin-top: auto; 
 `;
 
-const Pensao = ({ colorDefinedBold, image1, image2, image3, image4 }) => {
+const Pensao = ({ colorDefinedBold, image1, image2, image3, image4, propertyKey = 'serra' }) => {
     return (
         <StyledSectionPensao>
             <StyledPensaoImages>
@@ -282,6 +283,7 @@ const Pensao = ({ colorDefinedBold, image1, image2, image3, image4 }) => {
                     textColor = "var(--color--black)"
                     hoverColor = "var(--color--black)"
                     hoverTextColor = "var(--color--white)"
+                    onClick={() => openBookingEngine({ propertyKey })}
                 />
             </StyledPensaoTexts>
         </StyledSectionPensao>

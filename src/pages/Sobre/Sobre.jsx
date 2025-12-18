@@ -7,6 +7,7 @@ import SchemaMarkup from '../../components/SchemaMarkup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
+import { openBookingEngine } from '../../utils/openBookingEngine';
 
 const SobreContainer = styled.section`
     width: 100%;
@@ -958,7 +959,7 @@ const Sobre = () => {
                     hoverBorderColor="var(--color--white)"
                     hoverColor="var(--color--white)"
                     hoverIconColor="var(--color--white)"
-                    onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                    onClick={() => openBookingEngine({ propertyKey: 'serra' })}
                     data-aos="fade-in" data-aos-delay="500"
                 />
             </CTA>

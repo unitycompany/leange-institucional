@@ -8,6 +8,7 @@ import { IoBedOutline } from "react-icons/io5";
 import { IoStarSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import { BOOKING_PROPERTIES } from "../../constants/bookingEngine";
+import { openExternal } from "../../utils/openExternal";
 
 const shine = keyframes`
   0% { left: -200px; }
@@ -416,7 +417,7 @@ const CardPacote = ({ pacote }) => {
     params.set("CheckOut", formatForOmnibees(checkOut));
 
     const url = `${DEFAULT_OMNIBEES_BASE_URL}?${params.toString()}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    openExternal(url);
   };
 
   const openBookingEngineForFique4Pague3 = () => {
@@ -436,7 +437,7 @@ const CardPacote = ({ pacote }) => {
     params.set("CheckOut", formatForOmnibees(checkOut));
 
     const url = `${DEFAULT_OMNIBEES_BASE_URL}?${params.toString()}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    openExternal(url);
   };
 
   // Função para criar slug a partir do título do pacote
