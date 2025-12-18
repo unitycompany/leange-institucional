@@ -28,7 +28,11 @@ export const openBookingEngine = ({
 } = {}) => {
   const property = BOOKING_PROPERTIES?.[propertyKey] || BOOKING_PROPERTIES?.serra;
   const q = property?.q;
-  if (!q) return;
+  if (!q) {
+    // This usually happens when VITE_OMNIBEES_* env vars are missing in the production build.
+    console.warn('[openBookingEngine] Missing Omnibees property id (q). Check VITE_OMNIBEES_MAR_ID / VITE_OMNIBEES_SERRA_ID.');
+    return;
+  }
 
   const params = new URLSearchParams();
   params.set('q', q);
