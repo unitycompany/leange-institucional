@@ -8,6 +8,7 @@ import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import IconButton from './button4';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { BOOKING_PROPERTIES } from '../constants/bookingEngine';
 
 // Importação dos ícones necessários
 import { FaUtensils, FaRegCreditCard, FaPaw, FaCheck } from 'react-icons/fa';
@@ -155,6 +156,153 @@ const Price = styled.p`
   }
 `;
 
+const DEFAULT_OMNIBEES_BASE_URL = 'https://book.omnibees.com/hotelresults';
+
+const normalizeText = (value) =>
+  String(value || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+
+const isFique4Pague3Title = (title) => /fique\s*4.*pague\s*3/.test(normalizeText(title));
+
+const addDays = (date, days) => {
+  const next = new Date(date);
+  next.setDate(next.getDate() + days);
+  return next;
+};
+
+const getNextMonday = (from = new Date()) => {
+  const base = new Date(from.getFullYear(), from.getMonth(), from.getDate());
+  const dayOfWeek = base.getDay(); // 0 (Dom) .. 6 (Sáb)
+  const daysUntilMonday = (1 - dayOfWeek + 7) % 7;
+  base.setDate(base.getDate() + daysUntilMonday);
+  return base;
+};
+
+const formatForOmnibees = (date) => {
+  if (!date) return '';
+  const year = date.getFullYear();
+  const month = `${date.getMonth() + 1}`.padStart(2, '0');
+  const day = `${date.getDate()}`.padStart(2, '0');
+  return `${day}${month}${year}`;
+};
+
+const parsePtBrDate = (ddmmyyyy) => {
+  if (!ddmmyyyy) return null;
+  const match = String(ddmmyyyy).match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+  if (!match) return null;
+  const day = Number(match[1]);
+  const month = Number(match[2]);
+  const year = Number(match[3]);
+  if (!day || !month || !year) return null;
+  return new Date(year, month - 1, day);
+};
+
+const getNightsFromDateRange = (dateRange) => {
+  const text = normalizeText(dateRange);
+  const match = text.match(/(\d+)\s*diarias?/);
+  if (!match) return null;
+  const nights = Number(match[1]);
+  return Number.isFinite(nights) && nights > 0 ? nights : null;
+};
+
+const getCheckInOutFromDateRange = (dateRange) => {
+  const raw = String(dateRange || '');
+  const normalized = normalizeText(raw);
+
+  // 1) Explicit dates in dd/mm/yyyy
+  const dateMatches = [...raw.matchAll(/\b(\d{2}\/\d{2}\/\d{4})\b/g)].map((m) => m[1]);
+  if (dateMatches.length >= 2) {
+    const checkIn = parsePtBrDate(dateMatches[0]);
+    const checkOut = parsePtBrDate(dateMatches[1]);
+    if (checkIn && checkOut) return { checkIn, checkOut };
+  }
+  if (dateMatches.length === 1) {
+    const checkIn = parsePtBrDate(dateMatches[0]);
+    const nights = getNightsFromDateRange(raw);
+    if (checkIn && nights) return { checkIn, checkOut: addDays(checkIn, nights) };
+  }
+
+  // 2) Range like "de segunda-feira a sexta-feira"
+  const weekdayMap = {
+    domingo: 0,
+    segunda: 1,
+    terca: 2,
+    quarta: 3,
+    quinta: 4,
+    sexta: 5,
+    sabado: 6,
+  };
+
+  const weekdayRegex = /(domingo|segunda|terca|quarta|quinta|sexta|sabado)(?:-feira)?\s*(?:a|ate)\s*(domingo|segunda|terca|quarta|quinta|sexta|sabado)(?:-feira)?/;
+  const weekdayMatch = normalized.match(weekdayRegex);
+  if (weekdayMatch) {
+    const startIndex = weekdayMap[weekdayMatch[1]];
+    const endIndex = weekdayMap[weekdayMatch[2]];
+    if (Number.isFinite(startIndex) && Number.isFinite(endIndex)) {
+      const today = new Date();
+      const base = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const todayDow = base.getDay();
+      const daysUntilStart = (startIndex - todayDow + 7) % 7; // inclui hoje
+      const checkIn = addDays(base, daysUntilStart);
+      let offset = (endIndex - startIndex + 7) % 7;
+      if (offset === 0) offset = 7;
+      const checkOut = addDays(checkIn, offset);
+      return { checkIn, checkOut };
+    }
+  }
+
+  // 3) Fallback: tomorrow + 2 nights
+  const fallbackCheckIn = addDays(new Date(), 1);
+  const fallbackCheckOut = addDays(new Date(), 3);
+  return { checkIn: fallbackCheckIn, checkOut: fallbackCheckOut };
+};
+
+const inferPropertyKey = (event) => {
+  const corpus = normalizeText(`${event?.title || ''} ${event?.dateRange || ''}`);
+  if (corpus.includes(' mar ') || corpus.endsWith(' mar') || corpus.includes('mar ')) return 'mar';
+  if (corpus.includes(' serra ') || corpus.endsWith(' serra') || corpus.includes('serra ')) return 'serra';
+  return 'serra';
+};
+
+const openBookingEngineMondayToFriday = ({ propertyKey = 'serra', adults = 2 } = {}) => {
+  const property = BOOKING_PROPERTIES?.[propertyKey] || BOOKING_PROPERTIES?.serra;
+  const q = property?.q;
+  if (!q) return;
+
+  const { checkIn, checkOut } = getCheckInOutFromDateRange('segunda a sexta');
+
+  const params = new URLSearchParams();
+  params.set('q', q);
+  params.set('NRooms', '1');
+  params.set('ad', String(adults));
+  params.set('CheckIn', formatForOmnibees(checkIn));
+  params.set('CheckOut', formatForOmnibees(checkOut));
+
+  const url = `${DEFAULT_OMNIBEES_BASE_URL}?${params.toString()}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
+const openBookingEngineForEvent = (event, { adults = 2 } = {}) => {
+  const propertyKey = event?.propertyKey || inferPropertyKey(event);
+  const property = BOOKING_PROPERTIES?.[propertyKey] || BOOKING_PROPERTIES?.serra;
+  const q = property?.q;
+  if (!q) return;
+
+  const { checkIn, checkOut } = getCheckInOutFromDateRange(event?.dateRange);
+
+  const params = new URLSearchParams();
+  params.set('q', q);
+  params.set('NRooms', '1');
+  params.set('ad', String(adults));
+  params.set('CheckIn', formatForOmnibees(checkIn));
+  params.set('CheckOut', formatForOmnibees(checkOut));
+
+  const url = `${DEFAULT_OMNIBEES_BASE_URL}?${params.toString()}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
 const EventCardCarousel = ({ events = [] }) => {
   const [loadedImages, setLoadedImages] = useState(new Set([0, 1, 2])); // Carrega as 3 primeiras por padrão
   const swiperRef = useRef(null);
@@ -252,7 +400,12 @@ const EventCardCarousel = ({ events = [] }) => {
                 textColor="var(--color--black)"
                 hoverColor="var(--color--black)"
                 hoverTextColor="var(--color--white)"
-                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                onClick={() => {
+                  // Todos os cards agora direcionam para o motor,
+                  // usando as datas do próprio card (dateRange).
+                  // Ex.: "19/12/2025 até 21/12/2025 (2 diárias)" ou "de segunda a sexta".
+                  openBookingEngineForEvent(event);
+                }}
               />
             </CardContent>
           </CardContainer>

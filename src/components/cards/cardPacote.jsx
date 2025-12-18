@@ -318,6 +318,107 @@ const CardPacote = ({ pacote }) => {
     return "serra";
   };
 
+  const parsePtBrDate = (ddmmyyyy) => {
+    if (!ddmmyyyy) return null;
+    const match = String(ddmmyyyy).match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+    if (!match) return null;
+    const day = Number(match[1]);
+    const month = Number(match[2]);
+    const year = Number(match[3]);
+    if (!day || !month || !year) return null;
+    return new Date(year, month - 1, day);
+  };
+
+  const getNightsFromText = (text) => {
+    const normalized = normalizeText(text);
+    const match = normalized.match(/(\d+)\s*diarias?/);
+    if (!match) return null;
+    const nights = Number(match[1]);
+    return Number.isFinite(nights) && nights > 0 ? nights : null;
+  };
+
+  const getCheckInOutFromText = (text) => {
+    const raw = String(text || "");
+    const normalized = normalizeText(raw);
+
+    // Regra do pacote: seg -> sex
+    if (/fique\s*4.*pague\s*3/.test(normalizeText(pacote?.title))) {
+      const checkIn = getNextMonday(new Date());
+      return { checkIn, checkOut: addDays(checkIn, 4) };
+    }
+
+    // Datas explícitas dd/mm/yyyy
+    const dateMatches = [...raw.matchAll(/\b(\d{2}\/\d{2}\/\d{4})\b/g)].map((m) => m[1]);
+    if (dateMatches.length >= 2) {
+      const checkIn = parsePtBrDate(dateMatches[0]);
+      const checkOut = parsePtBrDate(dateMatches[1]);
+      if (checkIn && checkOut) return { checkIn, checkOut };
+    }
+    if (dateMatches.length === 1) {
+      const checkIn = parsePtBrDate(dateMatches[0]);
+      const nights = getNightsFromText(raw);
+      if (checkIn && nights) return { checkIn, checkOut: addDays(checkIn, nights) };
+    }
+
+    // Range por dia da semana (ex.: "de segunda-feira a sexta-feira")
+    const weekdayMap = {
+      domingo: 0,
+      segunda: 1,
+      terca: 2,
+      quarta: 3,
+      quinta: 4,
+      sexta: 5,
+      sabado: 6,
+    };
+    const weekdayRegex = /(domingo|segunda|terca|quarta|quinta|sexta|sabado)(?:-feira)?\s*(?:a|ate)\s*(domingo|segunda|terca|quarta|quinta|sexta|sabado)(?:-feira)?/;
+    const weekdayMatch = normalized.match(weekdayRegex);
+    if (weekdayMatch) {
+      const startIndex = weekdayMap[weekdayMatch[1]];
+      const endIndex = weekdayMap[weekdayMatch[2]];
+      if (Number.isFinite(startIndex) && Number.isFinite(endIndex)) {
+        const today = new Date();
+        const base = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+        const todayDow = base.getDay();
+        const daysUntilStart = (startIndex - todayDow + 7) % 7;
+        const checkIn = addDays(base, daysUntilStart);
+        let offset = (endIndex - startIndex + 7) % 7;
+        if (offset === 0) offset = 7;
+        return { checkIn, checkOut: addDays(checkIn, offset) };
+      }
+    }
+
+    // Fallback: amanhã -> +2 noites
+    const fallbackCheckIn = addDays(new Date(), 1);
+    const fallbackCheckOut = addDays(new Date(), 3);
+    return { checkIn: fallbackCheckIn, checkOut: fallbackCheckOut };
+  };
+
+  const openBookingEngineForPacote = () => {
+    const propertyKey = inferPropertyKey(pacote);
+    const property = BOOKING_PROPERTIES?.[propertyKey] || BOOKING_PROPERTIES?.serra;
+    const q = property?.q;
+    if (!q) return;
+
+    const textForDates =
+      pacote?.dateRange ||
+      pacote?.dataRange ||
+      pacote?.periodo ||
+      pacote?.validade ||
+      `${pacote?.title || ""} ${pacote?.description || ""}`;
+
+    const { checkIn, checkOut } = getCheckInOutFromText(textForDates);
+
+    const params = new URLSearchParams();
+    params.set("q", q);
+    params.set("NRooms", "1");
+    params.set("ad", "2");
+    params.set("CheckIn", formatForOmnibees(checkIn));
+    params.set("CheckOut", formatForOmnibees(checkOut));
+
+    const url = `${DEFAULT_OMNIBEES_BASE_URL}?${params.toString()}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   const openBookingEngineForFique4Pague3 = () => {
     const propertyKey = inferPropertyKey(pacote);
     const property = BOOKING_PROPERTIES?.[propertyKey] || BOOKING_PROPERTIES?.serra;
@@ -402,16 +503,7 @@ const CardPacote = ({ pacote }) => {
 
         <CardButtons>
           <button
-            onClick={() => {
-              if (isFique4Pague3(pacote)) {
-                openBookingEngineForFique4Pague3();
-                return;
-              }
-              window.open(
-                "https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329",
-                "_blank"
-              );
-            }}
+            onClick={openBookingEngineForPacote}
           >Conhecer pacote</button>
           <button
             onClick={() => navigate('/acomodaSerra')}

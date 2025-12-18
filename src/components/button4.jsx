@@ -66,19 +66,18 @@ const IconButton = ({
   hoverColor,
   hoverTextColor,
   idBtn = "clickwpp",
+  onClick,
 }) => {
   const handleClick = (event) => {
-    console.log("Botão clicado com id:", event.currentTarget.id);
-    console.log("Evento:", event);
-    console.log("Elemento alvo (target):", event.target);
-    console.log("Elemento atual (currentTarget):", event.currentTarget);
-    console.log("Abrindo link do WhatsApp...");
-    
-    event.stopPropagation(); 
+    event.stopPropagation();
+    if (typeof onClick === 'function') {
+      onClick(event);
+      return;
+    }
 
     window.open(
-      "https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329",
-      "_blank"
+      'https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329',
+      '_blank'
     );
   };
 
