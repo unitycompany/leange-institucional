@@ -22,6 +22,8 @@ import AcomodaComponent from '../../components/acomodaComponent';
 import DepoimentoDoHospede from '../../components/Depoimentos/depoimentoDoHospede';
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import CarrosselDepoimentos from '../../components/depoimentos';
+import BookingEngine from '../../components/bookingEngine';
+import { BOOKING_PROPERTIES } from '../../constants/bookingEngine';
 
 const StyledEspace = styled.div`
     height: 0vh;
@@ -725,6 +727,14 @@ const Serra = () => {
             <StyledLocall data-aos="fade-up" data-aos-delay="200">
                 <h1 data-aos="fade-up" data-aos-delay="300">LeAnge Mar | Armação dos Búzios RJ</h1>
             </StyledLocall>
+
+            <BookingEngine
+                propertyOptions={[BOOKING_PROPERTIES.mar]}
+                defaultPropertyId={BOOKING_PROPERTIES.mar.id}
+                heading="Garanta sua estadia na Le Ange Mar"
+                description="Informe as datas e abriremos o motor oficial da Omnibees já configurado para esta unidade."
+                accentColor="var(--color--blue)"
+            />
 
             <Regras
                 image1="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/785409ef-a52d-4221-ccee-eaa83693bb00/public"

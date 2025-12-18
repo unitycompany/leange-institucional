@@ -1,12 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-// Styled Components
 const FloatingButton = styled.a`
   position: fixed!important;
   z-index: 9999;
   right: 20px;
-  bottom: 20px;
+  bottom: 160px;
   width: 64px;
   height: 64px;
   display: flex;
@@ -15,6 +14,10 @@ const FloatingButton = styled.a`
   background: #00ad57;
   border-radius: 50%;
   text-decoration: none;
+
+  @media (max-width: 768px){
+    bottom: 20px;
+  }
 `;
 
 const WhatsAppIcon = styled.svg`

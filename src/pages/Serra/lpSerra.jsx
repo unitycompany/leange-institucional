@@ -22,6 +22,8 @@ import AcomodaComponent from '../../components/acomodaComponent';
 import DepoimentoDoHospede from '../../components/Depoimentos/depoimentoDoHospede';
 import SliderAcomodaHome from '../../components/sliderAcomodaHome';
 import CarrosselDepoimentos from '../../components/depoimentos';
+import BookingEngine from '../../components/bookingEngine';
+import { BOOKING_PROPERTIES } from '../../constants/bookingEngine';
 
 const StyledEspace = styled.div`
     height: 0vh;
@@ -761,6 +763,14 @@ const Serra = () => {
             <StyledLocall data-aos="fade-up" data-aos-delay="200">
                 <h1 data-aos="fade-in" data-aos-delay="400">LeAnge Serra | Miguel Pereira RJ</h1>
             </StyledLocall>
+
+            <BookingEngine
+                propertyOptions={[BOOKING_PROPERTIES.serra]}
+                defaultPropertyId={BOOKING_PROPERTIES.serra.id}
+                heading="Garanta sua reserva na Le Ange Serra"
+                description="Pesquise disponibilidade e finalize no motor oficial da Omnibees com a unidade correta já aplicada."
+                accentColor="var(--color--green)"
+            />
 
             <Regras 
                 image1="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/642d078c-2ed8-451b-f532-c59721191700/public"

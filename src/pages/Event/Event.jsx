@@ -12,6 +12,50 @@ import { FaBirthdayCake } from "react-icons/fa";
 import SchemaMarkup from '../../components/SchemaMarkup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { BOOKING_PROPERTIES } from '../../constants/bookingEngine';
+
+const DEFAULT_OMNIBEES_BASE_URL = 'https://book.omnibees.com/hotelresults';
+
+const addDays = (date, days) => {
+    const next = new Date(date);
+    next.setDate(next.getDate() + days);
+    return next;
+};
+
+const getNextMonday = (from = new Date()) => {
+    const base = new Date(from.getFullYear(), from.getMonth(), from.getDate());
+    const dayOfWeek = base.getDay(); // 0 (Dom) .. 6 (Sáb)
+    const daysUntilMonday = (1 - dayOfWeek + 7) % 7;
+    base.setDate(base.getDate() + daysUntilMonday);
+    return base;
+};
+
+const formatForOmnibees = (date) => {
+    if (!date) return '';
+    const year = date.getFullYear();
+    const month = `${date.getMonth() + 1}`.padStart(2, '0');
+    const day = `${date.getDate()}`.padStart(2, '0');
+    return `${day}${month}${year}`;
+};
+
+const openBookingEngineMondayToFriday = (propertyKey = 'serra') => {
+    const property = BOOKING_PROPERTIES?.[propertyKey] || BOOKING_PROPERTIES?.serra;
+    const q = property?.q;
+    if (!q) return;
+
+    const checkIn = getNextMonday(new Date());
+    const checkOut = addDays(checkIn, 4); // segunda -> sexta
+
+    const params = new URLSearchParams();
+    params.set('q', q);
+    params.set('NRooms', '1');
+    params.set('ad', '2');
+    params.set('CheckIn', formatForOmnibees(checkIn));
+    params.set('CheckOut', formatForOmnibees(checkOut));
+
+    const url = `${DEFAULT_OMNIBEES_BASE_URL}?${params.toString()}`;
+    window.open(url, '_blank', 'noopener,noreferrer');
+};
 
 const Espace = styled.div`
     height: 15vh;
@@ -690,7 +734,7 @@ const Eventos = () => {
                             <Button
                                 idBtn="clickwpp"
                                 backgroundColor="var(--color--green)"
-                                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                                onClick={() => openBookingEngineMondayToFriday('serra')}
                                 text="Fazer reserva"
                             />
                         </div>
@@ -702,7 +746,7 @@ const Eventos = () => {
                             </p>
                             <Button
                                 idBtn="clickwpp"
-                                onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                                onClick={() => openBookingEngineMondayToFriday('serra')}
                                 text="Fazer reserva"
                             />
                         </div>
@@ -748,7 +792,7 @@ const Eventos = () => {
                         idBtn="clickwpp"
                         text="Fazer reserva"
                         backgroundColor="var(--color--green)"
-                        onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                        onClick={() => openBookingEngineMondayToFriday('serra')}
                     />
                     <div>
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/4129a834-fd9a-42db-4770-46bcaae2c200/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100" />
@@ -793,7 +837,7 @@ const Eventos = () => {
                         idBtn="clickwpp"
                         text="Fazer reserva"
                         backgroundColor="var(--color--green)"
-                        onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+                        onClick={() => openBookingEngineMondayToFriday('serra')}
                     />
                     <div>
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e2fda94b-3aeb-4561-b4ad-688ff898ee00/public" alt='foto do casamento' data-aos="fade-up" data-aos-delay="100" />

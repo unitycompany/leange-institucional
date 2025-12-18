@@ -65,7 +65,7 @@ const StyledFooterContainer = styled(motion.footer)`
     top: 0;
     transform: translateX(-50%);
     margin-top: 5vh;
-    padding: 5% 5%;
+    padding: 5% 5% 10% 5%;
     width: 96%;
     display: flex;
     flex-direction: column;
@@ -77,7 +77,7 @@ const StyledFooterContainer = styled(motion.footer)`
     @media (max-width: 768px){
         margin-top: 5vh;
         border-radius: 25px 25px 0 0;
-        padding: 10% 5%;
+        padding: 10% 5% 20% 5%;
     }
 `;
 

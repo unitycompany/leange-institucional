@@ -23,6 +23,8 @@ import 'aos/dist/aos.css';
 import Regras from '../../components/regras';
 import EventAlert from '../../components/alertEvent';
 import Modal from "../../components/modal";
+import BookingEngine from '../../components/bookingEngine';
+import { BOOKING_GENERAL_PROPERTIES } from '../../constants/bookingEngine';
 
 const imagesSerra = [
     { src: "https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/1ac618b7-88c7-4558-45ee-090bab5dde00/public", alt: 'Mulher na rede', loading: "lazy" },
@@ -714,6 +716,15 @@ const Home = () => {
                 </a>
             </HomeImageOficial>
 
+                        <BookingEngine
+                propertyOptions={BOOKING_GENERAL_PROPERTIES}
+                showPropertySelector
+                heading="Reserve sua experiência pet friendly"
+                description="Selecione o período desejado, escolha a unidade preferida e finalize a sua reserva direto no ambiente seguro da Omnibees."
+                accentColor="var(--color--green)"
+            />
+
+
             {/* <WhatsAppButton /> a */}
 
             <StyledPousadas>
@@ -769,7 +780,6 @@ const Home = () => {
                     />
                 </StyledContainerPousadas>
             </StyledPousadas>
-
             <Regras
                 image1="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c9f443a0-365f-4341-67c4-dc3b15d8d200/public"
                 image2="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/db3f6942-0de2-433d-1235-33bfa547e500/public"

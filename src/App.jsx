@@ -41,7 +41,6 @@ function ScrollToTop() {
 function AnimatedRoutes() {
     const location = useLocation();
 
-    // Configurações de animação para entrada e saída
     const pageTransition = {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },

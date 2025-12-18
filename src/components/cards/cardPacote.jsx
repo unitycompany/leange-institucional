@@ -7,6 +7,7 @@ import { FaRegCheckCircle } from "react-icons/fa";
 import { IoBedOutline } from "react-icons/io5";
 import { IoStarSharp } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
+import { BOOKING_PROPERTIES } from "../../constants/bookingEngine";
 
 const shine = keyframes`
   0% { left: -200px; }
@@ -275,6 +276,68 @@ const CardButtons = styled.div`
 const CardPacote = ({ pacote }) => {
   const navigate = useNavigate();
 
+  const DEFAULT_OMNIBEES_BASE_URL = "https://book.omnibees.com/hotelresults";
+
+  const normalizeText = (value) =>
+    String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
+
+  const isFique4Pague3 = (currentPacote) => {
+    const title = normalizeText(currentPacote?.title);
+    return /fique\s*4.*pague\s*3/.test(title);
+  };
+
+  const addDays = (date, days) => {
+    const next = new Date(date);
+    next.setDate(next.getDate() + days);
+    return next;
+  };
+
+  const getNextMonday = (from = new Date()) => {
+    const base = new Date(from.getFullYear(), from.getMonth(), from.getDate());
+    const dayOfWeek = base.getDay(); // 0 (Dom) .. 6 (Sáb)
+    const daysUntilMonday = (1 - dayOfWeek + 7) % 7;
+    base.setDate(base.getDate() + daysUntilMonday);
+    return base;
+  };
+
+  const formatForOmnibees = (date) => {
+    if (!date) return "";
+    const year = date.getFullYear();
+    const month = `${date.getMonth() + 1}`.padStart(2, "0");
+    const day = `${date.getDate()}`.padStart(2, "0");
+    return `${day}${month}${year}`;
+  };
+
+  const inferPropertyKey = (currentPacote) => {
+    const corpus = normalizeText(`${currentPacote?.title || ""} ${currentPacote?.description || ""}`);
+    if (corpus.includes(" mar ") || corpus.endsWith(" mar") || corpus.includes(" mar-") || corpus.includes("mar ")) return "mar";
+    if (corpus.includes(" serra ") || corpus.endsWith(" serra") || corpus.includes("serra ")) return "serra";
+    return "serra";
+  };
+
+  const openBookingEngineForFique4Pague3 = () => {
+    const propertyKey = inferPropertyKey(pacote);
+    const property = BOOKING_PROPERTIES?.[propertyKey] || BOOKING_PROPERTIES?.serra;
+    const q = property?.q;
+    if (!q) return;
+
+    const checkIn = getNextMonday(new Date());
+    const checkOut = addDays(checkIn, 4); // segunda -> sexta (4 noites)
+
+    const params = new URLSearchParams();
+    params.set("q", q);
+    params.set("NRooms", "1");
+    params.set("ad", "2");
+    params.set("CheckIn", formatForOmnibees(checkIn));
+    params.set("CheckOut", formatForOmnibees(checkOut));
+
+    const url = `${DEFAULT_OMNIBEES_BASE_URL}?${params.toString()}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   // Função para criar slug a partir do título do pacote
   const createSlug = (title) => {
     if (!title) return 'pacote';
@@ -339,7 +402,16 @@ const CardPacote = ({ pacote }) => {
 
         <CardButtons>
           <button
-            onClick={() => window.open("https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329", "_blank")}
+            onClick={() => {
+              if (isFique4Pague3(pacote)) {
+                openBookingEngineForFique4Pague3();
+                return;
+              }
+              window.open(
+                "https://tintim.link/whatsapp/85d10962-4e7e-4f65-9a44-898be828e6fd/76dadedc-00f5-4a34-a4b0-c2052c540329",
+                "_blank"
+              );
+            }}
           >Conhecer pacote</button>
           <button
             onClick={() => navigate('/acomodaSerra')}

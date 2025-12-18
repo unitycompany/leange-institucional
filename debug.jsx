@@ -9,7 +9,6 @@ const DebugRedirect = () => {
         const originalPushState = window.history.pushState;
         const originalReplaceState = window.history.replaceState;
 
-        // Interceptar redirecionamentos
         window.history.pushState = function (...args) {
             console.warn("PushState detectado:", args);
             originalPushState.apply(this, args);
@@ -21,7 +20,6 @@ const DebugRedirect = () => {
         };
 
         return () => {
-            // Restaurar o comportamento padrão
             window.history.pushState = originalPushState;
             window.history.replaceState = originalReplaceState;
         };
