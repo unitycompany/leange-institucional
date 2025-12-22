@@ -465,6 +465,15 @@ const IdadeCrianca = styled.p`
   @media (max-width: 768px) {
     width: 100%!important;
   }
+
+    gap: 6px;
+    flex-wrap: wrap;
+
+    a {
+        color: inherit;
+        text-decoration: underline;
+        font-weight: 600;
+    }
 `
 
 const AlertDiv = styled.div`
@@ -757,7 +766,11 @@ const Serra = () => {
                         hoverIconColor="var(--color--white)"
                         onClick={() => openBookingEngine({ propertyKey: 'serra' })}
                     />
-                    <IdadeCrianca>*Idade miníma para hospedagem 13 anos, mesmo que acompanhado dos pais</IdadeCrianca>
+                    <IdadeCrianca>
+                        <span>*Idade miníma para hospedagem 13 anos, mesmo que acompanhado dos pais</span>
+                        <span>—</span>
+                        <a href="/src/pages/Politicas/politica-de-reservas-le-ange-serra.pdf" target="_blank" rel="noopener noreferrer">política</a>
+                    </IdadeCrianca>
                 </StyledHomeTexts>
             </StyledSectionHome>
 

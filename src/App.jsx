@@ -204,8 +204,43 @@ function AppContent() {
         closeImagePopup();
     };
 
+    const showPrivacyPolicyTopLink = !location.pathname.startsWith('/politica-de-privacidade');
+    const policyPdfHref = (() => {
+        const path = (location.pathname || '').toLowerCase();
+        const isMar = path.includes('mar');
+        return isMar
+            ? '/src/pages/Politicas/politica-de-reservas-le-ange-mar.pdf'
+            : '/src/pages/Politicas/politica-de-reservas-le-ange-serra.pdf';
+    })();
+
     return (
         <>
+            {showPrivacyPolicyTopLink && (
+                <div
+                    style={{
+                        position: 'fixed',
+                        top: 10,
+                        right: 10,
+                        zIndex: 5000,
+                        fontFamily: 'var(--font--comfortaa)',
+                        fontSize: '0.8rem',
+                        lineHeight: 1,
+                    }}
+                >
+                    <a
+                        href={policyPdfHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{
+                            color: 'var(--color--black)',
+                            textDecoration: 'underline',
+                        }}
+                    >
+                        política
+                    </a>
+                </div>
+            )}
+
             {!hideNav && <NavegationBar />}
             <AnimatedRoutes />
 

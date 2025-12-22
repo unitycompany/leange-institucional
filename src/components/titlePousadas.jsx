@@ -156,7 +156,15 @@ const IdadeCrianca = styled.p`
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 6px;
+  flex-wrap: wrap;
   cursor: default;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    font-weight: 600;
+  }
 
   &:hover{
     transform: translateY(2px);
@@ -184,6 +192,13 @@ const TitlePousadas = ({
     if (normalized.includes('serra')) return 'serra';
     return 'serra';
   };
+
+  const policyPdfHref = (() => {
+    const propertyKey = inferPropertyKeyFromTargetPage();
+    return propertyKey === 'mar'
+      ? '/src/pages/Politicas/politica-de-reservas-le-ange-mar.pdf'
+      : '/src/pages/Politicas/politica-de-reservas-le-ange-serra.pdf';
+  })();
 
   const handleClick = () => {
     navigate(targetPage);
@@ -224,7 +239,13 @@ const TitlePousadas = ({
         />
         
       </StyledDivButton>
-        <IdadeCrianca>{idade}</IdadeCrianca>
+      {idade && (
+        <IdadeCrianca>
+          <span>{idade}</span>
+          <span>—</span>
+          <a href={policyPdfHref} target="_blank" rel="noopener noreferrer">política</a>
+        </IdadeCrianca>
+      )}
     </StyledDiv>
   );
 };

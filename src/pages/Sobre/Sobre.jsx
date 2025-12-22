@@ -925,7 +925,7 @@ const Sobre = () => {
                     </div>
                     <div>
                         <h1 data-aos="fade-up" data-aos-delay="400">Convivência</h1>
-                        <p data-aos="fade-down" data-aos-delay="500">Pedimos que considere se o seu pet é amigável, pois a pousada recebe vários outros pets. Além disso, aceitamos apenas humanos acompanhados por pets, e a idade mínima para hospedagem é 13 anos.</p>
+                        <p data-aos="fade-down" data-aos-delay="500">Pedimos que considere se o seu pet é amigável, pois a pousada recebe vários outros pets. Além disso, aceitamos apenas humanos acompanhados por pets, e a idade mínima para hospedagem é 13 anos. <a href="/src/pages/Politicas/politica-de-reservas-le-ange-serra.pdf" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline', fontWeight: 600 }}>política</a></p>
                     </div>
                 </div>
 
