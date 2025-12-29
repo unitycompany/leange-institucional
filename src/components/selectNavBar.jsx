@@ -99,7 +99,7 @@ const RedirectDropdown = () => {
   const options = [
     { label: "Acomodações Serra", path: "/acomodaSerra" },
     { label: "Acomodações Mar", path: "/acomodaMar" },
-    { label: "Faça o seu Evento", path: "/event" },
+    // { label: "Faça o seu Evento", path: "/event" },
   ];
 
   const handleSelect = (option) => {
